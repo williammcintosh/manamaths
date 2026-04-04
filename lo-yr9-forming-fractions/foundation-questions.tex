@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper,landscape]{article}
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{xcolor}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+
+{\Large \textbf{L01 Forming fractions}}\\
+Write each as a fraction.
+
+\vspace{5em}
+{\large \textbf{Foundation}}
+\begin{multicols}{4}
+\begin{enumerate}[
+  itemsep=3.5em,
+  label=\arabic*., 
+  labelwidth=2em,
+  labelsep=0.6em,
+  leftmargin=!,
+  align=left
+]
+\item 3 out of 8
+\item 4 out of 10
+\item 7 out of 20
+\item 5 out of 12
+\item 2 out of 6
+\item 1 out of 9
+\item 6 out of 15
+\item 8 out of 14
+\item 3 out of 11
+\item 9 out of 16
+\item 2 out of 5
+\item 4 out of 13
+
+\item {
+\begin{tikzpicture}[scale=1]
+\foreach \i in {0,...,5} {
+  \coordinate (P\i) at ({60*\i}:1.4);
+}
+\coordinate (O) at (0,0);
+\fill[green!60!black] (O)--(P0)--(P1)--cycle;
+\fill[green!60!black] (O)--(P1)--(P2)--cycle;
+\draw (P0)--(P1)--(P2)--(P3)--(P4)--(P5)--cycle;
+\foreach \i in {0,...,5} \draw (O)--(P\i);
+\end{tikzpicture}
+}
+
+\item {
+\begin{tikzpicture}[scale=1.1]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (1,1.8);
+\coordinate (M) at (1,0.6);
+\fill[purple!30] (A)--(C)--(M)--cycle;
+\draw (A)--(B)--(C)--cycle;
+\draw (A)--(M)--(B);
+\draw (C)--(M);
+\end{tikzpicture}
+}
+
+\item {
+\begin{tikzpicture}[scale=1]
+\def\r{1.4}
+\foreach \i in {0,...,9} {
+  \pgfmathsetmacro{\a}{90-36*\i}
+  \pgfmathsetmacro{\b}{90-36*(\i+1)}
+  \ifnum\i<4
+    \fill[orange!35] (0,0)--(\a:\r) arc (\a:\b:\r)--cycle;
+  \fi
+}
+\foreach \i in {0,...,9} {
+  \draw (0,0)--({90-36*\i}:\r);
+}
+\draw (0,0) circle (\r);
+\end{tikzpicture}
+}
+
+\item {
+\begin{tikzpicture}[scale=0.9]
+\draw (0,0) rectangle (4,2);
+\draw (2,0)--(2,2);
+\draw (0,1)--(4,1);
+\coordinate (C) at (2,1);
+\foreach \p in {(0,2),(0,0),(4,2),(4,0)} \draw \p -- (C);
+\fill[orange!50] (0,2)--(2,1)--(0,1)--cycle;
+\fill[orange!50] (2,1)--(4,2)--(4,1)--cycle;
+\fill[orange!50] (0,0)--(2,1)--(0,1)--cycle;
+\fill[orange!50] (2,0)--(2,1)--(4,0)--cycle;
+\end{tikzpicture}
+}
+\end{enumerate}
+\end{multicols}
+
+\end{document}
