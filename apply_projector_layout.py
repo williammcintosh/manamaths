@@ -15,7 +15,7 @@ WORDY_MARKERS = {
     'find', 'show', 'state', 'whether'
 }
 
-TARGET_PREAMBLE = """\\documentclass[17pt,a4paper,landscape]{extarticle}
+TARGET_PREAMBLE = """\\documentclass[19pt,a4paper,landscape]{extarticle}
 \\usepackage[margin=1.2cm]{geometry}
 \\usepackage{amsmath}
 \\usepackage{amssymb}
@@ -80,8 +80,8 @@ def classify_layout(tex: str) -> tuple[int, str, str]:
     average_words = sum(len(strip_latex(item).split()) for item in items) / len(items)
 
     if average_score >= 2.2 or average_words >= 5.2:
-        return 3, '6.8em', f'wordy avg_score={average_score:.2f} avg_words={average_words:.2f}'
-    return 4, '5.8em', f'numeric avg_score={average_score:.2f} avg_words={average_words:.2f}'
+        return 3, '7.4em', f'wordy avg_score={average_score:.2f} avg_words={average_words:.2f}'
+    return 3, '6.6em', f'numeric avg_score={average_score:.2f} avg_words={average_words:.2f}'
 
 
 def normalize_preamble(tex: str) -> str:
