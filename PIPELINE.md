@@ -17,6 +17,8 @@ For each learning objective:
 
 - `lo-template.tex` = page template
 - `lo-yr9.yaml` = master Year 9 source
+- `convert_learning_objectives_json.py` = JSON to YAML converter when objectives arrive as JSON
+- `JSON_TO_YAML.md` = durable JSON conversion workflow
 
 ## Output structure
 
@@ -27,6 +29,7 @@ For each learning objective, create a folder:
 - `lo-yr9-<slug>/excellence-questions.tex`
 
 Keep the master YAML as the source of truth.
+If learning objectives arrive as JSON, convert them first and then continue from YAML.
 
 ## YAML shape
 
@@ -104,15 +107,16 @@ Examples:
 
 ## Working order
 
-For each learning objective:
-1. inspect or create the YAML entry
-2. write Foundation questions
-3. write Proficient questions
-4. write Excellence questions
-5. create the three `.tex` files from the template
-6. run the projector-friendly PDF build flow
-7. sync the PDFs to the website copy
-8. commit in the `manamaths` repo
+For each learning objective set:
+1. if the source arrives as JSON, convert it to YAML first
+2. inspect or create the YAML entry
+3. write Foundation questions
+4. write Proficient questions
+5. write Excellence questions
+6. create the three `.tex` files from the template
+7. run the projector-friendly PDF build flow
+8. sync the PDFs to the website copy
+9. commit in the `manamaths` repo
 
 ## Default counts
 
@@ -134,7 +138,8 @@ Keep diagrams uncluttered and printable.
 
 ## Delivery style
 
-Build the content first.
+If the source starts as JSON, convert JSON to YAML first.
+Then build or refine the content in YAML.
 Then build the worksheet files.
 Then run the automatic layout pass and build PDFs.
 Then sync the generated PDFs to the website copy so they can be checked on `wmm.co.nz/manamaths/`.

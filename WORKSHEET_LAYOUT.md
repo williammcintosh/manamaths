@@ -69,6 +69,8 @@ Current website sync script:
 
 ## Files
 
+- `convert_learning_objectives_json.py` = JSON to YAML converter
+- `JSON_TO_YAML.md` = JSON conversion workflow
 - `lo-template.tex` = base worksheet template
 - `apply_projector_layout.py` = automatic layout classifier and restyler
 - `build_pdfs.py` = PDF build script
