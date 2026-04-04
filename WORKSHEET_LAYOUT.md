@@ -54,11 +54,18 @@ If a sheet starts to feel crowded, prefer this order of fixes:
 
 ## Build workflow
 
-Before building PDFs:
+Before publishing worksheet updates:
 1. run `apply_projector_layout.py`
-2. then run `build_pdfs.py`
+2. run `build_pdfs.py`
+3. sync the finished PDFs to the public website copy
 
 `build_pdfs.py` already runs the layout step automatically unless `--skip-layout` is passed.
+
+Current public review target:
+- `wmm.co.nz/manamaths/`
+
+Current website sync script:
+- `/home/debid/.openclaw/workspace/williammcintosh.github.io/scripts/sync_manamaths.py`
 
 ## Files
 

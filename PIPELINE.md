@@ -11,6 +11,7 @@ For each learning objective:
 4. save those questions in YAML
 5. assemble LaTeX worksheets from the template
 6. apply projector-friendly layout rules automatically before building PDFs
+7. sync the finished PDFs to the public website copy so they can be reviewed in-browser
 
 ## Source files
 
@@ -109,8 +110,9 @@ For each learning objective:
 3. write Proficient questions
 4. write Excellence questions
 5. create the three `.tex` files from the template
-6. sanity-check for obvious LaTeX issues
-7. commit in the `manamaths` repo
+6. run the projector-friendly PDF build flow
+7. sync the PDFs to the website copy
+8. commit in the `manamaths` repo
 
 ## Default counts
 
@@ -135,4 +137,5 @@ Keep diagrams uncluttered and printable.
 Build the content first.
 Then build the worksheet files.
 Then run the automatic layout pass and build PDFs.
+Then sync the generated PDFs to the website copy so they can be checked on `wmm.co.nz/manamaths/`.
 Keep the YAML clean enough that future worksheet generation can be automated.
