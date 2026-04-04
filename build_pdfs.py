@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DEFAULT_GLOB = "lo-yr9-*/**/*-questions.tex"
 CLEAN_SUFFIXES = [".aux", ".log", ".fls", ".fdb_latexmk", ".out", ".synctex.gz"]
+LAYOUT_SCRIPT = ROOT / "apply_projector_layout.py"
 
 
 def find_engine() -> list[str] | None:
@@ -51,6 +52,15 @@ def clean_intermediates(tex_path: Path) -> None:
             candidate.unlink()
 
 
+def apply_layout(tex_files: list[Path]) -> int:
+    if not LAYOUT_SCRIPT.exists():
+        return 0
+
+    relative_paths = [str(path.relative_to(ROOT)) for path in tex_files]
+    command = [sys.executable, str(LAYOUT_SCRIPT), *relative_paths]
+    return subprocess.run(command, cwd=ROOT).returncode
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build worksheet PDFs beside their TeX files.")
     parser.add_argument(
@@ -62,6 +72,11 @@ def main() -> int:
         "--keep-temp",
         action="store_true",
         help="Keep LaTeX intermediate files like .aux and .log.",
+    )
+    parser.add_argument(
+        "--skip-layout",
+        action="store_true",
+        help="Skip automatic projector-friendly layout tuning before build.",
     )
     args = parser.parse_args()
 
@@ -83,6 +98,12 @@ def main() -> int:
     if not tex_files:
         print("No worksheet .tex files found.", file=sys.stderr)
         return 1
+
+    if not args.skip_layout:
+        layout_code = apply_layout(tex_files)
+        if layout_code != 0:
+            print("Automatic layout tuning failed.", file=sys.stderr)
+            return layout_code
 
     print(f"Using engine: {Path(engine[0]).name}")
     failures: list[Path] = []

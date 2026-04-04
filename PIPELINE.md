@@ -10,6 +10,7 @@ For each learning objective:
 3. write original Excellence questions
 4. save those questions in YAML
 5. assemble LaTeX worksheets from the template
+6. apply projector-friendly layout rules automatically before building PDFs
 
 ## Source files
 
@@ -75,6 +76,8 @@ For every learning objective:
 - wording must be student-facing and concise
 - LaTeX must compile cleanly
 - TikZ blocks must stay self-contained inside each `\item`
+- worksheets must remain readable when projected
+- do not cram wordy prompts into 4 columns
 
 ## LaTeX assembly rules
 
@@ -85,6 +88,9 @@ When creating each worksheet file:
 4. insert the section header: `Foundation`, `Proficient`, or `Excellence`
 5. insert the matching questions from YAML into the `enumerate` block
 6. save into the correct `lo-yr9-<slug>/` folder
+7. run the projector layout pass before final PDF build
+
+See `WORKSHEET_LAYOUT.md` for the durable layout system.
 
 ## Naming
 
@@ -113,7 +119,7 @@ Unless told otherwise:
 - Proficient: 12 questions
 - Excellence: 16 to 20 questions
 
-Use fewer questions if the items are diagram-heavy.
+Use fewer questions if the items are diagram-heavy or too wordy for comfortable projection.
 
 ## If a learning objective needs visuals
 
@@ -128,4 +134,5 @@ Keep diagrams uncluttered and printable.
 
 Build the content first.
 Then build the worksheet files.
+Then run the automatic layout pass and build PDFs.
 Keep the YAML clean enough that future worksheet generation can be automated.
