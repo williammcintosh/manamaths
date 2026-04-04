@@ -24,7 +24,6 @@ TARGET_PREAMBLE = """\\documentclass[17pt,a4paper,landscape]{extarticle}
 \\usepackage{tikz}
 \\usepackage{xcolor}
 \\usepackage[sfdefault,lf]{FiraSans}
-\\usepackage{sansmath}
 \\renewcommand{\\familydefault}{\\sfdefault}
 \\setlength{\\parindent}{0pt}
 \\pagestyle{empty}
@@ -92,7 +91,7 @@ def normalize_preamble(tex: str) -> str:
     preamble, rest = tex.split('\\begin{document}', 1)
     rest = rest.lstrip()
     rest = re.sub(r'^(\\sffamily\s*)+', '', rest)
-    return TARGET_PREAMBLE + '\n\\begin{document}\n\\sffamily\n\\sansmath\n\n' + rest
+    return TARGET_PREAMBLE + '\n\\begin{document}\n\\sffamily\n\\boldmath\n\n' + rest
 
 
 def apply_to_file(path: Path) -> tuple[int, str]:
