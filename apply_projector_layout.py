@@ -16,7 +16,7 @@ WORDY_MARKERS = {
 }
 
 TARGET_PREAMBLE = """\\documentclass[17pt,a4paper,landscape]{extarticle}
-\\usepackage[margin=2.35cm]{geometry}
+\\usepackage[margin=2.35cm,top=1.05cm,left=1.05cm]{geometry}
 \\usepackage{amsmath}
 \\usepackage{amssymb}
 \\usepackage{tasks}
@@ -95,7 +95,7 @@ def normalize_preamble(tex: str) -> str:
 def apply_to_file(path: Path) -> tuple[int, str]:
     original = path.read_text(encoding='utf-8')
     updated = normalize_preamble(original)
-    updated = re.sub(r'\{\\LARGE \\textbf\{[^}]*\}\}\\\\\[0\.35em\]\s*\n\{\\large \\textbf\{[^}]*\}\}\s*\n\s*\\vspace\{[^}]+\}\s*\n', r'\\vspace*{0.4em}\n', updated, count=1)
+    updated = re.sub(r'\{\\LARGE \\textbf\{[^}]*\}\}\\\\\[0\.35em\]\s*\n\{\\large \\textbf\{[^}]*\}\}\s*\n\s*\\vspace\{[^}]+\}\s*\n', '', updated, count=1)
 
     columns, itemsep, reason = classify_layout(updated)
     updated = re.sub(r'\\begin\{multicols\}\{\d+\}\s*\\begin\{enumerate\}\[.*?\]\s*', rf'\\begin{{tasks}}({columns})\n', updated, flags=re.S)
