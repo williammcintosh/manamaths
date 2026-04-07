@@ -21,7 +21,7 @@ body {
 }
 
 .page-shell {
-  width: min(960px, calc(100% - 32px));
+  width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
   padding: 48px 0 64px;
 }
@@ -67,7 +67,7 @@ h1 {
 
 .lead {
   margin-bottom: 0;
-  max-width: 42rem;
+  max-width: 46rem;
   color: var(--muted);
   font-size: 1.05rem;
 }
@@ -80,12 +80,8 @@ h1 {
   margin-bottom: 20px;
 }
 
-.jump-links a,
-.worksheet-card {
-  text-decoration: none;
-}
-
 .jump-links a {
+  text-decoration: none;
   padding: 10px 14px;
   border-radius: 999px;
   background: var(--accent-soft);
@@ -104,27 +100,26 @@ h1 {
 
 .worksheet-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
   margin-top: 20px;
 }
 
 .worksheet-card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 18px;
+  gap: 14px;
+  padding: 16px;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 18px;
   background: #fbfcff;
-  color: var(--text);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
-.worksheet-card:hover {
-  transform: translateY(-2px);
-  border-color: #bfd0f7;
-  box-shadow: 0 14px 28px rgba(36, 87, 214, 0.10);
+.worksheet-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .worksheet-level {
@@ -132,19 +127,47 @@ h1 {
   font-weight: 700;
 }
 
-.worksheet-arrow {
+.worksheet-note {
+  font-size: 0.85rem;
   color: var(--accent);
   font-weight: 600;
 }
 
+.pdf-frame {
+  aspect-ratio: 210 / 297;
+  width: 100%;
+  border: 1px solid #c9d6eb;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #eef3fb;
+}
+
+.pdf-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: white;
+}
+
 @media (max-width: 640px) {
   .page-shell {
-    width: min(100% - 20px, 960px);
+    width: min(100% - 20px, 1160px);
     padding: 20px 0 36px;
   }
 
   .hero,
   .objective-section {
     padding: 20px;
+  }
+
+  .worksheet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .worksheet-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
   }
 }
