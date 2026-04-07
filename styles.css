@@ -108,29 +108,10 @@ h1 {
 .worksheet-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: #fbfcff;
-}
-
-.worksheet-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.worksheet-level {
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.worksheet-note {
-  font-size: 0.85rem;
-  color: var(--accent);
-  font-weight: 600;
 }
 
 .pdf-frame {
