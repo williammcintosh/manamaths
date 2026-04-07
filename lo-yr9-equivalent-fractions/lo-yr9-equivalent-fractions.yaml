@@ -34,6 +34,10 @@ learning_objective:
     - \item Fill in the blank: $\frac{2}{5} = \frac{\square}{10}$
     - \item Fill in the blank: $\frac{3}{4} = \frac{\square}{8}$
     - \item Fill in the blank: $\frac{4}{7} = \frac{8}{\square}$
+    - \item Write a fraction equivalent to $\frac{5}{6}$.
+    - \item Are $\frac{2}{8}$ and $\frac{1}{4}$ equivalent?
+    - \item Fill in the blank: $\frac{3}{5} = \frac{12}{\square}$
+    - \item Write a fraction equivalent to $\frac{6}{7}$.
     - |
       \item {
       \begin{tikzpicture}[scale=0.9]
@@ -63,25 +67,21 @@ learning_objective:
     - \item Fill in the blank: $\frac{9}{10} = \frac{\square}{50}$
     - \item Are $\frac{6}{9}$ and $\frac{10}{15}$ equivalent?
     - \item Are $\frac{8}{12}$ and $\frac{2}{3}$ equivalent?
-    - \item Are $\frac{12}{18}$ and $\frac{3}{4}$ equivalent?
     - \item Which fraction is equivalent to $\frac{2}{3}$: $\frac{6}{9}$, $\frac{4}{9}$, or $\frac{8}{15}$?
     - \item Which fraction is equivalent to $\frac{3}{4}$: $\frac{9}{12}$, $\frac{6}{10}$, or $\frac{12}{20}$?
     - \item Simplify $\frac{12}{16}$ and state a fraction equivalent to it.
-    - \item Simplify $\frac{15}{20}$ and state a fraction equivalent to it.
+    - \item Write two different fractions equivalent to $\frac{5}{8}$.
+    - \item Fill in the blank: $\frac{4}{9} = \frac{\square}{36}$
   excellence_questions:
     - \item Explain whether $\frac{14}{21}$ and $\frac{2}{3}$ are equivalent.
     - \item Explain whether $\frac{18}{24}$ and $\frac{3}{5}$ are equivalent.
     - \item One fraction is $\frac{3}{4}$. Write three different equivalent fractions.
-    - \item One fraction is $\frac{5}{8}$. Write three different equivalent fractions.
     - \item Fill in both blanks: $\frac{\square}{12} = \frac{3}{4} = \frac{21}{\square}$
-    - \item Fill in both blanks: $\frac{\square}{18} = \frac{2}{3} = \frac{16}{\square}$
     - \item A student says $\frac{4}{6}$ and $\frac{8}{10}$ are equivalent because both numbers doubled. Are they correct?
-    - \item A student says $\frac{3}{9}$ and $\frac{4}{12}$ are equivalent. Are they correct?
     - \item Shade a diagram to show a fraction equivalent to $\frac{2}{5}$.
-    - \item Shade a diagram to show a fraction equivalent to $\frac{3}{4}$.
     - \item Complete: if $\frac{a}{b} = \frac{12}{20}$, then a simpler equivalent fraction is \rule{2cm}{0.15mm}.
-    - \item Complete: if $\frac{m}{n} = \frac{18}{30}$, then a simpler equivalent fraction is \rule{2cm}{0.15mm}.
     - \item Which does not belong: $\frac{1}{2}$, $\frac{2}{4}$, $\frac{3}{6}$, $\frac{4}{10}$?
-    - \item Which does not belong: $\frac{2}{3}$, $\frac{4}{6}$, $\frac{6}{9}$, $\frac{8}{15}$?
     - \item Write a real-life example that could be represented by two equivalent fractions.
     - \item Write your own pair of equivalent fractions and explain how you know.
+    - \item Explain whether $\frac{15}{20}$ and $\frac{9}{12}$ are equivalent.
+    - \item Fill in both blanks: $\frac{\square}{18} = \frac{2}{3} = \frac{16}{\square}$
