@@ -134,7 +134,7 @@ h1 {
 }
 
 .pdf-frame {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 210 / 297;
   width: 100%;
   border: 1px solid #c9d6eb;
   border-radius: 14px;
