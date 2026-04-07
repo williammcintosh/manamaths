@@ -19,16 +19,14 @@ TARGET_PREAMBLE = """\\documentclass[17pt,a4paper,landscape]{extarticle}
 \\usepackage[margin=2.35cm]{geometry}
 \\usepackage{amsmath}
 \\usepackage{amssymb}
-\\usepackage{multicol}
-\\usepackage{enumitem}
+\\usepackage{tasks}
 \\usepackage{tikz}
 \\usepackage{xcolor}
 \\usepackage[sfdefault,lf]{FiraSans}
 \\renewcommand{\\familydefault}{\\sfdefault}
 \\setlength{\\parindent}{0pt}
 \\pagestyle{empty}
-\\setlength{\\columnsep}{2.1cm}
-\\setlength{\\columnseprule}{0pt}
+\\settasks{label=\\textbf{\\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=3.6em}
 \\renewcommand{\\arraystretch}{1.15}
 \\everymath{\\displaystyle}
 """
@@ -100,11 +98,11 @@ def apply_to_file(path: Path) -> tuple[int, str]:
     updated = re.sub(r'\{\\LARGE \\textbf\{[^}]*\}\}\\\\\[0\.35em\]\s*\n\{\\large \\textbf\{[^}]*\}\}\s*\n\s*\\vspace\{[^}]+\}\s*\n', r'\\vspace*{0.4em}\n', updated, count=1)
 
     columns, itemsep, reason = classify_layout(updated)
-    updated = re.sub(r'\\begin\{multicols\}\{\d+\}', rf'\\begin{{multicols}}{{{columns}}}', updated)
-    updated = re.sub(r'itemsep=([0-9.]+)em,', f'itemsep={itemsep},', updated)
-    updated = re.sub(r'label=\\arabic\*\.,', r'label=\\textbf{\\arabic*.},', updated)
-    updated = re.sub(r'labelwidth=([0-9.]+)em,', 'labelwidth=2.2em,', updated)
-    updated = re.sub(r'labelsep=([0-9.]+)em,', 'labelsep=0.75em,', updated)
+    updated = re.sub(r'\\begin\{multicols\}\{\d+\}\s*\\begin\{enumerate\}\[.*?\]\s*', rf'\\begin{{tasks}}({columns})\n', updated, flags=re.S)
+    updated = re.sub(r'\\end\{enumerate\}\s*\\end\{multicols\}', r'\\end{tasks}', updated, flags=re.S)
+    updated = re.sub(r'(?m)^\\item\b', r'\\task', updated)
+    updated = re.sub(r'\\begin\{tasks\}\((\d+)\)', rf'\\begin{{tasks}}({columns})', updated)
+    updated = re.sub(r'after-item-skip=([0-9.]+)em', f'after-item-skip={itemsep[:-2]}em', updated)
     updated = re.sub(r'\{\\Huge \\textbf\{([^}]*)\}\}', r'{\\LARGE \\textbf{\1}}', updated)
     updated = re.sub(r'(?m)^\\LARGE (.*)$', r'\1', updated, count=1)
 

@@ -2,16 +2,14 @@
 \usepackage[margin=2.35cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{multicol}
-\usepackage{enumitem}
+\usepackage{tasks}
 \usepackage{tikz}
 \usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
-\setlength{\columnsep}{2.1cm}
-\setlength{\columnseprule}{0pt}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=7.8em}
 \renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
@@ -25,28 +23,23 @@
 
 \boldmath
 
+\boldmath
+
+\boldmath
+
 \vspace*{0.4em}
 {\LARGE \textbf{Proficient}}
-\begin{multicols}{3}
-\begin{enumerate}[
-  itemsep=3.7em,
-  label=\textbf{\arabic*.}, 
-  labelwidth=2.2em,
-  labelsep=0.75em,
-  leftmargin=!,
-  align=left
-]
-\item 5 of 12 shaded
-\item 9 of 36 away
-\item 7 of 20 spins
-\item 17 of 48 faulty
-\item 18 of 25 full
-\item 13 of 32 prefer cats
-\item 19 of 27 covered
-\item 16 of 45 bikes
-\item 7 of 18 used
-\item 23 of 50 coloured
-\end{enumerate}
-\end{multicols}
+\begin{tasks}(3)
+\task 5 of 12 shaded
+\task 9 of 36 away
+\task 7 of 20 spins
+\task 17 of 48 faulty
+\task 18 of 25 full
+\task 13 of 32 prefer cats
+\task 19 of 27 covered
+\task 16 of 45 bikes
+\task 7 of 18 used
+\task 23 of 50 coloured
+\end{tasks}
 
 \end{document}

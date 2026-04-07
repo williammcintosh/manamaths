@@ -2,16 +2,14 @@
 \usepackage[margin=2.35cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{multicol}
-\usepackage{enumitem}
+\usepackage{tasks}
 \usepackage{tikz}
 \usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
-\setlength{\columnsep}{2.1cm}
-\setlength{\columnseprule}{0pt}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=3.6em}
 \renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
@@ -21,17 +19,8 @@
 
 \vspace*{0.4em}
 {\LARGE \textbf{INSERT HEADER HERE}}
-\begin{multicols}{4}
-\begin{enumerate}[
-  itemsep=3.6em,
-  label=\textbf{\arabic*.}, 
-  labelwidth=2.2em,
-  labelsep=0.75em,
-  leftmargin=!,
-  align=left
-]
-\item 
-\end{enumerate}
-\end{multicols}
+\begin{tasks}(4)
+\task 
+\end{tasks}
 
 \end{document}

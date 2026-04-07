@@ -2,16 +2,14 @@
 \usepackage[margin=2.35cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{multicol}
-\usepackage{enumitem}
+\usepackage{tasks}
 \usepackage{tikz}
 \usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
-\setlength{\columnsep}{2.1cm}
-\setlength{\columnseprule}{0pt}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=7.8em}
 \renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
@@ -25,28 +23,23 @@
 
 \boldmath
 
+\boldmath
+
+\boldmath
+
 \vspace*{0.4em}
 {\LARGE \textbf{Proficient}}
-\begin{multicols}{3}
-\begin{enumerate}[
-  itemsep=4.3em,
-  label=\textbf{\arabic*.}, 
-  labelwidth=2.2em,
-  labelsep=0.75em,
-  leftmargin=!,
-  align=left
-]
-\item Write two different fractions equivalent to $\frac{3}{5}$.
-\item Write two different fractions equivalent to $\frac{4}{7}$.
-\item Fill in the blank: $\frac{5}{6} = \frac{\square}{18}$
-\item Fill in the blank: $\frac{7}{8} = \frac{21}{\square}$
-\item Fill in the blank: $\frac{9}{10} = \frac{\square}{50}$
-\item Are $\frac{6}{9}$ and $\frac{10}{15}$ equivalent?
-\item Are $\frac{8}{12}$ and $\frac{2}{3}$ equivalent?
-\item Which fraction is equivalent to $\frac{2}{3}$: $\frac{6}{9}$, $\frac{4}{9}$, or $\frac{8}{15}$?
-\item Which fraction is equivalent to $\frac{3}{4}$: $\frac{9}{12}$, $\frac{6}{10}$, or $\frac{12}{20}$?
-\item Simplify \textbf{12/16} and state a fraction equivalent to it.
-\end{enumerate}
-\end{multicols}
+\begin{tasks}(3)
+\task Write two different fractions equivalent to $\frac{3}{5}$.
+\task Write two different fractions equivalent to $\frac{4}{7}$.
+\task Fill in the blank: $\frac{5}{6} = \frac{\square}{18}$
+\task Fill in the blank: $\frac{7}{8} = \frac{21}{\square}$
+\task Fill in the blank: $\frac{9}{10} = \frac{\square}{50}$
+\task Are $\frac{6}{9}$ and $\frac{10}{15}$ equivalent?
+\task Are $\frac{8}{12}$ and $\frac{2}{3}$ equivalent?
+\task Which fraction is equivalent to $\frac{2}{3}$: $\frac{6}{9}$, $\frac{4}{9}$, or $\frac{8}{15}$?
+\task Which fraction is equivalent to $\frac{3}{4}$: $\frac{9}{12}$, $\frac{6}{10}$, or $\frac{12}{20}$?
+\task Simplify \textbf{12/16} and state a fraction equivalent to it.
+\end{tasks}
 
 \end{document}
