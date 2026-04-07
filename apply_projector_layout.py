@@ -16,7 +16,7 @@ WORDY_MARKERS = {
 }
 
 TARGET_PREAMBLE = """\\documentclass[17pt,a4paper,landscape]{extarticle}
-\\usepackage[margin=1.45cm]{geometry}
+\\usepackage[margin=1.75cm]{geometry}
 \\usepackage{amsmath}
 \\usepackage{amssymb}
 \\usepackage{multicol}
@@ -27,7 +27,7 @@ TARGET_PREAMBLE = """\\documentclass[17pt,a4paper,landscape]{extarticle}
 \\renewcommand{\\familydefault}{\\sfdefault}
 \\setlength{\\parindent}{0pt}
 \\pagestyle{empty}
-\\setlength{\\columnsep}{1.15cm}
+\\setlength{\\columnsep}{1.45cm}
 \\setlength{\\columnseprule}{0pt}
 \\renewcommand{\\arraystretch}{1.15}
 \\everymath{\\displaystyle}
