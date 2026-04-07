@@ -97,7 +97,7 @@ def normalize_preamble(tex: str) -> str:
 def apply_to_file(path: Path) -> tuple[int, str]:
     original = path.read_text(encoding='utf-8')
     updated = normalize_preamble(original)
-    updated = re.sub(r'\\vspace\{[^}]+\}', r'\\vspace{2.6em}', updated, count=1)
+    updated = re.sub(r'\{\\LARGE \\textbf\{[^}]*\}\}\\\\\[0\.35em\]\s*\n\{\\large \\textbf\{[^}]*\}\}\s*\n\s*\\vspace\{[^}]+\}\s*\n', r'\\vspace*{0.4em}\n', updated, count=1)
 
     columns, itemsep, reason = classify_layout(updated)
     updated = re.sub(r'\\begin\{multicols\}\{\d+\}', rf'\\begin{{multicols}}{{{columns}}}', updated)
@@ -105,7 +105,6 @@ def apply_to_file(path: Path) -> tuple[int, str]:
     updated = re.sub(r'label=\\arabic\*\.,', r'label=\\textbf{\\arabic*.},', updated)
     updated = re.sub(r'labelwidth=([0-9.]+)em,', 'labelwidth=2.2em,', updated)
     updated = re.sub(r'labelsep=([0-9.]+)em,', 'labelsep=0.75em,', updated)
-    updated = re.sub(r'\{\\Huge \\textbf\{([^}]*)\}\}\\\\\[0\.45em\]', r'{\\LARGE \\textbf{\1}}\\\\[0.35em]', updated)
     updated = re.sub(r'\{\\Huge \\textbf\{([^}]*)\}\}', r'{\\LARGE \\textbf{\1}}', updated)
     updated = re.sub(r'(?m)^\\LARGE (.*)$', r'\1', updated, count=1)
 
