@@ -100,6 +100,22 @@ The heuristic looks at:
 - diagram-heavy prompts
 - question-style punctuation and phrasing
 
+## Inline maths wrapping rule
+
+Short single-line maths prompts should be treated as one unbreakable object where possible.
+
+Use this for prompts like:
+- `Are $\frac{6}{9}$ and $\frac{10}{15}$ equivalent?`
+- `Fill in the blank: $\frac{5}{6} = \frac{\square}{18}$`
+- `Simplify $\frac{12}{16}$ and state a fraction equivalent to it.`
+
+Goal:
+- prevent ugly line breaks inside compact maths questions
+- keep short maths prompts visually intact
+
+Do not force this on long wordy questions or diagram tasks.
+If a short boxed maths prompt becomes too wide, fix it by adjusting count, columns, or wording — not by allowing ugly mid-problem wraps.
+
 ## Visual density rule
 
 After every rebuild, inspect the actual rendered pages.
