@@ -55,11 +55,22 @@ If a sheet starts to feel crowded, prefer this order of fixes:
 ## Build workflow
 
 Before publishing worksheet updates:
-1. run `apply_projector_layout.py`
-2. run `build_pdfs.py`
-3. sync the finished PDFs to the public website copy
+1. update the question counts in YAML first
+2. rebuild the matching `.tex` files from YAML if needed
+3. run `apply_projector_layout.py`
+4. run `build_pdfs.py`
+5. visually inspect the rendered PDFs page by page
+6. if page 2 still has obvious empty slots, add more questions in YAML and rebuild
+7. if a third page appears or the sheet feels cramped, remove questions or reduce density
+8. sync the finished PDFs to the public website copy
 
 `build_pdfs.py` already runs the layout step automatically unless `--skip-layout` is passed.
+
+Do not stop at "it compiles" or "it has two pages". The target is that page 2 should look intentionally filled, with only normal bottom whitespace left over.
+
+For short, mostly numeric sheets, assume there is often room for 1 to 3 more questions on page 2 even after the PDF first reaches two pages.
+
+When checking density, prefer the rendered PDF over the LaTeX source. A sparse second page means the YAML should usually gain more questions.
 
 Current public review target:
 - `wmm.co.nz/manamaths/`
@@ -89,11 +100,24 @@ The heuristic looks at:
 - diagram-heavy prompts
 - question-style punctuation and phrasing
 
+## Visual density rule
+
+After every rebuild, inspect the actual rendered pages.
+
+Use this decision rule:
+- if page 2 has space that could clearly fit another full row or about 2 more short problems, add more questions in YAML
+- if page 2 has only a small tail of whitespace, leave it
+- if page 3 appears with only a few problems on it, reduce the count or tighten layout
+- prefer fixing the content count in YAML, not by hand-editing only the compiled `.tex`
+
+This is now part of the standard worksheet workflow, not an optional final polish step.
+
 ## Future direction
 
-Once visual PDF inspection is available, extend this system so the agent can:
+Keep extending the system so the agent can:
 - render PDFs to images
 - review actual page density visually
-- decide when to reduce question count
+- decide when to increase or reduce question count
 - detect when 2 columns is better than 3
 - spot overflow, cramped diagrams, and weak projection readability
+- feed the visual result back into YAML question-count decisions
