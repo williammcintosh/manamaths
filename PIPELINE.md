@@ -118,7 +118,7 @@ For each learning objective set:
 6. create the three `.tex` files from the template
 7. run the projector-friendly PDF build flow
 8. add the new learning objective section and jump-link to `index.html`
-9. visually inspect the rendered PDFs and adjust YAML counts/layout if needed
+9. visually inspect the rendered PDFs and confirm there are enough rows/problems to cover at least 2 pages; if not, adjust YAML counts first, then rebuild
 10. sync the PDFs to the website copy
 11. commit in the `manamaths` repo
 
@@ -130,7 +130,7 @@ When asked for the next learning objective, assume the same end-to-end workflow 
 - create Foundation / Proficient / Excellence worksheet source files
 - build the PDFs
 - add the new section to the website and the jump-links nav
-- visually inspect rendered PDFs, especially page fill and prompt wrapping
+- visually inspect rendered PDFs, especially page fill and prompt wrapping, and confirm there are enough rows/problems to cover at least 2 pages
 - push when done
 
 ## Default counts
