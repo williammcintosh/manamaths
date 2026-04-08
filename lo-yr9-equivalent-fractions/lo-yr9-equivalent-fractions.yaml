@@ -38,6 +38,9 @@ learning_objective:
     - \item Are $\frac{2}{8}$ and $\frac{1}{4}$ equivalent?
     - \item Fill in the blank: $\frac{3}{5} = \frac{12}{\square}$
     - \item Write a fraction equivalent to $\frac{6}{7}$.
+    - \item Are $\frac{4}{6}$ and $\frac{2}{3}$ equivalent?
+    - \item Fill in the blank: $\frac{5}{8} = \frac{10}{\square}$
+    - \item Write a fraction equivalent to $\frac{7}{10}$.
     - |
       \item {
       \begin{tikzpicture}[scale=0.9]
@@ -74,6 +77,10 @@ learning_objective:
     - \item Fill in the blank: $\frac{4}{9} = \frac{\square}{36}$
     - \item Are $\frac{10}{15}$ and $\frac{14}{21}$ equivalent?
     - \item Simplify $\frac{18}{24}$ and state a fraction equivalent to it.
+    - \item Fill in the blank: $\frac{3}{7} = \frac{\square}{21}$
+    - \item Which fraction is equivalent to $\frac{4}{5}$: $\frac{8}{10}$, $\frac{4}{10}$, or $\frac{12}{20}$?
+    - \item Are $\frac{9}{12}$ and $\frac{12}{16}$ equivalent?
+    - \item Write two different fractions equivalent to $\frac{2}{9}$.
   excellence_questions:
     - \item Explain whether $\frac{14}{21}$ and $\frac{2}{3}$ are equivalent.
     - \item Explain whether $\frac{18}{24}$ and $\frac{3}{5}$ are equivalent.
@@ -87,3 +94,9 @@ learning_objective:
     - \item Write your own pair of equivalent fractions and explain how you know.
     - \item Explain whether $\frac{15}{20}$ and $\frac{9}{12}$ are equivalent.
     - \item Fill in both blanks: $\frac{\square}{18} = \frac{2}{3} = \frac{16}{\square}$
+    - \item Explain whether $\frac{6}{8}$ and $\frac{9}{12}$ are equivalent.
+    - \item Complete: if $\frac{x}{y} = \frac{15}{25}$, then a simpler equivalent fraction is \rule{2cm}{0.15mm}.
+    - \item Which does not belong: $\frac{2}{3}$, $\frac{4}{6}$, $\frac{6}{9}$, $\frac{10}{18}$?
+    - \item Write a real-life example for $\frac{3}{4}$ and an equivalent fraction.
+    - \item A student says $\frac{2}{5}$ and $\frac{6}{15}$ are not equivalent. Are they correct?
+    - \item Fill in both blanks: $\frac{\square}{20} = \frac{3}{5} = \frac{24}{\square}$
