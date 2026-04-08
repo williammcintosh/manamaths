@@ -1,0 +1,81 @@
+year_level: 9
+learning_objective:
+      topic: Converting between improper fractions and mixed numbers
+      slug: lo-yr9-converting-between-improper-fractions-and-mixed-numbers
+      instruction: Convert between improper fractions and mixed numbers.
+      terminology:
+        - improper fraction
+        - mixed number
+        - whole
+        - remainder
+        - numerator
+        - denominator
+      skills:
+        - convert improper fractions to mixed numbers
+        - convert mixed numbers to improper fractions
+        - interpret the whole-number part and remainder
+        - check whether a conversion is sensible
+      question_types:
+        - direct conversion
+        - missing value
+        - comparison
+        - error check
+        - short reasoning
+
+      foundation_questions:
+        - \item Convert $\frac{5}{2}$ to a mixed number.
+        - \item Convert $\frac{7}{3}$ to a mixed number.
+        - \item Convert $\frac{9}{4}$ to a mixed number.
+        - \item Convert $\frac{11}{5}$ to a mixed number.
+        - \item Convert $1\frac{1}{2}$ to an improper fraction.
+        - \item Convert $2\frac{1}{3}$ to an improper fraction.
+        - \item Convert $3\frac{1}{4}$ to an improper fraction.
+        - \item Convert $2\frac{2}{5}$ to an improper fraction.
+        - \item Convert $\frac{13}{6}$ to a mixed number.
+        - \item Convert $\frac{15}{4}$ to a mixed number.
+        - \item Convert $4\frac{1}{3}$ to an improper fraction.
+        - \item Convert $5\frac{2}{7}$ to an improper fraction.
+        - \item Convert $\frac{17}{5}$ to a mixed number.
+        - \item Convert $\frac{14}{3}$ to a mixed number.
+        - \item Convert $3\frac{3}{8}$ to an improper fraction.
+        - \item Convert $6\frac{1}{6}$ to an improper fraction.
+
+      proficient_questions:
+        - \item Convert $\frac{19}{5}$ to a mixed number.
+        - \item Convert $\frac{22}{7}$ to a mixed number.
+        - \item Convert $\frac{31}{6}$ to a mixed number.
+        - \item Convert $\frac{27}{4}$ to a mixed number.
+        - \item Convert $4\frac{3}{5}$ to an improper fraction.
+        - \item Convert $7\frac{2}{3}$ to an improper fraction.
+        - \item Convert $5\frac{5}{8}$ to an improper fraction.
+        - \item Convert $9\frac{1}{4}$ to an improper fraction.
+        - \item Fill in the blank: $\frac{17}{4}=\square\frac{\square}{4}$.
+        - \item Fill in the blank: $3\frac{2}{7}=\frac{\square}{7}$.
+        - \item Which is greater: $\frac{11}{3}$ or $3\frac{1}{2}$?
+        - \item Is $\frac{14}{5}=2\frac{4}{5}$ correct?
+        - \item Is $6\frac{1}{4}=\frac{25}{4}$ correct?
+        - \item Convert $\frac{29}{8}$ to a mixed number.
+        - \item Convert $8\frac{5}{6}$ to an improper fraction.
+        - \item Convert $\frac{23}{9}$ to a mixed number.
+        - \item Convert $2\frac{7}{10}$ to an improper fraction.
+        - \item Explain in one short sentence what the denominator tells you in $4\frac{3}{7}$.
+
+      excellence_questions:
+        - \item A student says $\frac{18}{5}=3\frac{5}{5}$. Are they correct? Explain.
+        - \item A student says $4\frac{2}{3}=\frac{14}{3}$. Are they correct? Explain.
+        - \item Fill in both blanks: $\frac{\square}{6}=4\frac{\square}{6}$.
+        - \item Fill in both blanks: $7\frac{\square}{8}=\frac{61}{8}$.
+        - \item Which is greater: $\frac{23}{6}$ or $3\frac{4}{5}$? Show enough working to justify.
+        - \item Write $\frac{35}{4}$ as a mixed number, then place it between two whole numbers.
+        - \item Write $5\frac{7}{9}$ as an improper fraction, then say whether it is closer to $5$ or $6$.
+        - \item Complete: $\frac{\square}{7}=2\frac{5}{7}=\frac{26}{\square}$.
+        - \item Is $\frac{41}{6}=6\frac{5}{6}$ correct? Explain what went wrong or why it works.
+        - \item A ribbon is $\frac{17}{3}$ m long. Write this as a mixed number.
+        - \item A tank holds $2\frac{3}{4}$ L. Write this as an improper fraction of litres.
+        - \item Which does not belong: $\frac{10}{3}$, $3\frac{1}{3}$, $\frac{13}{4}$, $\frac{20}{6}$?
+        - \item A baker uses $3\frac{5}{6}$ cups of flour each batch. Write this as an improper fraction.
+        - \item A runner completes $\frac{25}{8}$ km. Write this as a mixed number.
+        - \item Explain why $\frac{n}{4}=2\frac{1}{4}$ gives $n=9$.
+        - \item Complete: if $\frac{m}{5}=6\frac{2}{5}$, then $m=\rule{1.6cm}{0.15mm}$.
+        - \item Convert $12\frac{7}{12}$ to an improper fraction.
+        - \item Convert $\frac{58}{9}$ to a mixed number.

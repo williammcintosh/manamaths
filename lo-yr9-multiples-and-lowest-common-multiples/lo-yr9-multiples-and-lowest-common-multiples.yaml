@@ -1,0 +1,78 @@
+year_level: 9
+learning_objective:
+
+  - id: L10
+    topic: Multiples and Lowest Common Multiples
+    slug: lo-yr9-multiples-and-lowest-common-multiples
+    instruction: Find the multiples or lowest common multiple.
+    terminology:
+      - multiple
+      - common multiple
+      - lowest common multiple
+      - factor
+    skills:
+      - list multiples of a number in order
+      - identify common multiples of two numbers
+      - find the lowest common multiple of two numbers
+      - use multiples to solve simple context problems
+      - check whether a stated multiple or LCM is correct
+    question_types:
+      - list multiples
+      - identify common multiples
+      - find the LCM
+      - error check
+      - short context
+
+    foundation_questions:
+      - \item Write the first 5 multiples of $2$.
+      - \item Write the first 5 multiples of $3$.
+      - \item Write the first 5 multiples of $4$.
+      - \item Write the first 5 multiples of $5$.
+      - \item Write the first 5 multiples of $6$.
+      - \item Is $18$ a multiple of $3$?
+      - \item Is $20$ a multiple of $5$?
+      - \item Is $21$ a multiple of $4$?
+      - \item Circle the common multiples of $2$ and $3$: $4, 6, 8, 12, 15, 18$.
+      - \item Circle the common multiples of $3$ and $4$: $6, 8, 12, 15, 24$.
+      - \item Find the lowest common multiple of $2$ and $3$.
+      - \item Find the lowest common multiple of $2$ and $4$.
+      - \item Find the lowest common multiple of $3$ and $5$.
+      - \item Find the lowest common multiple of $4$ and $5$.
+      - \item Complete: the next multiple of $7$ after $21$ is $\square$.
+      - \item Complete: the next multiple of $8$ after $24$ is $\square$.
+
+    proficient_questions:
+      - \item Write the first 6 multiples of $7$.
+      - \item Write the first 6 multiples of $8$.
+      - \item Write the first 6 multiples of $9$.
+      - \item List the common multiples of $4$ and $6$ up to $36$.
+      - \item List the common multiples of $5$ and $7$ up to $70$.
+      - \item Find the lowest common multiple of $4$ and $6$.
+      - \item Find the lowest common multiple of $6$ and $8$.
+      - \item Find the lowest common multiple of $9$ and $12$.
+      - \item Find the lowest common multiple of $7$ and $10$.
+      - \item Find the lowest common multiple of $5$ and $12$.
+      - \item Fill in the blank: the lowest common multiple of $3$ and $8$ is $\square$.
+      - \item Fill in the blank: the lowest common multiple of $6$ and $9$ is $\square$.
+      - \item Is $24$ a common multiple of $4$ and $6$?
+      - \item Is $30$ the lowest common multiple of $5$ and $6$?
+      - \item Which is greater: the lowest common multiple of $3$ and $4$, or the lowest common multiple of $2$ and $9$?
+      - \item Two bells ring every $4$ minutes and every $6$ minutes. After how many minutes will they ring together again?
+
+    excellence_questions:
+      - \item A student says the lowest common multiple of $4$ and $6$ is $10$. Are they correct? Explain.
+      - \item A student says $36$ is the lowest common multiple of $6$ and $9$. Are they correct? Explain.
+      - \item Write the first 3 common multiples of $6$ and $8$.
+      - \item Write the first 3 common multiples of $9$ and $12$.
+      - \item Find the lowest common multiple of $8$ and $14$.
+      - \item Find the lowest common multiple of $12$ and $15$.
+      - \item Find the lowest common multiple of $18$ and $24$.
+      - \item Fill in both blanks: the first two common multiples of $4$ and $9$ are $\square$ and $\square$.
+      - \item Fill in the blank: the lowest common multiple of $a$ and $6$ is $18$ when $a=\square$.
+      - \item Which does not belong: $12, 18, 24, 30$ as common multiples of $3$ and $6$?
+      - \item Which is greater: the lowest common multiple of $6$ and $10$, or the lowest common multiple of $8$ and $12$? Show enough working to justify.
+      - \item Three lights flash every $6$, $8$, and $12$ seconds. After how many seconds will they all flash together again?
+      - \item A bus comes every $9$ minutes and a train comes every $15$ minutes. If they leave now at the same time, after how many minutes will they leave together again?
+      - \item Is $48$ a common multiple of $6$ and $8$? Is it the lowest common multiple? Explain.
+      - \item Complete: if the lowest common multiple of $5$ and $n$ is $35$, then $n=\rule{1.6cm}{0.15mm}$.
+      - \item Explain why the lowest common multiple of two numbers must be a multiple of both numbers.
