@@ -17,6 +17,7 @@ For each learning objective:
 
 - `lo-template.tex` = page template
   - base rule: inline maths should stay together as a unit, but full prompt lines must still wrap normally
+  - base rule: projected worksheets should default to generous row gaps, aiming for about 3 rows / roughly 9 problems per page where appropriate
 - `lo-yr9.yaml` = master Year 9 source
 - `convert_learning_objectives_json.py` = JSON to YAML converter when objectives arrive as JSON
 - `JSON_TO_YAML.md` = durable JSON conversion workflow

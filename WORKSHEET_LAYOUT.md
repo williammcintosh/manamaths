@@ -120,6 +120,18 @@ Do not box the entire task line. If an older file already has a full-line `\\mbo
 Only protect inline maths fragments.
 Do not force this on long wordy questions or diagram tasks.
 
+## Projected spacing rule
+
+Default projected spacing should be generous.
+
+Target:
+- about 3 visible rows per page
+- about 9 problems per page when using a 3-column projected layout
+- clear writing space between rows
+
+Do not compress the rows just to fit more content unless explicitly asked.
+When in doubt, prefer the more spacious projected layout.
+
 ## Visual density rule
 
 After every rebuild, inspect the actual rendered pages.
