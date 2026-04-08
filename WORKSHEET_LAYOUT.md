@@ -114,6 +114,7 @@ Goal:
 - allow the words in a prompt to wrap normally
 - prevent the maths expression itself from being split awkwardly across lines
 - if a line break is needed, the full maths expression should move as a unit
+- preserve generous projected row spacing so pages visually land around 3 rows / about 9 problems where appropriate
 
 Do not box the entire task line. If an older file already has a full-line `\\mbox{...}`, remove it before rebuilding.
 Only protect inline maths fragments.
