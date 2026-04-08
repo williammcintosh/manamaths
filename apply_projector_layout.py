@@ -79,8 +79,8 @@ def classify_layout(tex: str) -> tuple[int, str, str]:
     average_words = sum(len(strip_latex(item).split()) for item in items) / len(items)
 
     if average_score >= 2.2 or average_words >= 5.2:
-        return 3, '4.3em', f'wordy avg_score={average_score:.2f} avg_words={average_words:.2f}'
-    return 4, '9.2em', f'numeric avg_score={average_score:.2f} avg_words={average_words:.2f}'
+        return 3, '4.7em', f'wordy avg_score={average_score:.2f} avg_words={average_words:.2f}'
+    return 4, '9.8em', f'numeric avg_score={average_score:.2f} avg_words={average_words:.2f}'
 
 
 def normalize_preamble(tex: str) -> str:
