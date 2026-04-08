@@ -26,6 +26,10 @@ def find_engine() -> list[str] | None:
     if tectonic:
         return [tectonic, "--keep-logs", "--keep-intermediates"]
 
+    local_tectonic = Path("/home/debid/bin/tectonic")
+    if local_tectonic.exists():
+        return [str(local_tectonic), "--keep-logs", "--keep-intermediates"]
+
     return None
 
 
