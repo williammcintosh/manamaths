@@ -102,7 +102,7 @@ The heuristic looks at:
 
 ## Inline maths wrapping rule
 
-Short single-line maths prompts should be treated as one unbreakable object where possible.
+Keep the maths expression together, not the whole sentence.
 
 Use this for prompts like:
 - `Are $\frac{6}{9}$ and $\frac{10}{15}$ equivalent?`
@@ -110,11 +110,13 @@ Use this for prompts like:
 - `Simplify $\frac{12}{16}$ and state a fraction equivalent to it.`
 
 Goal:
-- prevent ugly line breaks inside compact maths questions
-- keep short maths prompts visually intact
+- allow the words in a prompt to wrap normally
+- prevent the maths expression itself from being split awkwardly across lines
+- if a line break is needed, the full maths expression should move as a unit
 
+Do not box the entire task line. If an older file already has a full-line `\\mbox{...}`, remove it before rebuilding.
+Only protect inline maths fragments.
 Do not force this on long wordy questions or diagram tasks.
-If a short boxed maths prompt becomes too wide, fix it by adjusting count, columns, or wording — not by allowing ugly mid-problem wraps.
 
 ## Visual density rule
 

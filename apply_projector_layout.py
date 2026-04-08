@@ -92,30 +92,35 @@ def normalize_preamble(tex: str) -> str:
     return TARGET_PREAMBLE + '\n\\begin{document}\n\\sffamily\n\\boldmath\n\n' + rest
 
 
-def should_box_task(content: str) -> bool:
-    stripped = content.strip()
-    if not stripped or '\\begin{' in stripped or '\\mbox{' in stripped or '\\parbox{' in stripped:
-        return False
-    if '$' not in stripped:
-        return False
-
-    plain = strip_latex(stripped)
-    words = plain.split()
-    if len(words) > 8:
-        return False
-    if len(stripped) > 90:
-        return False
-    return True
+def unbox_task_lines(tex: str) -> str:
+    return re.sub(r'(?m)^\\task\s+\\mbox\{(.*)\}$', r'\\task \1', tex)
 
 
-def protect_short_math_tasks(tex: str) -> str:
-    def repl(match: re.Match[str]) -> str:
+def normalize_inline_math_boxes(text: str) -> str:
+    text = text.replace('\\\\mbox{', '\\mbox{')
+    while True:
+        updated = re.sub(r'\\mbox\{\$([^$]+)\$\}', r'$\1$', text)
+        if updated == text:
+            return text
+        text = updated
+
+
+def protect_inline_math(tex: str) -> str:
+    def protect_task_line(match: re.Match[str]) -> str:
         content = match.group(1)
-        if should_box_task(content):
-            return f'\\task \\mbox{{{content.strip()}}}'
-        return match.group(0)
+        if '\\begin{' in content or '\\parbox{' in content:
+            return match.group(0)
 
-    return re.sub(r'(?m)^\\task\s+([^\n]+)$', repl, tex)
+        content = normalize_inline_math_boxes(content)
+        protected = re.sub(
+            r'\$([^$]+)\$',
+            lambda m: '\\mbox{$' + m.group(1) + '$}',
+            content,
+        )
+        return f'\\task {protected}'
+
+    tex = unbox_task_lines(tex)
+    return re.sub(r'(?m)^\\task\s+([^\n]+)$', protect_task_line, tex)
 
 
 def apply_to_file(path: Path) -> tuple[int, str]:
@@ -131,7 +136,7 @@ def apply_to_file(path: Path) -> tuple[int, str]:
     updated = re.sub(r'after-item-skip=([0-9.]+)em', f'after-item-skip={itemsep[:-2]}em', updated)
     updated = re.sub(r'\{\\Huge \\textbf\{([^}]*)\}\}', r'{\\LARGE \\textbf{\1}}', updated)
     updated = re.sub(r'(?m)^\\LARGE (.*)$', r'\1', updated, count=1)
-    updated = protect_short_math_tasks(updated)
+    updated = protect_inline_math(updated)
 
     if updated != original:
         path.write_text(updated, encoding='utf-8')
