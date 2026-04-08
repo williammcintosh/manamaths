@@ -159,3 +159,94 @@ learning_objectives:
       - \item 45 cards, 18 chosen, fraction chosen?
       - \item $2/6 = 1/3$ correct?
       - \item $5/12 = 10/24$ correct?
+
+  - id: L03
+    topic: Multiplying and dividing by 10, 100, and 1000
+    slug: lo-yr9-multiplying-dividing-by-10-100-1000
+    instruction: Calculate each using place value.
+    terminology:
+      - place value
+      - decimal
+      - multiply
+      - divide
+    skills:
+      - multiply by powers of ten
+      - divide by powers of ten
+      - reason with whole numbers and decimals
+    question_types:
+      - direct calculation
+      - missing number
+      - error check
+      - short reasoning
+
+    foundation_questions:
+      - \item $6 \times 10$
+      - \item $4 \times 100$
+      - \item $9 \times 1000$
+      - \item $80 \div 10$
+      - \item $500 \div 100$
+      - \item $7000 \div 1000$
+      - \item $23 \times 10$
+      - \item $45 \times 100$
+      - \item $67 \div 10$
+      - \item $900 \div 100$
+      - \item $3.4 \times 10$
+      - \item $5.8 \div 10$
+      - \item $0.7 \times 100$
+      - \item $4.2 \div 100$
+      - \item $1.25 \times 10$
+      - \item $3.6 \times 100$
+      - \item $0.48 \times 1000$
+      - \item $72 \div 100$
+      - \item $840 \div 10$
+      - \item $9.3 \div 100$
+      - \item $0.56 \times 10$
+      - \item $2.04 \times 100$
+      - \item $64 \div 1000$
+      - \item $305 \times 10$
+
+    proficient_questions:
+      - \item $56 \times 10$
+      - \item $8.4 \times 100$
+      - \item $3700 \div 10$
+      - \item $42.6 \div 100$
+      - \item $0.93 \times 1000$
+      - \item $5.08 \div 10$
+      - \item $67 \times 100$
+      - \item $9.2 \div 10$
+      - \item $0.406 \times 100$
+      - \item $8200 \div 1000$
+      - \item $14.7 \times 100$
+      - \item $3.06 \div 100$
+      - \item $0.048 \times 1000$
+      - \item $640 \div 100$
+      - \item $2.75 \times 10$
+      - \item $91 \times 1000$
+      - \item $4.5 \div 1000$
+      - \item $0.609 \times 100$
+      - \item $750 \div 10$
+      - \item $38.4 \div 100$
+      - \item $\square \times 100 = 6300$
+      - \item $\square \div 10 = 4.8$
+      - \item $7.25 \times \square = 725$
+      - \item $930 \div \square = 0.93$
+
+    excellence_questions:
+      - \item Is $3.6 \times 100 = 36$ correct?
+      - \item Is $420 \div 10 = 42$ correct?
+      - \item Is $0.84 \times 1000 = 84$ correct?
+      - \item Is $5.7 \div 100 = 0.057$ correct?
+      - \item $\square \div 100 = 6.25$
+      - \item $\square \times 1000 = 4.8$
+      - \item $3.09 \times \square = 309$
+      - \item $6400 \div \square = 6.4$
+      - \item $0.047\text{ km}$ to m: multiply by $1000$.
+      - \item $3.6\text{ kg}$ to t: divide by $1000$.
+      - \item $5.2\text{ MB} \to 5200\text{ KB}$: what multiplier?
+      - \item $1.25\text{ L}$ to mL: multiply by $1000$.
+      - \item By $100$: digits move \rule{1.4cm}{0.15mm} places \rule{1.4cm}{0.15mm}.
+      - \item By $1000$ divide: digits move \rule{1.4cm}{0.15mm} places \rule{1.4cm}{0.15mm}.
+      - \item Greater: $4.08 \times 10$ or $408 \div 10$?
+      - \item Smaller: $0.72 \times 100$ or $720 \div 10$?
+      - \item "Multiply by 10, just add a zero." Always true?
+      - \item "Divide by 100" means what? Give an example.

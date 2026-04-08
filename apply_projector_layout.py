@@ -75,12 +75,15 @@ def classify_layout(tex: str) -> tuple[int, str, str]:
         if has_diagram:
             score += 2
 
+    word_counts = [len(strip_latex(item).split()) for item in items]
     average_score = score / len(items)
-    average_words = sum(len(strip_latex(item).split()) for item in items) / len(items)
+    average_words = sum(word_counts) / len(items)
+    max_words = max(word_counts) if word_counts else 0
+    long_item_count = sum(1 for count in word_counts if count >= 6)
 
-    if average_score >= 2.2 or average_words >= 5.2:
-        return 3, '4.7em', f'wordy avg_score={average_score:.2f} avg_words={average_words:.2f}'
-    return 4, '9.8em', f'numeric avg_score={average_score:.2f} avg_words={average_words:.2f}'
+    if average_score >= 2.2 or average_words >= 5.2 or max_words >= 6 or long_item_count >= max(4, len(items) // 4):
+        return 3, '4.7em', f'wordy avg_score={average_score:.2f} avg_words={average_words:.2f} max_words={max_words} long_items={long_item_count}'
+    return 4, '9.8em', f'numeric avg_score={average_score:.2f} avg_words={average_words:.2f} max_words={max_words} long_items={long_item_count}'
 
 
 def normalize_preamble(tex: str) -> str:
