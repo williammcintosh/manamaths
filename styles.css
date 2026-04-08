@@ -27,7 +27,7 @@ body {
 .page-shell {
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 24px 0 64px;
+  padding: 96px 0 64px;
 }
 
 .hero,
@@ -39,32 +39,41 @@ body {
   box-shadow: 0 18px 44px var(--shadow);
 }
 
-.hero,
 .objective-section {
   padding: 28px;
 }
 
 .hero {
   position: sticky;
-  top: 12px;
-  z-index: 20;
-  margin-bottom: 20px;
-  padding: 20px 26px;
-  background: linear-gradient(135deg, rgba(247, 251, 241, 0.96) 0%, rgba(237, 245, 227, 0.96) 52%, rgba(227, 238, 214, 0.96) 100%);
+  top: 0;
+  z-index: 30;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 10px 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  box-shadow: 0 10px 26px rgba(27, 58, 35, 0.08);
+  background: linear-gradient(135deg, rgba(247, 251, 241, 0.97) 0%, rgba(237, 245, 227, 0.97) 52%, rgba(227, 238, 214, 0.97) 100%);
   backdrop-filter: blur(10px);
+}
+
+.hero-inner {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
 }
 
 .hero-brand {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 
 .hero-logo {
-  width: clamp(72px, 10vw, 108px);
+  width: clamp(42px, 5vw, 56px);
   height: auto;
   flex: 0 0 auto;
-  filter: drop-shadow(0 10px 18px rgba(39, 79, 42, 0.14));
+  filter: drop-shadow(0 6px 10px rgba(39, 79, 42, 0.12));
 }
 
 .hero-copy {
@@ -88,7 +97,7 @@ p {
 
 h1 {
   margin-bottom: 0;
-  font-size: clamp(2.1rem, 4.8vw, 3.7rem);
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
 }
@@ -153,27 +162,29 @@ h1 {
 }
 
 @media (max-width: 640px) {
-  .page-shell {
-    width: min(100% - 20px, 1160px);
-    padding: 20px 0 36px;
-  }
-
-  .hero,
   .objective-section {
     padding: 20px;
   }
 
+  .page-shell {
+    width: min(100% - 20px, 1160px);
+    padding: 82px 0 36px;
+  }
+
   .hero {
-    top: 8px;
-    padding: 16px 18px;
+    padding: 8px 0;
+  }
+
+  .hero-inner {
+    width: min(100% - 20px, 1160px);
   }
 
   .hero-brand {
-    gap: 14px;
+    gap: 10px;
   }
 
   .hero-logo {
-    width: 64px;
+    width: 40px;
   }
 
   .worksheet-grid {
