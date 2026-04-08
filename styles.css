@@ -27,7 +27,6 @@ body {
 .page-shell {
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 96px 0 64px;
 }
 
 .hero,
