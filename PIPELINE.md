@@ -125,12 +125,14 @@ For each learning objective set:
 ## Rinse-and-repeat rule
 
 When asked for the next learning objective, assume the same end-to-end workflow unless told otherwise:
-- locate the next LO source in project JSON/YAML
+- use `lo-yr9.yaml` as the checklist/queue
+- locate the next LO source in project JSON/YAML that is not yet fully materialised
 - create a new `lo-yr9-<slug>/` directory
 - create Foundation / Proficient / Excellence worksheet source files
 - build the PDFs
 - add the new section to the website and the jump-links nav
 - visually inspect rendered PDFs, especially page fill and prompt wrapping, and confirm there are enough rows/problems to cover at least 2 pages
+- treat an LO as complete only when its YAML entry exists and the matching folder, TeX files, PDFs, and `index.html` section all exist
 - push when done
 
 ## Default counts
