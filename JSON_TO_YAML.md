@@ -69,5 +69,7 @@ python3 convert_learning_objectives_json.py input.json -o lo-yr9.yaml
 2. review and tidy YAML
 3. create worksheet `.tex` files
 4. run `build_pdfs.py`
-5. sync PDFs to the website copy
-6. review at `wmm.co.nz/manamaths/`
+5. add the new learning objective section and jump-link to the site
+6. visually inspect rendered PDFs and fix YAML/layout if needed
+7. sync PDFs to the website copy
+8. review at `wmm.co.nz/manamaths/`
