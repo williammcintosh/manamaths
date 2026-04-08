@@ -135,6 +135,19 @@ When asked for the next learning objective, assume the same end-to-end workflow 
 - treat an LO as complete only when its YAML entry exists and the matching folder, TeX files, PDFs, and `index.html` section all exist
 - push when done
 
+## Durable command shortcuts
+
+Use these as shorthand instructions:
+- `Add the next Topic 2 learning objective in Mana Maths.`
+  - interpret this as: inspect `lesson-builder/extracted/objectives/9mat-master-teaching-guide.json`
+  - filter to explicit `Topic 2` learning objectives in LO order
+  - skip anything already built in `manamaths`
+  - complete exactly the first missing LO end-to-end
+- `Start the Topic 2 cron jobs.`
+  - interpret this as: create isolated recurring runs 15 minutes apart / every 15 minutes
+  - each run should do exactly one missing Topic 2 LO
+  - stop creating new content once Topic 2 is complete
+
 ## Default counts
 
 Unless told otherwise:
