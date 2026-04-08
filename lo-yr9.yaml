@@ -161,6 +161,85 @@ learning_objectives:
       - \item $5/12 = 10/24$ correct?
 
 
+
+  - id: L03
+    topic: Simplifying fractions
+    slug: lo-yr9-simplifying-fractions
+    instruction: Simplify each fraction to its simplest form.
+    terminology:
+      - simplest form
+      - simplify
+      - common factor
+      - numerator
+      - denominator
+    skills:
+      - simplify fractions by dividing by a common factor
+      - identify when a fraction is already in simplest form
+      - justify why a simplified fraction is equivalent
+      - compare simplified and unsimplified forms
+    question_types:
+      - direct simplification
+      - already simplest
+      - missing value
+      - error check
+      - short reasoning
+
+    foundation_questions:
+      - \item Simplify $\frac{2}{4}$.
+      - \item Simplify $\frac{3}{6}$.
+      - \item Simplify $\frac{4}{8}$.
+      - \item Simplify $\frac{5}{10}$.
+      - \item Simplify $\frac{6}{12}$.
+      - \item Simplify $\frac{8}{12}$.
+      - \item Simplify $\frac{9}{12}$.
+      - \item Simplify $\frac{10}{15}$.
+      - \item Simplify $\frac{12}{16}$.
+      - \item Simplify $\frac{14}{21}$.
+      - \item Simplify $\frac{15}{20}$.
+      - \item Simplify $\frac{16}{24}$.
+      - \item Simplify $\frac{18}{24}$.
+      - \item Simplify $\frac{20}{25}$.
+      - \item Is $\frac{7}{8}$ already in simplest form?
+      - \item Is $\frac{9}{10}$ already in simplest form?
+
+    proficient_questions:
+      - \item Simplify $\frac{18}{27}$.
+      - \item Simplify $\frac{24}{36}$.
+      - \item Simplify $\frac{28}{42}$.
+      - \item Simplify $\frac{32}{48}$.
+      - \item Simplify $\frac{35}{49}$.
+      - \item Simplify $\frac{45}{60}$.
+      - \item Simplify $\frac{54}{72}$.
+      - \item Simplify $\frac{63}{81}$.
+      - \item Fill in the blank: $\frac{12}{20}=\frac{\square}{5}$.
+      - \item Fill in the blank: $\frac{27}{36}=\frac{3}{\square}$.
+      - \item Is $\frac{14}{20}=\frac{7}{10}$ correct?
+      - \item Is $\frac{21}{28}=\frac{2}{3}$ correct?
+      - \item Which is simpler: $\frac{16}{20}$ or $\frac{4}{5}$?
+      - \item Simplify $\frac{42}{56}$.
+      - \item Simplify $\frac{30}{45}$.
+      - \item Simplify $\frac{48}{64}$.
+      - \item Is $\frac{5}{12}$ already in simplest form?
+      - \item Explain in one short sentence how you know $\frac{6}{9}$ is not in simplest form.
+
+    excellence_questions:
+      - \item Is $\frac{18}{24}=\frac{9}{12}$ fully simplified? Explain.
+      - \item Is $\frac{14}{35}=\frac{1}{3}$ correct? Explain.
+      - \item Fill in both blanks: $\frac{\square}{18}=\frac{2}{3}=\frac{14}{\square}$.
+      - \item Fill in both blanks: $\frac{\square}{28}=\frac{3}{7}=\frac{24}{\square}$.
+      - \item Which does not belong: $\frac{6}{9}$, $\frac{8}{12}$, $\frac{10}{15}$, $\frac{5}{8}$?
+      - \item Which is greater: simplified $\frac{18}{30}$ or simplified $\frac{14}{20}$?
+      - \item Explain why $\frac{24}{32}$ and $\frac{3}{4}$ are equivalent.
+      - \item Write $\frac{15}{25}$ in simplest form.
+      - \item Write $\frac{21}{28}$ in simplest form.
+      - \item Complete: $\frac{a}{b}=\frac{16}{24}$, so simplest form is \rule{2cm}{0.15mm}.
+      - \item Complete: $\frac{x}{y}=\frac{27}{45}$, so simplest form is \rule{2cm}{0.15mm}.
+      - \item Is $\frac{36}{54}=\frac{2}{3}$ correct? What would you divide by?
+      - \item Is $\frac{22}{30}=\frac{11}{15}$ fully simplified? Explain.
+      - \item Write a fraction equal to $\frac{4}{5}$ that is not simplified, then simplify it.
+      - \item Write a fraction equal to $\frac{3}{7}$ with denominator $35$. Is it simplified?
+      - \item Explain why equivalent fractions are not always in simplest form.
+
   - id: L04
     topic: Converting between improper fractions and mixed numbers
     slug: lo-yr9-converting-between-improper-fractions-and-mixed-numbers
