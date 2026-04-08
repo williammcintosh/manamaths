@@ -83,6 +83,7 @@ Current website sync script:
 - `convert_learning_objectives_json.py` = JSON to YAML converter
 - `JSON_TO_YAML.md` = JSON conversion workflow
 - `lo-template.tex` = base worksheet template
+  - should always assume inline maths stays together as a unit while words still wrap normally
 - `apply_projector_layout.py` = automatic layout classifier and restyler
 - `build_pdfs.py` = PDF build script
 
