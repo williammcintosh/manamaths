@@ -1122,3 +1122,86 @@ learning_objectives:
       - \item A choir has $28$ altos and $42$ sopranos. They stand in equal rows with the same number of each voice in every row. What is the greatest number of rows?
       - \item Complete: if the highest common factor of $30$ and $n$ is $10$, then one possible value of $n$ is \rule{1.6cm}{0.15mm}.
       - \item Explain why a prime number greater than $2$ must be odd.
+
+  - id: L12
+    topic: Irrational numbers
+    slug: lo-yr9-irrational-numbers
+    instruction: Identify, compare, or use irrational numbers.
+    terminology:
+      - rational number
+      - irrational number
+      - terminating decimal
+      - recurring decimal
+      - square root
+      - pi
+    skills:
+      - identify irrational numbers from a list
+      - distinguish rational and irrational numbers
+      - use square roots to classify numbers
+      - place irrational numbers approximately on a number line
+      - explain why a decimal is rational or irrational
+    question_types:
+      - classify numbers
+      - true or false
+      - estimate and compare
+      - number line reasoning
+      - short explanation
+
+    foundation_questions:
+      - \item Is $\sqrt{4}$ rational or irrational?
+      - \item Is $\sqrt{9}$ rational or irrational?
+      - \item Is $\sqrt{2}$ rational or irrational?
+      - \item Is $\pi$ rational or irrational?
+      - \item Is $0.5$ rational or irrational?
+      - \item Is $0.333\ldots$ rational or irrational?
+      - \item Is $2$ rational or irrational?
+      - \item Is $\sqrt{16}$ rational or irrational?
+      - \item Circle the irrational number: $3, \sqrt{5}, 0.2$.
+      - \item Circle the irrational number: $\sqrt{25}, \pi, 4$.
+      - \item Circle the rational number: $\sqrt{3}, 1.25, \pi$.
+      - \item Which is greater: $\sqrt{2}$ or $1$?
+      - \item Which is greater: $\sqrt{2}$ or $2$?
+      - \item True or false: every whole number is rational.
+      - \item True or false: $\pi$ is a terminating decimal.
+      - \item Write one irrational number.
+
+    proficient_questions:
+      - \item Is $\sqrt{7}$ rational or irrational?
+      - \item Is $\sqrt{36}$ rational or irrational?
+      - \item Is $-\sqrt{5}$ rational or irrational?
+      - \item Is $2.125$ rational or irrational?
+      - \item Is $0.1010010001\ldots$ rational or irrational?
+      - \item Which does not belong: $\sqrt{2}, \sqrt{3}, \sqrt{4}, \pi$?
+      - \item Place in order: $2, \sqrt{5}, 3$.
+      - \item Place in order: $1.4, \sqrt{2}, 1.5$.
+      - \item Which is closer to $3$: $\sqrt{8}$ or $\sqrt{10}$?
+      - \item Between which two whole numbers does $\sqrt{20}$ lie?
+      - \item Between which two whole numbers does $\sqrt{50}$ lie?
+      - \item True or false: every square root is irrational.
+      - \item True or false: a recurring decimal is rational.
+      - \item True or false: $\sqrt{49}$ is irrational.
+      - \item Explain in one short sentence why $\sqrt{25}$ is rational.
+      - \item Explain in one short sentence why $\sqrt{6}$ is irrational.
+      - \item Fill in the blank: $\sqrt{17}$ is between $\square$ and $\square$.
+      - \item Fill in the blank: a number that is irrational is $\square$.
+
+    excellence_questions:
+      - \item A student says $\sqrt{9}$ is irrational because it has a square root sign. Are they correct? Explain.
+      - \item A student says $3.14159$ is irrational because it has many decimal places. Are they correct? Explain.
+      - \item A student says $0.272727\ldots$ is irrational because it never ends. Are they correct? Explain.
+      - \item Which is greater: $\sqrt{11}$ or $3.3$? Show enough working to justify.
+      - \item Which is smaller: $\sqrt{15}$ or $3.9$? Explain how you know.
+      - \item Put in ascending order: $\sqrt{2}, 1.41, 1.5, \frac{3}{2}$.
+      - \item Put in ascending order: $3, \pi, \sqrt{10}, 3.2$.
+      - \item Which does not belong: $\sqrt{2}, \pi, \frac{7}{3}, \sqrt{7}$?
+      - \item Find one rational number between $\sqrt{2}$ and $\sqrt{3}$.
+      - \item Find one irrational number between $2$ and $3$.
+      - \item Is $\sqrt{18}=3\sqrt{2}$ rational or irrational? Explain.
+      - \item Is $2\pi$ rational or irrational? Explain.
+      - \item Complete: if $n$ is a whole number and $\sqrt{n}$ is rational, then one possible value of $n$ is \rule{1.6cm}{0.15mm}.
+      - \item Complete: an irrational number between $4$ and $5$ is \rule{1.8cm}{0.15mm}.
+      - \item True or false: the decimal for an irrational number can terminate. Explain.
+      - \item True or false: $\frac{22}{7}$ is irrational because it is close to $\pi$. Explain.
+      - \item A number lies between $\sqrt{5}$ and $\sqrt{6}$. Is it definitely irrational? Explain.
+      - \item Explain why not every non-terminating decimal is irrational.
+
