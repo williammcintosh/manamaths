@@ -1,1207 +1,1205 @@
 year_level: 9
 learning_objectives:
-  - id: L01
-    topic: Place Values and Decimals
-    slug: lo-yr9-place-values-and-decimals
-    instruction: Read, write, compare, or partition each number using place value.
-    terminology:
-      - place value
-      - digit
-      - ones
-      - tenths
-      - hundredths
-      - decimal
-    skills:
-      - identify the value of a digit based on place
-      - read and write whole numbers and decimals
-      - compare and order numbers using place value
-      - partition numbers into place-value parts
-    question_types:
-      - digit value
-      - reading and writing numbers
-      - comparing and ordering
-      - partitioning
-
-    foundation_questions:
-      - \item 4 in $347$ has value \rule{1.6cm}{0.15mm}.
-      - \item 6 in $862$ has value \rule{1.6cm}{0.15mm}.
-      - \item 5 in $5.3$ has value \rule{1.6cm}{0.15mm}.
-      - \item 7 in $2.74$ has value \rule{1.6cm}{0.15mm}.
-      - \item Write in numerals: three hundred and six.
-      - \item Write in numerals: nine hundred and forty-two.
-      - \item Write in words: $508$.
-      - \item Write in words: $3.6$.
-      - \item Which is greater: $45$ or $54$?
-      - \item Which is smaller: $0.8$ or $0.08$?
-      - \item Order from smallest to largest: $3.2, 2.9, 3.02$.
-      - \item Order from largest to smallest: $406, 460, 640$.
-      - \item Partition $58$ into tens and ones.
-      - \item Partition $407$ into hundreds, tens, and ones.
-      - \item Partition $4.7$ into ones and tenths.
-      - \item Partition $3.48$ into ones, tenths, and hundredths.
-
-    proficient_questions:
-      - \item State the value of the $8$ in $4,836$.
-      - \item State the value of the $3$ in $7.34$.
-      - \item State the value of the $9$ in $0.692$.
-      - \item Write in words: $2,045$.
-      - \item Write in words: $14.09$.
-      - \item Write in numerals: six thousand and seventy-three.
-      - \item Write in numerals: eight and five tenths.
-      - \item Compare using $<$, $>$, or $=$: $5.07\ \square\ 5.7$.
-      - \item Compare using $<$, $>$, or $=$: $0.43\ \square\ 0.403$.
-      - \item Order from smallest to largest: $0.6, 0.06, 0.606, 0.66$.
-      - \item Order from largest to smallest: $9.1, 9.01, 9.11, 8.99$.
-      - \item Partition $5,302$ fully.
-      - \item Partition $7.208$ into ones, tenths, hundredths, and thousandths.
-      - \item Which digit is in the tenths place in $3.58$?
-      - \item Which digit is in the hundreds place in $6,482$?
-      - \item Fill in the blank: $4.3 = 4 + \frac{\square}{10}$.
-      - \item Fill in the blank: $608 = 6 \times 100 + \square \times 10 + 8$.
-      - \item Explain in one short sentence why $0.5 > 0.05$.
-
-    excellence_questions:
-      - \item A student says the $4$ in $0.48$ is worth $4$. Are they correct? Explain.
-      - \item A student says $3.09 > 3.9$ because $09 > 9$. Are they correct? Explain.
-      - \item Which is greater: $2.305$ or $2.35$? Show enough working to justify.
-      - \item Which is smaller: $7.08$ or $7.8$? Explain how you know.
-      - \item Write $5.406$ as the sum of its place-value parts.
-      - \item Write $2,070$ as the sum of its place-value parts.
-      - \item Fill in the blank: in $8.472$, the digit in the hundredths place is \rule{1.4cm}{0.15mm}.
-      - \item Fill in the blank: $6.08 = 6 + \frac{\square}{100}$.
-      - \item Complete: $4.5 = 4 + \frac{\square}{10} = \frac{45}{10}$.
-      - \item Put in ascending order: $4.09, 4.9, 4.099, 4.19$.
-      - \item Put in descending order: $12.3, 12.03, 12.300, 12.29$.
-      - \item Which does not belong: $0.7, 0.70, 0.07, 0.700$?
-      - \item A number has $3$ ones, $4$ tenths, and $7$ hundredths. Write the number.
-      - \item A number has $5$ hundreds, $0$ tens, $8$ ones, and $2$ tenths. Write the number.
-      - \item Explain why adding a zero to the end sometimes changes nothing and sometimes changes the value.
-      - \item Write a number between $6.4$ and $6.5$ that has three decimal places.
-
-  - id: L02
-    topic: Rounding to Decimal Points
-    slug: lo-yr9-rounding-to-decimal-points
-    instruction: Round each decimal to the required number of decimal places.
-    terminology:
-      - rounding
-      - decimal place
-      - whole number
-      - tenths
-      - hundredths
-    skills:
-      - identify the place to round to
-      - use the next digit to decide whether to round up
-      - round decimals to whole numbers, tenths, and hundredths
-      - justify rounding choices
-    question_types:
-      - direct rounding
-      - fill in the blank
-      - error check
-      - comparison
-      - short reasoning
-
-    foundation_questions:
-      - \item Round $3.4$ to the nearest whole number.
-      - \item Round $7.6$ to the nearest whole number.
-      - \item Round $2.31$ to 1 decimal place.
-      - \item Round $5.68$ to 1 decimal place.
-      - \item Round $9.24$ to 1 decimal place.
-      - \item Round $4.86$ to 1 decimal place.
-      - \item Round $1.73$ to 1 decimal place.
-      - \item Round $6.15$ to 1 decimal place.
-      - \item Round $8.42$ to 1 decimal place.
-      - \item Round $0.27$ to 1 decimal place.
-      - \item Round $3.141$ to 2 decimal places.
-      - \item Round $5.678$ to 2 decimal places.
-      - \item Round $7.204$ to 2 decimal places.
-      - \item Round $9.995$ to 2 decimal places.
-      - \item Round $12.49$ to the nearest whole number.
-      - \item Round $12.50$ to the nearest whole number.
-
-    proficient_questions:
-      - \item Round $14.37$ to 1 decimal place.
-      - \item Round $8.05$ to 1 decimal place.
-      - \item Round $6.666$ to 2 decimal places.
-      - \item Round $2.349$ to 2 decimal places.
-      - \item Round $0.995$ to 2 decimal places.
-      - \item Round $17.499$ to the nearest whole number.
-      - \item Round $17.500$ to the nearest whole number.
-      - \item Round $3.045$ to 2 decimal places.
-      - \item Round $9.994$ to 2 decimal places.
-      - \item Round $12.444$ to 2 decimal places.
-      - \item Round $5.555$ to 2 decimal places.
-      - \item Round $0.074$ to 1 decimal place.
-      - \item Round $0.074$ to 2 decimal places.
-      - \item Fill in the blank: $4.27 \approx 4.\square$ to 1 decimal place.
-      - \item Fill in the blank: $8.196 \approx 8.\square\square$ to 2 decimal places.
-      - \item Is $6.84 \to 6.9$ to 1 decimal place correct?
-      - \item Is $3.141 \to 3.14$ to 2 decimal places correct?
-      - \item Explain in one short sentence what digit decides the rounding.
-
-    excellence_questions:
-      - \item A student says $4.249$ rounds to $4.3$ to 1 decimal place. Are they correct? Explain.
-      - \item A student says $7.995$ rounds to $7.99$ to 2 decimal places. Are they correct? Explain.
-      - \item Which is greater after rounding to 1 decimal place: $6.44$ or $6.45$?
-      - \item Which is smaller after rounding to 2 decimal places: $3.104$ or $3.099$?
-      - \item Fill in the blank: a number that rounds to $5.7$ to 1 decimal place could be \rule{1.8cm}{0.15mm}.
-      - \item Fill in the blank: a number that rounds to $2.35$ to 2 decimal places could be \rule{1.8cm}{0.15mm}.
-      - \item Complete: $8.\square 4$ rounds to $8.5$ to 1 decimal place.
-      - \item Complete: $3.4\square 8$ rounds to $3.45$ to 2 decimal places.
-      - \item Round $19.995$ to 2 decimal places.
-      - \item Round $0.999$ to 2 decimal places.
-      - \item Round $12.049$ to 2 decimal places.
-      - \item Round $4.444$ to 2 decimal places.
-      - \item Put in order after rounding to 1 decimal place: $2.84, 2.85, 2.89$.
-      - \item Write two different numbers that both round to $6.2$ to 1 decimal place.
-      - \item Explain why $5.05$ and $5.04$ do not round to the same tenth.
-      - \item A measurement is $3.276$ m. Write it to 2 decimal places.
-
-  - id: L01
-    topic: Forming fractions
-    instruction: Write each as a fraction.
-    terminology:
-      - fraction
-      - whole
-      - numerator
-      - denominator
-    skills:
-      - form fractions from context
-    question_types:
-      - part of a whole
-      - context problems
-
-    foundation_questions:
-      - \item 3 out of 8
-      - \item 4 out of 10
-      - \item 7 out of 20
-      - \item 5 out of 12
-      - \item 2 out of 6
-      - \item 1 out of 9
-      - \item 6 out of 15
-      - \item 8 out of 14
-      - \item 3 out of 11
-      - \item 9 out of 16
-      - \item 2 out of 5
-      - \item 4 out of 13
-      - \item 11 out of 20
-      - \item 7 out of 12
-      - \item 5 out of 18
-      - \item 10 out of 21
-      - \item 6 out of 17
-      - \item 12 out of 25
-      - \item 8 out of 19
-      - \item 9 out of 22
-
-      - |
-        \item {
-        \begin{tikzpicture}[scale=1]
-        \foreach \i in {0,...,5} {
-          \coordinate (P\i) at ({60*\i}:1.4);
-        }
-        \coordinate (O) at (0,0);
-        \fill[green!60!black] (O)--(P0)--(P1)--cycle;
-        \fill[green!60!black] (O)--(P1)--(P2)--cycle;
-        \draw (P0)--(P1)--(P2)--(P3)--(P4)--(P5)--cycle;
-        \foreach \i in {0,...,5} \draw (O)--(P\i);
-        \end{tikzpicture}
-        }
-
-      - |
-        \item {
-        \begin{tikzpicture}[scale=1.1]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (2,0);
-        \coordinate (C) at (1,1.8);
-        \coordinate (M) at (1,0.6);
-        \fill[purple!30] (A)--(C)--(M)--cycle;
-        \draw (A)--(B)--(C)--cycle;
-        \draw (A)--(M)--(B);
-        \draw (C)--(M);
-        \end{tikzpicture}
-        }
-
-      - |
-        \item {
-        \begin{tikzpicture}[scale=1]
-        \def\r{1.4}
-        \foreach \i in {0,...,9} {
-          \pgfmathsetmacro{\a}{90-36*\i}
-          \pgfmathsetmacro{\b}{90-36*(\i+1)}
-          \ifnum\i<4
-            \fill[orange!35] (0,0)--(\a:\r) arc (\a:\b:\r)--cycle;
-          \fi
-        }
-        \foreach \i in {0,...,9} {
-          \draw (0,0)--({90-36*\i}:\r);
-        }
-        \draw (0,0) circle (\r);
-        \end{tikzpicture}
-        }
-
-      - |
-        \item {
-        \begin{tikzpicture}[scale=0.9]
-        \draw (0,0) rectangle (4,2);
-        \draw (2,0)--(2,2);
-        \draw (0,1)--(4,1);
-        \coordinate (C) at (2,1);
-        \foreach \p in {(0,2),(0,0),(4,2),(4,0)} \draw \p -- (C);
-        \fill[orange!50] (0,2)--(2,1)--(0,1)--cycle;
-        \fill[orange!50] (2,1)--(4,2)--(4,1)--cycle;
-        \fill[orange!50] (0,0)--(2,1)--(0,1)--cycle;
-        \fill[orange!50] (2,0)--(2,1)--(4,0)--cycle;
-        \end{tikzpicture}
-        }
-
-    proficient_questions:
-      - \item 5 of 12 shaded
-      - \item 9 of 36 away
-      - \item 7 of 20 spins
-      - \item 17 of 48 faulty
-      - \item 18 of 25 full
-      - \item 13 of 32 prefer cats
-      - \item 19 of 27 covered
-      - \item 16 of 45 bikes
-      - \item 7 of 18 used
-      - \item 23 of 50 coloured
-      - \item 11 of 29 shoes
-      - \item 21 of 34 taken
-      - \item 14 of 40 planted
-      - \item 15 of 22 packed
-      - \item 27 of 60 completed
-      - \item 8 of 21 missing
-      - \item 31 of 80 saved
-      - \item 9 of 14 chosen
-      - \item 6 of 17 packed
-      - \item 22 of 55 stacked
-      - \item 14 of 33 painted
-      - \item 5 of 16 cracked
-      - \item 18 of 44 sent
-      - \item 7 of 24 peeled
-
-    excellence_questions:
-      # unit_conversion
-      - \item 2 days of 1 week
-      - \item 40p of £2
-      - \item 5 min of 1 hour
-      - \item 300g of 2kg
-
-      # whole_inferred
-      - \item 8 red, 12 blue, red?
-      - \item 5 cats, 7 dogs, cats?
-      - \item 9 boys, 11 girls, boys?
-      - \item 6 apples, 4 eaten, eaten?
-
-      # fraction_of_remainder
-      - \item 12 total, 5 used, fraction left?
-      - \item 20 total, 8 gone, fraction remaining?
-      - \item 15 total, 6 eaten, fraction not eaten?
-      - \item 18 total, 7 broken, fraction not broken?
-
-      # word_problem
-      - \item 30 students, 18 present, fraction present?
-      - \item 24 seats, 9 empty, fraction empty?
-      - \item 40 tickets, 25 sold, fraction sold?
-      - \item 50 marbles, 20 blue, fraction blue?
-
-      # error_check
-      - \item $3/8 = 5/10$ correct?
-      - \item $6/12 = 1/3$ correct?
-      - \item $4/9 = 8/18$ correct?
-      - \item $10/20 = 2/5$ correct?
-      - \item 21 total, 8 broken, fraction not broken?
-      - \item 36 books, 15 borrowed, fraction borrowed?
-      - \item 14 pens, 5 lost, fraction remaining?
-      - \item 45 cards, 18 chosen, fraction chosen?
-      - \item $2/6 = 1/3$ correct?
-      - \item $5/12 = 10/24$ correct?
-
-
-
-  - id: L03
-    topic: Simplifying fractions
-    slug: lo-yr9-simplifying-fractions
-    instruction: Simplify each fraction to its simplest form.
-    terminology:
-      - simplest form
-      - simplify
-      - common factor
-      - numerator
-      - denominator
-    skills:
-      - simplify fractions by dividing by a common factor
-      - identify when a fraction is already in simplest form
-      - justify why a simplified fraction is equivalent
-      - compare simplified and unsimplified forms
-    question_types:
-      - direct simplification
-      - already simplest
-      - missing value
-      - error check
-      - short reasoning
-
-    foundation_questions:
-      - \item Simplify $\frac{2}{4}$.
-      - \item Simplify $\frac{3}{6}$.
-      - \item Simplify $\frac{4}{8}$.
-      - \item Simplify $\frac{5}{10}$.
-      - \item Simplify $\frac{6}{12}$.
-      - \item Simplify $\frac{8}{12}$.
-      - \item Simplify $\frac{9}{12}$.
-      - \item Simplify $\frac{10}{15}$.
-      - \item Simplify $\frac{12}{16}$.
-      - \item Simplify $\frac{14}{21}$.
-      - \item Simplify $\frac{15}{20}$.
-      - \item Simplify $\frac{16}{24}$.
-      - \item Simplify $\frac{18}{24}$.
-      - \item Simplify $\frac{20}{25}$.
-      - \item Is $\frac{7}{8}$ already in simplest form?
-      - \item Is $\frac{9}{10}$ already in simplest form?
-
-    proficient_questions:
-      - \item Simplify $\frac{18}{27}$.
-      - \item Simplify $\frac{24}{36}$.
-      - \item Simplify $\frac{28}{42}$.
-      - \item Simplify $\frac{32}{48}$.
-      - \item Simplify $\frac{35}{49}$.
-      - \item Simplify $\frac{45}{60}$.
-      - \item Simplify $\frac{54}{72}$.
-      - \item Simplify $\frac{63}{81}$.
-      - \item Fill in the blank: $\frac{12}{20}=\frac{\square}{5}$.
-      - \item Fill in the blank: $\frac{27}{36}=\frac{3}{\square}$.
-      - \item Is $\frac{14}{20}=\frac{7}{10}$ correct?
-      - \item Is $\frac{21}{28}=\frac{2}{3}$ correct?
-      - \item Which is simpler: $\frac{16}{20}$ or $\frac{4}{5}$?
-      - \item Simplify $\frac{42}{56}$.
-      - \item Simplify $\frac{30}{45}$.
-      - \item Simplify $\frac{48}{64}$.
-      - \item Is $\frac{5}{12}$ already in simplest form?
-      - \item Explain in one short sentence how you know $\frac{6}{9}$ is not in simplest form.
-
-    excellence_questions:
-      - \item Is $\frac{18}{24}=\frac{9}{12}$ fully simplified? Explain.
-      - \item Is $\frac{14}{35}=\frac{1}{3}$ correct? Explain.
-      - \item Fill in both blanks: $\frac{\square}{18}=\frac{2}{3}=\frac{14}{\square}$.
-      - \item Fill in both blanks: $\frac{\square}{28}=\frac{3}{7}=\frac{24}{\square}$.
-      - \item Which does not belong: $\frac{6}{9}$, $\frac{8}{12}$, $\frac{10}{15}$, $\frac{5}{8}$?
-      - \item Which is greater: simplified $\frac{18}{30}$ or simplified $\frac{14}{20}$?
-      - \item Explain why $\frac{24}{32}$ and $\frac{3}{4}$ are equivalent.
-      - \item Write $\frac{15}{25}$ in simplest form.
-      - \item Write $\frac{21}{28}$ in simplest form.
-      - \item Complete: $\frac{a}{b}=\frac{16}{24}$, so simplest form is \rule{2cm}{0.15mm}.
-      - \item Complete: $\frac{x}{y}=\frac{27}{45}$, so simplest form is \rule{2cm}{0.15mm}.
-      - \item Is $\frac{36}{54}=\frac{2}{3}$ correct? What would you divide by?
-      - \item Is $\frac{22}{30}=\frac{11}{15}$ fully simplified? Explain.
-      - \item Write a fraction equal to $\frac{4}{5}$ that is not simplified, then simplify it.
-      - \item Write a fraction equal to $\frac{3}{7}$ with denominator $35$. Is it simplified?
-      - \item Explain why equivalent fractions are not always in simplest form.
-
-  - id: L04
-    topic: Converting between improper fractions and mixed numbers
-    slug: lo-yr9-converting-between-improper-fractions-and-mixed-numbers
-    instruction: Convert between improper fractions and mixed numbers.
-    terminology:
-      - improper fraction
-      - mixed number
-      - whole
-      - remainder
-      - numerator
-      - denominator
-    skills:
-      - convert improper fractions to mixed numbers
-      - convert mixed numbers to improper fractions
-      - interpret the whole-number part and remainder
-      - check whether a conversion is sensible
-    question_types:
-      - direct conversion
-      - missing value
-      - comparison
-      - error check
-      - short reasoning
-
-    foundation_questions:
-      - \item Convert $\frac{5}{2}$ to a mixed number.
-      - \item Convert $\frac{7}{3}$ to a mixed number.
-      - \item Convert $\frac{9}{4}$ to a mixed number.
-      - \item Convert $\frac{11}{5}$ to a mixed number.
-      - \item Convert $1\frac{1}{2}$ to an improper fraction.
-      - \item Convert $2\frac{1}{3}$ to an improper fraction.
-      - \item Convert $3\frac{1}{4}$ to an improper fraction.
-      - \item Convert $2\frac{2}{5}$ to an improper fraction.
-      - \item Convert $\frac{13}{6}$ to a mixed number.
-      - \item Convert $\frac{15}{4}$ to a mixed number.
-      - \item Convert $4\frac{1}{3}$ to an improper fraction.
-      - \item Convert $5\frac{2}{7}$ to an improper fraction.
-      - \item Convert $\frac{17}{5}$ to a mixed number.
-      - \item Convert $\frac{14}{3}$ to a mixed number.
-      - \item Convert $3\frac{3}{8}$ to an improper fraction.
-      - \item Convert $6\frac{1}{6}$ to an improper fraction.
-
-    proficient_questions:
-      - \item Convert $\frac{19}{5}$ to a mixed number.
-      - \item Convert $\frac{22}{7}$ to a mixed number.
-      - \item Convert $\frac{31}{6}$ to a mixed number.
-      - \item Convert $\frac{27}{4}$ to a mixed number.
-      - \item Convert $4\frac{3}{5}$ to an improper fraction.
-      - \item Convert $7\frac{2}{3}$ to an improper fraction.
-      - \item Convert $5\frac{5}{8}$ to an improper fraction.
-      - \item Convert $9\frac{1}{4}$ to an improper fraction.
-      - \item Fill in the blank: $\frac{17}{4}=\square\frac{\square}{4}$.
-      - \item Fill in the blank: $3\frac{2}{7}=\frac{\square}{7}$.
-      - \item Which is greater: $\frac{11}{3}$ or $3\frac{1}{2}$?
-      - \item Is $\frac{14}{5}=2\frac{4}{5}$ correct?
-      - \item Is $6\frac{1}{4}=\frac{25}{4}$ correct?
-      - \item Convert $\frac{29}{8}$ to a mixed number.
-      - \item Convert $8\frac{5}{6}$ to an improper fraction.
-      - \item Convert $\frac{23}{9}$ to a mixed number.
-      - \item Convert $2\frac{7}{10}$ to an improper fraction.
-      - \item Explain in one short sentence what the denominator tells you in $4\frac{3}{7}$.
-
-    excellence_questions:
-      - \item A student says $\frac{18}{5}=3\frac{5}{5}$. Are they correct? Explain.
-      - \item A student says $4\frac{2}{3}=\frac{14}{3}$. Are they correct? Explain.
-      - \item Fill in both blanks: $\frac{\square}{6}=4\frac{\square}{6}$.
-      - \item Fill in both blanks: $7\frac{\square}{8}=\frac{61}{8}$.
-      - \item Which is greater: $\frac{23}{6}$ or $3\frac{4}{5}$? Show enough working to justify.
-      - \item Write $\frac{35}{4}$ as a mixed number, then place it between two whole numbers.
-      - \item Write $5\frac{7}{9}$ as an improper fraction, then say whether it is closer to $5$ or $6$.
-      - \item Complete: $\frac{\square}{7}=2\frac{5}{7}=\frac{26}{\square}$.
-      - \item Is $\frac{41}{6}=6\frac{5}{6}$ correct? Explain what went wrong or why it works.
-      - \item A ribbon is $\frac{17}{3}$ m long. Write this as a mixed number.
-      - \item A tank holds $2\frac{3}{4}$ L. Write this as an improper fraction of litres.
-      - \item Which does not belong: $\frac{10}{3}$, $3\frac{1}{3}$, $\frac{13}{4}$, $\frac{20}{6}$?
-      - \item A baker uses $3\frac{5}{6}$ cups of flour each batch. Write this as an improper fraction.
-      - \item A runner completes $\frac{25}{8}$ km. Write this as a mixed number.
-      - \item Explain why $\frac{n}{4}=2\frac{1}{4}$ gives $n=9$.
-      - \item Complete: if $\frac{m}{5}=6\frac{2}{5}$, then $m=\rule{1.6cm}{0.15mm}$.
-      - \item Convert $12\frac{7}{12}$ to an improper fraction.
-      - \item Convert $\frac{58}{9}$ to a mixed number.
-
-  - id: L03
-    topic: Multiplying and dividing by 10, 100, and 1000
-    slug: lo-yr9-multiplying-dividing-by-10-100-1000
-    instruction: Calculate each using place value.
-    terminology:
-      - place value
-      - decimal
-      - multiply
-      - divide
-    skills:
-      - multiply by powers of ten
-      - divide by powers of ten
-      - reason with whole numbers and decimals
-    question_types:
-      - direct calculation
-      - missing number
-      - error check
-      - short reasoning
-
-    foundation_questions:
-      - \item $6 \times 10$
-      - \item $4 \times 100$
-      - \item $9 \times 1000$
-      - \item $80 \div 10$
-      - \item $500 \div 100$
-      - \item $7000 \div 1000$
-      - \item $23 \times 10$
-      - \item $45 \times 100$
-      - \item $67 \div 10$
-      - \item $900 \div 100$
-      - \item $3.4 \times 10$
-      - \item $5.8 \div 10$
-      - \item $0.7 \times 100$
-      - \item $4.2 \div 100$
-      - \item $1.25 \times 10$
-      - \item $3.6 \times 100$
-      - \item $0.48 \times 1000$
-      - \item $72 \div 100$
-      - \item $840 \div 10$
-      - \item $9.3 \div 100$
-      - \item $0.56 \times 10$
-      - \item $2.04 \times 100$
-      - \item $64 \div 1000$
-      - \item $305 \times 10$
-
-    proficient_questions:
-      - \item $56 \times 10$
-      - \item $8.4 \times 100$
-      - \item $3700 \div 10$
-      - \item $42.6 \div 100$
-      - \item $0.93 \times 1000$
-      - \item $5.08 \div 10$
-      - \item $67 \times 100$
-      - \item $9.2 \div 10$
-      - \item $0.406 \times 100$
-      - \item $8200 \div 1000$
-      - \item $14.7 \times 100$
-      - \item $3.06 \div 100$
-      - \item $0.048 \times 1000$
-      - \item $640 \div 100$
-      - \item $2.75 \times 10$
-      - \item $91 \times 1000$
-      - \item $4.5 \div 1000$
-      - \item $0.609 \times 100$
-      - \item $750 \div 10$
-      - \item $38.4 \div 100$
-      - \item $\square \times 100 = 6300$
-      - \item $\square \div 10 = 4.8$
-      - \item $7.25 \times \square = 725$
-      - \item $930 \div \square = 0.93$
-
-    excellence_questions:
-      - \item Is $3.6 \times 100 = 36$ correct?
-      - \item Is $420 \div 10 = 42$ correct?
-      - \item Is $0.84 \times 1000 = 84$ correct?
-      - \item Is $5.7 \div 100 = 0.057$ correct?
-      - \item $\square \div 100 = 6.25$
-      - \item $\square \times 1000 = 4.8$
-      - \item $3.09 \times \square = 309$
-      - \item $6400 \div \square = 6.4$
-      - \item $0.047\text{ km}$ to m: multiply by $1000$.
-      - \item $3.6\text{ kg}$ to t: divide by $1000$.
-      - \item $5.2\text{ MB} \to 5200\text{ KB}$: what multiplier?
-      - \item $1.25\text{ L}$ to mL: multiply by $1000$.
-      - \item By $100$: digits move \rule{1.4cm}{0.15mm} places \rule{1.4cm}{0.15mm}.
-      - \item By $1000$ divide: digits move \rule{1.4cm}{0.15mm} places \rule{1.4cm}{0.15mm}.
-      - \item Greater: $4.08 \times 10$ or $408 \div 10$?
-      - \item Smaller: $0.72 \times 100$ or $720 \div 10$?
-      - \item "Multiply by 10, just add a zero." Always true?
-      - \item "Divide by 100" means what? Give an example.
-
-
-  - id: L07
-    topic: Reciprocals
-    slug: lo-yr9-reciprocals
-    instruction: Find the reciprocal of each value.
-    terminology:
-      - reciprocal
-      - fraction
-      - numerator
-      - denominator
-      - whole number
-      - multiplicative inverse
-    skills:
-      - find reciprocals of unit fractions
-      - find reciprocals of non-unit fractions
-      - write whole numbers as fractions before finding reciprocals
-      - check whether two numbers are reciprocals
-      - use reciprocals in simple reasoning
-    question_types:
-      - direct reciprocal
-      - whole number to fraction
-      - missing value
-      - error check
-      - comparison
-      - short reasoning
-  
-    foundation_questions:
-      - \item Find the reciprocal of $\frac{1}{2}$.
-      - \item Find the reciprocal of $\frac{1}{3}$.
-      - \item Find the reciprocal of $\frac{2}{5}$.
-      - \item Find the reciprocal of $\frac{3}{4}$.
-      - \item Find the reciprocal of $\frac{4}{7}$.
-      - \item Find the reciprocal of $\frac{5}{6}$.
-      - \item Find the reciprocal of $2$.
-      - \item Find the reciprocal of $3$.
-      - \item Find the reciprocal of $4$.
-      - \item Find the reciprocal of $5$.
-      - \item Find the reciprocal of $\frac{7}{8}$.
-      - \item Find the reciprocal of $\frac{9}{10}$.
-      - \item Find the reciprocal of $\frac{3}{8}$.
-      - \item Find the reciprocal of $\frac{5}{12}$.
-      - \item Find the reciprocal of $6$.
-      - \item Find the reciprocal of $10$.
-  
-    proficient_questions:
-      - \item Find the reciprocal of $\frac{7}{3}$.
-      - \item Find the reciprocal of $\frac{9}{4}$.
-      - \item Find the reciprocal of $\frac{11}{5}$.
-      - \item Find the reciprocal of $\frac{8}{11}$.
-      - \item Find the reciprocal of $12$.
-      - \item Find the reciprocal of $15$.
-      - \item Find the reciprocal of $\frac{13}{9}$.
-      - \item Find the reciprocal of $\frac{14}{5}$.
-      - \item Fill in the blank: the reciprocal of $\frac{4}{9}$ is $\frac{\square}{\square}$.
-      - \item Fill in the blank: the reciprocal of $7$ is $\frac{\square}{\square}$.
-      - \item Are $\frac{2}{7}$ and $\frac{7}{2}$ reciprocals?
-      - \item Are $\frac{3}{5}$ and $\frac{5}{3}$ reciprocals?
-      - \item Is the reciprocal of $\frac{5}{8}$ equal to $\frac{8}{5}$?
-      - \item Is the reciprocal of $9$ equal to $\frac{1}{9}$?
-      - \item Which is greater: the reciprocal of $\frac{2}{9}$ or the reciprocal of $\frac{2}{7}$?
-      - \item Which is greater: the reciprocal of $3$ or the reciprocal of $5$?
-      - \item Find the reciprocal of $\frac{17}{12}$.
-      - \item Explain in one short sentence why the reciprocal of $1$ is still $1$.
-  
-    excellence_questions:
-      - \item A student says the reciprocal of $\frac{4}{7}$ is $\frac{7}{4}$. Are they correct? Explain.
-      - \item A student says the reciprocal of $6$ is $6$. Are they correct? Explain.
-      - \item Fill in both blanks: $\frac{\square}{7}$ and $\frac{7}{\square}$ are reciprocals.
-      - \item Fill in both blanks: if $\frac{5}{8}$ and $\frac{a}{b}$ are reciprocals, then $a=\rule{1.4cm}{0.15mm}$ and $b=\rule{1.4cm}{0.15mm}$.
-      - \item Which pair are reciprocals: $\frac{3}{8}$ and $\frac{8}{3}$, or $\frac{3}{8}$ and $\frac{3}{8}$?
-      - \item Write a number whose reciprocal is $\frac{4}{9}$.
-      - \item Write a fraction whose reciprocal is $3$.
-      - \item Complete: the reciprocal of $\frac{m}{9}$ is $\frac{9}{m}$. If the reciprocal is $\frac{9}{4}$, then $m=\rule{1.4cm}{0.15mm}$.
-      - \item If two numbers are reciprocals, what is their product?
-      - \item Are $\frac{6}{11}$ and $\frac{11}{6}$ reciprocals? How do you know?
-      - \item Which does not belong: $\frac{2}{3}$, $\frac{3}{2}$, $\frac{4}{5}$, $\frac{5}{4}$?
-      - \item The reciprocal of a number is $\frac{7}{12}$. What is the number?
-      - \item The reciprocal of a number is $5$. What is the number?
-      - \item A student writes $\frac{2}{9}\to\frac{9}{2}$ and $9\to9$. Explain why only one of these is correct.
-      - \item Find a number whose reciprocal is smaller than $\frac{1}{4}$.
-      - \item Explain why a number and its reciprocal switch places above and below the fraction bar.
-  
-  - id: L05
-    topic: Adding and subtracting fractions
-    slug: lo-yr9-adding-and-subtracting-fractions
-    instruction: Add or subtract each fraction. Simplify where you can.
-    terminology:
-      - fraction
-      - numerator
-      - denominator
-      - common denominator
-      - equivalent fraction
-      - simplify
-    skills:
-      - add fractions with the same denominator
-      - subtract fractions with the same denominator
-      - add fractions with different denominators
-      - subtract fractions with different denominators
-      - simplify answers where possible
-    question_types:
-      - direct calculation
-      - missing value
-      - word problem
-      - error check
-      - comparison
-
-    foundation_questions:
-      - \item $\frac{1}{8}+\frac{3}{8}$
-      - \item $\frac{5}{9}-\frac{2}{9}$
-      - \item $\frac{2}{7}+\frac{4}{7}$
-      - \item $\frac{6}{11}-\frac{1}{11}$
-      - \item $\frac{3}{10}+\frac{5}{10}$
-      - \item $\frac{9}{12}-\frac{4}{12}$
-      - \item $\frac{1}{4}+\frac{2}{4}$
-      - \item $\frac{7}{15}-\frac{3}{15}$
-      - \item $\frac{5}{6}+\frac{1}{6}$
-      - \item $\frac{8}{13}-\frac{5}{13}$
-      - \item $\frac{2}{5}+\frac{1}{5}$
-      - \item $\frac{11}{14}-\frac{4}{14}$
-      - \item $\frac{3}{8}+\frac{4}{8}$
-      - \item $\frac{10}{12}-\frac{7}{12}$
-      - \item $\frac{5}{16}+\frac{7}{16}$
-      - \item $\frac{13}{20}-\frac{6}{20}$
-
-    proficient_questions:
-      - \item $\frac{1}{2}+\frac{1}{4}$
-      - \item $\frac{3}{4}-\frac{1}{8}$
-      - \item $\frac{2}{3}+\frac{1}{6}$
-      - \item $\frac{5}{6}-\frac{1}{3}$
-      - \item $\frac{3}{5}+\frac{1}{10}$
-      - \item $\frac{7}{8}-\frac{1}{4}$
-      - \item $\frac{2}{9}+\frac{4}{3}$
-      - \item $\frac{11}{12}-\frac{1}{6}$
-      - \item $\frac{3}{7}+\frac{2}{14}$
-      - \item $\frac{5}{6}-\frac{1}{12}$
-      - \item $\frac{4}{15}+\frac{2}{5}$
-      - \item $\frac{7}{10}-\frac{1}{5}$
-      - \item $\frac{5}{12}+\frac{1}{3}$
-      - \item $\frac{13}{18}-\frac{1}{9}$
-      - \item $\frac{3}{4}+\frac{5}{12}$
-      - \item $\frac{7}{9}-\frac{1}{6}$
-
-    excellence_questions:
-      - \item $1\frac{1}{4}+\frac{2}{3}$
-      - \item $2\frac{1}{2}-\frac{3}{4}$
-      - \item $\frac{5}{6}+\frac{7}{12}$
-      - \item $\frac{11}{15}-\frac{2}{5}$
-      - '\item Fill in the blank: $\frac{3}{4}+\frac{\square}{8}=1$'
-      - '\item Fill in the blank: $\frac{\square}{6}+\frac{1}{3}=\frac{5}{6}$'
-      - \item Is $\frac{2}{3}+\frac{1}{6}=\frac{3}{9}$ correct?
-      - \item Is $\frac{7}{8}-\frac{1}{4}=\frac{6}{4}$ correct?
-      - '\item Which is greater: $\frac{3}{5}+\frac{1}{4}$ or $\frac{5}{6}-\frac{1}{3}$?'
-      - \item Mia walked $\frac{3}{8}$ km and then $\frac{5}{8}$ km. How far altogether?
-      - \item Find two twelfths that add to $\frac{11}{12}$.
-      - '\item Complete: $\frac{5}{6}-\frac{\square}{18}=\frac{2}{3}$'
-      - '\item Complete: $1-\frac{5}{12}=\rule{1.6cm}{0.15mm}$'
-      - \item $\frac{4}{9}+\frac{5}{18}$
-      - \item $\frac{7}{12}+\frac{5}{18}$
-      - \item $\frac{5}{4}-\frac{2}{3}$
-
-  - id: L06
-    topic: Multiplying fractions
-    slug: lo-yr9-multiplying-fractions
-    instruction: Multiply each fraction. Simplify where you can.
-    terminology:
-      - fraction
-      - numerator
-      - denominator
-      - simplify
-      - product
-    skills:
-      - multiply fractions by fractions
-      - multiply whole numbers and fractions
-      - simplify products
-      - decide whether an answer is sensible
-    question_types:
-      - direct calculation
-      - simplify after multiplying
-      - mixed whole-number and fraction
-      - missing value
-      - error check
-      - comparison
-
-    foundation_questions:
-      - \item $\frac{1}{2}\times\frac{1}{3}$
-      - \item $\frac{2}{3}\times\frac{1}{4}$
-      - \item $\frac{3}{5}\times\frac{1}{2}$
-      - \item $\frac{1}{4}\times\frac{2}{7}$
-      - \item $\frac{3}{4}\times\frac{2}{3}$
-      - \item $\frac{2}{5}\times\frac{3}{4}$
-      - \item $\frac{4}{5}\times\frac{1}{2}$
-      - \item $\frac{5}{6}\times\frac{2}{3}$
-      - \item $2\times\frac{1}{5}$
-      - \item $3\times\frac{2}{7}$
-      - \item $4\times\frac{3}{8}$
-      - \item $5\times\frac{1}{10}$
-      - \item $\frac{2}{9}\times\frac{3}{5}$
-      - \item $\frac{7}{8}\times\frac{2}{7}$
-      - \item $\frac{3}{10}\times\frac{5}{6}$
-      - \item $\frac{4}{9}\times\frac{3}{4}$
-
-    proficient_questions:
-      - \item $\frac{4}{7}\times\frac{3}{5}$
-      - \item $\frac{5}{8}\times\frac{4}{9}$
-      - \item $\frac{7}{10}\times\frac{5}{6}$
-      - \item $\frac{9}{11}\times\frac{2}{3}$
-      - \item $6\times\frac{5}{12}$
-      - \item $8\times\frac{3}{16}$
-      - \item $\frac{3}{4}\times\frac{8}{9}$
-      - \item $\frac{5}{6}\times\frac{9}{10}$
-      - \item $\frac{7}{12}\times\frac{6}{7}$
-      - \item $\frac{11}{15}\times\frac{5}{22}$
-      - \item Fill in the blank: $\frac{2}{3}\times\frac{\square}{5}=\frac{8}{15}$
-      - \item Fill in the blank: $\frac{\square}{4}\times\frac{2}{3}=\frac{1}{2}$
-      - \item Is $\frac{2}{5}\times\frac{3}{4}=\frac{6}{20}$ correct?
-      - \item Is $3\times\frac{2}{9}=\frac{6}{9}$ correct?
-      - \item Which is greater: $\frac{2}{3}\times\frac{3}{5}$ or $\frac{3}{4}\times\frac{2}{5}$?
-      - \item $\frac{4}{15}\times\frac{5}{8}$
-      - \item $\frac{13}{14}\times\frac{7}{13}$
-      - \item Explain in one short sentence why multiplying by $\frac{1}{2}$ makes a positive number smaller.
-
-    excellence_questions:
-      - \item $1\frac{1}{2}\times\frac{2}{3}$
-      - \item $2\frac{1}{4}\times\frac{4}{9}$
-      - \item $\frac{5}{6}\times\frac{9}{20}$
-      - \item $\frac{7}{12}\times\frac{18}{21}$
-      - \item A student says $\frac{3}{4}\times\frac{2}{5}=\frac{5}{8}$. Are they correct? Explain.
-      - \item A recipe uses $\frac{3}{4}$ of a cup of milk per batch. You make $\frac{2}{3}$ of a batch. How much milk is needed?
-      - \item Find a fraction so that $\frac{3}{5}\times\square=\frac{9}{20}$.
-      - \item Fill in both blanks: $\frac{\square}{6}\times\frac{3}{4}=\frac{5}{8}$.
-      - \item Which is greater: $\frac{5}{6}\times\frac{3}{10}$ or $\frac{2}{3}\times\frac{3}{8}$? Show enough working to justify.
-      - \item Is $\frac{4}{9}\times\frac{3}{8}=\frac{12}{72}=\frac{1}{6}$ correct? Explain.
-      - \item A strip is $\frac{5}{6}$ m long. You use $\frac{3}{5}$ of it. How many metres is that?
-      - \item Complete: if $\frac{2}{7}\times\frac{m}{3}=\frac{4}{21}$, then $m=\rule{1.6cm}{0.15mm}$.
-      - \item Write $3\times\frac{4}{15}$ as a single simplified fraction.
-      - \item A tank is $\frac{7}{8}$ full and then $\frac{2}{3}$ of that water remains. What fraction of the whole tank remains?
-      - \item Which does not belong: $\frac{1}{2}\times\frac{2}{3}$, $\frac{2}{3}\times\frac{1}{2}$, $\frac{3}{4}\times\frac{4}{9}$, $\frac{5}{6}\times\frac{1}{2}$?
-      - \item Explain why $\frac{4}{5}\times\frac{3}{4}$ can be simplified before multiplying.
-
-  - id: L08
-    topic: Dividing fractions
-    slug: lo-yr9-dividing-fractions
-    instruction: Divide each fraction. Simplify where you can.
-    terminology:
-      - reciprocal
-      - divide
-      - numerator
-      - denominator
-      - simplify
-    skills:
-      - divide fractions by multiplying by the reciprocal
-      - divide whole numbers by fractions
-      - divide fractions by whole numbers
-      - simplify answers after division
-      - check whether an answer is sensible
-    question_types:
-      - direct calculation
-      - whole number and fraction
-      - missing value
-      - error check
-      - comparison
-
-    foundation_questions:
-      - \item $\frac{1}{2}\div\frac{1}{4}$
-      - \item $\frac{3}{4}\div\frac{1}{2}$
-      - \item $\frac{2}{3}\div\frac{1}{3}$
-      - \item $\frac{5}{6}\div\frac{5}{6}$
-      - \item $\frac{3}{5}\div\frac{1}{5}$
-      - \item $\frac{7}{8}\div\frac{1}{2}$
-      - \item $\frac{4}{9}\div\frac{2}{9}$
-      - \item $\frac{5}{12}\div\frac{5}{12}$
-      - \item $2\div\frac{1}{2}$
-      - \item $3\div\frac{1}{3}$
-      - \item $4\div\frac{1}{4}$
-      - \item $\frac{1}{2}\div 2$
-      - \item $\frac{3}{4}\div 3$
-      - \item $\frac{5}{6}\div 5$
-      - \item $\frac{2}{5}\div\frac{1}{5}$
-      - \item $\frac{9}{10}\div\frac{3}{10}$
-
-    proficient_questions:
-      - \item $\frac{3}{4}\div\frac{2}{5}$
-      - \item $\frac{5}{6}\div\frac{1}{3}$
-      - \item $\frac{7}{8}\div\frac{7}{16}$
-      - \item $\frac{4}{5}\div\frac{2}{15}$
-      - \item $\frac{9}{10}\div\frac{3}{5}$
-      - \item $\frac{11}{12}\div\frac{1}{6}$
-      - \item $6\div\frac{3}{4}$
-      - \item $8\div\frac{2}{3}$
-      - \item $\frac{3}{5}\div 6$
-      - \item $\frac{7}{9}\div 2$
-      - \item Fill in the blank: $\frac{2}{3}\div\frac{\square}{5}=\frac{10}{9}$
-      - \item Fill in the blank: $\frac{\square}{4}\div\frac{1}{2}=\frac{3}{2}$
-      - \item Is $\frac{3}{4}\div\frac{1}{2}=\frac{3}{8}$ correct?
-      - \item Is $5\div\frac{1}{5}=25$ correct?
-      - \item Which is greater: $\frac{3}{4}\div\frac{1}{2}$ or $\frac{3}{4}\times\frac{1}{2}$?
-      - \item $\frac{5}{14}\div\frac{15}{28}$
-      - \item $\frac{13}{15}\div\frac{26}{45}$
-      - \item Explain in one short sentence why dividing by $\frac{1}{2}$ makes a positive number larger.
-
-    excellence_questions:
-      - \item $1\frac{1}{2}\div\frac{3}{4}$
-      - \item $2\frac{1}{4}\div\frac{3}{8}$
-      - \item $\frac{5}{6}\div\frac{10}{9}$
-      - \item $\frac{7}{12}\div\frac{14}{15}$
-      - \item A student says $\frac{4}{5}\div\frac{2}{3}=\frac{8}{15}$. Are they correct? Explain.
-      - \item A jug is $\frac{3}{4}$ full. Each pour uses $\frac{1}{8}$ of the jug. How many pours is that?
-      - \item Find a fraction so that $\frac{2}{3}\div\square=\frac{10}{9}$.
-      - \item Fill in both blanks: $\frac{\square}{6}\div\frac{2}{3}=\frac{5}{4}$.
-      - \item Which is greater: $\frac{5}{6}\div\frac{1}{3}$ or $\frac{3}{4}\div\frac{1}{2}$? Show enough working to justify.
-      - \item Is $\frac{6}{7}\div\frac{3}{14}=4$ correct? Explain.
-      - \item A rope is $\frac{5}{6}$ m long. Each piece is $\frac{5}{18}$ m long. How many pieces can be cut?
-      - \item Complete: if $\frac{3}{5}\div\frac{m}{2}=\frac{4}{5}$, then $m=\rule{1.6cm}{0.15mm}$.
-      - \item Write $3\div\frac{4}{15}$ as a single simplified fraction.
-      - \item A recipe needs $\frac{2}{3}$ cup of rice per batch. You have $4\frac{2}{3}$ cups. How many batches can you make?
-      - \item Which does not belong: $\frac{1}{2}\div\frac{1}{4}$, $2\div\frac{1}{2}$, $\frac{3}{4}\div\frac{3}{8}$, $\frac{5}{6}\div\frac{5}{6}$?
-      - \item Explain why $\frac{4}{9}\div\frac{2}{3}$ can be rewritten as $\frac{4}{9}\times\frac{3}{2}$.
-
-  - id: L09
-    topic: Finding fractions of a quantity
-    slug: lo-yr9-finding-fractions-of-a-quantity
-    instruction: Find each fraction of the quantity.
-    terminology:
-      - fraction
-      - quantity
-      - of
-      - numerator
-      - denominator
-    skills:
-      - find unit fractions of whole numbers
-      - find non-unit fractions of quantities
-      - use division then multiplication to find a fraction of an amount
-      - check whether an answer is sensible
-      - compare different fractions of the same quantity
-    question_types:
-      - direct calculation
-      - unit fraction
-      - non-unit fraction
-      - missing value
-      - error check
-      - comparison
-      - short context
-
-    foundation_questions:
-      - \item $\frac{1}{2}$ of $10$
-      - \item $\frac{1}{2}$ of $18$
-      - \item $\frac{1}{3}$ of $12$
-      - \item $\frac{1}{3}$ of $21$
-      - \item $\frac{1}{4}$ of $16$
-      - \item $\frac{1}{4}$ of $28$
-      - \item $\frac{3}{4}$ of $20$
-      - \item $\frac{3}{4}$ of $32$
-      - \item $\frac{2}{3}$ of $15$
-      - \item $\frac{2}{3}$ of $24$
-      - \item $\frac{3}{5}$ of $25$
-      - \item $\frac{4}{5}$ of $30$
-      - \item $\frac{5}{6}$ of $24$
-      - \item $\frac{2}{5}$ of $35$
-      - \item $\frac{3}{8}$ of $16$
-      - \item $\frac{5}{8}$ of $24$
-
-    proficient_questions:
-      - \item $\frac{2}{7}$ of $35$
-      - \item $\frac{5}{6}$ of $42$
-      - \item $\frac{3}{10}$ of $80$
-      - \item $\frac{7}{8}$ of $48$
-      - \item $\frac{4}{9}$ of $72$
-      - \item $\frac{5}{12}$ of $84$
-      - \item $\frac{11}{20}$ of $100$
-      - \item $\frac{3}{5}$ of $45$
-      - \item $\frac{7}{12}$ of $60$
-      - \item $\frac{9}{10}$ of $70$
-      - \item Fill in the blank: $\frac{1}{4}$ of $\square$ is $9$.
-      - \item Fill in the blank: $\frac{3}{5}$ of $\square$ is $24$.
-      - \item Is $\frac{2}{3}$ of $18$ equal to $6$?
-      - \item Is $\frac{3}{4}$ of $28$ equal to $21$?
-      - \item Which is greater: $\frac{2}{5}$ of $40$ or $\frac{3}{10}$ of $40$?
-      - \item A class has $30$ students. $\frac{2}{5}$ are absent. How many students are absent?
-      - \item A rope is $36$ m long. $\frac{3}{4}$ of it is used. How many metres are used?
-      - \item Explain in one short sentence what the word of means in $\frac{3}{5}$ of $20$.
-
-    excellence_questions:
-      - \item A student says $\frac{3}{4}$ of $20$ is $80$. Are they correct? Explain.
-      - \item A student says $\frac{2}{3}$ of $27$ is found by doing $27\times2\times3$. Are they correct? Explain.
-      - \item Fill in the blank: $\frac{5}{8}$ of $\square$ is $25$.
-      - \item Fill in the blank: $\frac{7}{9}$ of $\square$ is $35$.
-      - \item Which is greater: $\frac{3}{5}$ of $50$ or $\frac{2}{3}$ of $45$? Show enough working to justify.
-      - \item Which is smaller: $\frac{5}{6}$ of $24$ or $\frac{3}{4}$ of $28$?
-      - \item A tank holds $60$ L. It is $\frac{7}{10}$ full. How many litres of water are in the tank?
-      - \item A team played $32$ games and won $\frac{3}{8}$ of them. How many games did they win?
-      - \item A baker made $48$ muffins. $\frac{5}{12}$ were chocolate. How many were chocolate?
-      - \item Complete: if $\frac{m}{5}$ of $35$ is $21$, then $m=\rule{1.6cm}{0.15mm}$.
-      - \item Complete: if $\frac{3}{n}$ of $40$ is $24$, then $n=\rule{1.6cm}{0.15mm}$.
-      - \item Is $\frac{4}{7}$ of $63=28$ correct? Explain what went wrong or why it works.
-      - \item A strip is $54$ cm long. Mina cuts off $\frac{2}{9}$ of it. How many centimetres does she cut off?
-      - \item A jar has $45$ lollies. $\frac{4}{9}$ are red. How many red lollies are there?
-      - \item Which does not belong: $\frac{1}{2}$ of $18$, $\frac{2}{4}$ of $18$, $\frac{3}{6}$ of $18$, $\frac{2}{3}$ of $18$?
-      - \item Explain why finding $\frac{3}{4}$ of $28$ can be done by dividing by $4$ first, then multiplying by $3$.
-
-
-  - id: L10
-    topic: Multiples and Lowest Common Multiples
-    slug: lo-yr9-multiples-and-lowest-common-multiples
-    instruction: Find the multiples or lowest common multiple.
-    terminology:
-      - multiple
-      - common multiple
-      - lowest common multiple
-      - factor
-    skills:
-      - list multiples of a number in order
-      - identify common multiples of two numbers
-      - find the lowest common multiple of two numbers
-      - use multiples to solve simple context problems
-      - check whether a stated multiple or LCM is correct
-    question_types:
-      - list multiples
-      - identify common multiples
-      - find the LCM
-      - error check
-      - short context
-
-    foundation_questions:
-      - \item Write the first 5 multiples of $2$.
-      - \item Write the first 5 multiples of $3$.
-      - \item Write the first 5 multiples of $4$.
-      - \item Write the first 5 multiples of $5$.
-      - \item Write the first 5 multiples of $6$.
-      - \item Is $18$ a multiple of $3$?
-      - \item Is $20$ a multiple of $5$?
-      - \item Is $21$ a multiple of $4$?
-      - \item Circle the common multiples of $2$ and $3$: $4, 6, 8, 12, 15, 18$.
-      - \item Circle the common multiples of $3$ and $4$: $6, 8, 12, 15, 24$.
-      - \item Find the lowest common multiple of $2$ and $3$.
-      - \item Find the lowest common multiple of $2$ and $4$.
-      - \item Find the lowest common multiple of $3$ and $5$.
-      - \item Find the lowest common multiple of $4$ and $5$.
-      - \item Complete: the next multiple of $7$ after $21$ is $\square$.
-      - \item Complete: the next multiple of $8$ after $24$ is $\square$.
-
-    proficient_questions:
-      - \item Write the first 6 multiples of $7$.
-      - \item Write the first 6 multiples of $8$.
-      - \item Write the first 6 multiples of $9$.
-      - \item List the common multiples of $4$ and $6$ up to $36$.
-      - \item List the common multiples of $5$ and $7$ up to $70$.
-      - \item Find the lowest common multiple of $4$ and $6$.
-      - \item Find the lowest common multiple of $6$ and $8$.
-      - \item Find the lowest common multiple of $9$ and $12$.
-      - \item Find the lowest common multiple of $7$ and $10$.
-      - \item Find the lowest common multiple of $5$ and $12$.
-      - \item Fill in the blank: the lowest common multiple of $3$ and $8$ is $\square$.
-      - \item Fill in the blank: the lowest common multiple of $6$ and $9$ is $\square$.
-      - \item Is $24$ a common multiple of $4$ and $6$?
-      - \item Is $30$ the lowest common multiple of $5$ and $6$?
-      - \item Which is greater: the lowest common multiple of $3$ and $4$, or the lowest common multiple of $2$ and $9$?
-      - \item Two bells ring every $4$ minutes and every $6$ minutes. After how many minutes will they ring together again?
-
-    excellence_questions:
-      - \item A student says the lowest common multiple of $4$ and $6$ is $10$. Are they correct? Explain.
-      - \item A student says $36$ is the lowest common multiple of $6$ and $9$. Are they correct? Explain.
-      - \item Write the first 3 common multiples of $6$ and $8$.
-      - \item Write the first 3 common multiples of $9$ and $12$.
-      - \item Find the lowest common multiple of $8$ and $14$.
-      - \item Find the lowest common multiple of $12$ and $15$.
-      - \item Find the lowest common multiple of $18$ and $24$.
-      - \item Fill in both blanks: the first two common multiples of $4$ and $9$ are $\square$ and $\square$.
-      - \item Fill in the blank: the lowest common multiple of $a$ and $6$ is $18$ when $a=\square$.
-      - \item Which does not belong: $12, 18, 24, 30$ as common multiples of $3$ and $6$?
-      - \item Which is greater: the lowest common multiple of $6$ and $10$, or the lowest common multiple of $8$ and $12$? Show enough working to justify.
-      - \item Three lights flash every $6$, $8$, and $12$ seconds. After how many seconds will they all flash together again?
-      - \item A bus comes every $9$ minutes and a train comes every $15$ minutes. If they leave now at the same time, after how many minutes will they leave together again?
-      - \item Is $48$ a common multiple of $6$ and $8$? Is it the lowest common multiple? Explain.
-      - \item Complete: if the lowest common multiple of $5$ and $n$ is $35$, then $n=\rule{1.6cm}{0.15mm}$.
-      - \item Explain why the lowest common multiple of two numbers must be a multiple of both numbers.
-
-  - id: L11
-    topic: Factors, Highest Common Factors & Primes
-    slug: lo-yr9-factors-highest-common-factors-and-primes
-    instruction: Find the factors, highest common factor, or identify primes.
-    terminology:
-      - factor
-      - common factor
-      - highest common factor
-      - prime number
-      - composite number
-      - divisible
-    skills:
-      - list the factors of a number
-      - identify common factors of two numbers
-      - find the highest common factor of two numbers
-      - identify whether a number is prime or composite
-      - check whether a stated factor or HCF is correct
-    question_types:
-      - list factors
-      - identify common factors
-      - find the HCF
-      - prime or composite
-      - error check
-      - short context
-
-    foundation_questions:
-      - \item Write all the factors of $12$.
-      - \item Write all the factors of $18$.
-      - \item Write all the factors of $20$.
-      - \item Write all the factors of $24$.
-      - \item Is $4$ a factor of $28$?
-      - \item Is $5$ a factor of $27$?
-      - \item Is $6$ a factor of $42$?
-      - \item Circle the factors of $15$: $1, 2, 3, 5, 6, 15$.
-      - \item Circle the factors of $16$: $1, 2, 4, 5, 8, 16$.
-      - \item List the common factors of $12$ and $18$.
-      - \item List the common factors of $8$ and $20$.
-      - \item Find the highest common factor of $12$ and $18$.
-      - \item Find the highest common factor of $8$ and $20$.
-      - \item Is $11$ prime or composite?
-      - \item Is $15$ prime or composite?
-      - \item Complete: the highest common factor of $9$ and $12$ is $\square$.
-
-    proficient_questions:
-      - \item Write all the factors of $30$.
-      - \item Write all the factors of $36$.
-      - \item Write all the factors of $45$.
-      - \item List the common factors of $18$ and $24$.
-      - \item List the common factors of $20$ and $30$.
-      - \item Find the highest common factor of $18$ and $24$.
-      - \item Find the highest common factor of $20$ and $30$.
-      - \item Find the highest common factor of $27$ and $36$.
-      - \item Is $29$ prime or composite?
-      - \item Is $39$ prime or composite?
-      - \item Which is greater: the highest common factor of $18$ and $24$, or the highest common factor of $14$ and $21$?
-      - \item Fill in the blank: the highest common factor of $16$ and $24$ is $\square$.
-      - \item Fill in the blank: a common factor of $24$ and $36$ is $\square$.
-      - \item Is $9$ a factor of $45$?
-      - \item Is $7$ a factor of $54$?
-      - \item A baker arranges $18$ muffins and $24$ cookies into equal groups with no leftovers. What is the greatest number of groups possible?
-
-    excellence_questions:
-      - \item A student says the highest common factor of $18$ and $30$ is $6$. Are they correct? Explain.
-      - \item A student says $21$ is prime because it is odd. Are they correct? Explain.
-      - \item Write the first 4 common factors of $24$ and $36$.
-      - \item Find the highest common factor of $42$ and $56$.
-      - \item Find the highest common factor of $48$ and $60$.
-      - \item Find the highest common factor of $54$ and $72$.
-      - \item Which numbers are prime: $17, 21, 23, 27, 31$?
-      - \item Which does not belong: $2, 3, 5, 9, 11$?
-      - \item Fill in the blank: the highest common factor of $a$ and $18$ is $6$ when $a=\square$.
-      - \item Fill in both blanks: two common factors of $32$ and $40$ are $\square$ and $\square$.
-      - \item Which is greater: the highest common factor of $24$ and $32$, or the highest common factor of $27$ and $45$? Show enough working to justify.
-      - \item Is $35$ a factor of $140$? Is it the highest common factor of $140$ and $105$? Explain.
-      - \item A teacher has $24$ blue pens and $36$ black pens. She wants identical packs with no pens left over. What is the greatest number of packs she can make?
-      - \item A choir has $28$ altos and $42$ sopranos. They stand in equal rows with the same number of each voice in every row. What is the greatest number of rows?
-      - \item Complete: if the highest common factor of $30$ and $n$ is $10$, then one possible value of $n$ is \rule{1.6cm}{0.15mm}.
-      - \item Explain why a prime number greater than $2$ must be odd.
-
-  - id: L12
-    topic: Irrational numbers
-    slug: lo-yr9-irrational-numbers
-    instruction: Identify, compare, or use irrational numbers.
-    terminology:
-      - rational number
-      - irrational number
-      - terminating decimal
-      - recurring decimal
-      - square root
-      - pi
-    skills:
-      - identify irrational numbers from a list
-      - distinguish rational and irrational numbers
-      - use square roots to classify numbers
-      - place irrational numbers approximately on a number line
-      - explain why a decimal is rational or irrational
-    question_types:
-      - classify numbers
-      - true or false
-      - estimate and compare
-      - number line reasoning
-      - short explanation
-
-    foundation_questions:
-      - \item Is $\sqrt{4}$ rational or irrational?
-      - \item Is $\sqrt{9}$ rational or irrational?
-      - \item Is $\sqrt{2}$ rational or irrational?
-      - \item Is $\pi$ rational or irrational?
-      - \item Is $0.5$ rational or irrational?
-      - \item Is $0.333\ldots$ rational or irrational?
-      - \item Is $2$ rational or irrational?
-      - \item Is $\sqrt{16}$ rational or irrational?
-      - \item Circle the irrational number: $3, \sqrt{5}, 0.2$.
-      - \item Circle the irrational number: $\sqrt{25}, \pi, 4$.
-      - \item Circle the rational number: $\sqrt{3}, 1.25, \pi$.
-      - \item Which is greater: $\sqrt{2}$ or $1$?
-      - \item Which is greater: $\sqrt{2}$ or $2$?
-      - \item True or false: every whole number is rational.
-      - \item True or false: $\pi$ is a terminating decimal.
-      - \item Write one irrational number.
-
-    proficient_questions:
-      - \item Is $\sqrt{7}$ rational or irrational?
-      - \item Is $\sqrt{36}$ rational or irrational?
-      - \item Is $-\sqrt{5}$ rational or irrational?
-      - \item Is $2.125$ rational or irrational?
-      - \item Is $0.1010010001\ldots$ rational or irrational?
-      - \item Which does not belong: $\sqrt{2}, \sqrt{3}, \sqrt{4}, \pi$?
-      - \item Place in order: $2, \sqrt{5}, 3$.
-      - \item Place in order: $1.4, \sqrt{2}, 1.5$.
-      - \item Which is closer to $3$: $\sqrt{8}$ or $\sqrt{10}$?
-      - \item Between which two whole numbers does $\sqrt{20}$ lie?
-      - \item Between which two whole numbers does $\sqrt{50}$ lie?
-      - \item True or false: every square root is irrational.
-      - \item True or false: a recurring decimal is rational.
-      - \item True or false: $\sqrt{49}$ is irrational.
-      - \item Explain in one short sentence why $\sqrt{25}$ is rational.
-      - \item Explain in one short sentence why $\sqrt{6}$ is irrational.
-      - \item Fill in the blank: $\sqrt{17}$ is between $\square$ and $\square$.
-      - \item Fill in the blank: a number that is irrational is $\square$.
-
-    excellence_questions:
-      - \item A student says $\sqrt{9}$ is irrational because it has a square root sign. Are they correct? Explain.
-      - \item A student says $3.14159$ is irrational because it has many decimal places. Are they correct? Explain.
-      - \item A student says $0.272727\ldots$ is irrational because it never ends. Are they correct? Explain.
-      - \item Which is greater: $\sqrt{11}$ or $3.3$? Show enough working to justify.
-      - \item Which is smaller: $\sqrt{15}$ or $3.9$? Explain how you know.
-      - \item Put in ascending order: $\sqrt{2}, 1.41, 1.5, \frac{3}{2}$.
-      - \item Put in ascending order: $3, \pi, \sqrt{10}, 3.2$.
-      - \item Which does not belong: $\sqrt{2}, \pi, \frac{7}{3}, \sqrt{7}$?
-      - \item Find one rational number between $\sqrt{2}$ and $\sqrt{3}$.
-      - \item Find one irrational number between $2$ and $3$.
-      - \item Is $\sqrt{18}=3\sqrt{2}$ rational or irrational? Explain.
-      - \item Is $2\pi$ rational or irrational? Explain.
-      - \item Complete: if $n$ is a whole number and $\sqrt{n}$ is rational, then one possible value of $n$ is \rule{1.6cm}{0.15mm}.
-      - \item Complete: an irrational number between $4$ and $5$ is \rule{1.8cm}{0.15mm}.
-      - \item True or false: the decimal for an irrational number can terminate. Explain.
-      - \item True or false: $\frac{22}{7}$ is irrational because it is close to $\pi$. Explain.
-      - \item A number lies between $\sqrt{5}$ and $\sqrt{6}$. Is it definitely irrational? Explain.
-      - \item Explain why not every non-terminating decimal is irrational.
-
+- id: L01
+  topic: Place Values and Decimals
+  slug: lo-yr9-place-values-and-decimals
+  instruction: Read, write, compare, or partition each number using place value.
+  terminology:
+  - place value
+  - digit
+  - ones
+  - tenths
+  - hundredths
+  - decimal
+  skills:
+  - identify the value of a digit based on place
+  - read and write whole numbers and decimals
+  - compare and order numbers using place value
+  - partition numbers into place-value parts
+  question_types:
+  - digit value
+  - reading and writing numbers
+  - comparing and ordering
+  - partitioning
+  foundation_questions:
+  - \item 4 in $347$ has value \rule{1.6cm}{0.15mm}.
+  - \item 6 in $862$ has value \rule{1.6cm}{0.15mm}.
+  - \item 5 in $5.3$ has value \rule{1.6cm}{0.15mm}.
+  - \item 7 in $2.74$ has value \rule{1.6cm}{0.15mm}.
+  - \item Write in numerals: three hundred and six.
+  - \item Write in numerals: nine hundred and forty-two.
+  - \item Write in words: $508$.
+  - \item Write in words: $3.6$.
+  - \item Which is greater: $45$ or $54$?
+  - \item Which is smaller: $0.8$ or $0.08$?
+  - \item Order from smallest to largest: $3.2, 2.9, 3.02$.
+  - \item Order from largest to smallest: $406, 460, 640$.
+  - \item Partition $58$ into tens and ones.
+  - \item Partition $407$ into hundreds, tens, and ones.
+  - \item Partition $4.7$ into ones and tenths.
+  - \item Partition $3.48$ into ones, tenths, and hundredths.
+  proficient_questions:
+  - \item State the value of the $8$ in $4,836$.
+  - \item State the value of the $3$ in $7.34$.
+  - \item State the value of the $9$ in $0.692$.
+  - \item Write in words: $2,045$.
+  - \item Write in words: $14.09$.
+  - \item Write in numerals: six thousand and seventy-three.
+  - \item Write in numerals: eight and five tenths.
+  - \item Compare using $<$, $>$, or $=$: $5.07\ \square\ 5.7$.
+  - \item Compare using $<$, $>$, or $=$: $0.43\ \square\ 0.403$.
+  - \item Order from smallest to largest: $0.6, 0.06, 0.606, 0.66$.
+  - \item Order from largest to smallest: $9.1, 9.01, 9.11, 8.99$.
+  - \item Partition $5,302$ fully.
+  - \item Partition $7.208$ into ones, tenths, hundredths, and thousandths.
+  - \item Which digit is in the tenths place in $3.58$?
+  - \item Which digit is in the hundreds place in $6,482$?
+  - \item Fill in the blank: $4.3 = 4 + \frac{\square}{10}$.
+  - \item Fill in the blank: $608 = 6 \times 100 + \square \times 10 + 8$.
+  - \item Explain in one short sentence why $0.5 > 0.05$.
+  excellence_questions:
+  - \item A student says the $4$ in $0.48$ is worth $4$. Are they correct? Explain.
+  - \item A student says $3.09 > 3.9$ because $09 > 9$. Are they correct? Explain.
+  - \item Which is greater: $2.305$ or $2.35$? Show enough working to justify.
+  - \item Which is smaller: $7.08$ or $7.8$? Explain how you know.
+  - \item Write $5.406$ as the sum of its place-value parts.
+  - \item Write $2,070$ as the sum of its place-value parts.
+  - \item Fill in the blank: in $8.472$, the digit in the hundredths place is \rule{1.4cm}{0.15mm}.
+  - \item Fill in the blank: $6.08 = 6 + \frac{\square}{100}$.
+  - \item Complete: $4.5 = 4 + \frac{\square}{10} = \frac{45}{10}$.
+  - \item Put in ascending order: $4.09, 4.9, 4.099, 4.19$.
+  - \item Put in descending order: $12.3, 12.03, 12.300, 12.29$.
+  - \item Which does not belong: $0.7, 0.70, 0.07, 0.700$?
+  - \item A number has $3$ ones, $4$ tenths, and $7$ hundredths. Write the number.
+  - \item A number has $5$ hundreds, $0$ tens, $8$ ones, and $2$ tenths. Write the number.
+  - \item Explain why adding a zero to the end sometimes changes nothing and sometimes changes the value.
+  - \item Write a number between $6.4$ and $6.5$ that has three decimal places.
+- id: L02
+  topic: Rounding to Decimal Points
+  slug: lo-yr9-rounding-to-decimal-points
+  instruction: Round each decimal to the required number of decimal places.
+  terminology:
+  - rounding
+  - decimal place
+  - whole number
+  - tenths
+  - hundredths
+  skills:
+  - identify the place to round to
+  - use the next digit to decide whether to round up
+  - round decimals to whole numbers, tenths, and hundredths
+  - justify rounding choices
+  question_types:
+  - direct rounding
+  - fill in the blank
+  - error check
+  - comparison
+  - short reasoning
+  foundation_questions:
+  - \item Round $3.4$ to the nearest whole number.
+  - \item Round $7.6$ to the nearest whole number.
+  - \item Round $2.31$ to 1 decimal place.
+  - \item Round $5.68$ to 1 decimal place.
+  - \item Round $9.24$ to 1 decimal place.
+  - \item Round $4.86$ to 1 decimal place.
+  - \item Round $1.73$ to 1 decimal place.
+  - \item Round $6.15$ to 1 decimal place.
+  - \item Round $8.42$ to 1 decimal place.
+  - \item Round $0.27$ to 1 decimal place.
+  - \item Round $3.141$ to 2 decimal places.
+  - \item Round $5.678$ to 2 decimal places.
+  - \item Round $7.204$ to 2 decimal places.
+  - \item Round $9.995$ to 2 decimal places.
+  - \item Round $12.49$ to the nearest whole number.
+  - \item Round $12.50$ to the nearest whole number.
+  proficient_questions:
+  - \item Round $14.37$ to 1 decimal place.
+  - \item Round $8.05$ to 1 decimal place.
+  - \item Round $6.666$ to 2 decimal places.
+  - \item Round $2.349$ to 2 decimal places.
+  - \item Round $0.995$ to 2 decimal places.
+  - \item Round $17.499$ to the nearest whole number.
+  - \item Round $17.500$ to the nearest whole number.
+  - \item Round $3.045$ to 2 decimal places.
+  - \item Round $9.994$ to 2 decimal places.
+  - \item Round $12.444$ to 2 decimal places.
+  - \item Round $5.555$ to 2 decimal places.
+  - \item Round $0.074$ to 1 decimal place.
+  - \item Round $0.074$ to 2 decimal places.
+  - \item Fill in the blank: $4.27 \approx 4.\square$ to 1 decimal place.
+  - \item Fill in the blank: $8.196 \approx 8.\square\square$ to 2 decimal places.
+  - \item Is $6.84 \to 6.9$ to 1 decimal place correct?
+  - \item Is $3.141 \to 3.14$ to 2 decimal places correct?
+  - \item Explain in one short sentence what digit decides the rounding.
+  excellence_questions:
+  - \item A student says $4.249$ rounds to $4.3$ to 1 decimal place. Are they correct? Explain.
+  - \item A student says $7.995$ rounds to $7.99$ to 2 decimal places. Are they correct? Explain.
+  - \item Which is greater after rounding to 1 decimal place: $6.44$ or $6.45$?
+  - \item Which is smaller after rounding to 2 decimal places: $3.104$ or $3.099$?
+  - \item Fill in the blank: a number that rounds to $5.7$ to 1 decimal place could be \rule{1.8cm}{0.15mm}.
+  - \item Fill in the blank: a number that rounds to $2.35$ to 2 decimal places could be \rule{1.8cm}{0.15mm}.
+  - \item Complete: $8.\square 4$ rounds to $8.5$ to 1 decimal place.
+  - \item Complete: $3.4\square 8$ rounds to $3.45$ to 2 decimal places.
+  - \item Round $19.995$ to 2 decimal places.
+  - \item Round $0.999$ to 2 decimal places.
+  - \item Round $12.049$ to 2 decimal places.
+  - \item Round $4.444$ to 2 decimal places.
+  - \item Put in order after rounding to 1 decimal place: $2.84, 2.85, 2.89$.
+  - \item Write two different numbers that both round to $6.2$ to 1 decimal place.
+  - \item Explain why $5.05$ and $5.04$ do not round to the same tenth.
+  - \item A measurement is $3.276$ m. Write it to 2 decimal places.
+- id: L01
+  topic: Forming fractions
+  instruction: Write each as a fraction.
+  terminology:
+  - fraction
+  - whole
+  - numerator
+  - denominator
+  skills:
+  - form fractions from context
+  question_types:
+  - part of a whole
+  - context problems
+  foundation_questions:
+  - \item 3 out of 8
+  - \item 4 out of 10
+  - \item 7 out of 20
+  - \item 5 out of 12
+  - \item 2 out of 6
+  - \item 1 out of 9
+  - \item 6 out of 15
+  - \item 8 out of 14
+  - \item 3 out of 11
+  - \item 9 out of 16
+  - \item 2 out of 5
+  - \item 4 out of 13
+  - \item 11 out of 20
+  - \item 7 out of 12
+  - \item 5 out of 18
+  - \item 10 out of 21
+  - \item 6 out of 17
+  - \item 12 out of 25
+  - \item 8 out of 19
+  - \item 9 out of 22
+  - "\\item {\n\\begin{tikzpicture}[scale=1]\n\\foreach \\i in {0,...,5} {\n  \\coordinate (P\\i) at ({60*\\i}:1.4);\n}\n\\coordinate (O) at (0,0);\n\\fill[green!60!black] (O)--(P0)--(P1)--cycle;\n\\fill[green!60!black] (O)--(P1)--(P2)--cycle;\n\\draw (P0)--(P1)--(P2)--(P3)--(P4)--(P5)--cycle;\n\\foreach \\i in {0,...,5} \\draw (O)--(P\\i);\n\\end{tikzpicture}\n}\n"
+  - '\item {
+
+    \begin{tikzpicture}[scale=1.1]
+
+    \coordinate (A) at (0,0);
+
+    \coordinate (B) at (2,0);
+
+    \coordinate (C) at (1,1.8);
+
+    \coordinate (M) at (1,0.6);
+
+    \fill[purple!30] (A)--(C)--(M)--cycle;
+
+    \draw (A)--(B)--(C)--cycle;
+
+    \draw (A)--(M)--(B);
+
+    \draw (C)--(M);
+
+    \end{tikzpicture}
+
+    }
+
+    '
+  - "\\item {\n\\begin{tikzpicture}[scale=1]\n\\def\\r{1.4}\n\\foreach \\i in {0,...,9} {\n  \\pgfmathsetmacro{\\a}{90-36*\\i}\n  \\pgfmathsetmacro{\\b}{90-36*(\\i+1)}\n  \\ifnum\\i<4\n    \\fill[orange!35] (0,0)--(\\a:\\r) arc (\\a:\\b:\\r)--cycle;\n  \\fi\n}\n\\foreach \\i in {0,...,9} {\n  \\draw (0,0)--({90-36*\\i}:\\r);\n}\n\\draw (0,0) circle (\\r);\n\\end{tikzpicture}\n}\n"
+  - '\item {
+
+    \begin{tikzpicture}[scale=0.9]
+
+    \draw (0,0) rectangle (4,2);
+
+    \draw (2,0)--(2,2);
+
+    \draw (0,1)--(4,1);
+
+    \coordinate (C) at (2,1);
+
+    \foreach \p in {(0,2),(0,0),(4,2),(4,0)} \draw \p -- (C);
+
+    \fill[orange!50] (0,2)--(2,1)--(0,1)--cycle;
+
+    \fill[orange!50] (2,1)--(4,2)--(4,1)--cycle;
+
+    \fill[orange!50] (0,0)--(2,1)--(0,1)--cycle;
+
+    \fill[orange!50] (2,0)--(2,1)--(4,0)--cycle;
+
+    \end{tikzpicture}
+
+    }
+
+    '
+  proficient_questions:
+  - \item 5 of 12 shaded
+  - \item 9 of 36 away
+  - \item 7 of 20 spins
+  - \item 17 of 48 faulty
+  - \item 18 of 25 full
+  - \item 13 of 32 prefer cats
+  - \item 19 of 27 covered
+  - \item 16 of 45 bikes
+  - \item 7 of 18 used
+  - \item 23 of 50 coloured
+  - \item 11 of 29 shoes
+  - \item 21 of 34 taken
+  - \item 14 of 40 planted
+  - \item 15 of 22 packed
+  - \item 27 of 60 completed
+  - \item 8 of 21 missing
+  - \item 31 of 80 saved
+  - \item 9 of 14 chosen
+  - \item 6 of 17 packed
+  - \item 22 of 55 stacked
+  - \item 14 of 33 painted
+  - \item 5 of 16 cracked
+  - \item 18 of 44 sent
+  - \item 7 of 24 peeled
+  excellence_questions:
+  - \item 2 days of 1 week
+  - \item 40p of £2
+  - \item 5 min of 1 hour
+  - \item 300g of 2kg
+  - \item 8 red, 12 blue, red?
+  - \item 5 cats, 7 dogs, cats?
+  - \item 9 boys, 11 girls, boys?
+  - \item 6 apples, 4 eaten, eaten?
+  - \item 12 total, 5 used, fraction left?
+  - \item 20 total, 8 gone, fraction remaining?
+  - \item 15 total, 6 eaten, fraction not eaten?
+  - \item 18 total, 7 broken, fraction not broken?
+  - \item 30 students, 18 present, fraction present?
+  - \item 24 seats, 9 empty, fraction empty?
+  - \item 40 tickets, 25 sold, fraction sold?
+  - \item 50 marbles, 20 blue, fraction blue?
+  - \item $3/8 = 5/10$ correct?
+  - \item $6/12 = 1/3$ correct?
+  - \item $4/9 = 8/18$ correct?
+  - \item $10/20 = 2/5$ correct?
+  - \item 21 total, 8 broken, fraction not broken?
+  - \item 36 books, 15 borrowed, fraction borrowed?
+  - \item 14 pens, 5 lost, fraction remaining?
+  - \item 45 cards, 18 chosen, fraction chosen?
+  - \item $2/6 = 1/3$ correct?
+  - \item $5/12 = 10/24$ correct?
+- id: L03
+  topic: Simplifying fractions
+  slug: lo-yr9-simplifying-fractions
+  instruction: Simplify each fraction to its simplest form.
+  terminology:
+  - simplest form
+  - simplify
+  - common factor
+  - numerator
+  - denominator
+  skills:
+  - simplify fractions by dividing by a common factor
+  - identify when a fraction is already in simplest form
+  - justify why a simplified fraction is equivalent
+  - compare simplified and unsimplified forms
+  question_types:
+  - direct simplification
+  - already simplest
+  - missing value
+  - error check
+  - short reasoning
+  foundation_questions:
+  - \item Simplify $\frac{2}{4}$.
+  - \item Simplify $\frac{3}{6}$.
+  - \item Simplify $\frac{4}{8}$.
+  - \item Simplify $\frac{5}{10}$.
+  - \item Simplify $\frac{6}{12}$.
+  - \item Simplify $\frac{8}{12}$.
+  - \item Simplify $\frac{9}{12}$.
+  - \item Simplify $\frac{10}{15}$.
+  - \item Simplify $\frac{12}{16}$.
+  - \item Simplify $\frac{14}{21}$.
+  - \item Simplify $\frac{15}{20}$.
+  - \item Simplify $\frac{16}{24}$.
+  - \item Simplify $\frac{18}{24}$.
+  - \item Simplify $\frac{20}{25}$.
+  - \item Is $\frac{7}{8}$ already in simplest form?
+  - \item Is $\frac{9}{10}$ already in simplest form?
+  proficient_questions:
+  - \item Simplify $\frac{18}{27}$.
+  - \item Simplify $\frac{24}{36}$.
+  - \item Simplify $\frac{28}{42}$.
+  - \item Simplify $\frac{32}{48}$.
+  - \item Simplify $\frac{35}{49}$.
+  - \item Simplify $\frac{45}{60}$.
+  - \item Simplify $\frac{54}{72}$.
+  - \item Simplify $\frac{63}{81}$.
+  - \item Fill in the blank: $\frac{12}{20}=\frac{\square}{5}$.
+  - \item Fill in the blank: $\frac{27}{36}=\frac{3}{\square}$.
+  - \item Is $\frac{14}{20}=\frac{7}{10}$ correct?
+  - \item Is $\frac{21}{28}=\frac{2}{3}$ correct?
+  - \item Which is simpler: $\frac{16}{20}$ or $\frac{4}{5}$?
+  - \item Simplify $\frac{42}{56}$.
+  - \item Simplify $\frac{30}{45}$.
+  - \item Simplify $\frac{48}{64}$.
+  - \item Is $\frac{5}{12}$ already in simplest form?
+  - \item Explain in one short sentence how you know $\frac{6}{9}$ is not in simplest form.
+  excellence_questions:
+  - \item Is $\frac{18}{24}=\frac{9}{12}$ fully simplified? Explain.
+  - \item Is $\frac{14}{35}=\frac{1}{3}$ correct? Explain.
+  - \item Fill in both blanks: $\frac{\square}{18}=\frac{2}{3}=\frac{14}{\square}$.
+  - \item Fill in both blanks: $\frac{\square}{28}=\frac{3}{7}=\frac{24}{\square}$.
+  - \item Which does not belong: $\frac{6}{9}$, $\frac{8}{12}$, $\frac{10}{15}$, $\frac{5}{8}$?
+  - \item Which is greater: simplified $\frac{18}{30}$ or simplified $\frac{14}{20}$?
+  - \item Explain why $\frac{24}{32}$ and $\frac{3}{4}$ are equivalent.
+  - \item Write $\frac{15}{25}$ in simplest form.
+  - \item Write $\frac{21}{28}$ in simplest form.
+  - \item Complete: $\frac{a}{b}=\frac{16}{24}$, so simplest form is \rule{2cm}{0.15mm}.
+  - \item Complete: $\frac{x}{y}=\frac{27}{45}$, so simplest form is \rule{2cm}{0.15mm}.
+  - \item Is $\frac{36}{54}=\frac{2}{3}$ correct? What would you divide by?
+  - \item Is $\frac{22}{30}=\frac{11}{15}$ fully simplified? Explain.
+  - \item Write a fraction equal to $\frac{4}{5}$ that is not simplified, then simplify it.
+  - \item Write a fraction equal to $\frac{3}{7}$ with denominator $35$. Is it simplified?
+  - \item Explain why equivalent fractions are not always in simplest form.
+- id: L04
+  topic: Converting between improper fractions and mixed numbers
+  slug: lo-yr9-converting-between-improper-fractions-and-mixed-numbers
+  instruction: Convert between improper fractions and mixed numbers.
+  terminology:
+  - improper fraction
+  - mixed number
+  - whole
+  - remainder
+  - numerator
+  - denominator
+  skills:
+  - convert improper fractions to mixed numbers
+  - convert mixed numbers to improper fractions
+  - interpret the whole-number part and remainder
+  - check whether a conversion is sensible
+  question_types:
+  - direct conversion
+  - missing value
+  - comparison
+  - error check
+  - short reasoning
+  foundation_questions:
+  - \item Convert $\frac{5}{2}$ to a mixed number.
+  - \item Convert $\frac{7}{3}$ to a mixed number.
+  - \item Convert $\frac{9}{4}$ to a mixed number.
+  - \item Convert $\frac{11}{5}$ to a mixed number.
+  - \item Convert $1\frac{1}{2}$ to an improper fraction.
+  - \item Convert $2\frac{1}{3}$ to an improper fraction.
+  - \item Convert $3\frac{1}{4}$ to an improper fraction.
+  - \item Convert $2\frac{2}{5}$ to an improper fraction.
+  - \item Convert $\frac{13}{6}$ to a mixed number.
+  - \item Convert $\frac{15}{4}$ to a mixed number.
+  - \item Convert $4\frac{1}{3}$ to an improper fraction.
+  - \item Convert $5\frac{2}{7}$ to an improper fraction.
+  - \item Convert $\frac{17}{5}$ to a mixed number.
+  - \item Convert $\frac{14}{3}$ to a mixed number.
+  - \item Convert $3\frac{3}{8}$ to an improper fraction.
+  - \item Convert $6\frac{1}{6}$ to an improper fraction.
+  proficient_questions:
+  - \item Convert $\frac{19}{5}$ to a mixed number.
+  - \item Convert $\frac{22}{7}$ to a mixed number.
+  - \item Convert $\frac{31}{6}$ to a mixed number.
+  - \item Convert $\frac{27}{4}$ to a mixed number.
+  - \item Convert $4\frac{3}{5}$ to an improper fraction.
+  - \item Convert $7\frac{2}{3}$ to an improper fraction.
+  - \item Convert $5\frac{5}{8}$ to an improper fraction.
+  - \item Convert $9\frac{1}{4}$ to an improper fraction.
+  - \item Fill in the blank: $\frac{17}{4}=\square\frac{\square}{4}$.
+  - \item Fill in the blank: $3\frac{2}{7}=\frac{\square}{7}$.
+  - \item Which is greater: $\frac{11}{3}$ or $3\frac{1}{2}$?
+  - \item Is $\frac{14}{5}=2\frac{4}{5}$ correct?
+  - \item Is $6\frac{1}{4}=\frac{25}{4}$ correct?
+  - \item Convert $\frac{29}{8}$ to a mixed number.
+  - \item Convert $8\frac{5}{6}$ to an improper fraction.
+  - \item Convert $\frac{23}{9}$ to a mixed number.
+  - \item Convert $2\frac{7}{10}$ to an improper fraction.
+  - \item Explain in one short sentence what the denominator tells you in $4\frac{3}{7}$.
+  excellence_questions:
+  - \item A student says $\frac{18}{5}=3\frac{5}{5}$. Are they correct? Explain.
+  - \item A student says $4\frac{2}{3}=\frac{14}{3}$. Are they correct? Explain.
+  - \item Fill in both blanks: $\frac{\square}{6}=4\frac{\square}{6}$.
+  - \item Fill in both blanks: $7\frac{\square}{8}=\frac{61}{8}$.
+  - \item Which is greater: $\frac{23}{6}$ or $3\frac{4}{5}$? Show enough working to justify.
+  - \item Write $\frac{35}{4}$ as a mixed number, then place it between two whole numbers.
+  - \item Write $5\frac{7}{9}$ as an improper fraction, then say whether it is closer to $5$ or $6$.
+  - \item Complete: $\frac{\square}{7}=2\frac{5}{7}=\frac{26}{\square}$.
+  - \item Is $\frac{41}{6}=6\frac{5}{6}$ correct? Explain what went wrong or why it works.
+  - \item A ribbon is $\frac{17}{3}$ m long. Write this as a mixed number.
+  - \item A tank holds $2\frac{3}{4}$ L. Write this as an improper fraction of litres.
+  - \item Which does not belong: $\frac{10}{3}$, $3\frac{1}{3}$, $\frac{13}{4}$, $\frac{20}{6}$?
+  - \item A baker uses $3\frac{5}{6}$ cups of flour each batch. Write this as an improper fraction.
+  - \item A runner completes $\frac{25}{8}$ km. Write this as a mixed number.
+  - \item Explain why $\frac{n}{4}=2\frac{1}{4}$ gives $n=9$.
+  - \item Complete: if $\frac{m}{5}=6\frac{2}{5}$, then $m=\rule{1.6cm}{0.15mm}$.
+  - \item Convert $12\frac{7}{12}$ to an improper fraction.
+  - \item Convert $\frac{58}{9}$ to a mixed number.
+- id: L03
+  topic: Multiplying and dividing by 10, 100, and 1000
+  slug: lo-yr9-multiplying-dividing-by-10-100-1000
+  instruction: Calculate each using place value.
+  terminology:
+  - place value
+  - decimal
+  - multiply
+  - divide
+  skills:
+  - multiply by powers of ten
+  - divide by powers of ten
+  - reason with whole numbers and decimals
+  question_types:
+  - direct calculation
+  - missing number
+  - error check
+  - short reasoning
+  foundation_questions:
+  - \item $6 \times 10$
+  - \item $4 \times 100$
+  - \item $9 \times 1000$
+  - \item $80 \div 10$
+  - \item $500 \div 100$
+  - \item $7000 \div 1000$
+  - \item $23 \times 10$
+  - \item $45 \times 100$
+  - \item $67 \div 10$
+  - \item $900 \div 100$
+  - \item $3.4 \times 10$
+  - \item $5.8 \div 10$
+  - \item $0.7 \times 100$
+  - \item $4.2 \div 100$
+  - \item $1.25 \times 10$
+  - \item $3.6 \times 100$
+  - \item $0.48 \times 1000$
+  - \item $72 \div 100$
+  - \item $840 \div 10$
+  - \item $9.3 \div 100$
+  - \item $0.56 \times 10$
+  - \item $2.04 \times 100$
+  - \item $64 \div 1000$
+  - \item $305 \times 10$
+  proficient_questions:
+  - \item $56 \times 10$
+  - \item $8.4 \times 100$
+  - \item $3700 \div 10$
+  - \item $42.6 \div 100$
+  - \item $0.93 \times 1000$
+  - \item $5.08 \div 10$
+  - \item $67 \times 100$
+  - \item $9.2 \div 10$
+  - \item $0.406 \times 100$
+  - \item $8200 \div 1000$
+  - \item $14.7 \times 100$
+  - \item $3.06 \div 100$
+  - \item $0.048 \times 1000$
+  - \item $640 \div 100$
+  - \item $2.75 \times 10$
+  - \item $91 \times 1000$
+  - \item $4.5 \div 1000$
+  - \item $0.609 \times 100$
+  - \item $750 \div 10$
+  - \item $38.4 \div 100$
+  - \item $\square \times 100 = 6300$
+  - \item $\square \div 10 = 4.8$
+  - \item $7.25 \times \square = 725$
+  - \item $930 \div \square = 0.93$
+  excellence_questions:
+  - \item Is $3.6 \times 100 = 36$ correct?
+  - \item Is $420 \div 10 = 42$ correct?
+  - \item Is $0.84 \times 1000 = 84$ correct?
+  - \item Is $5.7 \div 100 = 0.057$ correct?
+  - \item $\square \div 100 = 6.25$
+  - \item $\square \times 1000 = 4.8$
+  - \item $3.09 \times \square = 309$
+  - \item $6400 \div \square = 6.4$
+  - \item $0.047\text{ km}$ to m: multiply by $1000$.
+  - \item $3.6\text{ kg}$ to t: divide by $1000$.
+  - \item $5.2\text{ MB} \to 5200\text{ KB}$: what multiplier?
+  - \item $1.25\text{ L}$ to mL: multiply by $1000$.
+  - \item By $100$: digits move \rule{1.4cm}{0.15mm} places \rule{1.4cm}{0.15mm}.
+  - \item By $1000$ divide: digits move \rule{1.4cm}{0.15mm} places \rule{1.4cm}{0.15mm}.
+  - \item Greater: $4.08 \times 10$ or $408 \div 10$?
+  - \item Smaller: $0.72 \times 100$ or $720 \div 10$?
+  - \item "Multiply by 10, just add a zero." Always true?
+  - \item "Divide by 100" means what? Give an example.
+- id: L07
+  topic: Reciprocals
+  slug: lo-yr9-reciprocals
+  instruction: Find the reciprocal of each value.
+  terminology:
+  - reciprocal
+  - fraction
+  - numerator
+  - denominator
+  - whole number
+  - multiplicative inverse
+  skills:
+  - find reciprocals of unit fractions
+  - find reciprocals of non-unit fractions
+  - write whole numbers as fractions before finding reciprocals
+  - check whether two numbers are reciprocals
+  - use reciprocals in simple reasoning
+  question_types:
+  - direct reciprocal
+  - whole number to fraction
+  - missing value
+  - error check
+  - comparison
+  - short reasoning
+  foundation_questions:
+  - \item Find the reciprocal of $\frac{1}{2}$.
+  - \item Find the reciprocal of $\frac{1}{3}$.
+  - \item Find the reciprocal of $\frac{2}{5}$.
+  - \item Find the reciprocal of $\frac{3}{4}$.
+  - \item Find the reciprocal of $\frac{4}{7}$.
+  - \item Find the reciprocal of $\frac{5}{6}$.
+  - \item Find the reciprocal of $2$.
+  - \item Find the reciprocal of $3$.
+  - \item Find the reciprocal of $4$.
+  - \item Find the reciprocal of $5$.
+  - \item Find the reciprocal of $\frac{7}{8}$.
+  - \item Find the reciprocal of $\frac{9}{10}$.
+  - \item Find the reciprocal of $\frac{3}{8}$.
+  - \item Find the reciprocal of $\frac{5}{12}$.
+  - \item Find the reciprocal of $6$.
+  - \item Find the reciprocal of $10$.
+  proficient_questions:
+  - \item Find the reciprocal of $\frac{7}{3}$.
+  - \item Find the reciprocal of $\frac{9}{4}$.
+  - \item Find the reciprocal of $\frac{11}{5}$.
+  - \item Find the reciprocal of $\frac{8}{11}$.
+  - \item Find the reciprocal of $12$.
+  - \item Find the reciprocal of $15$.
+  - \item Find the reciprocal of $\frac{13}{9}$.
+  - \item Find the reciprocal of $\frac{14}{5}$.
+  - \item Fill in the blank: the reciprocal of $\frac{4}{9}$ is $\frac{\square}{\square}$.
+  - \item Fill in the blank: the reciprocal of $7$ is $\frac{\square}{\square}$.
+  - \item Are $\frac{2}{7}$ and $\frac{7}{2}$ reciprocals?
+  - \item Are $\frac{3}{5}$ and $\frac{5}{3}$ reciprocals?
+  - \item Is the reciprocal of $\frac{5}{8}$ equal to $\frac{8}{5}$?
+  - \item Is the reciprocal of $9$ equal to $\frac{1}{9}$?
+  - \item Which is greater: the reciprocal of $\frac{2}{9}$ or the reciprocal of $\frac{2}{7}$?
+  - \item Which is greater: the reciprocal of $3$ or the reciprocal of $5$?
+  - \item Find the reciprocal of $\frac{17}{12}$.
+  - \item Explain in one short sentence why the reciprocal of $1$ is still $1$.
+  excellence_questions:
+  - \item A student says the reciprocal of $\frac{4}{7}$ is $\frac{7}{4}$. Are they correct? Explain.
+  - \item A student says the reciprocal of $6$ is $6$. Are they correct? Explain.
+  - \item Fill in both blanks: $\frac{\square}{7}$ and $\frac{7}{\square}$ are reciprocals.
+  - \item Fill in both blanks: if $\frac{5}{8}$ and $\frac{a}{b}$ are reciprocals, then $a=\rule{1.4cm}{0.15mm}$ and $b=\rule{1.4cm}{0.15mm}$.
+  - \item Which pair are reciprocals: $\frac{3}{8}$ and $\frac{8}{3}$, or $\frac{3}{8}$ and $\frac{3}{8}$?
+  - \item Write a number whose reciprocal is $\frac{4}{9}$.
+  - \item Write a fraction whose reciprocal is $3$.
+  - \item Complete: the reciprocal of $\frac{m}{9}$ is $\frac{9}{m}$. If the reciprocal is $\frac{9}{4}$, then $m=\rule{1.4cm}{0.15mm}$.
+  - \item If two numbers are reciprocals, what is their product?
+  - \item Are $\frac{6}{11}$ and $\frac{11}{6}$ reciprocals? How do you know?
+  - \item Which does not belong: $\frac{2}{3}$, $\frac{3}{2}$, $\frac{4}{5}$, $\frac{5}{4}$?
+  - \item The reciprocal of a number is $\frac{7}{12}$. What is the number?
+  - \item The reciprocal of a number is $5$. What is the number?
+  - \item A student writes $\frac{2}{9}\to\frac{9}{2}$ and $9\to9$. Explain why only one of these is correct.
+  - \item Find a number whose reciprocal is smaller than $\frac{1}{4}$.
+  - \item Explain why a number and its reciprocal switch places above and below the fraction bar.
+- id: L05
+  topic: Adding and subtracting fractions
+  slug: lo-yr9-adding-and-subtracting-fractions
+  instruction: Add or subtract each fraction. Simplify where you can.
+  terminology:
+  - fraction
+  - numerator
+  - denominator
+  - common denominator
+  - equivalent fraction
+  - simplify
+  skills:
+  - add fractions with the same denominator
+  - subtract fractions with the same denominator
+  - add fractions with different denominators
+  - subtract fractions with different denominators
+  - simplify answers where possible
+  question_types:
+  - direct calculation
+  - missing value
+  - word problem
+  - error check
+  - comparison
+  foundation_questions:
+  - \item $\frac{1}{8}+\frac{3}{8}$
+  - \item $\frac{5}{9}-\frac{2}{9}$
+  - \item $\frac{2}{7}+\frac{4}{7}$
+  - \item $\frac{6}{11}-\frac{1}{11}$
+  - \item $\frac{3}{10}+\frac{5}{10}$
+  - \item $\frac{9}{12}-\frac{4}{12}$
+  - \item $\frac{1}{4}+\frac{2}{4}$
+  - \item $\frac{7}{15}-\frac{3}{15}$
+  - \item $\frac{5}{6}+\frac{1}{6}$
+  - \item $\frac{8}{13}-\frac{5}{13}$
+  - \item $\frac{2}{5}+\frac{1}{5}$
+  - \item $\frac{11}{14}-\frac{4}{14}$
+  - \item $\frac{3}{8}+\frac{4}{8}$
+  - \item $\frac{10}{12}-\frac{7}{12}$
+  - \item $\frac{5}{16}+\frac{7}{16}$
+  - \item $\frac{13}{20}-\frac{6}{20}$
+  proficient_questions:
+  - \item $\frac{1}{2}+\frac{1}{4}$
+  - \item $\frac{3}{4}-\frac{1}{8}$
+  - \item $\frac{2}{3}+\frac{1}{6}$
+  - \item $\frac{5}{6}-\frac{1}{3}$
+  - \item $\frac{3}{5}+\frac{1}{10}$
+  - \item $\frac{7}{8}-\frac{1}{4}$
+  - \item $\frac{2}{9}+\frac{4}{3}$
+  - \item $\frac{11}{12}-\frac{1}{6}$
+  - \item $\frac{3}{7}+\frac{2}{14}$
+  - \item $\frac{5}{6}-\frac{1}{12}$
+  - \item $\frac{4}{15}+\frac{2}{5}$
+  - \item $\frac{7}{10}-\frac{1}{5}$
+  - \item $\frac{5}{12}+\frac{1}{3}$
+  - \item $\frac{13}{18}-\frac{1}{9}$
+  - \item $\frac{3}{4}+\frac{5}{12}$
+  - \item $\frac{7}{9}-\frac{1}{6}$
+  excellence_questions:
+  - \item $1\frac{1}{4}+\frac{2}{3}$
+  - \item $2\frac{1}{2}-\frac{3}{4}$
+  - \item $\frac{5}{6}+\frac{7}{12}$
+  - \item $\frac{11}{15}-\frac{2}{5}$
+  - '\item Fill in the blank: $\frac{3}{4}+\frac{\square}{8}=1$'
+  - '\item Fill in the blank: $\frac{\square}{6}+\frac{1}{3}=\frac{5}{6}$'
+  - \item Is $\frac{2}{3}+\frac{1}{6}=\frac{3}{9}$ correct?
+  - \item Is $\frac{7}{8}-\frac{1}{4}=\frac{6}{4}$ correct?
+  - '\item Which is greater: $\frac{3}{5}+\frac{1}{4}$ or $\frac{5}{6}-\frac{1}{3}$?'
+  - \item Mia walked $\frac{3}{8}$ km and then $\frac{5}{8}$ km. How far altogether?
+  - \item Find two twelfths that add to $\frac{11}{12}$.
+  - '\item Complete: $\frac{5}{6}-\frac{\square}{18}=\frac{2}{3}$'
+  - '\item Complete: $1-\frac{5}{12}=\rule{1.6cm}{0.15mm}$'
+  - \item $\frac{4}{9}+\frac{5}{18}$
+  - \item $\frac{7}{12}+\frac{5}{18}$
+  - \item $\frac{5}{4}-\frac{2}{3}$
+- id: L06
+  topic: Multiplying fractions
+  slug: lo-yr9-multiplying-fractions
+  instruction: Multiply each fraction. Simplify where you can.
+  terminology:
+  - fraction
+  - numerator
+  - denominator
+  - simplify
+  - product
+  skills:
+  - multiply fractions by fractions
+  - multiply whole numbers and fractions
+  - simplify products
+  - decide whether an answer is sensible
+  question_types:
+  - direct calculation
+  - simplify after multiplying
+  - mixed whole-number and fraction
+  - missing value
+  - error check
+  - comparison
+  foundation_questions:
+  - \item $\frac{1}{2}\times\frac{1}{3}$
+  - \item $\frac{2}{3}\times\frac{1}{4}$
+  - \item $\frac{3}{5}\times\frac{1}{2}$
+  - \item $\frac{1}{4}\times\frac{2}{7}$
+  - \item $\frac{3}{4}\times\frac{2}{3}$
+  - \item $\frac{2}{5}\times\frac{3}{4}$
+  - \item $\frac{4}{5}\times\frac{1}{2}$
+  - \item $\frac{5}{6}\times\frac{2}{3}$
+  - \item $2\times\frac{1}{5}$
+  - \item $3\times\frac{2}{7}$
+  - \item $4\times\frac{3}{8}$
+  - \item $5\times\frac{1}{10}$
+  - \item $\frac{2}{9}\times\frac{3}{5}$
+  - \item $\frac{7}{8}\times\frac{2}{7}$
+  - \item $\frac{3}{10}\times\frac{5}{6}$
+  - \item $\frac{4}{9}\times\frac{3}{4}$
+  proficient_questions:
+  - \item $\frac{4}{7}\times\frac{3}{5}$
+  - \item $\frac{5}{8}\times\frac{4}{9}$
+  - \item $\frac{7}{10}\times\frac{5}{6}$
+  - \item $\frac{9}{11}\times\frac{2}{3}$
+  - \item $6\times\frac{5}{12}$
+  - \item $8\times\frac{3}{16}$
+  - \item $\frac{3}{4}\times\frac{8}{9}$
+  - \item $\frac{5}{6}\times\frac{9}{10}$
+  - \item $\frac{7}{12}\times\frac{6}{7}$
+  - \item $\frac{11}{15}\times\frac{5}{22}$
+  - \item Fill in the blank: $\frac{2}{3}\times\frac{\square}{5}=\frac{8}{15}$
+  - \item Fill in the blank: $\frac{\square}{4}\times\frac{2}{3}=\frac{1}{2}$
+  - \item Is $\frac{2}{5}\times\frac{3}{4}=\frac{6}{20}$ correct?
+  - \item Is $3\times\frac{2}{9}=\frac{6}{9}$ correct?
+  - \item Which is greater: $\frac{2}{3}\times\frac{3}{5}$ or $\frac{3}{4}\times\frac{2}{5}$?
+  - \item $\frac{4}{15}\times\frac{5}{8}$
+  - \item $\frac{13}{14}\times\frac{7}{13}$
+  - \item Explain in one short sentence why multiplying by $\frac{1}{2}$ makes a positive number smaller.
+  excellence_questions:
+  - \item $1\frac{1}{2}\times\frac{2}{3}$
+  - \item $2\frac{1}{4}\times\frac{4}{9}$
+  - \item $\frac{5}{6}\times\frac{9}{20}$
+  - \item $\frac{7}{12}\times\frac{18}{21}$
+  - \item A student says $\frac{3}{4}\times\frac{2}{5}=\frac{5}{8}$. Are they correct? Explain.
+  - \item A recipe uses $\frac{3}{4}$ of a cup of milk per batch. You make $\frac{2}{3}$ of a batch. How much milk is needed?
+  - \item Find a fraction so that $\frac{3}{5}\times\square=\frac{9}{20}$.
+  - \item Fill in both blanks: $\frac{\square}{6}\times\frac{3}{4}=\frac{5}{8}$.
+  - \item Which is greater: $\frac{5}{6}\times\frac{3}{10}$ or $\frac{2}{3}\times\frac{3}{8}$? Show enough working to justify.
+  - \item Is $\frac{4}{9}\times\frac{3}{8}=\frac{12}{72}=\frac{1}{6}$ correct? Explain.
+  - \item A strip is $\frac{5}{6}$ m long. You use $\frac{3}{5}$ of it. How many metres is that?
+  - \item Complete: if $\frac{2}{7}\times\frac{m}{3}=\frac{4}{21}$, then $m=\rule{1.6cm}{0.15mm}$.
+  - \item Write $3\times\frac{4}{15}$ as a single simplified fraction.
+  - \item A tank is $\frac{7}{8}$ full and then $\frac{2}{3}$ of that water remains. What fraction of the whole tank remains?
+  - \item Which does not belong: $\frac{1}{2}\times\frac{2}{3}$, $\frac{2}{3}\times\frac{1}{2}$, $\frac{3}{4}\times\frac{4}{9}$, $\frac{5}{6}\times\frac{1}{2}$?
+  - \item Explain why $\frac{4}{5}\times\frac{3}{4}$ can be simplified before multiplying.
+- id: L08
+  topic: Dividing fractions
+  slug: lo-yr9-dividing-fractions
+  instruction: Divide each fraction. Simplify where you can.
+  terminology:
+  - reciprocal
+  - divide
+  - numerator
+  - denominator
+  - simplify
+  skills:
+  - divide fractions by multiplying by the reciprocal
+  - divide whole numbers by fractions
+  - divide fractions by whole numbers
+  - simplify answers after division
+  - check whether an answer is sensible
+  question_types:
+  - direct calculation
+  - whole number and fraction
+  - missing value
+  - error check
+  - comparison
+  foundation_questions:
+  - \item $\frac{1}{2}\div\frac{1}{4}$
+  - \item $\frac{3}{4}\div\frac{1}{2}$
+  - \item $\frac{2}{3}\div\frac{1}{3}$
+  - \item $\frac{5}{6}\div\frac{5}{6}$
+  - \item $\frac{3}{5}\div\frac{1}{5}$
+  - \item $\frac{7}{8}\div\frac{1}{2}$
+  - \item $\frac{4}{9}\div\frac{2}{9}$
+  - \item $\frac{5}{12}\div\frac{5}{12}$
+  - \item $2\div\frac{1}{2}$
+  - \item $3\div\frac{1}{3}$
+  - \item $4\div\frac{1}{4}$
+  - \item $\frac{1}{2}\div 2$
+  - \item $\frac{3}{4}\div 3$
+  - \item $\frac{5}{6}\div 5$
+  - \item $\frac{2}{5}\div\frac{1}{5}$
+  - \item $\frac{9}{10}\div\frac{3}{10}$
+  proficient_questions:
+  - \item $\frac{3}{4}\div\frac{2}{5}$
+  - \item $\frac{5}{6}\div\frac{1}{3}$
+  - \item $\frac{7}{8}\div\frac{7}{16}$
+  - \item $\frac{4}{5}\div\frac{2}{15}$
+  - \item $\frac{9}{10}\div\frac{3}{5}$
+  - \item $\frac{11}{12}\div\frac{1}{6}$
+  - \item $6\div\frac{3}{4}$
+  - \item $8\div\frac{2}{3}$
+  - \item $\frac{3}{5}\div 6$
+  - \item $\frac{7}{9}\div 2$
+  - \item Fill in the blank: $\frac{2}{3}\div\frac{\square}{5}=\frac{10}{9}$
+  - \item Fill in the blank: $\frac{\square}{4}\div\frac{1}{2}=\frac{3}{2}$
+  - \item Is $\frac{3}{4}\div\frac{1}{2}=\frac{3}{8}$ correct?
+  - \item Is $5\div\frac{1}{5}=25$ correct?
+  - \item Which is greater: $\frac{3}{4}\div\frac{1}{2}$ or $\frac{3}{4}\times\frac{1}{2}$?
+  - \item $\frac{5}{14}\div\frac{15}{28}$
+  - \item $\frac{13}{15}\div\frac{26}{45}$
+  - \item Explain in one short sentence why dividing by $\frac{1}{2}$ makes a positive number larger.
+  excellence_questions:
+  - \item $1\frac{1}{2}\div\frac{3}{4}$
+  - \item $2\frac{1}{4}\div\frac{3}{8}$
+  - \item $\frac{5}{6}\div\frac{10}{9}$
+  - \item $\frac{7}{12}\div\frac{14}{15}$
+  - \item A student says $\frac{4}{5}\div\frac{2}{3}=\frac{8}{15}$. Are they correct? Explain.
+  - \item A jug is $\frac{3}{4}$ full. Each pour uses $\frac{1}{8}$ of the jug. How many pours is that?
+  - \item Find a fraction so that $\frac{2}{3}\div\square=\frac{10}{9}$.
+  - \item Fill in both blanks: $\frac{\square}{6}\div\frac{2}{3}=\frac{5}{4}$.
+  - \item Which is greater: $\frac{5}{6}\div\frac{1}{3}$ or $\frac{3}{4}\div\frac{1}{2}$? Show enough working to justify.
+  - \item Is $\frac{6}{7}\div\frac{3}{14}=4$ correct? Explain.
+  - \item A rope is $\frac{5}{6}$ m long. Each piece is $\frac{5}{18}$ m long. How many pieces can be cut?
+  - \item Complete: if $\frac{3}{5}\div\frac{m}{2}=\frac{4}{5}$, then $m=\rule{1.6cm}{0.15mm}$.
+  - \item Write $3\div\frac{4}{15}$ as a single simplified fraction.
+  - \item A recipe needs $\frac{2}{3}$ cup of rice per batch. You have $4\frac{2}{3}$ cups. How many batches can you make?
+  - \item Which does not belong: $\frac{1}{2}\div\frac{1}{4}$, $2\div\frac{1}{2}$, $\frac{3}{4}\div\frac{3}{8}$, $\frac{5}{6}\div\frac{5}{6}$?
+  - \item Explain why $\frac{4}{9}\div\frac{2}{3}$ can be rewritten as $\frac{4}{9}\times\frac{3}{2}$.
+- id: L09
+  topic: Finding fractions of a quantity
+  slug: lo-yr9-finding-fractions-of-a-quantity
+  instruction: Find each fraction of the quantity.
+  terminology:
+  - fraction
+  - quantity
+  - of
+  - numerator
+  - denominator
+  skills:
+  - find unit fractions of whole numbers
+  - find non-unit fractions of quantities
+  - use division then multiplication to find a fraction of an amount
+  - check whether an answer is sensible
+  - compare different fractions of the same quantity
+  question_types:
+  - direct calculation
+  - unit fraction
+  - non-unit fraction
+  - missing value
+  - error check
+  - comparison
+  - short context
+  foundation_questions:
+  - \item $\frac{1}{2}$ of $10$
+  - \item $\frac{1}{2}$ of $18$
+  - \item $\frac{1}{3}$ of $12$
+  - \item $\frac{1}{3}$ of $21$
+  - \item $\frac{1}{4}$ of $16$
+  - \item $\frac{1}{4}$ of $28$
+  - \item $\frac{3}{4}$ of $20$
+  - \item $\frac{3}{4}$ of $32$
+  - \item $\frac{2}{3}$ of $15$
+  - \item $\frac{2}{3}$ of $24$
+  - \item $\frac{3}{5}$ of $25$
+  - \item $\frac{4}{5}$ of $30$
+  - \item $\frac{5}{6}$ of $24$
+  - \item $\frac{2}{5}$ of $35$
+  - \item $\frac{3}{8}$ of $16$
+  - \item $\frac{5}{8}$ of $24$
+  proficient_questions:
+  - \item $\frac{2}{7}$ of $35$
+  - \item $\frac{5}{6}$ of $42$
+  - \item $\frac{3}{10}$ of $80$
+  - \item $\frac{7}{8}$ of $48$
+  - \item $\frac{4}{9}$ of $72$
+  - \item $\frac{5}{12}$ of $84$
+  - \item $\frac{11}{20}$ of $100$
+  - \item $\frac{3}{5}$ of $45$
+  - \item $\frac{7}{12}$ of $60$
+  - \item $\frac{9}{10}$ of $70$
+  - \item Fill in the blank: $\frac{1}{4}$ of $\square$ is $9$.
+  - \item Fill in the blank: $\frac{3}{5}$ of $\square$ is $24$.
+  - \item Is $\frac{2}{3}$ of $18$ equal to $6$?
+  - \item Is $\frac{3}{4}$ of $28$ equal to $21$?
+  - \item Which is greater: $\frac{2}{5}$ of $40$ or $\frac{3}{10}$ of $40$?
+  - \item A class has $30$ students. $\frac{2}{5}$ are absent. How many students are absent?
+  - \item A rope is $36$ m long. $\frac{3}{4}$ of it is used. How many metres are used?
+  - \item Explain in one short sentence what the word of means in $\frac{3}{5}$ of $20$.
+  excellence_questions:
+  - \item A student says $\frac{3}{4}$ of $20$ is $80$. Are they correct? Explain.
+  - \item A student says $\frac{2}{3}$ of $27$ is found by doing $27\times2\times3$. Are they correct? Explain.
+  - \item Fill in the blank: $\frac{5}{8}$ of $\square$ is $25$.
+  - \item Fill in the blank: $\frac{7}{9}$ of $\square$ is $35$.
+  - \item Which is greater: $\frac{3}{5}$ of $50$ or $\frac{2}{3}$ of $45$? Show enough working to justify.
+  - \item Which is smaller: $\frac{5}{6}$ of $24$ or $\frac{3}{4}$ of $28$?
+  - \item A tank holds $60$ L. It is $\frac{7}{10}$ full. How many litres of water are in the tank?
+  - \item A team played $32$ games and won $\frac{3}{8}$ of them. How many games did they win?
+  - \item A baker made $48$ muffins. $\frac{5}{12}$ were chocolate. How many were chocolate?
+  - \item Complete: if $\frac{m}{5}$ of $35$ is $21$, then $m=\rule{1.6cm}{0.15mm}$.
+  - \item Complete: if $\frac{3}{n}$ of $40$ is $24$, then $n=\rule{1.6cm}{0.15mm}$.
+  - \item Is $\frac{4}{7}$ of $63=28$ correct? Explain what went wrong or why it works.
+  - \item A strip is $54$ cm long. Mina cuts off $\frac{2}{9}$ of it. How many centimetres does she cut off?
+  - \item A jar has $45$ lollies. $\frac{4}{9}$ are red. How many red lollies are there?
+  - \item Which does not belong: $\frac{1}{2}$ of $18$, $\frac{2}{4}$ of $18$, $\frac{3}{6}$ of $18$, $\frac{2}{3}$ of $18$?
+  - \item Explain why finding $\frac{3}{4}$ of $28$ can be done by dividing by $4$ first, then multiplying by $3$.
+- id: L10
+  topic: Multiples and Lowest Common Multiples
+  slug: lo-yr9-multiples-and-lowest-common-multiples
+  instruction: Find the multiples or lowest common multiple.
+  terminology:
+  - multiple
+  - common multiple
+  - lowest common multiple
+  - factor
+  skills:
+  - list multiples of a number in order
+  - identify common multiples of two numbers
+  - find the lowest common multiple of two numbers
+  - use multiples to solve simple context problems
+  - check whether a stated multiple or LCM is correct
+  question_types:
+  - list multiples
+  - identify common multiples
+  - find the LCM
+  - error check
+  - short context
+  foundation_questions:
+  - \item Write the first 5 multiples of $2$.
+  - \item Write the first 5 multiples of $3$.
+  - \item Write the first 5 multiples of $4$.
+  - \item Write the first 5 multiples of $5$.
+  - \item Write the first 5 multiples of $6$.
+  - \item Is $18$ a multiple of $3$?
+  - \item Is $20$ a multiple of $5$?
+  - \item Is $21$ a multiple of $4$?
+  - \item Circle the common multiples of $2$ and $3$: $4, 6, 8, 12, 15, 18$.
+  - \item Circle the common multiples of $3$ and $4$: $6, 8, 12, 15, 24$.
+  - \item Find the lowest common multiple of $2$ and $3$.
+  - \item Find the lowest common multiple of $2$ and $4$.
+  - \item Find the lowest common multiple of $3$ and $5$.
+  - \item Find the lowest common multiple of $4$ and $5$.
+  - \item Complete: the next multiple of $7$ after $21$ is $\square$.
+  - \item Complete: the next multiple of $8$ after $24$ is $\square$.
+  proficient_questions:
+  - \item Write the first 6 multiples of $7$.
+  - \item Write the first 6 multiples of $8$.
+  - \item Write the first 6 multiples of $9$.
+  - \item List the common multiples of $4$ and $6$ up to $36$.
+  - \item List the common multiples of $5$ and $7$ up to $70$.
+  - \item Find the lowest common multiple of $4$ and $6$.
+  - \item Find the lowest common multiple of $6$ and $8$.
+  - \item Find the lowest common multiple of $9$ and $12$.
+  - \item Find the lowest common multiple of $7$ and $10$.
+  - \item Find the lowest common multiple of $5$ and $12$.
+  - \item Fill in the blank: the lowest common multiple of $3$ and $8$ is $\square$.
+  - \item Fill in the blank: the lowest common multiple of $6$ and $9$ is $\square$.
+  - \item Is $24$ a common multiple of $4$ and $6$?
+  - \item Is $30$ the lowest common multiple of $5$ and $6$?
+  - \item Which is greater: the lowest common multiple of $3$ and $4$, or the lowest common multiple of $2$ and $9$?
+  - \item Two bells ring every $4$ minutes and every $6$ minutes. After how many minutes will they ring together again?
+  excellence_questions:
+  - \item A student says the lowest common multiple of $4$ and $6$ is $10$. Are they correct? Explain.
+  - \item A student says $36$ is the lowest common multiple of $6$ and $9$. Are they correct? Explain.
+  - \item Write the first 3 common multiples of $6$ and $8$.
+  - \item Write the first 3 common multiples of $9$ and $12$.
+  - \item Find the lowest common multiple of $8$ and $14$.
+  - \item Find the lowest common multiple of $12$ and $15$.
+  - \item Find the lowest common multiple of $18$ and $24$.
+  - \item Fill in both blanks: the first two common multiples of $4$ and $9$ are $\square$ and $\square$.
+  - \item Fill in the blank: the lowest common multiple of $a$ and $6$ is $18$ when $a=\square$.
+  - \item Which does not belong: $12, 18, 24, 30$ as common multiples of $3$ and $6$?
+  - \item Which is greater: the lowest common multiple of $6$ and $10$, or the lowest common multiple of $8$ and $12$? Show enough working to justify.
+  - \item Three lights flash every $6$, $8$, and $12$ seconds. After how many seconds will they all flash together again?
+  - \item A bus comes every $9$ minutes and a train comes every $15$ minutes. If they leave now at the same time, after how many minutes will they leave together again?
+  - \item Is $48$ a common multiple of $6$ and $8$? Is it the lowest common multiple? Explain.
+  - \item Complete: if the lowest common multiple of $5$ and $n$ is $35$, then $n=\rule{1.6cm}{0.15mm}$.
+  - \item Explain why the lowest common multiple of two numbers must be a multiple of both numbers.
+- id: L11
+  topic: Factors, Highest Common Factors & Primes
+  slug: lo-yr9-factors-highest-common-factors-and-primes
+  instruction: Find the factors, highest common factor, or identify primes.
+  terminology:
+  - factor
+  - common factor
+  - highest common factor
+  - prime number
+  - composite number
+  - divisible
+  skills:
+  - list the factors of a number
+  - identify common factors of two numbers
+  - find the highest common factor of two numbers
+  - identify whether a number is prime or composite
+  - check whether a stated factor or HCF is correct
+  question_types:
+  - list factors
+  - identify common factors
+  - find the HCF
+  - prime or composite
+  - error check
+  - short context
+  foundation_questions:
+  - \item Write all the factors of $12$.
+  - \item Write all the factors of $18$.
+  - \item Write all the factors of $20$.
+  - \item Write all the factors of $24$.
+  - \item Is $4$ a factor of $28$?
+  - \item Is $5$ a factor of $27$?
+  - \item Is $6$ a factor of $42$?
+  - \item Circle the factors of $15$: $1, 2, 3, 5, 6, 15$.
+  - \item Circle the factors of $16$: $1, 2, 4, 5, 8, 16$.
+  - \item List the common factors of $12$ and $18$.
+  - \item List the common factors of $8$ and $20$.
+  - \item Find the highest common factor of $12$ and $18$.
+  - \item Find the highest common factor of $8$ and $20$.
+  - \item Is $11$ prime or composite?
+  - \item Is $15$ prime or composite?
+  - \item Complete: the highest common factor of $9$ and $12$ is $\square$.
+  proficient_questions:
+  - \item Write all the factors of $30$.
+  - \item Write all the factors of $36$.
+  - \item Write all the factors of $45$.
+  - \item List the common factors of $18$ and $24$.
+  - \item List the common factors of $20$ and $30$.
+  - \item Find the highest common factor of $18$ and $24$.
+  - \item Find the highest common factor of $20$ and $30$.
+  - \item Find the highest common factor of $27$ and $36$.
+  - \item Is $29$ prime or composite?
+  - \item Is $39$ prime or composite?
+  - \item Which is greater: the highest common factor of $18$ and $24$, or the highest common factor of $14$ and $21$?
+  - \item Fill in the blank: the highest common factor of $16$ and $24$ is $\square$.
+  - \item Fill in the blank: a common factor of $24$ and $36$ is $\square$.
+  - \item Is $9$ a factor of $45$?
+  - \item Is $7$ a factor of $54$?
+  - \item A baker arranges $18$ muffins and $24$ cookies into equal groups with no leftovers. What is the greatest number of groups possible?
+  excellence_questions:
+  - \item A student says the highest common factor of $18$ and $30$ is $6$. Are they correct? Explain.
+  - \item A student says $21$ is prime because it is odd. Are they correct? Explain.
+  - \item Write the first 4 common factors of $24$ and $36$.
+  - \item Find the highest common factor of $42$ and $56$.
+  - \item Find the highest common factor of $48$ and $60$.
+  - \item Find the highest common factor of $54$ and $72$.
+  - \item Which numbers are prime: $17, 21, 23, 27, 31$?
+  - \item Which does not belong: $2, 3, 5, 9, 11$?
+  - \item Fill in the blank: the highest common factor of $a$ and $18$ is $6$ when $a=\square$.
+  - \item Fill in both blanks: two common factors of $32$ and $40$ are $\square$ and $\square$.
+  - \item Which is greater: the highest common factor of $24$ and $32$, or the highest common factor of $27$ and $45$? Show enough working to justify.
+  - \item Is $35$ a factor of $140$? Is it the highest common factor of $140$ and $105$? Explain.
+  - \item A teacher has $24$ blue pens and $36$ black pens. She wants identical packs with no pens left over. What is the greatest number of packs she can make?
+  - \item A choir has $28$ altos and $42$ sopranos. They stand in equal rows with the same number of each voice in every row. What is the greatest number of rows?
+  - \item Complete: if the highest common factor of $30$ and $n$ is $10$, then one possible value of $n$ is \rule{1.6cm}{0.15mm}.
+  - \item Explain why a prime number greater than $2$ must be odd.
+- id: L12
+  topic: Irrational numbers
+  slug: lo-yr9-irrational-numbers
+  instruction: Identify, compare, or use irrational numbers.
+  terminology:
+  - rational number
+  - irrational number
+  - terminating decimal
+  - recurring decimal
+  - square root
+  - pi
+  skills:
+  - identify irrational numbers from a list
+  - distinguish rational and irrational numbers
+  - use square roots to classify numbers
+  - place irrational numbers approximately on a number line
+  - explain why a decimal is rational or irrational
+  question_types:
+  - classify numbers
+  - true or false
+  - estimate and compare
+  - number line reasoning
+  - short explanation
+  foundation_questions:
+  - \item Is $\sqrt{4}$ rational or irrational?
+  - \item Is $\sqrt{9}$ rational or irrational?
+  - \item Is $\sqrt{2}$ rational or irrational?
+  - \item Is $\pi$ rational or irrational?
+  - \item Is $0.5$ rational or irrational?
+  - \item Is $0.333\ldots$ rational or irrational?
+  - \item Is $2$ rational or irrational?
+  - \item Is $\sqrt{16}$ rational or irrational?
+  - \item Circle the irrational number: $3, \sqrt{5}, 0.2$.
+  - \item Circle the irrational number: $\sqrt{25}, \pi, 4$.
+  - \item Circle the rational number: $\sqrt{3}, 1.25, \pi$.
+  - \item Which is greater: $\sqrt{2}$ or $1$?
+  - \item Which is greater: $\sqrt{2}$ or $2$?
+  - \item True or false: every whole number is rational.
+  - \item True or false: $\pi$ is a terminating decimal.
+  - \item Write one irrational number.
+  proficient_questions:
+  - \item Is $\sqrt{7}$ rational or irrational?
+  - \item Is $\sqrt{36}$ rational or irrational?
+  - \item Is $-\sqrt{5}$ rational or irrational?
+  - \item Is $2.125$ rational or irrational?
+  - \item Is $0.1010010001\ldots$ rational or irrational?
+  - \item Which does not belong: $\sqrt{2}, \sqrt{3}, \sqrt{4}, \pi$?
+  - \item Place in order: $2, \sqrt{5}, 3$.
+  - \item Place in order: $1.4, \sqrt{2}, 1.5$.
+  - \item Which is closer to $3$: $\sqrt{8}$ or $\sqrt{10}$?
+  - \item Between which two whole numbers does $\sqrt{20}$ lie?
+  - \item Between which two whole numbers does $\sqrt{50}$ lie?
+  - \item True or false: every square root is irrational.
+  - \item True or false: a recurring decimal is rational.
+  - \item True or false: $\sqrt{49}$ is irrational.
+  - \item Explain in one short sentence why $\sqrt{25}$ is rational.
+  - \item Explain in one short sentence why $\sqrt{6}$ is irrational.
+  - \item Fill in the blank: $\sqrt{17}$ is between $\square$ and $\square$.
+  - \item Fill in the blank: a number that is irrational is $\square$.
+  excellence_questions:
+  - \item A student says $\sqrt{9}$ is irrational because it has a square root sign. Are they correct? Explain.
+  - \item A student says $3.14159$ is irrational because it has many decimal places. Are they correct? Explain.
+  - \item A student says $0.272727\ldots$ is irrational because it never ends. Are they correct? Explain.
+  - \item Which is greater: $\sqrt{11}$ or $3.3$? Show enough working to justify.
+  - \item Which is smaller: $\sqrt{15}$ or $3.9$? Explain how you know.
+  - \item Put in ascending order: $\sqrt{2}, 1.41, 1.5, \frac{3}{2}$.
+  - \item Put in ascending order: $3, \pi, \sqrt{10}, 3.2$.
+  - \item Which does not belong: $\sqrt{2}, \pi, \frac{7}{3}, \sqrt{7}$?
+  - \item Find one rational number between $\sqrt{2}$ and $\sqrt{3}$.
+  - \item Find one irrational number between $2$ and $3$.
+  - \item Is $\sqrt{18}=3\sqrt{2}$ rational or irrational? Explain.
+  - \item Is $2\pi$ rational or irrational? Explain.
+  - \item Complete: if $n$ is a whole number and $\sqrt{n}$ is rational, then one possible value of $n$ is \rule{1.6cm}{0.15mm}.
+  - \item Complete: an irrational number between $4$ and $5$ is \rule{1.8cm}{0.15mm}.
+  - \item True or false: the decimal for an irrational number can terminate. Explain.
+  - \item True or false: $\frac{22}{7}$ is irrational because it is close to $\pi$. Explain.
+  - \item A number lies between $\sqrt{5}$ and $\sqrt{6}$. Is it definitely irrational? Explain.
+  - \item Explain why not every non-terminating decimal is irrational.
+- id: L13
+  topic: Forming expressions
+  slug: lo-yr9-forming-expressions
+  instruction: Write an algebraic expression for each description.
+  terminology:
+  - expression
+  - variable
+  - term
+  - coefficient
+  - operation
+  skills:
+  - translate words into algebraic expressions
+  - choose a suitable variable
+  - represent repeated addition with multiplication
+  - distinguish expressions from equations
+  question_types:
+  - direct translation
+  - match words to algebra
+  - context expression
+  - error check
+  - simplify wording
+  foundation_questions:
+  - \item Write an expression for $n$ plus $4$.
+  - \item Write an expression for $x$ minus $7$.
+  - \item Write an expression for $3$ times $y$.
+  - \item Write an expression for $m$ divided by $5$.
+  - \item Write an expression for $a$ plus $a$.
+  - \item Write an expression for $8$ more than $p$.
+  - \item Write an expression for $6$ less than $q$.
+  - \item Write an expression for double $t$.
+  - \item Write an expression for half of $k$.
+  - \item Write an expression for $4$ groups of $b$.
+  - \item Write an expression for $c$ multiplied by $9$.
+  - \item Write an expression for $r$ shared equally between $3$.
+  - \item Write an expression for the sum of $d$ and $11$.
+  - \item Write an expression for the difference between $w$ and $2$.
+  - \item Write an expression for $5$ times $h$, then add $1$.
+  - \item Write an expression for $j$ decreased by $4$.
+  proficient_questions:
+  - \item Write an expression for $5$ more than $2x$.
+  - \item Write an expression for $3$ less than $4y$.
+  - \item Write an expression for twice $n$ plus $7$.
+  - \item Write an expression for $m$ divided by $4$, then add $6$.
+  - \item Write an expression for the total of $a$ and $3b$.
+  - \item Write an expression for $9$ take away $p$.
+  - \item Write an expression for the perimeter of a square with side $s$.
+  - \item Write an expression for the cost of $x$ tickets at 12 dollars each.
+  - \item Write an expression for $q$ shared equally among $5$, then add $2$.
+  - \item Write an expression for $7$ more than half of $t$.
+  - '\item Which expression matches: \textit{three groups of $k$, then subtract $4$}?'
+  - '\item Which expression matches: \textit{$2$ more than the product of $6$ and $r$}?'
+  - \item Is \mbox{$3x+5$} an expression or an equation?
+  - \item Is \mbox{$2y=10$} an expression or an equation?
+  - \item Explain in one short sentence what the variable means in \mbox{$4n+1$}.
+  - \item Write an expression for the number of wheels on $b$ bikes.
+  excellence_questions:
+  - \item A student says \mbox{$3+n$} means \textit{three less than $n$}. Are they correct? Explain.
+  - \item A student says \mbox{$2a+5$} and \mbox{$5a+2$} represent the same situation. Are they correct? Explain.
+  - \item Write an expression for the total cost of $m$ muffins at 3 dollars each and one drink costing 4 dollars.
+  - \item Write an expression for the perimeter of a rectangle with length $x$ and width $x+2$.
+  - \item Write an expression for the number of seats in $r$ rows with $8$ seats in each row, then remove $3$ broken seats.
+  - '\item Fill in the blank: \textit{$7$ more than $p$} is \rule{2cm}{0.15mm}.'
+  - '\item Fill in the blank: \textit{half of $n$, then subtract $4$} is \rule{2.6cm}{0.15mm}.'
+  - '\item Which does not belong: \mbox{$4x$}, \mbox{$x+x+x+x$}, \mbox{$4+x$}, \mbox{$2(2x)$}?'
+  - '\item Which does not belong: \mbox{$3y+2$}, \mbox{$2+3y$}, \mbox{$y+y+y+2$}, \mbox{$3(y+2)$}?'
+  - \item Write an expression for the age of Sam in $y$ years if Sam is now $12$.
+  - \item Write an expression for the amount left after spending 5 dollars from $x$.
+  - \item Write an expression for the area of a rectangle with width $w$ and length $w+6$.
+  - \item Is \mbox{$5n$} the same as \mbox{$n+5$}? Explain.
+  - '\item Complete: if each bag has $c$ cookies and there are $6$ bags, the total is \rule{2cm}{0.15mm}.'
+  - '\item Complete: if a taxi fare is 4 dollars plus 2 dollars per kilometre for $k$ kilometres, the cost is \rule{2.4cm}{0.15mm}.'
+  - \item Write a word description for \mbox{$8-2p$}.
+  - \item Write a word description for \mbox{$3(x+1)$}.
+  - \item Explain why \mbox{$4n$} is a better expression than \mbox{$n+n+n+n$}, even though they are equivalent.
