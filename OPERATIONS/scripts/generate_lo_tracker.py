@@ -148,6 +148,11 @@ def canonical_records() -> list[dict]:
                 records.append(
                     {
                         "objectiveId": build_objective_id(topic_num, topic_title, item),
+                        "canonicalTopicId": topic_id,
+                        "canonicalInternalCode": item.get("internal_code"),
+                        "canonicalSourceCode": item.get("source_code"),
+                        "canonicalTitle": item.get("title") or title,
+                        "canonicalDisplayTitle": item.get("display_title") or item.get("title") or title,
                         "internal_code": item.get("internal_code"),
                         "sourceId": "yr9-learning-objectives-canonical",
                         "unitId": f"y9-topic-{topic_num}-{re.sub(r'[^a-z0-9]+', '-', topic_title.lower()).strip('-')}" if isinstance(topic_num, int) else None,
@@ -195,6 +200,11 @@ def collect_lo_record(item: dict, slug_map: dict[str, str]) -> dict:
 
     return {
         "objectiveId": item.get("objectiveId"),
+        "canonicalTopicId": item.get("canonicalTopicId"),
+        "canonicalInternalCode": item.get("canonicalInternalCode"),
+        "canonicalSourceCode": item.get("canonicalSourceCode"),
+        "canonicalTitle": item.get("canonicalTitle"),
+        "canonicalDisplayTitle": item.get("canonicalDisplayTitle"),
         "slug": slug,
         "status": status,
         "paths": {
@@ -228,7 +238,8 @@ def main() -> int:
             "Worksheet content lives in per-LO TeX files, not in this tracker.",
             "Canonical curriculum/source metadata lives in the canonical JSON file.",
             "This tracker is derived from the canonical JSON plus the actual filesystem state.",
-            "Join back to canonical metadata using objectiveId when you need titles, order, notes, or links.",
+            "Canonical identifiers and titles are copied through here so smaller models can compare tracker and canonical records directly.",
+            "Prefer canonicalInternalCode / canonicalSourceCode / canonicalDisplayTitle when matching back to the canonical JSON.",
         ],
         "summary": {
             "totalObjectives": len(records),

@@ -6,7 +6,8 @@
     "Worksheet content lives in per-LO TeX files, not in this tracker.",
     "Canonical curriculum/source metadata lives in the canonical JSON file.",
     "This tracker is derived from the canonical JSON plus the actual filesystem state.",
-    "Join back to canonical metadata using objectiveId when you need titles, order, notes, or links."
+    "Canonical identifiers and titles are copied through here so smaller models can compare tracker and canonical records directly.",
+    "Prefer canonicalInternalCode / canonicalSourceCode / canonicalDisplayTitle when matching back to the canonical JSON."
   ],
   "summary": {
     "totalObjectives": 127,
@@ -17,6 +18,11 @@
   "learningObjectives": [
     {
       "objectiveId": "y9-topic1-lo1-place-values-and-decimals",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Place Values and Decimals",
+      "canonicalDisplayTitle": "Place Values and Decimals",
       "slug": "lo-yr9-place-values-and-decimals",
       "status": "complete",
       "paths": {
@@ -46,6 +52,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo2-rounding-to-decimal-points",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Rounding to Decimal Points",
+      "canonicalDisplayTitle": "Rounding to Decimal Points",
       "slug": "lo-yr9-rounding-to-decimal-points",
       "status": "complete",
       "paths": {
@@ -75,6 +86,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo3-multiplying-and-dividing-by-10-100-1000",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Multiplying and dividing by 10,100,1000",
+      "canonicalDisplayTitle": "Multiplying and dividing by 10,100,1000",
       "slug": "lo-yr9-multiplying-dividing-by-10-100-1000",
       "status": "complete",
       "paths": {
@@ -104,6 +120,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo4-scientific-notation",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Scientific notation",
+      "canonicalDisplayTitle": "Scientific notation",
       "slug": "lo-yr9-scientific-notation",
       "status": "complete",
       "paths": {
@@ -133,6 +154,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo5-integers",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Integers",
+      "canonicalDisplayTitle": "Integers",
       "slug": "lo-yr9-integers",
       "status": "complete",
       "paths": {
@@ -162,6 +188,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo6-powers-roots",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "Powers & Roots",
+      "canonicalDisplayTitle": "Powers & Roots",
       "slug": "lo-yr9-powers-and-roots",
       "status": "complete",
       "paths": {
@@ -191,6 +222,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo7-gema-formerly-bedmas",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "GEMA (formerly BEDMAS)",
+      "canonicalDisplayTitle": "GEMA (formerly BEDMAS)",
       "slug": "lo-yr9-gema-bedmas",
       "status": "complete",
       "paths": {
@@ -220,6 +256,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo8-substitution",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Substitution",
+      "canonicalDisplayTitle": "Substitution",
       "slug": "lo-yr9-substitution",
       "status": "complete",
       "paths": {
@@ -249,6 +290,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo9-measurement-prefixes",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Measurement prefixes",
+      "canonicalDisplayTitle": "Measurement prefixes",
       "slug": "lo-yr9-measurement-prefixes",
       "status": "complete",
       "paths": {
@@ -278,6 +324,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo10-time",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Time",
+      "canonicalDisplayTitle": "Time",
       "slug": "lo-yr9-time",
       "status": "complete",
       "paths": {
@@ -307,6 +358,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo11-reading-scales",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Reading scales",
+      "canonicalDisplayTitle": "Reading scales",
       "slug": "lo-yr9-reading-scales",
       "status": "complete",
       "paths": {
@@ -336,6 +392,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo12-weight",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Weight",
+      "canonicalDisplayTitle": "Weight",
       "slug": "lo-yr9-weight",
       "status": "complete",
       "paths": {
@@ -365,6 +426,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo13-capacity",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO13",
+      "canonicalSourceCode": "LO13",
+      "canonicalTitle": "Capacity",
+      "canonicalDisplayTitle": "Capacity",
       "slug": "lo-yr9-capacity",
       "status": "complete",
       "paths": {
@@ -394,6 +460,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo14-converting-between-length-units",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO14",
+      "canonicalSourceCode": "LO14",
+      "canonicalTitle": "Converting between length units",
+      "canonicalDisplayTitle": "Converting between length units",
       "slug": "lo-yr9-converting-between-length-units",
       "status": "complete",
       "paths": {
@@ -423,6 +494,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo15-estimating-lengths-from-scale-drawings-and-photos",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO15",
+      "canonicalSourceCode": "LO15",
+      "canonicalTitle": "Estimating lengths from scale drawings and photos",
+      "canonicalDisplayTitle": "Estimating lengths from scale drawings and photos",
       "slug": "lo-yr9-estimating-lengths-from-scale-drawings-and-photos",
       "status": "complete",
       "paths": {
@@ -452,6 +528,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo16-perimeter-shapes-with-straight-edges-only",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO16",
+      "canonicalSourceCode": "LO16",
+      "canonicalTitle": "Perimeter (shapes with straight edges only)",
+      "canonicalDisplayTitle": "Perimeter (shapes with straight edges only)",
       "slug": "lo-yr9-perimeter-shapes-with-straight-edges-only",
       "status": "complete",
       "paths": {
@@ -481,6 +562,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo17-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO17",
+      "canonicalSourceCode": "LO17",
+      "canonicalTitle": "Area of basic shapes only (squares, rectangles, triangles, parallelograms, kite)",
+      "canonicalDisplayTitle": "Area of basic shapes only (squares, rectangles, triangles, parallelograms, kite)",
       "slug": "lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite",
       "status": "complete",
       "paths": {
@@ -510,6 +596,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo18-area-of-l-shapes-and-composite-shapes",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO18",
+      "canonicalSourceCode": "LO18",
+      "canonicalTitle": "Area of L-shapes and composite shapes",
+      "canonicalDisplayTitle": "Area of L-shapes and composite shapes",
       "slug": "lo-yr9-area-of-l-shapes-and-composite-shapes",
       "status": "complete",
       "paths": {
@@ -539,6 +630,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo19-area-of-trapezium",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO19",
+      "canonicalSourceCode": "LO19",
+      "canonicalTitle": "Area of trapezium",
+      "canonicalDisplayTitle": "Area of trapezium",
       "slug": "lo-yr9-area-of-trapezium",
       "status": "complete",
       "paths": {
@@ -568,6 +664,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo20-circumference-and-area-of-circles",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO20",
+      "canonicalSourceCode": "LO20",
+      "canonicalTitle": "Circumference and area of circles",
+      "canonicalDisplayTitle": "Circumference and area of circles",
       "slug": "lo-yr9-circumference-and-area-of-circles",
       "status": "complete",
       "paths": {
@@ -597,6 +698,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo21-volume-of-cubes-and-cuboids",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO21",
+      "canonicalSourceCode": "LO21",
+      "canonicalTitle": "Volume of cubes and cuboids",
+      "canonicalDisplayTitle": "Volume of cubes and cuboids",
       "slug": "lo-yr9-volume-of-cubes-and-cuboids",
       "status": "complete",
       "paths": {
@@ -626,6 +732,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo22-volume-of-prism",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO22",
+      "canonicalSourceCode": "LO22",
+      "canonicalTitle": "Volume of prism",
+      "canonicalDisplayTitle": "Volume of prism",
       "slug": "lo-yr9-volume-of-prism",
       "status": "complete",
       "paths": {
@@ -655,6 +766,11 @@
     },
     {
       "objectiveId": "y9-topic1-lo23-liquid-volume",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO23",
+      "canonicalSourceCode": "LO23",
+      "canonicalTitle": "Liquid volume",
+      "canonicalDisplayTitle": "Liquid volume",
       "slug": "lo-yr9-liquid-volume",
       "status": "complete",
       "paths": {
@@ -684,6 +800,11 @@
     },
     {
       "objectiveId": "y9-topic1-ex1-perimeter-and-area-of-composite-shapes-involving-circles",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Perimeter and area of composite shapes involving circles",
+      "canonicalDisplayTitle": "Perimeter and area of composite shapes involving circles",
       "slug": "lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles",
       "status": "not_started",
       "paths": {
@@ -713,6 +834,11 @@
     },
     {
       "objectiveId": "y9-topic1-ex2-drawing-nets-of-basic-shapes",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Drawing nets of basic shapes",
+      "canonicalDisplayTitle": "Drawing nets of basic shapes",
       "slug": "lo-yr9-drawing-nets-of-basic-shapes",
       "status": "not_started",
       "paths": {
@@ -742,6 +868,11 @@
     },
     {
       "objectiveId": "y9-topic1-ex3-surface-area",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Surface area",
+      "canonicalDisplayTitle": "Surface area",
       "slug": "lo-yr9-surface-area",
       "status": "not_started",
       "paths": {
@@ -771,6 +902,11 @@
     },
     {
       "objectiveId": "y9-topic1-ex4-volume-of-other-3d-shapes-cylinders-cones-pyramids-spheres-etc",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Volume of other 3D shapes (cylinders, cones, pyramids, spheres, etc)",
+      "canonicalDisplayTitle": "Volume of other 3D shapes (cylinders, cones, pyramids, spheres, etc)",
       "slug": "lo-yr9-volume-of-other-3d-shapes-cylinders-cones-pyramids-spheres-etc",
       "status": "not_started",
       "paths": {
@@ -800,6 +936,11 @@
     },
     {
       "objectiveId": "y9-topic1-ex5-forming-measurement-expressions",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX05",
+      "canonicalSourceCode": "EX05",
+      "canonicalTitle": "Forming measurement expressions",
+      "canonicalDisplayTitle": "Forming measurement expressions",
       "slug": "lo-yr9-forming-measurement-expressions",
       "status": "not_started",
       "paths": {
@@ -829,6 +970,11 @@
     },
     {
       "objectiveId": "y9-topic1-ex6-solving-measurement-equations",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX06",
+      "canonicalSourceCode": "EX06",
+      "canonicalTitle": "Solving measurement equations",
+      "canonicalDisplayTitle": "Solving measurement equations",
       "slug": "lo-yr9-solving-measurement-equations",
       "status": "not_started",
       "paths": {
@@ -858,6 +1004,11 @@
     },
     {
       "objectiveId": "y9-topic1-ex7-advanced-power-rules",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX07",
+      "canonicalSourceCode": "EX07",
+      "canonicalTitle": "Advanced Power Rules",
+      "canonicalDisplayTitle": "Advanced Power Rules",
       "slug": "lo-yr9-advanced-power-rules",
       "status": "not_started",
       "paths": {
@@ -887,6 +1038,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo1-forming-fractions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Forming Fractions",
+      "canonicalDisplayTitle": "Forming Fractions",
       "slug": "lo-yr9-forming-fractions",
       "status": "complete",
       "paths": {
@@ -916,6 +1072,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo2-equivalent-fractions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Equivalent Fractions",
+      "canonicalDisplayTitle": "Equivalent Fractions",
       "slug": "lo-yr9-equivalent-fractions",
       "status": "complete",
       "paths": {
@@ -945,6 +1106,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo3-simplifying-fractions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Simplifying Fractions",
+      "canonicalDisplayTitle": "Simplifying Fractions",
       "slug": "lo-yr9-simplifying-fractions",
       "status": "complete",
       "paths": {
@@ -974,6 +1140,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo4-converting-between-improper-fractions-and-mixed-numbers",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Converting between improper fractions and mixed numbers",
+      "canonicalDisplayTitle": "Converting between improper fractions and mixed numbers",
       "slug": "lo-yr9-converting-between-improper-fractions-and-mixed-numbers",
       "status": "complete",
       "paths": {
@@ -1003,6 +1174,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo5-adding-and-subtracting-fractions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Adding and subtracting fractions",
+      "canonicalDisplayTitle": "Adding and subtracting fractions",
       "slug": "lo-yr9-adding-and-subtracting-fractions",
       "status": "complete",
       "paths": {
@@ -1032,6 +1208,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo6-multiplying-fractions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "Multiplying fractions",
+      "canonicalDisplayTitle": "Multiplying fractions",
       "slug": "lo-yr9-multiplying-fractions",
       "status": "complete",
       "paths": {
@@ -1061,6 +1242,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo7-reciprocals",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "Reciprocals",
+      "canonicalDisplayTitle": "Reciprocals",
       "slug": "lo-yr9-reciprocals",
       "status": "complete",
       "paths": {
@@ -1090,6 +1276,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo8-dividing-fractions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Dividing fractions",
+      "canonicalDisplayTitle": "Dividing fractions",
       "slug": "lo-yr9-dividing-fractions",
       "status": "complete",
       "paths": {
@@ -1119,6 +1310,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo9-finding-fractions-of-quantity",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Finding fractions of quantity",
+      "canonicalDisplayTitle": "Finding fractions of quantity",
       "slug": "lo-yr9-finding-fractions-of-a-quantity",
       "status": "complete",
       "paths": {
@@ -1148,6 +1344,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo10-multiples-lowest-common-multiples",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Multiples & Lowest Common Multiples",
+      "canonicalDisplayTitle": "Multiples & Lowest Common Multiples",
       "slug": "lo-yr9-multiples-and-lowest-common-multiples",
       "status": "complete",
       "paths": {
@@ -1177,6 +1378,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo11-factors-highest-common-factors-primes",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Factors, Highest Common Factors & Primes",
+      "canonicalDisplayTitle": "Factors, Highest Common Factors & Primes",
       "slug": "lo-yr9-factors-highest-common-factors-and-primes",
       "status": "complete",
       "paths": {
@@ -1206,6 +1412,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo12-irrational-numbers",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Irrational numbers",
+      "canonicalDisplayTitle": "Irrational numbers",
       "slug": "lo-yr9-irrational-numbers",
       "status": "complete",
       "paths": {
@@ -1235,6 +1446,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo13-forming-expressions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO13",
+      "canonicalSourceCode": "LO13",
+      "canonicalTitle": "Forming expressions",
+      "canonicalDisplayTitle": "Forming expressions",
       "slug": "lo-yr9-forming-expressions",
       "status": "complete",
       "paths": {
@@ -1264,6 +1480,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo14-multiplying-expressions-no-powers",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO14",
+      "canonicalSourceCode": "LO14",
+      "canonicalTitle": "Multiplying Expressions (no powers)",
+      "canonicalDisplayTitle": "Multiplying Expressions (no powers)",
       "slug": "lo-yr9-multiplying-expressions-no-powers",
       "status": "complete",
       "paths": {
@@ -1293,6 +1514,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo15-adding-and-subtracting-expressions-like-terms",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO15",
+      "canonicalSourceCode": "LO15",
+      "canonicalTitle": "Adding and Subtracting Expressions (Like Terms)",
+      "canonicalDisplayTitle": "Adding and Subtracting Expressions (Like Terms)",
       "slug": "lo-yr9-adding-and-subtracting-expressions-like-terms",
       "status": "complete",
       "paths": {
@@ -1322,6 +1548,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo16-multiplying-expressions-with-powers",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO16",
+      "canonicalSourceCode": "LO16",
+      "canonicalTitle": "Multiplying Expressions (with powers)",
+      "canonicalDisplayTitle": "Multiplying Expressions (with powers)",
       "slug": "lo-yr9-multiplying-expressions-with-powers",
       "status": "complete",
       "paths": {
@@ -1351,6 +1582,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo17-dividing-expressions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO17",
+      "canonicalSourceCode": "LO17",
+      "canonicalTitle": "Dividing Expressions",
+      "canonicalDisplayTitle": "Dividing Expressions",
       "slug": "lo-yr9-dividing-expressions",
       "status": "complete",
       "paths": {
@@ -1380,6 +1616,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo18-simplifying-expressions-with-gema-bedmas",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO18",
+      "canonicalSourceCode": "LO18",
+      "canonicalTitle": "Simplifying Expressions with GEMA / BEDMAS",
+      "canonicalDisplayTitle": "Simplifying Expressions with GEMA / BEDMAS",
       "slug": "lo-yr9-simplifying-expressions-with-gema-bedmas",
       "status": "complete",
       "paths": {
@@ -1409,6 +1650,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo19-expanding-single-brackets",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO19",
+      "canonicalSourceCode": "LO19",
+      "canonicalTitle": "Expanding single brackets",
+      "canonicalDisplayTitle": "Expanding single brackets",
       "slug": "lo-yr9-expanding-single-brackets",
       "status": "complete",
       "paths": {
@@ -1438,6 +1684,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo20-factorising-single-brackets",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO20",
+      "canonicalSourceCode": "LO20",
+      "canonicalTitle": "Factorising single brackets",
+      "canonicalDisplayTitle": "Factorising single brackets",
       "slug": "lo-yr9-factorising-single-brackets",
       "status": "complete",
       "paths": {
@@ -1467,6 +1718,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo22-defining-variables-forming-equations",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO22",
+      "canonicalSourceCode": "LO22",
+      "canonicalTitle": "Defining Variables & Forming Equations",
+      "canonicalDisplayTitle": "Defining Variables & Forming Equations",
       "slug": "lo-yr9-defining-variables-and-forming-equations",
       "status": "complete",
       "paths": {
@@ -1496,6 +1752,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo23-solving-1-step-equations",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO23",
+      "canonicalSourceCode": "LO23",
+      "canonicalTitle": "Solving 1-step equations",
+      "canonicalDisplayTitle": "Solving 1-step equations",
       "slug": "lo-yr9-solving-1-step-equations",
       "status": "complete",
       "paths": {
@@ -1525,6 +1786,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo24-solving-2-step-equations",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO24",
+      "canonicalSourceCode": "LO24",
+      "canonicalTitle": "Solving 2-step equations",
+      "canonicalDisplayTitle": "Solving 2-step equations",
       "slug": "lo-yr9-solving-2-step-equations",
       "status": "complete",
       "paths": {
@@ -1554,6 +1820,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo25-solving-equations-with-variables-on-both-sides",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO25",
+      "canonicalSourceCode": "LO25",
+      "canonicalTitle": "Solving equations with variables on both sides",
+      "canonicalDisplayTitle": "Solving equations with variables on both sides",
       "slug": "lo-yr9-solving-equations-with-variables-on-both-sides",
       "status": "complete",
       "paths": {
@@ -1583,6 +1854,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo26-forming-and-solving-equations-from-context",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO26",
+      "canonicalSourceCode": "LO26",
+      "canonicalTitle": "Forming and solving equations from context",
+      "canonicalDisplayTitle": "Forming and solving equations from context",
       "slug": "lo-yr9-forming-and-solving-equations-from-context",
       "status": "complete",
       "paths": {
@@ -1612,6 +1888,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo27-solving-inequalities",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO27",
+      "canonicalSourceCode": "LO27",
+      "canonicalTitle": "Solving inequalities",
+      "canonicalDisplayTitle": "Solving inequalities",
       "slug": "lo-yr9-solving-inequalities",
       "status": "complete",
       "paths": {
@@ -1641,6 +1922,11 @@
     },
     {
       "objectiveId": "y9-topic2-lo28-re-arranging-formula",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO28",
+      "canonicalSourceCode": "LO28",
+      "canonicalTitle": "Re-arranging formula",
+      "canonicalDisplayTitle": "Re-arranging formula",
       "slug": "lo-yr9-re-arranging-formula",
       "status": "complete",
       "paths": {
@@ -1670,6 +1956,11 @@
     },
     {
       "objectiveId": "y9-topic2-ex1-mixed-numbers",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Mixed Numbers",
+      "canonicalDisplayTitle": "Mixed Numbers",
       "slug": "lo-yr9-mixed-numbers",
       "status": "not_started",
       "paths": {
@@ -1699,6 +1990,11 @@
     },
     {
       "objectiveId": "y9-topic2-ex2-prime-factors",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Prime Factors",
+      "canonicalDisplayTitle": "Prime Factors",
       "slug": "lo-yr9-prime-factors",
       "status": "not_started",
       "paths": {
@@ -1728,6 +2024,11 @@
     },
     {
       "objectiveId": "y9-topic2-ex3-basic-power-rules",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Basic Power Rules",
+      "canonicalDisplayTitle": "Basic Power Rules",
       "slug": "lo-yr9-basic-power-rules",
       "status": "not_started",
       "paths": {
@@ -1757,6 +2058,11 @@
     },
     {
       "objectiveId": "y9-topic2-ex4-expanding-double-brackets",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Expanding double brackets",
+      "canonicalDisplayTitle": "Expanding double brackets",
       "slug": "lo-yr9-expanding-double-brackets",
       "status": "not_started",
       "paths": {
@@ -1786,6 +2092,11 @@
     },
     {
       "objectiveId": "y9-topic2-ex5-factorising-double-brackets-with-a-co-efficient-equal-to-1",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX05",
+      "canonicalSourceCode": "EX05",
+      "canonicalTitle": "Factorising double brackets (with a co-efficient equal to 1)",
+      "canonicalDisplayTitle": "Factorising double brackets (with a co-efficient equal to 1)",
       "slug": "lo-yr9-factorising-double-brackets-with-a-co-efficient-equal-to-1",
       "status": "not_started",
       "paths": {
@@ -1815,6 +2126,11 @@
     },
     {
       "objectiveId": "y9-topic2-ex6-factorising-special-double-brackets-perfect-squares-difference-between-squares",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX06",
+      "canonicalSourceCode": "EX06",
+      "canonicalTitle": "Factorising special double brackets (perfect squares, difference between squares)",
+      "canonicalDisplayTitle": "Factorising special double brackets (perfect squares, difference between squares)",
       "slug": "lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares",
       "status": "not_started",
       "paths": {
@@ -1844,6 +2160,11 @@
     },
     {
       "objectiveId": "y9-topic2-ex7-solving-equations-with-fractions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX07",
+      "canonicalSourceCode": "EX07",
+      "canonicalTitle": "Solving equations with fractions",
+      "canonicalDisplayTitle": "Solving equations with fractions",
       "slug": "lo-yr9-solving-equations-with-fractions",
       "status": "not_started",
       "paths": {
@@ -1873,6 +2194,11 @@
     },
     {
       "objectiveId": "y9-topic2-ex8-solving-quadratics",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX08",
+      "canonicalSourceCode": "EX08",
+      "canonicalTitle": "Solving quadratics",
+      "canonicalDisplayTitle": "Solving quadratics",
       "slug": "lo-yr9-solving-quadratics",
       "status": "not_started",
       "paths": {
@@ -1902,6 +2228,11 @@
     },
     {
       "objectiveId": "y9-topic2-ex9-simplifying-algebraic-fractions",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX09",
+      "canonicalSourceCode": "EX09",
+      "canonicalTitle": "Simplifying algebraic fractions",
+      "canonicalDisplayTitle": "Simplifying algebraic fractions",
       "slug": "lo-yr9-simplifying-algebraic-fractions",
       "status": "not_started",
       "paths": {
@@ -1931,6 +2262,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo1-relationship-between-percentages-fractions-and-decimals",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Relationship between percentages, fractions, and decimals",
+      "canonicalDisplayTitle": "Relationship between percentages, fractions, and decimals",
       "slug": "lo-yr9-relationship-between-percentages-fractions-and-decimals",
       "status": "complete",
       "paths": {
@@ -1960,6 +2296,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo2-forming-percentages",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Forming percentages",
+      "canonicalDisplayTitle": "Forming percentages",
       "slug": "lo-yr9-forming-percentages",
       "status": "complete",
       "paths": {
@@ -1989,6 +2330,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo3-percentage-of-a-given-quantity",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Percentage of a given quantity",
+      "canonicalDisplayTitle": "Percentage of a given quantity",
       "slug": "lo-yr9-percentage-of-a-given",
       "status": "complete",
       "paths": {
@@ -2018,6 +2364,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo4-increasing-and-decreasing-by-a-given-percentage",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Increasing and decreasing by a given percentage",
+      "canonicalDisplayTitle": "Increasing and decreasing by a given percentage",
       "slug": "lo-yr9-increasing-and-decreasing-by-a-given-percentage",
       "status": "complete",
       "paths": {
@@ -2047,6 +2398,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo5-tools-of-chance",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Tools of chance",
+      "canonicalDisplayTitle": "Tools of chance",
       "slug": "lo-yr9-tools-of-chance",
       "status": "complete",
       "paths": {
@@ -2076,6 +2432,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo6-f-t",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "F/T",
+      "canonicalDisplayTitle": "F/T",
       "slug": "lo-yr9-f-t",
       "status": "complete",
       "paths": {
@@ -2105,6 +2466,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo7-probabilities-from-experiments-and-statistical-displays",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "Probabilities from experiments and statistical displays",
+      "canonicalDisplayTitle": "Probabilities from experiments and statistical displays",
       "slug": "lo-yr9-probabilities-from-experiments-and-statistical-displays",
       "status": "complete",
       "paths": {
@@ -2134,6 +2500,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo8-trees-combined-events",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Trees/Combined Events",
+      "canonicalDisplayTitle": "Trees/Combined Events",
       "slug": "lo-yr9-trees-combined-events",
       "status": "complete",
       "paths": {
@@ -2163,6 +2534,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo9-two-way-tables",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Two-way tables",
+      "canonicalDisplayTitle": "Two-way tables",
       "slug": "lo-yr9-two-way-tables",
       "status": "complete",
       "paths": {
@@ -2192,6 +2568,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo10-expected-number",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Expected Number",
+      "canonicalDisplayTitle": "Expected Number",
       "slug": "lo-yr9-expected-number",
       "status": "complete",
       "paths": {
@@ -2221,6 +2602,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo11-investigation-types",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Investigation types",
+      "canonicalDisplayTitle": "Investigation types",
       "slug": "lo-yr9-investigation-types",
       "status": "complete",
       "paths": {
@@ -2250,6 +2636,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo12-types-of-data",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Types of data",
+      "canonicalDisplayTitle": "Types of data",
       "slug": "lo-yr9-types-of-data",
       "status": "complete",
       "paths": {
@@ -2279,6 +2670,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo13-calculating-averages-and-range",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO13",
+      "canonicalSourceCode": "LO13",
+      "canonicalTitle": "Calculating averages and range",
+      "canonicalDisplayTitle": "Calculating averages and range",
       "slug": "lo-yr9-calculating-averages-and-range",
       "status": "complete",
       "paths": {
@@ -2308,6 +2704,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo14-quartiles",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO14",
+      "canonicalSourceCode": "LO14",
+      "canonicalTitle": "Quartiles",
+      "canonicalDisplayTitle": "Quartiles",
       "slug": "lo-yr9-quartiles",
       "status": "complete",
       "paths": {
@@ -2337,6 +2738,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo15-selecting-appropriate-displays",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO15",
+      "canonicalSourceCode": "LO15",
+      "canonicalTitle": "Selecting appropriate displays",
+      "canonicalDisplayTitle": "Selecting appropriate displays",
       "slug": "lo-yr9-selecting-appropriate-displays",
       "status": "complete",
       "paths": {
@@ -2366,6 +2772,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo16-interpreting-pie-charts-pictograms",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO16",
+      "canonicalSourceCode": "LO16",
+      "canonicalTitle": "Interpreting pie charts & pictograms",
+      "canonicalDisplayTitle": "Interpreting pie charts & pictograms",
       "slug": "lo-yr9-interpreting-pie-charts-pictograms",
       "status": "complete",
       "paths": {
@@ -2395,6 +2806,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo17-interpreting-bar-graphs-histograms",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO17",
+      "canonicalSourceCode": "LO17",
+      "canonicalTitle": "Interpreting bar graphs & histograms",
+      "canonicalDisplayTitle": "Interpreting bar graphs & histograms",
       "slug": "lo-yr9-interpreting-bar-graphs-histograms",
       "status": "complete",
       "paths": {
@@ -2424,6 +2840,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo18-writing-a-statistical-paragraph",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO18",
+      "canonicalSourceCode": "LO18",
+      "canonicalTitle": "Writing a statistical paragraph",
+      "canonicalDisplayTitle": "Writing a statistical paragraph",
       "slug": "lo-yr9-writing-a-statistical-paragraph",
       "status": "complete",
       "paths": {
@@ -2453,6 +2874,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo19-analysing-time-series-graphs-tsn",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO19",
+      "canonicalSourceCode": "LO19",
+      "canonicalTitle": "Analysing time series graphs - TSN",
+      "canonicalDisplayTitle": "Analysing time series graphs - TSN",
       "slug": "lo-yr9-analysing-time-series-graphs-tsn",
       "status": "complete",
       "paths": {
@@ -2482,6 +2908,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo20-analysing-scatter-plots-i-e-bivariate-tarsog",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO20",
+      "canonicalSourceCode": "LO20",
+      "canonicalTitle": "Analysing scatter plots (i.e. bivariate) - TARSOG",
+      "canonicalDisplayTitle": "Analysing scatter plots (i.e. bivariate) - TARSOG",
       "slug": "lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog",
       "status": "not_started",
       "paths": {
@@ -2511,6 +2942,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo21-comparing-box-and-whisker-graphs-cssi",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO21",
+      "canonicalSourceCode": "LO21",
+      "canonicalTitle": "Comparing box-and-whisker graphs - CSSI",
+      "canonicalDisplayTitle": "Comparing box-and-whisker graphs - CSSI",
       "slug": "lo-yr9-comparing-box-and-whisker-graphs-cssi",
       "status": "not_started",
       "paths": {
@@ -2540,6 +2976,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo22-misleading-graphs",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO22",
+      "canonicalSourceCode": "LO22",
+      "canonicalTitle": "Misleading graphs",
+      "canonicalDisplayTitle": "Misleading graphs",
       "slug": "lo-yr9-misleading-graphs",
       "status": "not_started",
       "paths": {
@@ -2569,6 +3010,11 @@
     },
     {
       "objectiveId": "y9-topic3-lo23-planning-and-collecting-multivariate-data",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO23",
+      "canonicalSourceCode": "LO23",
+      "canonicalTitle": "Planning and collecting multivariate data",
+      "canonicalDisplayTitle": "Planning and collecting multivariate data",
       "slug": "lo-yr9-planning-and-collecting-multivariate-data",
       "status": "not_started",
       "paths": {
@@ -2598,6 +3044,11 @@
     },
     {
       "objectiveId": "y9-topic3-ex1-reverse-percentage",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Reverse percentage",
+      "canonicalDisplayTitle": "Reverse percentage",
       "slug": "lo-yr9-reverse-percentage",
       "status": "not_started",
       "paths": {
@@ -2627,6 +3078,11 @@
     },
     {
       "objectiveId": "y9-topic3-ex2-linear-model-for-scatter-plots",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Linear model for scatter plots",
+      "canonicalDisplayTitle": "Linear model for scatter plots",
       "slug": "lo-yr9-linear-model-for-scatter-plots",
       "status": "not_started",
       "paths": {
@@ -2656,6 +3112,11 @@
     },
     {
       "objectiveId": "y9-topic3-ex3-sampling-variation",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Sampling variation",
+      "canonicalDisplayTitle": "Sampling variation",
       "slug": "lo-yr9-sampling-variation",
       "status": "not_started",
       "paths": {
@@ -2685,6 +3146,11 @@
     },
     {
       "objectiveId": "y9-topic3-ex4-sampling-methodology",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Sampling methodology",
+      "canonicalDisplayTitle": "Sampling methodology",
       "slug": "lo-yr9-sampling-methodology",
       "status": "not_started",
       "paths": {
@@ -2714,6 +3180,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo1-extrapolating-linear-quadratic-and-exponential-patterns",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Extrapolating linear, quadratic, and exponential patterns",
+      "canonicalDisplayTitle": "Extrapolating linear, quadratic, and exponential patterns",
       "slug": "lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
       "status": "not_started",
       "paths": {
@@ -2743,6 +3214,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo2-identifying-linear-quadratic-and-exponential-patterns",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Identifying linear, quadratic, and exponential patterns",
+      "canonicalDisplayTitle": "Identifying linear, quadratic, and exponential patterns",
       "slug": "lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
       "status": "not_started",
       "paths": {
@@ -2772,6 +3248,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo3-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Spatial patterns (including drawing next pattern and converting to pattern)",
+      "canonicalDisplayTitle": "Spatial patterns (including drawing next pattern and converting to pattern)",
       "slug": "lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern",
       "status": "not_started",
       "paths": {
@@ -2801,6 +3282,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo4-determining-nth-term-of-pattern-or-spatial-pattern",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Determining nth term of pattern or spatial pattern",
+      "canonicalDisplayTitle": "Determining nth term of pattern or spatial pattern",
       "slug": "lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern",
       "status": "not_started",
       "paths": {
@@ -2830,6 +3316,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo5-understanding-cartesian-plane-and-co-ordinates",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Understanding Cartesian plane and co-ordinates",
+      "canonicalDisplayTitle": "Understanding Cartesian plane and co-ordinates",
       "slug": "lo-yr9-understanding-cartesian-plane-and-co-ordinates",
       "status": "not_started",
       "paths": {
@@ -2859,6 +3350,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo6-drawing-straight-line-from-given-equation",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "Drawing straight-line from given equation",
+      "canonicalDisplayTitle": "Drawing straight-line from given equation",
       "slug": "lo-yr9-drawing-straight-line-from-given-equation",
       "status": "not_started",
       "paths": {
@@ -2888,6 +3384,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo7-gradient",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "Gradient",
+      "canonicalDisplayTitle": "Gradient",
       "slug": "lo-yr9-gradient",
       "status": "not_started",
       "paths": {
@@ -2917,6 +3418,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo8-finding-x-and-y-intercepts",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Finding x- and y-intercepts",
+      "canonicalDisplayTitle": "Finding x- and y-intercepts",
       "slug": "lo-yr9-finding-x-and-y-intercepts",
       "status": "not_started",
       "paths": {
@@ -2946,6 +3452,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo9-forming-equations-of-given-straight-line-graph-using-y-mx-c",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Forming equations of given straight line graph (using y=mx+c)",
+      "canonicalDisplayTitle": "Forming equations of given straight line graph (using y=mx+c)",
       "slug": "lo-yr9-forming-equations-of-given-straight-line-graph-using-y-mx-c",
       "status": "not_started",
       "paths": {
@@ -2975,6 +3486,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo10-forming-equations-of-horizontal-and-vertical-lines",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Forming equations of horizontal and vertical lines",
+      "canonicalDisplayTitle": "Forming equations of horizontal and vertical lines",
       "slug": "lo-yr9-forming-equations-of-horizontal-and-vertical-lines",
       "status": "not_started",
       "paths": {
@@ -3004,6 +3520,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo11-finding-point-of-intersection-of-two-lines",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Finding point of intersection of two lines",
+      "canonicalDisplayTitle": "Finding point of intersection of two lines",
       "slug": "lo-yr9-finding-point-of-intersection-of-two-lines",
       "status": "not_started",
       "paths": {
@@ -3033,6 +3554,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo12-drawing-parabola-from-given-equation",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Drawing parabola from given equation",
+      "canonicalDisplayTitle": "Drawing parabola from given equation",
       "slug": "lo-yr9-drawing-parabola-from-given-equation",
       "status": "not_started",
       "paths": {
@@ -3062,6 +3588,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo13-using-tables-to-explore-patterns-and-graphs",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO13",
+      "canonicalSourceCode": "LO13",
+      "canonicalTitle": "Using tables to explore patterns and graphs",
+      "canonicalDisplayTitle": "Using tables to explore patterns and graphs",
       "slug": "lo-yr9-using-tables-to-explore-patterns-and-graphs",
       "status": "not_started",
       "paths": {
@@ -3091,6 +3622,11 @@
     },
     {
       "objectiveId": "y9-topic4-lo14-applying-straight-line-graphs-to-solve-problems",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO14",
+      "canonicalSourceCode": "LO14",
+      "canonicalTitle": "Applying straight line graphs to solve problems",
+      "canonicalDisplayTitle": "Applying straight line graphs to solve problems",
       "slug": "lo-yr9-applying-straight-line-graphs-to-solve-problems",
       "status": "not_started",
       "paths": {
@@ -3120,6 +3656,11 @@
     },
     {
       "objectiveId": "y9-topic4-ex1-using-algebra-to-find-the-point-of-intersection-of-two-lines",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Using algebra to find the point of intersection of two lines",
+      "canonicalDisplayTitle": "Using algebra to find the point of intersection of two lines",
       "slug": "lo-yr9-using-algebra-to-find-the-point-of-intersection-of-two-lines",
       "status": "not_started",
       "paths": {
@@ -3149,6 +3690,11 @@
     },
     {
       "objectiveId": "y9-topic4-ex2-forming-equation-of-parabolas",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Forming equation of parabolas",
+      "canonicalDisplayTitle": "Forming equation of parabolas",
       "slug": "lo-yr9-forming-equation-of-parabolas",
       "status": "not_started",
       "paths": {
@@ -3178,6 +3724,11 @@
     },
     {
       "objectiveId": "y9-topic4-ex3-using-features-of-a-parabola-to-solve-problems",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Using features of a parabola to solve problems",
+      "canonicalDisplayTitle": "Using features of a parabola to solve problems",
       "slug": "lo-yr9-using-features-of-a-parabola-to-solve-problems",
       "status": "not_started",
       "paths": {
@@ -3207,6 +3758,11 @@
     },
     {
       "objectiveId": "y9-topic4-ex4-drawing-exponential-graphs",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Drawing exponential graphs",
+      "canonicalDisplayTitle": "Drawing exponential graphs",
       "slug": "lo-yr9-drawing-exponential-graphs",
       "status": "not_started",
       "paths": {
@@ -3236,6 +3792,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo1-naming-angles",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Naming angles",
+      "canonicalDisplayTitle": "Naming angles",
       "slug": "lo-yr9-naming-angles",
       "status": "not_started",
       "paths": {
@@ -3265,6 +3826,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo2-angles-around-a-point",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Angles around a point",
+      "canonicalDisplayTitle": "Angles around a point",
       "slug": "lo-yr9-angles-around-a-point",
       "status": "not_started",
       "paths": {
@@ -3294,6 +3860,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo3-angles-on-a-straight-line",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Angles on a straight line",
+      "canonicalDisplayTitle": "Angles on a straight line",
       "slug": "lo-yr9-angles-on-a-straight-line",
       "status": "not_started",
       "paths": {
@@ -3323,6 +3894,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo4-vertically-opposite-angles",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Vertically opposite angles",
+      "canonicalDisplayTitle": "Vertically opposite angles",
       "slug": "lo-yr9-vertically-opposite-angles",
       "status": "not_started",
       "paths": {
@@ -3352,6 +3928,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo5-interior-angles-of-a-triangle",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Interior angles of a triangle",
+      "canonicalDisplayTitle": "Interior angles of a triangle",
       "slug": "lo-yr9-interior-angles-of-a-triangle",
       "status": "not_started",
       "paths": {
@@ -3381,6 +3962,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo6-parallel-line-rules",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "Parallel line rules",
+      "canonicalDisplayTitle": "Parallel line rules",
       "slug": "lo-yr9-parallel-line-rules",
       "status": "not_started",
       "paths": {
@@ -3410,6 +3996,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo7-regular-irregular-polygon",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "Regular/irregular polygon",
+      "canonicalDisplayTitle": "Regular/irregular polygon",
       "slug": "lo-yr9-regular-irregular-polygon",
       "status": "not_started",
       "paths": {
@@ -3439,6 +4030,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo8-pythagoras-theory-finding-short-and-long-sides",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Pythagoras theory finding short and long sides",
+      "canonicalDisplayTitle": "Pythagoras theory finding short and long sides",
       "slug": "lo-yr9-pythagoras-theory-finding-short-and-long-sides",
       "status": "not_started",
       "paths": {
@@ -3468,6 +4064,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo9-applying-pythagoras-theory",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Applying Pythagoras\u2019 theory",
+      "canonicalDisplayTitle": "Applying Pythagoras\u2019 theory",
       "slug": "lo-yr9-applying-pythagoras-theory",
       "status": "not_started",
       "paths": {
@@ -3497,6 +4098,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo10-pythagorean-triples",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Pythagorean triples",
+      "canonicalDisplayTitle": "Pythagorean triples",
       "slug": "lo-yr9-pythagorean-triples",
       "status": "not_started",
       "paths": {
@@ -3526,6 +4132,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo11-transformation-translation-reflection-enlargement",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Transformation (Translation, reflection, enlargement)",
+      "canonicalDisplayTitle": "Transformation (Translation, reflection, enlargement)",
       "slug": "lo-yr9-transformation-translation-reflection-enlargement",
       "status": "not_started",
       "paths": {
@@ -3555,6 +4166,11 @@
     },
     {
       "objectiveId": "y9-topic5-lo12-representing-and-constructing-3d-shapes",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Representing and constructing 3D shapes",
+      "canonicalDisplayTitle": "Representing and constructing 3D shapes",
       "slug": "lo-yr9-representing-and-constructing-3d-shapes",
       "status": "not_started",
       "paths": {
@@ -3584,6 +4200,11 @@
     },
     {
       "objectiveId": "y9-topic5-ex1-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Using trig functions to calculate lengths of a right-angled triangle",
+      "canonicalDisplayTitle": "Using trig functions to calculate lengths of a right-angled triangle",
       "slug": "lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
       "status": "not_started",
       "paths": {
@@ -3613,6 +4234,11 @@
     },
     {
       "objectiveId": "y9-topic5-ex2-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Using trig functions to calculate angles of a right-angled triangle",
+      "canonicalDisplayTitle": "Using trig functions to calculate angles of a right-angled triangle",
       "slug": "lo-yr9-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle",
       "status": "not_started",
       "paths": {
@@ -3642,6 +4268,11 @@
     },
     {
       "objectiveId": "y9-topic5-ex3-applying-pythagoras-theory-to-3d-representations",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
+      "canonicalDisplayTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
       "slug": "lo-yr9-applying-pythagoras-theory-to-3d-representations",
       "status": "not_started",
       "paths": {
@@ -3671,6 +4302,11 @@
     },
     {
       "objectiveId": "y9-topic5-ex4-introduction-to-circle-geometry",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Introduction to Circle Geometry",
+      "canonicalDisplayTitle": "Introduction to Circle Geometry",
       "slug": "lo-yr9-introduction-to-circle-geometry",
       "status": "not_started",
       "paths": {
