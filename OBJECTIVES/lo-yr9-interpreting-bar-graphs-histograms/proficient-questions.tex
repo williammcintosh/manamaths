@@ -1,0 +1,79 @@
+\documentclass[17pt,a4paper,landscape]{extarticle}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tasks}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
+\renewcommand{\arraystretch}{1.15}
+\everymath{\displaystyle}
+
+\begin{document}
+\sffamily
+\boldmath
+
+\boldmath
+
+\newcommand{\barchart}[1]{%
+\begin{tikzpicture}[baseline=(current bounding box.center), scale=0.78]
+\draw[thick, ->] (0,0) -- (5.0,0);
+\draw[thick, ->] (0,0) -- (0,3.8);
+\def\sep{0.78}
+\def\width{0.5}
+\foreach \cat/\shown/\h [count=\i] in {#1} {
+  \pgfmathsetmacro{\x}{\i*\sep}
+  \draw[fill=teal!50, draw=black, thick] (\x-\width/2,0) rectangle (\x+\width/2,\h*0.08);
+  \node[below, font=\scriptsize] at (\x, -0.12) {\cat};
+  \node[above, font=\scriptsize] at (\x, \h*0.08+0.06) {\shown};
+}
+\end{tikzpicture}%
+}
+
+\newcommand{\histogram}[1]{%
+\begin{tikzpicture}[baseline=(current bounding box.center), scale=0.78]
+\draw[thick, ->] (0,0) -- (5.1,0);
+\draw[thick, ->] (0,0) -- (0,3.8);
+\def\sep{0.9}
+\def\width{0.82}
+\foreach \int/\val [count=\i] in {#1} {
+  \pgfmathsetmacro{\x}{\i*\sep-\width/2}
+  \draw[fill=orange!50, draw=black, thick] (\x,0) rectangle (\x+\width,\val*0.16);
+  \node[below, font=\tiny] at (\x+\width/2, -0.12) {\int};
+  \node[above, font=\scriptsize] at (\x+\width/2, \val*0.16+0.06) {\val};
+}
+\end{tikzpicture}%
+}
+
+{\LARGE \textbf{Interpreting bar graphs \& histograms --- Proficient}}
+\begin{tasks}(3)
+\task Sales of four products.\\
+\barchart{A/45/45,B/32/32,C/58/58,D/27/27}\\
+What is the total for the two most sold products?
+
+\task Ages of museum visitors.\\
+\histogram{0-10/14,11-20/22,21-30/18,31-40/12,41-50/8}\\
+How many visitors are aged 20 or younger?
+
+\task Test scores for five students.\\
+\barchart{Aro/78/78,Ben/92/92,Chl/85/85,Dav/70/70,Eva/88/88}\\
+What is the mean score?
+
+\task Monthly rainfall in mm.\\
+\barchart{Jan/120/120,Feb/95/95,Mar/110/110,Apr/85/85,May/70/70,Jun/60/60}\\
+Which month is closest to the mean?
+
+\task Favourite subjects.\\
+\barchart{Math/35/35,Eng/28/28,Sci/42/42,Hist/25/25,Art/20/20}\\
+If there are 150 students altogether, how many chose Other?
+
+\task Weekly screen time in hours.\\
+\histogram{0-5/8,6-10/14,11-15/10,16-20/5}\\
+What is the modal interval?
+\end{tasks}
+
+\end{document}

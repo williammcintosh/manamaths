@@ -10,9 +10,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 66,
+    "complete": 67,
     "partial": 0,
-    "notStarted": 61
+    "notStarted": 60
   },
   "learningObjectives": [
     {
@@ -2396,30 +2396,30 @@
     {
       "objectiveId": "y9-topic3-lo17-interpreting-bar-graphs-histograms",
       "slug": "lo-yr9-interpreting-bar-graphs-histograms",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-interpreting-bar-graphs-histograms.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
