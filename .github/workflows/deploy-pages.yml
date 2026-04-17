@@ -27,10 +27,17 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare publish directory
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp -R SITE/. _site/
+          cp -R OBJECTIVES _site/OBJECTIVES
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: SITE
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
