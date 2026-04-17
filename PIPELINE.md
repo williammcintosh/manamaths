@@ -92,5 +92,8 @@ python3 OPERATIONS/scripts/generate_lo_tracker.py
 - keep generated website output in `SITE/`
 - keep scripts/templates/tracker in `OPERATIONS/`
 - do not reintroduce loose root clutter
+- canonical website repo: `https://github.com/williammcintosh/manamaths`
+- canonical internal docs repo: `https://github.com/williammcintosh/manamaths-lesson-builder`
 - before asking Will for any git URL, first verify whether the current `manamaths/` copy is already a git repo/worktree
 - if git metadata is missing, say that plainly and treat it as an environment mismatch in this filesystem copy
+- if the current workspace copy is detached, reattach or reclone from the canonical repos above instead of asking Will to repeat them
