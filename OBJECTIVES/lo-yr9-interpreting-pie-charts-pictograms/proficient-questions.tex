@@ -1,0 +1,100 @@
+\documentclass[17pt,a4paper,landscape]{extarticle}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tasks}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=5.0em}
+\renewcommand{\arraystretch}{1.15}
+\everymath{\displaystyle}
+
+\newcommand{\simplepie}[1]{%
+\begin{tikzpicture}[baseline=(current bounding box.center),scale=0.78]
+  \def\start{90}
+  \foreach \pct/\clr/\lbl in {#1} {
+    \pgfmathsetmacro{\delta}{\pct*3.6}
+    \draw[fill=\clr!45,draw=black,thick] (0,0) -- (\start:1.45) arc (\start:\start+\delta:1.45) -- cycle;
+    \pgfmathsetmacro{\mid}{\start + 0.5*\delta}
+    \node[font=\scriptsize] at (\mid:0.85) {\pct\%};
+    \node[font=\scriptsize] at (\mid:2.02) {\lbl};
+    \pgfmathsetmacro{\nextstart}{\start+\delta}
+    \xdef\start{\nextstart}
+  }
+\end{tikzpicture}%
+}
+
+\newcommand{\picto}[2]{%
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+  \foreach \i in {1,...,#1} {
+    \draw[fill=teal!35,draw=black,thick] ({0.42*(\i-1)},0) rectangle ++(0.32,0.32);
+    \node[font=\tiny] at ({0.42*(\i-1)+0.16},0.16) {#2};
+  }
+\end{tikzpicture}%
+}
+
+\begin{document}
+\sffamily
+\boldmath
+
+{\LARGE \textbf{Interpreting pie charts \& pictograms --- Proficient}}
+\begin{tasks}(3)
+\task This pie chart shows favourite lunch choices for 80 students.\\
+\simplepie{{35/red/Sandwich,25/blue/Sushi,20/green/Pasta,20/yellow/Other}}\\
+How many students chose sushi?
+
+\task This pie chart shows transport to school for 120 students.\\
+\simplepie{{40/red/Car,25/blue/Walk,20/green/Bus,15/yellow/Bike}}\\
+How many students travel by bike?
+
+\task This pie chart shows club choices.\\
+\simplepie{{30/red/Art,30/blue/Sport,25/green/Music,15/yellow/Drama}}\\
+What percentage chose Art or Music?
+
+\task This pie chart shows favourite games for 60 students.\\
+\simplepie{{50/red/Football,20/blue/Basketball,20/green/Netball,10/yellow/Other}}\\
+How many students did not choose football?
+
+\task The pictogram shows books borrowed. Key: \picto{1}{B} = 4 books.\\[0.3em]
+\begin{tabular}{ll}
+Room 1 & \picto{3}{B} \\
+Room 2 & \picto{5}{B} \\
+Room 3 & \picto{4}{B}
+\end{tabular}\\
+How many books were borrowed altogether?
+
+\task The pictogram shows goals scored. Key: \picto{1}{G} = 3 goals.\\[0.3em]
+\begin{tabular}{ll}
+Kea    & \picto{2}{G} \\
+Tui    & \picto{4}{G} \\
+Kakapo & \picto{3}{G}
+\end{tabular}\\
+How many more goals did Tui score than Kea?
+
+\task The pictogram shows fruit boxes sold. Key: \picto{1}{F} = 6 boxes.\\[0.3em]
+\begin{tabular}{ll}
+Shop A & \picto{5}{F} \\
+Shop B & \picto{2}{F} \\
+Shop C & \picto{4}{F}
+\end{tabular}\\
+How many boxes did Shop C sell?
+
+\task The pictogram shows students in after-school groups. Key: \picto{1}{S} = 2 students.\\[0.3em]
+\begin{tabular}{ll}
+Coding & \picto{6}{S} \\
+Chess  & \picto{4}{S} \\
+Art    & \picto{5}{S}
+\end{tabular}\\
+How many students are in Coding and Chess altogether?
+
+\task A pie chart shows a survey of 200 people. If 35\% chose pizza, how many people is that?
+
+\task A pictogram uses 1 symbol to represent 5 apples. If a row has 7 symbols, how many apples does it represent?
+
+\end{tasks}
+
+\end{document}

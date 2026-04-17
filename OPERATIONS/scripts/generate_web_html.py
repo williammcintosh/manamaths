@@ -250,9 +250,10 @@ def latex_to_html(text: str) -> str:
     if text.startswith("__RAWHTML__"):
         return text[len("__RAWHTML__"):]
     text = re.sub(r"^\\item\s*", "", text)
-    if "\\begin{tikzpicture}" in text or any(token in text for token in ["\\hscale{", "\\thermo{", "\\cylinder{", "\\speedo{"]):
+    if "\\begin{tikzpicture}" in text or any(token in text for token in ["\\hscale{", "\\thermo{", "\\cylinder{", "\\speedo{", "\\simplepie{", "\\picto{", "\\begin{tabular}"]):
         cleaned = re.sub(r"\\\[[^\]]*\]", "", text)
-        cleaned = re.sub(r"\\(hscale|thermo|cylinder|speedo)\{[^\n]*", "", cleaned)
+        cleaned = re.sub(r"\\(hscale|thermo|cylinder|speedo|simplepie|picto)\{[^\n]*", "", cleaned)
+        cleaned = re.sub(r"\\begin\{tabular\}.*?\\end\{tabular\}", "", cleaned, flags=re.S)
         cleaned = cleaned.replace("\\", "").strip()
         cleaned_html = html.escape(cleaned) if cleaned else "Question uses a diagram."
         return f'{cleaned_html} <span class="question-diagram-note">Diagram version available in the PDF.</span>'

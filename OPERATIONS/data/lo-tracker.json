@@ -10,9 +10,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 65,
+    "complete": 66,
     "partial": 0,
-    "notStarted": 62
+    "notStarted": 61
   },
   "learningObjectives": [
     {
@@ -2367,30 +2367,30 @@
     {
       "objectiveId": "y9-topic3-lo16-interpreting-pie-charts-pictograms",
       "slug": "lo-yr9-interpreting-pie-charts-pictograms",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-interpreting-pie-charts-pictograms.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {

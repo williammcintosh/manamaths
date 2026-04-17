@@ -1,0 +1,104 @@
+\documentclass[17pt,a4paper,landscape]{extarticle}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tasks}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=5.0em}
+\renewcommand{\arraystretch}{1.15}
+\everymath{\displaystyle}
+
+\newcommand{\simplepie}[1]{%
+\begin{tikzpicture}[baseline=(current bounding box.center),scale=0.78]
+  \def\start{90}
+  \foreach \pct/\clr/\lbl in {#1} {
+    \pgfmathsetmacro{\delta}{\pct*3.6}
+    \draw[fill=\clr!45,draw=black,thick] (0,0) -- (\start:1.45) arc (\start:\start+\delta:1.45) -- cycle;
+    \pgfmathsetmacro{\mid}{\start + 0.5*\delta}
+    \node[font=\scriptsize] at (\mid:0.85) {\pct\%};
+    \node[font=\scriptsize] at (\mid:2.02) {\lbl};
+    \pgfmathsetmacro{\nextstart}{\start+\delta}
+    \xdef\start{\nextstart}
+  }
+\end{tikzpicture}%
+}
+
+\newcommand{\picto}[2]{%
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+  \foreach \i in {1,...,#1} {
+    \draw[fill=teal!35,draw=black,thick] ({0.42*(\i-1)},0) rectangle ++(0.32,0.32);
+    \node[font=\tiny] at ({0.42*(\i-1)+0.16},0.16) {#2};
+  }
+\end{tikzpicture}%
+}
+
+\begin{document}
+\sffamily
+\boldmath
+
+{\LARGE \textbf{Interpreting pie charts \& pictograms --- Excellence}}
+\begin{tasks}(3)
+\task This pie chart shows favourite subjects for 160 students.\\
+\simplepie{{35/red/Maths,30/blue/Science,20/green/English,15/yellow/Other}}\\
+How many more students chose Maths than Other?
+
+\task This pie chart shows how \$2400 of camp money was spent.\\
+\simplepie{{50/red/Travel,25/blue/Food,15/green/Gear,10/yellow/Other}}\\
+How much was spent on Food and Gear altogether?
+
+\task This pie chart shows sport choices for 90 students.\\
+\simplepie{{40/red/Rugby,30/blue/Football,20/green/Netball,10/yellow/Other}}\\
+How many students chose a sport other than rugby?
+
+\task This pie chart shows favourite music styles.\\
+\simplepie{{45/red/Pop,25/blue/Rock,20/green/Hip-hop,10/yellow/Other}}\\
+Explain why Pop is not quite twice Hip-hop.
+
+\task The pictogram shows books sold. Key: \picto{1}{B} = 8 books.\\[0.3em]
+\begin{tabular}{ll}
+Week 1 & \picto{5}{B} \\
+Week 2 & \picto{3}{B} \\
+Week 3 & \picto{6}{B}
+\end{tabular}\\
+How many books were sold in all three weeks?
+
+\task The pictogram shows cups of soup sold. Key: \picto{1}{S} = 6 cups.\\[0.3em]
+\begin{tabular}{ll}
+Tomato   & \picto{4}{S} \\
+Pumpkin  & \picto{3}{S} \\
+Chicken  & \picto{5}{S}
+\end{tabular}\\
+How many more chicken soups were sold than pumpkin soups?
+
+\task The pictogram shows points scored. Key: \picto{1}{P} = 5 points.\\[0.3em]
+\begin{tabular}{ll}
+Ava  & \picto{6}{P} \\
+Noah & \picto{4}{P} \\
+Tia  & \picto{5}{P}
+\end{tabular}\\
+Who scored the median number of points?
+
+\task The pictogram shows bags packed for camp. Key: \picto{1}{C} = 3 bags.\\[0.3em]
+\begin{tabular}{ll}
+Cabin A & \picto{7}{C} \\
+Cabin B & \picto{5}{C} \\
+Cabin C & \picto{6}{C}
+\end{tabular}\\
+How many bags would Cabin A and Cabin C have together?
+
+\task A pie chart shows that 15\% of 240 students chose drama. How many students chose drama?
+
+\task A pie chart shows 35\% for one category and 25\% for another. What percentage is left for the other categories?
+
+\task A pictogram uses 1 symbol to represent 7 items. If there are 56 items, how many symbols are needed?
+
+\task A pictogram uses 1 symbol to represent 4 people. If 6 symbols are shown for Team A and 9 symbols for Team B, how many more people are in Team B?
+
+\end{tasks}
+
+\end{document}
