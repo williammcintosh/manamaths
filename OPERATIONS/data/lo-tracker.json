@@ -10,9 +10,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 67,
+    "complete": 69,
     "partial": 0,
-    "notStarted": 60
+    "notStarted": 58
   },
   "learningObjectives": [
     {
@@ -2425,59 +2425,59 @@
     {
       "objectiveId": "y9-topic3-lo18-writing-a-statistical-paragraph",
       "slug": "lo-yr9-writing-a-statistical-paragraph",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-writing-a-statistical-paragraph.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
       "objectiveId": "y9-topic3-lo19-analysing-time-series-graphs-tsn",
       "slug": "lo-yr9-analysing-time-series-graphs-tsn",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-analysing-time-series-graphs-tsn.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
