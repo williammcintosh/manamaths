@@ -21,7 +21,7 @@ CANONICAL_JSON = WORKSPACE_ROOT / "lesson-builder" / "canonical" / "year-9-learn
 LO_TRACKER_JSON = OPERATIONS_DIR / "data" / "lo-tracker.json"
 OUTPUT_DIR = SITE_DIR / "objectives"
 TITLE = "Mana Maths"
-DESCRIPTION = "Mana Maths worksheet pages generated from the worksheet files, with printable PDFs alongside them."
+DESCRIPTION = "Helping maths teachers save time. We make maths curriculum content resources easy to find."
 LEVELS = [
     ("foundation", "Foundation"),
     ("proficient", "Proficient"),
@@ -661,13 +661,18 @@ def render_level(level: dict) -> str:
 
 def render_objective_page(obj: dict) -> str:
     levels = "".join(render_level(level) for level in obj["levels"])
+    page_title = html.escape(obj['topic'])
+    page_description = html.escape(obj['instruction'] or DESCRIPTION)
     return f"""<!DOCTYPE html>
 <html lang=\"en\">
   <head>
     <meta charset=\"utf-8\" />
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
-    <title>{html.escape(obj['topic'])} · {TITLE}</title>
-    <meta name=\"description\" content=\"{html.escape(obj['instruction'] or DESCRIPTION)}\" />
+    <title>{page_title} · {TITLE}</title>
+    <meta name=\"description\" content=\"{page_description}\" />
+    <meta property=\"og:title\" content=\"{page_title} · {TITLE}\" />
+    <meta property=\"og:description\" content=\"{page_description}\" />
+    <meta name=\"twitter:card\" content=\"summary\" />
     <link rel=\"icon\" type=\"image/png\" href=\"../favicon.png\" />
     <link rel=\"stylesheet\" href=\"../styles.css\" />
     <script>
@@ -768,6 +773,10 @@ def render_index(objectives: list[dict]) -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{TITLE}</title>
     <meta name="description" content="{DESCRIPTION}" />
+    <meta property="og:title" content="{TITLE}" />
+    <meta property="og:description" content="{DESCRIPTION}" />
+    <meta property="og:url" content="https://manamaths.co.nz/" />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="./styles.css" />
     <script>
