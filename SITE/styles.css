@@ -1,0 +1,608 @@
+:root {
+  /* Larger base type for projection/readability */
+  font-size: 125%; /* ~20px if browser default is 16px */
+  color-scheme: light;
+  --bg: #eef4e8;
+  --surface: #f8fbf4;
+  --surface-strong: #ffffff;
+  --text: #163221;
+  --muted: #476350;
+  --line: #cdddc8;
+  --accent: #85b24a;
+  --accent-deep: #3e6f3f;
+  --accent-soft: #e4efd7;
+  --shadow: rgba(27, 58, 35, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #f6fbef 0, #eef4e8 38%, #e5eee0 100%);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent-deep);
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.page-shell-detail {
+  padding-top: 32px;
+}
+
+.hero,
+.objective-section,
+.worksheet-panel,
+.objective-card,
+.objective-nav {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 44px var(--shadow);
+}
+
+.hero {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  width: 100%;
+  padding: 10px 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  box-shadow: 0 10px 26px rgba(27, 58, 35, 0.08);
+  background: linear-gradient(135deg, rgba(247, 251, 241, 0.97) 0%, rgba(237, 245, 227, 0.97) 52%, rgba(227, 238, 214, 0.97) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.hero-subpage {
+  position: relative;
+}
+
+.hero-inner {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.hero-logo {
+  width: clamp(42px, 5vw, 56px);
+  height: auto;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 6px 10px rgba(39, 79, 42, 0.12));
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 6px;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin-bottom: 8px;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  line-height: 1.05;
+}
+
+h3 {
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.lead,
+.card-copy,
+.worksheet-panel-head p,
+.detail-group p,
+.question-diagram-note {
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--accent-deep);
+  border-radius: 14px;
+  background: var(--accent-deep);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button-secondary {
+  background: white;
+  color: var(--accent-deep);
+}
+
+.button-disabled {
+  border-color: var(--line);
+  color: var(--muted);
+  background: #f4f7f0;
+  pointer-events: none;
+}
+
+.header-menu {
+  position: relative;
+  margin-left: auto;
+}
+
+.header-menu summary {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+}
+
+.header-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.header-menu summary span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent-deep);
+}
+
+.header-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 280px;
+  max-height: min(70vh, 640px);
+  overflow: auto;
+  padding: 10px;
+  background: rgba(248, 251, 244, 0.98);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 18px 44px var(--shadow);
+}
+
+.header-dropdown-group + .header-dropdown-group {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.header-dropdown-heading {
+  padding: 8px 14px 6px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.header-dropdown a,
+.objective-nav a {
+  display: block;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.header-dropdown a:hover,
+.objective-nav a:hover {
+  background: var(--accent-soft);
+}
+
+.objective-section,
+.worksheet-panel,
+.objective-card,
+.objective-nav {
+  padding: 24px;
+}
+
+.intro-section,
+.detail-hero,
+.objective-nav,
+.worksheet-panel,
+.objective-card-grid,
+.worksheet-panel + .worksheet-panel,
+.topic-group + .topic-group {
+  margin-top: 20px;
+}
+
+.intro-grid,
+.detail-grid,
+.objective-card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.intro-grid {
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.9fr);
+  align-items: center;
+}
+
+.intro-pills,
+.detail-badges,
+.mini-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.topic-group-header {
+  margin: 24px 0 12px;
+}
+
+.topic-group-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.objective-card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
+}
+
+.objective-card {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  gap: 14px;
+  height: 100%;
+  background: linear-gradient(180deg, #fcfef9 0%, #f3f8ee 100%);
+}
+
+.objective-card-top {
+  min-height: 0;
+}
+
+.objective-card-top h2 {
+  margin-bottom: 8px;
+  font-size: 1.28rem;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.objective-debug-code {
+  display: none;
+  margin-left: auto;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+html[data-debug="1"] .objective-debug-code {
+  display: inline-block;
+}
+
+.objective-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 600;
+  align-self: end;
+}
+
+.objective-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mini-link {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.mini-link-muted {
+  color: var(--muted);
+}
+
+.detail-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.detail-group h3 {
+  margin-bottom: 10px;
+}
+
+.chip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip-list li {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.95rem;
+}
+
+.objective-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.worksheet-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.question-list {
+  margin: 0;
+  padding-left: 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(var(--worksheet-columns, 1), minmax(0, 1fr));
+  column-gap: 5.6rem; /* increased horizontal spacing between columns for projection */
+  row-gap: var(--worksheet-row-gap, 1.8rem); /* increased vertical spacing between problems */
+  align-items: start;
+}
+
+.question-list li {
+  line-height: 1.65; /* slightly taller for legibility */
+  padding-right: 0.8rem; /* extra breathing room at the right */
+  margin-bottom: 0.4rem;
+}
+
+.blank-line {
+  display: inline-block;
+  min-width: 7rem;
+  border-bottom: 2px solid var(--line);
+  transform: translateY(-0.1em);
+}
+
+.question-diagram-note {
+  font-style: italic;
+}
+
+.web-diagram-wrap {
+  margin-top: 0.8rem;
+}
+
+.web-diagram {
+  display: block;
+  max-width: min(100%, 760px);
+  width: auto;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+}
+
+/* Visual page-style separation for projection: each worksheet looks like a printed page */
+.worksheet-panel {
+  margin: 0 auto 48px; /* centered, keep separation between pages */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(27,58,35,0.08);
+  padding: 36px;       /* larger inner margin like PDF */
+  border: 1px solid var(--line);
+  /* explicit worksheet type sizing to match PDF scale */
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+/* Force a three-column worksheet layout on wide/projector screens to match PDF layout */
+@media (min-width: 1000px) {
+  .worksheet-panel .question-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 5.6rem;
+    row-gap: 2.0rem;
+  }
+}
+
+@media (max-width: 999px) {
+  .worksheet-panel { font-size: 20px; padding: 28px; }
+  .worksheet-panel .question-list { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 2.2rem; }
+}
+
+/* Page separator: force visual break after every third row (works for 3-column layouts) */
+.question-list li:nth-child(9n) {
+  grid-column: 1 / -1; /* span full width */
+  padding-bottom: 0; /* spacing will be handled by the pseudo element */
+  margin-bottom: 0;  /* reset so the pseudo-element controls spacing */
+}
+
+.question-list li:nth-child(9n)::after {
+  content: "";
+  display: block;
+  height: 0.6rem;
+  width: 60%;                 /* make it an independent, centered bar */
+  margin: 4.0rem auto 2.0rem; /* gap above and below, centered */
+  background: var(--line);
+  border-radius: 6px;
+}
+
+/* ensure a little extra space at the start of the next row too */
+.question-list li:nth-child(9n + 1) {
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 820px) {
+  .page-shell {
+    width: min(100% - 20px, 1160px);
+    padding-top: 88px;
+  }
+
+  .question-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.4rem;
+  }
+
+  .page-shell-detail {
+    padding-top: 20px;
+  }
+
+  .hero-inner {
+    width: min(100% - 20px, 1160px);
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .intro-grid,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .worksheet-panel-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 8px 0;
+  }
+
+  .question-list {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+
+  .hero-brand {
+    gap: 10px;
+  }
+
+  .hero-logo {
+    width: 40px;
+  }
+
+  .header-menu summary {
+    width: 42px;
+    height: 42px;
+    padding: 0 10px;
+  }
+
+  .header-dropdown {
+    min-width: min(260px, calc(100vw - 28px));
+    right: -4px;
+  }
+
+  .objective-section,
+  .worksheet-panel,
+  .objective-card,
+  .objective-nav {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .objective-debug-code {
+    width: 100%;
+    margin-left: 0;
+    margin-top: -2px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .objective-nav {
+    grid-template-columns: 1fr;
+  }
+}
+/* Appended: safe, scoped styles for JS grouping separators */
+.question-list-reflow { display:block; }
+.question-row { display:grid; grid-template-columns: repeat(var(--worksheet-columns,3), 1fr); gap: 1.9rem 3.2rem; align-items:start; margin-bottom:4rem; }
+.question-cell { /* wrapper for original li */ }
+.row-separator { height:14px; background:var(--accent-soft); border-radius:8px; margin:2.5rem auto 2.5rem; width:62%; }
+@media (max-width:820px){ .question-row{ grid-template-columns: repeat(3,1fr); gap:1.2rem 1.8rem;} .row-separator{ width:80%; height:10px;} }
+@media (max-width:640px){ .question-row{ grid-template-columns:1fr; } }
+/* Numbering for reflowed question cells (show numeric list markers) */
+.question-list-reflow { counter-reset: question-counter; }
+.question-row { /* keep existing */ }
+.question-cell { position: relative; padding-left: 2.2rem; }
+.question-cell::before {
+  content: counter(question-counter) ".";
+  counter-increment: question-counter;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* hide legacy list bullets that remain inside the wrapped <li> elements */
+.question-cell li { list-style: none; margin: 0; padding: 0; }
+.question-cell li::marker { content: none; }

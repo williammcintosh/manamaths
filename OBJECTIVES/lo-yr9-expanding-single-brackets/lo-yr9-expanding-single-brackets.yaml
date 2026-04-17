@@ -1,0 +1,79 @@
+year_level: 9
+learning_objective:
+- id: L19
+  topic: Expanding single brackets
+  slug: lo-yr9-expanding-single-brackets
+  instruction: Expand and simplify each expression.
+  terminology:
+  - bracket
+  - expand
+  - distribute
+  - term
+  - coefficient
+  skills:
+  - multiply a single term by every term inside a bracket
+  - expand brackets with positive and negative terms
+  - simplify the expanded result
+  - check whether an expanded form is equivalent to the original expression
+  question_types:
+  - direct expansion
+  - simplify after expanding
+  - missing value
+  - error check
+  - comparison
+  - short reasoning
+  foundation_questions:
+  - \item $2(x+3)$.
+  - \item $3(a+4)$.
+  - \item $4(y+2)$.
+  - \item $5(m+1)$.
+  - \item $6(p+2)$.
+  - \item $2(b+7)$.
+  - \item $3(c+5)$.
+  - \item $7(d+1)$.
+  - \item $4(2x+1)$.
+  - \item $3(2y+4)$.
+  - \item $5(a+6)$.
+  - \item $2(3m+2)$.
+  - \item $4(n+5)$.
+  - \item $3(4p+1)$.
+  - \item $2(q+9)$.
+  - \item $5(r+3)$.
+  proficient_questions:
+  - \item $3(x+5)$.
+  - \item $4(2a+3)$.
+  - \item $5(y+7)$.
+  - \item $2(4m+5)$.
+  - \item $6(p+2)$.
+  - \item $3(3b+4)$.
+  - \item $7(c-2)$.
+  - \item $4(2d-5)$.
+  - \item $5(x-6)$.
+  - \item $2(5y-3)$.
+  - \item $-3(a+4)$.
+  - \item $-2(m-5)$.
+  - '\item Fill in the blank: $4(x+3)=4x+\square$.'
+  - '\item Fill in the blank: $-2(y+6)= -2y+\square$.'
+  - '\item Is $3(a+2)=3a+2$ correct?'
+  - '\item Is $5(x-1)=5x-5$ correct?'
+  - '\item Which is greater when expanded: $4(x+2)$ or $4x+2$?'
+  - \item Explain in one short sentence what happens to every term inside the bracket.
+  excellence_questions:
+  - \item Expand and simplify $3(2x+5)$.
+  - \item Expand and simplify $4(3a-2)$.
+  - \item Expand and simplify $-2(y+7)$.
+  - \item Expand and simplify $-5(2m-3)$.
+  - \item Expand and simplify $6(p-q)$.
+  - \item Expand and simplify $-3(4b+c)$.
+  - \item Expand and simplify $2(3x-4)+5$.
+  - \item Expand and simplify $7-(2y+3)$.
+  - \item A student says $4(x+6)=4x+6$. Are they correct? Explain.
+  - \item A student says $-3(a-2)=-3a-6$. Are they correct? Explain.
+  - '\item Fill in the blank: $\square(x+4)=6x+24$.'
+  - '\item Fill in the blank: $-4(y-\square)=-4y+20$.'
+  - '\item Which is greater: $3(2x+1)$ or $6x+1$? Explain.'
+  - '\item Which does not belong: $2(x+3)$, $2x+6$, $3(x+2)$, $4+2x$?'
+  - \item Write a bracketed expression that expands to $5x+15$.
+  - \item Write a bracketed expression that expands to $-2a+8$.
+  - \item Explain why $k(3+2)$ and $3k+2k$ are equivalent.
+  - \item A rectangle has side lengths $x$ and $x+4$. Write and expand an expression for its perimeter.

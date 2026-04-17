@@ -1,0 +1,77 @@
+year_level: 9
+learning_objective:
+  id: L06
+  topic: Multiplying fractions
+  slug: lo-yr9-multiplying-fractions
+  instruction: Multiply each fraction. Simplify where you can.
+  terminology:
+    - fraction
+    - numerator
+    - denominator
+    - simplify
+    - product
+  skills:
+    - multiply fractions by fractions
+    - multiply whole numbers and fractions
+    - simplify products
+    - decide whether an answer is sensible
+  question_types:
+    - direct calculation
+    - simplify after multiplying
+    - mixed whole-number and fraction
+    - missing value
+    - error check
+    - comparison
+  foundation_questions:
+    - \item $\frac{1}{2}\times\frac{1}{3}$.
+    - \item $\frac{2}{3}\times\frac{1}{4}$.
+    - \item $\frac{3}{5}\times\frac{1}{2}$.
+    - \item $\frac{1}{4}\times\frac{2}{7}$.
+    - \item $\frac{3}{4}\times\frac{2}{3}$.
+    - \item $\frac{2}{5}\times\frac{3}{4}$.
+    - \item $\frac{4}{5}\times\frac{1}{2}$.
+    - \item $\frac{5}{6}\times\frac{2}{3}$.
+    - \item $2\times\frac{1}{5}$.
+    - \item $3\times\frac{2}{7}$.
+    - \item $4\times\frac{3}{8}$.
+    - \item $5\times\frac{1}{10}$.
+    - \item $\frac{2}{9}\times\frac{3}{5}$.
+    - \item $\frac{7}{8}\times\frac{2}{7}$.
+    - \item $\frac{3}{10}\times\frac{5}{6}$.
+    - \item $\frac{4}{9}\times\frac{3}{4}$.
+  proficient_questions:
+    - \item $\frac{4}{7}\times\frac{3}{5}$.
+    - \item $\frac{5}{8}\times\frac{4}{9}$.
+    - \item $\frac{7}{10}\times\frac{5}{6}$.
+    - \item $\frac{9}{11}\times\frac{2}{3}$.
+    - \item $6\times\frac{5}{12}$.
+    - \item $8\times\frac{3}{16}$.
+    - \item $\frac{3}{4}\times\frac{8}{9}$.
+    - \item $\frac{5}{6}\times\frac{9}{10}$.
+    - \item $\frac{7}{12}\times\frac{6}{7}$.
+    - \item $\frac{11}{15}\times\frac{5}{22}$.
+    - \item Fill in the blank: $\frac{2}{3}\times\frac{\square}{5}=\frac{8}{15}$.
+    - \item Fill in the blank: $\frac{\square}{4}\times\frac{2}{3}=\frac{1}{2}$.
+    - \item Is $\frac{2}{5}\times\frac{3}{4}=\frac{6}{20}$ correct?
+    - \item Is $3\times\frac{2}{9}=\frac{6}{9}$ correct?
+    - \item Which is greater: $\frac{2}{3}\times\frac{3}{5}$ or $\frac{3}{4}\times\frac{2}{5}$?
+    - \item $\frac{4}{15}\times\frac{5}{8}$.
+    - \item $\frac{13}{14}\times\frac{7}{13}$.
+    - \item Explain in one short sentence why multiplying by $\frac{1}{2}$ makes a positive number smaller.
+  excellence_questions:
+    - \item $1\frac{1}{2}\times\frac{2}{3}$.
+    - \item $2\frac{1}{4}\times\frac{4}{9}$.
+    - \item $\frac{5}{6}\times\frac{9}{20}$.
+    - \item $\frac{7}{12}\times\frac{18}{21}$.
+    - \item A student says $\frac{3}{4}\times\frac{2}{5}=\frac{5}{8}$. Are they correct? Explain.
+    - \item A recipe uses $\frac{3}{4}$ of a cup of milk per batch. You make $\frac{2}{3}$ of a batch. How much milk is needed?
+    - \item Find a fraction so that $\frac{3}{5}\times\square=\frac{9}{20}$.
+    - \item Fill in both blanks: $\frac{\square}{6}\times\frac{3}{4}=\frac{5}{8}$.
+    - \item Which is greater: $\frac{5}{6}\times\frac{3}{10}$ or $\frac{2}{3}\times\frac{3}{8}$? Show enough working to justify.
+    - \item Is $\frac{4}{9}\times\frac{3}{8}=\frac{12}{72}=\frac{1}{6}$ correct? Explain.
+    - \item A strip is $\frac{5}{6}$ m long. You use $\frac{3}{5}$ of it. How many metres is that?
+    - \item Complete: if $\frac{2}{7}\times\frac{m}{3}=\frac{4}{21}$, then $m=\rule{1.6cm}{0.15mm}$.
+    - \item Write $3\times\frac{4}{15}$ as a single simplified fraction.
+    - \item A tank is $\frac{7}{8}$ full and then $\frac{2}{3}$ of that water remains. What fraction of the whole tank remains?
+    - \item Which does not belong: $\frac{1}{2}\times\frac{2}{3}$, $\frac{2}{3}\times\frac{1}{2}$, $\frac{3}{4}\times\frac{4}{9}$, $\frac{5}{6}\times\frac{1}{2}$?
+    - \item Explain why $\frac{4}{5}\times\frac{3}{4}$ can be simplified before multiplying.

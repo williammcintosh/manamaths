@@ -1,0 +1,79 @@
+id: L01
+topic: Place Values and Decimals
+slug: lo-yr9-place-values-and-decimals
+instruction: Read, write, compare, or partition each number using place value.
+terminology:
+- place value
+- digit
+- ones
+- tenths
+- hundredths
+- decimal
+skills:
+- identify the value of a digit based on place
+- read and write whole numbers and decimals
+- compare and order numbers using place value
+- partition numbers into place-value parts
+question_types:
+- digit value
+- reading and writing numbers
+- comparing and ordering
+- partitioning
+foundation_questions:
+- \item 4 in $347$ has value \rule{1.6cm}{0.15mm}.
+- \item 6 in $862$ has value \rule{1.6cm}{0.15mm}.
+- \item 5 in $5.3$ has value \rule{1.6cm}{0.15mm}.
+- \item 7 in $2.74$ has value \rule{1.6cm}{0.15mm}.
+- \item Write in numerals: three hundred and six.
+- \item Write in numerals: nine hundred and forty-two.
+- \item Write in words: $508$.
+- \item Write in words: $3.6$.
+- \item Which is greater: $45$ or $54$?
+- \item Which is smaller: $0.8$ or $0.08$?
+- \item Order from smallest to largest: $3.2, 2.9, 3.02$.
+- \item Order from largest to smallest: $406, 460, 640$.
+- \item Partition $58$ into tens and ones.
+- \item Partition $407$ into hundreds, tens, and ones.
+- \item Partition $4.7$ into ones and tenths.
+- \item Partition $3.48$ into ones, tenths, and hundredths.
+- \item Write in numerals: six hundred.
+- \item Which is greater: $0.05$ or $0.005$?
+proficient_questions:
+- \item State the value of the $8$ in $4,836$.
+- \item State the value of the $3$ in $7.34$.
+- \item State the value of the $9$ in $0.692$.
+- \item Write in words: $2,045$.
+- \item Write in words: $14.09$.
+- \item Write in numerals: six thousand and seventy-three.
+- \item Write in numerals: eight and five tenths.
+- \item Compare using $<$, $>$, or $=$: $5.07\ \square\ 5.7$.
+- \item Compare using $<$, $>$, or $=$: $0.43\ \square\ 0.403$.
+- \item Order from smallest to largest: $0.6, 0.06, 0.606, 0.66$.
+- \item Order from largest to smallest: $9.1, 9.01, 9.11, 8.99$.
+- \item Partition $5,302$ fully.
+- \item Partition $7.208$ into ones, tenths, hundredths, and thousandths.
+- \item Which digit is in the tenths place in $3.58$?
+- \item Which digit is in the hundreds place in $6,482$?
+- \item Fill in the blank: $4.3 = 4 + \f\frac{\square}{10}$.
+- \item Fill in the blank: $608 = 6 \times 100 + \square \times 10 + 8$.
+- \item Explain in one short sentence why $0.5 > 0.05$.
+excellence_questions:
+- \item A student says the $4$ in $0.48$ is worth $4$. Are they correct? Explain.
+- \item A student says $3.09 > 3.9$ because $09 > 9$. Are they correct? Explain.
+- \item Which is greater: $2.305$ or $2.35$? Show enough working to justify.
+- \item Which is smaller: $7.08$ or $7.8$? Explain how you know.
+- \item Write $5.406$ as the sum of its place-value parts.
+- \item Write $2,070$ as the sum of its place-value parts.
+- \item Fill in the blank: in $8.472$, the digit in the hundredths place is \rule{1.4cm}{0.15mm}.
+- \item Fill in the blank: $6.08 = 6 + \f\frac{\square}{100}$.
+- \item Complete: $4.5 = 4 + \f\frac{\square}{10} = \f\frac{45}{10}$.
+- \item Put in ascending order: $4.09, 4.9, 4.099, 4.19$.
+- \item Put in descending order: $12.3, 12.03, 12.300, 12.29$.
+- \item Which does not belong: $0.7, 0.70, 0.07, 0.700$?
+- \item A number has $3$ ones, $4$ tenths, and $7$ hundredths. Write the number.
+- \item A number has $5$ hundreds, $0$ tens, $8$ ones, and $2$ tenths. Write the number.
+- \item Explain why adding a zero to the end sometimes changes nothing and sometimes
+  changes the value.
+- \item Write a number between $6.4$ and $6.5$ that has three decimal places.
+- \item Give an example of a number with 2 ones and 3 thousandths.
+- \item Explain why $0.300 = 0.3$.

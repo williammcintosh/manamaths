@@ -1,0 +1,38 @@
+% Visual LO template (projector-first landscape composite images)
+\documentclass[20pt,a4paper,landscape]{extarticle}
+\usepackage[margin=1.45cm,top=0.45cm,left=0.9cm,right=0.9cm,bottom=0.9cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\everymath{\displaystyle}
+
+% Per-page mode tag example (place at top of file):
+% pages: [visual, visual]
+
+\begin{document}
+\sffamily
+\boldmath
+
+{\LARGE \textbf{LO TITLE HERE}}\par\vspace{0.35em}
+
+% Page 1: large centred composite image
+\begin{center}
+\includegraphics[width=0.94\linewidth,height=0.49\textheight,keepaspectratio]{web-diagrams/your-image-page1.png}
+\end{center}
+\vspace{0.35em}
+\noindent\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{1.} First visual question referring to panel A.\end{minipage}\hspace{0.05\linewidth}\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{2.} Second visual question referring to panel B.\end{minipage}\hspace{0.05\linewidth}\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{3.} Third visual question referring to panel C.\end{minipage}\par
+
+\vspace{1.0em}
+% Page 2: second composite image (if needed)
+\begin{center}
+\includegraphics[width=0.94\linewidth,height=0.49\textheight,keepaspectratio]{web-diagrams/your-image-page2.png}
+\end{center}
+\vspace{0.35em}
+\noindent\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{4.} Visual question referring to page2 panel A.\end{minipage}\hspace{0.05\linewidth}\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{5.} Visual question referring to page2 panel B.\end{minipage}\hspace{0.05\linewidth}\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{6.} Visual question referring to page2 panel C.\end{minipage}\par
+
+\end{document}

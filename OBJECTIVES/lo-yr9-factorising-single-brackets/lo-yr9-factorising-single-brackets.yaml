@@ -1,0 +1,79 @@
+year_level: 9
+learning_objective:
+- id: L20
+  topic: Factorising single brackets
+  slug: lo-yr9-factorising-single-brackets
+  instruction: Factorise each expression into a single bracket.
+  terminology:
+  - factorise
+  - common factor
+  - bracket
+  - term
+  - coefficient
+  skills:
+  - find the highest common factor of algebraic terms
+  - take a common factor outside a single bracket
+  - check a factorised form by expanding it back out
+  - compare equivalent factorised forms
+  question_types:
+  - direct factorising
+  - common factor
+  - missing value
+  - error check
+  - comparison
+  - short reasoning
+  foundation_questions:
+  - \item $x+3$.
+  - \item $2a+8$.
+  - \item $3y+6$.
+  - \item $4m+12$.
+  - \item $5p+10$.
+  - \item $6b+18$.
+  - \item $7c+14$.
+  - \item $8d+16$.
+  - \item $3x+9$.
+  - \item $4y+20$.
+  - \item $5n+15$.
+  - \item $2q+12$.
+  - \item $6r+24$.
+  - \item $9t+27$.
+  - \item $10u+30$.
+  - \item $12v+36$.
+  proficient_questions:
+  - \item $3x+12$.
+  - \item $4a+20$.
+  - \item $5y+25$.
+  - \item $6m+18$.
+  - \item $8p+12$.
+  - \item $9b+27$.
+  - \item $10c-20$.
+  - \item $12d+18$.
+  - \item $14x+21$.
+  - \item $15y-30$.
+  - \item $18m+24$.
+  - \item $20n+35$.
+  - \item Fill in the blank: $6a+18=6(\square)$.
+  - \item Fill in the blank: $12x-8=4(\square)$.
+  - \item Is $8y+24=8(y+3)$ correct?
+  - \item Is $10m+15=5(2m+3)$ correct?
+  - \item Which has the greater common factor: $12p+18$ or $12p+20$?
+  - \item Explain in one short sentence what stays inside the bracket when you factorise.
+  excellence_questions:
+  - \item Factorise $6x+15$.
+  - \item Factorise $8a-12$.
+  - \item Factorise $14y+21$.
+  - \item Factorise $18m-24$.
+  - \item Factorise $9p+12$.
+  - \item Factorise $16b-40$.
+  - \item Factorise $5x+10y$.
+  - \item Factorise $12a+18b$.
+  - \item Factorise $15m-20n$.
+  - \item Factorise $21p+14q$.
+  - \item A student says $12x+18=6(x+3)$. Are they correct? Explain.
+  - \item A student says $8a-20=4(2a-5)$. Are they correct? Explain.
+  - \item Fill in the blank: $\square(x+4)=7x+28$.
+  - \item Fill in the blank: $9y-\square=9(y-2)$.
+  - \item Which is fully factorised: $3(2x+4)$ or $6(x+2)$? Explain.
+  - \item Which does not belong: $4(x+3)$, $4x+12$, $2(2x+6)$, $4(x+2)$?
+  - \item Write an expression that factorises to $5(a-3)$.
+  - \item Explain why expanding can be used to check a factorised answer.

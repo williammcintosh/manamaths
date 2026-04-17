@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found · Mana Maths</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f6fbf6;
+        color: #163024;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 56px 24px;
+      }
+      h1 { margin: 0 0 12px; font-size: 2rem; }
+      p { line-height: 1.6; }
+      a {
+        color: #0f6b46;
+        font-weight: 600;
+      }
+      .small { color: #4d6658; font-size: 0.95rem; }
+    </style>
+    <script>
+      (function () {
+        var prefix = '/manamaths';
+        var path = window.location.pathname || '/';
+        if (path === prefix || path.indexOf(prefix + '/') === 0) {
+          var targetPath = path.slice(prefix.length) || '/';
+          var target = targetPath + window.location.search + window.location.hash;
+          window.location.replace(target);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>That page moved.</h1>
+      <p>
+        Mana Maths now lives at the site root instead of under <code>/manamaths/</code>.
+        If you followed an old link, you should be redirected automatically.
+      </p>
+      <p><a href="/">Go to the Mana Maths homepage</a></p>
+      <p class="small">If this keeps happening, refresh once and try the root homepage.</p>
+    </main>
+  </body>
+</html>

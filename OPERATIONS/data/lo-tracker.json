@@ -1,0 +1,3702 @@
+{
+  "canonicalSource": "lesson-builder/canonical/year-9-learning-objectives.json",
+  "generatedAtRepoPath": "manamaths/OPERATIONS/data/lo-tracker.json",
+  "notes": [
+    "This tracker is the generated inventory and build-status file for Year 9 Mana Maths learning objectives.",
+    "Worksheet content lives in per-LO TeX files, not in this tracker.",
+    "Canonical curriculum/source metadata lives in the canonical JSON file.",
+    "This tracker is derived from the canonical JSON plus the actual filesystem state.",
+    "Join back to canonical metadata using objectiveId when you need titles, order, notes, or links."
+  ],
+  "summary": {
+    "totalObjectives": 127,
+    "complete": 65,
+    "partial": 0,
+    "notStarted": 62
+  },
+  "learningObjectives": [
+    {
+      "objectiveId": "y9-topic1-lo1-place-values-and-decimals",
+      "slug": "lo-yr9-place-values-and-decimals",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-place-values-and-decimals",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-place-values-and-decimals.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-place-values-and-decimals/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-place-values-and-decimals/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-place-values-and-decimals/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-place-values-and-decimals/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-place-values-and-decimals/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-place-values-and-decimals/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo2-rounding-to-decimal-points",
+      "slug": "lo-yr9-rounding-to-decimal-points",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-rounding-to-decimal-points",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-rounding-to-decimal-points.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-rounding-to-decimal-points/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-rounding-to-decimal-points/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-rounding-to-decimal-points/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-rounding-to-decimal-points/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-rounding-to-decimal-points/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-rounding-to-decimal-points/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo3-multiplying-and-dividing-by-10-100-1000",
+      "slug": "lo-yr9-multiplying-dividing-by-10-100-1000",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-multiplying-dividing-by-10-100-1000.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo4-scientific-notation",
+      "slug": "lo-yr9-scientific-notation",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-scientific-notation",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-scientific-notation.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-scientific-notation/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-scientific-notation/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-scientific-notation/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-scientific-notation/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-scientific-notation/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-scientific-notation/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo5-integers",
+      "slug": "lo-yr9-integers",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-integers",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-integers.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-integers/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-integers/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-integers/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-integers/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-integers/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-integers/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo6-powers-roots",
+      "slug": "lo-yr9-powers-and-roots",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-powers-and-roots",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-powers-and-roots.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-powers-and-roots/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-powers-and-roots/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-powers-and-roots/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-powers-and-roots/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-powers-and-roots/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-powers-and-roots/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo7-gema-formerly-bedmas",
+      "slug": "lo-yr9-gema-bedmas",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-gema-bedmas",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-gema-bedmas.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-gema-bedmas/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-gema-bedmas/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-gema-bedmas/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-gema-bedmas/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-gema-bedmas/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-gema-bedmas/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo8-substitution",
+      "slug": "lo-yr9-substitution",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-substitution",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-substitution.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-substitution/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-substitution/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-substitution/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-substitution/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-substitution/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-substitution/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo9-measurement-prefixes",
+      "slug": "lo-yr9-measurement-prefixes",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-measurement-prefixes",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-measurement-prefixes.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-measurement-prefixes/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-measurement-prefixes/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-measurement-prefixes/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-measurement-prefixes/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-measurement-prefixes/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-measurement-prefixes/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo10-time",
+      "slug": "lo-yr9-time",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-time",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-time.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-time/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-time/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-time/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-time/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-time/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-time/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo11-reading-scales",
+      "slug": "lo-yr9-reading-scales",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-reading-scales",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-reading-scales.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-reading-scales/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-reading-scales/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-reading-scales/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-reading-scales/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-reading-scales/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-reading-scales/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo12-weight",
+      "slug": "lo-yr9-weight",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-weight",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-weight.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-weight/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-weight/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-weight/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-weight/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-weight/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-weight/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo13-capacity",
+      "slug": "lo-yr9-capacity",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-capacity",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-capacity.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-capacity/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-capacity/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-capacity/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-capacity/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-capacity/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-capacity/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo14-converting-between-length-units",
+      "slug": "lo-yr9-converting-between-length-units",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-converting-between-length-units",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-converting-between-length-units.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-converting-between-length-units/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-converting-between-length-units/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-converting-between-length-units/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-converting-between-length-units/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-converting-between-length-units/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-converting-between-length-units/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo15-estimating-lengths-from-scale-drawings-and-photos",
+      "slug": "lo-yr9-estimating-lengths-from-scale-drawings-and-photos",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-estimating-lengths-from-scale-drawings-and-photos.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo16-perimeter-shapes-with-straight-edges-only",
+      "slug": "lo-yr9-perimeter-shapes-with-straight-edges-only",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-perimeter-shapes-with-straight-edges-only.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo17-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite",
+      "slug": "lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo18-area-of-l-shapes-and-composite-shapes",
+      "slug": "lo-yr9-area-of-l-shapes-and-composite-shapes",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-area-of-l-shapes-and-composite-shapes.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo19-area-of-trapezium",
+      "slug": "lo-yr9-area-of-trapezium",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-area-of-trapezium",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-area-of-trapezium.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-area-of-trapezium/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-area-of-trapezium/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-area-of-trapezium/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-area-of-trapezium/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-area-of-trapezium/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-area-of-trapezium/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo20-circumference-and-area-of-circles",
+      "slug": "lo-yr9-circumference-and-area-of-circles",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-circumference-and-area-of-circles",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-circumference-and-area-of-circles.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-circumference-and-area-of-circles/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-circumference-and-area-of-circles/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-circumference-and-area-of-circles/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-circumference-and-area-of-circles/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-circumference-and-area-of-circles/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-circumference-and-area-of-circles/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo21-volume-of-cubes-and-cuboids",
+      "slug": "lo-yr9-volume-of-cubes-and-cuboids",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-volume-of-cubes-and-cuboids.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo22-volume-of-prism",
+      "slug": "lo-yr9-volume-of-prism",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-volume-of-prism",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-volume-of-prism.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-volume-of-prism/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-volume-of-prism/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-volume-of-prism/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-volume-of-prism/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-volume-of-prism/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-volume-of-prism/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-lo23-liquid-volume",
+      "slug": "lo-yr9-liquid-volume",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-liquid-volume",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-liquid-volume.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-liquid-volume/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-liquid-volume/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-liquid-volume/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-liquid-volume/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-liquid-volume/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-liquid-volume/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-ex1-perimeter-and-area-of-composite-shapes-involving-circles",
+      "slug": "lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-ex2-drawing-nets-of-basic-shapes",
+      "slug": "lo-yr9-drawing-nets-of-basic-shapes",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-ex3-surface-area",
+      "slug": "lo-yr9-surface-area",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-ex4-volume-of-other-3d-shapes-cylinders-cones-pyramids-spheres-etc",
+      "slug": "lo-yr9-volume-of-other-3d-shapes-cylinders-cones-pyramids-spheres-etc",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-ex5-forming-measurement-expressions",
+      "slug": "lo-yr9-forming-measurement-expressions",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-ex6-solving-measurement-equations",
+      "slug": "lo-yr9-solving-measurement-equations",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic1-ex7-advanced-power-rules",
+      "slug": "lo-yr9-advanced-power-rules",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo1-forming-fractions",
+      "slug": "lo-yr9-forming-fractions",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-forming-fractions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-forming-fractions.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-fractions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-fractions/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-fractions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-fractions/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-fractions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-fractions/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo2-equivalent-fractions",
+      "slug": "lo-yr9-equivalent-fractions",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-equivalent-fractions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-equivalent-fractions.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-equivalent-fractions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-equivalent-fractions/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-equivalent-fractions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-equivalent-fractions/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-equivalent-fractions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-equivalent-fractions/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo3-simplifying-fractions",
+      "slug": "lo-yr9-simplifying-fractions",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-simplifying-fractions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-simplifying-fractions.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-simplifying-fractions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-simplifying-fractions/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-simplifying-fractions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-simplifying-fractions/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-simplifying-fractions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-simplifying-fractions/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo4-converting-between-improper-fractions-and-mixed-numbers",
+      "slug": "lo-yr9-converting-between-improper-fractions-and-mixed-numbers",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-converting-between-improper-fractions-and-mixed-numbers.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo5-adding-and-subtracting-fractions",
+      "slug": "lo-yr9-adding-and-subtracting-fractions",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-adding-and-subtracting-fractions.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo6-multiplying-fractions",
+      "slug": "lo-yr9-multiplying-fractions",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-multiplying-fractions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-multiplying-fractions.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-fractions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-fractions/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-fractions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-fractions/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-fractions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-fractions/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo7-reciprocals",
+      "slug": "lo-yr9-reciprocals",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-reciprocals",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-reciprocals.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-reciprocals/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-reciprocals/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-reciprocals/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-reciprocals/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-reciprocals/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-reciprocals/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo8-dividing-fractions",
+      "slug": "lo-yr9-dividing-fractions",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-dividing-fractions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-dividing-fractions.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-dividing-fractions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-dividing-fractions/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-dividing-fractions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-dividing-fractions/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-dividing-fractions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-dividing-fractions/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo9-finding-fractions-of-quantity",
+      "slug": "lo-yr9-finding-fractions-of-a-quantity",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-finding-fractions-of-a-quantity.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo10-multiples-lowest-common-multiples",
+      "slug": "lo-yr9-multiples-and-lowest-common-multiples",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-multiples-and-lowest-common-multiples.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo11-factors-highest-common-factors-primes",
+      "slug": "lo-yr9-factors-highest-common-factors-and-primes",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-factors-highest-common-factors-and-primes.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo12-irrational-numbers",
+      "slug": "lo-yr9-irrational-numbers",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-irrational-numbers",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-irrational-numbers.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-irrational-numbers/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-irrational-numbers/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-irrational-numbers/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-irrational-numbers/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-irrational-numbers/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-irrational-numbers/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo13-forming-expressions",
+      "slug": "lo-yr9-forming-expressions",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-forming-expressions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-forming-expressions.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-expressions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-expressions/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-expressions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-expressions/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-expressions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-expressions/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo14-multiplying-expressions-no-powers",
+      "slug": "lo-yr9-multiplying-expressions-no-powers",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-multiplying-expressions-no-powers.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo15-adding-and-subtracting-expressions-like-terms",
+      "slug": "lo-yr9-adding-and-subtracting-expressions-like-terms",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-adding-and-subtracting-expressions-like-terms.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo16-multiplying-expressions-with-powers",
+      "slug": "lo-yr9-multiplying-expressions-with-powers",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-multiplying-expressions-with-powers.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo17-dividing-expressions",
+      "slug": "lo-yr9-dividing-expressions",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-dividing-expressions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-dividing-expressions.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-dividing-expressions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-dividing-expressions/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-dividing-expressions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-dividing-expressions/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-dividing-expressions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-dividing-expressions/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo18-simplifying-expressions-with-gema-bedmas",
+      "slug": "lo-yr9-simplifying-expressions-with-gema-bedmas",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-simplifying-expressions-with-gema-bedmas.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo19-expanding-single-brackets",
+      "slug": "lo-yr9-expanding-single-brackets",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-expanding-single-brackets",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-expanding-single-brackets.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-expanding-single-brackets/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-expanding-single-brackets/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-expanding-single-brackets/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-expanding-single-brackets/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-expanding-single-brackets/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-expanding-single-brackets/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo20-factorising-single-brackets",
+      "slug": "lo-yr9-factorising-single-brackets",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-factorising-single-brackets",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-factorising-single-brackets.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-factorising-single-brackets/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-factorising-single-brackets/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-factorising-single-brackets/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-factorising-single-brackets/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-factorising-single-brackets/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-factorising-single-brackets/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo22-defining-variables-forming-equations",
+      "slug": "lo-yr9-defining-variables-and-forming-equations",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-defining-variables-and-forming-equations.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo23-solving-1-step-equations",
+      "slug": "lo-yr9-solving-1-step-equations",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-solving-1-step-equations",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-solving-1-step-equations.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-1-step-equations/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-1-step-equations/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-1-step-equations/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-1-step-equations/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-1-step-equations/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-1-step-equations/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo24-solving-2-step-equations",
+      "slug": "lo-yr9-solving-2-step-equations",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-solving-2-step-equations",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-solving-2-step-equations.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-2-step-equations/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-2-step-equations/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-2-step-equations/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-2-step-equations/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-2-step-equations/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-2-step-equations/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo25-solving-equations-with-variables-on-both-sides",
+      "slug": "lo-yr9-solving-equations-with-variables-on-both-sides",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-solving-equations-with-variables-on-both-sides.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo26-forming-and-solving-equations-from-context",
+      "slug": "lo-yr9-forming-and-solving-equations-from-context",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-forming-and-solving-equations-from-context.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo27-solving-inequalities",
+      "slug": "lo-yr9-solving-inequalities",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-solving-inequalities",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-solving-inequalities.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-inequalities/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-inequalities/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-inequalities/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-inequalities/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-inequalities/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-inequalities/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-lo28-re-arranging-formula",
+      "slug": "lo-yr9-re-arranging-formula",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-re-arranging-formula",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-re-arranging-formula.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-re-arranging-formula/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-re-arranging-formula/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-re-arranging-formula/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-re-arranging-formula/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-re-arranging-formula/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-re-arranging-formula/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-ex1-mixed-numbers",
+      "slug": "lo-yr9-mixed-numbers",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-ex2-prime-factors",
+      "slug": "lo-yr9-prime-factors",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-ex3-basic-power-rules",
+      "slug": "lo-yr9-basic-power-rules",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-ex4-expanding-double-brackets",
+      "slug": "lo-yr9-expanding-double-brackets",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-ex5-factorising-double-brackets-with-a-co-efficient-equal-to-1",
+      "slug": "lo-yr9-factorising-double-brackets-with-a-co-efficient-equal-to-1",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-ex6-factorising-special-double-brackets-perfect-squares-difference-between-squares",
+      "slug": "lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-ex7-solving-equations-with-fractions",
+      "slug": "lo-yr9-solving-equations-with-fractions",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-ex8-solving-quadratics",
+      "slug": "lo-yr9-solving-quadratics",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic2-ex9-simplifying-algebraic-fractions",
+      "slug": "lo-yr9-simplifying-algebraic-fractions",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo1-relationship-between-percentages-fractions-and-decimals",
+      "slug": "lo-yr9-relationship-between-percentages-fractions-and-decimals",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-relationship-between-percentages-fractions-and-decimals.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo2-forming-percentages",
+      "slug": "lo-yr9-forming-percentages",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-forming-percentages",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-forming-percentages.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-percentages/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-percentages/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-percentages/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-percentages/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-percentages/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-percentages/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo3-percentage-of-a-given-quantity",
+      "slug": "lo-yr9-percentage-of-a-given",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-percentage-of-a-given",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-percentage-of-a-given.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-percentage-of-a-given/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-percentage-of-a-given/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-percentage-of-a-given/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-percentage-of-a-given/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-percentage-of-a-given/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-percentage-of-a-given/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo4-increasing-and-decreasing-by-a-given-percentage",
+      "slug": "lo-yr9-increasing-and-decreasing-by-a-given-percentage",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-increasing-and-decreasing-by-a-given-percentage.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo5-tools-of-chance",
+      "slug": "lo-yr9-tools-of-chance",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-tools-of-chance",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-tools-of-chance.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-tools-of-chance/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-tools-of-chance/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-tools-of-chance/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-tools-of-chance/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-tools-of-chance/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-tools-of-chance/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo6-f-t",
+      "slug": "lo-yr9-f-t",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-f-t",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-f-t.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-f-t/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-f-t/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-f-t/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-f-t/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-f-t/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-f-t/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo7-probabilities-from-experiments-and-statistical-displays",
+      "slug": "lo-yr9-probabilities-from-experiments-and-statistical-displays",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-probabilities-from-experiments-and-statistical-displays.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo8-trees-combined-events",
+      "slug": "lo-yr9-trees-combined-events",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-trees-combined-events",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-trees-combined-events.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-trees-combined-events/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-trees-combined-events/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-trees-combined-events/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-trees-combined-events/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-trees-combined-events/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-trees-combined-events/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo9-two-way-tables",
+      "slug": "lo-yr9-two-way-tables",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-two-way-tables",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-two-way-tables.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-two-way-tables/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-two-way-tables/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-two-way-tables/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-two-way-tables/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-two-way-tables/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-two-way-tables/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo10-expected-number",
+      "slug": "lo-yr9-expected-number",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-expected-number",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-expected-number.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-expected-number/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-expected-number/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-expected-number/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-expected-number/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-expected-number/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-expected-number/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo11-investigation-types",
+      "slug": "lo-yr9-investigation-types",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-investigation-types",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-investigation-types.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-investigation-types/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-investigation-types/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-investigation-types/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-investigation-types/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-investigation-types/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-investigation-types/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo12-types-of-data",
+      "slug": "lo-yr9-types-of-data",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-types-of-data",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-types-of-data.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-types-of-data/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-types-of-data/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-types-of-data/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-types-of-data/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-types-of-data/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-types-of-data/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo13-calculating-averages-and-range",
+      "slug": "lo-yr9-calculating-averages-and-range",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-calculating-averages-and-range",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-calculating-averages-and-range.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-calculating-averages-and-range/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-calculating-averages-and-range/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-calculating-averages-and-range/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-calculating-averages-and-range/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-calculating-averages-and-range/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-calculating-averages-and-range/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo14-quartiles",
+      "slug": "lo-yr9-quartiles",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-quartiles",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-quartiles.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-quartiles/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-quartiles/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-quartiles/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-quartiles/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-quartiles/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-quartiles/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo15-selecting-appropriate-displays",
+      "slug": "lo-yr9-selecting-appropriate-displays",
+      "status": "complete",
+      "paths": {
+        "folder": "manamaths/OBJECTIVES/lo-yr9-selecting-appropriate-displays",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-selecting-appropriate-displays.html",
+        "levels": {
+          "foundation": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-selecting-appropriate-displays/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-selecting-appropriate-displays/foundation-questions.pdf"
+          },
+          "proficient": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-selecting-appropriate-displays/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-selecting-appropriate-displays/proficient-questions.pdf"
+          },
+          "excellence": {
+            "tex": "manamaths/OBJECTIVES/lo-yr9-selecting-appropriate-displays/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-selecting-appropriate-displays/excellence-questions.pdf"
+          }
+        }
+      },
+      "evidence": {
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo16-interpreting-pie-charts-pictograms",
+      "slug": "lo-yr9-interpreting-pie-charts-pictograms",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo17-interpreting-bar-graphs-histograms",
+      "slug": "lo-yr9-interpreting-bar-graphs-histograms",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo18-writing-a-statistical-paragraph",
+      "slug": "lo-yr9-writing-a-statistical-paragraph",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo19-analysing-time-series-graphs-tsn",
+      "slug": "lo-yr9-analysing-time-series-graphs-tsn",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo20-analysing-scatter-plots-i-e-bivariate-tarsog",
+      "slug": "lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo21-comparing-box-and-whisker-graphs-cssi",
+      "slug": "lo-yr9-comparing-box-and-whisker-graphs-cssi",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo22-misleading-graphs",
+      "slug": "lo-yr9-misleading-graphs",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-lo23-planning-and-collecting-multivariate-data",
+      "slug": "lo-yr9-planning-and-collecting-multivariate-data",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-ex1-reverse-percentage",
+      "slug": "lo-yr9-reverse-percentage",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-ex2-linear-model-for-scatter-plots",
+      "slug": "lo-yr9-linear-model-for-scatter-plots",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-ex3-sampling-variation",
+      "slug": "lo-yr9-sampling-variation",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic3-ex4-sampling-methodology",
+      "slug": "lo-yr9-sampling-methodology",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo1-extrapolating-linear-quadratic-and-exponential-patterns",
+      "slug": "lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo2-identifying-linear-quadratic-and-exponential-patterns",
+      "slug": "lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo3-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern",
+      "slug": "lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo4-determining-nth-term-of-pattern-or-spatial-pattern",
+      "slug": "lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo5-understanding-cartesian-plane-and-co-ordinates",
+      "slug": "lo-yr9-understanding-cartesian-plane-and-co-ordinates",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo6-drawing-straight-line-from-given-equation",
+      "slug": "lo-yr9-drawing-straight-line-from-given-equation",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo7-gradient",
+      "slug": "lo-yr9-gradient",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo8-finding-x-and-y-intercepts",
+      "slug": "lo-yr9-finding-x-and-y-intercepts",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo9-forming-equations-of-given-straight-line-graph-using-y-mx-c",
+      "slug": "lo-yr9-forming-equations-of-given-straight-line-graph-using-y-mx-c",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo10-forming-equations-of-horizontal-and-vertical-lines",
+      "slug": "lo-yr9-forming-equations-of-horizontal-and-vertical-lines",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo11-finding-point-of-intersection-of-two-lines",
+      "slug": "lo-yr9-finding-point-of-intersection-of-two-lines",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo12-drawing-parabola-from-given-equation",
+      "slug": "lo-yr9-drawing-parabola-from-given-equation",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo13-using-tables-to-explore-patterns-and-graphs",
+      "slug": "lo-yr9-using-tables-to-explore-patterns-and-graphs",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-lo14-applying-straight-line-graphs-to-solve-problems",
+      "slug": "lo-yr9-applying-straight-line-graphs-to-solve-problems",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-ex1-using-algebra-to-find-the-point-of-intersection-of-two-lines",
+      "slug": "lo-yr9-using-algebra-to-find-the-point-of-intersection-of-two-lines",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-ex2-forming-equation-of-parabolas",
+      "slug": "lo-yr9-forming-equation-of-parabolas",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-ex3-using-features-of-a-parabola-to-solve-problems",
+      "slug": "lo-yr9-using-features-of-a-parabola-to-solve-problems",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic4-ex4-drawing-exponential-graphs",
+      "slug": "lo-yr9-drawing-exponential-graphs",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo1-naming-angles",
+      "slug": "lo-yr9-naming-angles",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo2-angles-around-a-point",
+      "slug": "lo-yr9-angles-around-a-point",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo3-angles-on-a-straight-line",
+      "slug": "lo-yr9-angles-on-a-straight-line",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo4-vertically-opposite-angles",
+      "slug": "lo-yr9-vertically-opposite-angles",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo5-interior-angles-of-a-triangle",
+      "slug": "lo-yr9-interior-angles-of-a-triangle",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo6-parallel-line-rules",
+      "slug": "lo-yr9-parallel-line-rules",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo7-regular-irregular-polygon",
+      "slug": "lo-yr9-regular-irregular-polygon",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo8-pythagoras-theory-finding-short-and-long-sides",
+      "slug": "lo-yr9-pythagoras-theory-finding-short-and-long-sides",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo9-applying-pythagoras-theory",
+      "slug": "lo-yr9-applying-pythagoras-theory",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo10-pythagorean-triples",
+      "slug": "lo-yr9-pythagorean-triples",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo11-transformation-translation-reflection-enlargement",
+      "slug": "lo-yr9-transformation-translation-reflection-enlargement",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-lo12-representing-and-constructing-3d-shapes",
+      "slug": "lo-yr9-representing-and-constructing-3d-shapes",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-ex1-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
+      "slug": "lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-ex2-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle",
+      "slug": "lo-yr9-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-ex3-applying-pythagoras-theory-to-3d-representations",
+      "slug": "lo-yr9-applying-pythagoras-theory-to-3d-representations",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    },
+    {
+      "objectiveId": "y9-topic5-ex4-introduction-to-circle-geometry",
+      "slug": "lo-yr9-introduction-to-circle-geometry",
+      "status": "not_started",
+      "paths": {
+        "folder": null,
+        "objectivePage": null,
+        "levels": {
+          "foundation": {
+            "tex": null,
+            "pdf": null
+          },
+          "proficient": {
+            "tex": null,
+            "pdf": null
+          },
+          "excellence": {
+            "tex": null,
+            "pdf": null
+          }
+        }
+      },
+      "evidence": {
+        "folder": false,
+        "allTex": false,
+        "allPdfs": false,
+        "website": false
+      }
+    }
+  ]
+}

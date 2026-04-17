@@ -1,0 +1,103 @@
+\documentclass[17pt,a4paper,landscape]{extarticle}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tasks}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=5.1em}
+\renewcommand{\arraystretch}{1.15}
+\everymath{\displaystyle}
+
+\newcommand{\hscale}[5]{%
+\begin{tikzpicture}[x=0.095cm,y=0.95cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,0) -- (10,0);
+  \foreach \x in {0,...,10} {\draw[thick] (\x,0.18) -- (\x,-0.18);} 
+  \node[below] at (0,-0.18) {#1};
+  \node[below] at (10,-0.18) {#2};
+  \draw[very thick,red!75!black,->] (#3,0.95) -- (#3,0.12);
+  \node[above] at (5,1.05) {#4};
+  \node[below] at (5,-0.72) {#5};
+\end{tikzpicture}%
+}
+
+\newcommand{\speedo}[4]{%
+\begin{tikzpicture}[scale=0.95,baseline=(current bounding box.center)]
+  \draw[thick] (-2.4,0) arc[start angle=180,end angle=0,radius=2.4];
+  \foreach \i/\lab in {180/0,144/20,108/40,72/60,36/80,0/100} {
+    \draw[thick] ({2.1*cos(\i)},{2.1*sin(\i)}) -- ({2.4*cos(\i)},{2.4*sin(\i)});
+    \node at ({2.85*cos(\i)},{2.75*sin(\i)}) {\small \lab};
+  }
+  \foreach \i in {162,126,90,54,18} {\draw ({2.18*cos(\i)},{2.18*sin(\i)}) -- ({2.4*cos(\i)},{2.4*sin(\i)});} 
+  \draw[very thick,red!75!black,->] (0,0) -- ({1.8*cos(#3)},{1.8*sin(#3)});
+  \fill (0,0) circle (0.07);
+  \node[below] at (0,-0.55) {#4};
+  \node[above] at (0,2.8) {#1};
+\end{tikzpicture}%
+}
+
+\newcommand{\thermo}[4]{%
+\begin{tikzpicture}[x=0.52cm,y=0.18cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,-10) -- (0,30);
+  \draw[thick] (0,-10) -- (2,-10);
+  \draw[thick] (0,30) -- (2,30);
+  \draw[thick] (2,-10) -- (2,30);
+  \fill[red!20] (0.28,-10) rectangle (1.72,#3);
+  \fill[red!35] (1,-12.3) circle (1.2);
+  \draw[thick] (1,-12.3) circle (1.2);
+  \foreach \y in {-10,-5,...,30} {\draw[thick] (2,\y) -- (3,\y); \node[right] at (3.1,\y) {\small \y};}
+  \foreach \y in {-9,-8,...,29} {\draw (2,\y) -- (2.55,\y);} 
+  \node[below] at (1,-15.2) {#4};
+  \node[above] at (1,33) {#1};
+\end{tikzpicture}%
+}
+
+\newcommand{\cylinder}[4]{%
+\begin{tikzpicture}[x=0.06cm,y=0.022cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,0) -- (0,100);
+  \draw[thick] (0,100) arc[start angle=180,end angle=360,x radius=12,y radius=3.5];
+  \draw[dashed] (0,100) arc[start angle=180,end angle=0,x radius=12,y radius=3.5];
+  \draw[thick] (24,0) -- (24,100);
+  \draw[thick] (0,0) arc[start angle=180,end angle=360,x radius=12,y radius=3.5];
+  \draw[dashed] (0,0) arc[start angle=180,end angle=0,x radius=12,y radius=3.5];
+  \fill[blue!25] (0,0) -- (0,#3) arc[start angle=180,end angle=360,x radius=12,y radius=3.5] -- (24,0) arc[start angle=0,end angle=180,x radius=12,y radius=3.5];
+  \foreach \y in {0,10,...,100} {\draw[thick] (24,\y) -- (30,\y); \node[right] at (31,\y) {\small \y};}
+  \foreach \y in {5,15,...,95} {\draw (24,\y) -- (28,\y);} 
+  \node[above] at (12,106) {#1};
+  \node[below] at (12,-10) {#4};
+\end{tikzpicture}%
+}
+
+
+\begin{document}
+\sffamily
+\boldmath
+
+\vspace*{0.4em}
+{\LARGE \textbf{Proficient}}
+\begin{tasks}(2)
+\task {Read the value on this kitchen scale.\\[0.4em]
+\hscale{0}{1000}{4.5}{Kitchen scale}{g}}
+\task {Read the value on this kitchen scale.\\[0.4em]
+\hscale{0}{2}{6.5}{Kitchen scale}{kg}}
+\task {Read the speed on this dial.\\[0.4em]
+\speedo{Speedometer}{100}{99}{km/h}}
+\task {Read the speed on this dial.\\[0.4em]
+\speedo{Speedometer}{100}{63}{km/h}}
+\task {Read the value on this measuring cylinder.\\[0.4em]
+\cylinder{Measuring cylinder}{100}{46}{mL}}
+\task {Read the value on this thermometer.\\[0.4em]
+\thermo{Thermometer}{30}{18}{$^\circ$C}}
+\task {A scale goes from $0$ to $2$ kg in $10$ equal intervals. What is each interval worth?}
+\task {On a speedometer from $0$ to $100$ km/h there are $5$ equal jumps of $20$. What is the value halfway between $40$ and $60$?}
+\task {A measuring cylinder has labels every $10$ mL and one smaller mark halfway between each pair. What value is halfway between $30$ mL and $40$ mL?}
+\task {A thermometer shows $7^\circ$C. Is that closer to $5^\circ$C or $10^\circ$C?}
+\task {A scale reading is two small intervals after $300$ g on a scale marked every $50$ g. What is the reading?}
+\task {A car is travelling at $68$ km/h. On a dial marked every $20$ km/h, describe where the needle should be.}
+\end{tasks}
+
+\end{document}

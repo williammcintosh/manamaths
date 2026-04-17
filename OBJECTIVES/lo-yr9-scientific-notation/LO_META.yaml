@@ -1,0 +1,15 @@
+id: L04
+topic: Scientific notation
+slug: lo-yr9-scientific-notation
+instruction: Develop secure understanding of scientific notation.
+terminology:
+  - scientific notation
+  - standard form
+  - exponent
+  - power
+recommended_counts:
+  foundation: 12-16
+  proficient: 12
+  excellence: 16-20
+notes: |
+  Created by DebidBot on user request. Foundation/Proficient/Excellence .tex files added. Next: run build script, visual QA, update website page, commit, and push.

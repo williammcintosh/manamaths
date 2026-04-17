@@ -1,0 +1,80 @@
+  - id: L09
+    topic: Finding fractions of a quantity
+    slug: lo-yr9-finding-fractions-of-a-quantity
+    instruction: Find each fraction of the quantity.
+    terminology:
+      - fraction
+      - quantity
+      - of
+      - numerator
+      - denominator
+    skills:
+      - find unit fractions of whole numbers
+      - find non-unit fractions of quantities
+      - use division then multiplication to find a fraction of an amount
+      - check whether an answer is sensible
+      - compare different fractions of the same quantity
+    question_types:
+      - direct calculation
+      - unit fraction
+      - non-unit fraction
+      - missing value
+      - error check
+      - comparison
+      - short context
+
+    foundation_questions:
+      - \item $\frac{1}{2}$ of $10$.
+      - \item $\frac{1}{2}$ of $18$.
+      - \item $\frac{1}{3}$ of $12$.
+      - \item $\frac{1}{3}$ of $21$.
+      - \item $\frac{1}{4}$ of $16$.
+      - \item $\frac{1}{4}$ of $28$.
+      - \item $\frac{3}{4}$ of $20$.
+      - \item $\frac{3}{4}$ of $32$.
+      - \item $\frac{2}{3}$ of $15$.
+      - \item $\frac{2}{3}$ of $24$.
+      - \item $\frac{3}{5}$ of $25$.
+      - \item $\frac{4}{5}$ of $30$.
+      - \item $\frac{5}{6}$ of $24$.
+      - \item $\frac{2}{5}$ of $35$.
+      - \item $\frac{3}{8}$ of $16$.
+      - \item $\frac{5}{8}$ of $24$.
+
+    proficient_questions:
+      - \item $\frac{2}{7}$ of $35$.
+      - \item $\frac{5}{6}$ of $42$.
+      - \item $\frac{3}{10}$ of $80$.
+      - \item $\frac{7}{8}$ of $48$.
+      - \item $\frac{4}{9}$ of $72$.
+      - \item $\frac{5}{12}$ of $84$.
+      - \item $\frac{11}{20}$ of $100$.
+      - \item $\frac{3}{5}$ of $45$.
+      - \item $\frac{7}{12}$ of $60$.
+      - \item $\frac{9}{10}$ of $70$.
+      - \item Fill in the blank: $\frac{1}{4}$ of $\square$ is $9$.
+      - \item Fill in the blank: $\frac{3}{5}$ of $\square$ is $24$.
+      - \item Is $\frac{2}{3}$ of $18$ equal to $6$?
+      - \item Is $\frac{3}{4}$ of $28$ equal to $21$?
+      - \item Which is greater: $\frac{2}{5}$ of $40$ or $\frac{3}{10}$ of $40$?
+      - \item A class has $30$ students. $\frac{2}{5}$ are absent. How many students are absent?
+      - \item A rope is $36$ m long. $\frac{3}{4}$ of it is used. How many metres are used?
+      - \item Explain in one short sentence what the word of means in $\frac{3}{5}$ of $20$.
+
+    excellence_questions:
+      - \item A student says $\frac{3}{4}$ of $20$ is $80$. Are they correct? Explain.
+      - \item A student says $\frac{2}{3}$ of $27$ is found by doing $27\times2\times3$. Are they correct? Explain.
+      - \item Fill in the blank: $\frac{5}{8}$ of $\square$ is $25$.
+      - \item Fill in the blank: $\frac{7}{9}$ of $\square$ is $35$.
+      - \item Which is greater: $\frac{3}{5}$ of $50$ or $\frac{2}{3}$ of $45$? Show enough working to justify.
+      - \item Which is smaller: $\frac{5}{6}$ of $24$ or $\frac{3}{4}$ of $28$?
+      - \item A tank holds $60$ L. It is $\frac{7}{10}$ full. How many litres of water are in the tank?
+      - \item A team played $32$ games and won $\frac{3}{8}$ of them. How many games did they win?
+      - \item A baker made $48$ muffins. $\frac{5}{12}$ were chocolate. How many were chocolate?
+      - \item Complete: if $\frac{m}{5}$ of $35$ is $21$, then $m=\rule{1.6cm}{0.15mm}$.
+      - \item Complete: if $\frac{3}{n}$ of $40$ is $24$, then $n=\rule{1.6cm}{0.15mm}$.
+      - \item Is $\frac{4}{7}$ of $63=28$ correct? Explain what went wrong or why it works.
+      - \item A strip is $54$ cm long. Mina cuts off $\frac{2}{9}$ of it. How many centimetres does she cut off?
+      - \item A jar has $45$ lollies. $\frac{4}{9}$ are red. How many red lollies are there?
+      - \item Which does not belong: $\frac{1}{2}$ of $18$, $\frac{2}{4}$ of $18$, $\frac{3}{6}$ of $18$, $\frac{2}{3}$ of $18$?
+      - \item Explain why finding $\frac{3}{4}$ of $28$ can be done by dividing by $4$ first, then multiplying by $3$.

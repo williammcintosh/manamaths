@@ -1,0 +1,78 @@
+id: L02
+topic: Rounding to Decimal Points
+slug: lo-yr9-rounding-to-decimal-points
+instruction: Round each decimal to the required number of decimal places.
+terminology:
+- rounding
+- decimal place
+- whole number
+- tenths
+- hundredths
+skills:
+- identify the place to round to
+- use the next digit to decide whether to round up
+- round decimals to whole numbers, tenths, and hundredths
+- justify rounding choices
+question_types:
+- direct rounding
+- fill in the blank
+- error check
+- comparison
+- short reasoning
+foundation_questions:
+- \item Round $3.4$ to the nearest whole number.
+- \item Round $7.6$ to the nearest whole number.
+- \item Round $2.31$ to 1 decimal place.
+- \item Round $5.68$ to 1 decimal place.
+- \item Round $9.24$ to 1 decimal place.
+- \item Round $4.86$ to 1 decimal place.
+- \item Round $1.73$ to 1 decimal place.
+- \item Round $6.15$ to 1 decimal place.
+- \item Round $8.42$ to 1 decimal place.
+- \item Round $0.27$ to 1 decimal place.
+- \item Round $3.141$ to 2 decimal places.
+- \item Round $5.678$ to 2 decimal places.
+- \item Round $7.204$ to 2 decimal places.
+- \item Round $9.995$ to 2 decimal places.
+- \item Round $12.49$ to the nearest whole number.
+- \item Round $12.50$ to the nearest whole number.
+proficient_questions:
+- \item Round $14.37$ to 1 decimal place.
+- \item Round $8.05$ to 1 decimal place.
+- \item Round $6.666$ to 2 decimal places.
+- \item Round $2.349$ to 2 decimal places.
+- \item Round $0.995$ to 2 decimal places.
+- \item Round $17.499$ to the nearest whole number.
+- \item Round $17.500$ to the nearest whole number.
+- \item Round $3.045$ to 2 decimal places.
+- \item Round $9.994$ to 2 decimal places.
+- \item Round $12.444$ to 2 decimal places.
+- \item Round $5.555$ to 2 decimal places.
+- \item Round $0.074$ to 1 decimal place.
+- \item Round $0.074$ to 2 decimal places.
+- \item Fill in the blank: $4.27 \approx 4.\square$ to 1 decimal place.
+- \item Fill in the blank: $8.196 \approx 8.\square\square$ to 2 decimal places.
+- \item Is $6.84 \to 6.9$ to 1 decimal place correct?
+- \item Is $3.141 \to 3.14$ to 2 decimal places correct?
+- \item Explain in one short sentence what digit decides the rounding.
+excellence_questions:
+- \item A student says $4.249$ rounds to $4.3$ to 1 decimal place. Are they correct?
+  Explain.
+- \item A student says $7.995$ rounds to $7.99$ to 2 decimal places. Are they correct?
+  Explain.
+- \item Which is greater after rounding to 1 decimal place: $6.44$ or $6.45$?
+- \item Which is smaller after rounding to 2 decimal places: $3.104$ or $3.099$?
+- \item Fill in the blank: a number that rounds to $5.7$ to 1 decimal place could
+    be \rule{1.8cm}{0.15mm}.
+- \item Fill in the blank: a number that rounds to $2.35$ to 2 decimal places could
+    be \rule{1.8cm}{0.15mm}.
+- \item Complete: $8.\square 4$ rounds to $8.5$ to 1 decimal place.
+- \item Complete: $3.4\square 8$ rounds to $3.45$ to 2 decimal places.
+- \item Round $19.995$ to 2 decimal places.
+- \item Round $0.999$ to 2 decimal places.
+- \item Round $12.049$ to 2 decimal places.
+- \item Round $4.444$ to 2 decimal places.
+- \item Put in order after rounding to 1 decimal place: $2.84, 2.85, 2.89$.
+- \item Write two different numbers that both round to $6.2$ to 1 decimal place.
+- \item Explain why $5.05$ and $5.04$ do not round to the same tenth.
+- \item A measurement is $3.276$ m. Write it to 2 decimal places.

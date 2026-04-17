@@ -1,0 +1,83 @@
+\documentclass[17pt,a4paper,landscape]{extarticle}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tasks}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=5.1em}
+\renewcommand{\arraystretch}{1.15}
+\everymath{\displaystyle}
+
+\newcommand{\twocointree}{%
+\begin{tikzpicture}[x=0.9cm,y=0.9cm]
+  \draw[thick] (0,0) -- (2,1.2) node[midway,above] {H};
+  \draw[thick] (0,0) -- (2,-1.2) node[midway,below] {T};
+  \draw[thick] (2,1.2) -- (4,2.1) node[midway,above] {H};
+  \draw[thick] (2,1.2) -- (4,0.3) node[midway,below] {T};
+  \draw[thick] (2,-1.2) -- (4,-0.3) node[midway,above] {H};
+  \draw[thick] (2,-1.2) -- (4,-2.1) node[midway,below] {T};
+  \node[left] at (0,0) {Start};
+  \node[right] at (4,2.1) {HH};
+  \node[right] at (4,0.3) {HT};
+  \node[right] at (4,-0.3) {TH};
+  \node[right] at (4,-2.1) {TT};
+\end{tikzpicture}%
+}
+
+\newcommand{\coindietree}{%
+\begin{tikzpicture}[x=0.72cm,y=0.72cm]
+  \draw[thick] (0,0) -- (2,1.6) node[midway,above] {H};
+  \draw[thick] (0,0) -- (2,-1.6) node[midway,below] {T};
+  \foreach \y/\n/\lab in {3.2/1/H1,2.0/2/H2,0.8/3/H3,-0.4/4/H4,-1.6/5/H5,-2.8/6/H6} {
+    \draw[thick] (2,1.6) -- (4.2,\y) node[midway,above] {\n};
+    \node[right] at (4.2,\y) {\lab};
+  }
+  \foreach \y/\n/\lab in {2.8/1/T1,1.6/2/T2,0.4/3/T3,-0.8/4/T4,-2.0/5/T5,-3.2/6/T6} {
+    \draw[thick] (2,-1.6) -- (4.2,\y) node[midway,below] {\n};
+    \node[right] at (4.2,\y) {\lab};
+  }
+  \node[left] at (0,0) {Start};
+\end{tikzpicture}%
+}
+
+
+\begin{document}
+\sffamily
+\boldmath
+
+\vspace*{0.4em}
+{\LARGE \textbf{Excellence}}
+\begin{tasks}(2)
+\task {Use this tree for two coin tosses. A student says there are only $3$ outcomes because the answers are heads, tails, or one of each. Are they correct? Explain.
+
+\vspace{0.4em}
+\twocointree}
+\task {Use this tree to list the sample space for tossing a coin and rolling a die.
+
+\vspace{0.4em}
+\coindietree}
+\task {Use the tree to say how many outcomes are in the sample space.
+
+\vspace{0.4em}
+\coindietree}
+\task {Use the tree to find the probability of getting heads and a $5$.
+
+\vspace{0.4em}
+\coindietree}
+\task {Use the tree to find the probability of getting tails and an even number.
+
+\vspace{0.4em}
+\coindietree}
+\task {A student says the probability of drawing a red card from a standard deck is $\frac{1}{4}$. Are they correct? Explain.}
+\task {A spinner has $8$ equal sectors. $3$ are red, $3$ are blue, and $2$ are yellow. What is the probability of not landing on yellow?}
+\task {A bag contains $2$ red, $5$ blue, and $3$ green counters. What is the probability of picking red or green?}
+\task {A standard deck card is chosen. What is the probability of drawing a face card?}
+\task {A standard deck card is chosen. What is the probability of drawing a red king?}
+\end{tasks}
+
+\end{document}

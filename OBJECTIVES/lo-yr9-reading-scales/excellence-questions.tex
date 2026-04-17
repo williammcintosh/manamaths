@@ -1,0 +1,101 @@
+\documentclass[17pt,a4paper,landscape]{extarticle}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tasks}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=5.1em}
+\renewcommand{\arraystretch}{1.15}
+\everymath{\displaystyle}
+
+\newcommand{\hscale}[5]{%
+\begin{tikzpicture}[x=0.095cm,y=0.95cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,0) -- (10,0);
+  \foreach \x in {0,...,10} {\draw[thick] (\x,0.18) -- (\x,-0.18);} 
+  \node[below] at (0,-0.18) {#1};
+  \node[below] at (10,-0.18) {#2};
+  \draw[very thick,red!75!black,->] (#3,0.95) -- (#3,0.12);
+  \node[above] at (5,1.05) {#4};
+  \node[below] at (5,-0.72) {#5};
+\end{tikzpicture}%
+}
+
+\newcommand{\speedo}[4]{%
+\begin{tikzpicture}[scale=0.95,baseline=(current bounding box.center)]
+  \draw[thick] (-2.4,0) arc[start angle=180,end angle=0,radius=2.4];
+  \foreach \i/\lab in {180/0,144/20,108/40,72/60,36/80,0/100} {
+    \draw[thick] ({2.1*cos(\i)},{2.1*sin(\i)}) -- ({2.4*cos(\i)},{2.4*sin(\i)});
+    \node at ({2.85*cos(\i)},{2.75*sin(\i)}) {\small \lab};
+  }
+  \foreach \i in {162,126,90,54,18} {\draw ({2.18*cos(\i)},{2.18*sin(\i)}) -- ({2.4*cos(\i)},{2.4*sin(\i)});} 
+  \draw[very thick,red!75!black,->] (0,0) -- ({1.8*cos(#3)},{1.8*sin(#3)});
+  \fill (0,0) circle (0.07);
+  \node[below] at (0,-0.55) {#4};
+  \node[above] at (0,2.8) {#1};
+\end{tikzpicture}%
+}
+
+\newcommand{\thermo}[4]{%
+\begin{tikzpicture}[x=0.52cm,y=0.18cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,-10) -- (0,30);
+  \draw[thick] (0,-10) -- (2,-10);
+  \draw[thick] (0,30) -- (2,30);
+  \draw[thick] (2,-10) -- (2,30);
+  \fill[red!20] (0.28,-10) rectangle (1.72,#3);
+  \fill[red!35] (1,-12.3) circle (1.2);
+  \draw[thick] (1,-12.3) circle (1.2);
+  \foreach \y in {-10,-5,...,30} {\draw[thick] (2,\y) -- (3,\y); \node[right] at (3.1,\y) {\small \y};}
+  \foreach \y in {-9,-8,...,29} {\draw (2,\y) -- (2.55,\y);} 
+  \node[below] at (1,-15.2) {#4};
+  \node[above] at (1,33) {#1};
+\end{tikzpicture}%
+}
+
+\newcommand{\cylinder}[4]{%
+\begin{tikzpicture}[x=0.06cm,y=0.022cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,0) -- (0,100);
+  \draw[thick] (0,100) arc[start angle=180,end angle=360,x radius=12,y radius=3.5];
+  \draw[dashed] (0,100) arc[start angle=180,end angle=0,x radius=12,y radius=3.5];
+  \draw[thick] (24,0) -- (24,100);
+  \draw[thick] (0,0) arc[start angle=180,end angle=360,x radius=12,y radius=3.5];
+  \draw[dashed] (0,0) arc[start angle=180,end angle=0,x radius=12,y radius=3.5];
+  \fill[blue!25] (0,0) -- (0,#3) arc[start angle=180,end angle=360,x radius=12,y radius=3.5] -- (24,0) arc[start angle=0,end angle=180,x radius=12,y radius=3.5];
+  \foreach \y in {0,10,...,100} {\draw[thick] (24,\y) -- (30,\y); \node[right] at (31,\y) {\small \y};}
+  \foreach \y in {5,15,...,95} {\draw (24,\y) -- (28,\y);} 
+  \node[above] at (12,106) {#1};
+  \node[below] at (12,-10) {#4};
+\end{tikzpicture}%
+}
+
+
+\begin{document}
+\sffamily
+\boldmath
+
+\vspace*{0.4em}
+{\LARGE \textbf{Excellence}}
+\begin{tasks}(2)
+\task {A student says this scale reads $420$ g. Explain why they are wrong.\\[0.4em]
+\hscale{0}{500}{7.5}{Mass scale}{g}}
+\task {This measuring cylinder is marked every $10$ mL with one halfway mark in between. What is the exact reading? Explain how you know.\\[0.4em]
+\cylinder{Measuring cylinder}{100}{55}{mL}}
+\task {This thermometer reading rises by $15^\circ$C. What will the new temperature be?\\[0.4em]
+\thermo{Thermometer}{30}{-6}{$^\circ$C}}
+\task {This speedometer needle moves $12$ km/h faster. What will the new speed be?\\[0.4em]
+\speedo{Speedometer}{100}{81}{km/h}}
+\task {A charity target is $500$. The pointer is at $350$. How much more is needed?}
+\task {A bag of flour should weigh $425$ g. On a scale marked every $50$ g, describe exactly where the pointer should be.}
+\task {A measuring cylinder shows $47.5$ mL. What must each small division be worth if the labels are every $10$ mL?}
+\task {A student reads a thermometer at $-2^\circ$C as positive $2^\circ$C. What sign have they ignored, and why does it matter?}
+\task {Which is the larger jump: from $35$ mL to $60$ mL, or from $-4^\circ$C to $8^\circ$C?}
+\task {A dial runs from $0$ to $100$ km/h in equal steps of $20$. What speed is one quarter of the way from $60$ to $80$?}
+\task {Explain why reading scales accurately depends on knowing the interval before looking at the pointer.}
+\task {Create your own scale question using units, then write its answer.}
+\end{tasks}
+
+\end{document}

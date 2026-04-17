@@ -1,82 +1,0 @@
-year_level: 9
-learning_objective:
-  - id: L07
-    topic: Reciprocals
-    slug: lo-yr9-reciprocals
-    instruction: Find the reciprocal of each value.
-    terminology:
-      - reciprocal
-      - fraction
-      - numerator
-      - denominator
-      - whole number
-      - multiplicative inverse
-    skills:
-      - find reciprocals of unit fractions
-      - find reciprocals of non-unit fractions
-      - write whole numbers as fractions before finding reciprocals
-      - check whether two numbers are reciprocals
-      - use reciprocals in simple reasoning
-    question_types:
-      - direct reciprocal
-      - whole number to fraction
-      - missing value
-      - error check
-      - comparison
-      - short reasoning
-
-    foundation_questions:
-      - \item Find the reciprocal of $  rac{1}{2}$.
-      - \item Find the reciprocal of $  rac{1}{3}$.
-      - \item Find the reciprocal of $  rac{2}{5}$.
-      - \item Find the reciprocal of $  rac{3}{4}$.
-      - \item Find the reciprocal of $  rac{4}{7}$.
-      - \item Find the reciprocal of $  rac{5}{6}$.
-      - \item Find the reciprocal of $2$.
-      - \item Find the reciprocal of $3$.
-      - \item Find the reciprocal of $4$.
-      - \item Find the reciprocal of $5$.
-      - \item Find the reciprocal of $  rac{7}{8}$.
-      - \item Find the reciprocal of $  rac{9}{10}$.
-      - \item Find the reciprocal of $  rac{3}{8}$.
-      - \item Find the reciprocal of $  rac{5}{12}$.
-      - \item Find the reciprocal of $6$.
-      - \item Find the reciprocal of $10$.
-
-    proficient_questions:
-      - \item Find the reciprocal of $  rac{7}{3}$.
-      - \item Find the reciprocal of $  rac{9}{4}$.
-      - \item Find the reciprocal of $  rac{11}{5}$.
-      - \item Find the reciprocal of $  rac{8}{11}$.
-      - \item Find the reciprocal of $12$.
-      - \item Find the reciprocal of $15$.
-      - \item Find the reciprocal of $  rac{13}{9}$.
-      - \item Find the reciprocal of $  rac{14}{5}$.
-      - \item Fill in the blank: the reciprocal of $  rac{4}{9}$ is $  rac{\square}{\square}$.
-      - \item Fill in the blank: the reciprocal of $7$ is $  rac{\square}{\square}$.
-      - \item Are $  rac{2}{7}$ and $  rac{7}{2}$ reciprocals?
-      - \item Are $  rac{3}{5}$ and $  rac{5}{3}$ reciprocals?
-      - \item Is the reciprocal of $  rac{5}{8}$ equal to $  rac{8}{5}$?
-      - \item Is the reciprocal of $9$ equal to $  rac{1}{9}$?
-      - \item Which is greater: the reciprocal of $  rac{2}{9}$ or the reciprocal of $  rac{2}{7}$?
-      - \item Which is greater: the reciprocal of $3$ or the reciprocal of $5$?
-      - \item Find the reciprocal of $  rac{17}{12}$.
-      - \item Explain in one short sentence why the reciprocal of $1$ is still $1$.
-
-    excellence_questions:
-      - \item A student says the reciprocal of $  rac{4}{7}$ is $  rac{7}{4}$. Are they correct? Explain.
-      - \item A student says the reciprocal of $6$ is $6$. Are they correct? Explain.
-      - \item Fill in both blanks: $  rac{\square}{7}$ and $  rac{7}{\square}$ are reciprocals.
-      - \item Fill in both blanks: if $  rac{5}{8}$ and $  rac{a}{b}$ are reciprocals, then $a=  ule{1.4cm}{0.15mm}$ and $b=  ule{1.4cm}{0.15mm}$.
-      - \item Which pair are reciprocals: $  rac{3}{8}$ and $  rac{8}{3}$, or $  rac{3}{8}$ and $  rac{3}{8}$?
-      - \item Write a number whose reciprocal is $  rac{4}{9}$.
-      - \item Write a fraction whose reciprocal is $3$.
-      - \item Complete: the reciprocal of $  rac{m}{9}$ is $  rac{9}{m}$. If the reciprocal is $  rac{9}{4}$, then $m=  ule{1.4cm}{0.15mm}$.
-      - \item If two numbers are reciprocals, what is their product?
-      - \item Are $  rac{6}{11}$ and $  rac{11}{6}$ reciprocals? How do you know?
-      - \item Which does not belong: $  rac{2}{3}$, $  rac{3}{2}$, $  rac{4}{5}$, $  rac{5}{4}$?
-      - \item The reciprocal of a number is $  rac{7}{12}$. What is the number?
-      - \item The reciprocal of a number is $5$. What is the number?
-      - \item A student writes $  rac{2}{9}	o  rac{9}{2}$ and $9	o9$. Explain why only one of these is correct.
-      - \item Find a number whose reciprocal is smaller than $  rac{1}{4}$.
-      - \item Explain why a number and its reciprocal switch places above and below the fraction bar.

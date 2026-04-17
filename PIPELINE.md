@@ -1,176 +1,94 @@
 # Mana Maths pipeline
 
-Use this workflow when building a full learning-objective pack for Year 9.
+Use this workflow when building one Year 9 learning objective end to end.
 
-## Goal
+## Repo shape
 
-For each learning objective:
-1. write original Foundation questions
-2. write original Proficient questions
-3. write original Excellence questions
-4. save those questions in YAML
-5. assemble LaTeX worksheets from the template
-6. apply projector-friendly layout rules automatically before building PDFs
-7. sync the finished PDFs to the public website copy so they can be reviewed in-browser
+- `OBJECTIVES/` = worksheet source + PDFs + LO-specific media
+- `SITE/` = generated website pages and shared site assets
+- `OPERATIONS/scripts/` = build and validation scripts
+- `OPERATIONS/data/lo-tracker.json` = generated status inventory
+- `OPERATIONS/templates/` = worksheet templates
 
-## Source files
+## Inputs
 
-- `lo-template.tex` = page template
-  - base rule: inline maths should stay together as a unit, but full prompt lines must still wrap normally
-  - base rule: projected worksheets should default to generous row gaps, aiming for about 3 rows / roughly 9 problems per page where appropriate
-- `lo-yr9.yaml` = master Year 9 source
-- `convert_learning_objectives_json.py` = JSON to YAML converter when objectives arrive as JSON
-- `JSON_TO_YAML.md` = durable JSON conversion workflow
+- `../lesson-builder/canonical/year-9-learning-objectives.json`
+- `../lesson-builder/source/year-9-learning-objectives.pdf`
+- `../lesson-builder/source/9MAT-master-teaching-guide.pdf`
+- `OPERATIONS/data/lo-tracker.json`
+- actual files under `OBJECTIVES/` and `SITE/`
 
-## Output structure
+## Definition of done
 
-For each learning objective, create a folder:
+An LO is done only when all of these are true:
+- `OBJECTIVES/lo-yr9-<slug>/` exists
+- `foundation-questions.tex` exists
+- `proficient-questions.tex` exists
+- `excellence-questions.tex` exists
+- all three PDFs build cleanly
+- `SITE/objectives/lo-yr9-<slug>.html` exists
+- `SITE/index.html` links to it
+- the PDFs were visually checked
+- tracker was regenerated
+- changes were committed
+- changes were pushed unless Will said not to
 
-- `lo-yr9-<slug>/foundation-questions.tex`
-- `lo-yr9-<slug>/proficient-questions.tex`
-- `lo-yr9-<slug>/excellence-questions.tex`
+## Standard one-LO flow
 
-Keep the master YAML as the source of truth.
-If learning objectives arrive as JSON, convert them first and then continue from YAML.
-
-## YAML shape
-
-Each learning objective should contain:
-
-```yaml
-- id: L01
-  topic: Forming fractions
-  instruction: Write each as a fraction.
-  terminology: []
-  skills: []
-  question_types: []
-  foundation_questions: []
-  proficient_questions: []
-  excellence_questions: []
-```
-
-Question entries should be LaTeX-ready items, usually beginning with `\item`.
-Use YAML block style `|` for multiline TikZ or larger LaTeX blocks.
-
-## Question-writing rules
-
-### Foundation
-- make questions direct and accessible
-- focus on one skill at a time
-- use clean numbers and familiar contexts
-- include straightforward visual fraction prompts where useful
-- avoid traps, ambiguity, and heavy reading load
-
-### Proficient
-- increase variety and independence
-- mix numeric, visual, and short context questions
-- require students to recognise the fraction without the wording always being identical
-- use slightly less friendly numbers where appropriate
-
-### Excellence
-- use richer reasoning
-- include inference, comparison, error-checking, and multi-step interpretation
-- allow unit conversion or whole-part reasoning where suitable
-- keep the task solvable without becoming wordy
-
-## Quality bar
-
-For every learning objective:
-- Foundation should feel easier than Proficient
-- Proficient should feel easier than Excellence
-- all questions must match the stated learning objective
-- wording must be student-facing and concise
-- LaTeX must compile cleanly
-- TikZ blocks must stay self-contained inside each `\item`
-- worksheets must remain readable when projected
-- do not cram wordy prompts into 4 columns
-
-## LaTeX assembly rules
-
-When creating each worksheet file:
-1. copy the structure from `lo-template.tex`
-2. insert the learning objective line
-3. insert the student instruction line
-4. insert the section header: `Foundation`, `Proficient`, or `Excellence`
-5. insert the matching questions from YAML into the `enumerate` block
-6. save into the correct `lo-yr9-<slug>/` folder
-7. run the projector layout pass before final PDF build
-
-See `WORKSHEET_LAYOUT.md` for the durable layout system.
-
-## Naming
-
-Convert the topic to a simple slug.
-
-Examples:
-- `Forming fractions` -> `lo-yr9-forming-fractions`
-- `Equivalent fractions` -> `lo-yr9-equivalent-fractions`
-- `Solving 1-step equations` -> `lo-yr9-solving-1-step-equations`
-
-## Working order
-
-For each learning objective set:
-1. if the source arrives as JSON, convert it to YAML first
-2. inspect or create the YAML entry
+1. choose the next LO from canonical + tracker + filesystem
+2. confirm the slug
 3. write Foundation questions
 4. write Proficient questions
 5. write Excellence questions
-6. create the three `.tex` files from the template
-7. run the projector-friendly PDF build flow
-8. add the new learning objective section and jump-link to `index.html`
-9. visually inspect the rendered PDFs and confirm there are enough rows/problems to cover at least 2 pages; if not, adjust YAML counts first, then rebuild
-10. sync the PDFs to the website copy
-11. commit in the `manamaths` repo
+6. save them in `OBJECTIVES/lo-yr9-<slug>/`
+7. run the single-LO build
+8. visually inspect the rendered PDFs
+9. regenerate the tracker
+10. commit and push
 
-## Rinse-and-repeat rule
+## Preferred commands
 
-When asked for the next learning objective, assume the same end-to-end workflow unless told otherwise:
-- use `lo-yr9.yaml` as the checklist/queue
-- locate the next LO source in project JSON/YAML that is not yet fully materialised
-- create a new `lo-yr9-<slug>/` directory
-- create Foundation / Proficient / Excellence worksheet source files
-- build the PDFs
-- add the new section to the website and the jump-links nav
-- visually inspect rendered PDFs, especially page fill and prompt wrapping, and confirm there are enough rows/problems to cover at least 2 pages
-- treat an LO as complete only when its YAML entry exists and the matching folder, TeX files, PDFs, and `index.html` section all exist
-- push when done
+Choose and scaffold the next missing LO:
 
-## Durable command shortcuts
+```bash
+python3 OPERATIONS/scripts/start_next_lo.py --json
+```
 
-Use these as shorthand instructions:
-- `Add the next Topic 2 learning objective in Mana Maths.`
-  - interpret this as: inspect `lesson-builder/extracted/objectives/9mat-master-teaching-guide.json`
-  - filter to explicit `Topic 2` learning objectives in LO order
-  - skip anything already built in `manamaths`
-  - complete exactly the first missing LO end-to-end
-- `Start the Topic 2 cron jobs.`
-  - interpret this as: create isolated recurring runs 15 minutes apart / every 15 minutes
-  - each run should do exactly one missing Topic 2 LO
-  - stop creating new content once Topic 2 is complete
+Or manually:
 
-## Default counts
+```bash
+python3 OPERATIONS/scripts/next_missing_lo.py --json
+python3 OPERATIONS/scripts/scaffold_lo_tex.py --objective-id <objective-id>
+```
 
-Unless told otherwise:
-- Foundation: 12 to 16 questions
-- Proficient: 12 questions
-- Excellence: 16 to 20 questions
+Build one LO:
 
-Use fewer questions if the items are diagram-heavy or too wordy for comfortable projection.
+```bash
+python3 OPERATIONS/scripts/build_single_lo.py lo-yr9-<slug>
+```
 
-## If a learning objective needs visuals
+That will:
+- apply projector layout
+- build PDFs
+- regenerate that LO page plus `SITE/index.html`
+- validate the LO
 
-Prefer:
-- circles split into equal parts
-- rectangles or grids
-- simple polygons or region shading
+Refresh tracker:
 
-Keep diagrams uncluttered and printable.
+```bash
+python3 OPERATIONS/scripts/generate_lo_tracker.py
+```
 
-## Delivery style
+## Source-of-truth rule
 
-If the source starts as JSON, convert JSON to YAML first.
-Then build or refine the content in YAML.
-Then build the worksheet files.
-Then run the automatic layout pass and build PDFs.
-Then sync the generated PDFs to the website copy so they can be checked on `wmm.co.nz/manamaths/`.
-Keep the YAML clean enough that future worksheet generation can be automated.
+- canonical wins for identity, order, wording, and metadata
+- filesystem wins for what actually exists
+- tracker is generated evidence only
+
+## Guardrails
+
+- do one LO at a time unless asked otherwise
+- keep worksheet content in `OBJECTIVES/`
+- keep generated website output in `SITE/`
+- keep scripts/templates/tracker in `OPERATIONS/`
+- do not reintroduce loose root clutter

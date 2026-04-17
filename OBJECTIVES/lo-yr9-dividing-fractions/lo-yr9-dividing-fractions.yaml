@@ -1,0 +1,75 @@
+id: L08
+topic: Dividing fractions
+slug: lo-yr9-dividing-fractions
+instruction: Divide each fraction. Simplify where you can.
+terminology:
+  - reciprocal
+  - divide
+  - numerator
+  - denominator
+  - simplify
+skills:
+  - divide fractions by multiplying by the reciprocal
+  - divide whole numbers by fractions
+  - divide fractions by whole numbers
+  - simplify answers after division
+  - check whether an answer is sensible
+question_types:
+  - direct calculation
+  - whole number and fraction
+  - missing value
+  - error check
+  - comparison
+foundation_questions:
+  - \item $\frac{1}{2}\div\frac{1}{4}$.
+  - \item $\frac{3}{4}\div\frac{1}{2}$.
+  - \item $\frac{2}{3}\div\frac{1}{3}$.
+  - \item $\frac{5}{6}\div\frac{5}{6}$.
+  - \item $\frac{3}{5}\div\frac{1}{5}$.
+  - \item $\frac{7}{8}\div\frac{1}{2}$.
+  - \item $\frac{4}{9}\div\frac{2}{9}$.
+  - \item $\frac{5}{12}\div\frac{5}{12}$.
+  - \item $2\div\frac{1}{2}$.
+  - \item $3\div\frac{1}{3}$.
+  - \item $4\div\frac{1}{4}$.
+  - \item $\frac{1}{2}\div 2$.
+  - \item $\frac{3}{4}\div 3$.
+  - \item $\frac{5}{6}\div 5$.
+  - \item $\frac{2}{5}\div\frac{1}{5}$.
+  - \item $\frac{9}{10}\div\frac{3}{10}$.
+proficient_questions:
+  - \item $\frac{3}{4}\div\frac{2}{5}$.
+  - \item $\frac{5}{6}\div\frac{1}{3}$.
+  - \item $\frac{7}{8}\div\frac{7}{16}$.
+  - \item $\frac{4}{5}\div\frac{2}{15}$.
+  - \item $\frac{9}{10}\div\frac{3}{5}$.
+  - \item $\frac{11}{12}\div\frac{1}{6}$.
+  - \item $6\div\frac{3}{4}$.
+  - \item $8\div\frac{2}{3}$.
+  - \item $\frac{3}{5}\div 6$.
+  - \item $\frac{7}{9}\div 2$.
+  - \item Fill in the blank: $\frac{2}{3}\div\frac{\square}{5}=\frac{10}{9}$.
+  - \item Fill in the blank: $\frac{\square}{4}\div\frac{1}{2}=\frac{3}{2}$.
+  - \item Is $\frac{3}{4}\div\frac{1}{2}=\frac{3}{8}$ correct?
+  - \item Is $5\div\frac{1}{5}=25$ correct?
+  - \item Which is greater: $\frac{3}{4}\div\frac{1}{2}$ or $\frac{3}{4}\times\frac{1}{2}$?
+  - \item $\frac{5}{14}\div\frac{15}{28}$.
+  - \item $\frac{13}{15}\div\frac{26}{45}$.
+  - \item Explain in one short sentence why dividing by $\frac{1}{2}$ makes a positive number larger.
+excellence_questions:
+  - \item $1\frac{1}{2}\div\frac{3}{4}$.
+  - \item $2\frac{1}{4}\div\frac{3}{8}$.
+  - \item $\frac{5}{6}\div\frac{10}{9}$.
+  - \item $\frac{7}{12}\div\frac{14}{15}$.
+  - \item A student says $\frac{4}{5}\div\frac{2}{3}=\frac{8}{15}$. Are they correct? Explain.
+  - \item A jug is $\frac{3}{4}$ full. Each pour uses $\frac{1}{8}$ of the jug. How many pours is that?
+  - \item Find a fraction so that $\frac{2}{3}\div\square=\frac{10}{9}$.
+  - \item Fill in both blanks: $\frac{\square}{6}\div\frac{2}{3}=\frac{5}{4}$.
+  - \item Which is greater: $\frac{5}{6}\div\frac{1}{3}$ or $\frac{3}{4}\div\frac{1}{2}$? Show enough working to justify.
+  - \item Is $\frac{6}{7}\div\frac{3}{14}=4$ correct? Explain.
+  - \item A rope is $\frac{5}{6}$ m long. Each piece is $\frac{5}{18}$ m long. How many pieces can be cut?
+  - \item Complete: if $\frac{3}{5}\div\frac{m}{2}=\frac{4}{5}$, then $m=\rule{1.6cm}{0.15mm}$.
+  - \item Write $3\div\frac{4}{15}$ as a single simplified fraction.
+  - \item A recipe needs $\frac{2}{3}$ cup of rice per batch. You have $4\frac{2}{3}$ cups. How many batches can you make?
+  - \item Which does not belong: $\frac{1}{2}\div\frac{1}{4}$, $2\div\frac{1}{2}$, $\frac{3}{4}\div\frac{3}{8}$, $\frac{5}{6}\div\frac{5}{6}$?
+  - \item Explain why $\frac{4}{9}\div\frac{2}{3}$ can be rewritten as $\frac{4}{9}\times\frac{3}{2}$.

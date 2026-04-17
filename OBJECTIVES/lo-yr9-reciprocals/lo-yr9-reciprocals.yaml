@@ -1,0 +1,82 @@
+year_level: 9
+learning_objective:
+  - id: L07
+    topic: Reciprocals
+    slug: lo-yr9-reciprocals
+    instruction: Find the reciprocal of each value.
+    terminology:
+      - reciprocal
+      - fraction
+      - numerator
+      - denominator
+      - whole number
+      - multiplicative inverse
+    skills:
+      - find reciprocals of unit fractions
+      - find reciprocals of non-unit fractions
+      - write whole numbers as fractions before finding reciprocals
+      - check whether two numbers are reciprocals
+      - use reciprocals in simple reasoning
+    question_types:
+      - direct reciprocal
+      - whole number to fraction
+      - missing value
+      - error check
+      - comparison
+      - short reasoning
+
+    foundation_questions:
+      - \item Find the reciprocal of $\frac{1}{2}$.
+      - \item Find the reciprocal of $\frac{1}{3}$.
+      - \item Find the reciprocal of $\frac{2}{5}$.
+      - \item Find the reciprocal of $\frac{3}{4}$.
+      - \item Find the reciprocal of $\frac{4}{7}$.
+      - \item Find the reciprocal of $\frac{5}{6}$.
+      - \item Find the reciprocal of $2$.
+      - \item Find the reciprocal of $3$.
+      - \item Find the reciprocal of $4$.
+      - \item Find the reciprocal of $5$.
+      - \item Find the reciprocal of $\frac{7}{8}$.
+      - \item Find the reciprocal of $\frac{9}{10}$.
+      - \item Find the reciprocal of $\frac{3}{8}$.
+      - \item Find the reciprocal of $\frac{5}{12}$.
+      - \item Find the reciprocal of $6$.
+      - \item Find the reciprocal of $10$.
+
+    proficient_questions:
+      - \item Find the reciprocal of $\frac{7}{3}$.
+      - \item Find the reciprocal of $\frac{9}{4}$.
+      - \item Find the reciprocal of $\frac{11}{5}$.
+      - \item Find the reciprocal of $\frac{8}{11}$.
+      - \item Find the reciprocal of $12$.
+      - \item Find the reciprocal of $15$.
+      - \item Find the reciprocal of $\frac{13}{9}$.
+      - \item Find the reciprocal of $\frac{14}{5}$.
+      - \item Fill in the blank: the reciprocal of $\frac{4}{9}$ is $\frac{\square}{\square}$.
+      - \item Fill in the blank: the reciprocal of $7$ is $\frac{\square}{\square}$.
+      - \item Are $\frac{2}{7}$ and $\frac{7}{2}$ reciprocals?
+      - \item Are $\frac{3}{5}$ and $\frac{5}{3}$ reciprocals?
+      - \item Is the reciprocal of $\frac{5}{8}$ equal to $\frac{8}{5}$?
+      - \item Is the reciprocal of $9$ equal to $\frac{1}{9}$?
+      - \item Which is greater: the reciprocal of $\frac{2}{9}$ or the reciprocal of $\frac{2}{7}$?
+      - \item Which is greater: the reciprocal of $3$ or the reciprocal of $5$?
+      - \item Find the reciprocal of $\frac{17}{12}$.
+      - \item Explain in one short sentence why the reciprocal of $1$ is still $1$.
+
+    excellence_questions:
+      - \item A student says the reciprocal of $\frac{4}{7}$ is $\frac{7}{4}$. Are they correct? Explain.
+      - \item A student says the reciprocal of $6$ is $6$. Are they correct? Explain.
+      - \item Fill in both blanks: $\frac{\square}{7}$ and $\frac{7}{\square}$ are reciprocals.
+      - \item Fill in both blanks: if $\frac{5}{8}$ and $\frac{a}{b}$ are reciprocals, then $a=\rule{1.4cm}{0.15mm}$ and $b=\rule{1.4cm}{0.15mm}$.
+      - \item Which pair are reciprocals: $\frac{3}{8}$ and $\frac{8}{3}$, or $\frac{3}{8}$ and $\frac{3}{8}$?
+      - \item Write a number whose reciprocal is $\frac{4}{9}$.
+      - \item Write a fraction whose reciprocal is $3$.
+      - \item Complete: the reciprocal of $\frac{m}{9}$ is $\frac{9}{m}$. If the reciprocal is $\frac{9}{4}$, then $m=\rule{1.4cm}{0.15mm}$.
+      - \item If two numbers are reciprocals, what is their product?
+      - \item Are $\frac{6}{11}$ and $\frac{11}{6}$ reciprocals? How do you know?
+      - \item Which does not belong: $\frac{2}{3}$, $\frac{3}{2}$, $\frac{4}{5}$, $\frac{5}{4}$?
+      - \item The reciprocal of a number is $\frac{7}{12}$. What is the number?
+      - \item The reciprocal of a number is $5$. What is the number?
+      - \item A student writes $\frac{2}{9}\to\frac{9}{2}$ and $9\to9$. Explain why only one of these is correct.
+      - \item Find a number whose reciprocal is smaller than $\frac{1}{4}$.
+      - \item Explain why a number and its reciprocal switch places above and below the fraction bar.

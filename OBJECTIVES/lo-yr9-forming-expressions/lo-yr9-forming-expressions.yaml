@@ -1,0 +1,83 @@
+year_level: 9
+learning_objective:
+- id: L13
+  topic: Forming expressions
+  slug: lo-yr9-forming-expressions
+  instruction: Write an algebraic expression for each description.
+  terminology:
+  - variable
+  - expression
+  - term
+  - coefficient
+  - operation
+  skills:
+  - use a letter to stand for an unknown quantity
+  - translate words into algebraic expressions
+  - distinguish between adding, subtracting, multiplying, and dividing
+  - write expressions with correct algebraic notation
+  - compare equivalent verbal and algebraic forms
+  question_types:
+  - word to algebra
+  - match the expression
+  - fill in the variable
+  - error check
+  - short reasoning
+  foundation_questions:
+  - \item Write an expression for $n$ plus $4$.
+  - \item Write an expression for $x$ minus $7$.
+  - \item Write an expression for $3$ times $y$.
+  - \item Write an expression for $m$ divided by $5$.
+  - \item Write an expression for $a$ plus $10$.
+  - \item Write an expression for $2$ times $p$.
+  - \item Write an expression for $q$ minus $3$.
+  - \item Write an expression for $r$ divided by $2$.
+  - \item Write an expression for $8$ more than $b$.
+  - \item Write an expression for $6$ less than $c$.
+  - \item Write an expression for double $k$.
+  - \item Write an expression for half of $t$.
+  - \item Write an expression for $z$ increased by $9$.
+  - \item Write an expression for $w$ decreased by $1$.
+  - \item Write an expression for $4$ multiplied by $h$.
+  - \item Write an expression for $j$ shared equally between $3$ people.
+  proficient_questions:
+  - \item Write an expression for $5$ more than $x$.
+  - \item Write an expression for $4$ less than $y$.
+  - \item Write an expression for three times $n$ plus $2$.
+  - \item Write an expression for $7$ added to $2m$.
+  - \item Write an expression for $p$ divided by $4$, then add $1$.
+  - \item Write an expression for the sum of $a$ and $b$.
+  - \item Write an expression for the difference between $t$ and $6$.
+  - \item Write an expression for the product of $3$ and $q$.
+  - \item Write an expression for the quotient of $r$ and $8$.
+  - \item Which expression matches "$4$ more than $k$": $k+4$ or $4k$?
+  - \item Which expression matches "double $s$ then subtract $5$": $2s-5$ or $2(s-5)$?
+  - \item Complete: if the variable is $m$, then "$m$ plus $9$" is \rule{2cm}{0.15mm}.
+  - \item Complete: if the variable is $x$, then "$3$ times $x$" is \rule{2cm}{0.15mm}.
+  - \item A student writes "$5$ less than $p$" as $5-p$. Are they correct?
+  - \item A student writes "$4$ times $y$" as $4+y$. Are they correct?
+  - \item Explain in one short sentence why $3x$ is usually written instead of $3\times.
+    x$.
+  excellence_questions:
+  - \item Write an expression for $2$ more than three times $x$.
+  - \item Write an expression for $5$ less than double $y$.
+  - \item Write an expression for half of $n$ plus $7$.
+  - \item Write an expression for $4$ multiplied by the sum of $p$ and $3$.
+  - \item Write an expression for one third of $m$ minus $2$.
+  - '\item Which is correct for "$6$ less than $a$": $a-6$ or $6-a$? Explain.'
+  - '\item Which is correct for "the sum of $x$ and $5$, then doubled": $2(x+5)$ or.
+    $2x+5$? Explain.'
+  - '\item Which does not belong: $3x$, $x+x+x$, $x^3$, $2x+x$?'
+  - '\item Complete: a possible expression for "$8$ more than half of $t$" is \rule{2.4cm}{0.15mm}.'
+  - '\item Complete: a possible expression for "triple $k$, then subtract $1$" is.
+    \rule{2.4cm}{0.15mm}.'
+  - \item A student says $2a+3$ means "double the sum of $a$ and $3$". Are they correct?
+    Explain.
+  - \item A student says $4(n-1)$ and $4n-1$ mean the same thing. Are they correct?
+    Explain.
+  - \item Write an expression for the perimeter of a rectangle with width $w$ and.
+    length $w+2$.
+  - \item Write an expression for the total cost of $x$ pens at $3$ dollars each and.
+    one book costing $5$ dollars.
+  - \item Write an expression for the number of wheels on $b$ bikes and $s$ scooters.
+    if each has $2$ wheels.
+  - \item Explain why an expression can have a value even when it is not an equation.

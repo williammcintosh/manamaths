@@ -1,0 +1,77 @@
+year_level: 9
+learning_objective:
+
+  - id: L11
+    topic: Factors, Highest Common Factors & Primes
+    slug: lo-yr9-factors-highest-common-factors-and-primes
+    instruction: Find the factors, highest common factor, or identify primes.
+    terminology:
+      - factor
+      - common factor
+      - highest common factor
+      - prime number
+      - composite number
+      - divisible
+    skills:
+      - list the factors of a number
+      - identify common factors of two numbers
+      - find the highest common factor of two numbers
+      - identify whether a number is prime or composite
+      - check whether a stated factor or HCF is correct
+    question_types:
+      - list factors
+      - identify common factors
+      - find the HCF
+      - prime or composite
+      - error check
+      - short context
+
+    foundation_questions:
+      - \item Write all the factors of $12$.
+      - \item Write all the factors of $18$.
+      - \item Write all the factors of $20$.
+      - \item Write all the factors of $24$.
+      - \item Is $4$ a factor of $28$?
+      - \item Is $5$ a factor of $27$?
+      - \item Is $6$ a factor of $42$?
+      - \item Circle the factors of $15$: $1, 2, 3, 5, 6, 15$.
+      - \item Circle the factors of $16$: $1, 2, 4, 5, 8, 16$.
+      - \item List the common factors of $12$ and $18$.
+      - \item List the common factors of $8$ and $20$.
+      - \item Find the highest common factor of $12$ and $18$.
+      - \item Find the highest common factor of $8$ and $20$.
+      - \item Is $11$ prime or composite?
+      - \item Is $15$ prime or composite?
+      - \item Complete: the highest common factor of $9$ and $12$ is $\square$.
+
+    proficient_questions:
+      - \item Write all the factors of $30$.
+      - \item Write all the factors of $36$.
+      - \item Write all the factors of $45$.
+      - \item List the common factors of $18$ and $24$.
+      - \item List the common factors of $20$ and $30$.
+      - \item Find the highest common factor of $18$ and $24$.
+      - \item Find the highest common factor of $20$ and $30$.
+      - \item Find the highest common factor of $27$ and $36$.
+      - \item Is $29$ prime or composite?
+      - \item Is $39$ prime or composite?
+      - \item Which is greater: the highest common factor of $18$ and $24$, or the highest common factor of $14$ and $21$?
+      - \item Fill in the blank: the highest common factor of $16$ and $24$ is $\square$.
+      - \item Fill in the blank: a common factor of $24$ and $36$ is $\square$.
+      - \item Is $9$ a factor of $45$?
+      - \item Is $7$ a factor of $54$?
+      - \item A baker arranges $18$ muffins and $24$ cookies into equal groups with no leftovers. What is the greatest number of groups possible?
+
+    excellence_questions:
+      - \item A student says the highest common factor of $18$ and $30$ is $6$. Are they correct? Explain.
+      - \item A student says $21$ is prime because it is odd. Are they correct? Explain.
+      - \item Write the first 4 common factors of $24$ and $36$.
+      - \item Find the highest common factor of $42$ and $56$.
+      - \item Find the highest common factor of $48$ and $60$.
+      - \item Find the highest common factor of $54$ and $72$.
+      - \item Which numbers are prime: $17, 21, 23, 27, 31$?
+      - \item Fill in the blank: the highest common factor of $a$ and $18$ is $6$ when $a=\square$.
+      - \item Fill in both blanks: two common factors of $32$ and $40$ are $\square$ and $\square$.
+      - \item A teacher has $24$ blue pens and $36$ black pens. She wants identical packs with no pens left over. What is the greatest number of packs she can make?
+      - \item A choir has $28$ altos and $42$ sopranos. They stand in equal rows with the same number of each voice in every row. What is the greatest number of rows?
+      - \item Complete: if the highest common factor of $30$ and $n$ is $10$, then one possible value of $n$ is \rule{1.6cm}{0.15mm}.

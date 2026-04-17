@@ -1,0 +1,28 @@
+id: L21
+topic: Substitution
+slug: lo-yr9-substitution
+instruction: Substitute numbers for variables in expressions and evaluate.
+terminology:
+- substitute
+- variable
+- evaluate
+skills:
+- substitute numeric values into algebraic expressions
+- evaluate expressions with one or more variables
+- check answers by simple substitution
+question_types:
+- direct substitution
+- missing value
+- short reasoning
+foundation_questions:
+- "\\item Evaluate when x=3: x+4."
+- "\\item Evaluate when y=2: 2y."
+- "\\item Evaluate when a=5: a-2."
+- "\\item Evaluate when n=4: 3n+1."
+proficient_questions:
+- "\\item Evaluate when x=3: 2x^2+1."
+- "\\item Evaluate when m=2 and n=3: m+n^2."
+- "\\item Fill in the blank: when x=4, 3x=\\square."
+excellence_questions:
+- "\\item A student says when x=2, x^3+x=10. Are they correct? Explain."
+- "\\item When x=1 and y=2, evaluate 2x+3y and justify which is larger."

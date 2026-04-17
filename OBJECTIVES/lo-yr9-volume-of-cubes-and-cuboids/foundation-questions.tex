@@ -1,0 +1,96 @@
+\documentclass[17pt,a4paper,landscape]{extarticle}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tasks}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
+\renewcommand{\arraystretch}{1.15}
+\everymath{\displaystyle}
+
+\begin{document}
+\sffamily
+\boldmath
+
+\boldmath
+
+\boldmath
+
+\boldmath
+
+\boldmath
+
+{\LARGE \textbf{Volume of cubes and cuboids — Foundation}}
+\begin{tasks}(3)
+\task Find the volume of this cube.\\[0.4em]
+\begin{tikzpicture}[x=0.2cm,y=0.2cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,0,0) -- (4,0,0) -- (4,4,0) -- (0,4,0) -- cycle;
+  \draw[thick] (0,0,0) -- (0,0,4) -- (0,4,4) -- (0,4,0);
+  \draw[thick] (4,0,0) -- (4,0,4) -- (4,4,4) -- (4,4,0);
+  \draw[thick] (0,0,4) -- (4,0,4) -- (4,4,4) -- (0,4,4) -- cycle;
+  \draw[dashed] (0,0,0) -- (0,0,4);
+  \draw[dashed] (4,0,0) -- (4,0,4);
+  \draw[dashed] (0,4,0) -- (0,4,4);
+  \draw[dashed] (4,4,0) -- (4,4,4);
+  \node at (2,-0.8) {3 cm};
+\end{tikzpicture}
+\task Find the volume of this cube.\\[0.4em]
+\begin{tikzpicture}[x=0.2cm,y=0.2cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,0,0) -- (5,0,0) -- (5,5,0) -- (0,5,0) -- cycle;
+  \draw[thick] (0,0,0) -- (0,0,5) -- (0,5,5) -- (0,5,0);
+  \draw[thick] (5,0,0) -- (5,0,5) -- (5,5,5) -- (5,5,0);
+  \draw[thick] (0,0,5) -- (5,0,5) -- (5,5,5) -- (0,5,5) -- cycle;
+  \draw[dashed] (0,0,0) -- (0,0,5);
+  \draw[dashed] (5,0,0) -- (5,0,5);
+  \draw[dashed] (0,5,0) -- (0,5,5);
+  \draw[dashed] (5,5,0) -- (5,5,5);
+  \node at (2.5,-0.8) {5 cm};
+\end{tikzpicture}
+\task Find the volume of this cuboid.\\[0.4em]
+\begin{tikzpicture}[x=0.15cm,y=0.15cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,0,0) -- (8,0,0) -- (8,4,0) -- (0,4,0) -- cycle;
+  \draw[thick] (0,0,0) -- (0,0,3) -- (0,4,3) -- (0,4,0);
+  \draw[thick] (8,0,0) -- (8,0,3) -- (8,4,3) -- (8,4,0);
+  \draw[thick] (0,0,3) -- (8,0,3) -- (8,4,3) -- (0,4,3) -- cycle;
+  \draw[dashed] (0,0,0) -- (0,0,3);
+  \draw[dashed] (8,0,0) -- (8,0,3);
+  \draw[dashed] (0,4,0) -- (0,4,3);
+  \draw[dashed] (8,4,0) -- (8,4,3);
+  \node at (4,-0.8) {10 m};
+  \node[rotate=90] at (8.8,2) {2 m};
+  \node at (4,4.8) {1 m};
+\end{tikzpicture}
+\task Find the volume of this cuboid.\\[0.4em]
+\begin{tikzpicture}[x=0.15cm,y=0.15cm,baseline=(current bounding box.center)]
+  \draw[thick] (0,0,0) -- (6,0,0) -- (6,5,0) -- (0,5,0) -- cycle;
+  \draw[thick] (0,0,0) -- (0,0,4) -- (0,5,4) -- (0,5,0);
+  \draw[thick] (6,0,0) -- (6,0,4) -- (6,5,4) -- (6,5,0);
+  \draw[thick] (0,0,4) -- (6,0,4) -- (6,5,4) -- (0,5,4) -- cycle;
+  \draw[dashed] (0,0,0) -- (0,0,4);
+  \draw[dashed] (6,0,0) -- (6,0,4);
+  \draw[dashed] (0,5,0) -- (0,5,4);
+  \draw[dashed] (6,5,0) -- (6,5,4);
+  \node at (3,-0.8) {6 cm};
+  \node[rotate=90] at (6.8,2.5) {5 cm};
+  \node at (3,5.8) {4 cm};
+\end{tikzpicture}
+\task A cube has side length 4 m. What is its volume?
+\task A cuboid is 12 cm long, 3 cm wide, and 2 cm high. What is its volume?
+\task A cube has side length 7 cm. What is its volume?
+\task A cuboid is 9 m long, 2 m wide, and 1 m high. What is its volume?
+\task A cube has side length 2.5 cm. What is its volume?
+\task A cuboid is 15 mm long, 4 mm wide, and 3 mm high. What is its volume?
+\task How many cubic centimetres are in 1 cubic metre?
+\task How many cubic millimetres are in 1 cubic centimetre?
+\task A cube has volume 27 cm\mbox{$^3$}. What is its side length?
+\task A cuboid has volume 60 m\mbox{$^3$}, length 5 m, and width 3 m. What is its height?
+\task A cube has volume 64 mm\mbox{$^3$}. What is its side length?
+\task A cuboid has volume 48 cm\mbox{$^3$}, length 6 cm, and height 2 cm. What is its width?
+\end{tasks}
+
+\end{document}
