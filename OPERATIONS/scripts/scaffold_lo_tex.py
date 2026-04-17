@@ -36,15 +36,13 @@ def load_json(path: Path) -> dict:
 
 
 def find_canonical_by_tracker_objective_id(objective_id: str) -> dict | None:
+    wanted = (objective_id or "").strip().upper()
     raw = load_json(CANONICAL_JSON)
     for topic in raw.get("topics", []):
         for section in ("learning_objectives", "extensions"):
             for item in topic.get(section, []):
-                title = item.get("display_title") or item.get("title") or ""
-                source_code = (item.get("source_code") or "").lower()
-                topic_id = (topic.get("topic_id") or "").lower().replace("t", "topic")
-                inferred = f"y9-{topic_id}-{source_code}-{re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')}"
-                if inferred == objective_id:
+                internal_code = str(item.get("internal_code") or "").strip().upper()
+                if internal_code and f"YR9_{internal_code}" == wanted:
                     return item
     return None
 
@@ -54,7 +52,7 @@ def find_tracker_record(slug: str | None, objective_id: str | None) -> dict | No
     for item in raw.get("learningObjectives", []):
         if slug and item.get("slug") == slug:
             return item
-        if objective_id and item.get("objectiveId") == objective_id:
+        if objective_id and (item.get("objectiveId") == objective_id or item.get("legacyObjectiveId") == objective_id):
             return item
     return None
 
@@ -86,7 +84,7 @@ def build_tex(title: str, level: str, sample_questions: list[str]) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Scaffold a new Mana Maths LO folder from the repo template.")
     parser.add_argument("--slug", help="Existing repo slug, e.g. lo-yr9-capacity")
-    parser.add_argument("--objective-id", help="Tracker objectiveId, e.g. y9-topic1-lo13-capacity")
+    parser.add_argument("--objective-id", help="Tracker objectiveId, e.g. YR9_T1_LO13 (legacy slug-style ids also accepted)")
     parser.add_argument("--force", action="store_true", help="Overwrite existing tex files")
     args = parser.parse_args()
 

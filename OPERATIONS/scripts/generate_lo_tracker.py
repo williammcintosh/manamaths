@@ -99,6 +99,23 @@ def source_code_number(source_code: str | None) -> int | None:
 
 
 def build_objective_id(topic_num: int | None, topic_title: str, item: dict) -> str:
+    topic_id = str(item.get("topic_id") or "").strip().upper()
+    internal_code = str(item.get("internal_code") or "").strip().upper()
+    if topic_id and internal_code:
+        return f"YR9_{internal_code}"
+
+    source_code = str(item.get("source_code") or "").strip().upper()
+    number = source_code_number(source_code)
+    if isinstance(topic_num, int) and number is not None:
+        kind = "EX" if source_code.startswith("EX") else "LO"
+        return f"YR9_T{topic_num}_{kind}{number}"
+
+    topic_slug = re.sub(r"[^A-Z0-9]+", "_", (topic_title or "OTHER").upper()).strip("_")
+    slug_tail = re.sub(r"[^A-Z0-9]+", "_", source_code or "UNTITLED").strip("_") or "UNTITLED"
+    return f"YR9_{topic_slug}_{slug_tail}"
+
+
+def build_legacy_objective_id(topic_num: int | None, topic_title: str, item: dict) -> str:
     source_code = item.get("source_code") or ""
     number = source_code_number(source_code)
     title = item.get("display_title") or item.get("title") or "untitled"
@@ -147,7 +164,8 @@ def canonical_records() -> list[dict]:
                 title = item.get("display_title") or item.get("title") or "Untitled"
                 records.append(
                     {
-                        "objectiveId": build_objective_id(topic_num, topic_title, item),
+                        "objectiveId": build_objective_id(topic_num, topic_title, {**item, "topic_id": topic_id}),
+                        "legacyObjectiveId": build_legacy_objective_id(topic_num, topic_title, item),
                         "canonicalTopicId": topic_id,
                         "canonicalInternalCode": item.get("internal_code"),
                         "canonicalSourceCode": item.get("source_code"),
@@ -200,6 +218,7 @@ def collect_lo_record(item: dict, slug_map: dict[str, str]) -> dict:
 
     return {
         "objectiveId": item.get("objectiveId"),
+        "legacyObjectiveId": item.get("legacyObjectiveId"),
         "canonicalTopicId": item.get("canonicalTopicId"),
         "canonicalInternalCode": item.get("canonicalInternalCode"),
         "canonicalSourceCode": item.get("canonicalSourceCode"),
@@ -239,6 +258,7 @@ def main() -> int:
             "Canonical curriculum/source metadata lives in the canonical JSON file.",
             "This tracker is derived from the canonical JSON plus the actual filesystem state.",
             "Canonical identifiers and titles are copied through here so smaller models can compare tracker and canonical records directly.",
+            "objectiveId now uses the shared code form, e.g. YR9_T3_LO20; legacyObjectiveId keeps the old sluggy identifier for compatibility.",
             "Prefer canonicalInternalCode / canonicalSourceCode / canonicalDisplayTitle when matching back to the canonical JSON.",
         ],
         "summary": {
