@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 97,
+    "complete": 99,
     "partial": 0,
-    "notStarted": 30
+    "notStarted": 28
   },
   "learningObjectives": [
     {
@@ -3421,30 +3421,30 @@
       "canonicalTitle": "Understanding Cartesian plane and co-ordinates",
       "canonicalDisplayTitle": "Understanding Cartesian plane and co-ordinates",
       "slug": "lo-yr9-understanding-cartesian-plane-and-co-ordinates",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-understanding-cartesian-plane-and-co-ordinates.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
@@ -3456,30 +3456,30 @@
       "canonicalTitle": "Drawing straight-line from given equation",
       "canonicalDisplayTitle": "Drawing straight-line from given equation",
       "slug": "lo-yr9-drawing-straight-line-from-given-equation",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-drawing-straight-line-from-given-equation.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
