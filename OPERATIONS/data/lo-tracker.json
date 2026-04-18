@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 86,
+    "complete": 87,
     "partial": 0,
-    "notStarted": 41
+    "notStarted": 40
   },
   "learningObjectives": [
     {
@@ -2021,30 +2021,30 @@
       "canonicalTitle": "Mixed Numbers",
       "canonicalDisplayTitle": "Mixed Numbers",
       "slug": "lo-yr9-mixed-numbers",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-mixed-numbers",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-mixed-numbers.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-mixed-numbers/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-mixed-numbers/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-mixed-numbers/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-mixed-numbers/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-mixed-numbers/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-mixed-numbers/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
