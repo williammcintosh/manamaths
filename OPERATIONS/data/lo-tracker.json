@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 94,
+    "complete": 95,
     "partial": 0,
-    "notStarted": 33
+    "notStarted": 32
   },
   "learningObjectives": [
     {
@@ -2301,30 +2301,30 @@
       "canonicalTitle": "Simplifying algebraic fractions",
       "canonicalDisplayTitle": "Simplifying algebraic fractions",
       "slug": "lo-yr9-simplifying-algebraic-fractions",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-simplifying-algebraic-fractions.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
