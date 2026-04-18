@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 74,
+    "complete": 75,
     "partial": 0,
-    "notStarted": 53
+    "notStarted": 52
   },
   "learningObjectives": [
     {
@@ -3176,30 +3176,30 @@
       "canonicalTitle": "Linear model for scatter plots",
       "canonicalDisplayTitle": "Linear model for scatter plots",
       "slug": "lo-yr9-linear-model-for-scatter-plots",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-linear-model-for-scatter-plots.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
