@@ -12,8 +12,8 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 79,
-    "partial": 0,
+    "complete": 78,
+    "partial": 1,
     "notStarted": 48
   },
   "learningObjectives": [
@@ -3315,23 +3315,23 @@
       "canonicalSourceCode": "LO2",
       "canonicalTitle": "Identifying linear, quadratic, and exponential patterns",
       "canonicalDisplayTitle": "Identifying linear, quadratic, and exponential patterns",
-      "slug": "lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
-      "status": "complete",
+      "slug": "lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
+      "status": "partial",
       "paths": {
-        "folder": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
-        "objectivePage": "manamaths/SITE/objectives/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns.html",
+        "folder": "manamaths/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
+        "objectivePage": null,
         "levels": {
           "foundation": {
-            "tex": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/foundation-questions.tex",
-            "pdf": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/foundation-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/proficient-questions.tex",
-            "pdf": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/proficient-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/excellence-questions.tex",
-            "pdf": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/excellence-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns/excellence-questions.pdf"
           }
         }
       },
@@ -3339,7 +3339,7 @@
         "folder": true,
         "allTex": true,
         "allPdfs": true,
-        "website": true
+        "website": false
       }
     },
     {
