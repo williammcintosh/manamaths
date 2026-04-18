@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 71,
+    "complete": 72,
     "partial": 0,
-    "notStarted": 56
+    "notStarted": 55
   },
   "learningObjectives": [
     {
@@ -3071,30 +3071,30 @@
       "canonicalTitle": "Misleading graphs",
       "canonicalDisplayTitle": "Misleading graphs",
       "slug": "lo-yr9-misleading-graphs",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-misleading-graphs",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-misleading-graphs.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-misleading-graphs/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-misleading-graphs/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-misleading-graphs/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-misleading-graphs/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-misleading-graphs/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-misleading-graphs/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
