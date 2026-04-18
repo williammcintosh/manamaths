@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 87,
+    "complete": 88,
     "partial": 0,
-    "notStarted": 40
+    "notStarted": 39
   },
   "learningObjectives": [
     {
@@ -2056,30 +2056,30 @@
       "canonicalTitle": "Prime Factors",
       "canonicalDisplayTitle": "Prime Factors",
       "slug": "lo-yr9-prime-factors",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-prime-factors",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-prime-factors.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-prime-factors/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-prime-factors/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-prime-factors/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-prime-factors/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-prime-factors/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-prime-factors/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
