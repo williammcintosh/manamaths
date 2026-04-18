@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 72,
+    "complete": 73,
     "partial": 0,
-    "notStarted": 55
+    "notStarted": 54
   },
   "learningObjectives": [
     {
@@ -3106,30 +3106,30 @@
       "canonicalTitle": "Planning and collecting multivariate data",
       "canonicalDisplayTitle": "Planning and collecting multivariate data",
       "slug": "lo-yr9-planning-and-collecting-multivariate-data",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-planning-and-collecting-multivariate-data.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
