@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 92,
+    "complete": 93,
     "partial": 0,
-    "notStarted": 35
+    "notStarted": 34
   },
   "learningObjectives": [
     {
@@ -2231,30 +2231,30 @@
       "canonicalTitle": "Solving equations with fractions",
       "canonicalDisplayTitle": "Solving equations with fractions",
       "slug": "lo-yr9-solving-equations-with-fractions",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-fractions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-solving-equations-with-fractions.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-fractions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-fractions/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-fractions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-fractions/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-fractions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-equations-with-fractions/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
