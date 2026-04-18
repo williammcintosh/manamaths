@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 105,
+    "complete": 106,
     "partial": 0,
-    "notStarted": 22
+    "notStarted": 21
   },
   "learningObjectives": [
     {
@@ -3701,30 +3701,30 @@
       "canonicalTitle": "Using tables to explore patterns and graphs",
       "canonicalDisplayTitle": "Using tables to explore patterns and graphs",
       "slug": "lo-yr9-using-tables-to-explore-patterns-and-graphs",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-using-tables-to-explore-patterns-and-graphs.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
