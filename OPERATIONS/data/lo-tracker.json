@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 89,
+    "complete": 90,
     "partial": 0,
-    "notStarted": 38
+    "notStarted": 37
   },
   "learningObjectives": [
     {
@@ -2126,30 +2126,30 @@
       "canonicalTitle": "Expanding double brackets",
       "canonicalDisplayTitle": "Expanding double brackets",
       "slug": "lo-yr9-expanding-double-brackets",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-expanding-double-brackets",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-expanding-double-brackets.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-expanding-double-brackets/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-expanding-double-brackets/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-expanding-double-brackets/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-expanding-double-brackets/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-expanding-double-brackets/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-expanding-double-brackets/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
