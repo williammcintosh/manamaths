@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 84,
+    "complete": 85,
     "partial": 0,
-    "notStarted": 43
+    "notStarted": 42
   },
   "learningObjectives": [
     {
@@ -1006,30 +1006,30 @@
       "canonicalTitle": "Solving measurement equations",
       "canonicalDisplayTitle": "Solving measurement equations",
       "slug": "lo-yr9-solving-measurement-equations",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-solving-measurement-equations",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-solving-measurement-equations.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-measurement-equations/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-measurement-equations/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-measurement-equations/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-measurement-equations/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-measurement-equations/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-measurement-equations/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
