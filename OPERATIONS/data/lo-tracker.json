@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 100,
+    "complete": 101,
     "partial": 0,
-    "notStarted": 27
+    "notStarted": 26
   },
   "learningObjectives": [
     {
@@ -3526,30 +3526,30 @@
       "canonicalTitle": "Finding x- and y-intercepts",
       "canonicalDisplayTitle": "Finding x- and y-intercepts",
       "slug": "lo-yr9-finding-x-and-y-intercepts",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-finding-x-and-y-intercepts.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
