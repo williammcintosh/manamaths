@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 83,
+    "complete": 84,
     "partial": 0,
-    "notStarted": 44
+    "notStarted": 43
   },
   "learningObjectives": [
     {
@@ -971,30 +971,30 @@
       "canonicalTitle": "Forming measurement expressions",
       "canonicalDisplayTitle": "Forming measurement expressions",
       "slug": "lo-yr9-forming-measurement-expressions",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-forming-measurement-expressions",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-forming-measurement-expressions.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-measurement-expressions/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-measurement-expressions/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-measurement-expressions/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-measurement-expressions/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-measurement-expressions/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-measurement-expressions/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
