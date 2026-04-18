@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 75,
+    "complete": 76,
     "partial": 0,
-    "notStarted": 52
+    "notStarted": 51
   },
   "learningObjectives": [
     {
@@ -3211,30 +3211,30 @@
       "canonicalTitle": "Sampling variation",
       "canonicalDisplayTitle": "Sampling variation",
       "slug": "lo-yr9-sampling-variation",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-sampling-variation",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-sampling-variation.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-sampling-variation/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-sampling-variation/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-sampling-variation/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-sampling-variation/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-sampling-variation/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-sampling-variation/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
