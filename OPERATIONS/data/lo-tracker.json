@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 80,
+    "complete": 81,
     "partial": 0,
-    "notStarted": 47
+    "notStarted": 46
   },
   "learningObjectives": [
     {
@@ -866,30 +866,30 @@
       "canonicalTitle": "Drawing nets of basic shapes",
       "canonicalDisplayTitle": "Drawing nets of basic shapes",
       "slug": "lo-yr9-drawing-nets-of-basic-shapes",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-drawing-nets-of-basic-shapes.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
