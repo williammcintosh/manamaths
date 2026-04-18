@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 91,
+    "complete": 92,
     "partial": 0,
-    "notStarted": 36
+    "notStarted": 35
   },
   "learningObjectives": [
     {
@@ -2196,30 +2196,30 @@
       "canonicalTitle": "Factorising special double brackets (perfect squares, difference between squares)",
       "canonicalDisplayTitle": "Factorising special double brackets (perfect squares, difference between squares)",
       "slug": "lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
