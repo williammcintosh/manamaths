@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 78,
-    "partial": 1,
-    "notStarted": 48
+    "complete": 80,
+    "partial": 0,
+    "notStarted": 47
   },
   "learningObjectives": [
     {
@@ -831,30 +831,30 @@
       "canonicalTitle": "Perimeter and area of composite shapes involving circles",
       "canonicalDisplayTitle": "Perimeter and area of composite shapes involving circles",
       "slug": "lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
@@ -3316,10 +3316,10 @@
       "canonicalTitle": "Identifying linear, quadratic, and exponential patterns",
       "canonicalDisplayTitle": "Identifying linear, quadratic, and exponential patterns",
       "slug": "lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
-      "status": "partial",
+      "status": "complete",
       "paths": {
         "folder": "manamaths/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
-        "objectivePage": null,
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-identifying-linear-quadratic-and-exponential-patterns.html",
         "levels": {
           "foundation": {
             "tex": "manamaths/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns/foundation-questions.tex",
@@ -3339,7 +3339,7 @@
         "folder": true,
         "allTex": true,
         "allPdfs": true,
-        "website": false
+        "website": true
       }
     },
     {
