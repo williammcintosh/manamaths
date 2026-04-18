@@ -3806,30 +3806,30 @@
       "canonicalTitle": "Forming equation of parabolas",
       "canonicalDisplayTitle": "Forming equation of parabolas",
       "slug": "lo-yr9-forming-equation-of-parabolas",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas",
+        "objectivePage": "SITE/objectives/lo-yr9-forming-equation-of-parabolas.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/foundation-questions.tex",
+            "pdf": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/proficient-questions.tex",
+            "pdf": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/excellence-questions.tex",
+            "pdf": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
