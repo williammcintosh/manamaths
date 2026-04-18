@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 88,
+    "complete": 89,
     "partial": 0,
-    "notStarted": 39
+    "notStarted": 38
   },
   "learningObjectives": [
     {
@@ -2091,30 +2091,30 @@
       "canonicalTitle": "Basic Power Rules",
       "canonicalDisplayTitle": "Basic Power Rules",
       "slug": "lo-yr9-basic-power-rules",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-basic-power-rules",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-basic-power-rules.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-basic-power-rules/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-basic-power-rules/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-basic-power-rules/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-basic-power-rules/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-basic-power-rules/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-basic-power-rules/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
