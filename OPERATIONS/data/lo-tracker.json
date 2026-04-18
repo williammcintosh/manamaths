@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 93,
+    "complete": 94,
     "partial": 0,
-    "notStarted": 34
+    "notStarted": 33
   },
   "learningObjectives": [
     {
@@ -2266,30 +2266,30 @@
       "canonicalTitle": "Solving quadratics",
       "canonicalDisplayTitle": "Solving quadratics",
       "slug": "lo-yr9-solving-quadratics",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-solving-quadratics",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-solving-quadratics.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-quadratics/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-quadratics/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-quadratics/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-quadratics/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-solving-quadratics/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-solving-quadratics/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
