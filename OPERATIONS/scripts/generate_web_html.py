@@ -250,6 +250,11 @@ def latex_to_html(text: str) -> str:
     if text.startswith("__RAWHTML__"):
         return text[len("__RAWHTML__"):]
     text = re.sub(r"^\\item\s*", "", text)
+    while text.startswith("{") and text.endswith("}"):
+        inner = text[1:-1].strip()
+        if not inner:
+            break
+        text = inner
     if "\\begin{tikzpicture}" in text or any(token in text for token in ["\\hscale{", "\\thermo{", "\\cylinder{", "\\speedo{", "\\simplepie{", "\\picto{", "\\barchart{", "\\histogram{", "\\begin{tabular}"]):
         cleaned = re.sub(r"\\\[[^\]]*\]", "", text)
         cleaned = re.sub(r"\\(hscale|thermo|cylinder|speedo|simplepie|picto|barchart|histogram)\{[^\n]*", "", cleaned)
@@ -277,6 +282,7 @@ def latex_to_html(text: str) -> str:
     )
     text = re.sub(r"\\text\{([^}]*)\}", lambda m: html.escape(m.group(1)), text)
     text = re.sub(r"\\mathrm\{([^}]*)\}", lambda m: html.escape(m.group(1)), text)
+    text = re.sub(r"\\mbox\{(\$.*?\$)\}", lambda m: m.group(1), text)
     text = re.sub(r"\\mbox\{([^}]*)\}", lambda m: m.group(1), text)
 
     def stash_math(match: re.Match[str]) -> str:

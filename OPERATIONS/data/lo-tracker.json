@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 85,
+    "complete": 86,
     "partial": 0,
-    "notStarted": 42
+    "notStarted": 41
   },
   "learningObjectives": [
     {
@@ -1041,30 +1041,30 @@
       "canonicalTitle": "Advanced Power Rules",
       "canonicalDisplayTitle": "Advanced Power Rules",
       "slug": "lo-yr9-advanced-power-rules",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-advanced-power-rules",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-advanced-power-rules.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-advanced-power-rules/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-advanced-power-rules/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-advanced-power-rules/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-advanced-power-rules/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-advanced-power-rules/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-advanced-power-rules/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {

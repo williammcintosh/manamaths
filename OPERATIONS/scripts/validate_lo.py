@@ -63,7 +63,9 @@ def check_html(slug: str, html_path: Path) -> list[str]:
             # approximate extract of block up to closing </ol>
             ol_blocks.append(part.split('</ol>', 1)[0])
     for block in ol_blocks:
-        if '{' in block or '}' in block:
+        visible_block = re.sub(r"\$.*?\$", "", block, flags=re.S)
+        visible_block = re.sub(r"<[^>]+>", "", visible_block)
+        if '{' in visible_block or '}' in visible_block:
             errors.append(f"Found literal brace characters in web questions (possible LaTeX leak): {html_path.relative_to(REPO_ROOT)}")
 
         # 2) ensure separators (row-separator) appear only after multiples of 9 items
