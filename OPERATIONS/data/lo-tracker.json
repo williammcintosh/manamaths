@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 76,
+    "complete": 77,
     "partial": 0,
-    "notStarted": 51
+    "notStarted": 50
   },
   "learningObjectives": [
     {
@@ -3246,30 +3246,30 @@
       "canonicalTitle": "Sampling methodology",
       "canonicalDisplayTitle": "Sampling methodology",
       "slug": "lo-yr9-sampling-methodology",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-sampling-methodology",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-sampling-methodology.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-sampling-methodology/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-sampling-methodology/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-sampling-methodology/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-sampling-methodology/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-sampling-methodology/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-sampling-methodology/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
