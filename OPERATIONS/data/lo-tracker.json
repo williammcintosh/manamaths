@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 103,
+    "complete": 105,
     "partial": 0,
-    "notStarted": 24
+    "notStarted": 22
   },
   "learningObjectives": [
     {
@@ -3634,6 +3634,7 @@
       "status": "complete",
       "paths": {
         "folder": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-finding-point-of-intersection-of-two-lines.html",
         "levels": {
           "foundation": {
             "tex": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/foundation-questions.tex",
@@ -3647,8 +3648,7 @@
             "tex": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/excellence-questions.tex",
             "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/excellence-questions.pdf"
           }
-        },
-        "objectivePage": "manamaths/SITE/objectives/lo-yr9-finding-point-of-intersection-of-two-lines.html"
+        }
       },
       "evidence": {
         "folder": true,
@@ -3666,30 +3666,30 @@
       "canonicalTitle": "Drawing parabola from given equation",
       "canonicalDisplayTitle": "Drawing parabola from given equation",
       "slug": "lo-yr9-drawing-parabola-from-given-equation",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-drawing-parabola-from-given-equation.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
@@ -4188,8 +4188,8 @@
       "canonicalTopicId": "T5",
       "canonicalInternalCode": "T5_LO9",
       "canonicalSourceCode": "LO9",
-      "canonicalTitle": "Applying Pythagoras’ theory",
-      "canonicalDisplayTitle": "Applying Pythagoras’ theory",
+      "canonicalTitle": "Applying Pythagoras\u2019 theory",
+      "canonicalDisplayTitle": "Applying Pythagoras\u2019 theory",
       "slug": "lo-yr9-applying-pythagoras-theory",
       "status": "not_started",
       "paths": {
@@ -4398,8 +4398,8 @@
       "canonicalTopicId": "T5",
       "canonicalInternalCode": "T5_EX03",
       "canonicalSourceCode": "EX03",
-      "canonicalTitle": "Applying Pythagoras’ Theory to 3D representations",
-      "canonicalDisplayTitle": "Applying Pythagoras’ Theory to 3D representations",
+      "canonicalTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
+      "canonicalDisplayTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
       "slug": "lo-yr9-applying-pythagoras-theory-to-3d-representations",
       "status": "not_started",
       "paths": {
