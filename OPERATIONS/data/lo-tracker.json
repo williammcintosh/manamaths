@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 99,
+    "complete": 100,
     "partial": 0,
-    "notStarted": 28
+    "notStarted": 27
   },
   "learningObjectives": [
     {
@@ -3491,30 +3491,30 @@
       "canonicalTitle": "Gradient",
       "canonicalDisplayTitle": "Gradient",
       "slug": "lo-yr9-gradient",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-gradient",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-gradient.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-gradient/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-gradient/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-gradient/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-gradient/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-gradient/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-gradient/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
