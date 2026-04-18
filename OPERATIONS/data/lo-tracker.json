@@ -3631,30 +3631,30 @@
       "canonicalTitle": "Finding point of intersection of two lines",
       "canonicalDisplayTitle": "Finding point of intersection of two lines",
       "slug": "lo-yr9-finding-point-of-intersection-of-two-lines",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/excellence-questions.pdf"
           }
-        }
+        },
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-finding-point-of-intersection-of-two-lines.html"
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
@@ -4188,8 +4188,8 @@
       "canonicalTopicId": "T5",
       "canonicalInternalCode": "T5_LO9",
       "canonicalSourceCode": "LO9",
-      "canonicalTitle": "Applying Pythagoras\u2019 theory",
-      "canonicalDisplayTitle": "Applying Pythagoras\u2019 theory",
+      "canonicalTitle": "Applying Pythagoras’ theory",
+      "canonicalDisplayTitle": "Applying Pythagoras’ theory",
       "slug": "lo-yr9-applying-pythagoras-theory",
       "status": "not_started",
       "paths": {
@@ -4398,8 +4398,8 @@
       "canonicalTopicId": "T5",
       "canonicalInternalCode": "T5_EX03",
       "canonicalSourceCode": "EX03",
-      "canonicalTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
-      "canonicalDisplayTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
+      "canonicalTitle": "Applying Pythagoras’ Theory to 3D representations",
+      "canonicalDisplayTitle": "Applying Pythagoras’ Theory to 3D representations",
       "slug": "lo-yr9-applying-pythagoras-theory-to-3d-representations",
       "status": "not_started",
       "paths": {
