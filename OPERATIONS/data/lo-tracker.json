@@ -3876,30 +3876,30 @@
       "canonicalTitle": "Drawing exponential graphs",
       "canonicalDisplayTitle": "Drawing exponential graphs",
       "slug": "lo-yr9-drawing-exponential-graphs",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "OBJECTIVES/lo-yr9-drawing-exponential-graphs",
+        "objectivePage": "SITE/objectives/lo-yr9-drawing-exponential-graphs.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/foundation-questions.tex",
+            "pdf": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/proficient-questions.tex",
+            "pdf": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/excellence-questions.tex",
+            "pdf": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
