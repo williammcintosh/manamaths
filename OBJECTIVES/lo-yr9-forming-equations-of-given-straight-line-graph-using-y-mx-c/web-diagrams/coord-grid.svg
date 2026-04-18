@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="0 0 520 520">
+<rect width="520" height="520" fill="white"/>
+<g stroke="#c7c7c7" stroke-width="1"><line x1="20" y1="20" x2="500" y2="20"/><line x1="20" y1="20" x2="20" y2="500"/><line x1="20" y1="80" x2="500" y2="80"/><line x1="80" y1="20" x2="80" y2="500"/><line x1="20" y1="140" x2="500" y2="140"/><line x1="140" y1="20" x2="140" y2="500"/><line x1="20" y1="200" x2="500" y2="200"/><line x1="200" y1="20" x2="200" y2="500"/><line x1="20" y1="260" x2="500" y2="260"/><line x1="260" y1="20" x2="260" y2="500"/><line x1="20" y1="320" x2="500" y2="320"/><line x1="320" y1="20" x2="320" y2="500"/><line x1="20" y1="380" x2="500" y2="380"/><line x1="380" y1="20" x2="380" y2="500"/><line x1="20" y1="440" x2="500" y2="440"/><line x1="440" y1="20" x2="440" y2="500"/><line x1="20" y1="500" x2="500" y2="500"/><line x1="500" y1="20" x2="500" y2="500"/></g>
+<g stroke="#111" stroke-width="3">
+<line x1="20" y1="260" x2="500" y2="260"/>
+<line x1="260" y1="500" x2="260" y2="20"/>
+<polygon points="500,260 486,253 486,267" fill="#111"/>
+<polygon points="260,20 253,34 267,34" fill="#111"/>
+</g>
+<g font-family="Arial, sans-serif" font-size="20" fill="#111"><text x="20" y="287" text-anchor="middle">-4</text><text x="242" y="27" text-anchor="end">-4</text><text x="80" y="287" text-anchor="middle">-3</text><text x="242" y="87" text-anchor="end">-3</text><text x="140" y="287" text-anchor="middle">-2</text><text x="242" y="147" text-anchor="end">-2</text><text x="200" y="287" text-anchor="middle">-1</text><text x="242" y="207" text-anchor="end">-1</text><text x="320" y="287" text-anchor="middle">1</text><text x="242" y="327" text-anchor="end">1</text><text x="380" y="287" text-anchor="middle">2</text><text x="242" y="387" text-anchor="end">2</text><text x="440" y="287" text-anchor="middle">3</text><text x="242" y="447" text-anchor="end">3</text><text x="500" y="287" text-anchor="middle">4</text><text x="242" y="507" text-anchor="end">4</text><text x="505" y="252">x</text><text x="270" y="25">y</text></g></svg>
