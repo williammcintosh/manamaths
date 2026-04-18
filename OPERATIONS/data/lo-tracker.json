@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 69,
+    "complete": 71,
     "partial": 0,
-    "notStarted": 58
+    "notStarted": 56
   },
   "learningObjectives": [
     {
@@ -3001,30 +3001,30 @@
       "canonicalTitle": "Analysing scatter plots (i.e. bivariate) - TARSOG",
       "canonicalDisplayTitle": "Analysing scatter plots (i.e. bivariate) - TARSOG",
       "slug": "lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
@@ -3036,30 +3036,30 @@
       "canonicalTitle": "Comparing box-and-whisker graphs - CSSI",
       "canonicalDisplayTitle": "Comparing box-and-whisker graphs - CSSI",
       "slug": "lo-yr9-comparing-box-and-whisker-graphs-cssi",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-comparing-box-and-whisker-graphs-cssi.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
