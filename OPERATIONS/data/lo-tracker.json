@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 95,
+    "complete": 97,
     "partial": 0,
-    "notStarted": 32
+    "notStarted": 30
   },
   "learningObjectives": [
     {
@@ -3351,30 +3351,30 @@
       "canonicalTitle": "Spatial patterns (including drawing next pattern and converting to pattern)",
       "canonicalDisplayTitle": "Spatial patterns (including drawing next pattern and converting to pattern)",
       "slug": "lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
@@ -3386,30 +3386,30 @@
       "canonicalTitle": "Determining nth term of pattern or spatial pattern",
       "canonicalDisplayTitle": "Determining nth term of pattern or spatial pattern",
       "slug": "lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
