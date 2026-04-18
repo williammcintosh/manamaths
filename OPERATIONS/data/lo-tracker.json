@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 77,
+    "complete": 79,
     "partial": 0,
-    "notStarted": 50
+    "notStarted": 48
   },
   "learningObjectives": [
     {
@@ -3281,30 +3281,30 @@
       "canonicalTitle": "Extrapolating linear, quadratic, and exponential patterns",
       "canonicalDisplayTitle": "Extrapolating linear, quadratic, and exponential patterns",
       "slug": "lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
@@ -3315,31 +3315,31 @@
       "canonicalSourceCode": "LO2",
       "canonicalTitle": "Identifying linear, quadratic, and exponential patterns",
       "canonicalDisplayTitle": "Identifying linear, quadratic, and exponential patterns",
-      "slug": "lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
-      "status": "not_started",
+      "slug": "lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
