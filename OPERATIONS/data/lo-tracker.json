@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 81,
+    "complete": 82,
     "partial": 0,
-    "notStarted": 46
+    "notStarted": 45
   },
   "learningObjectives": [
     {
@@ -901,30 +901,30 @@
       "canonicalTitle": "Surface area",
       "canonicalDisplayTitle": "Surface area",
       "slug": "lo-yr9-surface-area",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-surface-area",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-surface-area.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-surface-area/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-surface-area/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-surface-area/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-surface-area/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-surface-area/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-surface-area/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
