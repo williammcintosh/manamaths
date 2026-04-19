@@ -1,0 +1,76 @@
+\documentclass[17pt,a4paper,landscape]{extarticle}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tasks}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
+\renewcommand{\arraystretch}{1.15}
+\everymath{\displaystyle}
+
+\begin{document}
+\sffamily
+\boldmath
+
+\boldmath
+
+\boldmath
+
+{\LARGE \textbf{Parallel line rules --- Excellence}}
+\begin{tasks}(3)
+\task {Find \mbox{$x$} and then give all eight angle sizes.\\[0.4em]
+\begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
+\draw[thick] (-2,1.2)--(2,1.2);
+\draw[thick] (-2,-1.2)--(2,-1.2);
+\draw[thick] (-1.5,-2)--(1.5,2);
+\node[fill=white,inner sep=1pt] at (-0.72,1.72) {$3x-6^\circ$};
+\node[fill=white,inner sep=1pt] at (0.72,-1.72) {$2x+24^\circ$};
+\end{tikzpicture}}
+
+\task {Find \mbox{$y$} and then state the acute angle size.\\[0.4em]
+\begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
+\draw[thick] (-2,1.2)--(2,1.2);
+\draw[thick] (-2,-1.2)--(2,-1.2);
+\draw[thick] (-1.5,-2)--(1.5,2);
+\node[fill=white,inner sep=1pt] at (0.82,1.72) {$5y-7^\circ$};
+\node[fill=white,inner sep=1pt] at (-0.82,-1.72) {$2y+38^\circ$};
+\end{tikzpicture}}
+
+\task {Find \mbox{$a$}. Then say whether \mbox{$4a+8^\circ$} is acute or obtuse.\\[0.4em]
+\begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
+\draw[thick] (-2,1.2)--(2,1.2);
+\draw[thick] (-2,-1.2)--(2,-1.2);
+\draw[thick] (-1.5,-2)--(1.5,2);
+\node[fill=white,inner sep=1pt] at (0.82,1.72) {$4a+8^\circ$};
+\node[fill=white,inner sep=1pt] at (0.72,-1.72) {$7a-31^\circ$};
+\end{tikzpicture}}
+
+\task {Two co-interior angles are \mbox{$(6m+4)^\circ$} and \mbox{$(3m+14)^\circ$}. Find \mbox{$m$} and both angles.}
+
+\task {Two corresponding angles are \mbox{$(4p+9)^\circ$} and \mbox{$(2p+45)^\circ$}. Find \mbox{$p$}.}
+
+\task {Two alternate angles are \mbox{$(5q-11)^\circ$} and \mbox{$(3q+27)^\circ$}. Find \mbox{$q$}.}
+
+\task {A pair of corresponding angles is \mbox{$124^\circ$} and \mbox{$124^\circ$}. Explain why that is evidence the lines are parallel.}
+
+\task {A pair of co-interior angles is \mbox{$97^\circ$} and \mbox{$83^\circ$}. What conclusion can you make about the lines, and why?}
+
+\task {A student writes: if two alternate angles add to \mbox{$180^\circ$}, the lines are parallel. Explain the mistake.}
+
+\task {The acute angle is three times smaller than the obtuse angle. Find both angle sizes.}
+
+\task {The obtuse angle is \mbox{$18^\circ$} bigger than twice the acute angle. Find both angle sizes.}
+
+\task {Write two different facts you can prove once you know one angle is \mbox{$67^\circ$}.}
+
+\task {Explain the difference between corresponding angles and co-interior angles using the words \textit{position} and \textit{sum}.}
+
+\task {Create your own short parallel-lines problem involving one unknown, then solve it.}
+\end{tasks}
+
+\end{document}
