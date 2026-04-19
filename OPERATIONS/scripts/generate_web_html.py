@@ -701,11 +701,11 @@ def render_te_reo_terms(terms: list[dict]) -> str:
         maori = html.escape(str(term.get("te_reo_maori_term") or ""))
         url = html.escape(str(term.get("te_aka_word_url") or ""))
         link_html = f'<a class="te-reo-link" href="{url}" target="_blank" rel="noopener noreferrer">Open in Te Aka</a>' if url else ""
+        meta_html = f'''<div class="te-reo-meta"><h3>{english}</h3>{link_html}</div>'''
         items.append(
             f'''<article class="te-reo-card">
         <p class="te-reo-word">{maori}</p>
-        <h3>{english}</h3>
-        {link_html}
+        {meta_html}
       </article>'''
         )
 
