@@ -135,6 +135,44 @@ h3 {
   color: var(--muted);
 }
 
+.te-reo-panel {
+  background: linear-gradient(180deg, #f7fbf1 0%, #eef6e6 100%);
+}
+
+.te-reo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.te-reo-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.te-reo-card h3 {
+  margin-bottom: 8px;
+}
+
+.te-reo-word {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-deep);
+}
+
+.te-reo-card-note {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.te-reo-link {
+  font-weight: 700;
+}
+
 .eyebrow {
   margin: 0 0 8px;
   font-size: 0.78rem;

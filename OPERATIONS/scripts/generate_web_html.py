@@ -19,6 +19,7 @@ OBJECTIVES_DIR = REPO_ROOT / "OBJECTIVES"
 SITE_DIR = REPO_ROOT / "SITE"
 CANONICAL_JSON = WORKSPACE_ROOT / "lesson-builder" / "canonical" / "year-9-learning-objectives.json"
 LO_TRACKER_JSON = OPERATIONS_DIR / "data" / "lo-tracker.json"
+TE_REO_TRACKER_JSON = WORKSPACE_ROOT / "te-reo-maori-terms" / "tracking" / "te-reo-progress.json"
 OUTPUT_DIR = SITE_DIR / "objectives"
 TITLE = "Mana Maths"
 DESCRIPTION = "Helping maths teachers save time. We make maths curriculum content resources easy to find."
@@ -536,8 +537,32 @@ def composite_media_html(slug: str, level_key: str) -> str:
     )
 
 
+def load_te_reo_terms() -> dict[str, list[dict]]:
+    if not TE_REO_TRACKER_JSON.exists():
+        return {}
+
+    try:
+        raw = json.loads(TE_REO_TRACKER_JSON.read_text())
+    except Exception:
+        return {}
+
+    out: dict[str, list[dict]] = {}
+    for topic in raw.get("topics", []):
+        for item in topic.get("items", []):
+            if not isinstance(item, dict):
+                continue
+            selected_terms = item.get("selected_terms") or []
+            if not selected_terms:
+                continue
+            key = str(item.get("internal_code") or "").strip()
+            if key:
+                out[key] = [term for term in selected_terms if isinstance(term, dict)]
+    return out
+
+
 def load_objectives() -> list[dict]:
     source_metadata, source_metadata_by_name, source_metadata_by_objective_id, topic_titles_by_number = load_source_metadata()
+    te_reo_terms = load_te_reo_terms()
     objectives: list[dict] = []
 
     if not LO_TRACKER_JSON.exists():
@@ -631,6 +656,7 @@ def load_objectives() -> list[dict]:
                 "objective_id": objective_id,
                 "internal_code": meta.get("internal_code", ""),
                 "source_code": meta.get("source_code", ""),
+                "te_reo_terms": te_reo_terms.get(meta.get("internal_code", ""), []),
             }
         )
 
@@ -665,7 +691,45 @@ def render_level(level: dict) -> str:
     """
 
 
+def render_te_reo_terms(terms: list[dict]) -> str:
+    if not terms:
+        return ""
+
+    items = []
+    for term in terms:
+        english = html.escape(str(term.get("english_term") or ""))
+        maori = html.escape(str(term.get("te_reo_maori_term") or ""))
+        url = html.escape(str(term.get("te_aka_word_url") or ""))
+        notes = html.escape(str(term.get("notes") or ""))
+        note_html = f'<p class="te-reo-card-note">{notes}</p>' if notes else ""
+        link_html = f'<a class="te-reo-link" href="{url}" target="_blank" rel="noopener noreferrer">Open in Te Aka</a>' if url else ""
+        items.append(
+            f'''<article class="te-reo-card">
+        <p class="eyebrow">Term</p>
+        <h3>{english}</h3>
+        <p class="te-reo-word">{maori}</p>
+        {note_html}
+        {link_html}
+      </article>'''
+        )
+
+    return f"""
+      <section class=\"worksheet-panel te-reo-panel\">
+        <div class=\"worksheet-panel-head\">
+          <div>
+            <h3>Te reo Māori terms</h3>
+            <p>Key mathematical language for this learning objective</p>
+          </div>
+        </div>
+        <div class=\"te-reo-grid\">
+          {''.join(items)}
+        </div>
+      </section>
+    """
+
+
 def render_objective_page(obj: dict) -> str:
+    te_reo_terms = render_te_reo_terms(obj.get("te_reo_terms", []))
     levels = "".join(render_level(level) for level in obj["levels"])
     page_title = html.escape(obj['topic'])
     page_description = html.escape(obj['instruction'] or DESCRIPTION)
@@ -702,6 +766,7 @@ def render_objective_page(obj: dict) -> str:
     </header>
 
     <main class=\"page-shell page-shell-detail\">
+      {te_reo_terms}
       {levels}
     </main>
   </body>
