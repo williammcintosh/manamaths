@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 125,
+    "complete": 126,
     "partial": 0,
-    "notStarted": 2
+    "notStarted": 1
   },
   "learningObjectives": [
     {
@@ -4401,30 +4401,30 @@
       "canonicalTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
       "canonicalDisplayTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
       "slug": "lo-yr9-applying-pythagoras-theory-to-3d-representations",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-applying-pythagoras-theory-to-3d-representations.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
