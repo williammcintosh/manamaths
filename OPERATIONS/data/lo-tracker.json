@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 126,
+    "complete": 127,
     "partial": 0,
-    "notStarted": 1
+    "notStarted": 0
   },
   "learningObjectives": [
     {
@@ -4436,30 +4436,30 @@
       "canonicalTitle": "Introduction to Circle Geometry",
       "canonicalDisplayTitle": "Introduction to Circle Geometry",
       "slug": "lo-yr9-introduction-to-circle-geometry",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-introduction-to-circle-geometry",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-introduction-to-circle-geometry.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-introduction-to-circle-geometry/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-introduction-to-circle-geometry/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-introduction-to-circle-geometry/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-introduction-to-circle-geometry/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-introduction-to-circle-geometry/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-introduction-to-circle-geometry/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     }
   ]
