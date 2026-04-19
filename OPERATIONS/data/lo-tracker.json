@@ -3946,30 +3946,30 @@
       "canonicalTitle": "Angles around a point",
       "canonicalDisplayTitle": "Angles around a point",
       "slug": "lo-yr9-angles-around-a-point",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-angles-around-a-point",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-angles-around-a-point.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-angles-around-a-point/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-angles-around-a-point/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-angles-around-a-point/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-angles-around-a-point/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-angles-around-a-point/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-angles-around-a-point/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
