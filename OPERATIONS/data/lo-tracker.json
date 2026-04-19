@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 115,
+    "complete": 116,
     "partial": 0,
-    "notStarted": 12
+    "notStarted": 11
   },
   "learningObjectives": [
     {
@@ -4051,30 +4051,30 @@
       "canonicalTitle": "Interior angles of a triangle",
       "canonicalDisplayTitle": "Interior angles of a triangle",
       "slug": "lo-yr9-interior-angles-of-a-triangle",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-interior-angles-of-a-triangle.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
