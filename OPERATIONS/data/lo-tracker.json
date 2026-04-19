@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 113,
+    "complete": 115,
     "partial": 0,
-    "notStarted": 14
+    "notStarted": 12
   },
   "learningObjectives": [
     {
@@ -4016,30 +4016,30 @@
       "canonicalTitle": "Vertically opposite angles",
       "canonicalDisplayTitle": "Vertically opposite angles",
       "slug": "lo-yr9-vertically-opposite-angles",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-vertically-opposite-angles",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-vertically-opposite-angles.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-vertically-opposite-angles/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-vertically-opposite-angles/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-vertically-opposite-angles/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-vertically-opposite-angles/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-vertically-opposite-angles/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-vertically-opposite-angles/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
