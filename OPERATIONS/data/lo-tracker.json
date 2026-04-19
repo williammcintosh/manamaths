@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 123,
+    "complete": 125,
     "partial": 0,
-    "notStarted": 4
+    "notStarted": 2
   },
   "learningObjectives": [
     {
@@ -4331,30 +4331,30 @@
       "canonicalTitle": "Using trig functions to calculate lengths of a right-angled triangle",
       "canonicalDisplayTitle": "Using trig functions to calculate lengths of a right-angled triangle",
       "slug": "lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
@@ -4365,31 +4365,31 @@
       "canonicalSourceCode": "EX02",
       "canonicalTitle": "Using trig functions to calculate angles of a right-angled triangle",
       "canonicalDisplayTitle": "Using trig functions to calculate angles of a right-angled triangle",
-      "slug": "lo-yr9-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle",
-      "status": "not_started",
+      "slug": "lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
