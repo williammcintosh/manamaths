@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 109,
+    "complete": 112,
     "partial": 0,
-    "notStarted": 18
+    "notStarted": 15
   },
   "learningObjectives": [
     {
@@ -3808,20 +3808,20 @@
       "slug": "lo-yr9-forming-equation-of-parabolas",
       "status": "complete",
       "paths": {
-        "folder": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas",
-        "objectivePage": "SITE/objectives/lo-yr9-forming-equation-of-parabolas.html",
+        "folder": "manamaths/OBJECTIVES/lo-yr9-forming-equation-of-parabolas",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-forming-equation-of-parabolas.html",
         "levels": {
           "foundation": {
-            "tex": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/foundation-questions.tex",
-            "pdf": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/foundation-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-equation-of-parabolas/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-equation-of-parabolas/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/proficient-questions.tex",
-            "pdf": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/proficient-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-equation-of-parabolas/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-equation-of-parabolas/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/excellence-questions.tex",
-            "pdf": "OBJECTIVES/lo-yr9-forming-equation-of-parabolas/excellence-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-forming-equation-of-parabolas/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-forming-equation-of-parabolas/excellence-questions.pdf"
           }
         }
       },
@@ -3843,20 +3843,20 @@
       "slug": "lo-yr9-using-features-of-a-parabola-to-solve-problems",
       "status": "complete",
       "paths": {
-        "folder": "OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems",
-        "objectivePage": "SITE/objectives/lo-yr9-using-features-of-a-parabola-to-solve-problems.html",
+        "folder": "manamaths/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-using-features-of-a-parabola-to-solve-problems.html",
         "levels": {
           "foundation": {
-            "tex": "OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/foundation-questions.tex",
-            "pdf": "OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/foundation-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": "OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/proficient-questions.tex",
-            "pdf": "OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/proficient-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": "OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/excellence-questions.tex",
-            "pdf": "OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/excellence-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/excellence-questions.pdf"
           }
         }
       },
@@ -3878,20 +3878,20 @@
       "slug": "lo-yr9-drawing-exponential-graphs",
       "status": "complete",
       "paths": {
-        "folder": "OBJECTIVES/lo-yr9-drawing-exponential-graphs",
-        "objectivePage": "SITE/objectives/lo-yr9-drawing-exponential-graphs.html",
+        "folder": "manamaths/OBJECTIVES/lo-yr9-drawing-exponential-graphs",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-drawing-exponential-graphs.html",
         "levels": {
           "foundation": {
-            "tex": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/foundation-questions.tex",
-            "pdf": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/foundation-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-exponential-graphs/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-exponential-graphs/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/proficient-questions.tex",
-            "pdf": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/proficient-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-exponential-graphs/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-exponential-graphs/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/excellence-questions.tex",
-            "pdf": "OBJECTIVES/lo-yr9-drawing-exponential-graphs/excellence-questions.pdf"
+            "tex": "manamaths/OBJECTIVES/lo-yr9-drawing-exponential-graphs/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-drawing-exponential-graphs/excellence-questions.pdf"
           }
         }
       },
@@ -3911,30 +3911,30 @@
       "canonicalTitle": "Naming angles",
       "canonicalDisplayTitle": "Naming angles",
       "slug": "lo-yr9-naming-angles",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-naming-angles",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-naming-angles.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-naming-angles/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-naming-angles/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-naming-angles/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-naming-angles/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-naming-angles/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-naming-angles/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
