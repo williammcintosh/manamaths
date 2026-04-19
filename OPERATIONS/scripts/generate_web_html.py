@@ -700,15 +700,11 @@ def render_te_reo_terms(terms: list[dict]) -> str:
         english = html.escape(str(term.get("english_term") or ""))
         maori = html.escape(str(term.get("te_reo_maori_term") or ""))
         url = html.escape(str(term.get("te_aka_word_url") or ""))
-        notes = html.escape(str(term.get("notes") or ""))
-        note_html = f'<p class="te-reo-card-note">{notes}</p>' if notes else ""
         link_html = f'<a class="te-reo-link" href="{url}" target="_blank" rel="noopener noreferrer">Open in Te Aka</a>' if url else ""
         items.append(
             f'''<article class="te-reo-card">
-        <p class="eyebrow">Term</p>
-        <h3>{english}</h3>
         <p class="te-reo-word">{maori}</p>
-        {note_html}
+        <h3>{english}</h3>
         {link_html}
       </article>'''
         )
@@ -718,7 +714,6 @@ def render_te_reo_terms(terms: list[dict]) -> str:
         <div class=\"worksheet-panel-head\">
           <div>
             <h3>Te reo Māori terms</h3>
-            <p>Key mathematical language for this learning objective</p>
           </div>
         </div>
         <div class=\"te-reo-grid\">
