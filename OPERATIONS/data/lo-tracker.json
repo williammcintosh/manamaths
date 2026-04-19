@@ -4121,30 +4121,30 @@
       "canonicalTitle": "Regular/irregular polygon",
       "canonicalDisplayTitle": "Regular/irregular polygon",
       "slug": "lo-yr9-regular-irregular-polygon",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-regular-irregular-polygon",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-regular-irregular-polygon.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-regular-irregular-polygon/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-regular-irregular-polygon/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-regular-irregular-polygon/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-regular-irregular-polygon/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-regular-irregular-polygon/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-regular-irregular-polygon/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
