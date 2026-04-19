@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 116,
+    "complete": 119,
     "partial": 0,
-    "notStarted": 11
+    "notStarted": 8
   },
   "learningObjectives": [
     {
@@ -4086,30 +4086,30 @@
       "canonicalTitle": "Parallel line rules",
       "canonicalDisplayTitle": "Parallel line rules",
       "slug": "lo-yr9-parallel-line-rules",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-parallel-line-rules",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-parallel-line-rules.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-parallel-line-rules/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-parallel-line-rules/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-parallel-line-rules/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-parallel-line-rules/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-parallel-line-rules/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-parallel-line-rules/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
@@ -4156,30 +4156,30 @@
       "canonicalTitle": "Pythagoras theory finding short and long sides",
       "canonicalDisplayTitle": "Pythagoras theory finding short and long sides",
       "slug": "lo-yr9-pythagoras-theory-finding-short-and-long-sides",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-pythagoras-theory-finding-short-and-long-sides.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
