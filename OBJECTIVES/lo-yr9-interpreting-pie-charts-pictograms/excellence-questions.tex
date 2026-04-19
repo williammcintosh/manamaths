@@ -9,36 +9,16 @@
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=5.0em}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
 \renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\newcommand{\simplepie}[1]{%
-\begin{tikzpicture}[baseline=(current bounding box.center),scale=0.78]
-  \def\start{90}
-  \foreach \pct/\clr/\lbl in {#1} {
-    \pgfmathsetmacro{\delta}{\pct*3.6}
-    \draw[fill=\clr!45,draw=black,thick] (0,0) -- (\start:1.45) arc (\start:\start+\delta:1.45) -- cycle;
-    \pgfmathsetmacro{\mid}{\start + 0.5*\delta}
-    \node[font=\scriptsize] at (\mid:0.85) {\pct\%};
-    \node[font=\scriptsize] at (\mid:2.02) {\lbl};
-    \pgfmathsetmacro{\nextstart}{\start+\delta}
-    \xdef\start{\nextstart}
-  }
-\end{tikzpicture}%
-}
-
-\newcommand{\picto}[2]{%
-\begin{tikzpicture}[baseline=(current bounding box.center)]
-  \foreach \i in {1,...,#1} {
-    \draw[fill=teal!35,draw=black,thick] ({0.42*(\i-1)},0) rectangle ++(0.32,0.32);
-    \node[font=\tiny] at ({0.42*(\i-1)+0.16},0.16) {#2};
-  }
-\end{tikzpicture}%
-}
-
 \begin{document}
 \sffamily
+\boldmath
+
+\boldmath
+
 \boldmath
 
 {\LARGE \textbf{Interpreting pie charts \& pictograms --- Excellence}}
