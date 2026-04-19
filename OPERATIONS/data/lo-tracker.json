@@ -12,9 +12,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "complete": 122,
+    "complete": 123,
     "partial": 0,
-    "notStarted": 5
+    "notStarted": 4
   },
   "learningObjectives": [
     {
@@ -4296,30 +4296,30 @@
       "canonicalTitle": "Representing and constructing 3D shapes",
       "canonicalDisplayTitle": "Representing and constructing 3D shapes",
       "slug": "lo-yr9-representing-and-constructing-3d-shapes",
-      "status": "not_started",
+      "status": "complete",
       "paths": {
-        "folder": null,
-        "objectivePage": null,
+        "folder": "manamaths/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes",
+        "objectivePage": "manamaths/SITE/objectives/lo-yr9-representing-and-constructing-3d-shapes.html",
         "levels": {
           "foundation": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes/foundation-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes/foundation-questions.pdf"
           },
           "proficient": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes/proficient-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes/proficient-questions.pdf"
           },
           "excellence": {
-            "tex": null,
-            "pdf": null
+            "tex": "manamaths/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes/excellence-questions.tex",
+            "pdf": "manamaths/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes/excellence-questions.pdf"
           }
         }
       },
       "evidence": {
-        "folder": false,
-        "allTex": false,
-        "allPdfs": false,
-        "website": false
+        "folder": true,
+        "allTex": true,
+        "allPdfs": true,
+        "website": true
       }
     },
     {
