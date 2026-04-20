@@ -634,6 +634,10 @@ def load_objectives() -> list[dict]:
         if not meta:
             meta = source_metadata_by_name.get(normalize_lookup_key(slug.removeprefix("lo-yr9-").replace("-", " ")), {})
 
+        tracker_topic_id = str(tracker_item.get("canonicalTopicId") or "")
+        tracker_topic_match = re.search(r"T(\d+)$", tracker_topic_id)
+        tracker_topic_number = int(tracker_topic_match.group(1)) if tracker_topic_match else None
+
         topic_title = str(meta.get("title") or slug.removeprefix("lo-yr9-").replace("-", " ").title())
         instruction = extract_existing_instruction(objective_page)
         if not instruction and topic_title:
@@ -641,6 +645,11 @@ def load_objectives() -> list[dict]:
 
         internal_code = str(meta.get("internal_code") or tracker_item.get("canonicalInternalCode") or "")
         source_code = str(meta.get("source_code") or tracker_item.get("canonicalSourceCode") or "")
+        topic_number = meta.get("topic_number")
+        if topic_number is None:
+            topic_number = tracker_topic_number
+        topic_sort = meta.get("topic_sort", topic_number if isinstance(topic_number, int) else 999)
+        topic_group = meta.get("topic_label") or (topic_titles_by_number.get(topic_number) if isinstance(topic_number, int) else None) or "Other"
 
         objectives.append(
             {
@@ -650,9 +659,9 @@ def load_objectives() -> list[dict]:
                 "instruction": instruction,
                 "levels": level_data,
                 "is_built": objective_dir.exists(),
-                "topic_group": meta.get("topic_label", "Other"),
-                "topic_number": meta.get("topic_number"),
-                "topic_sort": meta.get("topic_sort", 999),
+                "topic_group": topic_group,
+                "topic_number": topic_number,
+                "topic_sort": topic_sort,
                 "objective_sort": meta.get("objective_sort", fallback_index + 1),
                 "source_sort": fallback_index,
                 "tracker_sort": fallback_index,
