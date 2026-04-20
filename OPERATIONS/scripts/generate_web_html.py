@@ -639,6 +639,9 @@ def load_objectives() -> list[dict]:
         if not instruction and topic_title:
             instruction = f"Explore {topic_title}."
 
+        internal_code = str(meta.get("internal_code") or tracker_item.get("canonicalInternalCode") or "")
+        source_code = str(meta.get("source_code") or tracker_item.get("canonicalSourceCode") or "")
+
         objectives.append(
             {
                 "id": objective_id,
@@ -654,9 +657,9 @@ def load_objectives() -> list[dict]:
                 "source_sort": fallback_index,
                 "tracker_sort": fallback_index,
                 "objective_id": objective_id,
-                "internal_code": meta.get("internal_code", ""),
-                "source_code": meta.get("source_code", ""),
-                "te_reo_terms": te_reo_terms.get(meta.get("internal_code", ""), []),
+                "internal_code": internal_code,
+                "source_code": source_code,
+                "te_reo_terms": te_reo_terms.get(internal_code, []),
             }
         )
 
