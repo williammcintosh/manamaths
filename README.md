@@ -13,13 +13,13 @@ Root should stay lean: a few all-caps docs plus those three folders.
 ## Source of truth
 
 Use these in order:
-- canonical list: `../lesson-builder/canonical/year-9-learning-objectives.json`
+- local repo content under `OBJECTIVES/`, `SITE/`, and `OPERATIONS/`
 - generated tracker: `OPERATIONS/data/lo-tracker.json`
 - te reo term tracker: `OPERATIONS/data/te-reo-progress.json`
 - actual built files: `OBJECTIVES/` and `SITE/`
 
 Quick decision guide:
-- official LO title/order/metadata -> canonical JSON
+- current local working state -> files in this repo
 - what exists / what is missing -> `OPERATIONS/data/lo-tracker.json`
 - edit worksheet content -> `OBJECTIVES/lo-yr9-<slug>/*-questions.tex`
 - inspect generated website output -> `SITE/objectives/lo-yr9-<slug>.html`
@@ -30,6 +30,8 @@ If te reo Māori term blocks need maintenance:
 - local tracker data now lives in `OPERATIONS/data/te-reo-progress.json`
 - reference PDF now lives in `OPERATIONS/reference/NZQAMathematicsTermsMao-Eng.pdf`
 - site generation reads that te reo tracker directly from `manamaths/`
+
+If older workflows mention local `lesson-builder/` inputs, treat them as stale unless Will explicitly restores that repo.
 
 ## Core commands
 

@@ -13,9 +13,7 @@ Use this workflow when building one Year 9 learning objective end to end.
 
 ## Inputs
 
-- `../lesson-builder/canonical/year-9-learning-objectives.json`
-- `../lesson-builder/source/year-9-learning-objectives.pdf`
-- `../lesson-builder/source/9MAT-master-teaching-guide.pdf`
+- local repo files under `OBJECTIVES/`, `SITE/`, and `OPERATIONS/`
 - `OPERATIONS/data/lo-tracker.json`
 - `OPERATIONS/data/te-reo-progress.json`
 - actual files under `OBJECTIVES/` and `SITE/`
