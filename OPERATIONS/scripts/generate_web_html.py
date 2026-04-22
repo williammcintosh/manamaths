@@ -582,7 +582,7 @@ def load_notes_index() -> dict[str, dict]:
             continue
         out[slug] = {
             "title": str(item.get("canonicalDisplayTitle") or item.get("canonicalTitle") or slug),
-            "page_url": f"{NOTES_SITE_BASE}/objectives/{slug}.html",
+            "page_url": f"/objectives/{slug}.html#notes",
             "fragment_path": str((WORKSPACE_ROOT / "manamaths-notes" / "SITE" / "fragments" / f"{slug}.html")),
         }
     return out
@@ -778,14 +778,14 @@ def render_notes_panel(notes: dict | None) -> str:
 
     fragment_block = fragment_html or '<p class="notes-missing">Notes HTML preview not available yet.</p>'
     return f"""
-      <section class=\"worksheet-panel notes-panel\">
+      <section id=\"notes\" class=\"worksheet-panel notes-panel\">
         <div class=\"worksheet-panel-head\">
           <div>
             <h3>Notes</h3>
             <p>First-teach worked examples for {title}.</p>
           </div>
           <div class=\"notes-actions\">
-            <a class=\"button button-secondary\" href=\"{page_url}\" target=\"_blank\" rel=\"noopener noreferrer\">Open full notes page</a>
+            <a class=\"button button-secondary\" href=\"{page_url}\">Jump to notes</a>
           </div>
         </div>
         <div class=\"notes-html\">{fragment_block}</div>
