@@ -5,6 +5,7 @@ import argparse
 import html
 import json
 import re
+import shutil
 import subprocess
 import tempfile
 from pathlib import Path
@@ -23,6 +24,7 @@ TE_REO_TRACKER_JSON = OPERATIONS_DIR / "data" / "te-reo-progress.json"
 NOTES_TRACKER_JSON = WORKSPACE_ROOT / "manamaths-notes" / "OPERATIONS" / "data" / "notes-tracker.json"
 NOTES_SITE_BASE = "https://williammcintosh.github.io/manamaths-notes"
 OUTPUT_DIR = SITE_DIR / "objectives"
+NOTES_PDF_OUTPUT_DIR = SITE_DIR / "notes-pdfs"
 TITLE = "Mana Maths"
 DESCRIPTION = "Helping maths teachers save time. We make maths curriculum content resources easy to find."
 LEVELS = [
@@ -580,9 +582,17 @@ def load_notes_index() -> dict[str, dict]:
             continue
         if str(item.get("notesStatus") or "") != "complete":
             continue
+        pdf_source = WORKSPACE_ROOT / "manamaths-notes" / "OBJECTIVES" / slug / "build" / "main.pdf"
+        pdf_target = NOTES_PDF_OUTPUT_DIR / f"{slug}.pdf"
+        pdf_url = ""
+        if pdf_source.exists():
+            pdf_target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(pdf_source, pdf_target)
+            pdf_url = f"../notes-pdfs/{slug}.pdf"
         out[slug] = {
             "title": str(item.get("canonicalDisplayTitle") or item.get("canonicalTitle") or slug),
             "page_url": f"/objectives/{slug}.html#notes",
+            "pdf_url": pdf_url,
             "fragment_path": str((WORKSPACE_ROOT / "manamaths-notes" / "SITE" / "fragments" / f"{slug}.html")),
         }
     return out
@@ -771,12 +781,14 @@ def render_notes_panel(notes: dict | None) -> str:
 
     title = html.escape(str(notes.get("title") or "Notes"))
     page_url = html.escape(str(notes.get("page_url") or "#"))
+    pdf_url = html.escape(str(notes.get("pdf_url") or ""))
     fragment_path = Path(str(notes.get("fragment_path") or ""))
     fragment_html = ""
     if fragment_path.exists():
         fragment_html = fragment_path.read_text(errors="replace")
 
     fragment_block = fragment_html or '<p class="notes-missing">Notes HTML preview not available yet.</p>'
+    pdf_button = f'<a class=\"button button-secondary\" href=\"{pdf_url}\" target=\"_blank\" rel=\"noopener noreferrer\">Download notes PDF</a>' if pdf_url else ''
     return f"""
       <section id=\"notes\" class=\"worksheet-panel notes-panel\">
         <div class=\"worksheet-panel-head\">
@@ -785,7 +797,7 @@ def render_notes_panel(notes: dict | None) -> str:
             <p>First-teach worked examples for {title}.</p>
           </div>
           <div class=\"notes-actions\">
-            <a class=\"button button-secondary\" href=\"{page_url}\">Jump to notes</a>
+            {pdf_button}
           </div>
         </div>
         <div class=\"notes-html\">{fragment_block}</div>
