@@ -15,6 +15,7 @@ Root should stay lean: a few all-caps docs plus those three folders.
 Use these in order:
 - canonical list: `../lesson-builder/canonical/year-9-learning-objectives.json`
 - generated tracker: `OPERATIONS/data/lo-tracker.json`
+- te reo term tracker: `OPERATIONS/data/te-reo-progress.json`
 - actual built files: `OBJECTIVES/` and `SITE/`
 
 Quick decision guide:
@@ -23,7 +24,12 @@ Quick decision guide:
 - edit worksheet content -> `OBJECTIVES/lo-yr9-<slug>/*-questions.tex`
 - inspect generated website output -> `SITE/objectives/lo-yr9-<slug>.html`
 
-Do not hand-edit the tracker JSON.
+Do not hand-edit the LO tracker JSON.
+
+If te reo Māori term blocks need maintenance:
+- local tracker data now lives in `OPERATIONS/data/te-reo-progress.json`
+- reference PDF now lives in `OPERATIONS/reference/NZQAMathematicsTermsMao-Eng.pdf`
+- site generation reads that te reo tracker directly from `manamaths/`
 
 ## Core commands
 

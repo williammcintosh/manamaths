@@ -8,6 +8,7 @@ Use this workflow when building one Year 9 learning objective end to end.
 - `SITE/` = generated website pages and shared site assets
 - `OPERATIONS/scripts/` = build and validation scripts
 - `OPERATIONS/data/lo-tracker.json` = generated status inventory
+- `OPERATIONS/data/te-reo-progress.json` = local te reo Māori term tracker used for website term cards
 - `OPERATIONS/templates/` = worksheet templates
 
 ## Inputs
@@ -16,6 +17,7 @@ Use this workflow when building one Year 9 learning objective end to end.
 - `../lesson-builder/source/year-9-learning-objectives.pdf`
 - `../lesson-builder/source/9MAT-master-teaching-guide.pdf`
 - `OPERATIONS/data/lo-tracker.json`
+- `OPERATIONS/data/te-reo-progress.json`
 - actual files under `OBJECTIVES/` and `SITE/`
 
 ## Definition of done
