@@ -166,15 +166,6 @@ h3 {
   margin-top: 18px;
 }
 
-.notes-html .notes-page-header {
-  margin-bottom: 14px;
-}
-
-.notes-html .notes-page-header h2 {
-  margin: 0;
-  font-size: 1.25rem;
-}
-
 .notes-html .notes-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
