@@ -62,26 +62,26 @@ proficient_questions:
   - \item Calculate \mbox{$0.609 \times 100$}.
   - \item Calculate \mbox{$750 \div 10$}.
   - \item Calculate \mbox{$38.4 \div 100$}.
-  - \item Find the missing number: \mbox{$\square \times 100 = 6300$}.
-  - \item Find the missing number: \mbox{$\square \div 10 = 4.8$}.
-  - \item Find the missing number: \mbox{$7.25 \times \square = 725$}.
-  - \item Find the missing number: \mbox{$930 \div \square = 0.93$}.
+  - '\item Find the missing number: \mbox{$\square \times 100 = 6300$}.'
+  - '\item Find the missing number: \mbox{$\square \div 10 = 4.8$}.'
+  - '\item Find the missing number: \mbox{$7.25 \times \square = 725$}.'
+  - '\item Find the missing number: \mbox{$930 \div \square = 0.93$}.'
 excellence_questions:
   - \item Explain whether \mbox{$3.6 \times 100 = 36$} is correct.
   - \item Explain whether \mbox{$420 \div 10 = 42$} is correct.
   - \item Explain whether \mbox{$0.84 \times 1000 = 84$} is correct.
   - \item Explain whether \mbox{$5.7 \div 100 = 0.057$} is correct.
-  - \item Find the missing number: \mbox{$\square \div 100 = 6.25$}.
-  - \item Find the missing number: \mbox{$\square \times 1000 = 4.8$}.
-  - \item Find the missing number: \mbox{$3.09 \times \square = 309$}.
-  - \item Find the missing number: \mbox{$6400 \div \square = 6.4$}.
+  - '\item Find the missing number: \mbox{$\square \div 100 = 6.25$}.'
+  - '\item Find the missing number: \mbox{$\square \times 1000 = 4.8$}.'
+  - '\item Find the missing number: \mbox{$3.09 \times \square = 309$}.'
+  - '\item Find the missing number: \mbox{$6400 \div \square = 6.4$}.'
   - \item A length is \mbox{$0.047\text{ km}$}. Multiply by \mbox{$1000$}. What is the result in metres?
   - \item A mass is \mbox{$3.6\text{ kg}$}. Divide by \mbox{$1000$}. What is the result in tonnes?
   - \item A file is \mbox{$5.2\text{ MB}$}. In this model it becomes \mbox{$5200\text{ KB}$}. What power-of-ten multiplication has happened?
   - \item A bottle holds \mbox{$1.25\text{ L}$}. Multiply by \mbox{$1000$}. How many millilitres is that?
-  - \item Complete: multiplying by \mbox{$100$} moves each digit \rule{1.8cm}{0.15mm} places \rule{1.8cm}{0.15mm}.
-  - \item Complete: dividing by \mbox{$1000$} moves each digit \rule{1.8cm}{0.15mm} places \rule{1.8cm}{0.15mm}.
-  - \item Which is greater: \mbox{$4.08 \times 10$} or \mbox{$408 \div 10$}?
-  - \item Which is smaller: \mbox{$0.72 \times 100$} or \mbox{$720 \div 10$}?
+  - '\item Complete: multiplying by \mbox{$100$} moves each digit \rule{1.8cm}{0.15mm} places \rule{1.8cm}{0.15mm}.'
+  - '\item Complete: dividing by \mbox{$1000$} moves each digit \rule{1.8cm}{0.15mm} places \rule{1.8cm}{0.15mm}.'
+  - '\item Which is greater: \mbox{$4.08 \times 10$} or \mbox{$408 \div 10$}?'
+  - '\item Which is smaller: \mbox{$0.72 \times 100$} or \mbox{$720 \div 10$}?'
   - \item A student says “when you multiply by 10, just add a zero.” Is that always true? Explain.
   - \item A student says “dividing by 100 always makes a number 100 times smaller.” Explain what that means with an example.
