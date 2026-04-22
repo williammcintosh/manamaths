@@ -139,6 +139,25 @@ h3 {
   background: linear-gradient(180deg, #f7fbf1 0%, #eef6e6 100%);
 }
 
+.notes-panel {
+  background: linear-gradient(180deg, #f7f9ff 0%, #edf3ff 100%);
+}
+
+.notes-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.notes-embed {
+  width: 100%;
+  height: min(78vh, 980px);
+  margin-top: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: white;
+}
+
 .te-reo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));

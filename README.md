@@ -23,6 +23,7 @@ Quick decision guide:
 - what exists / what is missing -> `OPERATIONS/data/lo-tracker.json`
 - edit worksheet content -> `OBJECTIVES/lo-yr9-<slug>/*-questions.tex`
 - inspect generated website output -> `SITE/objectives/lo-yr9-<slug>.html`
+- Notes panel presence on objective pages -> driven by `../manamaths-notes/OPERATIONS/data/notes-tracker.json` during site generation
 
 Do not hand-edit the LO tracker JSON.
 

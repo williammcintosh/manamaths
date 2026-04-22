@@ -20,6 +20,8 @@ SITE_DIR = REPO_ROOT / "SITE"
 CANONICAL_JSON = WORKSPACE_ROOT / "lesson-builder" / "canonical" / "year-9-learning-objectives.json"
 LO_TRACKER_JSON = OPERATIONS_DIR / "data" / "lo-tracker.json"
 TE_REO_TRACKER_JSON = OPERATIONS_DIR / "data" / "te-reo-progress.json"
+NOTES_TRACKER_JSON = WORKSPACE_ROOT / "manamaths-notes" / "OPERATIONS" / "data" / "notes-tracker.json"
+NOTES_SITE_BASE = "https://williammcintosh.github.io/manamaths-notes"
 OUTPUT_DIR = SITE_DIR / "objectives"
 TITLE = "Mana Maths"
 DESCRIPTION = "Helping maths teachers save time. We make maths curriculum content resources easy to find."
@@ -560,9 +562,36 @@ def load_te_reo_terms() -> dict[str, list[dict]]:
     return out
 
 
+def load_notes_index() -> dict[str, dict]:
+    if not NOTES_TRACKER_JSON.exists():
+        return {}
+
+    try:
+        raw = json.loads(NOTES_TRACKER_JSON.read_text())
+    except Exception:
+        return {}
+
+    out: dict[str, dict] = {}
+    for item in raw.get("learningObjectives", []):
+        if not isinstance(item, dict):
+            continue
+        slug = str(item.get("slug") or "").strip()
+        if not slug:
+            continue
+        if str(item.get("notesStatus") or "") != "complete":
+            continue
+        out[slug] = {
+            "title": str(item.get("canonicalDisplayTitle") or item.get("canonicalTitle") or slug),
+            "page_url": f"{NOTES_SITE_BASE}/objectives/{slug}.html",
+            "pdf_url": f"{NOTES_SITE_BASE}/OBJECTIVES/{slug}/build/main.pdf",
+        }
+    return out
+
+
 def load_objectives() -> list[dict]:
     source_metadata, source_metadata_by_name, source_metadata_by_objective_id, topic_titles_by_number = load_source_metadata()
     te_reo_terms = load_te_reo_terms()
+    notes_index = load_notes_index()
     objectives: list[dict] = []
 
     if not LO_TRACKER_JSON.exists():
@@ -669,6 +698,7 @@ def load_objectives() -> list[dict]:
                 "internal_code": internal_code,
                 "source_code": source_code,
                 "te_reo_terms": te_reo_terms.get(internal_code, []),
+                "notes": notes_index.get(slug),
             }
         )
 
@@ -735,8 +765,33 @@ def render_te_reo_terms(terms: list[dict]) -> str:
     """
 
 
+def render_notes_panel(notes: dict | None) -> str:
+    if not notes:
+        return ""
+
+    title = html.escape(str(notes.get("title") or "Notes"))
+    page_url = html.escape(str(notes.get("page_url") or "#"))
+    pdf_url = html.escape(str(notes.get("pdf_url") or "#"))
+    return f"""
+      <section class=\"worksheet-panel notes-panel\">
+        <div class=\"worksheet-panel-head\">
+          <div>
+            <h3>Notes</h3>
+            <p>First-teach worked examples for {title}.</p>
+          </div>
+          <div class=\"notes-actions\">
+            <a class=\"button button-secondary\" href=\"{page_url}\" target=\"_blank\" rel=\"noopener noreferrer\">Open notes page</a>
+            <a class=\"button button-secondary\" href=\"{pdf_url}\" target=\"_blank\" rel=\"noopener noreferrer\">Download notes PDF</a>
+          </div>
+        </div>
+        <iframe class=\"notes-embed\" src=\"{pdf_url}#view=FitH\" title=\"Notes PDF preview for {title}\"></iframe>
+      </section>
+    """
+
+
 def render_objective_page(obj: dict) -> str:
     te_reo_terms = render_te_reo_terms(obj.get("te_reo_terms", []))
+    notes_panel = render_notes_panel(obj.get("notes"))
     levels = "".join(render_level(level) for level in obj["levels"])
     page_title = html.escape(obj['topic'])
     page_description = html.escape(obj['instruction'] or DESCRIPTION)
@@ -774,6 +829,7 @@ def render_objective_page(obj: dict) -> str:
 
     <main class=\"page-shell page-shell-detail\">
       {te_reo_terms}
+      {notes_panel}
       {levels}
     </main>
   </body>
