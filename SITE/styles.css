@@ -157,25 +157,27 @@ h3 {
   background: rgba(255,255,255,0.92);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 18px;
+  padding: 16px;
   box-shadow: none;
 }
 
 .notes-html .notes-page + .notes-page,
 .notes-html .notes-page-split + .notes-page {
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .notes-html .notes-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
+  align-items: start;
 }
 
 .notes-html .notes-section-title {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   color: #1f4e79;
   font-weight: 800;
+  font-size: 0.98rem;
 }
 
 .notes-html .notes-key-idea,
@@ -183,13 +185,22 @@ h3 {
 .notes-html .notes-example {
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 12px 14px;
-  margin: 0 0 14px;
+  padding: 11px 13px;
+  margin: 0 0 12px;
   background: white;
 }
 
 .notes-html .notes-key-idea {
   background: #eef4f8;
+  min-height: 124px;
+}
+
+.notes-html .notes-example {
+  min-height: 168px;
+}
+
+.notes-html .notes-common-mistake {
+  min-height: 110px;
 }
 
 .notes-html .notes-common-mistake strong {
@@ -199,13 +210,13 @@ h3 {
 .notes-html .notes-list,
 .notes-html .notes-try,
 .notes-html .notes-steps {
-  padding-left: 1.2rem;
+  padding-left: 1.1rem;
 }
 
 .notes-html .notes-page-split {
   height: 1px;
   background: var(--line);
-  margin: 18px 0;
+  margin: 16px 0;
 }
 
 .notes-missing {
