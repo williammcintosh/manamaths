@@ -157,50 +157,54 @@ h3 {
   background: rgba(255,255,255,0.92);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 16px;
+  padding: 14px;
   box-shadow: none;
 }
 
 .notes-html .notes-page + .notes-page,
 .notes-html .notes-page-split + .notes-page {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .notes-html .notes-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  align-items: start;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.notes-html .notes-columns > div {
+  display: grid;
+  gap: 14px;
+  align-content: start;
 }
 
 .notes-html .notes-section-title {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   color: #1f4e79;
   font-weight: 800;
-  font-size: 0.98rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .notes-html .notes-key-idea,
 .notes-html .notes-box,
 .notes-html .notes-example {
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 11px 13px;
-  margin: 0 0 12px;
+  border-radius: 16px;
+  padding: 11px 12px;
+  margin: 0;
   background: white;
+  aspect-ratio: 1.05 / 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .notes-html .notes-key-idea {
   background: #eef4f8;
-  min-height: 124px;
-}
-
-.notes-html .notes-example {
-  min-height: 168px;
-}
-
-.notes-html .notes-common-mistake {
-  min-height: 110px;
 }
 
 .notes-html .notes-common-mistake strong {
@@ -210,13 +214,34 @@ h3 {
 .notes-html .notes-list,
 .notes-html .notes-try,
 .notes-html .notes-steps {
-  padding-left: 1.1rem;
+  padding-left: 1.05rem;
+}
+
+.notes-html .notes-page p {
+  margin: 0 0 6px;
+  line-height: 1.24;
+}
+
+.notes-html .notes-page ul,
+.notes-html .notes-page ol {
+  line-height: 1.22;
 }
 
 .notes-html .notes-page-split {
   height: 1px;
   background: var(--line);
-  margin: 16px 0;
+  margin: 14px 0;
+}
+
+@media (max-width: 900px) {
+  .notes-html .notes-columns {
+    grid-template-columns: 1fr;
+  }
+  .notes-html .notes-key-idea,
+  .notes-html .notes-box,
+  .notes-html .notes-example {
+    aspect-ratio: auto;
+  }
 }
 
 .notes-missing {
