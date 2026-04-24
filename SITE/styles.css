@@ -187,7 +187,7 @@ h3 {
 .notes-html .notes-key-idea,
 .notes-html .notes-box,
 .notes-html .notes-example {
-  border: 2px solid #5d8a56;
+  border: 2px solid #000000;
   border-radius: 18px;
   padding: 12px 13px;
   margin: 0 0 12px;
@@ -197,7 +197,7 @@ h3 {
 
 .notes-html .notes-key-idea {
   background: #edf4e6;
-  border-color: #244b2c;
+  border-color: #000000;
 }
 
 .notes-html .notes-example h4,
