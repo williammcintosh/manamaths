@@ -140,7 +140,7 @@ h3 {
 }
 
 .notes-panel {
-  background: linear-gradient(180deg, #f4f8ef 0%, #e8f1e1 100%);
+  background: linear-gradient(180deg, #f7eee2 0%, #efe2d1 100%);
 }
 
 .notes-actions {
@@ -153,16 +153,16 @@ h3 {
   margin-top: 12px;
   padding: 12px;
   border-radius: 22px;
-  background: linear-gradient(180deg, #edf5e6 0%, #e4efdc 100%);
-  border: 1px solid #d3e0cb;
+  background: linear-gradient(180deg, #f6ecdf 0%, #eedfcc 100%);
+  border: 1px solid #dbc8b2;
 }
 
 .notes-html .notes-page {
-  background: rgba(255,255,255,0.99);
-  border: 1px solid #c7d7c0;
+  background: rgba(255,255,255,0.97);
+  border: 1px solid #d8c7b1;
   border-radius: 24px;
   padding: 18px;
-  box-shadow: 0 14px 30px rgba(36, 75, 44, 0.08);
+  box-shadow: 0 14px 30px rgba(74, 58, 36, 0.08);
 }
 
 .notes-html .notes-page + .notes-page,
@@ -191,12 +191,12 @@ h3 {
   border-radius: 18px;
   padding: 12px 13px;
   margin: 0 0 12px;
-  background: white;
+  background: #fffdf9;
   color: #163221;
 }
 
 .notes-html .notes-key-idea {
-  background: #e4efd9;
+  background: #edf4e6;
   border-color: #244b2c;
 }
 
@@ -245,7 +245,7 @@ h3 {
 
 .notes-html .notes-page-split {
   height: 8px;
-  background: linear-gradient(90deg, #5d8a56 0%, #86a978 100%);
+  background: linear-gradient(90deg, #5d8a56 0%, #89a67f 100%);
   border-radius: 999px;
   margin: 14px 0;
 }
