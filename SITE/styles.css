@@ -151,14 +151,14 @@ h3 {
 
 .notes-html {
   margin-top: 12px;
-  padding: 10px;
+  padding: 12px;
   border-radius: 22px;
   background: linear-gradient(180deg, #edf5e6 0%, #e4efdc 100%);
   border: 1px solid #d3e0cb;
 }
 
 .notes-html .notes-page {
-  background: rgba(255,255,255,0.98);
+  background: rgba(255,255,255,0.99);
   border: 1px solid #c7d7c0;
   border-radius: 24px;
   padding: 18px;
@@ -192,6 +192,7 @@ h3 {
   padding: 12px 13px;
   margin: 0 0 12px;
   background: white;
+  color: #163221;
 }
 
 .notes-html .notes-key-idea {
@@ -203,11 +204,16 @@ h3 {
 .notes-html .notes-box strong,
 .notes-html .notes-key-idea strong {
   display: block;
-  margin-bottom: 4px;
+  margin: 0 0 6px;
+  color: #244b2c;
 }
 
-.notes-html .notes-example h4 {
-  color: #244b2c;
+.notes-html .notes-example h4 p,
+.notes-html .notes-box strong p,
+.notes-html .notes-key-idea strong p,
+.notes-html .notes-section-title p {
+  margin: 0;
+  color: inherit;
 }
 
 .notes-html .notes-common-mistake {
@@ -225,6 +231,13 @@ h3 {
   padding-left: 1rem;
 }
 
+.notes-html .notes-page p,
+.notes-html .notes-page li,
+.notes-html .notes-page ol,
+.notes-html .notes-page ul {
+  color: #163221;
+}
+
 .notes-html .notes-page p {
   margin: 0 0 4px;
   line-height: 1.22;
@@ -232,7 +245,7 @@ h3 {
 
 .notes-html .notes-page-split {
   height: 8px;
-  background: linear-gradient(90deg, #244b2c 0%, #5d8a56 100%);
+  background: linear-gradient(90deg, #5d8a56 0%, #86a978 100%);
   border-radius: 999px;
   margin: 14px 0;
 }
