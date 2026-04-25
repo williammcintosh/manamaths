@@ -290,8 +290,12 @@ def latex_to_html(text: str) -> str:
     text = re.sub(r"\\mbox\{(\$.*?\$)\}", lambda m: m.group(1), text)
     text = re.sub(r"\\mbox\{([^}]*)\}", lambda m: m.group(1), text)
 
+    def transform_web_math(value: str) -> str:
+        value = value.replace(r"\\square", r"\\text{□}")
+        return value
+
     def stash_math(match: re.Match[str]) -> str:
-        return stash_placeholder(match.group(0), "MATH")
+        return stash_placeholder(transform_web_math(match.group(0)), "MATH")
 
     text = MATH_RE.sub(stash_math, text)
     text = html.escape(text)
