@@ -293,6 +293,9 @@ def latex_to_html(text: str) -> str:
     def transform_web_math(value: str) -> str:
         value = sanitize_yaml_text(value)
         value = value.replace("\\\\", "\\")
+        value = value.replace("\\f\\frac", "\\frac")
+        value = value.replace("\\fr ac", "\\frac")
+        value = value.replace("\\f rac", "\\frac")
         value = value.replace(r"\square", "□")
         return value
 
