@@ -140,7 +140,7 @@ h3 {
 }
 
 .notes-panel {
-  background: linear-gradient(180deg, #f8faf4 0%, #f1f5eb 100%);
+  background: linear-gradient(180deg, #fbfcf8 0%, #f3f6ee 100%);
 }
 
 .notes-actions {
@@ -151,18 +151,30 @@ h3 {
 
 .notes-html {
   margin-top: 12px;
-  padding: 12px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, #fbfcf8 0%, #f3f6ee 100%);
+  padding: 10px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f8faf4 0%, #f1f5eb 100%);
   border: 1px solid #d7dfd0;
 }
 
 .notes-html .notes-page {
   background: #fcfbf7;
-  border: 1px solid #000;
-  border-radius: 24px;
-  padding: 18px;
-  box-shadow: 0 14px 30px rgba(36, 75, 44, 0.06);
+  border: 1.5px solid #000;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 10px 20px rgba(36, 75, 44, 0.04);
+}
+
+.notes-html .notes-page::before {
+  content: "Topic 1 LO1 — Place Values and Decimals";
+  display: block;
+  margin: 0 0 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #f7f5ef;
+  color: #244b2c;
+  font-weight: 800;
+  font-size: 1.05rem;
 }
 
 .notes-html .notes-page + .notes-page,
@@ -173,7 +185,7 @@ h3 {
 .notes-html .notes-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 14px;
   align-items: start;
 }
 
@@ -181,15 +193,25 @@ h3 {
   margin-top: 10px;
 }
 
+.notes-html .notes-columns + .notes-columns-bottom::before,
+.notes-html .notes-columns + .notes-box::before {
+  content: "";
+  display: block;
+  height: 2.4px;
+  margin: 8px 0 10px;
+  background: #5d8a56;
+  border-radius: 999px;
+}
+
 .notes-html .notes-columns > div {
   border: 1.5px solid #000000;
   border-radius: 16px;
-  padding: 14px;
+  padding: 12px;
   background: #fffdf9;
 }
 
 .notes-html .notes-section-title {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   color: #244b2c;
   font-weight: 900;
   font-size: 0.98rem;
@@ -200,10 +222,20 @@ h3 {
 .notes-html .notes-example {
   border: 1.5px solid #000000;
   border-radius: 14px;
-  padding: 12px 13px;
-  margin: 0 0 12px;
+  padding: 10px 11px;
+  margin: 0 0 10px;
   background: #fffdf9;
   color: #163221;
+}
+
+.notes-html .notes-example {
+  background: #ffffff;
+}
+
+.notes-html .notes-key-idea strong,
+.notes-html .notes-box strong,
+.notes-html .notes-example h4 {
+  font-size: 0.95rem;
 }
 
 .notes-html .notes-key-idea {
@@ -240,10 +272,28 @@ h3 {
 }
 
 .notes-html .notes-list,
-.notes-html .notes-try,
-.notes-html .notes-steps {
+.notes-html .notes-try {
   padding-left: 1rem;
   margin-top: 0;
+}
+
+.notes-html .notes-steps {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.notes-html .notes-steps li {
+  margin-bottom: 4px;
+}
+
+.notes-html .notes-steps li::before {
+  content: counter(list-item) ". ";
+  font-weight: 700;
+}
+
+.notes-html .notes-list {
+  list-style-type: disclosure-closed;
 }
 
 .notes-html .notes-list li::marker,
@@ -260,7 +310,7 @@ h3 {
 
 .notes-html .notes-page p {
   margin: 0 0 4px;
-  line-height: 1.22;
+  line-height: 1.18;
 }
 
 .notes-html .notes-page p:last-child,
@@ -270,10 +320,10 @@ h3 {
 }
 
 .notes-html .notes-page-split {
-  height: 8px;
-  background: linear-gradient(90deg, #5d8a56 0%, #89a67f 100%);
+  height: 6px;
+  background: #5d8a56;
   border-radius: 999px;
-  margin: 14px 0;
+  margin: 10px 0;
 }
 
 .notes-missing {
