@@ -1,62 +1,110 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=6pt,right=6pt,top=6pt,bottom=6pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\WorksheetTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SetLabel}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\textbf{#1.} #2\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
 \begin{document}
-\sffamily
-\boldmath
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Topic 1 LO1 — Place Values and Decimals \hfill Excellence}
+\SetLabel{Set 1}
+\vspace{0.2em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Is the $4$ in $0.48$ worth $4$? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Is $3.09 > 3.9$? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Which is greater: $2.305$ or $2.35$? Justify.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Which is smaller: $7.08$ or $7.8$? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Write $5.406$ as place-value parts.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Write $2,070$ as place-value parts.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Write $9.304$ as place-value parts.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{In $8.472$, the hundredths digit is \rule{1.4cm}{0.15mm}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Complete: $6.08 = 6 + \frac{\square}{100}$.}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Topic 1 LO1 — Place Values and Decimals \hfill Excellence}
+\SetLabel{Set 2}
+\vspace{0.2em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{10}{Complete: $4.5 = 4 + \frac{\square}{10} = \frac{45}{10}$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{Ascending order: $4.09, 4.9, 4.099, 4.19$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{Descending order: $12.3, 12.03, 12.300, 12.29$.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{13}{Ascending order: $0.909, 0.99, 0.9, 0.099$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{Which does not belong: $0.7, 0.70, 0.07, 0.700$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{Write the number: $3$ ones, $4$ tenths, $7$ hundredths.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{16}{Write the number: $5$ hundreds, $0$ tens, $8$ ones, $2$ tenths.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{Write the number: $1$ ten, $6$ ones, $0$ tenths, $9$ hundredths.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{When does adding a zero change nothing?}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\vspace*{0.4em}
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task Is the \mbox{$4$} in \mbox{$0.48$} worth \mbox{$4$}? Explain.
-\task Is \mbox{$3.09 > 3.9$}? Explain.
-\task Which is greater: \mbox{$2.305$} or \mbox{$2.35$}? Justify.
-\task Which is smaller: \mbox{$7.08$} or \mbox{$7.8$}? Explain.
-\task Write \mbox{$5.406$} as place-value parts.
-\task Write \mbox{$2,070$} as place-value parts.
-\task Write \mbox{$9.304$} as place-value parts.
-\task In \mbox{$8.472$}, the hundredths digit is \rule{1.4cm}{0.15mm}.
-\task Complete: \mbox{$6.08 = 6 + \frac{\square}{100}$}.
-\task Complete: \mbox{$4.5 = 4 + \frac{\square}{10} = \frac{45}{10}$}.
-\task Ascending order: \mbox{$4.09, 4.9, 4.099, 4.19$}.
-\task Descending order: \mbox{$12.3, 12.03, 12.300, 12.29$}.
-\task Ascending order: \mbox{$0.909, 0.99, 0.9, 0.099$}.
-\task Which does not belong: \mbox{$0.7, 0.70, 0.07, 0.700$}?
-\task Write the number: \mbox{$3$} ones, \mbox{$4$} tenths, \mbox{$7$} hundredths.
-\task Write the number: \mbox{$5$} hundreds, \mbox{$0$} tens, \mbox{$8$} ones, \mbox{$2$} tenths.
-\task Write the number: \mbox{$1$} ten, \mbox{$6$} ones, \mbox{$0$} tenths, \mbox{$9$} hundredths.
-\task When does adding a zero change nothing?
-\task Write a 3 d.p. number between \mbox{$6.4$} and \mbox{$6.5$}.
-\task Write a decimal between \mbox{$2.09$} and \mbox{$2.1$}.
-\task Why is \mbox{$4.60 = 4.6$} but \mbox{$460 \ne 46$}?
-\task Complete: \mbox{$0.304 = \frac{3}{10} + \frac{\square}{100} + \frac{4}{1000}$}.
-\task Complete: \mbox{$7,050 = 7 \times 1000 + \square \times 100 + 5 \times 10$}.
-\task Write as a decimal: \mbox{$8 + \frac{2}{10} + \frac{5}{1000}$}.
-\task Why is \mbox{$0.125 < 0.2$}?
-\task Write a 4-digit number with a \mbox{$6$} worth \mbox{$600$}.
-\task Write a 3 d.p. decimal with \mbox{$7$} in the thousandths place.
-\end{tasks}
+\begin{frame}[t]
+\WorksheetTitle{Topic 1 LO1 — Place Values and Decimals \hfill Excellence}
+\SetLabel{Set 3}
+\vspace{0.2em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{Write a 3 d.p. number between $6.4$ and $6.5$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{Write a decimal between $2.09$ and $2.1$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{Why is $4.60 = 4.6$ but $460 \ne 46$?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{Complete: $0.304 = \frac{3}{10} + \frac{\square}{100} + \frac{4}{1000}$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{Complete: $7,050 = 7 \times 1000 + \square \times 100 + 5 \times 10$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{Write as a decimal: $8 + \frac{2}{10} + \frac{5}{1000}$.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{Why is $0.125 < 0.2$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{Write a 4-digit number with a $6$ worth $600$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{Write a 3 d.p. decimal with $7$ in the thousandths place.}\end{column}
+\end{columns}
+\end{frame}
 
 \end{document}

@@ -1,64 +1,110 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=6pt,right=6pt,top=6pt,bottom=6pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\WorksheetTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SetLabel}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\textbf{#1.} #2\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
 \begin{document}
-\sffamily
-\boldmath
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Topic 1 LO1 — Place Values and Decimals \hfill Foundation}
+\SetLabel{Set 1}
+\vspace{0.2em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{4 in $347$ has value \rule{1.8cm}{0.15mm}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{6 in $862$ has value \rule{1.8cm}{0.15mm}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{5 in $5.3$ has value \rule{1.8cm}{0.15mm}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{7 in $2.74$ has value \rule{1.8cm}{0.15mm}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{9 in $19.6$ has value \rule{1.8cm}{0.15mm}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{2 in $0.27$ has value \rule{1.8cm}{0.15mm}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Write in numerals: three hundred and six.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Write in numerals: nine hundred and forty-two.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Write in numerals: six and five tenths.}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Topic 1 LO1 — Place Values and Decimals \hfill Foundation}
+\SetLabel{Set 2}
+\vspace{0.2em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{10}{Write in words: $508$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{Write in words: $3.6$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{Write in words: $12.04$.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{13}{Which is greater: $45$ or $54$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{Which is smaller: $0.8$ or $0.08$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{Which is greater: $6.2$ or $6.02$?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{16}{Which is smaller: $101$ or $110$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{Order ascending: $3.2, 2.9, 3.02$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{Order descending: $406, 460, 640$.}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\vspace*{0.4em}
-{\LARGE \textbf{Foundation}}
-\begin{tasks}(3)
-\task 4 in \mbox{$347$} has value \rule{1.6cm}{0.15mm}.
-\task 6 in \mbox{$862$} has value \rule{1.6cm}{0.15mm}.
-\task 5 in \mbox{$5.3$} has value \rule{1.6cm}{0.15mm}.
-\task 7 in \mbox{$2.74$} has value \rule{1.6cm}{0.15mm}.
-\task 9 in \mbox{$19.6$} has value \rule{1.6cm}{0.15mm}.
-\task 2 in \mbox{$0.27$} has value \rule{1.6cm}{0.15mm}.
-\task Write in numerals: three hundred and six.
-\task Write in numerals: nine hundred and forty-two.
-\task Write in numerals: six and five tenths.
-\task Write in words: \mbox{$508$}.
-\task Write in words: \mbox{$3.6$}.
-\task Write in words: \mbox{$12.04$}.
-\task Which is greater: \mbox{$45$} or \mbox{$54$}?
-\task Which is smaller: \mbox{$0.8$} or \mbox{$0.08$}?
-\task Which is greater: \mbox{$6.2$} or \mbox{$6.02$}?
-\task Which is smaller: \mbox{$101$} or \mbox{$110$}?
-\task Order from smallest to largest: \mbox{$3.2, 2.9, 3.02$}.
-\task Order from largest to smallest: \mbox{$406, 460, 640$}.
-\task Order from smallest to largest: \mbox{$0.4, 0.04, 0.44$}.
-\task Partition \mbox{$58$} into tens and ones.
-\task Partition \mbox{$407$} into hundreds, tens, and ones.
-\task Partition \mbox{$4.7$} into ones and tenths.
-\task Partition \mbox{$3.48$} into ones, tenths, and hundredths.
-\task Partition \mbox{$90.6$} into tens, ones, and tenths.
-\task Fill in the blank: \mbox{$2.3 = 2 + \frac{\square}{10}$}.
-\task Fill in the blank: \mbox{$540 = 5 \times 100 + \square \times 10$}.
-\task Fill in the blank: in \mbox{$8.14$}, the digit in the tenths place is \rule{1.2cm}{0.15mm}.
-\end{tasks}
+\begin{frame}[t]
+\WorksheetTitle{Topic 1 LO1 — Place Values and Decimals \hfill Foundation}
+\SetLabel{Set 3}
+\vspace{0.2em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{Order ascending: $0.4, 0.04, 0.44$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{Partition $58$ into tens and ones.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{Partition $407$ into hundreds, tens, and ones.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{Partition $4.7$ into ones and tenths.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{Partition $3.48$ into ones, tenths, and hundredths.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{Partition $90.6$ into tens, ones, and tenths.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{Complete: $2.3 = 2 + \frac{\square}{10}$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{Complete: $540 = 5 \times 100 + \square \times 10$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{In $8.14$, the tenths digit is \rule{1.4cm}{0.15mm}.}\end{column}
+\end{columns}
+\end{frame}
 
 \end{document}

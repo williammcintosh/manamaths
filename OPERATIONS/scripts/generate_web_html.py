@@ -116,6 +116,24 @@ def extract_questions_from_tex(tex_path: Path) -> list[str]:
 
     if not blocks:
         questions: list[str] = []
+        for line in tex.splitlines():
+            if '\\MMProblem{' in line:
+                chunk = line.split('\\MMProblem{', 1)[1]
+                parts = chunk.split('}{', 1)
+                if len(parts) != 2:
+                    continue
+                cleaned = parts[1]
+                if '}\\end{column}' in cleaned:
+                    cleaned = cleaned.split('}\\end{column}', 1)[0]
+                else:
+                    cleaned = cleaned.rsplit('}', 1)[0]
+                cleaned = cleaned.strip()
+                cleaned = re.sub(r"\\\\\[[^\]]*\]", "", cleaned)
+                cleaned = re.sub(r"\s+", " ", cleaned).strip()
+                if cleaned:
+                    questions.append(cleaned)
+        if questions:
+            return questions
         for pattern in (MINIPAGE_QUESTION_RE, INLINE_QUESTION_RE):
             matches = pattern.findall(tex)
             if matches:

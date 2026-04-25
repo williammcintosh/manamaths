@@ -131,6 +131,8 @@ def protect_inline_math(tex: str) -> str:
 
 def apply_to_file(path: Path) -> tuple[int, str]:
     original = path.read_text(encoding='utf-8')
+    if '\\documentclass[aspectratio=169,12pt]{beamer}' in original or '\\documentclass{beamer}' in original:
+        return 3, 'preserve-beamer-layout'
     if '\\includegraphics' in original and '\\begin{minipage}' in original and '\\begin{tasks}' not in original:
         return 3, 'preserve-custom-visual-layout'
     updated = normalize_preamble(original)

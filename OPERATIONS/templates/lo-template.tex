@@ -1,33 +1,68 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=6.0em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-% Future worksheet generation rules:
-% keep inline maths expressions together as units,
-% but do not box entire prompt lines.
-% preserve generous projected row spacing.
-% default target: 3 sets of 9 problems per scaffold (27 total)
-% while keeping about 3 rows / roughly 9 problems per page where that layout fits.
-% These rules are applied automatically by apply_projector_layout.py.
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=6pt,right=6pt,top=6pt,bottom=6pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\WorksheetTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SetLabel}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\textbf{#1.} #2\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
 \begin{document}
-\sffamily
-\boldmath
-
-{\LARGE \textbf{INSERT HEADER HERE}}
-\begin{tasks}(4)
-\task 
-\end{tasks}
-
+\begin{frame}[t]
+\WorksheetTitle{INSERT HEADER HERE}
+\SetLabel{Set 1}
+\vspace{0.2em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

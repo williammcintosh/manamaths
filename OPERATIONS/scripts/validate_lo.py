@@ -30,8 +30,9 @@ def check_tex(tex_path: Path) -> list[str]:
     text = tex_path.read_text(errors="replace")
     uses_tasks = "\\begin{tasks}" in text and "\\usepackage{tasks}" in text
     uses_custom_visual_layout = "\\includegraphics" in text and "\\begin{minipage}" in text
-    if not uses_tasks and not uses_custom_visual_layout:
-        errors.append(f"Worksheet is not using tasks layout: {tex_path.relative_to(REPO_ROOT)}")
+    uses_beamer_cards = "\\documentclass[aspectratio=169,12pt]{beamer}" in text and "\\MMProblem" in text
+    if not uses_tasks and not uses_custom_visual_layout and not uses_beamer_cards:
+        errors.append(f"Worksheet is not using an approved layout: {tex_path.relative_to(REPO_ROOT)}")
     if "\\begin{enumerate}" in text:
         errors.append(f"Worksheet still contains enumerate layout: {tex_path.relative_to(REPO_ROOT)}")
     return errors
