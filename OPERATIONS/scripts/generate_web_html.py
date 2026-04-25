@@ -71,6 +71,7 @@ MINIPAGE_QUESTION_RE = re.compile(r"\\textbf\{(\d+)\.\}\s*(.*?)(?=\\end\{minipag
 INLINE_QUESTION_RE = re.compile(r"\\textbf\{(\d+)\.\}\s*(.*?)(?=(?:\\hfill|\\par|$))", re.DOTALL)
 META_DESCRIPTION_RE = re.compile(r'<meta\s+name="description"\s+content="([^"]*)"', re.IGNORECASE)
 LEAD_RE = re.compile(r'<p\s+class="lead">(.*?)</p>', re.IGNORECASE | re.DOTALL)
+NOTES_PANEL_RE = re.compile(r'<section id="notes" class="worksheet-panel notes-panel">.*?</section>', re.IGNORECASE | re.DOTALL)
 
 
 def sanitize_yaml_text(raw_text: str) -> str:
@@ -248,6 +249,14 @@ def extract_existing_instruction(page_path: Path) -> str:
         if match:
             return html.unescape(re.sub(r"\s+", " ", match.group(1))).strip()
     return ""
+
+
+def extract_existing_notes_panel(page_path: Path) -> str:
+    if not page_path.exists():
+        return ""
+    text = page_path.read_text(errors="replace")
+    match = NOTES_PANEL_RE.search(text)
+    return match.group(0) if match else ""
 
 
 def latex_to_html(text: str) -> str:
@@ -725,6 +734,7 @@ def load_objectives() -> list[dict]:
                 "source_code": source_code,
                 "te_reo_terms": te_reo_terms.get(internal_code, []),
                 "notes": notes_index.get(slug),
+                "existing_notes_panel": extract_existing_notes_panel(objective_page),
             }
         )
 
@@ -791,9 +801,9 @@ def render_te_reo_terms(terms: list[dict]) -> str:
     """
 
 
-def render_notes_panel(notes: dict | None) -> str:
+def render_notes_panel(notes: dict | None, existing_notes_panel: str = "") -> str:
     if not notes:
-        return ""
+        return existing_notes_panel or ""
 
     title = html.escape(str(notes.get("title") or "Notes"))
     page_url = html.escape(str(notes.get("page_url") or "#"))
@@ -823,7 +833,7 @@ def render_notes_panel(notes: dict | None) -> str:
 
 def render_objective_page(obj: dict) -> str:
     te_reo_terms = render_te_reo_terms(obj.get("te_reo_terms", []))
-    notes_panel = render_notes_panel(obj.get("notes"))
+    notes_panel = render_notes_panel(obj.get("notes"), obj.get("existing_notes_panel", ""))
     levels = "".join(render_level(level) for level in obj["levels"])
     page_title = html.escape(obj['topic'])
     page_description = html.escape(obj['instruction'] or DESCRIPTION)
