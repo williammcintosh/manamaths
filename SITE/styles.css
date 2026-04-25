@@ -177,6 +177,13 @@ h3 {
   align-items: start;
 }
 
+.notes-html .notes-columns > div {
+  border: 5px solid #000000;
+  border-radius: 20px;
+  padding: 14px;
+  background: #fffdf9;
+}
+
 .notes-html .notes-section-title {
   margin: 0 0 6px;
   color: #244b2c;
