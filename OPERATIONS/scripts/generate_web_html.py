@@ -291,6 +291,7 @@ def latex_to_html(text: str) -> str:
     text = re.sub(r"\\mbox\{([^}]*)\}", lambda m: m.group(1), text)
 
     def transform_web_math(value: str) -> str:
+        value = sanitize_yaml_text(value)
         value = value.replace(r"\\square", r"\\text{□}")
         return value
 
