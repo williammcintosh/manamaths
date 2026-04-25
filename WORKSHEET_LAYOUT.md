@@ -24,6 +24,9 @@ Priority order:
 - use larger projected text
 - keep generous row spacing
 - default target: 27 questions per scaffold as 3 sets of 9 when the sheet can carry that cleanly
+- worksheet headers should show the learning objective title only plus the scaffold label
+- do not print internal LO codes like `Topic 1 LO1`
+- do not print set labels like `Set 1`, `Set 2`, or `Set 3`
 - prefer 3 columns for wordier sheets
 - use 4 columns only for short, mostly numeric sheets
 - avoid cramped pages
