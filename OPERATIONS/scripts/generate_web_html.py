@@ -309,6 +309,8 @@ def latex_to_html(text: str) -> str:
         text = text.replace(html.escape(old), html.escape(new))
 
     text = text.replace("\\n", "<br />")
+    text = text.replace("\\<span", "<span")
+    text = text.replace("\\</span>", "</span>")
     text = text.replace("\\&lt;span", "<span")
     text = text.replace("\\&lt;/span&gt;", "</span>")
 
