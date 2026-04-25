@@ -166,15 +166,8 @@ h3 {
 }
 
 .notes-html .notes-page::before {
-  content: "Topic 1 LO1 — Place Values and Decimals";
-  display: block;
-  margin: 0 0 8px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  background: #f7f5ef;
-  color: #244b2c;
-  font-weight: 800;
-  font-size: 1.05rem;
+  content: none;
+  display: none;
 }
 
 .notes-html .notes-page + .notes-page,

@@ -976,7 +976,7 @@ def render_index(objectives: list[dict]) -> str:
     <script>
       (function() {{
         const params = new URLSearchParams(window.location.search);
-        if (params.has('debug') || params.get('mode') === 'debug') {{
+        if (params.get('debug') === 'true') {{
           document.documentElement.dataset.debug = '1';
         }}
       }})();
