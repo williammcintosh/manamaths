@@ -25,6 +25,7 @@ An LO is done only when all of these are true:
 - `foundation-questions.tex` exists
 - `proficient-questions.tex` exists
 - `excellence-questions.tex` exists
+- each scaffold targets 27 problems by default (3 sets of 9) unless the task explicitly calls for a different count
 - all three PDFs build cleanly
 - `SITE/objectives/lo-yr9-<slug>.html` exists
 - `SITE/index.html` links to it
@@ -40,11 +41,12 @@ An LO is done only when all of these are true:
 3. write Foundation questions
 4. write Proficient questions
 5. write Excellence questions
-6. save them in `OBJECTIVES/lo-yr9-<slug>/`
-7. run the single-LO build
-8. visually inspect the rendered PDFs
-9. regenerate the tracker
-10. commit and push
+6. make each scaffold 27 questions by default (3 sets of 9) unless told otherwise
+7. save them in `OBJECTIVES/lo-yr9-<slug>/`
+8. run the single-LO build
+9. visually inspect the rendered PDFs
+10. regenerate the tracker
+11. commit and push
 
 ## Preferred commands
 

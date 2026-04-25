@@ -23,6 +23,7 @@ Priority order:
 
 - use larger projected text
 - keep generous row spacing
+- default target: 27 questions per scaffold as 3 sets of 9 when the sheet can carry that cleanly
 - prefer 3 columns for wordier sheets
 - use 4 columns only for short, mostly numeric sheets
 - avoid cramped pages
@@ -49,7 +50,7 @@ Only protect inline maths fragments when needed.
 After every rebuild, inspect the rendered PDF.
 
 Decision rule:
-- obvious empty room on page 2 -> add more questions
+- obvious empty room on page 2 -> add more questions, usually toward the 27-question target
 - small normal bottom whitespace -> leave it
 - weak third page -> reduce density or question count
 
