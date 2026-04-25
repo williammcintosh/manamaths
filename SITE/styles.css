@@ -140,7 +140,7 @@ h3 {
 }
 
 .notes-panel {
-  background: linear-gradient(180deg, #f7eee2 0%, #efe2d1 100%);
+  background: linear-gradient(180deg, #f8faf4 0%, #f1f5eb 100%);
 }
 
 .notes-actions {
@@ -153,16 +153,16 @@ h3 {
   margin-top: 12px;
   padding: 12px;
   border-radius: 22px;
-  background: linear-gradient(180deg, #f6ecdf 0%, #eedfcc 100%);
-  border: 1px solid #dbc8b2;
+  background: linear-gradient(180deg, #fbfcf8 0%, #f3f6ee 100%);
+  border: 1px solid #d7dfd0;
 }
 
 .notes-html .notes-page {
-  background: rgba(255,255,255,0.97);
-  border: 1px solid #d8c7b1;
+  background: #fcfbf7;
+  border: 1px solid #000;
   border-radius: 24px;
   padding: 18px;
-  box-shadow: 0 14px 30px rgba(74, 58, 36, 0.08);
+  box-shadow: 0 14px 30px rgba(36, 75, 44, 0.06);
 }
 
 .notes-html .notes-page + .notes-page,
@@ -177,9 +177,13 @@ h3 {
   align-items: start;
 }
 
+.notes-html .notes-columns-bottom {
+  margin-top: 10px;
+}
+
 .notes-html .notes-columns > div {
-  border: 5px solid #000000;
-  border-radius: 20px;
+  border: 1.5px solid #000000;
+  border-radius: 16px;
   padding: 14px;
   background: #fffdf9;
 }
@@ -194,8 +198,8 @@ h3 {
 .notes-html .notes-key-idea,
 .notes-html .notes-box,
 .notes-html .notes-example {
-  border: 3px solid #000000;
-  border-radius: 18px;
+  border: 1.5px solid #000000;
+  border-radius: 14px;
   padding: 12px 13px;
   margin: 0 0 12px;
   background: #fffdf9;
@@ -204,7 +208,10 @@ h3 {
 
 .notes-html .notes-key-idea {
   background: #edf4e6;
-  border-color: #000000;
+}
+
+.notes-html .notes-box {
+  background: #f7f5ef;
 }
 
 .notes-html .notes-example h4,
@@ -236,6 +243,12 @@ h3 {
 .notes-html .notes-try,
 .notes-html .notes-steps {
   padding-left: 1rem;
+  margin-top: 0;
+}
+
+.notes-html .notes-list li::marker,
+.notes-html .notes-try li::marker {
+  color: #244b2c;
 }
 
 .notes-html .notes-page p,
@@ -248,6 +261,12 @@ h3 {
 .notes-html .notes-page p {
   margin: 0 0 4px;
   line-height: 1.22;
+}
+
+.notes-html .notes-page p:last-child,
+.notes-html .notes-page ol:last-child,
+.notes-html .notes-page ul:last-child {
+  margin-bottom: 0;
 }
 
 .notes-html .notes-page-split {
