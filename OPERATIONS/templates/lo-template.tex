@@ -24,7 +24,6 @@
 
 \newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=6pt,right=6pt,top=6pt,bottom=6pt,before skip=0pt,after skip=0pt,#1}
 \newcommand{\WorksheetTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
-\newcommand{\SetLabel}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}}
 \newcommand{\MMProblem}[2]{\begin{MMProblemCard}\textbf{#1.} #2\end{MMProblemCard}}
 
 \setbeamertemplate{background}{
@@ -45,7 +44,6 @@
 \begin{document}
 \begin{frame}[t]
 \WorksheetTitle{INSERT HEADER HERE}
-\SetLabel{Set 1}
 \vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{1}{}\end{column}
