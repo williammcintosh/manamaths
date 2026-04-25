@@ -309,6 +309,8 @@ def latex_to_html(text: str) -> str:
         text = text.replace(html.escape(old), html.escape(new))
 
     text = text.replace("\\n", "<br />")
+    text = text.replace("\\&lt;span", "<span")
+    text = text.replace("\\&lt;/span&gt;", "</span>")
 
     for idx, original in enumerate(placeholders):
         text = text.replace(f"@@MATH{idx}@@", original)
