@@ -321,6 +321,9 @@ def latex_to_html(text: str) -> str:
     for idx, original in enumerate(placeholders):
         text = text.replace(f"@@HTML{idx}@@", original)
 
+    text = text.replace("\\<span", "<span")
+    text = text.replace("\\</span>", "</span>")
+
     return text
 
 
