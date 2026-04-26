@@ -195,25 +195,12 @@ h3 {
 .notes-html .notes-columns + .notes-columns::before {
   content: "";
   display: block;
+  column-span: all;
   height: 14px;
+  background: var(--accent-soft);
   border-radius: 8px;
   margin: 0 0 2.5rem;
   width: 100%;
-  background: linear-gradient(
-    to right,
-    var(--accent-soft) 0,
-    var(--accent-soft) calc(50% - 7px),
-    transparent calc(50% - 7px),
-    transparent calc(50% + 7px),
-    var(--accent-soft) calc(50% + 7px),
-    var(--accent-soft) 100%
-  );
-}
-
-@media (max-width: 720px) {
-  .notes-html .notes-columns + .notes-columns::before {
-    background: var(--accent-soft);
-  }
 }
 
 .notes-html .notes-columns > div > :first-child {
