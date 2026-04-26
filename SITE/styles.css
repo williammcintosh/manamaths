@@ -753,13 +753,43 @@ html[data-debug="1"] .objective-debug-code {
 }
 
 /* Detail page panels */
-.worksheet-panel {
+.lo-panel {
   background: var(--surface-strong);
   border: 1px solid var(--line);
   border-radius: 24px;
   box-shadow: 0 18px 44px var(--shadow);
   padding: 24px;
   margin-bottom: 20px;
+}
+
+.lo-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.lo-panel-head h3 {
+  margin: 0;
+}
+
+.panel-sub {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.lo-details {
+  background: linear-gradient(180deg, #f7fbf1 0%, #eef6e6 100%);
+}
+
+.te-reo-panel {
+  background: linear-gradient(180deg, #f7fbf1 0%, #eef6e6 100%);
+}
+
+.notes-panel {
+  background: linear-gradient(180deg, #fbfcf8 0%, #f3f6ee 100%);
 }
 
 /* Module card grid — dashboard-style */
@@ -793,20 +823,6 @@ html[data-debug="1"] .objective-debug-code {
   gap: 12px;
 }
 
-.module-card-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  flex-shrink: 0;
-}
-
-.module-card-icon img {
-  width: 20px;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 3px 6px rgba(39, 79, 42, 0.12));
-}
-
 .module-card-title {
   margin: 0;
   font-size: 1.2rem;
@@ -815,19 +831,12 @@ html[data-debug="1"] .objective-debug-code {
   color: var(--text);
 }
 
-.module-card-count {
-  margin: 2px 0 0;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--muted);
-}
-
 .module-card-desc {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--muted);
-  flex: 1;
+  flex: 0 0 auto;
 }
 
 .module-card-actions {
@@ -842,7 +851,28 @@ html[data-debug="1"] .objective-debug-code {
   text-align: center;
 }
 
-/* Reflow card media queries */
+/* PDF preview thumbnail strip */
+.pdf-preview-strip {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pdf-preview-thumb {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+/* Detail page responsive */
 @media (max-width: 820px) {
   .page-shell {
     width: min(100% - 20px, 1160px);
@@ -860,17 +890,15 @@ html[data-debug="1"] .objective-debug-code {
   .detail-grid {
     grid-template-columns: 1fr;
   }
-  .worksheet-panel-head {
+  .lo-panel-head {
     flex-direction: column;
     align-items: flex-start;
   }
-  .question-row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem 1.8rem;
+  .module-card-grid {
+    grid-template-columns: 1fr;
   }
-  .row-separator {
-    width: 80%;
-    height: 10px;
+  .pdf-preview-thumb {
+    max-width: 100%;
   }
 }
 
@@ -909,9 +937,6 @@ html[data-debug="1"] .objective-debug-code {
     width: 100%;
   }
   .objective-nav {
-    grid-template-columns: 1fr;
-  }
-  .question-row {
     grid-template-columns: 1fr;
   }
 }
