@@ -1,49 +1,106 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=9.8em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\WorksheetTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.10em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.10em}}}\par\vspace{0.10em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
 \begin{document}
-\sffamily
-\boldmath
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Solving 2-step Equations \hfill Proficient}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{$3x+5=26$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{$5y-7=18$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{$\dfrac{p}{4}+6=9$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{$\dfrac{q}{5}-2=7$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{$2a-9=-1$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{$6b+4=-14$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{$7c-3=46$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{$\dfrac{d}{6}+5=2$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{$4e+11=3$}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Solving 2-step Equations \hfill Proficient}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{10}{$9f-8=1$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{$5+2g=19$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{$28=4h-8$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{13}{$\dfrac{j}{3}+7=1$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{$18=\dfrac{k}{2}-3$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{$2n+7=31$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{16}{$\dfrac{x}{4}+3=10$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{$4t+9=41$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{$6u-5=25$}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
-
-{\LARGE \textbf{Solving 2-step equations — Proficient}}
-
-{\large Solve each equation and show your steps.}
-
-\begin{tasks}(3)
-\task \mbox{$3x+5=26$}
-\task \mbox{$5y-7=18$}
-\task \mbox{$p/4+6=9$}
-\task \mbox{$q/5-2=7$}
-\task \mbox{$2a-9=-1$}
-\task \mbox{$6b+4=-14$}
-\task \mbox{$7c-3=46$}
-\task \mbox{$d/6+5=2$}
-\task \mbox{$4e+11=3$}
-\task \mbox{$9f-8=1$}
-\task \mbox{$5+2g=19$}
-\task \mbox{$28=4h-8$}
-\task \mbox{$j/3+7=1$}
-\task \mbox{$18=k/2-3$}
-\task \mbox{$2n+7=31$}
-\task \mbox{$x/4+3=10$}
-\end{tasks}
+\begin{frame}[t]
+\WorksheetTitle{Solving 2-step Equations \hfill Proficient}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{$\dfrac{v}{7}+2=5$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{$\dfrac{w}{3}-4=2$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{$5m+6=-9$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{$8n-3=37$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{$3p+14=5$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{$7q-11=24$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{$-3r+4=13$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{$6s+13=-5$}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{$45=9t-9$}\end{column}
+\end{columns}
+\end{frame}
 
 \end{document}
