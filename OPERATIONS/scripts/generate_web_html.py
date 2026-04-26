@@ -770,12 +770,17 @@ def render_level(level: dict) -> str:
         if level.get("pdf_exists")
         else '<span class="button button-secondary button-disabled">PDF coming soon</span>'
     )
+    icon_count = {"foundation": 1, "proficient": 2, "excellence": 3}.get(str(level.get("key") or "").lower(), 1)
+    icon_html = "".join(
+        '<img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" />'
+        for _ in range(icon_count)
+    )
     return f"""
       <section class=\"worksheet-panel\">
         <div class=\"worksheet-panel-head\">
           <div>
-            <h3>{html.escape(level['label'])}</h3>
-            <p>{len(questions)} web questions</p>
+            <h3 class=\"scaffold-title\"><span class=\"scaffold-koru-group\">{icon_html}</span><span class=\"sr-only\">{html.escape(level['label'])}</span></h3>
+            <p>{len(questions)} math tasks</p>
           </div>
           {download}
         </div>
