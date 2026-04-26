@@ -27,6 +27,7 @@ An LO is done only when all of these are true:
 - `excellence-questions.tex` exists
 - each scaffold targets 27 problems by default (3 sets of 9) unless the task explicitly calls for a different count
 - worksheet print headers use the LO title only plus scaffold label; do not show internal codes like `Topic 1 LO1` and do not show `Set 1/2/3`
+- worksheet print headers use the compact beamer spacing defaults so the first 3x3 page does not clip at the bottom
 - all three PDFs build cleanly
 - `SITE/objectives/lo-yr9-<slug>.html` exists
 - `SITE/index.html` links to it

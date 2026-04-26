@@ -29,7 +29,8 @@ Priority order:
 - do not print set labels like `Set 1`, `Set 2`, or `Set 3`
 - use ragged-right card text to avoid stretched gaps after the question number
 - keep fixed card heights by default for visual consistency across each row of problems
-- prefer tighter padding and wording/layout changes before abandoning fixed heights
+- default to the compact worksheet header: slightly shorter tan title bar, minimal gap under the green rule, and a tighter lift into the first row to avoid bottom cut-off on 3x3 pages
+- prefer tightening header/card padding and wording/layout changes before abandoning fixed heights
 - prefer 3 columns for wordier sheets
 - use 4 columns only for short, mostly numeric sheets
 - avoid cramped pages

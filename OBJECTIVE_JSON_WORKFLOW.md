@@ -5,7 +5,8 @@ Use this when external objective data arrives in JSON and needs to be mapped int
 ## Inputs and outputs
 
 Input source of truth:
-- `../lesson-builder/canonical/year-9-learning-objectives.json`
+- external/canonical objective JSON if explicitly provided for the task
+- otherwise rely on the local `manamaths` repo state plus `OPERATIONS/data/lo-tracker.json`
 
 Generated build-state evidence:
 - `OPERATIONS/data/lo-tracker.json`

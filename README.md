@@ -80,6 +80,8 @@ Worksheet PDF builds use:
 python3 OPERATIONS/scripts/build_pdfs.py
 ```
 
+The default beamer worksheet template now uses compact header spacing to protect the bottom row on 3x3 projector pages.
+
 Supported TeX engines:
 - `latexmk`
 - `pdflatex`
