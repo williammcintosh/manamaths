@@ -52,6 +52,14 @@ An LO is done only when all of these are true:
 
 A full LO also includes **solutions** (answer PDFs via `mm-solutions` skill in `manamaths-solutions/`) and **notes** (teaching notes via `mm-notes` skill in `manamaths-notes/`). The site shows all available modules: scaffold panels have koru-only headings (no text labels) with both "Download tasks" and "Download solutions" buttons when the answer PDF exists.
 
+## Per-module skills
+
+- **Tasks** (worksheets): `mm-tasks` skill  
+- **Solutions** (answer PDFs): `mm-solutions` skill  
+- **Notes** (teaching notes): `mm-notes` skill  
+- **Te reo** (Māori terms): `mm-te-reo` skill  
+- **Resources**: `mm-resources` skill
+
 ## Preferred commands
 
 Choose and scaffold the next missing LO:
