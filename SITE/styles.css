@@ -151,7 +151,7 @@ h3 {
 
 .notes-html {
   margin-top: 12px;
-  padding: 10px;
+  padding: 14px;
   border-radius: 18px;
   background: #fcfbf7;
   border: 1.5px solid #000;
@@ -201,7 +201,7 @@ h3 {
 .notes-html .notes-columns > div {
   border: 1.5px solid #000000;
   border-radius: 16px;
-  padding: 7px 8px;
+  padding: 12px;
   background: #fffdf9;
 }
 
