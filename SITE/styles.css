@@ -208,58 +208,62 @@ h3 {
   font-size: 0.98rem;
 }
 
-.notes-html .notes-key-idea,
-.notes-html .notes-box,
-.notes-html .notes-example {
+.notes-html .notes-key-idea {
   border: 1.5px solid #000000;
   border-radius: 14px;
   padding: 10px 11px;
   margin: 0 0 10px;
-  background: #fffdf9;
+  background: #edf4e6;
   color: #163221;
 }
 
-.notes-html .notes-example {
-  background: #ffffff;
-}
-
-.notes-html .notes-key-idea strong,
-.notes-html .notes-box strong,
-.notes-html .notes-example h4 {
-  font-size: 0.95rem;
-}
-
-.notes-html .notes-key-idea {
-  background: #edf4e6;
-}
-
-.notes-html .notes-box {
-  background: #f7f5ef;
-}
-
-.notes-html .notes-example h4,
-.notes-html .notes-box strong,
-.notes-html .notes-key-idea strong {
-  display: block;
-  margin: 0 0 6px;
-  color: #244b2c;
-}
-
-.notes-html .notes-example h4 p,
-.notes-html .notes-box strong p,
-.notes-html .notes-key-idea strong p,
-.notes-html .notes-section-title p {
+.notes-html .notes-example-block,
+.notes-html .notes-common-block,
+.notes-html .notes-try-block {
   margin: 0;
-  color: inherit;
+  color: #163221;
 }
 
-.notes-html .notes-common-mistake {
+.notes-html .notes-example-block + .notes-example-block,
+.notes-html .notes-common-block + .notes-try-block,
+.notes-html .notes-try-block + .notes-common-block {
+  margin-top: 8px;
+}
+
+.notes-html > .notes-common-block,
+.notes-html > .notes-try-block {
+  border: 1.5px solid #000000;
+  border-radius: 14px;
+  padding: 10px 11px;
+  background: #fffdf9;
+}
+
+.notes-html > .notes-common-block {
   background: #fbf2f3;
   border-color: #8f2f36;
 }
 
-.notes-html .notes-common-mistake strong {
+.notes-html .notes-key-idea strong,
+.notes-html .notes-common-block strong,
+.notes-html .notes-try-block strong,
+.notes-html .notes-example-title {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: #244b2c;
+}
+
+.notes-html .notes-common-block strong {
   color: #8f2f36;
+}
+
+.notes-html .notes-example-title p,
+.notes-html .notes-common-block strong p,
+.notes-html .notes-try-block strong p,
+.notes-html .notes-key-idea strong p,
+.notes-html .notes-section-title p {
+  margin: 0;
+  color: inherit;
 }
 
 .notes-html .notes-list,
