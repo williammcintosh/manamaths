@@ -29,6 +29,8 @@ Priority order:
 - do not print set labels like `Set 1`, `Set 2`, or `Set 3`
 - use ragged-right card text to avoid stretched gaps after the question number
 - avoid hard fixed card heights when they cause overflow; prefer tighter padding and natural card height first
+- allow wide cards for wordier prompts; one wide card may span two card slots
+- if a wide card is used, a page can carry 8 or fewer problems instead of forcing 9
 - prefer 3 columns for wordier sheets
 - use 4 columns only for short, mostly numeric sheets
 - avoid cramped pages

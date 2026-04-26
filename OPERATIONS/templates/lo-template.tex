@@ -25,6 +25,7 @@
 \newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
 \newcommand{\WorksheetTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
 \newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+\newcommand{\MMWideProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
 \setbeamertemplate{background}{
  \begin{tikzpicture}[remember picture,overlay]
@@ -38,8 +39,9 @@
 % Default worksheet generation rules:
 % use notes-style beamer pages
 % use bordered cards for individual problems
-% target 9 problems per frame in a 3x3 grid
-% target 3 frames per scaffold by default where content allows
+% use ragged-right text and tight padding to avoid stretched gaps
+% allow wide cards for wordier prompts so one question can span two slots
+% when a wide card is used, a page may carry 8 or fewer problems instead of forcing 9
 
 \begin{document}
 \begin{frame}[t]
@@ -47,20 +49,18 @@
 \vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{1}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{}\end{column}
+\begin{column}{0.66\textwidth}\MMWideProblem{2}{}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
+\begin{column}{0.66\textwidth}\MMWideProblem{3}{}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
 \end{columns}
 \end{frame}
 \end{document}
