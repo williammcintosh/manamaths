@@ -11,7 +11,7 @@ OPERATIONS_DIR = SCRIPT_DIR.parent
 REPO_ROOT = OPERATIONS_DIR.parent
 WORKSPACE_ROOT = REPO_ROOT.parent
 OBJECTIVES_DIR = REPO_ROOT / "OBJECTIVES"
-CANONICAL_JSON = WORKSPACE_ROOT / "lesson-builder" / "canonical" / "year-9-learning-objectives.json"
+CANONICAL_JSON = WORKSPACE_ROOT / "tasks" / "canonical" / "year-9-learning-objectives.json"
 OUTPUT_JSON = OPERATIONS_DIR / "data" / "lo-tracker.json"
 LEVELS = ["foundation", "proficient", "excellence"]
 

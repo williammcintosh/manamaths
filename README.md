@@ -32,7 +32,7 @@ If te reo Māori term blocks need maintenance:
 - reference PDF now lives in `OPERATIONS/reference/NZQAMathematicsTermsMao-Eng.pdf`
 - site generation reads that te reo tracker directly from `manamaths/`
 
-If older workflows mention local `lesson-builder/` inputs, treat them as stale unless Will explicitly restores that repo.
+If older workflows mention local `tasks/` inputs, treat them as stale unless Will explicitly restores that repo.
 
 ## Core commands
 
