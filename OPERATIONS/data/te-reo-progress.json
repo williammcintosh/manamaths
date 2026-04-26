@@ -3,7 +3,7 @@
     "name": "manamaths-te-reo",
     "purpose": "Track te reo Māori mathematical terms gathered for each Mana Maths Year 9 learning objective and extension, and the Te Aka links that will appear first in each objective module.",
     "source_documents": {
-      "learning_objectives_canonical": "/home/debid/.openclaw/workspace/tasks/canonical/year-9-learning-objectives.json",
+      "learning_objectives_canonical": "/home/debid/.openclaw/workspace/manamaths-tasks/canonical/year-9-learning-objectives.json",
       "terms_pdf": "/home/debid/.openclaw/workspace/manamaths/OPERATIONS/reference/NZQAMathematicsTermsMao-Eng.pdf"
     },
     "term_module_rule": {
