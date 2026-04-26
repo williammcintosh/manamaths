@@ -2,6 +2,8 @@
 
 Use this workflow when building one Year 9 learning objective end to end.
 
+**Read `VISION.md` first** — it explains the project's long-term goal, architecture principles, and how the website vs PDFs fit together. All work should align with that vision.
+
 ## Repo shape
 
 - `OBJECTIVES/` = worksheet source + PDFs + LO-specific media

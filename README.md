@@ -10,6 +10,10 @@
 
 Root should stay lean: a few all-caps docs plus those three folders.
 
+## Vision
+
+Read `VISION.md` for the long-term project goal, architecture, and design principles. The short version: the website is a control panel, the PDFs are classroom tools, and the chatbot will eventually be the editor. Single source of truth, reusable modules.
+
 ## Source of truth
 
 Use these in order:
