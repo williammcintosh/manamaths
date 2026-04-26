@@ -50,6 +50,8 @@ An LO is done only when all of these are true:
 10. regenerate the tracker
 11. commit and push
 
+A full LO also includes **solutions** (answer PDFs via `mm-solutions` skill in `manamaths-solutions/`) and **notes** (teaching notes via `mm-notes` skill in `manamaths-notes/`). The site shows all available modules: scaffold panels have koru-only headings (no text labels) with both "Download tasks" and "Download solutions" buttons when the answer PDF exists.
+
 ## Preferred commands
 
 Choose and scaffold the next missing LO:
