@@ -53,6 +53,10 @@
       container.appendChild(frag);
       list.parentNode.replaceChild(container, list);
       container.dataset.separed = '1';
+      // trigger MathJax re-render if available
+      if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+        MathJax.typesetPromise();
+      }
     });
   }
 

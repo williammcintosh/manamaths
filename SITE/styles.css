@@ -737,10 +737,35 @@ html[data-debug="1"] .objective-debug-code {
   align-items: start;
 }
 
+.worksheet-panel .question-list {
+  counter-reset: question-counter;
+}
+
 .question-list li {
-  line-height: 1.65; /* slightly taller for legibility */
-  padding-right: 0.8rem; /* extra breathing room at the right */
+  line-height: 1.65;
+  padding-right: 0.8rem;
   margin-bottom: 0.4rem;
+  /* PDF card styling */
+  position: relative;
+  list-style: none;
+  border: 1.5px solid #000000;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 10px 12px;
+  margin: 0;
+  min-height: 3.6em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.question-list li::before {
+  content: counter(question-counter) ".";
+  counter-increment: question-counter;
+  font-weight: 700;
+  color: #163221;
+  margin-right: 0.6em;
+  flex-shrink: 0;
+  min-width: 1.4em;
 }
 
 .blank-line {
@@ -781,71 +806,94 @@ html[data-debug="1"] .objective-debug-code {
   line-height: 1.6;
 }
 
-/* Force a three-column worksheet layout on wide/projector screens to match PDF layout */
-@media (min-width: 1000px) {
-  .worksheet-panel .question-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 5.6rem;
-    row-gap: 2.0rem;
-  }
-}
+/* Force a three-column worksheet layout on wide/projector screens — now handled by JS-injected .question-row */
 
 @media (max-width: 999px) {
   .worksheet-panel { font-size: 20px; padding: 28px; }
-  .worksheet-panel .question-list { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 2.2rem; }
 }
 
-/* Page separator: force visual break after every third row (works for 3-column layouts) */
-.question-list li:nth-child(9n) {
-  grid-column: 1 / -1; /* span full width */
-  padding-bottom: 0; /* spacing will be handled by the pseudo element */
-  margin-bottom: 0;  /* reset so the pseudo-element controls spacing */
+/* Page separator: between 9-question groups (3 rows of 3) — handled by JS-inserted .row-separator */
+.row-separator { height:14px; background:var(--accent-soft); border-radius:8px; margin:2.5rem auto 2.5rem; width:62%; }
+.question-list-reflow { display:block; counter-reset: question-counter; }
+.question-row { display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; margin-bottom: 2.4rem; }
+.question-cell {
+  border: 1.5px solid #000;
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px 12px;
+  min-height: 3.6em;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+}
+.question-cell::before {
+  content: counter(question-counter) ".";
+  counter-increment: question-counter;
+  font-weight: 700;
+  color: #163221;
+  flex-shrink: 0;
+  min-width: 1.4em;
 }
 
-.question-list li:nth-child(9n)::after {
-  content: "";
-  display: block;
-  height: 0.6rem;
-  width: 60%;                 /* make it an independent, centered bar */
-  margin: 4.0rem auto 2.0rem; /* gap above and below, centered */
-  background: var(--line);
-  border-radius: 6px;
+/* hide legacy list bullets that remain inside the wrapped <li> elements */
+.question-cell li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.question-cell li::marker { content: none; }
+
+/* Reset the unmatched li styles that conflict with card layout */
+.worksheet-panel .question-list {
+  counter-reset: unset;
+}
+.question-list li {
+  list-style: revert;
+  border: none;
+  border-radius: 0;
+  padding: revert;
+  min-height: unset;
+  display: revert;
+  align-items: revert;
+}
+.question-list li::before {
+  content: unset;
+  counter-increment: unset;
+  font-weight: unset;
+  margin-right: unset;
+  min-width: unset;
 }
 
-/* ensure a little extra space at the start of the next row too */
-.question-list li:nth-child(9n + 1) {
-  margin-top: 0.6rem;
-}
-
+/* Reflow card media queries */
 @media (max-width: 820px) {
   .page-shell {
     width: min(100% - 20px, 1160px);
     padding-top: 88px;
   }
-
-  .question-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 1.4rem;
-  }
-
   .page-shell-detail {
     padding-top: 20px;
   }
-
   .hero-inner {
     width: min(100% - 20px, 1160px);
     gap: 12px;
     align-items: flex-start;
   }
-
   .intro-grid,
   .detail-grid {
     grid-template-columns: 1fr;
   }
-
   .worksheet-panel-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .question-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem 1.8rem;
+  }
+  .row-separator {
+    width: 80%;
+    height: 10px;
   }
 }
 
@@ -853,31 +901,21 @@ html[data-debug="1"] .objective-debug-code {
   .hero {
     padding: 8px 0;
   }
-
-  .question-list {
-    grid-template-columns: 1fr;
-    row-gap: 1rem;
-  }
-
   .hero-brand {
     gap: 10px;
   }
-
   .hero-logo {
     width: 40px;
   }
-
   .header-menu summary {
     width: 42px;
     height: 42px;
     padding: 0 10px;
   }
-
   .header-dropdown {
     min-width: min(260px, calc(100vw - 28px));
     right: -4px;
   }
-
   .objective-section,
   .worksheet-panel,
   .objective-card,
@@ -885,42 +923,18 @@ html[data-debug="1"] .objective-debug-code {
     padding: 20px;
     border-radius: 20px;
   }
-
   .objective-debug-code {
     width: 100%;
     margin-left: 0;
     margin-top: -2px;
   }
-
   .button {
     width: 100%;
   }
-
   .objective-nav {
     grid-template-columns: 1fr;
   }
+  .question-row {
+    grid-template-columns: 1fr;
+  }
 }
-/* Appended: safe, scoped styles for JS grouping separators */
-.question-list-reflow { display:block; }
-.question-row { display:grid; grid-template-columns: repeat(var(--worksheet-columns,3), 1fr); gap: 1.9rem 3.2rem; align-items:start; margin-bottom:4rem; }
-.question-cell { /* wrapper for original li */ }
-.row-separator { height:14px; background:var(--accent-soft); border-radius:8px; margin:2.5rem auto 2.5rem; width:62%; }
-@media (max-width:820px){ .question-row{ grid-template-columns: repeat(3,1fr); gap:1.2rem 1.8rem;} .row-separator{ width:80%; height:10px;} }
-@media (max-width:640px){ .question-row{ grid-template-columns:1fr; } }
-/* Numbering for reflowed question cells (show numeric list markers) */
-.question-list-reflow { counter-reset: question-counter; }
-.question-row { /* keep existing */ }
-.question-cell { position: relative; padding-left: 2.2rem; }
-.question-cell::before {
-  content: counter(question-counter) ".";
-  counter-increment: question-counter;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 700;
-  color: var(--muted);
-}
-
-/* hide legacy list bullets that remain inside the wrapped <li> elements */
-.question-cell li { list-style: none; margin: 0; padding: 0; }
-.question-cell li::marker { content: none; }
