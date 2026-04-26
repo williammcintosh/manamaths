@@ -25,7 +25,6 @@
 \newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
 \newcommand{\WorksheetTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
 \newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
-\newcommand{\MMWideProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
 \setbeamertemplate{background}{
  \begin{tikzpicture}[remember picture,overlay]
@@ -65,17 +64,20 @@
 \vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{10}{Complete: $4.5 = 4 + \frac{\square}{10} = \frac{45}{10}$.}\end{column}
-\begin{column}{0.66\textwidth}\MMWideProblem{11}{Ascending order: $4.09, 4.9, 4.099, 4.19$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{Ascending order: $4.09, 4.9, 4.099, 4.19$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{Descending order: $12.3, 12.03, 12.300, 12.29$.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.66\textwidth}\MMWideProblem{12}{Descending order: $12.3, 12.03, 12.300, 12.29$.}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{13}{Ascending order: $0.909, 0.99, 0.9, 0.099$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{Which does not belong: $0.7, 0.70, 0.07, 0.700$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{Write the number: $3$ ones, $4$ tenths, $7$ hundredths.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{14}{Which does not belong: $0.7, 0.70, 0.07, 0.700$?}\end{column}
-\begin{column}{0.66\textwidth}\MMWideProblem{15}{Write the number: $3$ ones, $4$ tenths, $7$ hundredths.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{16}{Write the number: $5$ hundreds, $0$ tens, $8$ ones, $2$ tenths.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{Write the number: $1$ ten, $6$ ones, $0$ tenths, $9$ hundredths.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{When does adding a zero change nothing?}\end{column}
 \end{columns}
 \end{frame}
 
@@ -83,36 +85,20 @@
 \WorksheetTitle{Place Values and Decimals \hfill Excellence}
 \vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.66\textwidth}\MMWideProblem{16}{Write the number: $5$ hundreds, $0$ tens, $8$ ones, $2$ tenths.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{17}{Write the number: $1$ ten, $6$ ones, $0$ tenths, $9$ hundredths.}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{18}{When does adding a zero change nothing?}\end{column}
-\begin{column}{0.66\textwidth}\MMWideProblem{19}{Write a 3 d.p. number between $6.4$ and $6.5$.}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.66\textwidth}\MMWideProblem{20}{Write a decimal between $2.09$ and $2.1$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{19}{Write a 3 d.p. number between $6.4$ and $6.5$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{Write a decimal between $2.09$ and $2.1$.}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{21}{Why is $4.60 = 4.6$ but $460 \ne 46$?}\end{column}
 \end{columns}
-\end{frame}
-
-\begin{frame}[t]
-\WorksheetTitle{Place Values and Decimals \hfill Excellence}
-\vspace{0.2em}
+\vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.66\textwidth}\MMWideProblem{22}{Complete: $0.304 = \frac{3}{10} + \frac{\square}{100} + \frac{4}{1000}$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{22}{Complete: $0.304 = \frac{3}{10} + \frac{\square}{100} + \frac{4}{1000}$.}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{23}{Complete: $7,050 = 7 \times 1000 + \square \times 100 + 5 \times 10$.}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{24}{Write as a decimal: $8 + \frac{2}{10} + \frac{5}{1000}$.}\end{column}
-\begin{column}{0.66\textwidth}\MMWideProblem{25}{Why is $0.125 < 0.2$?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.66\textwidth}\MMWideProblem{26}{Write a 4-digit number with a $6$ worth $600$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{25}{Why is $0.125 < 0.2$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{Write a 4-digit number with a $6$ worth $600$.}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{27}{Write a 3 d.p. decimal with $7$ in the thousandths place.}\end{column}
 \end{columns}
 \end{frame}
