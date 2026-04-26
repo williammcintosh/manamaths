@@ -151,11 +151,11 @@ h3 {
 
 .notes-html {
   margin-top: 12px;
-  padding: 14px;
+  padding: 12px;
   border-radius: 18px;
   background: #fcfbf7;
   border: 1.5px solid #000;
-  box-shadow: 0 10px 20px rgba(36, 75, 44, 0.04);
+  box-shadow: 0 8px 16px rgba(36, 75, 44, 0.035);
 }
 
 .notes-html::before {
@@ -166,7 +166,7 @@ h3 {
 .notes-html > .notes-columns,
 .notes-html > .notes-box,
 .notes-html > .notes-section-title {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .notes-html > :first-child {
@@ -176,45 +176,45 @@ h3 {
 .notes-html .notes-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 10px;
   align-items: start;
 }
 
 .notes-html .notes-columns-bottom {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .notes-html .notes-columns + .notes-columns-bottom::before,
 .notes-html .notes-columns + .notes-box::before {
   content: "";
   display: block;
-  height: 2.4px;
-  margin: 8px 0 10px;
+  height: 2px;
+  margin: 5px 0 8px;
   background: #5d8a56;
   border-radius: 999px;
 }
 
 .notes-html .notes-columns > div {
   border: 1.5px solid #000000;
-  border-radius: 16px;
-  padding: 12px;
+  border-radius: 14px;
+  padding: 10px;
   background: #fffdf9;
 }
 
 .notes-html .notes-section-title {
-  margin: 0 0 4px;
+  margin: 0 0 3px;
   color: #244b2c;
   font-weight: 900;
-  font-size: 0.98rem;
+  font-size: 0.96rem;
 }
 
 .notes-html .notes-key-idea,
 .notes-html .notes-box,
 .notes-html .notes-example {
   border: 1.5px solid #000000;
-  border-radius: 14px;
-  padding: 10px 11px;
-  margin: 0 0 10px;
+  border-radius: 12px;
+  padding: 9px 10px;
+  margin: 0 0 8px;
   background: #fffdf9;
   color: #163221;
 }
