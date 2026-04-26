@@ -180,6 +180,10 @@ h3 {
   align-items: start;
 }
 
+.notes-html .notes-columns--stack-when-wide {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .notes-html .notes-columns-bottom {
   margin-top: 10px;
 }
