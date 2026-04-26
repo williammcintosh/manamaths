@@ -228,8 +228,10 @@ h3 {
   color: #163221;
 }
 
-.notes-html .notes-common-block,
-.notes-html .notes-try-block {
+.notes-html .notes-columns > div.notes-common-block,
+.notes-html .notes-columns > div.notes-try-block,
+.notes-html > .notes-common-block,
+.notes-html > .notes-try-block {
   border: 1.5px solid #000000;
   border-radius: 14px;
   padding: 10px 11px;
@@ -250,7 +252,8 @@ h3 {
   background: #fffdf9;
 }
 
-.notes-html .notes-common-block {
+.notes-html .notes-columns > div.notes-common-block,
+.notes-html > .notes-common-block {
   background: #fbf2f3;
   border-color: #8f2f36;
 }
