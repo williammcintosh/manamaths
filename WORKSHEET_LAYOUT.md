@@ -45,6 +45,10 @@ Priority order:
 
 `build_pdfs.py` already runs `apply_projector_layout.py` unless `--skip-layout` is passed.
 
+## Solutions
+
+Answer PDFs live in the `manamaths-solutions` repo and are auto-copied into the main site during site generation. See the `mm-solutions` skill for the workflow. The site shows "Download solutions" buttons alongside "Download tasks" buttons when answer PDFs exist.
+
 ## Inline maths rule
 
 Keep the maths expression together, not the whole sentence.
