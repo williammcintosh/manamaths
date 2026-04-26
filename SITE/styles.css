@@ -337,21 +337,21 @@ h3 {
   color: #244b2c;
 }
 
-.notes-html .notes-page p,
-.notes-html .notes-page li,
-.notes-html .notes-page ol,
-.notes-html .notes-page ul {
+.notes-html p,
+.notes-html li,
+.notes-html ol,
+.notes-html ul {
   color: #163221;
 }
 
-.notes-html .notes-page p {
+.notes-html p {
   margin: 0 0 4px;
   line-height: 1.18;
 }
 
-.notes-html .notes-page p:last-child,
-.notes-html .notes-page ol:last-child,
-.notes-html .notes-page ul:last-child {
+.notes-html p:last-child,
+.notes-html ol:last-child,
+.notes-html ul:last-child {
   margin-bottom: 0;
 }
 
