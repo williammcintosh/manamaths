@@ -28,7 +28,8 @@ Priority order:
 - do not print internal LO codes like `Topic 1 LO1`
 - do not print set labels like `Set 1`, `Set 2`, or `Set 3`
 - use ragged-right card text to avoid stretched gaps after the question number
-- avoid hard fixed card heights when they cause overflow; prefer tighter padding and natural card height first
+- keep fixed card heights by default for visual consistency across each row of problems
+- prefer tighter padding and wording/layout changes before abandoning fixed heights
 - prefer 3 columns for wordier sheets
 - use 4 columns only for short, mostly numeric sheets
 - avoid cramped pages
