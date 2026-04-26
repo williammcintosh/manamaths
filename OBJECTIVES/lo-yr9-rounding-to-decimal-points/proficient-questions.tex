@@ -1,51 +1,106 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\WorksheetTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.10em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.10em}}}\par\vspace{0.10em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
 \begin{document}
-\sffamily
-\boldmath
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Rounding to Decimal Points \hfill Proficient}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Round $14.37$ to 1 decimal place.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Round $8.05$ to 1 decimal place.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Round $6.666$ to 2 decimal places.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Round $2.349$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Round $0.995$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Round $17.499$ to the nearest whole number.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Round $17.500$ to the nearest whole number.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Round $3.045$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Round $9.994$ to 2 decimal places.}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Rounding to Decimal Points \hfill Proficient}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{10}{Round $12.444$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{Round $5.555$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{Round $0.074$ to 1 decimal place.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{13}{Round $0.074$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{Fill the blank: $4.27 \approx 4.\square$ to 1 decimal place.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{Fill the blank: $8.196 \approx 8.\square\square$ to 2 decimal places.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{16}{Is $6.84 \to 6.9$ to 1 decimal place correct?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{Is $3.141 \to 3.14$ to 2 decimal places correct?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{What digit decides the rounding?}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
-
-\boldmath
-
-\vspace*{0.4em}
-{\LARGE \textbf{Proficient}}
-\begin{tasks}(3)
-\task \mbox{$14.37$} to 1 decimal place.
-\task \mbox{$8.05$} to 1 decimal place.
-\task \mbox{$6.666$} to 2 decimal places.
-\task \mbox{$2.349$} to 2 decimal places.
-\task \mbox{$0.995$} to 2 decimal places.
-\task \mbox{$17.499$} to the nearest whole number.
-\task \mbox{$17.500$} to the nearest whole number.
-\task \mbox{$3.045$} to 2 decimal places.
-\task \mbox{$9.994$} to 2 decimal places.
-\task \mbox{$12.444$} to 2 decimal places.
-\task \mbox{$5.555$} to 2 decimal places.
-\task \mbox{$0.074$} to 1 decimal place.
-\task \mbox{$0.074$} to 2 decimal places.
-\task Fill in the blank: \mbox{$4.27 \approx 4.\square$} to 1 decimal place.
-\task Fill in the blank: \mbox{$8.196 \approx 8.\square\square$} to 2 decimal places.
-\task Is \mbox{$6.84 \to 6.9$} to 1 decimal place correct?
-\task Is \mbox{$3.141 \to 3.14$} to 2 decimal places correct?
-\task Explain in one short sentence what digit decides the rounding.
-\end{tasks}
+\begin{frame}[t]
+\WorksheetTitle{Rounding to Decimal Points \hfill Proficient}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{Round $24.16$ to 1 decimal place.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{Round $11.095$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{Round $4.995$ to 2 decimal places.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{Round $23.504$ to the nearest whole number.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{Round $7.249$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{Round $0.149$ to 1 decimal place.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{Round $0.149$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{Is $5.05 \to 5.1$ to 1 decimal place correct?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{Round $18.445$ to 2 decimal places.}\end{column}
+\end{columns}
+\end{frame}
 
 \end{document}

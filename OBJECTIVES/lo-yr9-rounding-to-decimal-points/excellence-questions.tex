@@ -1,49 +1,106 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\WorksheetTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.10em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.10em}}}\par\vspace{0.10em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
 \begin{document}
-\sffamily
-\boldmath
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Rounding to Decimal Points \hfill Excellence}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A student says $4.249$ rounds to $4.3$ to 1 decimal place. Are they correct?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A student says $7.995$ rounds to $7.99$ to 2 decimal places. Are they correct?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Which is greater after rounding to 1 decimal place: $6.44$ or $6.45$?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Which is smaller after rounding to 2 decimal places: $3.104$ or $3.099$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A number that rounds to $5.7$ to 1 decimal place could be \rule{1.8cm}{0.15mm}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A number that rounds to $2.35$ to 2 decimal places could be \rule{1.8cm}{0.15mm}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Complete: $8.\square 4$ rounds to $8.5$ to 1 decimal place.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Complete: $3.4\square 8$ rounds to $3.45$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Round $19.995$ to 2 decimal places.}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
+\begin{frame}[t]
+\WorksheetTitle{Rounding to Decimal Points \hfill Excellence}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{10}{Round $0.999$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{Round $12.049$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{Round $4.444$ to 2 decimal places.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{13}{Put in order after rounding to 1 decimal place: $2.84, 2.85, 2.89$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{Write two different numbers that both round to $6.2$ to 1 decimal place.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{Why do $5.05$ and $5.04$ not round to the same tenth?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{16}{A measurement is $3.276$ m. Write it to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{Which is larger after rounding to 2 decimal places: $8.675$ or $8.674$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{Give a number that rounds to $9$ to the nearest whole number.}\end{column}
+\end{columns}
+\end{frame}
 
-\boldmath
-
-\boldmath
-
-\vspace*{0.4em}
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task A student says \mbox{$4.249$} rounds to \mbox{$4.3$} to 1 decimal place. Are they correct? Explain.
-\task A student says \mbox{$7.995$} rounds to \mbox{$7.99$} to 2 decimal places. Are they correct? Explain.
-\task Which is greater after rounding to 1 decimal place: \mbox{$6.44$} or \mbox{$6.45$}?
-\task Which is smaller after rounding to 2 decimal places: \mbox{$3.104$} or \mbox{$3.099$}?
-\task Fill in the blank: a number that rounds to \mbox{$5.7$} to 1 decimal place could be \rule{1.8cm}{0.15mm}.
-\task Fill in the blank: a number that rounds to \mbox{$2.35$} to 2 decimal places could be \rule{1.8cm}{0.15mm}.
-\task Complete: \mbox{$8.\square 4$} rounds to \mbox{$8.5$} to 1 decimal place.
-\task Complete: \mbox{$3.4\square 8$} rounds to \mbox{$3.45$} to 2 decimal places.
-\task \mbox{$19.995$} to 2 decimal places.
-\task \mbox{$0.999$} to 2 decimal places.
-\task \mbox{$12.049$} to 2 decimal places.
-\task \mbox{$4.444$} to 2 decimal places.
-\task Put in order after rounding to 1 decimal place: \mbox{$2.84, 2.85, 2.89$}.
-\task Write two different numbers that both round to \mbox{$6.2$} to 1 decimal place.
-\task Explain why \mbox{$5.05$} and \mbox{$5.04$} do not round to the same tenth.
-\task A measurement is \mbox{$3.276$} m. Write it to 2 decimal places.
-\end{tasks}
+\begin{frame}[t]
+\WorksheetTitle{Rounding to Decimal Points \hfill Excellence}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{Give a number that rounds to $4.8$ to 1 decimal place.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{Give a number that rounds to $7.35$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{Explain why $2.450$ rounds to $2.45$ to 2 decimal places.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{A student rounds $6.149$ to $6.2$ to 1 decimal place. Correct or not?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{Round $13.995$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{Round $2.995$ to 2 decimal places.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{Which rounds higher to 1 decimal place: $4.94$ or $4.95$?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{Make a number with three decimals that rounds to $1.24$ to 2 decimal places.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{Round $0.0049$ to 2 decimal places.}\end{column}
+\end{columns}
+\end{frame}
 
 \end{document}
