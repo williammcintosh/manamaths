@@ -205,6 +205,14 @@ h3 {
   background: #fffdf9;
 }
 
+.notes-html .notes-columns > div > :first-child {
+  margin-top: 0 !important;
+}
+
+.notes-html .notes-columns > div > :last-child {
+  margin-bottom: 0 !important;
+}
+
 .notes-html .notes-section-title {
   margin: 0 0 4px;
   color: #244b2c;
