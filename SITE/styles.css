@@ -688,6 +688,13 @@ html[data-debug="1"] .objective-debug-code {
   margin-bottom: 18px;
 }
 
+.scaffold-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

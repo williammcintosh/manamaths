@@ -1,0 +1,114 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.00em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.00em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.00em}}
+}
+\newcommand{\MMAnswer}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{frame}[t]
+\WorksheetTitle{Place Values and Decimals — Answers}{1}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{1}{40}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{2}{60}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{3}{5}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{4}{0.7}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{5}{0.9}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{6}{0.02}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{7}{306}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{8}{942}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{9}{6.5}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Place Values and Decimals — Answers}{1}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{10}{five hundred and eight}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{11}{three point six}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{12}{twelve point zero four}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{13}{54}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{14}{0.08}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{15}{6.2}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{16}{101}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{17}{2.9, 3.02, 3.2}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{18}{640, 460, 406}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Place Values and Decimals — Answers}{1}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{19}{0.04, 0.4, 0.44}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{20}{50 + 8}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{21}{400 + 0 + 7}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{22}{4 + 0.7}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{23}{3 + 0.4 + 0.08}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{24}{90 + 0.6}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{25}{3}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{26}{4}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{27}{1}\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

@@ -25,6 +25,8 @@ NOTES_TRACKER_JSON = WORKSPACE_ROOT / "manamaths-notes" / "OPERATIONS" / "data" 
 NOTES_SITE_BASE = "https://williammcintosh.github.io/manamaths-notes"
 OUTPUT_DIR = SITE_DIR / "objectives"
 NOTES_PDF_OUTPUT_DIR = SITE_DIR / "notes-pdfs"
+SOLUTIONS_REPO = WORKSPACE_ROOT / "manamaths-solutions"
+SOLUTIONS_OUTPUT_DIR = SITE_DIR / "solutions-pdfs"
 TITLE = "Mana Maths"
 DESCRIPTION = "Helping maths teachers save time. We make maths curriculum content resources easy to find."
 LEVELS = [
@@ -760,21 +762,26 @@ def load_objectives() -> list[dict]:
     return objectives
 
 
-def render_level(level: dict) -> str:
+def render_level(level: dict, slug: str = "") -> str:
     questions = level["questions"]
     layout = level.get("layout", {"columns": 1, "row_gap": 1.2})
     media_html = level.get("media_html", "")
     items = "".join(f"<li>{latex_to_html(str(question))}</li>" for question in questions)
-    download = (
-        f'<a class="button button-secondary" href="{level["pdf"]}">Download PDF</a>'
+    tasks_download = (
+        f'<a class="button button-secondary" href="{level["pdf"]}">Download tasks</a>'
         if level.get("pdf_exists")
-        else '<span class="button button-secondary button-disabled">PDF coming soon</span>'
+        else '<span class="button button-secondary button-disabled">Tasks coming soon</span>'
     )
     icon_count = {"foundation": 1, "proficient": 2, "excellence": 3}.get(str(level.get("key") or "").lower(), 1)
     icon_html = "".join(
         '<img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" />'
         for _ in range(icon_count)
     )
+    answers_pdf_url = f"../solutions-pdfs/{slug}/{level['key']}-answers.pdf" if slug else ""
+    answers_exists = (SOLUTIONS_OUTPUT_DIR / slug / f"{level['key']}-answers.pdf").exists() if slug else False
+    solutions_html = ""
+    if answers_exists and answers_pdf_url:
+        solutions_html = f'<a class="button button-secondary" href="{answers_pdf_url}">Download solutions</a>'
     return f"""
       <section class=\"worksheet-panel\">
         <div class=\"worksheet-panel-head\">
@@ -782,7 +789,7 @@ def render_level(level: dict) -> str:
             <h3 class=\"scaffold-title\"><span class=\"scaffold-koru-group\">{icon_html}</span><span class=\"sr-only\">{html.escape(level['label'])}</span></h3>
             <p>{len(questions)} math tasks</p>
           </div>
-          {download}
+          <div class="scaffold-actions">{tasks_download}{solutions_html}</div>
         </div>
         {media_html}
         <ol class=\"question-list\" style=\"--worksheet-columns: {layout['columns']}; --worksheet-row-gap: {layout['row_gap']:.2f}rem;\">
@@ -865,7 +872,7 @@ def render_notes_panel(notes: dict | None, existing_notes_panel: str = "") -> st
 def render_objective_page(obj: dict) -> str:
     te_reo_terms = render_te_reo_terms(obj.get("te_reo_terms", []))
     notes_panel = render_notes_panel(obj.get("notes"), obj.get("existing_notes_panel", ""))
-    levels = "".join(render_level(level) for level in obj["levels"])
+    levels = "".join(render_level(level, slug=obj["slug"]) for level in obj["levels"])
     page_title = html.escape(obj['topic'])
     page_description = html.escape(obj['instruction'] or DESCRIPTION)
     return f"""<!DOCTYPE html>
@@ -1056,6 +1063,13 @@ def main() -> int:
     for obj in selected:
         page = render_objective_page(obj)
         (OUTPUT_DIR / f"{obj['slug']}.html").write_text(page)
+        # Copy solutions PDFs from manamaths-solutions if they exist
+        solutions_src = SOLUTIONS_REPO / "OBJECTIVES" / obj["slug"] if SOLUTIONS_REPO.exists() else None
+        if solutions_src and solutions_src.is_dir():
+            solutions_dst = SOLUTIONS_OUTPUT_DIR / obj["slug"]
+            solutions_dst.mkdir(parents=True, exist_ok=True)
+            for pdf in solutions_src.glob("*-answers.pdf"):
+                shutil.copy2(pdf, solutions_dst / pdf.name)
 
     if not args.skip_index:
         (SITE_DIR / "index.html").write_text(render_index(objectives))
