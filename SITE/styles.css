@@ -188,8 +188,18 @@ h3 {
   background: #fffdf9;
 }
 
-.notes-html .notes-columns + .notes-columns-bottom::before {
-  content: none;
+.notes-html .notes-columns + .notes-columns {
+  margin-top: 2.5rem;
+}
+
+.notes-html .notes-columns + .notes-columns::before {
+  content: "";
+  display: block;
+  height: 14px;
+  background: var(--accent-soft);
+  border-radius: 8px;
+  margin: 0 auto 2.5rem;
+  width: 62%;
 }
 
 .notes-html .notes-columns > div > :first-child {
