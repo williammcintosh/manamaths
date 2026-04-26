@@ -242,7 +242,7 @@ h3 {
   background: #fffdf9;
 }
 
-.notes-html > .notes-common-block {
+.notes-html .notes-common-block {
   background: #fbf2f3;
   border-color: #8f2f36;
 }
@@ -273,7 +273,25 @@ h3 {
 .notes-html .notes-list,
 .notes-html .notes-try {
   padding-left: 1rem;
-  margin-top: 0;
+  margin: 0;
+}
+
+.notes-html .notes-list li,
+.notes-html .notes-try li,
+.notes-html .notes-steps li {
+  margin-bottom: 2px;
+}
+
+.notes-html .notes-list li:last-child,
+.notes-html .notes-try li:last-child,
+.notes-html .notes-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.notes-html .notes-list li p,
+.notes-html .notes-try li p,
+.notes-html .notes-steps li p {
+  margin: 0;
 }
 
 .notes-html .notes-steps {
