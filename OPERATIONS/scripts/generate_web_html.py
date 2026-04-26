@@ -824,6 +824,14 @@ def render_te_reo_terms(terms: list[dict]) -> str:
     """
 
 
+def _flatten_notes_fragment(fragment_html: str) -> str:
+    flattened = fragment_html
+    flattened = re.sub(r'<section class="notes-page">', '', flattened)
+    flattened = re.sub(r'</section>', '', flattened)
+    flattened = re.sub(r'<div class="notes-page-split"></div>', '', flattened)
+    return flattened.strip()
+
+
 def render_notes_panel(notes: dict | None, existing_notes_panel: str = "") -> str:
     if not notes:
         return existing_notes_panel or ""
@@ -836,7 +844,7 @@ def render_notes_panel(notes: dict | None, existing_notes_panel: str = "") -> st
     if fragment_path.exists():
         fragment_html = fragment_path.read_text(errors="replace")
 
-    fragment_block = fragment_html or '<p class="notes-missing">Notes HTML preview not available yet.</p>'
+    fragment_block = _flatten_notes_fragment(fragment_html) if fragment_html else '<p class="notes-missing">Notes HTML preview not available yet.</p>'
     pdf_button = f'<a class=\"button button-secondary\" href=\"{pdf_url}\" target=\"_blank\" rel=\"noopener noreferrer\">Download notes PDF</a>' if pdf_url else ''
     return f"""
       <section id=\"notes\" class=\"worksheet-panel notes-panel\">

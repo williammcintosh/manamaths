@@ -151,28 +151,26 @@ h3 {
 
 .notes-html {
   margin-top: 12px;
-  padding: 10px;
+  padding: 14px;
   border-radius: 18px;
-  background: linear-gradient(180deg, #f8faf4 0%, #f1f5eb 100%);
-  border: 1px solid #d7dfd0;
-}
-
-.notes-html .notes-page {
   background: #fcfbf7;
   border: 1.5px solid #000;
-  border-radius: 18px;
-  padding: 14px;
   box-shadow: 0 10px 20px rgba(36, 75, 44, 0.04);
 }
 
-.notes-html .notes-page::before {
+.notes-html::before {
   content: none;
   display: none;
 }
 
-.notes-html .notes-page + .notes-page,
-.notes-html .notes-page-split + .notes-page {
+.notes-html > .notes-columns,
+.notes-html > .notes-box,
+.notes-html > .notes-section-title {
   margin-top: 14px;
+}
+
+.notes-html > :first-child {
+  margin-top: 0;
 }
 
 .notes-html .notes-columns {
