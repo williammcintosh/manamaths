@@ -85,31 +85,20 @@ def build_tex(terms: list[dict]) -> str:
         url = escape(t.get("te_aka_word_url", ""))
         cards.append(f"\\TermCard{{{maori}}}{{{english}}}{{{url}}}")
 
-    # Arrange 2 per row using columns for even height
+    # Arrange 2 per row using a tabular for clean, wide columns
     cols_per_row = 2
-    rows = []
+    tabular_rows = []
     for i in range(0, len(cards), cols_per_row):
         chunk = cards[i:i+cols_per_row]
-        columns = ""
-        for idx, card in enumerate(chunk):
-            columns += (
-                "\\begin{column}{0.47\\textwidth}\n"
-                "  \\centering\n"
-                f"  {card}\n"
-                "\\end{column}\n"
-            )
-        for _ in range(cols_per_row - len(chunk)):
-            columns += "\\begin{column}{0.47\\textwidth}\\end{column}\n"
-        rows.append(
-            "\\begin{columns}[t,onlytextwidth]\n"
-            f"{columns}"
-            "\\end{columns}"
-        )
-
-    all_cards_text = "\\vspace*{\\fill}\n".join(rows)
-    all_cards_text += "\n\\vspace*{\\fill}"
-
-    all_cards_text = "\n\n\\vspace{0.3em}\n\n".join(rows)
+        cells = " & ".join(chunk)
+        # Pad with empty cells if odd
+        if len(chunk) < cols_per_row:
+            cells += " & \\hfill"
+        tabular_rows.append(f"{cells} \\\\")
+    
+    all_cards_text = "\\begin{tabular}{c@{\\hskip 0.3em}c}\n"
+    all_cards_text += "\n".join(tabular_rows)
+    all_cards_text += "\n\\end{tabular}"
     latex = template.replace("TERM_CARDS", all_cards_text.strip())
     return latex
 
