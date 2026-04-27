@@ -354,12 +354,15 @@ def render_te_reo_panel(terms: list[dict], slug: str) -> str:
         preview_html = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{te_reo_preview[0]}" alt="" loading="lazy" /></div>'
 
     return f'''
-      <section class="lo-panel te-reo-panel">
-        <div class="lo-panel-head">
-          <h3>Te reo Māori terms</h3>
+      <section class="module-card" style="--card-accent: #85b24a;">
+        <div class="module-card-header">
+          <h2 class="module-card-title">Te reo Māori terms</h2>
+        </div>
+        <p class="module-card-desc">Key te reo Māori vocabulary for this learning objective.</p>
+        {preview_html}
+        <div class="module-card-actions">
           <a class="button button-secondary" href="../te-reo-pdfs/{slug}.pdf" target="_blank" rel="noopener">Open terms PDF</a>
         </div>
-        {preview_html}
       </section>
     '''
 
@@ -379,15 +382,15 @@ def render_notes_panel(notes: dict | None, slug: str) -> str:
 
     pdf_button = f'<a class="button" href="{pdf_url}" target="_blank" rel="noopener">Open notes PDF</a>' if pdf_url else ""
     return f'''
-      <section id="notes" class="lo-panel notes-panel">
-        <div class="lo-panel-head">
-          <div>
-            <h3>Notes</h3>
-            <p class="panel-sub">First-teach worked examples for {title}.</p>
-          </div>
+      <section id="notes" class="module-card" style="--card-accent: #3e6f3f;">
+        <div class="module-card-header">
+          <h2 class="module-card-title">Notes</h2>
+        </div>
+        <p class="module-card-desc">Teaching notes for this learning objective.</p>
+        {preview_html}
+        <div class="module-card-actions">
           {pdf_button}
         </div>
-        {preview_html}
       </section>
     '''
 
@@ -482,6 +485,15 @@ def render_objective_page(obj: dict) -> str:
     te_reo = render_te_reo_panel(obj.get("te_reo_terms", []), obj["slug"])
     notes = render_notes_panel(obj.get("notes"), obj["slug"])
     cards = "".join(render_module_card(level, obj["slug"]) for level in obj["levels"])
+    # Wrap te reo and notes in a module-card grid for side-by-side layout
+    extras_panels = []
+    if te_reo:
+        extras_panels.append(te_reo)
+    if notes:
+        extras_panels.append(notes)
+    extras_grid = ""
+    if extras_panels:
+        extras_grid = '<div class="module-card-grid module-card-grid-extra">\n' + "\n".join(extras_panels) + '\n      </div>'
     page_title = html.escape(obj['topic'])
     page_description = html.escape(obj['instruction'] or DESCRIPTION)
 
@@ -515,8 +527,7 @@ def render_objective_page(obj: dict) -> str:
 
     <main class="page-shell page-shell-detail">
       {skills_section}
-      {te_reo}
-      {notes}
+      {extras_grid}
       <div class="module-card-grid">
         {cards}
       </div>

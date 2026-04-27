@@ -757,6 +757,24 @@ html[data-debug="1"] .objective-debug-code {
   .module-card-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .module-card-grid-extra {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 2-column variant for te reo + notes panels */
+.module-card-grid-extra {
+  margin-bottom: 0;
+}
+
+@media (min-width: 800px) {
+  .module-card-grid-extra {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.module-card-grid-extra > .module-card {
+  margin-bottom: 0;
 }
 
 .module-card {
