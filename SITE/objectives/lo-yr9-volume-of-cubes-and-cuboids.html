@@ -10,10 +10,6 @@
     <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/png" href="../favicon.png" />
     <link rel="stylesheet" href="../styles.css" />
-    <script>
-      window.MathJax = { tex: { inlineMath: [['$', '$'], ['\(', '\)']] } };
-    </script>
-    <script defer src="../assets/js/page-seps.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
@@ -32,145 +28,64 @@
 
     <main class="page-shell page-shell-detail">
       
-      <section class="worksheet-panel te-reo-panel">
-        <div class="worksheet-panel-head">
-          <div>
-            <h3>Te reo Māori terms</h3>
-          </div>
+      
+      <section class="lo-panel te-reo-panel">
+        <div class="lo-panel-head">
+          <h3>Te reo Māori terms</h3>
+          <a class="button button-secondary" href="../te-reo-pdfs/lo-yr9-volume-of-cubes-and-cuboids.pdf" target="_blank" rel="noopener">Open terms PDF</a>
         </div>
-        <div class="te-reo-grid">
-          <article class="te-reo-card">
-        <p class="te-reo-word">pūtoru</p>
-        <div class="te-reo-meta"><h3>cube</h3><a class="te-reo-link" href="https://maoridictionary.co.nz/word/45530" target="_blank" rel="noopener noreferrer">Open in Te Aka</a></div>
-      </article><article class="te-reo-card">
-        <p class="te-reo-word">poro-tapawhā hāngai</p>
-        <div class="te-reo-meta"><h3>cuboid</h3><a class="te-reo-link" href="https://maoridictionary.co.nz/word/45854" target="_blank" rel="noopener noreferrer">Open in Te Aka</a></div>
-      </article><article class="te-reo-card">
-        <p class="te-reo-word">rōrahi</p>
-        <div class="te-reo-meta"><h3>volume</h3><a class="te-reo-link" href="https://maoridictionary.co.nz/word/40040" target="_blank" rel="noopener noreferrer">Open in Te Aka</a></div>
-      </article><article class="te-reo-card">
-        <p class="te-reo-word">roa</p>
-        <div class="te-reo-meta"><h3>length</h3><a class="te-reo-link" href="https://maoridictionary.co.nz/word/6850" target="_blank" rel="noopener noreferrer">Open in Te Aka</a></div>
-      </article>
-        </div>
+        
       </section>
     
       
-      
-      <section class="worksheet-panel">
-        <div class="worksheet-panel-head">
-          <div>
-            <h3 class="scaffold-title"><span class="scaffold-koru-group"><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /></span><span class="sr-only">Foundation</span></h3>
-            <p>16 math tasks</p>
-          </div>
-          <div class="scaffold-actions"><a class="button button-secondary" href="../../OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/foundation-questions.pdf">Download tasks</a></div>
-        </div>
+      <div class="module-card-grid">
         
-        <ol class="question-list" style="--worksheet-columns: 3; --worksheet-row-gap: 1.97rem;">
-          <li>Find the volume of this cube.
-begin{tikzpicture}[x=0.2cm,y=0.2cm,baseline=(current bounding box.center)]
-  draw[thick] (0,0,0) -- (4,0,0) -- (4,4,0) -- (0,4,0) -- cycle;
-  draw[thick] (0,0,0) -- (0,0,4) -- (0,4,4) -- (0,4,0);
-  draw[thick] (4,0,0) -- (4,0,4) -- (4,4,4) -- (4,4,0);
-  draw[thick] (0,0,4) -- (4,0,4) -- (4,4,4) -- (0,4,4) -- cycle;
-  draw[dashed] (0,0,0) -- (0,0,4);
-  draw[dashed] (4,0,0) -- (4,0,4);
-  draw[dashed] (0,4,0) -- (0,4,4);
-  draw[dashed] (4,4,0) -- (4,4,4);
-  node at (2,-0.8) {3 cm};
-end{tikzpicture} <span class="question-diagram-note">Diagram version available in the PDF.</span></li><li>Find the volume of this cube.
-begin{tikzpicture}[x=0.2cm,y=0.2cm,baseline=(current bounding box.center)]
-  draw[thick] (0,0,0) -- (5,0,0) -- (5,5,0) -- (0,5,0) -- cycle;
-  draw[thick] (0,0,0) -- (0,0,5) -- (0,5,5) -- (0,5,0);
-  draw[thick] (5,0,0) -- (5,0,5) -- (5,5,5) -- (5,5,0);
-  draw[thick] (0,0,5) -- (5,0,5) -- (5,5,5) -- (0,5,5) -- cycle;
-  draw[dashed] (0,0,0) -- (0,0,5);
-  draw[dashed] (5,0,0) -- (5,0,5);
-  draw[dashed] (0,5,0) -- (0,5,5);
-  draw[dashed] (5,5,0) -- (5,5,5);
-  node at (2.5,-0.8) {5 cm};
-end{tikzpicture} <span class="question-diagram-note">Diagram version available in the PDF.</span></li><li>Find the volume of this cuboid.
-begin{tikzpicture}[x=0.15cm,y=0.15cm,baseline=(current bounding box.center)]
-  draw[thick] (0,0,0) -- (8,0,0) -- (8,4,0) -- (0,4,0) -- cycle;
-  draw[thick] (0,0,0) -- (0,0,3) -- (0,4,3) -- (0,4,0);
-  draw[thick] (8,0,0) -- (8,0,3) -- (8,4,3) -- (8,4,0);
-  draw[thick] (0,0,3) -- (8,0,3) -- (8,4,3) -- (0,4,3) -- cycle;
-  draw[dashed] (0,0,0) -- (0,0,3);
-  draw[dashed] (8,0,0) -- (8,0,3);
-  draw[dashed] (0,4,0) -- (0,4,3);
-  draw[dashed] (8,4,0) -- (8,4,3);
-  node at (4,-0.8) {10 m};
-  node[rotate=90] at (8.8,2) {2 m};
-  node at (4,4.8) {1 m};
-end{tikzpicture} <span class="question-diagram-note">Diagram version available in the PDF.</span></li><li>Find the volume of this cuboid.
-begin{tikzpicture}[x=0.15cm,y=0.15cm,baseline=(current bounding box.center)]
-  draw[thick] (0,0,0) -- (6,0,0) -- (6,5,0) -- (0,5,0) -- cycle;
-  draw[thick] (0,0,0) -- (0,0,4) -- (0,5,4) -- (0,5,0);
-  draw[thick] (6,0,0) -- (6,0,4) -- (6,5,4) -- (6,5,0);
-  draw[thick] (0,0,4) -- (6,0,4) -- (6,5,4) -- (0,5,4) -- cycle;
-  draw[dashed] (0,0,0) -- (0,0,4);
-  draw[dashed] (6,0,0) -- (6,0,4);
-  draw[dashed] (0,5,0) -- (0,5,4);
-  draw[dashed] (6,5,0) -- (6,5,4);
-  node at (3,-0.8) {6 cm};
-  node[rotate=90] at (6.8,2.5) {5 cm};
-  node at (3,5.8) {4 cm};
-end{tikzpicture} <span class="question-diagram-note">Diagram version available in the PDF.</span></li><li>A cube has side length 4 m. What is its volume?</li><li>A cuboid is 12 cm long, 3 cm wide, and 2 cm high. What is its volume?</li><li>A cube has side length 7 cm. What is its volume?</li><li>A cuboid is 9 m long, 2 m wide, and 1 m high. What is its volume?</li><li>A cube has side length 2.5 cm. What is its volume?</li><li>A cuboid is 15 mm long, 4 mm wide, and 3 mm high. What is its volume?</li><li>How many cubic centimetres are in 1 cubic metre?</li><li>How many cubic millimetres are in 1 cubic centimetre?</li><li>A cube has volume 27 cm$^3$. What is its side length?</li><li>A cuboid has volume 60 m$^3$, length 5 m, and width 3 m. What is its height?</li><li>A cube has volume 64 mm$^3$. What is its side length?</li><li>A cuboid has volume 48 cm$^3$, length 6 cm, and height 2 cm. What is its width?</li>
-        </ol>
+      <section class="module-card" style="--card-accent: #85b24a;">
+        <div class="module-card-header">
+          <div class="scaffold-koru-group"><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /></div>
+          <div>
+            <h2 class="module-card-title">Foundation</h2>
+          </div>
+        </div>
+        <p class="module-card-desc">Build confidence with basic digit values, reading and writing numbers, comparing values, and partitioning into tens and ones.</p>
+        
+        <div class="module-card-actions">
+          <a class="button" href="../../OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/foundation-questions.pdf" target="_blank" rel="noopener">Open tasks PDF</a>
+          
+        </div>
       </section>
     
-      <section class="worksheet-panel">
-        <div class="worksheet-panel-head">
+      <section class="module-card" style="--card-accent: #5d8a56;">
+        <div class="module-card-header">
+          <div class="scaffold-koru-group"><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /></div>
           <div>
-            <h3 class="scaffold-title"><span class="scaffold-koru-group"><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /></span><span class="sr-only">Proficient</span></h3>
-            <p>17 math tasks</p>
+            <h2 class="module-card-title">Proficient</h2>
           </div>
-          <div class="scaffold-actions"><a class="button button-secondary" href="../../OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/proficient-questions.pdf">Download tasks</a></div>
         </div>
+        <p class="module-card-desc">Tackle larger numbers, decimals to thousandths, inequality comparisons, ordering multiple values, and full partitioning.</p>
         
-        <ol class="question-list" style="--worksheet-columns: 3; --worksheet-row-gap: 1.97rem;">
-          <li>Find the volume of this cuboid.
-begin{tikzpicture}[x=0.12cm,y=0.12cm,baseline=(current bounding box.center)]
-  draw[thick] (0,0,0) -- (10,0,0) -- (10,6,0) -- (0,6,0) -- cycle;
-  draw[thick] (0,0,0) -- (0,0,4) -- (0,6,4) -- (0,6,0);
-  draw[thick] (10,0,0) -- (10,0,4) -- (10,6,4) -- (10,6,0);
-  draw[thick] (0,0,4) -- (10,0,4) -- (10,6,4) -- (0,6,4) -- cycle;
-  draw[dashed] (0,0,0) -- (0,0,4);
-  draw[dashed] (10,0,0) -- (10,0,4);
-  draw[dashed] (0,6,0) -- (0,6,4);
-  draw[dashed] (10,6,0) -- (10,6,4);
-  node at (5,-0.8) {2.5 m};
-  node[rotate=90] at (10.8,3) {1.5 m};
-  node at (5,6.8) {0.8 m};
-end{tikzpicture} <span class="question-diagram-note">Diagram version available in the PDF.</span></li><li>Find the volume of this cube.
-begin{tikzpicture}[x=0.2cm,y=0.2cm,baseline=(current bounding box.center)]
-  draw[thick] (0,0,0) -- (4.5,0,0) -- (4.5,4.5,0) -- (0,4.5,0) -- cycle;
-  draw[thick] (0,0,0) -- (0,0,4.5) -- (0,4.5,4.5) -- (0,4.5,0);
-  draw[thick] (4.5,0,0) -- (4.5,0,4.5) -- (4.5,4.5,4.5) -- (4.5,4.5,0);
-  draw[thick] (0,0,4.5) -- (4.5,0,4.5) -- (4.5,4.5,4.5) -- (0,4.5,4.5) -- cycle;
-  draw[dashed] (0,0,0) -- (0,0,4.5);
-  draw[dashed] (4.5,0,0) -- (4.5,0,4.5);
-  draw[dashed] (0,4.5,0) -- (0,4.5,4.5);
-  draw[dashed] (4.5,4.5,0) -- (4.5,4.5,4.5);
-  node at (2.25,-0.8) {1.2 cm};
-end{tikzpicture} <span class="question-diagram-note">Diagram version available in the PDF.</span></li><li>A storage box is 80 cm long, 50 cm wide, and 40 cm high. What is its volume in cubic centimetres? In cubic metres?</li><li>A cube has volume 125 cm$^3$. What is its side length?</li><li>A cuboid has volume 240 mm$^3$, width 6 mm, and height 5 mm. What is its length?</li><li>How many 1 cm cubes would fit inside a 1 m cube?</li><li>Convert 2.5 m$^3$ to cm$^3$.</li><li>Convert 7500 mm$^3$ to cm$^3$.</li><li>A fish tank is 60 cm long, 30 cm wide, and 40 cm high. What is its volume in litres? (1 litre = 1000 cm$^3$)</li><li>A cube has side length 0.3 m. What is its volume in cm$^3$?</li><li>A cuboid has dimensions 2.4 m by 1.8 m by 0.9 m. What is its volume in m$^3$ and cm$^3$?</li><li>A box has volume 1.2 m$^3$. If its length is 2 m and width is 0.6 m, what is its height?</li><li>Which has greater volume: a cube with side 8 cm or a cuboid 10 cm × 7 cm × 4 cm?</li><li>A room is 5 m long, 4 m wide, and 2.5 m high. What is its volume?</li><li>A cube and a cuboid have the same volume. The cube has side 6 cm. The cuboid has length 9 cm and width 4 cm. What is the height of the cuboid?</li><li>Explain why 1 m$^3$ = 1,000,000 cm$^3$.</li><li>A shipping container is 12 m long, 2.4 m wide, and 2.6 m high. What is its volume?</li>
-        </ol>
+        <div class="module-card-actions">
+          <a class="button" href="../../OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/proficient-questions.pdf" target="_blank" rel="noopener">Open tasks PDF</a>
+          
+        </div>
       </section>
     
-      <section class="worksheet-panel">
-        <div class="worksheet-panel-head">
+      <section class="module-card" style="--card-accent: #3e6f3f;">
+        <div class="module-card-header">
+          <div class="scaffold-koru-group"><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /></div>
           <div>
-            <h3 class="scaffold-title"><span class="scaffold-koru-group"><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /><img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" /></span><span class="sr-only">Excellence</span></h3>
-            <p>25 math tasks</p>
+            <h2 class="module-card-title">Excellence</h2>
           </div>
-          <div class="scaffold-actions"><a class="button button-secondary" href="../../OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/excellence-questions.pdf">Download tasks</a></div>
         </div>
+        <p class="module-card-desc">Explain misconceptions, justify reasoning, handle 3 d.p. ordering, build numbers from place-value parts, and reason about equivalence.</p>
         
-        <ol class="question-list" style="--worksheet-columns: 3; --worksheet-row-gap: 1.97rem;">
-          <li>A cube has side length $x$ cm. Write an expression for its volume.</li><li>A cuboid has length $l$ cm, width $w$ cm, and height $h$ cm. Write an expression for its volume.</li><li>If a cube&#x27;s side length doubles, what happens to its volume? Explain.</li><li>If all dimensions of a cuboid triple, what happens to its volume? Explain.</li><li>A cube has volume 216 cm$^3$. Find its side length.</li><li>A cuboid has volume 360 cm$^3$. Its length is 12 cm and width is 5 cm. Find its height.</li><li>Convert 3.75 m$^3$ to cm$^3$.</li><li>Convert 8,500,000 mm$^3$ to m$^3$.</li><li>A swimming pool is 25 m long, 10 m wide, and has an average depth of 1.5 m. What is its volume in cubic metres? In litres? (1 m$^3$ = 1000 L)</li><li>A cube and a cuboid have equal volume. The cube has side 10 cm. The cuboid has length 20 cm and width 5 cm. Find the cuboid&#x27;s height.</li><li>Which has greater volume and by how much: a 15 cm cube or a cuboid 18 cm × 12 cm × 8 cm?</li><li>A room is 6 m long, 4.5 m wide, and 2.8 m high. What is its volume? If paint covers 12 m$^2$ per litre, how many litres are needed for the walls (excluding floor and ceiling)?</li><li>A box measures 1.2 m × 0.8 m × 0.6 m. How many cubes of side 20 cm can fit inside?</li><li>A storage container has volume 48 m$^3$. If its length is 6 m and height is 2 m, find its width.</li><li>A cube&#x27;s volume is 64 times larger than another cube. How many times longer is its side?</li><li>Explain why volume is measured in cubic units, not square units.</li><li>A cuboid&#x27;s length is twice its width, and its height is three times its width. If its volume is 150 cm$^3$, find its dimensions.</li><li>A cube of side 4 cm is cut into smaller cubes of side 1 cm. How many small cubes are produced?</li><li>Water flows into a tank at 2 litres per second. The tank is a cuboid 1 m × 0.8 m × 0.5 m. How long will it take to fill?</li><li>A rectangular prism has volume $V$, length $l$, width $w$, and height $h$. Rearrange $V = lwh$ to make $h$ the subject.</li><li>A company makes boxes in two sizes: small (10 cm × 8 cm × 6 cm) and large (15 cm × 12 cm × 10 cm). What is the ratio of their volumes?</li><li>A cube has surface area 150 cm$^2$. Can you find its volume? Explain your reasoning.</li><li>A cuboid has a square base of side 5 cm. Its volume is 200 cm$^3$. Find its height.</li><li>If you double the length and halve the width of a cuboid while keeping height constant, what happens to the volume?</li><li>A room&#x27;s length, width, and height are in the ratio 3:2:1. If its volume is 192 m$^3$, find its dimensions.</li>
-        </ol>
+        <div class="module-card-actions">
+          <a class="button" href="../../OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/excellence-questions.pdf" target="_blank" rel="noopener">Open tasks PDF</a>
+          
+        </div>
       </section>
     
+      </div>
     </main>
   </body>
 </html>
