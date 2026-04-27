@@ -94,9 +94,9 @@ def build_tex(terms: list[dict]) -> str:
         # Pad with empty cells if odd
         if len(chunk) < cols_per_row:
             cells += " & \\hfill"
-        tabular_rows.append(f"{cells} \\\\")
+        tabular_rows.append(f"{cells} \\\\[1.2em]")
     
-    all_cards_text = "\\begin{tabular}{c@{\\hskip 0.3em}c}\n"
+    all_cards_text = "\\begin{tabular}{c@{\\hskip 1.5em}c}\n"
     all_cards_text += "\n".join(tabular_rows)
     all_cards_text += "\n\\end{tabular}"
     latex = template.replace("TERM_CARDS", all_cards_text.strip())
