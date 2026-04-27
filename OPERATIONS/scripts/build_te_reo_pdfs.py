@@ -72,29 +72,35 @@ def slug_for_code(code: str, slug_map: dict[str, str]) -> str | None:
 
 
 def build_tex(terms: list[dict]) -> str:
-    """Build LaTeX for the term cards."""
+    """Build LaTeX for the term cards — 3 per row, each with Te Aka link."""
     template = TEMPLATE_PATH.read_text()
+
+    def escape(s: str) -> str:
+        return s.replace("&", r"\&").replace("#", r"\#").replace("%", r"\%").replace("_", r"\_").replace("$", r"\$")
+
     cards = []
-    for term in terms:
-        maori = term.get("te_reo_maori_term", "")
-        english = term.get("english_term", "")
-        # Escape special chars
-        maori_escaped = maori.replace("&", r"\&").replace("#", r"\#").replace("%", r"\%").replace("_", r"\_").replace("$", r"\$")
-        english_escaped = english.replace("&", r"\&").replace("#", r"\#").replace("%", r"\%").replace("_", r"\_").replace("$", r"\$")
-        cards.append(
-            "\\begin{termcard}\n"
-            f"  \\textbf{{\\Large {maori_escaped}}}\\\\[0.3em]\n"
-            f"  {english_escaped}\n"
-            "\\end{termcard}\n"
-            "\\hspace{1em}\n"
-        )
-    # Arrange in rows of 3
+    for t in terms:
+        maori = escape(t.get("te_reo_maori_term", ""))
+        english = escape(t.get("english_term", ""))
+        url = escape(t.get("te_aka_word_url", ""))
+        cards.append(f"\\TermCard{{{maori}}}{{{english}}}{{{url}}}")
+
+    # Arrange 3 per row using \hfill
     rows = []
     for i in range(0, len(cards), 3):
         chunk = cards[i:i+3]
-        row = "".join(chunk)
+        n = len(chunk)
+        if n == 1:
+            # Single card — center it
+            row = "\\hspace*{\\fill}\n" + chunk[0] + "\n\\hspace*{\\fill}"
+        elif n == 2:
+            # Two cards — spread evenly
+            row = "\\hspace*{\\fill}\n" + "\\hfill\n".join(chunk) + "\n\\hspace*{\\fill}"
+        else:
+            row = "\\hfill\n".join(chunk)
         rows.append(row)
-    all_cards_text = "\n\n".join(rows)
+
+    all_cards_text = "\n\n\\vspace{0.3em}\n\n".join(rows)
     latex = template.replace("TERM_CARDS", all_cards_text.strip())
     return latex
 
@@ -113,6 +119,8 @@ def build_te_reo_pdf(slug: str, terms: list[dict]) -> int:
         tex_content = build_tex(terms)
         tex_path = build_dir / "te-reo.tex"
         tex_path.write_text(tex_content)
+        # Debug: save the tex content
+        (build_dir / "debug.tex").write_text(tex_content)
 
         result = subprocess.run(
             [TECTONIC, "-p", "te-reo.tex"],
@@ -150,7 +158,9 @@ doc.close()
             return 1
     finally:
         import shutil
-        shutil.rmtree(build_dir, ignore_errors=True)
+        # Keep build artifacts for debugging:
+        print(f"  Build dir: {build_dir}", file=sys.stderr)
+        # shutil.rmtree(build_dir, ignore_errors=True)
 
 
 def main() -> int:

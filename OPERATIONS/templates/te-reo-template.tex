@@ -1,6 +1,6 @@
 \documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
-\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
@@ -9,6 +9,8 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
+
+\hypersetup{colorlinks=true,urlcolor=mmgreenLeaf}
 
 \definecolor{mmpageWhite}{HTML}{FCFBF7}
 \definecolor{mmtanSoft}{HTML}{F7F5EF}
@@ -20,21 +22,35 @@
 \setbeamercolor{background canvas}{bg=mmpageWhite}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\newtcolorbox{termcard}{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=10pt,left=10pt,right=10pt,top=8pt,bottom=8pt,width=0.3\textwidth,valign=top}
+\newcommand{\TermCard}[3]{%
+  % #1 = maori term, #2 = english gloss, #3 = Te Aka URL
+  \fcolorbox{black}{white}{%
+    \begin{minipage}{0.30\textwidth}
+    \centering
+    \vspace{0.3em}
+    {\bfseries\Large #1\par}
+    \vspace{0.15em}
+    #2\par
+    \vspace{0.3em}
+    \href{#3}{\small\color{mmgreenLeaf} Open in Te Aka}\par
+    \vspace{0.2em}
+    \end{minipage}%
+  }%
+}
 
 \begin{document}
-{\small
 \begin{frame}[t]
 \vspace{0.8em}
 {\colorbox{mmtanSoft}{\parbox{\textwidth}{\centering\bfseries\LARGE\color{mmgreenDeep} Te reo Māori terms}}}
-\vspace{1em}
+\vspace{0.5em}
 
 \centering
 TERM_CARDS
 
 \vfill
-{\color{mmgreenLeaf}\small Terms sourced from NZQA Mathematics and Statistics vocabulary list.
-\normalsize}
-\end{frame}
+{\color{mmgreenLeaf}\small\centering
+Terms sourced from NZQA Mathematics and Statistics vocabulary list.\\[0.2em]
+Open in Te Aka at maoridictionary.co.nz
 }
+\end{frame}
 \end{document}
