@@ -409,7 +409,7 @@ def render_module_card(level: dict, slug: str) -> str:
     tasks_pages = previews.get(f"{key}-tasks", [])
     preview_thumbnails = ""
     if tasks_pages and len(tasks_pages) > 0:
-        preview_thumbnails = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{tasks_pages[0]}" alt="" loading="lazy" /></div>'
+        preview_thumbnails = f'<div class="preview-figure"><a href="{tasks_pdf}" target="_blank" rel="noopener"><img class="pdf-preview-thumb" src="{tasks_pages[0]}" alt="" loading="lazy" /></a></div>'
 
     tasks_button = (
         f'<a class="button" href="{tasks_pdf}" target="_blank" rel="noopener">Open tasks PDF</a>'
