@@ -764,7 +764,7 @@ html[data-debug="1"] .objective-debug-code {
 
 /* 2-column variant for te reo + notes panels */
 .module-card-grid-extra {
-  margin-bottom: 0;
+  margin-bottom: 32px;
 }
 
 @media (min-width: 800px) {
