@@ -713,6 +713,7 @@ html[data-debug="1"] .objective-debug-code {
   box-shadow: 0 18px 44px var(--shadow);
   padding: 24px;
   margin-bottom: 20px;
+  border-top: 5px solid var(--card-accent, #85b24a);
 }
 
 .lo-panel-head {
