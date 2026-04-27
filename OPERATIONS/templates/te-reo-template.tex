@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage[most]{tcolorbox}
+\usepackage{tikz}
 \usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
@@ -17,33 +18,49 @@
 \definecolor{mmtanSoft}{HTML}{F7F5EF}
 \definecolor{mmgreenDeep}{HTML}{244B2C}
 \definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
 \definecolor{mmtext}{HTML}{163221}
 
 \setbeamercolor{background canvas}{bg=mmpageWhite}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{header-logo.png}}}
+
+\newcommand{\TermTitle}[1]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.00em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon\hspace{0.45em}}}}
+  \par\vspace{0.00em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.3em}}
+}
+
+% Full-page black rounded border matching worksheet PDFs
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\newtcolorbox{termcard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=6pt,right=6pt,top=5pt,bottom=5pt,width=0.30\textwidth,valign=center,before skip=0pt,after skip=0pt,#1}
+
 \newcommand{\TermCard}[3]{%
-  % #1 = maori term, #2 = english gloss, #3 = Te Aka URL
-  \begin{minipage}{0.29\textwidth}
+  \begin{minipage}{0.30\textwidth}
     \centering
-    \tcbox[colback=white,colframe=black,boxrule=1.5pt,arc=10pt,left=6pt,right=6pt,top=5pt,bottom=5pt]{
-      \begin{minipage}{0.24\textwidth}
-        \centering
-        {\bfseries\LARGE #1\par}
-        \vspace{0.1em}
-        \small #2\par
-        \vspace{0.2em}
-        \href{#3}{\footnotesize\color{mmgreenLeaf} Open in Te Aka}
-      \end{minipage}%
-    }
+    \begin{termcard}
+      \centering
+      {\bfseries\LARGE #1\par}
+      \vspace{0.1em}
+      \small #2\par
+      \vspace{0.2em}
+      \href{#3}{\footnotesize\color{mmgreenLeaf} Open in Te Aka}
+    \end{termcard}%
   \end{minipage}%
 }
 
 \begin{document}
 \begin{frame}[t]
-\vspace{0.5em}
-{\colorbox{mmtanSoft}{\parbox{\textwidth}{\centering\bfseries\LARGE\color{mmgreenDeep} Te reo Māori terms}}}
-\vspace{0.3em}
+\TermTitle{Te reo Māori terms}
 
 \centering
 TERM_CARDS

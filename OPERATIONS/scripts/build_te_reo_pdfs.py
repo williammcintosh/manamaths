@@ -119,6 +119,12 @@ def build_te_reo_pdf(slug: str, terms: list[dict]) -> int:
         tex_content = build_tex(terms)
         tex_path = build_dir / "te-reo.tex"
         tex_path.write_text(tex_content)
+        # Copy logo so the PDF can reference it
+        logo_src = REPO_ROOT / "SITE" / "header-logo.png"
+        logo_dst = build_dir / "header-logo.png"
+        if logo_src.exists():
+            import shutil
+            shutil.copy2(logo_src, logo_dst)
         # Debug: save the tex content
         (build_dir / "debug.tex").write_text(tex_content)
 
