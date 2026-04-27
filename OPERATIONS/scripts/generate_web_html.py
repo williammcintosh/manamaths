@@ -355,10 +355,6 @@ def render_te_reo_panel(terms: list[dict], slug: str) -> str:
 
     return f'''
       <section class="module-card" style="--card-accent: #85b24a;">
-        <div class="module-card-header">
-          <h2 class="module-card-title">Te reo Māori terms</h2>
-        </div>
-        <p class="module-card-desc">Key te reo Māori vocabulary for this learning objective.</p>
         {preview_html}
         <div class="module-card-actions">
           <a class="button button-secondary" href="../te-reo-pdfs/{slug}.pdf" target="_blank" rel="noopener">Open terms PDF</a>
@@ -383,10 +379,6 @@ def render_notes_panel(notes: dict | None, slug: str) -> str:
     pdf_button = f'<a class="button" href="{pdf_url}" target="_blank" rel="noopener">Open notes PDF</a>' if pdf_url else ""
     return f'''
       <section id="notes" class="module-card" style="--card-accent: #3e6f3f;">
-        <div class="module-card-header">
-          <h2 class="module-card-title">Notes</h2>
-        </div>
-        <p class="module-card-desc">Teaching notes for this learning objective.</p>
         {preview_html}
         <div class="module-card-actions">
           {pdf_button}
@@ -433,13 +425,7 @@ def render_module_card(level: dict, slug: str) -> str:
 
     return f'''
       <section class="module-card" style="--card-accent: {accent};">
-        <div class="module-card-header">
-          <div class="scaffold-koru-group">{icon_html}</div>
-          <div>
-            <h2 class="module-card-title">{label}</h2>
-          </div>
-        </div>
-        <p class="module-card-desc">{html.escape(desc)}</p>
+        <div class="scaffold-koru-group">{icon_html}</div>
         {preview_thumbnails}
         <div class="module-card-actions">
           {tasks_button}
