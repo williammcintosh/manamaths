@@ -58,19 +58,17 @@
   \end{minipage}%
 }
 
-\newcommand{\TabRowGap}{\vspace{1.0cm}}
-
 \begin{document}
 \begin{frame}[t]
 \TermTitle{Te reo Māori terms}
 
 \vspace*{\fill}
 \begin{center}
-\begin{tabular}{c@{\hskip 2.0em}c}
-  \TermCard{uara tū}{place value}{https://maoridictionary.co.nz/word/46082} & \TermCard{mati}{digit}{https://maoridictionary.co.nz/word/50527} \\
-  \TabRowGap
-  \TermCard{tau ā-ira}{decimal}{https://maoridictionary.co.nz/word/45992} & \TermCard{mati whaiira}{decimal place}{https://maoridictionary.co.nz/word/45782}
-\end{tabular}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cc}
+ \TermCard{uara tū}{place value}{https://maoridictionary.co.nz/word/46082} & \TermCard{mati}{digit}{https://maoridictionary.co.nz/word/50527} \\
+ \multicolumn{2}{c}{\rule{0pt}{0.45cm}} \\[-0.1cm]
+ \TermCard{tau ā-ira}{decimal}{https://maoridictionary.co.nz/word/45992} & \TermCard{mati whaiira}{decimal place}{https://maoridictionary.co.nz/word/45782} \\
+\end{tabular*}
 \end{center}
 \vspace*{\fill}
 
