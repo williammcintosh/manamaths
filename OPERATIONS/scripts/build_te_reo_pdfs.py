@@ -94,12 +94,13 @@ def build_tex(terms: list[dict]) -> str:
         rows.append(cells)
     
     all_cards_text = "\\vspace*{\\fill}\n"
-    all_cards_text += "\\centering\n"
+    all_cards_text += "\\begin{center}\n"
     all_cards_text += "\\begin{tabular}{c@{\\hskip 2.0em}c}\n"
     all_cards_text += f"  {rows[0]} \\\\\n"
     all_cards_text += "  \\TabRowGap\n"
     all_cards_text += f"  {rows[1]}\n" if len(rows) > 1 else ""
     all_cards_text += "\\end{tabular}\n"
+    all_cards_text += "\\end{center}\n"
     all_cards_text += "\\vspace*{\\fill}"
     latex = template.replace("TERM_CARDS", all_cards_text.strip())
     return latex
