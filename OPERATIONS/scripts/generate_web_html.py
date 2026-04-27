@@ -398,7 +398,7 @@ def render_module_card(level: dict, slug: str) -> str:
 
     icon_count = {"foundation": 1, "proficient": 2, "excellence": 3}.get(key, 1)
     icon_html = "".join(
-        '<img class="scaffold-koru" src="../header-logo.png" alt="" aria-hidden="true" />'
+        '<img src="../hoe.png" alt="" aria-hidden="true" />'
         for _ in range(icon_count)
     )
 
