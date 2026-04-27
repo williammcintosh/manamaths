@@ -1,5 +1,5 @@
 \documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=1.45cm,top=0.5cm,bottom=1.0cm]{geometry}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{tasks}
@@ -9,10 +9,14 @@
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
 \renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
+
 \begin{document}
 \sffamily
+\boldmath
+
 \boldmath
 {\LARGE \textbf{Drawing parabola from given equation — Excellence}}\\[0.2em]
 {\large Use the numbered blank grids. Draw each parabola neatly and add the requested features.}
@@ -116,8 +120,8 @@
 \node[font=\small] at (14.98,5.43) {$y$};
 \end{tikzpicture}
 \end{center}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=1.3cm, after-item-skip=0.75em}
-\begin{tasks}(2)
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=1.3cm, after-item-skip=4.7em}
+\begin{tasks}(3)
 \task Draw \mbox{$ y=(x-3)^2-4 $}. Label the turning point and the axis of symmetry.
 \task Draw \mbox{$ y=-2(x+1)^2+5 $}. Label the turning point and the axis of symmetry.
 \task Draw \mbox{$ y=\frac{1}{2}(x-4)^2-3 $}. Label the turning point and the axis of symmetry.
@@ -126,10 +130,10 @@
 \task Draw \mbox{$ y=2x^2+4x-6 $}. Label the turning point and the axis of symmetry.
 \task Draw \mbox{$ y=\frac{1}{2}x^2-3x+2 $}. Label the turning point and the axis of symmetry.
 \task Draw \mbox{$ y=-\frac{1}{2}x^2-2x+3 $}. Label the turning point and the axis of symmetry.
-\task Draw \mbox{$ y=(x+2)^2-1 $}. Also mark where it crosses the $x$-axis.
-\task Draw \mbox{$ y=-(x-4)^2+2 $}. Also mark where it crosses the $x$-axis.
-\task Draw \mbox{$ y=x^2+2x-8 $}. Also mark where it crosses the $x$-axis.
-\task Draw \mbox{$ y=-x^2+4x-1 $}. Also mark where it crosses the $x$-axis.
+\task Draw \mbox{$ y=(x+2)^2-1 $}. Also mark where it crosses the \mbox{$x$}-axis.
+\task Draw \mbox{$ y=-(x-4)^2+2 $}. Also mark where it crosses the \mbox{$x$}-axis.
+\task Draw \mbox{$ y=x^2+2x-8 $}. Also mark where it crosses the \mbox{$x$}-axis.
+\task Draw \mbox{$ y=-x^2+4x-1 $}. Also mark where it crosses the \mbox{$x$}-axis.
 \task Draw \mbox{$ y=2(x-2)^2+1 $}. Choose a sensible table, then draw it.
 \task Draw \mbox{$ y=-2(x+3)^2+4 $}. Choose a sensible table, then draw it.
 \task Draw \mbox{$ y=\frac{1}{2}(x+1)^2-4 $}. Choose a sensible table, then draw it.

@@ -16,9 +16,9 @@ TRACKER_JSON = OPERATIONS_DIR / "data" / "lo-tracker.json"
 TEMPLATE_PATH = OPERATIONS_DIR / "templates" / "lo-template.tex"
 LEVELS = ["foundation", "proficient", "excellence"]
 LEVEL_LABELS = {
-    "foundation": "Foundation",
-    "proficient": "Proficient",
-    "excellence": "Excellence",
+    "foundation": "Start Tasks",
+    "proficient": "Build Tasks",
+    "excellence": "Push Tasks",
 }
 COUNTS = {
     "foundation": 14,
@@ -76,7 +76,7 @@ def make_placeholder_tasks(level: str, count: int, sample_questions: list[str]) 
 
 def build_tex(title: str, level: str, sample_questions: list[str]) -> str:
     template = TEMPLATE_PATH.read_text()
-    template = template.replace("INSERT HEADER HERE", f"{title} — {LEVEL_LABELS[level]}")
+    template = template.replace("INSERT HEADER HERE", f"{LEVEL_LABELS[level]}")
     template = template.replace(r"\task ", make_placeholder_tasks(level, COUNTS[level], sample_questions), 1)
     return template
 

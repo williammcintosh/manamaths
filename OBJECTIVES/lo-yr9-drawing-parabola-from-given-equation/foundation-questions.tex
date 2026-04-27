@@ -1,5 +1,5 @@
 \documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=1.45cm,top=0.5cm,bottom=1.0cm]{geometry}
+\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{tasks}
@@ -9,10 +9,14 @@
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=9.8em}
 \renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
+
 \begin{document}
 \sffamily
+\boldmath
+
 \boldmath
 {\LARGE \textbf{Drawing parabola from given equation — Foundation}}\\[0.2em]
 {\large Use the numbered blank grids. For each one, make a table of values, plot the points, then draw the parabola.}
@@ -92,8 +96,8 @@
 \node[font=\small] at (13.68,3.08) {$y$};
 \end{tikzpicture}
 \end{center}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=1.3cm, after-item-skip=0.9em}
-\begin{tasks}(3)
+\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=1.3cm, after-item-skip=9.8em}
+\begin{tasks}(4)
 \task Draw \mbox{$ y=x^2 $}.
 \task Draw \mbox{$ y=x^2+1 $}.
 \task Draw \mbox{$ y=x^2-2 $}.
