@@ -1,52 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-{\LARGE \textbf{Proficient}}
-\begin{tasks}(3)
-\task Write the probability of rolling a factor of \mbox{$12$} on a fair die in F/T form.
-\task Write the probability of rolling a multiple of \mbox{$2$} on a fair die in F/T form.
-\task Write the probability of choosing a consonant from cards labelled \mbox{$A$}, \mbox{$E$}, \mbox{$I$}, \mbox{$O$}, \mbox{$U$}, \mbox{$M$}, \mbox{$N$}, \mbox{$P$}.
-\task Write the probability of picking a prime number from a fair spinner labelled \mbox{$1,2,3,4,5,6$}.
-\task A bag has \mbox{$5$} red, \mbox{$3$} blue, and \mbox{$4$} green counters. Write the probability of picking blue in F/T form.
-\task A bag has \mbox{$2$} yellow, \mbox{$2$} black, and \mbox{$6$} white counters. Write the probability of not picking white in F/T form.
-\task A standard deck card is chosen. Write the probability of drawing a heart in F/T form.
-\task A standard deck card is chosen. Write the probability of drawing a face card in F/T form.
-\task Two coins are tossed. Write the probability of getting exactly one head in F/T form.
-\task Two coins are tossed. Write the probability of getting two tails in F/T form.
-\task A fair die is rolled. Write the probability of getting a number greater than \mbox{$4$} in F/T form.
-\task A fair die is rolled. Write the probability of not getting a multiple of \mbox{$3$} in F/T form.
-\task Fill in the blank: if an event has \mbox{$3$} favourable outcomes out of \mbox{$8$} total outcomes, then \mbox{$P(\text{event})=\frac{\square}{\square}$}.
-\task Fill in the blank: for a fair spinner with \mbox{$10$} equal sectors, if \mbox{$4$} sectors are shaded then \mbox{$P(\text{shaded})=\frac{\square}{10}$}.
-\task Which is greater: the probability of drawing a black card from a standard deck or the probability of rolling an odd number on a fair die?
-\task Which is smaller: the probability of exactly one head in two coin tosses or the probability of drawing a king from a standard deck?
-\task A student says \mbox{$P(\text{prime on a fair die})=\frac{4}{6}$}. Are they correct?
-\task Explain in one short sentence what the \mbox{$T$} stands for in F/T.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Write the probability of rolling a factor of \mbox{$12$} on a fair die in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Write the probability of rolling a multiple of \mbox{$2$} on a fair die in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Write the probability of choosing a consonant from cards labelled \mbox{$A$}, \mbox{$E$}, \mbox{$I$}, \mbox{$O$}, \mbox{$U$}, \mbox{$M$}, \mbox{$N$}, \mbox{$P$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Write the probability of picking a prime number from a fair spinner labelled \mbox{$1,2,3,4,5,6$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A bag has \mbox{$5$} red, \mbox{$3$} blue, and \mbox{$4$} green counters. Write the probability of picking blue in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A bag has \mbox{$2$} yellow, \mbox{$2$} black, and \mbox{$6$} white counters. Write the probability of not picking white in F/T form.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A standard deck card is chosen. Write the probability of drawing a heart in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A standard deck card is chosen. Write the probability of drawing a face card in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Two coins are tossed. Write the probability of getting exactly one head in F/T form.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Two coins are tossed. Write the probability of getting two tails in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A fair die is rolled. Write the probability of getting a number greater than \mbox{$4$} in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A fair die is rolled. Write the probability of not getting a multiple of \mbox{$3$} in F/T form.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Fill in the blank: if an event has \mbox{$3$} favourable outcomes out of \mbox{$8$} total outcomes, then \mbox{$P(\text{event})=\frac{\square}{\square}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Fill in the blank: for a fair spinner with \mbox{$10$} equal sectors, if \mbox{$4$} sectors are shaded then \mbox{$P(\text{shaded})=\frac{\square}{10}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Which is greater: the probability of drawing a black card from a standard deck or the probability of rolling an odd number on a fair die?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Which is smaller: the probability of exactly one head in two coin tosses or the probability of drawing a king from a standard deck?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A student says \mbox{$P(\text{prime on a fair die})=\frac{4}{6}$}. Are they correct?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Explain in one short sentence what the \mbox{$T$} stands for in F/T.}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

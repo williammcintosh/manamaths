@@ -1,52 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-{\LARGE \textbf{Proficient}}
-\begin{tasks}(3)
-\task Simplify \mbox{$3x+5x$}.
-\task Simplify \mbox{$9y-4y$}.
-\task Simplify \mbox{$7a+2a-3a$}.
-\task Simplify \mbox{$10b-b-2b$}.
-\task Simplify \mbox{$4c+6c+3$}.
-\task Simplify \mbox{$12d-5d+1$}.
-\task Simplify \mbox{$8m+2n$}.
-\task Simplify \mbox{$5p+3p+4p$}.
-\task Simplify \mbox{$14q-6q+2q$}.
-\task Simplify \mbox{$6r+r-4r$}.
-\task Which has like terms: \mbox{$3x+2y$} or \mbox{$3x+2x$}?
-\task Which cannot be simplified to one term: \mbox{$4a+5a$} or \mbox{$4a+5b$}?
-\task Fill in the blank: \mbox{$3k+\square k=8k$}.
-\task Fill in the blank: \mbox{$9m-\square m=4m$}.
-\task Is \mbox{$2x+5x=7$} correct?
-\task Is \mbox{$6a-2a=4a$} correct?
-\task Explain in one short sentence why \mbox{$3p+2q$} cannot become \mbox{$5pq$}.
-\task Explain in one short sentence why \mbox{$4t+t=5t$}.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Simplify \mbox{$3x+5x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Simplify \mbox{$9y-4y$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Simplify \mbox{$7a+2a-3a$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Simplify \mbox{$10b-b-2b$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Simplify \mbox{$4c+6c+3$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Simplify \mbox{$12d-5d+1$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Simplify \mbox{$8m+2n$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Simplify \mbox{$5p+3p+4p$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Simplify \mbox{$14q-6q+2q$}.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Simplify \mbox{$6r+r-4r$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Which has like terms: \mbox{$3x+2y$} or \mbox{$3x+2x$}?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Which cannot be simplified to one term: \mbox{$4a+5a$} or \mbox{$4a+5b$}?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Fill in the blank: \mbox{$3k+\square k=8k$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Fill in the blank: \mbox{$9m-\square m=4m$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Is \mbox{$2x+5x=7$} correct?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Is \mbox{$6a-2a=4a$} correct?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Explain in one short sentence why \mbox{$3p+2q$} cannot become \mbox{$5pq$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Explain in one short sentence why \mbox{$4t+t=5t$}.}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

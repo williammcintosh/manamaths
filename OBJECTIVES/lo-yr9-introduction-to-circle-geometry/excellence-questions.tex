@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Introduction to Circle Geometry --- Excellence}}
-\begin{tasks}(3)
-\task {Two angles in the same segment are \mbox{$3x+9^\circ$} and \mbox{$2x+21^\circ$}. Find \mbox{$x$}.}
-\task {The angle at the centre is \mbox{$6y+8^\circ$} and the angle at the circumference on the same arc is \mbox{$2y+14^\circ$}. Find \mbox{$y$}.}
-\task {A tangent meets a radius at an angle of \mbox{$4a-22^\circ$}. Find \mbox{$a$}.}
-\task {An angle in a semicircle is \mbox{$5b-10^\circ$}. Find \mbox{$b$}.}
-\task {Angles in the same segment are equal. One is \mbox{$x+18^\circ$} and the other is \mbox{$2x-27^\circ$}. Find \mbox{$x$}.}
-\task {The angle at the centre is \mbox{$(3m+12)^\circ$} and the angle at the circumference on the same arc is \mbox{$(m+18)^\circ$}. Find \mbox{$m$}.}
-\task {A tangent meets radius \mbox{$OT$} at an angle of \mbox{$(7k-1)^\circ$}. Find \mbox{$k$}.}
-\task {A student says: ``If the angle at the centre is twice the angle at the circumference, then the circumference angle must always be acute.'' Give one example that supports the claim and one example that disproves it.}
-\task {An angle at the circumference is \mbox{$41^\circ$}. Another angle standing on the same chord is labelled \mbox{$x+5^\circ$}. Find \mbox{$x$}.}
-\task {An angle at the centre is \mbox{$168^\circ$}. Find the angle at the circumference on the same arc and explain why it is not \mbox{$168^\circ$}.}
-\task {A triangle is drawn inside a circle with one side as the diameter. The other two angles are \mbox{$x^\circ$} and \mbox{$(x+14)^\circ$}. Find \mbox{$x$}.}
-\task {A tangent touches a circle at \mbox{$P$}. The radius \mbox{$OP$} and another radius \mbox{$OQ$} form an angle of \mbox{$128^\circ$} at the centre. Find the angle between the tangent at \mbox{$P$} and the chord \mbox{$PQ$}.}
-\task {Two equal angles stand on the same chord. One is written \mbox{$3n^\circ$} and the other \mbox{$2n+19^\circ$}. Find \mbox{$n$}.}
-\task {The angle at the centre standing on arc \mbox{$AB$} is three times the angle at the circumference on the same arc, minus \mbox{$20^\circ$}. Find both angles.}
-\task {Explain why a triangle formed by the endpoints of a diameter and any other point on the circle must be a right-angled triangle.}
-\task {Write one circle-geometry question of your own using one of these rules: same segment, tangent-radius, centre/circumference, or semicircle. Then solve it.}
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Two angles in the same segment are \mbox{$3x+9^\circ$} and \mbox{$2x+21^\circ$}. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{The angle at the centre is \mbox{$6y+8^\circ$} and the angle at the circumference on the same arc is \mbox{$2y+14^\circ$}. Find \mbox{$y$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A tangent meets a radius at an angle of \mbox{$4a-22^\circ$}. Find \mbox{$a$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{An angle in a semicircle is \mbox{$5b-10^\circ$}. Find \mbox{$b$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Angles in the same segment are equal. One is \mbox{$x+18^\circ$} and the other is \mbox{$2x-27^\circ$}. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{The angle at the centre is \mbox{$(3m+12)^\circ$} and the angle at the circumference on the same arc is \mbox{$(m+18)^\circ$}. Find \mbox{$m$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A tangent meets radius \mbox{$OT$} at an angle of \mbox{$(7k-1)^\circ$}. Find \mbox{$k$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A student says: ``If the angle at the centre is twice the angle at the circumference, then the circumference angle must always be acute.'' Give one example that supports the claim and one example that disproves it.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{An angle at the circumference is \mbox{$41^\circ$}. Another angle standing on the same chord is labelled \mbox{$x+5^\circ$}. Find \mbox{$x$}.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{An angle at the centre is \mbox{$168^\circ$}. Find the angle at the circumference on the same arc and explain why it is not \mbox{$168^\circ$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A triangle is drawn inside a circle with one side as the diameter. The other two angles are \mbox{$x^\circ$} and \mbox{$(x+14)^\circ$}. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A tangent touches a circle at \mbox{$P$}. The radius \mbox{$OP$} and another radius \mbox{$OQ$} form an angle of \mbox{$128^\circ$} at the centre. Find the angle between the tangent at \mbox{$P$} and the chord \mbox{$PQ$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Two equal angles stand on the same chord. One is written \mbox{$3n^\circ$} and the other \mbox{$2n+19^\circ$}. Find \mbox{$n$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{The angle at the centre standing on arc \mbox{$AB$} is three times the angle at the circumference on the same arc, minus \mbox{$20^\circ$}. Find both angles.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Explain why a triangle formed by the endpoints of a diameter and any other point on the circle must be a right-angled triangle.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Write one circle-geometry question of your own using one of these rules: same segment, tangent-radius, centre/circumference, or semicircle. Then solve it.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

@@ -1,50 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-{\LARGE \textbf{Misleading graphs — Foundation}}
-\begin{tasks}(3)
-\task Which of the following is a characteristic of a good graph? (a) No title (b) Clearly labelled axes (c) Missing data points (d) Unlabelled axes
-\task True or False: A graph with a y-axis that starts at 50 instead of 0 can be misleading.
-\task Which graph is misleading? Graph A: y-axis starts at 0, bars proportional. Graph B: y-axis starts at 100, making small differences look large.
-\task What is missing from a graph that has no title?
-\task Which of these could make a graph misleading? (a) Using a 3D effect (b) Having a clear title (c) Labeling both axes (d) Using consistent scaling
-\task True or False: A pie chart that uses 3D perspective can make some slices appear larger than they are.
-\task Identify the misleading feature: A bar graph where the bars are drawn as cylinders, making the front cylinder appear larger.
-\task Which graph correctly represents the data? Graph A: bars heights match numbers. Graph B: bars heights are doubled.
-\task What should you check first when evaluating a graph? (a) Colors used (b) Whether axes are labelled (c) The font size (d) The paper size
-\task True or False: A graph with no axis labels is still acceptable if the title explains everything.
-\task Which of these is a good practice for graphs? (a) Start the y-axis at a high number to emphasize differences (b) Use a clear, descriptive title (c) Use as many colors as possible (d) Omit data points that don't fit
-\task What is wrong with a graph that uses pictures instead of bars?
-\task True or False: A line graph that omits zero on the y-axis is always misleading.
-\task Which graph is more likely to be misleading? Graph A: y-axis has a break (zigzag) near zero. Graph B: y-axis is continuous from 0 to 100.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Which of the following is a characteristic of a good graph? (a) No title (b) Clearly labelled axes (c) Missing data points (d) Unlabelled axes}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{True or False: A graph with a y-axis that starts at 50 instead of 0 can be misleading.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Which graph is misleading? Graph A: y-axis starts at 0, bars proportional. Graph B: y-axis starts at 100, making small differences look large.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{What is missing from a graph that has no title?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Which of these could make a graph misleading? (a) Using a 3D effect (b) Having a clear title (c) Labeling both axes (d) Using consistent scaling}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{True or False: A pie chart that uses 3D perspective can make some slices appear larger than they are.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Identify the misleading feature: A bar graph where the bars are drawn as cylinders, making the front cylinder appear larger.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Which graph correctly represents the data? Graph A: bars heights match numbers. Graph B: bars heights are doubled.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{What should you check first when evaluating a graph? (a) Colors used (b) Whether axes are labelled (c) The font size (d) The paper size}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{True or False: A graph with no axis labels is still acceptable if the title explains everything.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Which of these is a good practice for graphs? (a) Start the y-axis at a high number to emphasize differences (b) Use a clear, descriptive title (c) Use as many colors as possible (d) Omit data points that don't fit}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{What is wrong with a graph that uses pictures instead of bars?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{True or False: A line graph that omits zero on the y-axis is always misleading.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Which graph is more likely to be misleading? Graph A: y-axis has a break (zigzag) near zero. Graph B: y-axis is continuous from 0 to 100.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

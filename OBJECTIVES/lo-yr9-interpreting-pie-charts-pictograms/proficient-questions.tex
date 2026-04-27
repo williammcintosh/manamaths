@@ -1,82 +1,125 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-{\LARGE \textbf{Interpreting pie charts \& pictograms --- Proficient}}
-\begin{tasks}(3)
-\task This pie chart shows favourite lunch choices for 80 students.\\
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{This pie chart shows favourite lunch choices for 80 students.\\
 \simplepie{{35/red/Sandwich,25/blue/Sushi,20/green/Pasta,20/yellow/Other}}\\
-How many students chose sushi?
-
-\task This pie chart shows transport to school for 120 students.\\
+How many students chose sushi?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{This pie chart shows transport to school for 120 students.\\
 \simplepie{{40/red/Car,25/blue/Walk,20/green/Bus,15/yellow/Bike}}\\
-How many students travel by bike?
-
-\task This pie chart shows club choices.\\
+How many students travel by bike?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{This pie chart shows club choices.\\
 \simplepie{{30/red/Art,30/blue/Sport,25/green/Music,15/yellow/Drama}}\\
-What percentage chose Art or Music?
-
-\task This pie chart shows favourite games for 60 students.\\
+What percentage chose Art or Music?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{This pie chart shows favourite games for 60 students.\\
 \simplepie{{50/red/Football,20/blue/Basketball,20/green/Netball,10/yellow/Other}}\\
-How many students did not choose football?
-
-\task The pictogram shows books borrowed. Key: \picto{1}{B} = 4 books.\\[0.3em]
+How many students did not choose football?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{The pictogram shows books borrowed. Key: \picto{1}{B} = 4 books.\\[0.3em]
 \begin{tabular}{ll}
 Room 1 & \picto{3}{B} \\
 Room 2 & \picto{5}{B} \\
 Room 3 & \picto{4}{B}
 \end{tabular}\\
-How many books were borrowed altogether?
-
-\task The pictogram shows goals scored. Key: \picto{1}{G} = 3 goals.\\[0.3em]
+How many books were borrowed altogether?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{The pictogram shows goals scored. Key: \picto{1}{G} = 3 goals.\\[0.3em]
 \begin{tabular}{ll}
 Kea    & \picto{2}{G} \\
 Tui    & \picto{4}{G} \\
 Kakapo & \picto{3}{G}
 \end{tabular}\\
-How many more goals did Tui score than Kea?
-
-\task The pictogram shows fruit boxes sold. Key: \picto{1}{F} = 6 boxes.\\[0.3em]
+How many more goals did Tui score than Kea?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{The pictogram shows fruit boxes sold. Key: \picto{1}{F} = 6 boxes.\\[0.3em]
 \begin{tabular}{ll}
 Shop A & \picto{5}{F} \\
 Shop B & \picto{2}{F} \\
 Shop C & \picto{4}{F}
 \end{tabular}\\
-How many boxes did Shop C sell?
-
-\task The pictogram shows students in after-school groups. Key: \picto{1}{S} = 2 students.\\[0.3em]
+How many boxes did Shop C sell?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{The pictogram shows students in after-school groups. Key: \picto{1}{S} = 2 students.\\[0.3em]
 \begin{tabular}{ll}
 Coding & \picto{6}{S} \\
 Chess  & \picto{4}{S} \\
 Art    & \picto{5}{S}
 \end{tabular}\\
-How many students are in Coding and Chess altogether?
-
-\task A pie chart shows a survey of 200 people. If 35\% chose pizza, how many people is that?
-
-\task A pictogram uses 1 symbol to represent 5 apples. If a row has 7 symbols, how many apples does it represent?
-
-\end{tasks}
-
+How many students are in Coding and Chess altogether?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A pie chart shows a survey of 200 people. If 35\% chose pizza, how many people is that?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A pictogram uses 1 symbol to represent 5 apples. If a row has 7 symbols, how many apples does it represent?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

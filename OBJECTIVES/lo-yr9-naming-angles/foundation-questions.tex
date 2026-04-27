@@ -1,68 +1,123 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-{\LARGE \textbf{Naming angles --- Foundation}}
-\begin{tasks}(3)
-\task {Name the marked angle.\\[0.4em]
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Name the marked angle.\\[0.4em]
 \begin{tikzpicture}[scale=0.72,baseline=(current bounding box.center)]
   \coordinate (B) at (0,0); \coordinate (A) at (3.0,0); \coordinate (C) at (1.6,2.4);
   \draw[thick] (B)--(A); \draw[thick] (B)--(C);
   \draw[thick] (0.9,0) arc[start angle=0,end angle=56,radius=0.9];
   \fill (A) circle (1.7pt) node[below] {A}; \fill (B) circle (1.7pt) node[below left] {B}; \fill (C) circle (1.7pt) node[above] {C};
-\end{tikzpicture}}
-\task {Name the marked angle.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Name the marked angle.\\[0.4em]
 \begin{tikzpicture}[scale=0.72,baseline=(current bounding box.center)]
   \coordinate (E) at (0,0); \coordinate (D) at (2.9,0.5); \coordinate (F) at (0.2,2.8);
   \draw[thick] (E)--(D); \draw[thick] (E)--(F);
   \draw[thick] (0.85,0.15) arc[start angle=10,end angle=86,radius=0.86];
   \fill (D) circle (1.7pt) node[right] {D}; \fill (E) circle (1.7pt) node[below left] {E}; \fill (F) circle (1.7pt) node[above] {F};
-\end{tikzpicture}}
-\task {Name the marked angle.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Name the marked angle.\\[0.4em]
 \begin{tikzpicture}[scale=0.72,baseline=(current bounding box.center)]
   \coordinate (H) at (0,0); \coordinate (G) at (-0.3,2.9); \coordinate (J) at (2.8,0.2);
   \draw[thick] (H)--(G); \draw[thick] (H)--(J);
   \draw[thick] (0.88,0.05) arc[start angle=4,end angle=96,radius=0.88];
   \fill (G) circle (1.7pt) node[above] {G}; \fill (H) circle (1.7pt) node[below left] {H}; \fill (J) circle (1.7pt) node[right] {J};
-\end{tikzpicture}}
-\task {Circle the letter that is the vertex in \mbox{$\angle PQR$}.\\[0.3em]A. \mbox{$P$} \quad B. \mbox{$Q$} \quad C. \mbox{$R$}}
-\task {Circle the letter that is the vertex in \mbox{$\angle MNO$}.\\[0.3em]A. \mbox{$M$} \quad B. \mbox{$N$} \quad C. \mbox{$O$}}
-\task {Which name matches the angle shown?\\[0.4em]
+\end{tikzpicture}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Circle the letter that is the vertex in \mbox{$\angle PQR$}.\\[0.3em]A. \mbox{$P$} \quad B. \mbox{$Q$} \quad C. \mbox{$R$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Circle the letter that is the vertex in \mbox{$\angle MNO$}.\\[0.3em]A. \mbox{$M$} \quad B. \mbox{$N$} \quad C. \mbox{$O$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Which name matches the angle shown?\\[0.4em]
 \begin{tikzpicture}[scale=0.72,baseline=(current bounding box.center)]
   \coordinate (Q) at (0,0); \coordinate (P) at (-0.2,2.8); \coordinate (R) at (3.0,0.2);
   \draw[thick] (Q)--(P); \draw[thick] (Q)--(R);
   \draw[thick] (0.88,0.04) arc[start angle=4,end angle=94,radius=0.88];
   \fill (P) circle (1.7pt) node[above] {P}; \fill (Q) circle (1.7pt) node[below left] {Q}; \fill (R) circle (1.7pt) node[right] {R};
-\end{tikzpicture}\\[0.2em]A. \mbox{$\angle PQR$} \quad B. \mbox{$\angle PRQ$} \quad C. \mbox{$\angle QPR$}}
-\task {Which name matches the angle shown?\\[0.4em]
+\end{tikzpicture}\\[0.2em]A. \mbox{$\angle PQR$} \quad B. \mbox{$\angle PRQ$} \quad C. \mbox{$\angle QPR$}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Which name matches the angle shown?\\[0.4em]
 \begin{tikzpicture}[scale=0.72,baseline=(current bounding box.center)]
   \coordinate (V) at (0,0); \coordinate (U) at (2.9,0.2); \coordinate (W) at (0.8,2.7);
   \draw[thick] (V)--(U); \draw[thick] (V)--(W);
   \draw[thick] (0.85,0.05) arc[start angle=4,end angle=74,radius=0.85];
   \fill (U) circle (1.7pt) node[right] {U}; \fill (V) circle (1.7pt) node[below left] {V}; \fill (W) circle (1.7pt) node[above] {W};
-\end{tikzpicture}\\[0.2em]A. \mbox{$\angle UVW$} \quad B. \mbox{$\angle VWU$} \quad C. \mbox{$\angle WUV$}}
-\task {Fill in the missing letter so the vertex is \mbox{$B$}: \mbox{$\angle A\underline{\hspace{0.8cm}}C$}}
-\task {Fill in the missing letter so the vertex is \mbox{$S$}: \mbox{$\angle R\underline{\hspace{0.8cm}}T$}}
-\task {Write another correct name for the same angle: \mbox{$\angle ABC = \underline{\hspace{3cm}}$}}
-\task {Write another correct name for the same angle: \mbox{$\angle DEF = \underline{\hspace{3cm}}$}}
-\task {Explain this rule in a few words: where does the vertex go when naming an angle?}
-\end{tasks}
-
+\end{tikzpicture}\\[0.2em]A. \mbox{$\angle UVW$} \quad B. \mbox{$\angle VWU$} \quad C. \mbox{$\angle WUV$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Fill in the missing letter so the vertex is \mbox{$B$}: \mbox{$\angle A\underline{\hspace{0.8cm}}C$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Fill in the missing letter so the vertex is \mbox{$S$}: \mbox{$\angle R\underline{\hspace{0.8cm}}T$}}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Write another correct name for the same angle: \mbox{$\angle ABC = \underline{\hspace{3cm}}$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Write another correct name for the same angle: \mbox{$\angle DEF = \underline{\hspace{3cm}}$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Explain this rule in a few words: where does the vertex go when naming an angle?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

@@ -1,60 +1,98 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-{\LARGE \textbf{Using tables to explore patterns and graphs — Excellence}}\\[0.2em]
-Use table patterns to justify rules, compare graphs, and predict unknown values.
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\begin{tasks}(3)
-\task The table is \mbox{$(0,4)$}, \mbox{$(1,7)$}, \mbox{$(2,10)$}, \mbox{$(3,13)$}. Write the rule, then explain how the table shows the graph has constant gradient.
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\task The table is \mbox{$(1,12)$}, \mbox{$(2,9)$}, \mbox{$(3,6)$}, \mbox{$(4,3)$}. Write the rule and predict where the graph crosses the \mbox{$x$}-axis.
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\task The table is \mbox{$(0,1)$}, \mbox{$(1,4)$}, \mbox{$(2,9)$}, \mbox{$(3,16)$}. Explain why these points would not lie on one straight line.
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\task {Complete the table for \mbox{$y=3x-5$}. Then state both intercepts.\\[0.3em]
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{The table is \mbox{$(0,4)$}, \mbox{$(1,7)$}, \mbox{$(2,10)$}, \mbox{$(3,13)$}. Write the rule, then explain how the table shows the graph has constant gradient.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{The table is \mbox{$(1,12)$}, \mbox{$(2,9)$}, \mbox{$(3,6)$}, \mbox{$(4,3)$}. Write the rule and predict where the graph crosses the \mbox{$x$}-axis.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{The table is \mbox{$(0,1)$}, \mbox{$(1,4)$}, \mbox{$(2,9)$}, \mbox{$(3,16)$}. Explain why these points would not lie on one straight line.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Complete the table for \mbox{$y=3x-5$}. Then state both intercepts.\\[0.3em]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 $x$ & $0$ & $1$ & $2$ & $5$ \\\hline
 $y$ &  &  &  &  \\\hline
-\end{tabular}}
-
-\task Complete the table for \mbox{$y=18-2x$}. Then decide whether the graph reaches \mbox{$y=0$} before or after \mbox{$x=10$}.
-
-\task A machine rule makes the table \mbox{$(0,2)$}, \mbox{$(2,6)$}, \mbox{$(4,10)$}, \mbox{$(6,14)$}. Write the rule in the form \mbox{$y=mx+c$}.
-
-\task Two tables are shown. Table A: \mbox{$(0,1)$}, \mbox{$(1,3)$}, \mbox{$(2,5)$}. Table B: \mbox{$(0,1)$}, \mbox{$(1,4)$}, \mbox{$(2,7)$}. Which graph is steeper? Explain using the change in \mbox{$y$}.
-
-\task A student says the table \mbox{$(0,7)$}, \mbox{$(1,5)$}, \mbox{$(2,3)$}, \mbox{$(3,1)$} has rule \mbox{$y=7-2x$}. Check the rule using the table, then find the point for \mbox{$x=5$}.
-
-\task The table is \mbox{$(0,-1)$}, \mbox{$(1,2)$}, \mbox{$(2,5)$}, \mbox{$(3,8)$}. Predict the point where \mbox{$y=14$}. Show the pattern you used.
-
-\task The points in a table are \mbox{$(0,10)$}, \mbox{$(5,8)$}, \mbox{$(10,6)$}, \mbox{$(15,4)$}. Describe the graph and find a rule that fits these values.
-
-\task A graph is made from the rule \mbox{$y=\frac{3}{2}x+1$}. Write a table for \mbox{$x=0,2,4,6$}, then explain why these values are useful for plotting.
-
-\task The table is \mbox{$(1,3)$}, \mbox{$(2,6)$}, \mbox{$(3,11)$}, \mbox{$(4,18)$}. The first differences are not constant. What does that suggest about the graph?
-
-\task One pattern uses \mbox{$y=2x+1$}. Another uses \mbox{$y=2x+5$}. Explain how the tables would show the graphs are parallel.
-
-\task The table for a line includes \mbox{$(2,9)$} and \mbox{$(5,15)$}. Find the gradient from the table, then write a rule for the line.
-\end{tasks}
-
+\end{tabular}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Complete the table for \mbox{$y=18-2x$}. Then decide whether the graph reaches \mbox{$y=0$} before or after \mbox{$x=10$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A machine rule makes the table \mbox{$(0,2)$}, \mbox{$(2,6)$}, \mbox{$(4,10)$}, \mbox{$(6,14)$}. Write the rule in the form \mbox{$y=mx+c$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Two tables are shown. Table A: \mbox{$(0,1)$}, \mbox{$(1,3)$}, \mbox{$(2,5)$}. Table B: \mbox{$(0,1)$}, \mbox{$(1,4)$}, \mbox{$(2,7)$}. Which graph is steeper? Explain using the change in \mbox{$y$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A student says the table \mbox{$(0,7)$}, \mbox{$(1,5)$}, \mbox{$(2,3)$}, \mbox{$(3,1)$} has rule \mbox{$y=7-2x$}. Check the rule using the table, then find the point for \mbox{$x=5$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{The table is \mbox{$(0,-1)$}, \mbox{$(1,2)$}, \mbox{$(2,5)$}, \mbox{$(3,8)$}. Predict the point where \mbox{$y=14$}. Show the pattern you used.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{The points in a table are \mbox{$(0,10)$}, \mbox{$(5,8)$}, \mbox{$(10,6)$}, \mbox{$(15,4)$}. Describe the graph and find a rule that fits these values.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A graph is made from the rule \mbox{$y=\frac{3}{2}x+1$}. Write a table for \mbox{$x=0,2,4,6$}, then explain why these values are useful for plotting.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{The table is \mbox{$(1,3)$}, \mbox{$(2,6)$}, \mbox{$(3,11)$}, \mbox{$(4,18)$}. The first differences are not constant. What does that suggest about the graph?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{One pattern uses \mbox{$y=2x+1$}. Another uses \mbox{$y=2x+5$}. Explain how the tables would show the graphs are parallel.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{The table for a line includes \mbox{$(2,9)$} and \mbox{$(5,15)$}. Find the gradient from the table, then write a rule for the line.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

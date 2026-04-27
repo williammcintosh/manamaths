@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Understanding Cartesian plane and co-ordinates — Foundation}}
-\begin{tasks}(3)
-\task {Write the co-ordinates of point \mbox{$A$} if you move 2 right and 3 up from the origin.}
-\task {Write the co-ordinates of point \mbox{$B$} if you move 4 left and 2 up from the origin.}
-\task {Write the co-ordinates of point \mbox{$C$} if you move 1 right and 3 down from the origin.}
-\task {Plot the point \mbox{$P(3,2)$}.}
-\task {Plot the point \mbox{$Q(-4,1)$}.}
-\task {Plot the point \mbox{$R(0,-5)$}.}
-\task {Plot the point \mbox{$S(-2,-3)$}.}
-\task {Name the axis used first when writing a point in \mbox{$(x,y)$} form.}
-\task {Name the axis used second when writing a point in \mbox{$(x,y)$} form.}
-\task {A point is written as \mbox{$(4,-2)$}. How many units do you move in the \mbox{$y$} direction?}
-\task {A point is written as \mbox{$(-3,5)$}. Do you move left or right first? Then up or down?}
-\task {Write the co-ordinates of a point 4 units up on the \mbox{$y$}-axis.}
-\task {Write the co-ordinates of a point 5 units left on the \mbox{$x$}-axis.}
-\task {Write the co-ordinates of a point 2 units down on the \mbox{$y$}-axis.}
-\task {Which point is 2 units to the right and 4 units up from the origin? Write it in \mbox{$(x,y)$} form.}
-\task {Which point is 5 units to the left and 1 unit down from the origin? Write it in \mbox{$(x,y)$} form.}
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Write the co-ordinates of point \mbox{$A$} if you move 2 right and 3 up from the origin.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Write the co-ordinates of point \mbox{$B$} if you move 4 left and 2 up from the origin.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Write the co-ordinates of point \mbox{$C$} if you move 1 right and 3 down from the origin.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Plot the point \mbox{$P(3,2)$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Plot the point \mbox{$Q(-4,1)$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Plot the point \mbox{$R(0,-5)$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Plot the point \mbox{$S(-2,-3)$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Name the axis used first when writing a point in \mbox{$(x,y)$} form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Name the axis used second when writing a point in \mbox{$(x,y)$} form.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A point is written as \mbox{$(4,-2)$}. How many units do you move in the \mbox{$y$} direction?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A point is written as \mbox{$(-3,5)$}. Do you move left or right first? Then up or down?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Write the co-ordinates of a point 4 units up on the \mbox{$y$}-axis.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Write the co-ordinates of a point 5 units left on the \mbox{$x$}-axis.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Write the co-ordinates of a point 2 units down on the \mbox{$y$}-axis.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Which point is 2 units to the right and 4 units up from the origin? Write it in \mbox{$(x,y)$} form.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Which point is 5 units to the left and 1 unit down from the origin? Write it in \mbox{$(x,y)$} form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

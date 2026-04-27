@@ -1,47 +1,114 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Understanding Cartesian plane and co-ordinates — Excellence}}
-\begin{tasks}(3)
-\task {Write the co-ordinates of point \mbox{$A$} if it is 4 left and 5 up. Then describe its location using a quadrant.}
-\task {Write the co-ordinates of point \mbox{$B$} if it is on the \mbox{$y$}-axis and 4 down.}
-\task {Write the co-ordinates of point \mbox{$C$} if it is 3 right and 2 down. Then describe its location using a quadrant.}
-\task {Write the co-ordinates of point \mbox{$D$} if it is on the \mbox{$x$}-axis and 1 left.}
-\task {Plot \mbox{$A(-4,3)$}, \mbox{$B(4,3)$}, \mbox{$C(4,-3)$} and \mbox{$D(-4,-3)$}. Join them in order. What shape is formed?}
-\task {Point \mbox{$P$} is at \mbox{$(2,-1)$}. Point \mbox{$Q$} has the same \mbox{$x$}-value but the opposite \mbox{$y$}-value. Write the co-ordinates of \mbox{$Q$}.}
-\task {Point \mbox{$M$} is at \mbox{$(-3,4)$}. Point \mbox{$N$} has the opposite \mbox{$x$}-value but the same \mbox{$y$}-value. Write the co-ordinates of \mbox{$N$}.}
-\task {Two points lie on the horizontal line through \mbox{$(0,2)$}. One is 5 units left of the \mbox{$y$}-axis and one is 4 units right of the \mbox{$y$}-axis. Write both co-ordinates.}
-\task {Two points lie on the vertical line through \mbox{$(-1,0)$}. One is 3 units above the \mbox{$x$}-axis and one is 4 units below the \mbox{$x$}-axis. Write both co-ordinates.}
-\task {Which pair has the same distance from the origin along an axis: \mbox{$A(-5,0)$}, \mbox{$B(0,5)$}, \mbox{$C(4,0)$}, \mbox{$D(0,-4)$}?}
-\task {Explain why “Y to the Sky” helps students place the point \mbox{$(-2,5)$} correctly.}
-\task {One point is 3 units right and 2 units down from the origin. Another is 3 units left and 2 units up from the origin. Write both co-ordinates and name their quadrants.}
-\task {Plot \mbox{$E(-2,4)$}, \mbox{$F(2,4)$}, \mbox{$G(2,-1)$} and \mbox{$H(-2,-1)$}. Which side lengths can you read directly from the grid?}
-\task {Make up one point in Quadrant II and one point in Quadrant IV that have the same distance from the \mbox{$x$}-axis.}
-\task {Make up three different points whose \mbox{$x$}-values add to \mbox{$0$}.}
-\task {Explain the difference between \mbox{$(4,0)$} and \mbox{$(0,4)$}.}
-\task {A student writes \mbox{$(-3,2)$} as \mbox{$(2,-3)$}. Describe exactly how the location changes on the grid.}
-\task {Write one point that is on an axis but not at the origin, and explain how you know it is on an axis.}
-\task {Plot any four points that make a rectangle with sides parallel to the axes. Write the co-ordinates of your four points.}
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Write the co-ordinates of point \mbox{$A$} if it is 4 left and 5 up. Then describe its location using a quadrant.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Write the co-ordinates of point \mbox{$B$} if it is on the \mbox{$y$}-axis and 4 down.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Write the co-ordinates of point \mbox{$C$} if it is 3 right and 2 down. Then describe its location using a quadrant.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Write the co-ordinates of point \mbox{$D$} if it is on the \mbox{$x$}-axis and 1 left.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Plot \mbox{$A(-4,3)$}, \mbox{$B(4,3)$}, \mbox{$C(4,-3)$} and \mbox{$D(-4,-3)$}. Join them in order. What shape is formed?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Point \mbox{$P$} is at \mbox{$(2,-1)$}. Point \mbox{$Q$} has the same \mbox{$x$}-value but the opposite \mbox{$y$}-value. Write the co-ordinates of \mbox{$Q$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Point \mbox{$M$} is at \mbox{$(-3,4)$}. Point \mbox{$N$} has the opposite \mbox{$x$}-value but the same \mbox{$y$}-value. Write the co-ordinates of \mbox{$N$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Two points lie on the horizontal line through \mbox{$(0,2)$}. One is 5 units left of the \mbox{$y$}-axis and one is 4 units right of the \mbox{$y$}-axis. Write both co-ordinates.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Two points lie on the vertical line through \mbox{$(-1,0)$}. One is 3 units above the \mbox{$x$}-axis and one is 4 units below the \mbox{$x$}-axis. Write both co-ordinates.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Which pair has the same distance from the origin along an axis: \mbox{$A(-5,0)$}, \mbox{$B(0,5)$}, \mbox{$C(4,0)$}, \mbox{$D(0,-4)$}?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Explain why “Y to the Sky” helps students place the point \mbox{$(-2,5)$} correctly.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{One point is 3 units right and 2 units down from the origin. Another is 3 units left and 2 units up from the origin. Write both co-ordinates and name their quadrants.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Plot \mbox{$E(-2,4)$}, \mbox{$F(2,4)$}, \mbox{$G(2,-1)$} and \mbox{$H(-2,-1)$}. Which side lengths can you read directly from the grid?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Make up one point in Quadrant II and one point in Quadrant IV that have the same distance from the \mbox{$x$}-axis.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Make up three different points whose \mbox{$x$}-values add to \mbox{$0$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Explain the difference between \mbox{$(4,0)$} and \mbox{$(0,4)$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A student writes \mbox{$(-3,2)$} as \mbox{$(2,-3)$}. Describe exactly how the location changes on the grid.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Write one point that is on an axis but not at the origin, and explain how you know it is on an axis.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Plot any four points that make a rectangle with sides parallel to the axes. Write the co-ordinates of your four points.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

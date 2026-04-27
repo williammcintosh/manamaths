@@ -1,46 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-{\LARGE \textbf{Selecting appropriate displays --- Excellence}}
-\begin{tasks}(3)
-\task A student uses a pie chart to show the temperature at midday for \mbox{$7$} days. Explain why that is a poor choice.
-\task A student uses a line graph for favourite movie genres. Explain why that is a poor choice.
-\task A researcher has exact jump heights for \mbox{$18$} athletes. Which display would you choose, and why?
-\task A researcher has jump heights grouped into \mbox{$5$} cm intervals. Which display would you choose, and why?
-\task A principal wants one display that compares the median and interquartile range of test scores for two classes. Which display is best, and why?
-\task A student says a bar graph and a histogram are basically the same. Give one reason why that is wrong.
-\task Which display is best for showing how petrol price changes each week across a term? Explain.
-\task Which display is best for showing the proportion of students in each house group? Explain.
-\task Which display is best for showing the distribution of travel times to school when the times are grouped into intervals? Explain.
-\task Which display is best for showing the exact number of books read by each student in a small class? Explain.
-\task A teacher wants to compare the spread of heights for Year \mbox{$9$} and Year \mbox{$10$} using one display. Which display is best, and why?
-\task A student chooses a pie chart for grouped exam-score intervals because there are categories. What is the better display, and why?
-\task A weather report wants to show rainfall each month over three years. Which display is best, and why?
-\task A dot plot and a histogram can both be used for numerical data. Give one situation where the dot plot is the better choice.
-\task Give one situation where a histogram is better than a dot plot.
-\task Choose the best display for each case and justify briefly: favourite colour, pulse rate every minute, and masses grouped into intervals.
-\end{tasks}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A student uses a pie chart to show the temperature at midday for \mbox{$7$} days. Explain why that is a poor choice.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A student uses a line graph for favourite movie genres. Explain why that is a poor choice.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A researcher has exact jump heights for \mbox{$18$} athletes. Which display would you choose, and why?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A researcher has jump heights grouped into \mbox{$5$} cm intervals. Which display would you choose, and why?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A principal wants one display that compares the median and interquartile range of test scores for two classes. Which display is best, and why?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A student says a bar graph and a histogram are basically the same. Give one reason why that is wrong.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Which display is best for showing how petrol price changes each week across a term? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Which display is best for showing the proportion of students in each house group? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Which display is best for showing the distribution of travel times to school when the times are grouped into intervals? Explain.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Which display is best for showing the exact number of books read by each student in a small class? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A teacher wants to compare the spread of heights for Year \mbox{$9$} and Year \mbox{$10$} using one display. Which display is best, and why?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A student chooses a pie chart for grouped exam-score intervals because there are categories. What is the better display, and why?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A weather report wants to show rainfall each month over three years. Which display is best, and why?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A dot plot and a histogram can both be used for numerical data. Give one situation where the dot plot is the better choice.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Give one situation where a histogram is better than a dot plot.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Choose the best display for each case and justify briefly: favourite colour, pulse rate every minute, and masses grouped into intervals.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

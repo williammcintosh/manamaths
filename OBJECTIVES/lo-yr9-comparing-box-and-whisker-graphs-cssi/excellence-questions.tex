@@ -1,37 +1,58 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-{\LARGE \textbf{Comparing box-and-whisker graphs - CSSI — Excellence}}
-\begin{tasks}(3)
-\task {Analyse the three box-and-whisker graphs using CSSI and write a comparative paragraph.\\[0.4em]
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Analyse the three box-and-whisker graphs using CSSI and write a comparative paragraph.\\[0.4em]
 \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
   % axis
   \draw[->] (0,0) -- (15,0) node[right] {Score};
@@ -61,8 +82,8 @@
   \draw[thick] (13,2.9) -- (13,3.1);
   \fill[red] (14,3) circle (0.15);
   \node[above] at (5,3.25) {Group Z};
-\end{tikzpicture}}
-\task {Analyse the three box-and-whisker graphs using CSSI and write a comparative paragraph.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Analyse the three box-and-whisker graphs using CSSI and write a comparative paragraph.\\[0.4em]
 \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
   \draw[->] (0,0) -- (15,0) node[right] {Time (s)};
   \foreach \x in {0,3,6,9,12,15} \draw (\x,0.2) -- (\x,-0.2) node[below] {\small \x};
@@ -90,8 +111,8 @@
   \draw[thick] (8,2.9) -- (8,3.1);
   \draw[thick] (14,2.9) -- (14,3.1);
   \node[above] at (11.5,3.25) {Exp C};
-\end{tikzpicture}}
-\task {Analyse the three box-and-whisker graphs using CSSI and write a comparative paragraph.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Analyse the three box-and-whisker graphs using CSSI and write a comparative paragraph.\\[0.4em]
 \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
   \draw[->] (0,0) -- (20,0) node[right] {Amount (\$)};
   \foreach \x in {0,5,10,15,20} \draw (\x,0.2) -- (\x,-0.2) node[below] {\small \x};
@@ -121,17 +142,40 @@
   \draw[thick] (16,2.9) -- (16,3.1);
   \fill[red] (19,3) circle (0.15);
   \node[above] at (9.5,3.25) {Store R};
-\end{tikzpicture}}
-\task {For each set of three boxplots, write a full comparative analysis using CSSI.}
-\task {Identify which group/experiment/store has the highest median and explain its significance.}
-\task {Identify which group/experiment/store has the largest spread and explain its implications.}
-\task {Identify any outliers and discuss their possible causes and effects on the data.}
-\task {Discuss the shape of each distribution and what it suggests about the underlying data.}
-\task {Compare the IQRs of the groups and discuss what this tells you about the variability within each group.}
-\task {If you could only use one measure of centre and one measure of spread to compare these groups, which would you choose and why?}
-\task {Suggest possible real-world contexts that could produce each set of boxplots.}
-\task {Critique the use of boxplots for comparing these datasets. What are the limitations?}
-\task {Propose a follow-up investigation based on the patterns you observed in the boxplots.}
-\end{tasks}
-
+\end{tikzpicture}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{For each set of three boxplots, write a full comparative analysis using CSSI.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Identify which group/experiment/store has the highest median and explain its significance.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Identify which group/experiment/store has the largest spread and explain its implications.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Identify any outliers and discuss their possible causes and effects on the data.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Discuss the shape of each distribution and what it suggests about the underlying data.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Compare the IQRs of the groups and discuss what this tells you about the variability within each group.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{If you could only use one measure of centre and one measure of spread to compare these groups, which would you choose and why?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Suggest possible real-world contexts that could produce each set of boxplots.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Critique the use of boxplots for comparing these datasets. What are the limitations?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Propose a follow-up investigation based on the patterns you observed in the boxplots.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

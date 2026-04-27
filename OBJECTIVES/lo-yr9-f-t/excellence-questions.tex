@@ -1,52 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task A student says \mbox{$P(\text{not even on a fair die})=\frac{2}{6}$}. Are they correct? Explain.
-\task A student says \mbox{$P(\text{at least one head in two coin tosses})=\frac{2}{4}$}. Are they correct? Explain.
-\task A fair die is rolled. Write \mbox{$P(\text{prime})$} in F/T form and simplify it.
-\task A fair die is rolled. Write \mbox{$P(\text{factor of }6)$} in F/T form and simplify it.
-\task A bag has \mbox{$4$} red, \mbox{$5$} blue, and \mbox{$3$} green counters. Write the probability of red or green in F/T form.
-\task A bag has \mbox{$2$} gold, \mbox{$7$} silver, and \mbox{$1$} bronze token. Write the probability of not picking silver in F/T form.
-\task A standard deck card is chosen. Write the probability of drawing a red king in F/T form.
-\task A standard deck card is chosen. Write the probability of drawing a non-face card in F/T form.
-\task A fair spinner has equal sectors labelled \mbox{$1$} to \mbox{$8$}. Write the probability of landing on a factor of \mbox{$8$} in F/T form.
-\task A fair spinner has equal sectors labelled \mbox{$1$} to \mbox{$10$}. Write the probability of landing on a multiple of \mbox{$3$} in F/T form.
-\task A coin is tossed and a fair die is rolled. Write the probability of getting heads and a \mbox{$5$} in F/T form.
-\task A coin is tossed and a fair die is rolled. Write the probability of getting tails and an even number in F/T form.
-\task Fill in the blank: if \mbox{$P(\text{event})=\frac{5}{12}$}, then the number of favourable outcomes could be \rule{1.4cm}{0.15mm} when the total outcomes are \mbox{$12$}.
-\task Fill in the blank: if a bag has \mbox{$9$} counters and \mbox{$P(\text{red})=\frac{2}{9}$}, then there are \rule{1.4cm}{0.15mm} red counters.
-\task Which is greater: \mbox{$P(\text{rolling a number less than }5)$} on a fair die or \mbox{$P(\text{drawing a club})$} from a standard deck? Show enough working to justify.
-\task Which is smaller: \mbox{$P(\text{factor of }12)$} on a fair die or \mbox{$P(\text{exactly one head})$} in two coin tosses? Explain.
-\task Which does not belong: \mbox{$\frac{1}{2}$}, \mbox{$\frac{3}{6}$}, \mbox{$\frac{2}{4}$}, \mbox{$\frac{2}{3}$}?
-\task Explain why an F/T probability can never be greater than \mbox{$1$}.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A student says \mbox{$P(\text{not even on a fair die})=\frac{2}{6}$}. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A student says \mbox{$P(\text{at least one head in two coin tosses})=\frac{2}{4}$}. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A fair die is rolled. Write \mbox{$P(\text{prime})$} in F/T form and simplify it.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A fair die is rolled. Write \mbox{$P(\text{factor of }6)$} in F/T form and simplify it.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A bag has \mbox{$4$} red, \mbox{$5$} blue, and \mbox{$3$} green counters. Write the probability of red or green in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A bag has \mbox{$2$} gold, \mbox{$7$} silver, and \mbox{$1$} bronze token. Write the probability of not picking silver in F/T form.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A standard deck card is chosen. Write the probability of drawing a red king in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A standard deck card is chosen. Write the probability of drawing a non-face card in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A fair spinner has equal sectors labelled \mbox{$1$} to \mbox{$8$}. Write the probability of landing on a factor of \mbox{$8$} in F/T form.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A fair spinner has equal sectors labelled \mbox{$1$} to \mbox{$10$}. Write the probability of landing on a multiple of \mbox{$3$} in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A coin is tossed and a fair die is rolled. Write the probability of getting heads and a \mbox{$5$} in F/T form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A coin is tossed and a fair die is rolled. Write the probability of getting tails and an even number in F/T form.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Fill in the blank: if \mbox{$P(\text{event})=\frac{5}{12}$}, then the number of favourable outcomes could be \rule{1.4cm}{0.15mm} when the total outcomes are \mbox{$12$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Fill in the blank: if a bag has \mbox{$9$} counters and \mbox{$P(\text{red})=\frac{2}{9}$}, then there are \rule{1.4cm}{0.15mm} red counters.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Which is greater: \mbox{$P(\text{rolling a number less than }5)$} on a fair die or \mbox{$P(\text{drawing a club})$} from a standard deck? Show enough working to justify.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Which is smaller: \mbox{$P(\text{factor of }12)$} on a fair die or \mbox{$P(\text{exactly one head})$} in two coin tosses? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Which does not belong: \mbox{$\frac{1}{2}$}, \mbox{$\frac{3}{6}$}, \mbox{$\frac{2}{4}$}, \mbox{$\frac{2}{3}$}?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Explain why an F/T probability can never be greater than \mbox{$1$}.}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

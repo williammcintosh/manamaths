@@ -1,54 +1,114 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-{\LARGE \textbf{Excellence: Solving equations with variables on both sides}}
-\begin{tasks}(3)
-\task Solve for \mbox{$x$}: \mbox{$5x - 8 = 2x + 10$}
-\task Solve for \mbox{$a$}: \mbox{$15 - 2a = 4a + 3$}
-\task Solve for \mbox{$m$}: \mbox{$3m + 12 = 7m - 8$}
-\task Solve for \mbox{$n$}: \mbox{$20 - 5n = 3n + 4$}
-\task Solve for \mbox{$p$}: \mbox{$4p + 15 = 9p - 10$}
-\task Solve for \mbox{$q$}: \mbox{$25 - 3q = 7q + 5$}
-\task Solve for \mbox{$r$}: \mbox{$6r + 18 = 14r - 22$}
-\task Solve for \mbox{$s$}: \mbox{$30 - 4s = 8s + 6$}
-\task Solve for \mbox{$t$}: \mbox{$7t + 24 = 16t - 12$}
-\task Solve for \mbox{$u$}: \mbox{$35 - 5u = 10u + 10$}
-\task Solve for \mbox{$v$}: \mbox{$8v + 30 = 20v - 18$}
-\task Solve for \mbox{$w$}: \mbox{$40 - 6w = 12w + 8$}
-\task Firm A charges 2 dollars per km plus a 5 dollar fee. Firm B charges 3 dollars per km plus a 2 dollar fee. Find the distance \mbox{$k$} where the costs are equal.
-\task A rectangle has length \mbox{$2x + 5$} and width \mbox{$x + 3$}. Its perimeter is 42 cm. Find \mbox{$x$}.
-\task Sarah is \mbox{$x$} years old. Her brother is \mbox{$2x - 5$} years old. Their ages sum to 31. Find \mbox{$x$}.
-\task Four times a number plus 7 equals three times the number plus 15. Find the number.
-\task Three consecutive integers sum to 72. Find the integers.
-\task One train travels at \mbox{$5x + 10$} km/h for 2 hours. Another travels at \mbox{$3x + 20$} km/h for 3 hours. They go the same distance. Find \mbox{$x$}.
-\task Plan A costs 20 dollars plus 0.50 dollars per minute, \mbox{$m$}. Plan B costs 15 dollars plus 0.75 dollars per minute, \mbox{$m$}. Find when the costs are equal.
-\task A rectangle has length \mbox{$3x + 4$} and width \mbox{$x - 2$}. Its perimeter is 36 cm. Find \mbox{$x$}.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Solve for \mbox{$x$}: \mbox{$5x - 8 = 2x + 10$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Solve for \mbox{$a$}: \mbox{$15 - 2a = 4a + 3$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Solve for \mbox{$m$}: \mbox{$3m + 12 = 7m - 8$}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Solve for \mbox{$n$}: \mbox{$20 - 5n = 3n + 4$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Solve for \mbox{$p$}: \mbox{$4p + 15 = 9p - 10$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Solve for \mbox{$q$}: \mbox{$25 - 3q = 7q + 5$}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Solve for \mbox{$r$}: \mbox{$6r + 18 = 14r - 22$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Solve for \mbox{$s$}: \mbox{$30 - 4s = 8s + 6$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Solve for \mbox{$t$}: \mbox{$7t + 24 = 16t - 12$}}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Solve for \mbox{$u$}: \mbox{$35 - 5u = 10u + 10$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Solve for \mbox{$v$}: \mbox{$8v + 30 = 20v - 18$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Solve for \mbox{$w$}: \mbox{$40 - 6w = 12w + 8$}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Firm A charges 2 dollars per km plus a 5 dollar fee. Firm B charges 3 dollars per km plus a 2 dollar fee. Find the distance \mbox{$k$} where the costs are equal.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A rectangle has length \mbox{$2x + 5$} and width \mbox{$x + 3$}. Its perimeter is 42 cm. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Sarah is \mbox{$x$} years old. Her brother is \mbox{$2x - 5$} years old. Their ages sum to 31. Find \mbox{$x$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Four times a number plus 7 equals three times the number plus 15. Find the number.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Three consecutive integers sum to 72. Find the integers.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{One train travels at \mbox{$5x + 10$} km/h for 2 hours. Another travels at \mbox{$3x + 20$} km/h for 3 hours. They go the same distance. Find \mbox{$x$}.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Plan A costs 20 dollars plus 0.50 dollars per minute, \mbox{$m$}. Plan B costs 15 dollars plus 0.75 dollars per minute, \mbox{$m$}. Find when the costs are equal.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A rectangle has length \mbox{$3x + 4$} and width \mbox{$x - 2$}. Its perimeter is 36 cm. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

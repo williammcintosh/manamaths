@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Vertically opposite angles --- Excellence}}
-\begin{tasks}(3)
-\task {Find \mbox{$x$} and all four angles if the two vertically opposite angles are \mbox{$(3x-6)^\circ$} and the two adjacent angles are \mbox{$(2x+16)^\circ$}.}
-\task {Find \mbox{$y$} and all four angles if one pair of vertically opposite angles is \mbox{$(5y-43)^\circ$} and the other pair is \mbox{$137^\circ$}.}
-\task {Find \mbox{$a$} and all four angles if one pair of vertically opposite angles is \mbox{$(2a+9)^\circ$} and the other pair is \mbox{$(4a-3)^\circ$}.}
-\task {Find \mbox{$b$}. Then state whether \mbox{$(3b+12)^\circ$} is acute or obtuse if its adjacent angle is \mbox{$(6b-18)^\circ$}.}
-\task {Two vertically opposite angles are \mbox{$(7m-8)^\circ$} and \mbox{$(4m+22)^\circ$}. Find \mbox{$m$}.}
-\task {One angle is \mbox{$(2n+5)^\circ$} and an adjacent angle is \mbox{$(5n-20)^\circ$}. Find \mbox{$n$}.}
-\task {Find \mbox{$p$} if one angle is \mbox{$(p+31)^\circ$} and an adjacent angle is \mbox{$(2p-7)^\circ$}.}
-\task {Find \mbox{$q$} if one angle is \mbox{$(4q+8)^\circ$} and an adjacent angle is \mbox{$(q+72)^\circ$}.}
-\task {The obtuse angle in an intersecting-lines diagram is three times the acute angle. Find both angle sizes.}
-\task {The acute angle is \mbox{$18^\circ$} less than the obtuse angle. Find both angle sizes.}
-\task {A student measured one angle as about \mbox{$88^\circ$} and wrote the opposite angle as \mbox{$92^\circ$}. Explain what is wrong.}
-\task {Create an expression for the angle opposite \mbox{$(x+27)^\circ$}. Then create an expression for an adjacent angle.}
-\task {Find \mbox{$k$} if the acute angle is \mbox{$(k+14)^\circ$} and the obtuse angle is \mbox{$(2k+58)^\circ$}.}
-\task {Explain why vertically opposite angles stay equal even if the intersecting lines are tilted or rotated.}
-\task {If one angle in intersecting lines is doubled, does the vertically opposite angle also double? Explain.}
-\task {Write one original vertically-opposite-angles problem of your own, then solve it.}
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Find \mbox{$x$} and all four angles if the two vertically opposite angles are \mbox{$(3x-6)^\circ$} and the two adjacent angles are \mbox{$(2x+16)^\circ$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Find \mbox{$y$} and all four angles if one pair of vertically opposite angles is \mbox{$(5y-43)^\circ$} and the other pair is \mbox{$137^\circ$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Find \mbox{$a$} and all four angles if one pair of vertically opposite angles is \mbox{$(2a+9)^\circ$} and the other pair is \mbox{$(4a-3)^\circ$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Find \mbox{$b$}. Then state whether \mbox{$(3b+12)^\circ$} is acute or obtuse if its adjacent angle is \mbox{$(6b-18)^\circ$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Two vertically opposite angles are \mbox{$(7m-8)^\circ$} and \mbox{$(4m+22)^\circ$}. Find \mbox{$m$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{One angle is \mbox{$(2n+5)^\circ$} and an adjacent angle is \mbox{$(5n-20)^\circ$}. Find \mbox{$n$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Find \mbox{$p$} if one angle is \mbox{$(p+31)^\circ$} and an adjacent angle is \mbox{$(2p-7)^\circ$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Find \mbox{$q$} if one angle is \mbox{$(4q+8)^\circ$} and an adjacent angle is \mbox{$(q+72)^\circ$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{The obtuse angle in an intersecting-lines diagram is three times the acute angle. Find both angle sizes.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{The acute angle is \mbox{$18^\circ$} less than the obtuse angle. Find both angle sizes.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A student measured one angle as about \mbox{$88^\circ$} and wrote the opposite angle as \mbox{$92^\circ$}. Explain what is wrong.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Create an expression for the angle opposite \mbox{$(x+27)^\circ$}. Then create an expression for an adjacent angle.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Find \mbox{$k$} if the acute angle is \mbox{$(k+14)^\circ$} and the obtuse angle is \mbox{$(2k+58)^\circ$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Explain why vertically opposite angles stay equal even if the intersecting lines are tilted or rotated.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{If one angle in intersecting lines is doubled, does the vertically opposite angle also double? Explain.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Write one original vertically-opposite-angles problem of your own, then solve it.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

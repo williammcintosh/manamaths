@@ -1,81 +1,123 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-{\LARGE \textbf{Using tables to explore patterns and graphs — Proficient}}\\[0.2em]
-Use each table to find a rule, extend the pattern, or predict what the graph would look like.
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\begin{tasks}(3)
-\task {Find the rule and write the next value of \mbox{$y$}.\\[0.3em]
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Find the rule and write the next value of \mbox{$y$}.\\[0.3em]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 $x$ & $0$ & $1$ & $2$ & $3$ \\\hline
 $y$ & $1$ & $4$ & $7$ & $10$ \\\hline
-\end{tabular}}
-
-\task {Find the rule and write the next value of \mbox{$y$}.\\[0.3em]
+\end{tabular}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Find the rule and write the next value of \mbox{$y$}.\\[0.3em]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 $x$ & $1$ & $2$ & $3$ & $4$ \\\hline
 $y$ & $8$ & $6$ & $4$ & $2$ \\\hline
-\end{tabular}}
-
-\task {Find the rule and write the next value of \mbox{$y$}.\\[0.3em]
+\end{tabular}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Find the rule and write the next value of \mbox{$y$}.\\[0.3em]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 $x$ & $0$ & $2$ & $4$ & $6$ \\\hline
 $y$ & $3$ & $7$ & $11$ & $15$ \\\hline
-\end{tabular}}
-
-\task {Complete the table for \mbox{$y=4x-1$}. Then write the ordered pair for \mbox{$x=5$}.\\[0.3em]
+\end{tabular}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Complete the table for \mbox{$y=4x-1$}. Then write the ordered pair for \mbox{$x=5$}.\\[0.3em]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 $x$ & $1$ & $2$ & $3$ & $4$ \\\hline
 $y$ &  &  &  &  \\\hline
-\end{tabular}}
-
-\task {Complete the table for \mbox{$y=12-3x$}. Then decide whether the graph rises or falls.\\[0.3em]
+\end{tabular}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Complete the table for \mbox{$y=12-3x$}. Then decide whether the graph rises or falls.\\[0.3em]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 $x$ & $0$ & $1$ & $2$ & $3$ \\\hline
 $y$ &  &  &  &  \\\hline
-\end{tabular}}
-
-\task {Complete the table for \mbox{$y=0.5x+1$}. Then write the ordered pair for \mbox{$x=8$}.\\[0.3em]
+\end{tabular}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Complete the table for \mbox{$y=0.5x+1$}. Then write the ordered pair for \mbox{$x=8$}.\\[0.3em]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 $x$ & $0$ & $2$ & $4$ & $6$ \\\hline
 $y$ &  &  &  &  \\\hline
-\end{tabular}}
-
-\task A table shows \mbox{$(0,2)$}, \mbox{$(1,5)$}, \mbox{$(2,8)$}, \mbox{$(3,11)$}. Write the rule and say whether the graph is a straight line or not.
-
-\task A table shows \mbox{$(1,9)$}, \mbox{$(2,7)$}, \mbox{$(3,5)$}, \mbox{$(4,3)$}. Write the rule and predict the \mbox{$x$}-intercept.
-
-\task A pattern has rule \mbox{$y=2x+3$}. Which is larger: the value when \mbox{$x=7$} or the value when \mbox{$x=10$}? By how much?
-
-\task A pattern has rule \mbox{$y=15-x$}. Write three ordered pairs and describe the slope in words.
-
-\task The table is \mbox{$(0,0)$}, \mbox{$(1,1)$}, \mbox{$(2,4)$}, \mbox{$(3,9)$}. Is the graph likely to be a straight line or a curve? Explain from the table.
-
-\task The table is \mbox{$(0,5)$}, \mbox{$(2,9)$}, \mbox{$(4,13)$}, \mbox{$(6,17)$}. Write a rule that matches the pattern and then write the point for \mbox{$x=8$}.
-\end{tasks}
-
+\end{tabular}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A table shows \mbox{$(0,2)$}, \mbox{$(1,5)$}, \mbox{$(2,8)$}, \mbox{$(3,11)$}. Write the rule and say whether the graph is a straight line or not.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A table shows \mbox{$(1,9)$}, \mbox{$(2,7)$}, \mbox{$(3,5)$}, \mbox{$(4,3)$}. Write the rule and predict the \mbox{$x$}-intercept.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A pattern has rule \mbox{$y=2x+3$}. Which is larger: the value when \mbox{$x=7$} or the value when \mbox{$x=10$}? By how much?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A pattern has rule \mbox{$y=15-x$}. Write three ordered pairs and describe the slope in words.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{The table is \mbox{$(0,0)$}, \mbox{$(1,1)$}, \mbox{$(2,4)$}, \mbox{$(3,9)$}. Is the graph likely to be a straight line or a curve? Explain from the table.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{The table is \mbox{$(0,5)$}, \mbox{$(2,9)$}, \mbox{$(4,13)$}, \mbox{$(6,17)$}. Write a rule that matches the pattern and then write the point for \mbox{$x=8$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

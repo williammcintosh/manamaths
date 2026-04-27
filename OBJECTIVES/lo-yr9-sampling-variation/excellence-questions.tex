@@ -1,42 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-{\LARGE \textbf{Sampling variation --- Excellence}}
-\begin{tasks}(3)
-\task Three random samples estimate the proportion of students who own a laptop: \mbox{$11/30$}, \mbox{$37/100$}, \mbox{$381/1000$}. Which estimate would you report first, and why?
-\task A student says, ``If a sample is random, every sample should give the same result.'' Explain carefully why this is false.
-\task Two schools run polls on the same issue. School A uses repeated random samples of \mbox{$30$}. School B uses repeated random samples of \mbox{$1000$}. Compare the likely spread of their sample proportions.
-\task A survey result from \mbox{$30$} people is used in a newspaper headline as if it represents the whole city exactly. Write one criticism using the idea of sampling variation.
-\task A random sample of \mbox{$100$} gives \mbox{$48\%$} support. A random sample of \mbox{$1000$} gives \mbox{$51\%$} support. Which one should carry more weight when estimating the population value? Explain.
-\task Explain why a larger sample size does not remove sampling variation completely.
-\task A sample of \mbox{$30$} gives \mbox{$80\%$} support, but three later samples of \mbox{$1000$} give \mbox{$52\%$}, \mbox{$49\%$}, and \mbox{$51\%$}. Which result is more believable for the population, and why?
-\task A researcher gets these percentages for the same question from repeated random samples: \mbox{$44\%, 61\%, 47\%, 55\%, 52\%$}. What do these changing results suggest about sampling variation?
-\task Another researcher gets \mbox{$49\%, 50\%, 51\%, 50\%, 49\%$}. What does this suggest about their sample size compared with the first researcher?
-\task Explain the difference between sampling variation and bias.
-\task A sample of \mbox{$1000$} and a sample of \mbox{$30$} both come from the same population. Which sample is more likely to give an estimate close to the true population proportion? Justify your answer without saying ``because it is bigger'' only.
-\task Write a short statistical statement comparing how sample sizes of \mbox{$30$}, \mbox{$100$}, and \mbox{$1000$} affect sampling variation.
-\end{tasks}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Three random samples estimate the proportion of students who own a laptop: \mbox{$11/30$}, \mbox{$37/100$}, \mbox{$381/1000$}. Which estimate would you report first, and why?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A student says, ``If a sample is random, every sample should give the same result.'' Explain carefully why this is false.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Two schools run polls on the same issue. School A uses repeated random samples of \mbox{$30$}. School B uses repeated random samples of \mbox{$1000$}. Compare the likely spread of their sample proportions.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A survey result from \mbox{$30$} people is used in a newspaper headline as if it represents the whole city exactly. Write one criticism using the idea of sampling variation.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A random sample of \mbox{$100$} gives \mbox{$48\%$} support. A random sample of \mbox{$1000$} gives \mbox{$51\%$} support. Which one should carry more weight when estimating the population value? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Explain why a larger sample size does not remove sampling variation completely.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A sample of \mbox{$30$} gives \mbox{$80\%$} support, but three later samples of \mbox{$1000$} give \mbox{$52\%$}, \mbox{$49\%$}, and \mbox{$51\%$}. Which result is more believable for the population, and why?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A researcher gets these percentages for the same question from repeated random samples: \mbox{$44\%, 61\%, 47\%, 55\%, 52\%$}. What do these changing results suggest about sampling variation?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Another researcher gets \mbox{$49\%, 50\%, 51\%, 50\%, 49\%$}. What does this suggest about their sample size compared with the first researcher?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Explain the difference between sampling variation and bias.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A sample of \mbox{$1000$} and a sample of \mbox{$30$} both come from the same population. Which sample is more likely to give an estimate close to the true population proportion? Justify your answer without saying ``because it is bigger'' only.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Write a short statistical statement comparing how sample sizes of \mbox{$30$}, \mbox{$100$}, and \mbox{$1000$} affect sampling variation.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

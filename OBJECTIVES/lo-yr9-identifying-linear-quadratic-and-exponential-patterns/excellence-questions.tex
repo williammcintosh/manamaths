@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Identifying linear, quadratic, and exponential patterns — Excellence}}
-\begin{tasks}(3)
-\task For \mbox{$2,\ 7,\ 12,\ 17,\ 22$}, name the pattern type and describe the evidence.
-\task For \mbox{$1,\ 4,\ 9,\ 16,\ 25$}, name the pattern type and describe the evidence.
-\task For \mbox{$5,\ 15,\ 45,\ 135,\ 405$}, name the pattern type and describe the evidence.
-\task Two students debate \mbox{$3,\ 8,\ 15,\ 24,\ 35$}. One says linear, one says quadratic. Who is correct? Explain.
-\task A sequence has constant first differences. Could it be quadratic? Explain.
-\task A sequence has constant second differences. Could it be exponential? Explain.
-\task A sequence multiplies by \mbox{$0.5$} each term. Is it still exponential? Explain.
-\task Classify and justify: \mbox{$81,\ 27,\ 9,\ 3,\ 1$}
-\task Classify and justify: \mbox{$10,\ 6,\ 2,\ -2,\ -6$}
-\task Classify and justify: \mbox{$6,\ 11,\ 18,\ 27,\ 38$}
-\task Write a rule a teacher could use to identify a linear pattern from a list of terms.
-\task Write a rule a teacher could use to identify an exponential pattern from a list of terms.
-\task Pattern A has first differences \mbox{$6,\ 6,\ 6$}. Pattern B has ratios \mbox{$\times 2,\ \times 2,\ \times 2$}. Name both types.
-\task A graph of a pattern curves upward more and more steeply. Which pattern type is most likely? Explain.
-\task A graph of a pattern is a straight line. Which pattern type is most likely? Explain.
-\task A graph of a pattern bends but does not grow by a constant ratio. Which type is most likely: quadratic or exponential? Explain.
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{For \mbox{$2,\ 7,\ 12,\ 17,\ 22$}, name the pattern type and describe the evidence.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{For \mbox{$1,\ 4,\ 9,\ 16,\ 25$}, name the pattern type and describe the evidence.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{For \mbox{$5,\ 15,\ 45,\ 135,\ 405$}, name the pattern type and describe the evidence.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Two students debate \mbox{$3,\ 8,\ 15,\ 24,\ 35$}. One says linear, one says quadratic. Who is correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A sequence has constant first differences. Could it be quadratic? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A sequence has constant second differences. Could it be exponential? Explain.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A sequence multiplies by \mbox{$0.5$} each term. Is it still exponential? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Classify and justify: \mbox{$81,\ 27,\ 9,\ 3,\ 1$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Classify and justify: \mbox{$10,\ 6,\ 2,\ -2,\ -6$}}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Classify and justify: \mbox{$6,\ 11,\ 18,\ 27,\ 38$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Write a rule a teacher could use to identify a linear pattern from a list of terms.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Write a rule a teacher could use to identify an exponential pattern from a list of terms.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Pattern A has first differences \mbox{$6,\ 6,\ 6$}. Pattern B has ratios \mbox{$\times 2,\ \times 2,\ \times 2$}. Name both types.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A graph of a pattern curves upward more and more steeply. Which pattern type is most likely? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A graph of a pattern is a straight line. Which pattern type is most likely? Explain.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A graph of a pattern bends but does not grow by a constant ratio. Which type is most likely: quadratic or exponential? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

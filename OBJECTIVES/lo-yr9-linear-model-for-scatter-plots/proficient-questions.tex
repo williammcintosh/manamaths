@@ -1,60 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-{\LARGE \textbf{Proficient}}
-\begin{tasks}(3)
-\task Given the line of best fit \(y = 2.5x + 10\), predict \(y\) when \(x = 6\).
-\task Interpret the slope of the line \(y = 0.8x + 5\) in the context of hours studied vs test score.
-\task Given the line of best fit \(y = -1.2x + 50\), predict \(x\) when \(y = 20\).
-\task A scatter plot shows a strong positive correlation. Which of the following correlation coefficients is most likely: \(0.9\), \(0.2\), \(-0.7\)?
-\task Calculate the residual for the data point \((3, 15)\) if the line of best fit predicts \(y = 14\).
-\task The line of best fit passes through the points \((2, 5)\) and \((6, 13)\). Find its equation.
-\task Using the equation from question 6, predict \(y\) when \(x = 10\).
-\task For the line of best fit \(y = 3x + 4\), interpret the \(y\)-intercept in context.
-\task Given a scatter plot with outliers, explain how removing an outlier would affect the line of best fit.
-\task A line of best fit has equation \(y = 0.5x + 20\). Predict \(y\) for \(x = 30\) and comment on whether this extrapolation is reliable.
-\task Compare two lines of best fit: one with slope \(2.0\) and one with slope \(0.5\). Which indicates a stronger relationship?
-\task Given a residual plot that shows a random scatter, what does this suggest about the linear model?
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Given the line of best fit \(y = 2.5x + 10\), predict \(y\) when \(x = 6\).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Interpret the slope of the line \(y = 0.8x + 5\) in the context of hours studied vs test score.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Given the line of best fit \(y = -1.2x + 50\), predict \(x\) when \(y = 20\).}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A scatter plot shows a strong positive correlation. Which of the following correlation coefficients is most likely: \(0.9\), \(0.2\), \(-0.7\)?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Calculate the residual for the data point \((3, 15)\) if the line of best fit predicts \(y = 14\).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{The line of best fit passes through the points \((2, 5)\) and \((6, 13)\). Find its equation.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Using the equation from question 6, predict \(y\) when \(x = 10\).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{For the line of best fit \(y = 3x + 4\), interpret the \(y\)-intercept in context.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Given a scatter plot with outliers, explain how removing an outlier would affect the line of best fit.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A line of best fit has equation \(y = 0.5x + 20\). Predict \(y\) for \(x = 30\) and comment on whether this extrapolation is reliable.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Compare two lines of best fit: one with slope \(2.0\) and one with slope \(0.5\). Which indicates a stronger relationship?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Given a residual plot that shows a random scatter, what does this suggest about the linear model?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

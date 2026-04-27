@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Circumference and area of circles — Proficient}}
-\begin{tasks}(3)
-\task {Find the circumference of a circle with radius 4.5 cm. Give your answer in terms of \mbox{$\pi$}.}
-\task {Find the area of a circle with diameter 18 m. Give your answer in terms of \mbox{$\pi$}.}
-\task {A circular garden has circumference 25.12 m. What is its radius? (Use \mbox{$\pi \approx 3.14$})}
-\task {A circular pizza has area 154 cm\mbox{$^2$}. What is its diameter? (Use \mbox{$\pi \approx \frac{22}{7}$})}
-\task {Which has larger area: a circle with radius 8 cm or a circle with circumference 50 cm?}
-\task {A semicircle has diameter 20 cm. Find its perimeter (including the straight edge).}
-\task {A quarter circle has radius 12 m. Find its area.}
-\task {A bicycle wheel has radius 35 cm. How many complete revolutions does it make over 1 km?}
-\task {Two circles have radii in the ratio 3:4. What is the ratio of their circumferences?}
-\task {Two circles have radii in the ratio 2:5. What is the ratio of their areas?}
-\task {A circular running track has inner radius 30 m and outer radius 35 m. Find the area of the track.}
-\task {Find the perimeter of a shape made from a semicircle of radius 7 cm on top of a rectangle 14 cm by 7 cm.}
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Find the circumference of a circle with radius 4.5 cm. Give your answer in terms of \mbox{$\pi$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Find the area of a circle with diameter 18 m. Give your answer in terms of \mbox{$\pi$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A circular garden has circumference 25.12 m. What is its radius? (Use \mbox{$\pi \approx 3.14$})}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A circular pizza has area 154 cm\mbox{$^2$}. What is its diameter? (Use \mbox{$\pi \approx \frac{22}{7}$})}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Which has larger area: a circle with radius 8 cm or a circle with circumference 50 cm?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A semicircle has diameter 20 cm. Find its perimeter (including the straight edge).}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A quarter circle has radius 12 m. Find its area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A bicycle wheel has radius 35 cm. How many complete revolutions does it make over 1 km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Two circles have radii in the ratio 3:4. What is the ratio of their circumferences?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Two circles have radii in the ratio 2:5. What is the ratio of their areas?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A circular running track has inner radius 30 m and outer radius 35 m. Find the area of the track.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Find the perimeter of a shape made from a semicircle of radius 7 cm on top of a rectangle 14 cm by 7 cm.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

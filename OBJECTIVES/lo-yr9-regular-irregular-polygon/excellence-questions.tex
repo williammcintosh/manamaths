@@ -1,47 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Regular/irregular polygon --- Excellence}}
-\begin{tasks}(3)
-\task {The sum of the interior angles of a polygon is \mbox{$(180n-360)^\circ$}. Explain what the \mbox{$n$} represents.}
-\task {A polygon has interior-angle sum \mbox{$1620^\circ$}. Find the number of sides.}
-\task {A regular polygon has each interior angle \mbox{$156^\circ$}. Find the number of sides.}
-\task {A regular polygon has each interior angle \mbox{$165^\circ$}. Find the number of sides.}
-\task {An irregular hexagon has five interior angles of \mbox{$118^\circ$}, \mbox{$132^\circ$}, \mbox{$147^\circ$}, \mbox{$151^\circ$}, and \mbox{$160^\circ$}. Find the sixth angle.}
-\task {An irregular octagon has seven interior angles of \mbox{$120^\circ$}, \mbox{$140^\circ$}, \mbox{$150^\circ$}, \mbox{$135^\circ$}, \mbox{$160^\circ$}, \mbox{$145^\circ$}, and \mbox{$155^\circ$}. Find the eighth angle.}
-\task {The interior angles of a regular polygon add to \mbox{$1980^\circ$}. Find the polygon and one interior angle.}
-\task {A regular polygon has interior angles of \mbox{$140^\circ$} each. Is this possible? Explain using the interior-angle formula.}
-\task {An irregular pentagon has angles in the ratio \mbox{$2:3:3:4:6$}. Find the five angles.}
-\task {An irregular hexagon has angles in the ratio \mbox{$3:4:5:5:6:7$}. Find the six angles.}
-\task {A regular polygon has one interior angle of \mbox{$x^\circ$}. Write a formula for the sum of all interior angles in terms of \mbox{$x$} and the number of sides \mbox{$n$}.}
-\task {A student says, ``If all the angles in a polygon are equal, the polygon must be regular.'' Give a counterexample or explain why the claim is incomplete.}
-\task {A regular polygon has twice as many sides as a regular pentagon. Find its interior-angle sum and one interior angle.}
-\task {A polygon has \mbox{$10$} sides. Four interior angles are \mbox{$140^\circ$}, three are \mbox{$150^\circ$}, two are \mbox{$160^\circ$}, and one angle is \mbox{$x^\circ$}. Find \mbox{$x$}.}
-\task {A regular polygon has one interior angle that is \mbox{$24^\circ$} more than the interior angle of a regular hexagon. Find the polygon.}
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{The sum of the interior angles of a polygon is \mbox{$(180n-360)^\circ$}. Explain what the \mbox{$n$} represents.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A polygon has interior-angle sum \mbox{$1620^\circ$}. Find the number of sides.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A regular polygon has each interior angle \mbox{$156^\circ$}. Find the number of sides.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A regular polygon has each interior angle \mbox{$165^\circ$}. Find the number of sides.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{An irregular hexagon has five interior angles of \mbox{$118^\circ$}, \mbox{$132^\circ$}, \mbox{$147^\circ$}, \mbox{$151^\circ$}, and \mbox{$160^\circ$}. Find the sixth angle.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{An irregular octagon has seven interior angles of \mbox{$120^\circ$}, \mbox{$140^\circ$}, \mbox{$150^\circ$}, \mbox{$135^\circ$}, \mbox{$160^\circ$}, \mbox{$145^\circ$}, and \mbox{$155^\circ$}. Find the eighth angle.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{The interior angles of a regular polygon add to \mbox{$1980^\circ$}. Find the polygon and one interior angle.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A regular polygon has interior angles of \mbox{$140^\circ$} each. Is this possible? Explain using the interior-angle formula.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{An irregular pentagon has angles in the ratio \mbox{$2:3:3:4:6$}. Find the five angles.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{An irregular hexagon has angles in the ratio \mbox{$3:4:5:5:6:7$}. Find the six angles.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A regular polygon has one interior angle of \mbox{$x^\circ$}. Write a formula for the sum of all interior angles in terms of \mbox{$x$} and the number of sides \mbox{$n$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A student says, ``If all the angles in a polygon are equal, the polygon must be regular.'' Give a counterexample or explain why the claim is incomplete.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A regular polygon has twice as many sides as a regular pentagon. Find its interior-angle sum and one interior angle.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A polygon has \mbox{$10$} sides. Four interior angles are \mbox{$140^\circ$}, three are \mbox{$150^\circ$}, two are \mbox{$160^\circ$}, and one angle is \mbox{$x^\circ$}. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A regular polygon has one interior angle that is \mbox{$24^\circ$} more than the interior angle of a regular hexagon. Find the polygon.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

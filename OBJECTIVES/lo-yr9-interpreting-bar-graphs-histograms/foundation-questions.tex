@@ -1,85 +1,84 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
-
-\boldmath
-
-\newcommand{\barchart}[1]{%
-\begin{tikzpicture}[baseline=(current bounding box.center), scale=0.78]
-\draw[thick, ->] (0,0) -- (4.6,0);
-\draw[thick, ->] (0,0) -- (0,3.6);
-\def\sep{0.75}
-\def\width{0.48}
-\foreach \cat/\shown/\h [count=\i] in {#1} {
-  \pgfmathsetmacro{\x}{\i*\sep}
-  \draw[fill=teal!50, draw=black, thick] (\x-\width/2,0) rectangle (\x+\width/2,\h*0.14);
-  \node[below, font=\scriptsize] at (\x, -0.12) {\cat};
-  \node[above, font=\scriptsize] at (\x, \h*0.14+0.06) {\shown};
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
 }
-\end{tikzpicture}%
-}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\newcommand{\histogram}[1]{%
-\begin{tikzpicture}[baseline=(current bounding box.center), scale=0.78]
-\draw[thick, ->] (0,0) -- (4.8,0);
-\draw[thick, ->] (0,0) -- (0,3.6);
-\def\sep{0.9}
-\def\width{0.82}
-\foreach \int/\val [count=\i] in {#1} {
-  \pgfmathsetmacro{\x}{\i*\sep-\width/2}
-  \draw[fill=orange!50, draw=black, thick] (\x,0) rectangle (\x+\width,\val*0.22);
-  \node[below, font=\tiny] at (\x+\width/2, -0.12) {\int};
-  \node[above, font=\scriptsize] at (\x+\width/2, \val*0.22+0.06) {\val};
-}
-\end{tikzpicture}%
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
 }
 
-{\LARGE \textbf{Interpreting bar graphs \& histograms --- Foundation}}
-\begin{tasks}(3)
-\task Favourite ice cream flavours.\\
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Favourite ice cream flavours.\\
 \barchart{Van/12/12,Cho/18/18,Str/9/9,Mint/6/6}\\
-Which flavour is most popular?
-
-\task Pets in four homes.\\
+Which flavour is most popular?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Pets in four homes.\\
 \barchart{H1/5/5,H2/3/3,H3/7/7,H4/4/4}\\
-How many pets does Home 3 have?
-
-\task Quiz scores by round.\\
+How many pets does Home 3 have?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Quiz scores by round.\\
 \barchart{R1/15/15,R2/22/22,R3/18/18,R4/13/13}\\
-What was the score for Round 2?
-
-\task Ages of people at a park.\\
+What was the score for Round 2?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Ages of people at a park.\\
 \histogram{0-10/8,11-20/12,21-30/9,31-40/5}\\
-Which age group has the highest frequency?
-
-\task Fruit picked.\\
+Which age group has the highest frequency?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Fruit picked.\\
 \barchart{App/24/24,Org/15/15,Ban/20/20,Pear/12/12}\\
-How many more apples than oranges were picked?
-
-\task Test scores.\\
+How many more apples than oranges were picked?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Test scores.\\
 \histogram{0-20/3,21-40/8,41-60/14,61-80/7}\\
-How many students scored between 41 and 60?
-\end{tasks}
-
+How many students scored between 41 and 60?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

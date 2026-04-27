@@ -1,48 +1,114 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Excellence: Solving inequalities}}
-\begin{tasks}(3)
-\task Solve: \mbox{$5 - 3x > 14$}
-\task Solve: \mbox{$8 - 2y \le 2$}
-\task Solve: \mbox{$3(2a - 4) \ge 24$}
-\task Solve: \mbox{$\frac{2b + 6}{3} < 10$}
-\task Solve: \mbox{$4(c - 3) + 2c > 30$}
-\task Solve: \mbox{$\frac{5d - 10}{2} \le 15$}
-\task Solve: \mbox{$2(e + 4) - 3e < 5$}
-\task Solve: \mbox{$\frac{3f + 9}{4} \ge 6$}
-\task Solve: \mbox{$5 - 2(g + 1) > 1$}
-\task Solve: \mbox{$\frac{4h - 8}{2} \le 10$}
-\task Solve: \mbox{$3(2k - 5) + k \ge 20$}
-\task Solve: \mbox{$\frac{5m + 15}{3} < 25$}
-\task Solve: A taxi ride costs a \mbox{$5 fee plus \$}2 per kilometre, \mbox{$k$}. If you have a maximum budget of \$25, write an inequation and solve it to find the maximum distance you can travel.
-\task Solve: You need at least 80 marks to pass a test. Each correct answer is worth 4 marks. If you answered \mbox{$x$} questions correctly, write an inequation and solve it to find the minimum number of correct answers needed.
-\task Solve: A rectangle has length \mbox{$2x + 3$} and width \mbox{$x$}. If the perimeter is at most 36 cm, write an inequation and solve it to find the possible values of \mbox{$x$}.
-\task Solve: The sum of three consecutive integers is less than 60. If the smallest integer is \mbox{$n$}, write an inequation and solve it to find the possible values of \mbox{$n$}.
-\task Solve: A phone plan costs \mbox{$20 per month plus \$}0.10 per minute of calls. If you want to spend at most \$50 per month, write an inequation and solve it to find the maximum minutes you can use.
-\task Solve: You are saving for a \mbox{$120 bike. You already have \$}45 and can save \$15 per week. Write an inequation and solve it to find how many weeks you need to save.
-\task Solve: A number is multiplied by 4, then 7 is subtracted. The result is greater than 25. Write an inequation and solve it to find the possible numbers.
-\task Solve: Half of a number plus 8 is at most 20. Write an inequation and solve it to find the possible numbers.
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Solve: \mbox{$5 - 3x > 14$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Solve: \mbox{$8 - 2y \le 2$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Solve: \mbox{$3(2a - 4) \ge 24$}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Solve: \mbox{$\frac{2b + 6}{3} < 10$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Solve: \mbox{$4(c - 3) + 2c > 30$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Solve: \mbox{$\frac{5d - 10}{2} \le 15$}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Solve: \mbox{$2(e + 4) - 3e < 5$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Solve: \mbox{$\frac{3f + 9}{4} \ge 6$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Solve: \mbox{$5 - 2(g + 1) > 1$}}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Solve: \mbox{$\frac{4h - 8}{2} \le 10$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Solve: \mbox{$3(2k - 5) + k \ge 20$}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Solve: \mbox{$\frac{5m + 15}{3} < 25$}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Solve: A taxi ride costs a \mbox{$5 fee plus \$}2 per kilometre, \mbox{$k$}. If you have a maximum budget of \$25, write an inequation and solve it to find the maximum distance you can travel.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Solve: You need at least 80 marks to pass a test. Each correct answer is worth 4 marks. If you answered \mbox{$x$} questions correctly, write an inequation and solve it to find the minimum number of correct answers needed.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Solve: A rectangle has length \mbox{$2x + 3$} and width \mbox{$x$}. If the perimeter is at most 36 cm, write an inequation and solve it to find the possible values of \mbox{$x$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Solve: The sum of three consecutive integers is less than 60. If the smallest integer is \mbox{$n$}, write an inequation and solve it to find the possible values of \mbox{$n$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Solve: A phone plan costs \mbox{$20 per month plus \$}0.10 per minute of calls. If you want to spend at most \$50 per month, write an inequation and solve it to find the maximum minutes you can use.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Solve: You are saving for a \mbox{$120 bike. You already have \$}45 and can save \$15 per week. Write an inequation and solve it to find how many weeks you need to save.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Solve: A number is multiplied by 4, then 7 is subtracted. The result is greater than 25. Write an inequation and solve it to find the possible numbers.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Solve: Half of a number plus 8 is at most 20. Write an inequation and solve it to find the possible numbers.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

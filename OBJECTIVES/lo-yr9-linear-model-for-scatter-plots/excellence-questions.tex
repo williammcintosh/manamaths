@@ -1,60 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task Using a linear model, predict the test score for a student who studies 8 hours. Discuss your confidence in this prediction considering variation at that point.
-\task Compare predictions from two different lines of best fit derived from different samples of the same population. Explain why they might differ.
-\task Explain why extrapolation beyond the range of data may be unreliable for a linear model.
-\task Discuss the effect of outliers on the line of best fit and the correlation coefficient.
-\task Given a residual plot that shows a curved pattern, comment on the appropriateness of a linear model.
-\task Explain the difference between correlation and causation in the context of a study linking ice cream sales and drowning incidents.
-\task Discuss sampling variation: if another sample of the same size is taken, how might the line of best fit differ?
-\task Use the linear model to make a prediction and suggest a reasonable range (confidence interval) for that prediction.
-\task Evaluate the limitations of a linear model for predicting house prices based on number of rooms.
-\task Given a scenario where data collection was biased, suggest improvements to obtain a more reliable linear model.
-\task Interpret a coefficient of determination \(r^2 = 0.64\) in the context of a study on exercise and heart health.
-\task Discuss the impact of a non-linear relationship (e.g., exponential) on the suitability of a linear model.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Using a linear model, predict the test score for a student who studies 8 hours. Discuss your confidence in this prediction considering variation at that point.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Compare predictions from two different lines of best fit derived from different samples of the same population. Explain why they might differ.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Explain why extrapolation beyond the range of data may be unreliable for a linear model.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Discuss the effect of outliers on the line of best fit and the correlation coefficient.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Given a residual plot that shows a curved pattern, comment on the appropriateness of a linear model.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Explain the difference between correlation and causation in the context of a study linking ice cream sales and drowning incidents.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Discuss sampling variation: if another sample of the same size is taken, how might the line of best fit differ?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Use the linear model to make a prediction and suggest a reasonable range (confidence interval) for that prediction.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Evaluate the limitations of a linear model for predicting house prices based on number of rooms.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Given a scenario where data collection was biased, suggest improvements to obtain a more reliable linear model.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Interpret a coefficient of determination \(r^2 = 0.64\) in the context of a study on exercise and heart health.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Discuss the impact of a non-linear relationship (e.g., exponential) on the suitability of a linear model.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

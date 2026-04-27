@@ -1,47 +1,99 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\vspace*{0.4em}
-{\LARGE \textbf{Proficient}}
-\begin{tasks}(3)
-\task {Read the value on this kitchen scale.\\[0.4em]
-\hscale{0}{1000}{4.5}{Kitchen scale}{g}}
-\task {Read the value on this kitchen scale.\\[0.4em]
-\hscale{0}{2}{6.5}{Kitchen scale}{kg}}
-\task {Read the speed on this dial.\\[0.4em]
-\speedo{Speedometer}{100}{99}{km/h}}
-\task {Read the speed on this dial.\\[0.4em]
-\speedo{Speedometer}{100}{63}{km/h}}
-\task {Read the value on this measuring cylinder.\\[0.4em]
-\cylinder{Measuring cylinder}{100}{46}{mL}}
-\task {Read the value on this thermometer.\\[0.4em]
-\thermo{Thermometer}{30}{18}{$^\circ$C}}
-\task {A scale goes from \mbox{$0$} to \mbox{$2$} kg in \mbox{$10$} equal intervals. What is each interval worth?}
-\task {On a speedometer from \mbox{$0$} to \mbox{$100$} km/h there are \mbox{$5$} equal jumps of \mbox{$20$}. What is the value halfway between \mbox{$40$} and \mbox{$60$}?}
-\task {A measuring cylinder has labels every \mbox{$10$} mL and one smaller mark halfway between each pair. What value is halfway between \mbox{$30$} mL and \mbox{$40$} mL?}
-\task {A thermometer shows \mbox{$7^\circ$}C. Is that closer to \mbox{$5^\circ$}C or \mbox{$10^\circ$}C?}
-\task {A scale reading is two small intervals after \mbox{$300$} g on a scale marked every \mbox{$50$} g. What is the reading?}
-\task {A car is travelling at \mbox{$68$} km/h. On a dial marked every \mbox{$20$} km/h, describe where the needle should be.}
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Read the value on this kitchen scale.\\[0.4em]
+\hscale{0}{1000}{4.5}{Kitchen scale}{g}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Read the value on this kitchen scale.\\[0.4em]
+\hscale{0}{2}{6.5}{Kitchen scale}{kg}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Read the speed on this dial.\\[0.4em]
+\speedo{Speedometer}{100}{99}{km/h}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Read the speed on this dial.\\[0.4em]
+\speedo{Speedometer}{100}{63}{km/h}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Read the value on this measuring cylinder.\\[0.4em]
+\cylinder{Measuring cylinder}{100}{46}{mL}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Read the value on this thermometer.\\[0.4em]
+\thermo{Thermometer}{30}{18}{$^\circ$C}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A scale goes from \mbox{$0$} to \mbox{$2$} kg in \mbox{$10$} equal intervals. What is each interval worth?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{On a speedometer from \mbox{$0$} to \mbox{$100$} km/h there are \mbox{$5$} equal jumps of \mbox{$20$}. What is the value halfway between \mbox{$40$} and \mbox{$60$}?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A measuring cylinder has labels every \mbox{$10$} mL and one smaller mark halfway between each pair. What value is halfway between \mbox{$30$} mL and \mbox{$40$} mL?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A thermometer shows \mbox{$7^\circ$}C. Is that closer to \mbox{$5^\circ$}C or \mbox{$10^\circ$}C?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A scale reading is two small intervals after \mbox{$300$} g on a scale marked every \mbox{$50$} g. What is the reading?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A car is travelling at \mbox{$68$} km/h. On a dial marked every \mbox{$20$} km/h, describe where the needle should be.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

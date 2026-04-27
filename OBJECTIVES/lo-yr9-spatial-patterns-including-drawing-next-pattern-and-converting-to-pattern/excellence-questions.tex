@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Spatial patterns (including drawing next pattern and converting to pattern) --- Excellence}}
-\begin{tasks}(3)
-\task An L-shape pattern has counts \mbox{$5,\ 7,\ 9$}. Draw Pattern 5 and explain how you know the number of tiles without counting one by one.
-\task A staircase pattern has counts \mbox{$3,\ 6,\ 10$}. Draw Pattern 4 and Pattern 5. How many extra tiles are added each time?
-\task A row pattern has counts \mbox{$5,\ 8,\ 11,\ 14$}. Which pattern number has 35 tiles? Explain.
-\task An L-shape pattern has counts \mbox{$7,\ 9,\ 11,\ 13$}. Which pattern number has 31 tiles? Explain.
-\task A staircase pattern has counts \mbox{$3,\ 6,\ 10,\ 15$}. Is it increasing by a constant amount? Explain using the differences.
-\task Two students convert the same picture pattern into numbers. Ari gets \mbox{$4,\ 7,\ 10,\ 13$}. Moana gets \mbox{$4,\ 8,\ 12,\ 16$}. Give one possible reason one of them is wrong.
-\task Pattern 6 of a row pattern has 15 tiles. If the pattern grows by 2 tiles each time, what are the counts for Patterns 1 to 6?
-\task Pattern 5 of an L-shape has 13 tiles. Work backwards to find the counts for Patterns 1 to 5.
-\task A spatial pattern grows by 4 tiles each time. Pattern 3 has 18 tiles. Find the counts for Patterns 1 to 5.
-\task Maia says: If a pattern uses more tiles each time, it must be adding the same number every term. Use one example to explain why this is not always true.
-\task Create your own spatial pattern with square tiles where Pattern 1 has 4 tiles and Pattern 4 has 19 tiles. Draw or describe Patterns 1 to 4.
-\task A pattern has counts \mbox{$6,\ 10,\ 14,\ 18$}. Another has \mbox{$4,\ 7,\ 10,\ 13$}. Compare the growth rules and say which reaches 30 tiles first.
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{An L-shape pattern has counts \mbox{$5,\ 7,\ 9$}. Draw Pattern 5 and explain how you know the number of tiles without counting one by one.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A staircase pattern has counts \mbox{$3,\ 6,\ 10$}. Draw Pattern 4 and Pattern 5. How many extra tiles are added each time?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A row pattern has counts \mbox{$5,\ 8,\ 11,\ 14$}. Which pattern number has 35 tiles? Explain.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{An L-shape pattern has counts \mbox{$7,\ 9,\ 11,\ 13$}. Which pattern number has 31 tiles? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A staircase pattern has counts \mbox{$3,\ 6,\ 10,\ 15$}. Is it increasing by a constant amount? Explain using the differences.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Two students convert the same picture pattern into numbers. Ari gets \mbox{$4,\ 7,\ 10,\ 13$}. Moana gets \mbox{$4,\ 8,\ 12,\ 16$}. Give one possible reason one of them is wrong.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Pattern 6 of a row pattern has 15 tiles. If the pattern grows by 2 tiles each time, what are the counts for Patterns 1 to 6?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Pattern 5 of an L-shape has 13 tiles. Work backwards to find the counts for Patterns 1 to 5.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A spatial pattern grows by 4 tiles each time. Pattern 3 has 18 tiles. Find the counts for Patterns 1 to 5.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Maia says: If a pattern uses more tiles each time, it must be adding the same number every term. Use one example to explain why this is not always true.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Create your own spatial pattern with square tiles where Pattern 1 has 4 tiles and Pattern 4 has 19 tiles. Draw or describe Patterns 1 to 4.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A pattern has counts \mbox{$6,\ 10,\ 14,\ 18$}. Another has \mbox{$4,\ 7,\ 10,\ 13$}. Compare the growth rules and say which reaches 30 tiles first.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

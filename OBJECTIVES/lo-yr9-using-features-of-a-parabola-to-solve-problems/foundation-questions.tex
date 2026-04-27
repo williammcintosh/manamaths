@@ -1,39 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
-{\LARGE \textbf{Using features of a parabola to solve problems — Foundation}}\\[0.2em]
-{\large For each parabola, use the vertex, intercepts and symmetry to answer.}
-\begin{tasks}(3)
-\task For \mbox{$y=(x-0)^2-4$}, write the vertex and both \mbox{$x$}-intercepts.
-\task For \mbox{$y=-(x-0)^2+9$}, write the vertex and the maximum value of \mbox{$y$}.
-\task For \mbox{$y=(x-2)^2-1$}, write the axis of symmetry and the vertex.
-\task For \mbox{$y=(x+3)^2-4$}, write both \mbox{$x$}-intercepts.
-\task For \mbox{$y=-(x-1)^2+4$}, write both \mbox{$x$}-intercepts.
-\task For \mbox{$y=(x-0)^2+5$}, write the vertex and say whether there are any \mbox{$x$}-intercepts.
-\task For \mbox{$y=(x+1)^2-9$}, write the axis of symmetry and both \mbox{$x$}-intercepts.
-\task For \mbox{$y=-(x+2)^2+1$}, write the vertex and the greatest value of \mbox{$y$}.
-\task For \mbox{$y=(x-4)^2$}, write the vertex and the \mbox{$x$}-intercept.
-\task For \mbox{$y=(x-1)^2-4$}, the graph models a ball path. When is the ball on the ground?
-\task For \mbox{$y=-(x-3)^2+9$}, what is the highest point on the graph?
-\task For \mbox{$y=(x+2)^2-1$}, one point is \mbox{$(-1,0)$}. Use symmetry to write the other \mbox{$x$}-intercept.
-\end{tasks}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{For \mbox{$y=(x-0)^2-4$}, write the vertex and both \mbox{$x$}-intercepts.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{For \mbox{$y=-(x-0)^2+9$}, write the vertex and the maximum value of \mbox{$y$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{For \mbox{$y=(x-2)^2-1$}, write the axis of symmetry and the vertex.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{For \mbox{$y=(x+3)^2-4$}, write both \mbox{$x$}-intercepts.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{For \mbox{$y=-(x-1)^2+4$}, write both \mbox{$x$}-intercepts.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{For \mbox{$y=(x-0)^2+5$}, write the vertex and say whether there are any \mbox{$x$}-intercepts.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{For \mbox{$y=(x+1)^2-9$}, write the axis of symmetry and both \mbox{$x$}-intercepts.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{For \mbox{$y=-(x+2)^2+1$}, write the vertex and the greatest value of \mbox{$y$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{For \mbox{$y=(x-4)^2$}, write the vertex and the \mbox{$x$}-intercept.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{For \mbox{$y=(x-1)^2-4$}, the graph models a ball path. When is the ball on the ground?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{For \mbox{$y=-(x-3)^2+9$}, what is the highest point on the graph?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{For \mbox{$y=(x+2)^2-1$}, one point is \mbox{$(-1,0)$}. Use symmetry to write the other \mbox{$x$}-intercept.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

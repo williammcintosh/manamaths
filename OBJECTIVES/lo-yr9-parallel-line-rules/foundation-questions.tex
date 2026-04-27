@@ -1,31 +1,58 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-{\LARGE \textbf{Parallel line rules --- Foundation}}
-\begin{tasks}(3)
-\task {Find \mbox{$x$}.\\[0.4em]
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Find \mbox{$x$}.\\[0.4em]
 \begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
 \draw[thick] (-2,1.2)--(2,1.2);
 \draw[thick] (-2,-1.2)--(2,-1.2);
@@ -34,9 +61,8 @@
 \node[fill=white,inner sep=1pt] at (0.82,1.72) {$x$};
 \node[fill=white,inner sep=1pt] at (-0.82,-1.72) {$110^\circ$};
 \node[fill=white,inner sep=1pt] at (0.72,-1.72) {$70^\circ$};
-\end{tikzpicture}}
-
-\task {Find \mbox{$y$}.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Find \mbox{$y$}.\\[0.4em]
 \begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
 \draw[thick] (-2,1.2)--(2,1.2);
 \draw[thick] (-2,-1.2)--(2,-1.2);
@@ -45,9 +71,8 @@
 \node[fill=white,inner sep=1pt] at (0.82,1.72) {$115^\circ$};
 \node[fill=white,inner sep=1pt] at (-0.82,-1.72) {$y$};
 \node[fill=white,inner sep=1pt] at (0.72,-1.72) {$115^\circ$};
-\end{tikzpicture}}
-
-\task {Find \mbox{$a$}.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Find \mbox{$a$}.\\[0.4em]
 \begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
 \draw[thick] (-2,1.2)--(2,1.2);
 \draw[thick] (-2,-1.2)--(2,-1.2);
@@ -56,9 +81,11 @@
 \node[fill=white,inner sep=1pt] at (0.82,1.72) {$56^\circ$};
 \node[fill=white,inner sep=1pt] at (-0.82,-1.72) {$124^\circ$};
 \node[fill=white,inner sep=1pt] at (0.72,-1.72) {$a$};
-\end{tikzpicture}}
-
-\task {Find \mbox{$b$}.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Find \mbox{$b$}.\\[0.4em]
 \begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
 \draw[thick] (-2,1.2)--(2,1.2);
 \draw[thick] (-2,-1.2)--(2,-1.2);
@@ -67,9 +94,8 @@
 \node[fill=white,inner sep=1pt] at (0.82,1.72) {$41^\circ$};
 \node[fill=white,inner sep=1pt] at (-0.82,-1.72) {$139^\circ$};
 \node[fill=white,inner sep=1pt] at (0.72,-1.72) {$41^\circ$};
-\end{tikzpicture}}
-
-\task {Find \mbox{$c$}.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Find \mbox{$c$}.\\[0.4em]
 \begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
 \draw[thick] (-2,1.2)--(2,1.2);
 \draw[thick] (-2,-1.2)--(2,-1.2);
@@ -78,9 +104,8 @@
 \node[fill=white,inner sep=1pt] at (0.82,1.72) {$c$};
 \node[fill=white,inner sep=1pt] at (-0.82,-1.72) {$98^\circ$};
 \node[fill=white,inner sep=1pt] at (0.72,-1.72) {$82^\circ$};
-\end{tikzpicture}}
-
-\task {Find \mbox{$d$}.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Find \mbox{$d$}.\\[0.4em]
 \begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
 \draw[thick] (-2,1.2)--(2,1.2);
 \draw[thick] (-2,-1.2)--(2,-1.2);
@@ -89,9 +114,11 @@
 \node[fill=white,inner sep=1pt] at (0.82,1.72) {$107^\circ$};
 \node[fill=white,inner sep=1pt] at (-0.82,-1.72) {$d$};
 \node[fill=white,inner sep=1pt] at (0.72,-1.72) {$107^\circ$};
-\end{tikzpicture}}
-
-\task {Name the rule for the equal angles.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Name the rule for the equal angles.\\[0.4em]
 \begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
 \draw[thick] (-2,1.2)--(2,1.2);
 \draw[thick] (-2,-1.2)--(2,-1.2);
@@ -99,9 +126,8 @@
 \node[fill=white,inner sep=1pt] at (-0.72,1.72) {$84^\circ$};
 \node[fill=white,inner sep=1pt] at (-0.82,-1.72) {$84^\circ$};
 \end{tikzpicture}\\[0.2em]
-A. corresponding \quad B. co-interior \quad C. vertically opposite}
-
-\task {Name the rule for the equal angles.\\[0.4em]
+A. corresponding \quad B. co-interior \quad C. vertically opposite}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Name the rule for the equal angles.\\[0.4em]
 \begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
 \draw[thick] (-2,1.2)--(2,1.2);
 \draw[thick] (-2,-1.2)--(2,-1.2);
@@ -109,15 +135,29 @@ A. corresponding \quad B. co-interior \quad C. vertically opposite}
 \node[fill=white,inner sep=1pt] at (0.82,1.72) {$52^\circ$};
 \node[fill=white,inner sep=1pt] at (0.72,-1.72) {$52^\circ$};
 \end{tikzpicture}\\[0.2em]
-A. alternate \quad B. co-interior \quad C. vertically opposite}
-
-\task {Complete the rule: corresponding angles are \mbox{$\underline{\hspace{2cm}}$}.}
-
-\task {Complete the rule: alternate angles are \mbox{$\underline{\hspace{2cm}}$}.}
-
-\task {Complete the rule: co-interior angles add to \mbox{$\underline{\hspace{1.7cm}}$}.}
-
-\task {One angle is \mbox{$118^\circ$}. Find the acute angle made by the same transversal and parallel lines.}
-\end{tasks}
-
+A. alternate \quad B. co-interior \quad C. vertically opposite}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Complete the rule: corresponding angles are \mbox{$\underline{\hspace{2cm}}$}.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Complete the rule: alternate angles are \mbox{$\underline{\hspace{2cm}}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Complete the rule: co-interior angles add to \mbox{$\underline{\hspace{1.7cm}}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{One angle is \mbox{$118^\circ$}. Find the acute angle made by the same transversal and parallel lines.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

@@ -1,50 +1,114 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task A prism has a cross-section that is a right-angled triangle with legs 5 cm and 12 cm. If the prism is 30 cm long, calculate its volume.
-\task A rectangular prism has a volume of 1.5 m\mbox{$^3$}. Its length is 2 m and its width is 0.75 m. Find its height in centimetres.
-\task Two prisms have the same cross-sectional area. Prism A has depth 8 cm and volume 200 cm\mbox{$^3$}. Prism B has depth 12 cm. What is the volume of prism B?
-\task A square prism and a rectangular prism have the same volume. The square prism has base side 6 cm and depth 10 cm. The rectangular prism has length 9 cm and width 5 cm. Find the height of the rectangular prism.
-\task A triangular prism has a volume of 240 cm\mbox{$^3$}. The area of its triangular face is 20 cm\mbox{$^2$}. The prism is cut into two equal shorter prisms. What is the volume of each shorter prism?
-\task A prism has a cross-section that is a trapezium with parallel sides 4 cm and 6 cm, and height 5 cm. If the prism is 15 cm long, find its volume.
-\task A rectangular prism has dimensions in the ratio 2:3:5. Its volume is 810 cm\mbox{$^3$}. Find the actual dimensions.
-\task A square prism has a volume that is 4 times the volume of a cube with side length 3 cm. If the square prism has depth 8 cm, find the side length of its base.
-\task A triangular prism has a base triangle with area 18 cm\mbox{$^2$}. The prism is 25 cm long. If the prism is melted down and recast into a cube, what is the side length of the cube?
-\task A prism has a cross-sectional area of 24 cm\mbox{$^2$}. Its volume is 360 cm\mbox{$^3$}. The prism is cut perpendicular to its length into three equal pieces. What is the volume of each piece?
-\task A rectangular prism has a volume of 720 cm\mbox{$^3$}. Its length, width, and height are consecutive even numbers. Find the dimensions.
-\task A square prism has a volume of 1000 cm\mbox{$^3$}. If its depth is increased by 20\% without changing the base, what is the new volume?
-\task A triangular prism and a square prism have the same volume. The triangular prism has base area 16 cm\mbox{$^2$} and depth 15 cm. The square prism has base side length 4 cm. Find the depth of the square prism.
-\task A prism has a cross-section that is a regular hexagon with area 54\mbox{$\sqrt{3}$} cm\mbox{$^2$}. If the prism is 20 cm long, calculate its volume.
-\task A rectangular prism has length \mbox{$l$}, width \mbox{$w$}, and height \mbox{$h$}. If \mbox{$l = 2w$} and \mbox{$h = w + 2$}, and the volume is 192 cm\mbox{$^3$}, find the dimensions.
-\task A square prism has a volume of 512 cm\mbox{$^3$}. If both the side length of the base and the depth are doubled, what is the new volume?
-\task A triangular prism has a base triangle with sides 5 cm, 12 cm, and 13 cm (a right-angled triangle). If the prism is 18 cm long, find its volume.
-\task A prism has a volume of 2.4 m\mbox{$^3$} and a depth of 1.2 m. The cross-section is a rectangle with length twice its width. Find the dimensions of the cross-section.
-\task A square prism and a rectangular prism have equal depths. The square prism has base side 8 cm. The rectangular prism has base dimensions 10 cm by 6.4 cm. If their volumes are equal, find the common depth.
-\task A prism has a cross-sectional area that varies along its length. The average cross-sectional area is 15 cm\mbox{$^2$} and the length is 40 cm. Estimate the volume of the prism.
-\end{tasks}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A prism has a cross-section that is a right-angled triangle with legs 5 cm and 12 cm. If the prism is 30 cm long, calculate its volume.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A rectangular prism has a volume of 1.5 m\mbox{$^3$}. Its length is 2 m and its width is 0.75 m. Find its height in centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Two prisms have the same cross-sectional area. Prism A has depth 8 cm and volume 200 cm\mbox{$^3$}. Prism B has depth 12 cm. What is the volume of prism B?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A square prism and a rectangular prism have the same volume. The square prism has base side 6 cm and depth 10 cm. The rectangular prism has length 9 cm and width 5 cm. Find the height of the rectangular prism.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A triangular prism has a volume of 240 cm\mbox{$^3$}. The area of its triangular face is 20 cm\mbox{$^2$}. The prism is cut into two equal shorter prisms. What is the volume of each shorter prism?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A prism has a cross-section that is a trapezium with parallel sides 4 cm and 6 cm, and height 5 cm. If the prism is 15 cm long, find its volume.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A rectangular prism has dimensions in the ratio 2:3:5. Its volume is 810 cm\mbox{$^3$}. Find the actual dimensions.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A square prism has a volume that is 4 times the volume of a cube with side length 3 cm. If the square prism has depth 8 cm, find the side length of its base.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A triangular prism has a base triangle with area 18 cm\mbox{$^2$}. The prism is 25 cm long. If the prism is melted down and recast into a cube, what is the side length of the cube?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A prism has a cross-sectional area of 24 cm\mbox{$^2$}. Its volume is 360 cm\mbox{$^3$}. The prism is cut perpendicular to its length into three equal pieces. What is the volume of each piece?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A rectangular prism has a volume of 720 cm\mbox{$^3$}. Its length, width, and height are consecutive even numbers. Find the dimensions.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A square prism has a volume of 1000 cm\mbox{$^3$}. If its depth is increased by 20\% without changing the base, what is the new volume?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A triangular prism and a square prism have the same volume. The triangular prism has base area 16 cm\mbox{$^2$} and depth 15 cm. The square prism has base side length 4 cm. Find the depth of the square prism.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A prism has a cross-section that is a regular hexagon with area 54\mbox{$\sqrt{3}$} cm\mbox{$^2$}. If the prism is 20 cm long, calculate its volume.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A rectangular prism has length \mbox{$l$}, width \mbox{$w$}, and height \mbox{$h$}. If \mbox{$l = 2w$} and \mbox{$h = w + 2$}, and the volume is 192 cm\mbox{$^3$}, find the dimensions.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A square prism has a volume of 512 cm\mbox{$^3$}. If both the side length of the base and the depth are doubled, what is the new volume?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A triangular prism has a base triangle with sides 5 cm, 12 cm, and 13 cm (a right-angled triangle). If the prism is 18 cm long, find its volume.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A prism has a volume of 2.4 m\mbox{$^3$} and a depth of 1.2 m. The cross-section is a rectangle with length twice its width. Find the dimensions of the cross-section.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A square prism and a rectangular prism have equal depths. The square prism has base side 8 cm. The rectangular prism has base dimensions 10 cm by 6.4 cm. If their volumes are equal, find the common depth.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A prism has a cross-sectional area that varies along its length. The average cross-sectional area is 15 cm\mbox{$^2$} and the length is 40 cm. Estimate the volume of the prism.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

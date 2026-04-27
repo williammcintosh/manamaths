@@ -1,42 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-{\LARGE \textbf{Solving measurement equations --- Proficient}}
-\begin{tasks}(3)
-\task A rectangle has perimeter \mbox{$26$} cm and width \mbox{$5$} cm. Solve \mbox{$2l+10=26$}.
-\task A rectangle has perimeter \mbox{$42$} m and length \mbox{$x+3$} m, width \mbox{$x$} m. Solve \mbox{$2(x+3)+2x=42$}.
-\task A rectangle has area \mbox{$63$} cm\mbox{$^2$} and length \mbox{$x+2$} cm, width \mbox{$7$} cm. Solve \mbox{$7(x+2)=63$}.
-\task A triangle has area \mbox{$24$} m\mbox{$^2$} and base \mbox{$8$} m. Solve \mbox{$8h=48$}.
-\task A trapezium has area \mbox{$40$} cm\mbox{$^2$}, parallel sides \mbox{$6$} cm and \mbox{$10$} cm. Solve \mbox{$16h=80$}.
-\task A prism has volume \mbox{$84$} cm\mbox{$^3$} and cross-sectional area \mbox{$12$} cm\mbox{$^2$}. Solve \mbox{$12d=84$}.
-\task A cuboid has volume \mbox{$90$} cm\mbox{$^3$} with width \mbox{$3$} cm and height \mbox{$5$} cm. Solve \mbox{$15l=90$}.
-\task Speed is \mbox{$72$} km/h and time is \mbox{$2.5$} h. Solve \mbox{$2.5d=180$} for the distance \mbox{$d$}.
-\task A car travels \mbox{$198$} km in \mbox{$3$} h. Solve \mbox{$3v=198$}.
-\task A bottle contains \mbox{$c$} litres. Six bottles hold \mbox{$9$} L altogether. Solve \mbox{$6c=9$}.
-\task A square has area \mbox{$121$} cm\mbox{$^2$}. Solve \mbox{$s^2=121$}.
-\task A circle has circumference \mbox{$31.4$} cm. Using \mbox{$C=2\pi r$} and \mbox{$\pi=3.14$}, solve \mbox{$6.28r=31.4$}.
-\end{tasks}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A rectangle has perimeter \mbox{$26$} cm and width \mbox{$5$} cm. Solve \mbox{$2l+10=26$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A rectangle has perimeter \mbox{$42$} m and length \mbox{$x+3$} m, width \mbox{$x$} m. Solve \mbox{$2(x+3)+2x=42$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A rectangle has area \mbox{$63$} cm\mbox{$^2$} and length \mbox{$x+2$} cm, width \mbox{$7$} cm. Solve \mbox{$7(x+2)=63$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A triangle has area \mbox{$24$} m\mbox{$^2$} and base \mbox{$8$} m. Solve \mbox{$8h=48$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A trapezium has area \mbox{$40$} cm\mbox{$^2$}, parallel sides \mbox{$6$} cm and \mbox{$10$} cm. Solve \mbox{$16h=80$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A prism has volume \mbox{$84$} cm\mbox{$^3$} and cross-sectional area \mbox{$12$} cm\mbox{$^2$}. Solve \mbox{$12d=84$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A cuboid has volume \mbox{$90$} cm\mbox{$^3$} with width \mbox{$3$} cm and height \mbox{$5$} cm. Solve \mbox{$15l=90$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Speed is \mbox{$72$} km/h and time is \mbox{$2.5$} h. Solve \mbox{$2.5d=180$} for the distance \mbox{$d$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A car travels \mbox{$198$} km in \mbox{$3$} h. Solve \mbox{$3v=198$}.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A bottle contains \mbox{$c$} litres. Six bottles hold \mbox{$9$} L altogether. Solve \mbox{$6c=9$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A square has area \mbox{$121$} cm\mbox{$^2$}. Solve \mbox{$s^2=121$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A circle has circumference \mbox{$31.4$} cm. Using \mbox{$C=2\pi r$} and \mbox{$\pi=3.14$}, solve \mbox{$6.28r=31.4$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

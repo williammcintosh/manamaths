@@ -1,86 +1,125 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-{\LARGE \textbf{Interpreting pie charts \& pictograms --- Excellence}}
-\begin{tasks}(3)
-\task This pie chart shows favourite subjects for 160 students.\\
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{This pie chart shows favourite subjects for 160 students.\\
 \simplepie{{35/red/Maths,30/blue/Science,20/green/English,15/yellow/Other}}\\
-How many more students chose Maths than Other?
-
-\task This pie chart shows how \$2400 of camp money was spent.\\
+How many more students chose Maths than Other?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{This pie chart shows how \$2400 of camp money was spent.\\
 \simplepie{{50/red/Travel,25/blue/Food,15/green/Gear,10/yellow/Other}}\\
-How much was spent on Food and Gear altogether?
-
-\task This pie chart shows sport choices for 90 students.\\
+How much was spent on Food and Gear altogether?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{This pie chart shows sport choices for 90 students.\\
 \simplepie{{40/red/Rugby,30/blue/Football,20/green/Netball,10/yellow/Other}}\\
-How many students chose a sport other than rugby?
-
-\task This pie chart shows favourite music styles.\\
+How many students chose a sport other than rugby?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{This pie chart shows favourite music styles.\\
 \simplepie{{45/red/Pop,25/blue/Rock,20/green/Hip-hop,10/yellow/Other}}\\
-Explain why Pop is not quite twice Hip-hop.
-
-\task The pictogram shows books sold. Key: \picto{1}{B} = 8 books.\\[0.3em]
+Explain why Pop is not quite twice Hip-hop.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{The pictogram shows books sold. Key: \picto{1}{B} = 8 books.\\[0.3em]
 \begin{tabular}{ll}
 Week 1 & \picto{5}{B} \\
 Week 2 & \picto{3}{B} \\
 Week 3 & \picto{6}{B}
 \end{tabular}\\
-How many books were sold in all three weeks?
-
-\task The pictogram shows cups of soup sold. Key: \picto{1}{S} = 6 cups.\\[0.3em]
+How many books were sold in all three weeks?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{The pictogram shows cups of soup sold. Key: \picto{1}{S} = 6 cups.\\[0.3em]
 \begin{tabular}{ll}
 Tomato   & \picto{4}{S} \\
 Pumpkin  & \picto{3}{S} \\
 Chicken  & \picto{5}{S}
 \end{tabular}\\
-How many more chicken soups were sold than pumpkin soups?
-
-\task The pictogram shows points scored. Key: \picto{1}{P} = 5 points.\\[0.3em]
+How many more chicken soups were sold than pumpkin soups?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{The pictogram shows points scored. Key: \picto{1}{P} = 5 points.\\[0.3em]
 \begin{tabular}{ll}
 Ava  & \picto{6}{P} \\
 Noah & \picto{4}{P} \\
 Tia  & \picto{5}{P}
 \end{tabular}\\
-Who scored the median number of points?
-
-\task The pictogram shows bags packed for camp. Key: \picto{1}{C} = 3 bags.\\[0.3em]
+Who scored the median number of points?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{The pictogram shows bags packed for camp. Key: \picto{1}{C} = 3 bags.\\[0.3em]
 \begin{tabular}{ll}
 Cabin A & \picto{7}{C} \\
 Cabin B & \picto{5}{C} \\
 Cabin C & \picto{6}{C}
 \end{tabular}\\
-How many bags would Cabin A and Cabin C have together?
-
-\task A pie chart shows that 15\% of 240 students chose drama. How many students chose drama?
-
-\task A pie chart shows 35\% for one category and 25\% for another. What percentage is left for the other categories?
-
-\task A pictogram uses 1 symbol to represent 7 items. If there are 56 items, how many symbols are needed?
-
-\task A pictogram uses 1 symbol to represent 4 people. If 6 symbols are shown for Team A and 9 symbols for Team B, how many more people are in Team B?
-
-\end{tasks}
-
+How many bags would Cabin A and Cabin C have together?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A pie chart shows that 15\% of 240 students chose drama. How many students chose drama?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A pie chart shows 35\% for one category and 25\% for another. What percentage is left for the other categories?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A pictogram uses 1 symbol to represent 7 items. If there are 56 items, how many symbols are needed?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A pictogram uses 1 symbol to represent 4 people. If 6 symbols are shown for Team A and 9 symbols for Team B, how many more people are in Team B?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

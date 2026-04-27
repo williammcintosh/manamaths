@@ -1,56 +1,103 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\vspace*{0.4em}
-{\LARGE \textbf{Proficient}}
-\begin{tasks}(3)
-\task {Use this tree to list the full sample space for two fair coin tosses.
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\vspace{0.4em}\twocointree}
-\task {Use the tree to find the probability of getting exactly two heads.
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\vspace{0.4em}\twocointree}
-\task {Use the tree to find the probability of getting at least one head.
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\vspace{0.4em}\twocointree}
-\task {Use this tree for a spinner labelled \mbox{$1,2,3$} spun twice. List the outcomes where the total is \mbox{$4$}.
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Use this tree to list the full sample space for two fair coin tosses.
 
-\vspace{0.4em}\threetwothreetree}
-\task {Use the tree to find the probability that the total is \mbox{$4$}.
+\vspace{0.4em}\twocointree}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Use the tree to find the probability of getting exactly two heads.
 
-\vspace{0.4em}\threetwothreetree}
-\task {A fair die is rolled twice. What is the probability of getting a \mbox{$6$} then an even number?}
-\task {A fair die is rolled twice. What is the probability that both numbers are odd?}
-\task {A bag has \mbox{$2$} red and \mbox{$1$} blue counter. A counter is picked, replaced, then picked again. What is the probability of red then blue?}
-\task {A bag has \mbox{$2$} red and \mbox{$1$} blue counter. A counter is picked, replaced, then picked again. What is the probability of two blues?}
-\task {A fair coin is tossed twice. What is the probability of getting the same result both times?}
-\task {A fair coin is tossed twice. What is the probability of getting different results?}
-\task {Fill in the blank: for two fair coin tosses, the probability of exactly one head is \mbox{$\frac{\square}{4}$}.}
-\task {Fill in the blank: for two fair die rolls, the probability of getting two odd numbers is \mbox{$\frac{\square}{36}$}.}
-\task {Which is greater: the probability of two heads in two coin tosses or the probability of a \mbox{$6$} then a \mbox{$6$} in two die rolls?}
-\task {Which is smaller: the probability of red then blue from a red-blue spinner spun twice or the probability of two reds?}
-\task {A student says the probability of H then \mbox{$5$} when a coin is tossed and a die is rolled is \mbox{$\frac{1}{6}$}. Are they correct?}
-\task {Explain in one short sentence what a branch on a tree diagram shows.}
-\end{tasks}
+\vspace{0.4em}\twocointree}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Use the tree to find the probability of getting at least one head.
 
+\vspace{0.4em}\twocointree}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Use this tree for a spinner labelled \mbox{$1,2,3$} spun twice. List the outcomes where the total is \mbox{$4$}.
+
+\vspace{0.4em}\threetwothreetree}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Use the tree to find the probability that the total is \mbox{$4$}.
+
+\vspace{0.4em}\threetwothreetree}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A fair die is rolled twice. What is the probability of getting a \mbox{$6$} then an even number?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A fair die is rolled twice. What is the probability that both numbers are odd?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A bag has \mbox{$2$} red and \mbox{$1$} blue counter. A counter is picked, replaced, then picked again. What is the probability of red then blue?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A bag has \mbox{$2$} red and \mbox{$1$} blue counter. A counter is picked, replaced, then picked again. What is the probability of two blues?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A fair coin is tossed twice. What is the probability of getting the same result both times?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A fair coin is tossed twice. What is the probability of getting different results?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Fill in the blank: for two fair coin tosses, the probability of exactly one head is \mbox{$\frac{\square}{4}$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Fill in the blank: for two fair die rolls, the probability of getting two odd numbers is \mbox{$\frac{\square}{36}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Which is greater: the probability of two heads in two coin tosses or the probability of a \mbox{$6$} then a \mbox{$6$} in two die rolls?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Which is smaller: the probability of red then blue from a red-blue spinner spun twice or the probability of two reds?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A student says the probability of H then \mbox{$5$} when a coin is tossed and a die is rolled is \mbox{$\frac{1}{6}$}. Are they correct?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Explain in one short sentence what a branch on a tree diagram shows.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

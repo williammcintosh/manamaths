@@ -1,492 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=9.8em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
-{\LARGE \textbf{Forming equation of parabolas — Proficient}}\\[0.2em]
-{\large Use each graph to work out the scale factor and translation, then write the equation in the form $y=a(x-h)^2+k$.}
-\begin{center}
-\begin{tikzpicture}[x=1cm,y=1cm]
-\node[anchor=west,font=\bfseries] at (-0.28,10.52) {1.};
-\draw[very thin,color=gray!50] (0.00,7.32) -- (0.00,10.40);
-\draw[very thin,color=gray!50] (0.34,7.32) -- (0.34,10.40);
-\draw[very thin,color=gray!50] (0.68,7.32) -- (0.68,10.40);
-\draw[very thin,color=gray!50] (1.02,7.32) -- (1.02,10.40);
-\draw[very thin,color=gray!50] (1.36,7.32) -- (1.36,10.40);
-\draw[very thin,color=gray!50] (1.70,7.32) -- (1.70,10.40);
-\draw[very thin,color=gray!50] (2.04,7.32) -- (2.04,10.40);
-\draw[very thin,color=gray!50] (2.38,7.32) -- (2.38,10.40);
-\draw[very thin,color=gray!50] (2.72,7.32) -- (2.72,10.40);
-\draw[very thin,color=gray!50] (3.06,7.32) -- (3.06,10.40);
-\draw[very thin,color=gray!50] (3.40,7.32) -- (3.40,10.40);
-\draw[very thin,color=gray!50] (3.74,7.32) -- (3.74,10.40);
-\draw[very thin,color=gray!50] (4.08,7.32) -- (4.08,10.40);
-\draw[very thin,color=gray!50] (0.00,7.32) -- (4.08,7.32);
-\draw[very thin,color=gray!50] (0.00,7.54) -- (4.08,7.54);
-\draw[very thin,color=gray!50] (0.00,7.76) -- (4.08,7.76);
-\draw[very thin,color=gray!50] (0.00,7.98) -- (4.08,7.98);
-\draw[very thin,color=gray!50] (0.00,8.20) -- (4.08,8.20);
-\draw[very thin,color=gray!50] (0.00,8.42) -- (4.08,8.42);
-\draw[very thin,color=gray!50] (0.00,8.64) -- (4.08,8.64);
-\draw[very thin,color=gray!50] (0.00,8.86) -- (4.08,8.86);
-\draw[very thin,color=gray!50] (0.00,9.08) -- (4.08,9.08);
-\draw[very thin,color=gray!50] (0.00,9.30) -- (4.08,9.30);
-\draw[very thin,color=gray!50] (0.00,9.52) -- (4.08,9.52);
-\draw[very thin,color=gray!50] (0.00,9.74) -- (4.08,9.74);
-\draw[very thin,color=gray!50] (0.00,9.96) -- (4.08,9.96);
-\draw[very thin,color=gray!50] (0.00,10.18) -- (4.08,10.18);
-\draw[very thin,color=gray!50] (0.00,10.40) -- (4.08,10.40);
-\draw[thick] (0.00,8.64) -- (4.08,8.64);
-\draw[thick] (2.04,7.32) -- (2.04,10.40);
-\node[font=\tiny] at (3.98,8.78) {$x$};
-\node[font=\tiny] at (2.16,10.30) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(1.673,10.324) (1.714,10.110) (1.754,9.910) (1.795,9.722) (1.836,9.546) (1.877,9.384) (1.918,9.234) (1.958,9.097) (1.999,8.972) (2.040,8.860) (2.081,8.761) (2.122,8.674) (2.162,8.600) (2.203,8.539) (2.244,8.490) (2.285,8.454) (2.326,8.431) (2.366,8.421) (2.407,8.423) (2.448,8.438) (2.489,8.465) (2.530,8.505) (2.570,8.558) (2.611,8.623) (2.652,8.702) (2.693,8.792) (2.734,8.896) (2.774,9.012) (2.815,9.141) (2.856,9.282) (2.897,9.437) (2.938,9.603) (2.978,9.783) (3.019,9.975) (3.060,10.180) (3.101,10.398)};
-\fill[red!80!black] (2.380,8.420) circle (1.1pt);
-\fill[black!70] (2.040,8.860) circle (0.9pt);
-\fill[black!70] (2.720,8.860) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (4.45,10.52) {2.};
-\draw[very thin,color=gray!50] (4.73,7.32) -- (4.73,10.40);
-\draw[very thin,color=gray!50] (5.07,7.32) -- (5.07,10.40);
-\draw[very thin,color=gray!50] (5.41,7.32) -- (5.41,10.40);
-\draw[very thin,color=gray!50] (5.75,7.32) -- (5.75,10.40);
-\draw[very thin,color=gray!50] (6.09,7.32) -- (6.09,10.40);
-\draw[very thin,color=gray!50] (6.43,7.32) -- (6.43,10.40);
-\draw[very thin,color=gray!50] (6.77,7.32) -- (6.77,10.40);
-\draw[very thin,color=gray!50] (7.11,7.32) -- (7.11,10.40);
-\draw[very thin,color=gray!50] (7.45,7.32) -- (7.45,10.40);
-\draw[very thin,color=gray!50] (7.79,7.32) -- (7.79,10.40);
-\draw[very thin,color=gray!50] (8.13,7.32) -- (8.13,10.40);
-\draw[very thin,color=gray!50] (8.47,7.32) -- (8.47,10.40);
-\draw[very thin,color=gray!50] (8.81,7.32) -- (8.81,10.40);
-\draw[very thin,color=gray!50] (4.73,7.32) -- (8.81,7.32);
-\draw[very thin,color=gray!50] (4.73,7.54) -- (8.81,7.54);
-\draw[very thin,color=gray!50] (4.73,7.76) -- (8.81,7.76);
-\draw[very thin,color=gray!50] (4.73,7.98) -- (8.81,7.98);
-\draw[very thin,color=gray!50] (4.73,8.20) -- (8.81,8.20);
-\draw[very thin,color=gray!50] (4.73,8.42) -- (8.81,8.42);
-\draw[very thin,color=gray!50] (4.73,8.64) -- (8.81,8.64);
-\draw[very thin,color=gray!50] (4.73,8.86) -- (8.81,8.86);
-\draw[very thin,color=gray!50] (4.73,9.08) -- (8.81,9.08);
-\draw[very thin,color=gray!50] (4.73,9.30) -- (8.81,9.30);
-\draw[very thin,color=gray!50] (4.73,9.52) -- (8.81,9.52);
-\draw[very thin,color=gray!50] (4.73,9.74) -- (8.81,9.74);
-\draw[very thin,color=gray!50] (4.73,9.96) -- (8.81,9.96);
-\draw[very thin,color=gray!50] (4.73,10.18) -- (8.81,10.18);
-\draw[very thin,color=gray!50] (4.73,10.40) -- (8.81,10.40);
-\draw[thick] (4.73,8.64) -- (8.81,8.64);
-\draw[thick] (6.77,7.32) -- (6.77,10.40);
-\node[font=\tiny] at (8.71,8.78) {$x$};
-\node[font=\tiny] at (6.89,10.30) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(5.546,10.426) (5.587,10.264) (5.628,10.114) (5.668,9.977) (5.709,9.852) (5.750,9.740) (5.791,9.641) (5.832,9.554) (5.872,9.480) (5.913,9.419) (5.954,9.370) (5.995,9.334) (6.036,9.311) (6.076,9.301) (6.117,9.303) (6.158,9.318) (6.199,9.345) (6.240,9.385) (6.280,9.438) (6.321,9.503) (6.362,9.582) (6.403,9.672) (6.444,9.776) (6.484,9.892) (6.525,10.021) (6.566,10.162) (6.607,10.317) (6.648,10.483)};
-\fill[red!80!black] (6.090,9.300) circle (1.1pt);
-\fill[black!70] (5.750,9.740) circle (0.9pt);
-\fill[black!70] (6.430,9.740) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (9.18,10.52) {3.};
-\draw[very thin,color=gray!50] (9.46,7.32) -- (9.46,10.40);
-\draw[very thin,color=gray!50] (9.80,7.32) -- (9.80,10.40);
-\draw[very thin,color=gray!50] (10.14,7.32) -- (10.14,10.40);
-\draw[very thin,color=gray!50] (10.48,7.32) -- (10.48,10.40);
-\draw[very thin,color=gray!50] (10.82,7.32) -- (10.82,10.40);
-\draw[very thin,color=gray!50] (11.16,7.32) -- (11.16,10.40);
-\draw[very thin,color=gray!50] (11.50,7.32) -- (11.50,10.40);
-\draw[very thin,color=gray!50] (11.84,7.32) -- (11.84,10.40);
-\draw[very thin,color=gray!50] (12.18,7.32) -- (12.18,10.40);
-\draw[very thin,color=gray!50] (12.52,7.32) -- (12.52,10.40);
-\draw[very thin,color=gray!50] (12.86,7.32) -- (12.86,10.40);
-\draw[very thin,color=gray!50] (13.20,7.32) -- (13.20,10.40);
-\draw[very thin,color=gray!50] (13.54,7.32) -- (13.54,10.40);
-\draw[very thin,color=gray!50] (9.46,7.32) -- (13.54,7.32);
-\draw[very thin,color=gray!50] (9.46,7.54) -- (13.54,7.54);
-\draw[very thin,color=gray!50] (9.46,7.76) -- (13.54,7.76);
-\draw[very thin,color=gray!50] (9.46,7.98) -- (13.54,7.98);
-\draw[very thin,color=gray!50] (9.46,8.20) -- (13.54,8.20);
-\draw[very thin,color=gray!50] (9.46,8.42) -- (13.54,8.42);
-\draw[very thin,color=gray!50] (9.46,8.64) -- (13.54,8.64);
-\draw[very thin,color=gray!50] (9.46,8.86) -- (13.54,8.86);
-\draw[very thin,color=gray!50] (9.46,9.08) -- (13.54,9.08);
-\draw[very thin,color=gray!50] (9.46,9.30) -- (13.54,9.30);
-\draw[very thin,color=gray!50] (9.46,9.52) -- (13.54,9.52);
-\draw[very thin,color=gray!50] (9.46,9.74) -- (13.54,9.74);
-\draw[very thin,color=gray!50] (9.46,9.96) -- (13.54,9.96);
-\draw[very thin,color=gray!50] (9.46,10.18) -- (13.54,10.18);
-\draw[very thin,color=gray!50] (9.46,10.40) -- (13.54,10.40);
-\draw[thick] (9.46,8.64) -- (13.54,8.64);
-\draw[thick] (11.50,7.32) -- (11.50,10.40);
-\node[font=\tiny] at (13.44,8.78) {$x$};
-\node[font=\tiny] at (11.62,10.30) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(10.725,7.233) (10.766,7.467) (10.806,7.689) (10.847,7.898) (10.888,8.094) (10.929,8.278) (10.970,8.449) (11.010,8.608) (11.051,8.753) (11.092,8.886) (11.133,9.007) (11.174,9.114) (11.214,9.210) (11.255,9.292) (11.296,9.362) (11.337,9.419) (11.378,9.463) (11.418,9.495) (11.459,9.514) (11.500,9.520) (11.541,9.514) (11.582,9.495) (11.622,9.463) (11.663,9.419) (11.704,9.362) (11.745,9.292) (11.786,9.210) (11.826,9.114) (11.867,9.007) (11.908,8.886) (11.949,8.753) (11.990,8.608) (12.030,8.449) (12.071,8.278) (12.112,8.094) (12.153,7.898) (12.194,7.689) (12.234,7.467) (12.275,7.233)};
-\fill[red!80!black] (11.500,9.520) circle (1.1pt);
-\fill[black!70] (11.160,9.080) circle (0.9pt);
-\fill[black!70] (11.840,9.080) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (13.91,10.52) {4.};
-\draw[very thin,color=gray!50] (14.19,7.32) -- (14.19,10.40);
-\draw[very thin,color=gray!50] (14.53,7.32) -- (14.53,10.40);
-\draw[very thin,color=gray!50] (14.87,7.32) -- (14.87,10.40);
-\draw[very thin,color=gray!50] (15.21,7.32) -- (15.21,10.40);
-\draw[very thin,color=gray!50] (15.55,7.32) -- (15.55,10.40);
-\draw[very thin,color=gray!50] (15.89,7.32) -- (15.89,10.40);
-\draw[very thin,color=gray!50] (16.23,7.32) -- (16.23,10.40);
-\draw[very thin,color=gray!50] (16.57,7.32) -- (16.57,10.40);
-\draw[very thin,color=gray!50] (16.91,7.32) -- (16.91,10.40);
-\draw[very thin,color=gray!50] (17.25,7.32) -- (17.25,10.40);
-\draw[very thin,color=gray!50] (17.59,7.32) -- (17.59,10.40);
-\draw[very thin,color=gray!50] (17.93,7.32) -- (17.93,10.40);
-\draw[very thin,color=gray!50] (18.27,7.32) -- (18.27,10.40);
-\draw[very thin,color=gray!50] (14.19,7.32) -- (18.27,7.32);
-\draw[very thin,color=gray!50] (14.19,7.54) -- (18.27,7.54);
-\draw[very thin,color=gray!50] (14.19,7.76) -- (18.27,7.76);
-\draw[very thin,color=gray!50] (14.19,7.98) -- (18.27,7.98);
-\draw[very thin,color=gray!50] (14.19,8.20) -- (18.27,8.20);
-\draw[very thin,color=gray!50] (14.19,8.42) -- (18.27,8.42);
-\draw[very thin,color=gray!50] (14.19,8.64) -- (18.27,8.64);
-\draw[very thin,color=gray!50] (14.19,8.86) -- (18.27,8.86);
-\draw[very thin,color=gray!50] (14.19,9.08) -- (18.27,9.08);
-\draw[very thin,color=gray!50] (14.19,9.30) -- (18.27,9.30);
-\draw[very thin,color=gray!50] (14.19,9.52) -- (18.27,9.52);
-\draw[very thin,color=gray!50] (14.19,9.74) -- (18.27,9.74);
-\draw[very thin,color=gray!50] (14.19,9.96) -- (18.27,9.96);
-\draw[very thin,color=gray!50] (14.19,10.18) -- (18.27,10.18);
-\draw[very thin,color=gray!50] (14.19,10.40) -- (18.27,10.40);
-\draw[thick] (14.19,8.64) -- (18.27,8.64);
-\draw[thick] (16.23,7.32) -- (16.23,10.40);
-\node[font=\tiny] at (18.17,8.78) {$x$};
-\node[font=\tiny] at (16.35,10.30) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(16.556,7.249) (16.597,7.458) (16.638,7.654) (16.679,7.838) (16.720,8.009) (16.760,8.168) (16.801,8.313) (16.842,8.446) (16.883,8.567) (16.924,8.674) (16.964,8.770) (17.005,8.852) (17.046,8.922) (17.087,8.979) (17.128,9.023) (17.168,9.055) (17.209,9.074) (17.250,9.080) (17.291,9.074) (17.332,9.055) (17.372,9.023) (17.413,8.979) (17.454,8.922) (17.495,8.852) (17.536,8.770) (17.576,8.674) (17.617,8.567) (17.658,8.446) (17.699,8.313) (17.740,8.168) (17.780,8.009) (17.821,7.838) (17.862,7.654) (17.903,7.458) (17.944,7.249)};
-\fill[red!80!black] (17.250,9.080) circle (1.1pt);
-\fill[black!70] (16.910,8.640) circle (0.9pt);
-\fill[black!70] (17.590,8.640) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (-0.28,6.86) {5.};
-\draw[very thin,color=gray!50] (0.00,3.66) -- (0.00,6.74);
-\draw[very thin,color=gray!50] (0.34,3.66) -- (0.34,6.74);
-\draw[very thin,color=gray!50] (0.68,3.66) -- (0.68,6.74);
-\draw[very thin,color=gray!50] (1.02,3.66) -- (1.02,6.74);
-\draw[very thin,color=gray!50] (1.36,3.66) -- (1.36,6.74);
-\draw[very thin,color=gray!50] (1.70,3.66) -- (1.70,6.74);
-\draw[very thin,color=gray!50] (2.04,3.66) -- (2.04,6.74);
-\draw[very thin,color=gray!50] (2.38,3.66) -- (2.38,6.74);
-\draw[very thin,color=gray!50] (2.72,3.66) -- (2.72,6.74);
-\draw[very thin,color=gray!50] (3.06,3.66) -- (3.06,6.74);
-\draw[very thin,color=gray!50] (3.40,3.66) -- (3.40,6.74);
-\draw[very thin,color=gray!50] (3.74,3.66) -- (3.74,6.74);
-\draw[very thin,color=gray!50] (4.08,3.66) -- (4.08,6.74);
-\draw[very thin,color=gray!50] (0.00,3.66) -- (4.08,3.66);
-\draw[very thin,color=gray!50] (0.00,3.88) -- (4.08,3.88);
-\draw[very thin,color=gray!50] (0.00,4.10) -- (4.08,4.10);
-\draw[very thin,color=gray!50] (0.00,4.32) -- (4.08,4.32);
-\draw[very thin,color=gray!50] (0.00,4.54) -- (4.08,4.54);
-\draw[very thin,color=gray!50] (0.00,4.76) -- (4.08,4.76);
-\draw[very thin,color=gray!50] (0.00,4.98) -- (4.08,4.98);
-\draw[very thin,color=gray!50] (0.00,5.20) -- (4.08,5.20);
-\draw[very thin,color=gray!50] (0.00,5.42) -- (4.08,5.42);
-\draw[very thin,color=gray!50] (0.00,5.64) -- (4.08,5.64);
-\draw[very thin,color=gray!50] (0.00,5.86) -- (4.08,5.86);
-\draw[very thin,color=gray!50] (0.00,6.08) -- (4.08,6.08);
-\draw[very thin,color=gray!50] (0.00,6.30) -- (4.08,6.30);
-\draw[very thin,color=gray!50] (0.00,6.52) -- (4.08,6.52);
-\draw[very thin,color=gray!50] (0.00,6.74) -- (4.08,6.74);
-\draw[thick] (0.00,4.98) -- (4.08,4.98);
-\draw[thick] (2.04,3.66) -- (2.04,6.74);
-\node[font=\tiny] at (3.98,5.12) {$x$};
-\node[font=\tiny] at (2.16,6.64) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(0.163,6.787) (0.204,6.670) (0.245,6.555) (0.286,6.444) (0.326,6.335) (0.367,6.230) (0.408,6.128) (0.449,6.030) (0.490,5.934) (0.530,5.842) (0.571,5.752) (0.612,5.666) (0.653,5.584) (0.694,5.504) (0.734,5.427) (0.775,5.354) (0.816,5.284) (0.857,5.217) (0.898,5.153) (0.938,5.092) (0.979,5.034) (1.020,4.980) (1.061,4.929) (1.102,4.881) (1.142,4.836) (1.183,4.794) (1.224,4.756) (1.265,4.720) (1.306,4.688) (1.346,4.659) (1.387,4.633) (1.428,4.610) (1.469,4.591) (1.510,4.574) (1.550,4.561) (1.591,4.551) (1.632,4.544) (1.673,4.541) (1.714,4.540) (1.754,4.543) (1.795,4.549) (1.836,4.558) (1.877,4.570) (1.918,4.585) (1.958,4.604) (1.999,4.625) (2.040,4.650) (2.081,4.678) (2.122,4.709) (2.162,4.743) (2.203,4.781) (2.244,4.822) (2.285,4.865) (2.326,4.912) (2.366,4.963) (2.407,5.016) (2.448,5.072) (2.489,5.132) (2.530,5.195) (2.570,5.261) (2.611,5.330) (2.652,5.402) (2.693,5.478) (2.734,5.557) (2.774,5.638) (2.815,5.723) (2.856,5.812) (2.897,5.903) (2.938,5.997) (2.978,6.095) (3.019,6.196) (3.060,6.300) (3.101,6.407) (3.142,6.518) (3.182,6.631) (3.223,6.748)};
-\fill[red!80!black] (1.700,4.540) circle (1.1pt);
-\fill[black!70] (1.360,4.650) circle (0.9pt);
-\fill[black!70] (2.040,4.650) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (4.45,6.86) {6.};
-\draw[very thin,color=gray!50] (4.73,3.66) -- (4.73,6.74);
-\draw[very thin,color=gray!50] (5.07,3.66) -- (5.07,6.74);
-\draw[very thin,color=gray!50] (5.41,3.66) -- (5.41,6.74);
-\draw[very thin,color=gray!50] (5.75,3.66) -- (5.75,6.74);
-\draw[very thin,color=gray!50] (6.09,3.66) -- (6.09,6.74);
-\draw[very thin,color=gray!50] (6.43,3.66) -- (6.43,6.74);
-\draw[very thin,color=gray!50] (6.77,3.66) -- (6.77,6.74);
-\draw[very thin,color=gray!50] (7.11,3.66) -- (7.11,6.74);
-\draw[very thin,color=gray!50] (7.45,3.66) -- (7.45,6.74);
-\draw[very thin,color=gray!50] (7.79,3.66) -- (7.79,6.74);
-\draw[very thin,color=gray!50] (8.13,3.66) -- (8.13,6.74);
-\draw[very thin,color=gray!50] (8.47,3.66) -- (8.47,6.74);
-\draw[very thin,color=gray!50] (8.81,3.66) -- (8.81,6.74);
-\draw[very thin,color=gray!50] (4.73,3.66) -- (8.81,3.66);
-\draw[very thin,color=gray!50] (4.73,3.88) -- (8.81,3.88);
-\draw[very thin,color=gray!50] (4.73,4.10) -- (8.81,4.10);
-\draw[very thin,color=gray!50] (4.73,4.32) -- (8.81,4.32);
-\draw[very thin,color=gray!50] (4.73,4.54) -- (8.81,4.54);
-\draw[very thin,color=gray!50] (4.73,4.76) -- (8.81,4.76);
-\draw[very thin,color=gray!50] (4.73,4.98) -- (8.81,4.98);
-\draw[very thin,color=gray!50] (4.73,5.20) -- (8.81,5.20);
-\draw[very thin,color=gray!50] (4.73,5.42) -- (8.81,5.42);
-\draw[very thin,color=gray!50] (4.73,5.64) -- (8.81,5.64);
-\draw[very thin,color=gray!50] (4.73,5.86) -- (8.81,5.86);
-\draw[very thin,color=gray!50] (4.73,6.08) -- (8.81,6.08);
-\draw[very thin,color=gray!50] (4.73,6.30) -- (8.81,6.30);
-\draw[very thin,color=gray!50] (4.73,6.52) -- (8.81,6.52);
-\draw[very thin,color=gray!50] (4.73,6.74) -- (8.81,6.74);
-\draw[thick] (4.73,4.98) -- (8.81,4.98);
-\draw[thick] (6.77,3.66) -- (6.77,6.74);
-\node[font=\tiny] at (8.71,5.12) {$x$};
-\node[font=\tiny] at (6.89,6.64) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(6.158,6.788) (6.199,6.690) (6.240,6.594) (6.280,6.502) (6.321,6.412) (6.362,6.326) (6.403,6.244) (6.444,6.164) (6.484,6.087) (6.525,6.014) (6.566,5.944) (6.607,5.877) (6.648,5.813) (6.688,5.752) (6.729,5.694) (6.770,5.640) (6.811,5.589) (6.852,5.541) (6.892,5.496) (6.933,5.454) (6.974,5.416) (7.015,5.380) (7.056,5.348) (7.096,5.319) (7.137,5.293) (7.178,5.270) (7.219,5.251) (7.260,5.234) (7.300,5.221) (7.341,5.211) (7.382,5.204) (7.423,5.201) (7.464,5.200) (7.504,5.203) (7.545,5.209) (7.586,5.218) (7.627,5.230) (7.668,5.245) (7.708,5.264) (7.749,5.285) (7.790,5.310) (7.831,5.338) (7.872,5.369) (7.912,5.403) (7.953,5.441) (7.994,5.482) (8.035,5.525) (8.076,5.572) (8.116,5.623) (8.157,5.676) (8.198,5.732) (8.239,5.792) (8.280,5.855) (8.320,5.921) (8.361,5.990) (8.402,6.062) (8.443,6.138) (8.484,6.217) (8.524,6.298) (8.565,6.383) (8.606,6.472) (8.647,6.563) (8.688,6.657) (8.728,6.755)};
-\fill[red!80!black] (7.450,5.200) circle (1.1pt);
-\fill[black!70] (7.110,5.310) circle (0.9pt);
-\fill[black!70] (7.790,5.310) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (9.18,6.86) {7.};
-\draw[very thin,color=gray!50] (9.46,3.66) -- (9.46,6.74);
-\draw[very thin,color=gray!50] (9.80,3.66) -- (9.80,6.74);
-\draw[very thin,color=gray!50] (10.14,3.66) -- (10.14,6.74);
-\draw[very thin,color=gray!50] (10.48,3.66) -- (10.48,6.74);
-\draw[very thin,color=gray!50] (10.82,3.66) -- (10.82,6.74);
-\draw[very thin,color=gray!50] (11.16,3.66) -- (11.16,6.74);
-\draw[very thin,color=gray!50] (11.50,3.66) -- (11.50,6.74);
-\draw[very thin,color=gray!50] (11.84,3.66) -- (11.84,6.74);
-\draw[very thin,color=gray!50] (12.18,3.66) -- (12.18,6.74);
-\draw[very thin,color=gray!50] (12.52,3.66) -- (12.52,6.74);
-\draw[very thin,color=gray!50] (12.86,3.66) -- (12.86,6.74);
-\draw[very thin,color=gray!50] (13.20,3.66) -- (13.20,6.74);
-\draw[very thin,color=gray!50] (13.54,3.66) -- (13.54,6.74);
-\draw[very thin,color=gray!50] (9.46,3.66) -- (13.54,3.66);
-\draw[very thin,color=gray!50] (9.46,3.88) -- (13.54,3.88);
-\draw[very thin,color=gray!50] (9.46,4.10) -- (13.54,4.10);
-\draw[very thin,color=gray!50] (9.46,4.32) -- (13.54,4.32);
-\draw[very thin,color=gray!50] (9.46,4.54) -- (13.54,4.54);
-\draw[very thin,color=gray!50] (9.46,4.76) -- (13.54,4.76);
-\draw[very thin,color=gray!50] (9.46,4.98) -- (13.54,4.98);
-\draw[very thin,color=gray!50] (9.46,5.20) -- (13.54,5.20);
-\draw[very thin,color=gray!50] (9.46,5.42) -- (13.54,5.42);
-\draw[very thin,color=gray!50] (9.46,5.64) -- (13.54,5.64);
-\draw[very thin,color=gray!50] (9.46,5.86) -- (13.54,5.86);
-\draw[very thin,color=gray!50] (9.46,6.08) -- (13.54,6.08);
-\draw[very thin,color=gray!50] (9.46,6.30) -- (13.54,6.30);
-\draw[very thin,color=gray!50] (9.46,6.52) -- (13.54,6.52);
-\draw[very thin,color=gray!50] (9.46,6.74) -- (13.54,6.74);
-\draw[thick] (9.46,4.98) -- (13.54,4.98);
-\draw[thick] (11.50,3.66) -- (11.50,6.74);
-\node[font=\tiny] at (13.44,5.12) {$x$};
-\node[font=\tiny] at (11.62,6.64) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(9.460,4.870) (9.501,4.948) (9.542,5.022) (9.582,5.093) (9.623,5.161) (9.664,5.226) (9.705,5.288) (9.746,5.347) (9.786,5.402) (9.827,5.454) (9.868,5.504) (9.909,5.550) (9.950,5.592) (9.990,5.632) (10.031,5.668) (10.072,5.702) (10.113,5.732) (10.154,5.759) (10.194,5.782) (10.235,5.803) (10.276,5.820) (10.317,5.835) (10.358,5.846) (10.398,5.854) (10.439,5.858) (10.480,5.860) (10.521,5.858) (10.562,5.854) (10.602,5.846) (10.643,5.835) (10.684,5.820) (10.725,5.803) (10.766,5.782) (10.806,5.759) (10.847,5.732) (10.888,5.702) (10.929,5.668) (10.970,5.632) (11.010,5.592) (11.051,5.550) (11.092,5.504) (11.133,5.454) (11.174,5.402) (11.214,5.347) (11.255,5.288) (11.296,5.226) (11.337,5.161) (11.378,5.093) (11.418,5.022) (11.459,4.948) (11.500,4.870) (11.541,4.789) (11.582,4.705) (11.622,4.618) (11.663,4.528) (11.704,4.434) (11.745,4.338) (11.786,4.238) (11.826,4.135) (11.867,4.029) (11.908,3.920) (11.949,3.807) (11.990,3.692) (12.030,3.573)};
-\fill[red!80!black] (10.480,5.860) circle (1.1pt);
-\fill[black!70] (10.140,5.750) circle (0.9pt);
-\fill[black!70] (10.820,5.750) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (13.91,6.86) {8.};
-\draw[very thin,color=gray!50] (14.19,3.66) -- (14.19,6.74);
-\draw[very thin,color=gray!50] (14.53,3.66) -- (14.53,6.74);
-\draw[very thin,color=gray!50] (14.87,3.66) -- (14.87,6.74);
-\draw[very thin,color=gray!50] (15.21,3.66) -- (15.21,6.74);
-\draw[very thin,color=gray!50] (15.55,3.66) -- (15.55,6.74);
-\draw[very thin,color=gray!50] (15.89,3.66) -- (15.89,6.74);
-\draw[very thin,color=gray!50] (16.23,3.66) -- (16.23,6.74);
-\draw[very thin,color=gray!50] (16.57,3.66) -- (16.57,6.74);
-\draw[very thin,color=gray!50] (16.91,3.66) -- (16.91,6.74);
-\draw[very thin,color=gray!50] (17.25,3.66) -- (17.25,6.74);
-\draw[very thin,color=gray!50] (17.59,3.66) -- (17.59,6.74);
-\draw[very thin,color=gray!50] (17.93,3.66) -- (17.93,6.74);
-\draw[very thin,color=gray!50] (18.27,3.66) -- (18.27,6.74);
-\draw[very thin,color=gray!50] (14.19,3.66) -- (18.27,3.66);
-\draw[very thin,color=gray!50] (14.19,3.88) -- (18.27,3.88);
-\draw[very thin,color=gray!50] (14.19,4.10) -- (18.27,4.10);
-\draw[very thin,color=gray!50] (14.19,4.32) -- (18.27,4.32);
-\draw[very thin,color=gray!50] (14.19,4.54) -- (18.27,4.54);
-\draw[very thin,color=gray!50] (14.19,4.76) -- (18.27,4.76);
-\draw[very thin,color=gray!50] (14.19,4.98) -- (18.27,4.98);
-\draw[very thin,color=gray!50] (14.19,5.20) -- (18.27,5.20);
-\draw[very thin,color=gray!50] (14.19,5.42) -- (18.27,5.42);
-\draw[very thin,color=gray!50] (14.19,5.64) -- (18.27,5.64);
-\draw[very thin,color=gray!50] (14.19,5.86) -- (18.27,5.86);
-\draw[very thin,color=gray!50] (14.19,6.08) -- (18.27,6.08);
-\draw[very thin,color=gray!50] (14.19,6.30) -- (18.27,6.30);
-\draw[very thin,color=gray!50] (14.19,6.52) -- (18.27,6.52);
-\draw[very thin,color=gray!50] (14.19,6.74) -- (18.27,6.74);
-\draw[thick] (14.19,4.98) -- (18.27,4.98);
-\draw[thick] (16.23,3.66) -- (16.23,6.74);
-\node[font=\tiny] at (18.17,5.12) {$x$};
-\node[font=\tiny] at (16.35,6.64) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(15.128,3.662) (15.169,3.773) (15.210,3.880) (15.251,3.984) (15.292,4.085) (15.332,4.183) (15.373,4.277) (15.414,4.368) (15.455,4.457) (15.496,4.542) (15.536,4.623) (15.577,4.702) (15.618,4.778) (15.659,4.850) (15.700,4.919) (15.740,4.985) (15.781,5.048) (15.822,5.108) (15.863,5.164) (15.904,5.217) (15.944,5.268) (15.985,5.315) (16.026,5.358) (16.067,5.399) (16.108,5.437) (16.148,5.471) (16.189,5.502) (16.230,5.530) (16.271,5.555) (16.312,5.576) (16.352,5.595) (16.393,5.610) (16.434,5.622) (16.475,5.631) (16.516,5.637) (16.556,5.640) (16.597,5.639) (16.638,5.636) (16.679,5.629) (16.720,5.619) (16.760,5.606) (16.801,5.589) (16.842,5.570) (16.883,5.547) (16.924,5.521) (16.964,5.492) (17.005,5.460) (17.046,5.424) (17.087,5.386) (17.128,5.344) (17.168,5.299) (17.209,5.251) (17.250,5.200) (17.291,5.146) (17.332,5.088) (17.372,5.027) (17.413,4.963) (17.454,4.896) (17.495,4.826) (17.536,4.753) (17.576,4.676) (17.617,4.596) (17.658,4.514) (17.699,4.428) (17.740,4.338) (17.780,4.246) (17.821,4.150) (17.862,4.052) (17.903,3.950) (17.944,3.845) (17.984,3.736) (18.025,3.625)};
-\fill[red!80!black] (16.570,5.640) circle (1.1pt);
-\fill[black!70] (16.230,5.530) circle (0.9pt);
-\fill[black!70] (16.910,5.530) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (-0.28,3.20) {9.};
-\draw[very thin,color=gray!50] (0.00,0.00) -- (0.00,3.08);
-\draw[very thin,color=gray!50] (0.34,0.00) -- (0.34,3.08);
-\draw[very thin,color=gray!50] (0.68,0.00) -- (0.68,3.08);
-\draw[very thin,color=gray!50] (1.02,0.00) -- (1.02,3.08);
-\draw[very thin,color=gray!50] (1.36,0.00) -- (1.36,3.08);
-\draw[very thin,color=gray!50] (1.70,0.00) -- (1.70,3.08);
-\draw[very thin,color=gray!50] (2.04,0.00) -- (2.04,3.08);
-\draw[very thin,color=gray!50] (2.38,0.00) -- (2.38,3.08);
-\draw[very thin,color=gray!50] (2.72,0.00) -- (2.72,3.08);
-\draw[very thin,color=gray!50] (3.06,0.00) -- (3.06,3.08);
-\draw[very thin,color=gray!50] (3.40,0.00) -- (3.40,3.08);
-\draw[very thin,color=gray!50] (3.74,0.00) -- (3.74,3.08);
-\draw[very thin,color=gray!50] (4.08,0.00) -- (4.08,3.08);
-\draw[very thin,color=gray!50] (0.00,0.00) -- (4.08,0.00);
-\draw[very thin,color=gray!50] (0.00,0.22) -- (4.08,0.22);
-\draw[very thin,color=gray!50] (0.00,0.44) -- (4.08,0.44);
-\draw[very thin,color=gray!50] (0.00,0.66) -- (4.08,0.66);
-\draw[very thin,color=gray!50] (0.00,0.88) -- (4.08,0.88);
-\draw[very thin,color=gray!50] (0.00,1.10) -- (4.08,1.10);
-\draw[very thin,color=gray!50] (0.00,1.32) -- (4.08,1.32);
-\draw[very thin,color=gray!50] (0.00,1.54) -- (4.08,1.54);
-\draw[very thin,color=gray!50] (0.00,1.76) -- (4.08,1.76);
-\draw[very thin,color=gray!50] (0.00,1.98) -- (4.08,1.98);
-\draw[very thin,color=gray!50] (0.00,2.20) -- (4.08,2.20);
-\draw[very thin,color=gray!50] (0.00,2.42) -- (4.08,2.42);
-\draw[very thin,color=gray!50] (0.00,2.64) -- (4.08,2.64);
-\draw[very thin,color=gray!50] (0.00,2.86) -- (4.08,2.86);
-\draw[very thin,color=gray!50] (0.00,3.08) -- (4.08,3.08);
-\draw[thick] (0.00,1.32) -- (4.08,1.32);
-\draw[thick] (2.04,0.00) -- (2.04,3.08);
-\node[font=\tiny] at (3.98,1.46) {$x$};
-\node[font=\tiny] at (2.16,2.98) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(0.571,3.096) (0.612,2.917) (0.653,2.748) (0.694,2.588) (0.734,2.437) (0.775,2.296) (0.816,2.165) (0.857,2.043) (0.898,1.930) (0.938,1.827) (0.979,1.734) (1.020,1.650) (1.061,1.576) (1.102,1.511) (1.142,1.455) (1.183,1.409) (1.224,1.373) (1.265,1.346) (1.306,1.328) (1.346,1.321) (1.387,1.322) (1.428,1.333) (1.469,1.354) (1.510,1.384) (1.550,1.423) (1.591,1.473) (1.632,1.531) (1.673,1.599) (1.714,1.677) (1.754,1.764) (1.795,1.861) (1.836,1.967) (1.877,2.082) (1.918,2.208) (1.958,2.342) (1.999,2.486) (2.040,2.640) (2.081,2.803) (2.122,2.976) (2.162,3.158)};
-\fill[red!80!black] (1.360,1.320) circle (1.1pt);
-\fill[black!70] (1.020,1.650) circle (0.9pt);
-\fill[black!70] (1.700,1.650) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (4.45,3.20) {10.};
-\draw[very thin,color=gray!50] (4.73,0.00) -- (4.73,3.08);
-\draw[very thin,color=gray!50] (5.07,0.00) -- (5.07,3.08);
-\draw[very thin,color=gray!50] (5.41,0.00) -- (5.41,3.08);
-\draw[very thin,color=gray!50] (5.75,0.00) -- (5.75,3.08);
-\draw[very thin,color=gray!50] (6.09,0.00) -- (6.09,3.08);
-\draw[very thin,color=gray!50] (6.43,0.00) -- (6.43,3.08);
-\draw[very thin,color=gray!50] (6.77,0.00) -- (6.77,3.08);
-\draw[very thin,color=gray!50] (7.11,0.00) -- (7.11,3.08);
-\draw[very thin,color=gray!50] (7.45,0.00) -- (7.45,3.08);
-\draw[very thin,color=gray!50] (7.79,0.00) -- (7.79,3.08);
-\draw[very thin,color=gray!50] (8.13,0.00) -- (8.13,3.08);
-\draw[very thin,color=gray!50] (8.47,0.00) -- (8.47,3.08);
-\draw[very thin,color=gray!50] (8.81,0.00) -- (8.81,3.08);
-\draw[very thin,color=gray!50] (4.73,0.00) -- (8.81,0.00);
-\draw[very thin,color=gray!50] (4.73,0.22) -- (8.81,0.22);
-\draw[very thin,color=gray!50] (4.73,0.44) -- (8.81,0.44);
-\draw[very thin,color=gray!50] (4.73,0.66) -- (8.81,0.66);
-\draw[very thin,color=gray!50] (4.73,0.88) -- (8.81,0.88);
-\draw[very thin,color=gray!50] (4.73,1.10) -- (8.81,1.10);
-\draw[very thin,color=gray!50] (4.73,1.32) -- (8.81,1.32);
-\draw[very thin,color=gray!50] (4.73,1.54) -- (8.81,1.54);
-\draw[very thin,color=gray!50] (4.73,1.76) -- (8.81,1.76);
-\draw[very thin,color=gray!50] (4.73,1.98) -- (8.81,1.98);
-\draw[very thin,color=gray!50] (4.73,2.20) -- (8.81,2.20);
-\draw[very thin,color=gray!50] (4.73,2.42) -- (8.81,2.42);
-\draw[very thin,color=gray!50] (4.73,2.64) -- (8.81,2.64);
-\draw[very thin,color=gray!50] (4.73,2.86) -- (8.81,2.86);
-\draw[very thin,color=gray!50] (4.73,3.08) -- (8.81,3.08);
-\draw[thick] (4.73,1.32) -- (8.81,1.32);
-\draw[thick] (6.77,0.00) -- (6.77,3.08);
-\node[font=\tiny] at (8.71,1.46) {$x$};
-\node[font=\tiny] at (6.89,2.98) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(6.525,-0.021) (6.566,0.189) (6.607,0.390) (6.648,0.582) (6.688,0.764) (6.729,0.937) (6.770,1.100) (6.811,1.254) (6.852,1.398) (6.892,1.532) (6.933,1.658) (6.974,1.773) (7.015,1.879) (7.056,1.976) (7.096,2.063) (7.137,2.141) (7.178,2.209) (7.219,2.267) (7.260,2.317) (7.300,2.356) (7.341,2.386) (7.382,2.407) (7.423,2.418) (7.464,2.419) (7.504,2.412) (7.545,2.394) (7.586,2.367) (7.627,2.331) (7.668,2.285) (7.708,2.229) (7.749,2.164) (7.790,2.090) (7.831,2.006) (7.872,1.913) (7.912,1.810) (7.953,1.697) (7.994,1.575) (8.035,1.444) (8.076,1.303) (8.116,1.152) (8.157,0.992) (8.198,0.823) (8.239,0.644) (8.280,0.455) (8.320,0.257) (8.361,0.050)};
-\fill[red!80!black] (7.450,2.420) circle (1.1pt);
-\fill[black!70] (7.110,2.090) circle (0.9pt);
-\fill[black!70] (7.790,2.090) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (9.18,3.20) {11.};
-\draw[very thin,color=gray!50] (9.46,0.00) -- (9.46,3.08);
-\draw[very thin,color=gray!50] (9.80,0.00) -- (9.80,3.08);
-\draw[very thin,color=gray!50] (10.14,0.00) -- (10.14,3.08);
-\draw[very thin,color=gray!50] (10.48,0.00) -- (10.48,3.08);
-\draw[very thin,color=gray!50] (10.82,0.00) -- (10.82,3.08);
-\draw[very thin,color=gray!50] (11.16,0.00) -- (11.16,3.08);
-\draw[very thin,color=gray!50] (11.50,0.00) -- (11.50,3.08);
-\draw[very thin,color=gray!50] (11.84,0.00) -- (11.84,3.08);
-\draw[very thin,color=gray!50] (12.18,0.00) -- (12.18,3.08);
-\draw[very thin,color=gray!50] (12.52,0.00) -- (12.52,3.08);
-\draw[very thin,color=gray!50] (12.86,0.00) -- (12.86,3.08);
-\draw[very thin,color=gray!50] (13.20,0.00) -- (13.20,3.08);
-\draw[very thin,color=gray!50] (13.54,0.00) -- (13.54,3.08);
-\draw[very thin,color=gray!50] (9.46,0.00) -- (13.54,0.00);
-\draw[very thin,color=gray!50] (9.46,0.22) -- (13.54,0.22);
-\draw[very thin,color=gray!50] (9.46,0.44) -- (13.54,0.44);
-\draw[very thin,color=gray!50] (9.46,0.66) -- (13.54,0.66);
-\draw[very thin,color=gray!50] (9.46,0.88) -- (13.54,0.88);
-\draw[very thin,color=gray!50] (9.46,1.10) -- (13.54,1.10);
-\draw[very thin,color=gray!50] (9.46,1.32) -- (13.54,1.32);
-\draw[very thin,color=gray!50] (9.46,1.54) -- (13.54,1.54);
-\draw[very thin,color=gray!50] (9.46,1.76) -- (13.54,1.76);
-\draw[very thin,color=gray!50] (9.46,1.98) -- (13.54,1.98);
-\draw[very thin,color=gray!50] (9.46,2.20) -- (13.54,2.20);
-\draw[very thin,color=gray!50] (9.46,2.42) -- (13.54,2.42);
-\draw[very thin,color=gray!50] (9.46,2.64) -- (13.54,2.64);
-\draw[very thin,color=gray!50] (9.46,2.86) -- (13.54,2.86);
-\draw[very thin,color=gray!50] (9.46,3.08) -- (13.54,3.08);
-\draw[thick] (9.46,1.32) -- (13.54,1.32);
-\draw[thick] (11.50,0.00) -- (11.50,3.08);
-\node[font=\tiny] at (13.44,1.46) {$x$};
-\node[font=\tiny] at (11.62,2.98) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(9.460,2.640) (9.501,2.562) (9.542,2.485) (9.582,2.410) (9.623,2.336) (9.664,2.264) (9.705,2.193) (9.746,2.124) (9.786,2.057) (9.827,1.991) (9.868,1.927) (9.909,1.865) (9.950,1.804) (9.990,1.744) (10.031,1.686) (10.072,1.630) (10.113,1.576) (10.154,1.522) (10.194,1.471) (10.235,1.421) (10.276,1.373) (10.317,1.326) (10.358,1.281) (10.398,1.237) (10.439,1.195) (10.480,1.155) (10.521,1.116) (10.562,1.079) (10.602,1.043) (10.643,1.009) (10.684,0.977) (10.725,0.946) (10.766,0.917) (10.806,0.889) (10.847,0.863) (10.888,0.838) (10.929,0.815) (10.970,0.794) (11.010,0.774) (11.051,0.756) (11.092,0.739) (11.133,0.724) (11.174,0.711) (11.214,0.699) (11.255,0.689) (11.296,0.680) (11.337,0.673) (11.378,0.667) (11.418,0.663) (11.459,0.661) (11.500,0.660) (11.541,0.661) (11.582,0.663) (11.622,0.667) (11.663,0.673) (11.704,0.680) (11.745,0.689) (11.786,0.699) (11.826,0.711) (11.867,0.724) (11.908,0.739) (11.949,0.756) (11.990,0.774) (12.030,0.794) (12.071,0.815) (12.112,0.838) (12.153,0.863) (12.194,0.889) (12.234,0.917) (12.275,0.946) (12.316,0.977) (12.357,1.009) (12.398,1.043) (12.438,1.079) (12.479,1.116) (12.520,1.155) (12.561,1.195) (12.602,1.237) (12.642,1.281) (12.683,1.326) (12.724,1.373) (12.765,1.421) (12.806,1.471) (12.846,1.522) (12.887,1.576) (12.928,1.630) (12.969,1.686) (13.010,1.744) (13.050,1.804) (13.091,1.865) (13.132,1.927) (13.173,1.991) (13.214,2.057) (13.254,2.124) (13.295,2.193) (13.336,2.264) (13.377,2.336) (13.418,2.410) (13.458,2.485) (13.499,2.562) (13.540,2.640)};
-\fill[red!80!black] (11.500,0.660) circle (1.1pt);
-\fill[black!70] (11.160,0.715) circle (0.9pt);
-\fill[black!70] (11.840,0.715) circle (0.9pt);
-\node[anchor=west,font=\bfseries] at (13.91,3.20) {12.};
-\draw[very thin,color=gray!50] (14.19,0.00) -- (14.19,3.08);
-\draw[very thin,color=gray!50] (14.53,0.00) -- (14.53,3.08);
-\draw[very thin,color=gray!50] (14.87,0.00) -- (14.87,3.08);
-\draw[very thin,color=gray!50] (15.21,0.00) -- (15.21,3.08);
-\draw[very thin,color=gray!50] (15.55,0.00) -- (15.55,3.08);
-\draw[very thin,color=gray!50] (15.89,0.00) -- (15.89,3.08);
-\draw[very thin,color=gray!50] (16.23,0.00) -- (16.23,3.08);
-\draw[very thin,color=gray!50] (16.57,0.00) -- (16.57,3.08);
-\draw[very thin,color=gray!50] (16.91,0.00) -- (16.91,3.08);
-\draw[very thin,color=gray!50] (17.25,0.00) -- (17.25,3.08);
-\draw[very thin,color=gray!50] (17.59,0.00) -- (17.59,3.08);
-\draw[very thin,color=gray!50] (17.93,0.00) -- (17.93,3.08);
-\draw[very thin,color=gray!50] (18.27,0.00) -- (18.27,3.08);
-\draw[very thin,color=gray!50] (14.19,0.00) -- (18.27,0.00);
-\draw[very thin,color=gray!50] (14.19,0.22) -- (18.27,0.22);
-\draw[very thin,color=gray!50] (14.19,0.44) -- (18.27,0.44);
-\draw[very thin,color=gray!50] (14.19,0.66) -- (18.27,0.66);
-\draw[very thin,color=gray!50] (14.19,0.88) -- (18.27,0.88);
-\draw[very thin,color=gray!50] (14.19,1.10) -- (18.27,1.10);
-\draw[very thin,color=gray!50] (14.19,1.32) -- (18.27,1.32);
-\draw[very thin,color=gray!50] (14.19,1.54) -- (18.27,1.54);
-\draw[very thin,color=gray!50] (14.19,1.76) -- (18.27,1.76);
-\draw[very thin,color=gray!50] (14.19,1.98) -- (18.27,1.98);
-\draw[very thin,color=gray!50] (14.19,2.20) -- (18.27,2.20);
-\draw[very thin,color=gray!50] (14.19,2.42) -- (18.27,2.42);
-\draw[very thin,color=gray!50] (14.19,2.64) -- (18.27,2.64);
-\draw[very thin,color=gray!50] (14.19,2.86) -- (18.27,2.86);
-\draw[very thin,color=gray!50] (14.19,3.08) -- (18.27,3.08);
-\draw[thick] (14.19,1.32) -- (18.27,1.32);
-\draw[thick] (16.23,0.00) -- (16.23,3.08);
-\node[font=\tiny] at (18.17,1.46) {$x$};
-\node[font=\tiny] at (16.35,2.98) {$y$};
-\draw[line width=1.1pt, color=teal!70!black] plot[smooth] coordinates {(15.618,-0.090) (15.659,-0.014) (15.700,0.060) (15.740,0.132) (15.781,0.203) (15.822,0.273) (15.863,0.341) (15.904,0.407) (15.944,0.472) (15.985,0.535) (16.026,0.596) (16.067,0.656) (16.108,0.714) (16.148,0.771) (16.189,0.826) (16.230,0.880) (16.271,0.932) (16.312,0.982) (16.352,1.031) (16.393,1.079) (16.434,1.124) (16.475,1.168) (16.516,1.211) (16.556,1.252) (16.597,1.291) (16.638,1.329) (16.679,1.365) (16.720,1.400) (16.760,1.433) (16.801,1.464) (16.842,1.494) (16.883,1.522) (16.924,1.549) (16.964,1.574) (17.005,1.597) (17.046,1.619) (17.087,1.640) (17.128,1.658) (17.168,1.675) (17.209,1.691) (17.250,1.705) (17.291,1.717) (17.332,1.728) (17.372,1.737) (17.413,1.745) (17.454,1.751) (17.495,1.756) (17.536,1.759) (17.576,1.760) (17.617,1.760) (17.658,1.758) (17.699,1.754) (17.740,1.749) (17.780,1.743) (17.821,1.735) (17.862,1.725) (17.903,1.713) (17.944,1.701) (17.984,1.686) (18.025,1.670) (18.066,1.652) (18.107,1.633) (18.148,1.612) (18.188,1.590) (18.229,1.566) (18.270,1.540)};
-\fill[red!80!black] (17.590,1.760) circle (1.1pt);
-\fill[black!70] (17.250,1.705) circle (0.9pt);
-\fill[black!70] (17.930,1.705) circle (0.9pt);
-\end{tikzpicture}
-\end{center}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=1.3cm, after-item-skip=9.8em}
-\begin{tasks}(4)
-\task Equation.
-\task Equation.
-\task Equation.
-\task Equation.
-\task Equation.
-\task Equation.
-\task Equation.
-\task Equation.
-\task Equation.
-\task Equation.
-\task Equation.
-\task Equation.
-\end{tasks}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Equation.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Equation.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Equation.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Equation.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Equation.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Equation.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Equation.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Equation.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Equation.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Equation.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Equation.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Equation.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Interior angles of a triangle --- Excellence}}
-\begin{tasks}(3)
-\task {A triangle has angles \mbox{$(2x+8)^\circ$}, \mbox{$(x+16)^\circ$}, and \mbox{$60^\circ$}. Find \mbox{$x$}.}
-\task {A triangle has angles \mbox{$(3y-4)^\circ$}, \mbox{$74^\circ$}, and \mbox{$(y+10)^\circ$}. Find \mbox{$y$}.}
-\task {A triangle has angles \mbox{$(a+20)^\circ$}, \mbox{$a^\circ$}, and \mbox{$(2a-15)^\circ$}. Find \mbox{$a$}.}
-\task {A triangle has angles \mbox{$b^\circ$}, \mbox{$b^\circ$}, and \mbox{$(b+12)^\circ$}. Find \mbox{$b$}.}
-\task {An isosceles triangle has a vertex angle of \mbox{$(3m+12)^\circ$} and each base angle is \mbox{$(m+18)^\circ$}. Find \mbox{$m$}.}
-\task {A triangle has angles in the ratio \mbox{$3:4:8$}. Find the angles and decide whether the triangle is acute, right, or obtuse.}
-\task {Two angles in a triangle are equal. The third angle is \mbox{$26^\circ$} less than one of the equal angles. Find all three angles.}
-\task {A triangle has angles \mbox{$(x+5)^\circ$}, \mbox{$(2x-15)^\circ$}, and \mbox{$(3x+10)^\circ$}. Find \mbox{$x$}.}
-\task {A student says an isosceles triangle can have angles \mbox{$50^\circ$}, \mbox{$50^\circ$}, and \mbox{$90^\circ$}. Explain the mistake.}
-\task {Can a triangle have two obtuse interior angles? Explain using the angle-sum rule.}
-\task {A right-angled triangle has one acute angle double the other. Find the two acute angles.}
-\task {An isosceles triangle has equal base angles. The vertex angle is one third of the sum of the two base angles. Find all three angles.}
-\task {One angle of a triangle is \mbox{$15^\circ$} greater than another, and the third angle is twice the smallest angle. Find all three angles.}
-\task {A triangle has angles in the ratio \mbox{$5:5:8$}. Find the angles and name the triangle using angle language.}
-\task {Write your own triangle-angle question with one algebraic angle and two numeric angles. Then solve it.}
-\task {Explain why every equilateral triangle is also isosceles using its interior angles.}
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A triangle has angles \mbox{$(2x+8)^\circ$}, \mbox{$(x+16)^\circ$}, and \mbox{$60^\circ$}. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A triangle has angles \mbox{$(3y-4)^\circ$}, \mbox{$74^\circ$}, and \mbox{$(y+10)^\circ$}. Find \mbox{$y$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A triangle has angles \mbox{$(a+20)^\circ$}, \mbox{$a^\circ$}, and \mbox{$(2a-15)^\circ$}. Find \mbox{$a$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A triangle has angles \mbox{$b^\circ$}, \mbox{$b^\circ$}, and \mbox{$(b+12)^\circ$}. Find \mbox{$b$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{An isosceles triangle has a vertex angle of \mbox{$(3m+12)^\circ$} and each base angle is \mbox{$(m+18)^\circ$}. Find \mbox{$m$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A triangle has angles in the ratio \mbox{$3:4:8$}. Find the angles and decide whether the triangle is acute, right, or obtuse.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Two angles in a triangle are equal. The third angle is \mbox{$26^\circ$} less than one of the equal angles. Find all three angles.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A triangle has angles \mbox{$(x+5)^\circ$}, \mbox{$(2x-15)^\circ$}, and \mbox{$(3x+10)^\circ$}. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A student says an isosceles triangle can have angles \mbox{$50^\circ$}, \mbox{$50^\circ$}, and \mbox{$90^\circ$}. Explain the mistake.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Can a triangle have two obtuse interior angles? Explain using the angle-sum rule.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A right-angled triangle has one acute angle double the other. Find the two acute angles.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{An isosceles triangle has equal base angles. The vertex angle is one third of the sum of the two base angles. Find all three angles.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{One angle of a triangle is \mbox{$15^\circ$} greater than another, and the third angle is twice the smallest angle. Find all three angles.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A triangle has angles in the ratio \mbox{$5:5:8$}. Find the angles and name the triangle using angle language.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Write your own triangle-angle question with one algebraic angle and two numeric angles. Then solve it.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Explain why every equilateral triangle is also isosceles using its interior angles.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

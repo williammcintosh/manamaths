@@ -1,50 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-\boldmath
-
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task A student says the highest common factor of \mbox{$18$} and \mbox{$30$} is \mbox{$6$}. Are they correct? Explain.
-\task A student says \mbox{$21$} is prime because it is odd. Are they correct? Explain.
-\task Write the first 4 common factors of \mbox{$24$} and \mbox{$36$}.
-\task Find the highest common factor of \mbox{$42$} and \mbox{$56$}.
-\task Find the highest common factor of \mbox{$48$} and \mbox{$60$}.
-\task Find the highest common factor of \mbox{$54$} and \mbox{$72$}.
-\task Which numbers are prime: \mbox{$17, 21, 23, 27, 31$}?
-\task Fill in the blank: the highest common factor of \mbox{$a$} and \mbox{$18$} is \mbox{$6$} when \mbox{$a=\square$}.
-\task Fill in both blanks: two common factors of \mbox{$32$} and \mbox{$40$} are \mbox{$\square$} and \mbox{$\square$}.
-\task A teacher has \mbox{$24$} blue pens and \mbox{$36$} black pens. She wants identical packs with no pens left over. What is the greatest number of packs she can make?
-\task A choir has \mbox{$28$} altos and \mbox{$42$} sopranos. They stand in equal rows with the same number of each voice in every row. What is the greatest number of rows?
-\task Complete: if the highest common factor of \mbox{$30$} and \mbox{$n$} is \mbox{$10$}, then one possible value of \mbox{$n$} is \rule{1.6cm}{0.15mm}.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A student says the highest common factor of \mbox{$18$} and \mbox{$30$} is \mbox{$6$}. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A student says \mbox{$21$} is prime because it is odd. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Write the first 4 common factors of \mbox{$24$} and \mbox{$36$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Find the highest common factor of \mbox{$42$} and \mbox{$56$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Find the highest common factor of \mbox{$48$} and \mbox{$60$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Find the highest common factor of \mbox{$54$} and \mbox{$72$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Which numbers are prime: \mbox{$17, 21, 23, 27, 31$}?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Fill in the blank: the highest common factor of \mbox{$a$} and \mbox{$18$} is \mbox{$6$} when \mbox{$a=\square$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Fill in both blanks: two common factors of \mbox{$32$} and \mbox{$40$} are \mbox{$\square$} and \mbox{$\square$}.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A teacher has \mbox{$24$} blue pens and \mbox{$36$} black pens. She wants identical packs with no pens left over. What is the greatest number of packs she can make?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A choir has \mbox{$28$} altos and \mbox{$42$} sopranos. They stand in equal rows with the same number of each voice in every row. What is the greatest number of rows?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Complete: if the highest common factor of \mbox{$30$} and \mbox{$n$} is \mbox{$10$}, then one possible value of \mbox{$n$} is \rule{1.6cm}{0.15mm}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

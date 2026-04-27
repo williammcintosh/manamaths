@@ -1,48 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Foundation: Expected Number}}
-\begin{tasks}(3)
-\task The probability of rain tomorrow is 0.3. If you check the weather for 10 days, how many days are expected to have rain?
-\task A coin is fair. If you flip it 20 times, how many heads are expected?
-\task A dice is rolled 30 times. How many times is a 6 expected?
-\task A bag has 3 red marbles and 7 blue marbles. If you draw one marble (and put it back) 50 times, how many red marbles are expected?
-\task The probability of a bus being late is 0.1. If there are 40 buses, how many are expected to be late?
-\task A spinner has 4 equal sections. If spun 24 times, how many times is section 1 expected?
-\task A test has 5 multiple choice questions, each with 4 options. If guessing randomly, how many correct answers are expected?
-\task A factory makes light bulbs. The probability of a bulb being faulty is 0.02. If they make 500 bulbs, how many faulty ones are expected?
-\task A basketball player makes 60\% of free throws. If they take 25 shots, how many are expected to go in?
-\task A deck of cards has 52 cards. If you draw one card (and replace it) 26 times, how many hearts are expected?
-\task The probability of winning a game is 0.15. If you play 20 times, how many wins are expected?
-\task A bag has 8 green balls and 2 yellow balls. If you draw one ball (and replace it) 30 times, how many yellow balls are expected?
-\task A dice is rolled 18 times. How many times is an even number expected?
-\task The chance of snow is 0.25. If you check for 12 days, how many snowy days are expected?
-\task A coin is biased: P(Heads) = 0.4. If flipped 15 times, how many tails are expected?
-\task A spinner has 5 equal sections. If spun 35 times, how many times is section 3 expected?
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{The probability of rain tomorrow is 0.3. If you check the weather for 10 days, how many days are expected to have rain?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A coin is fair. If you flip it 20 times, how many heads are expected?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A dice is rolled 30 times. How many times is a 6 expected?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A bag has 3 red marbles and 7 blue marbles. If you draw one marble (and put it back) 50 times, how many red marbles are expected?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{The probability of a bus being late is 0.1. If there are 40 buses, how many are expected to be late?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A spinner has 4 equal sections. If spun 24 times, how many times is section 1 expected?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A test has 5 multiple choice questions, each with 4 options. If guessing randomly, how many correct answers are expected?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A factory makes light bulbs. The probability of a bulb being faulty is 0.02. If they make 500 bulbs, how many faulty ones are expected?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A basketball player makes 60\% of free throws. If they take 25 shots, how many are expected to go in?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A deck of cards has 52 cards. If you draw one card (and replace it) 26 times, how many hearts are expected?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{The probability of winning a game is 0.15. If you play 20 times, how many wins are expected?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A bag has 8 green balls and 2 yellow balls. If you draw one ball (and replace it) 30 times, how many yellow balls are expected?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A dice is rolled 18 times. How many times is an even number expected?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{The chance of snow is 0.25. If you check for 12 days, how many snowy days are expected?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A coin is biased: P(Heads) = 0.4. If flipped 15 times, how many tails are expected?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A spinner has 5 equal sections. If spun 35 times, how many times is section 3 expected?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

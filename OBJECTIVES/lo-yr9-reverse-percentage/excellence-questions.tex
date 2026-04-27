@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task An investment grows by 5\% per year for 2 years and is now \$11,025. What was the initial investment?
-\task A population decreases by 8\% each year for 3 years and is now 778,688. What was the original population?
-\task A price is increased by 20\% then decreased by 20\%. The final price is \$96. What was the original price?
-\task A number is increased by 25\% and then decreased by 40\% to become 75. What was the original number?
-\task After a 10\% discount and then a surcharge of 5 dollars, the price is 86 dollars. What was the original price?
-\task A salary increased by 15\% and then by a further 10\% to become \$5060. What was the original salary?
-\task A rectangle's length increased by 20\% and width decreased by 10\%, and the area became 432 square centimetres. What was the original area?
-\task A car's price increased by 20\% and then decreased by 2000 dollars to become 28,000 dollars. What was the original price?
-\task A shop offers 30\% off, then an additional 10\% off the discounted price. The final price is \$126. What was the original price?
-\task A stock price fell by 10\% then rose by 10\% to become \$99. What was the original price?
-\task After a 12.5\% tax, a meal costs \$45. What was the pre-tax cost?
-\task A jacket is on sale for \$144 after a 20\% discount. What was the original price?
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{An investment grows by 5\% per year for 2 years and is now \$11,025. What was the initial investment?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A population decreases by 8\% each year for 3 years and is now 778,688. What was the original population?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A price is increased by 20\% then decreased by 20\%. The final price is \$96. What was the original price?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A number is increased by 25\% and then decreased by 40\% to become 75. What was the original number?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{After a 10\% discount and then a surcharge of 5 dollars, the price is 86 dollars. What was the original price?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A salary increased by 15\% and then by a further 10\% to become \$5060. What was the original salary?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A rectangle's length increased by 20\% and width decreased by 10\%, and the area became 432 square centimetres. What was the original area?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A car's price increased by 20\% and then decreased by 2000 dollars to become 28,000 dollars. What was the original price?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A shop offers 30\% off, then an additional 10\% off the discounted price. The final price is \$126. What was the original price?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A stock price fell by 10\% then rose by 10\% to become \$99. What was the original price?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{After a 12.5\% tax, a meal costs \$45. What was the pre-tax cost?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A jacket is on sale for \$144 after a 20\% discount. What was the original price?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

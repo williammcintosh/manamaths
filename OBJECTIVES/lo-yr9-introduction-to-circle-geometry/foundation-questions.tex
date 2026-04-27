@@ -1,42 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Introduction to Circle Geometry --- Foundation}}
-\begin{tasks}(3)
-\task {Name the line from the centre of a circle to its edge.}
-\task {Name the line right across a circle through the centre.}
-\task {Name the curved part of the circumference between two points.}
-\task {State the angle in a semicircle.}
-\task {State the angle between a tangent and a radius at the point of contact.}
-\task {If two angles stand on the same arc, how are they related?}
-\task {If the angle at the centre is \mbox{$110^\circ$}, what is the angle at the circumference on the same arc?}
-\task {If the angle at the circumference is \mbox{$42^\circ$}, what is the angle at the centre on the same arc?}
-\task {An angle in a semicircle is labelled \mbox{$x$}. Find \mbox{$x$}.}
-\task {An angle between a tangent and a radius is labelled \mbox{$x$}. Find \mbox{$x$}.}
-\task {Two angles in the same segment are labelled \mbox{$58^\circ$} and \mbox{$x$}. Find \mbox{$x$}.}
-\task {The angle at the centre is twice the angle at the circumference. If the circumference angle is \mbox{$37^\circ$}, find the centre angle.}
-\task {Complete the fact: the angle at the centre is \mbox{$\underline{\hspace{1.8cm}}$} the angle at the circumference on the same arc.}
-\task {Complete the fact: angles in the same segment are \mbox{$\underline{\hspace{1.8cm}}$}.}
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Name the line from the centre of a circle to its edge.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Name the line right across a circle through the centre.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Name the curved part of the circumference between two points.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{State the angle in a semicircle.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{State the angle between a tangent and a radius at the point of contact.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{If two angles stand on the same arc, how are they related?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{If the angle at the centre is \mbox{$110^\circ$}, what is the angle at the circumference on the same arc?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{If the angle at the circumference is \mbox{$42^\circ$}, what is the angle at the centre on the same arc?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{An angle in a semicircle is labelled \mbox{$x$}. Find \mbox{$x$}.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{An angle between a tangent and a radius is labelled \mbox{$x$}. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Two angles in the same segment are labelled \mbox{$58^\circ$} and \mbox{$x$}. Find \mbox{$x$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{The angle at the centre is twice the angle at the circumference. If the circumference angle is \mbox{$37^\circ$}, find the centre angle.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Complete the fact: the angle at the centre is \mbox{$\underline{\hspace{1.8cm}}$} the angle at the circumference on the same arc.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Complete the fact: angles in the same segment are \mbox{$\underline{\hspace{1.8cm}}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

@@ -1,47 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Converting between length units — Excellence}}
-\begin{tasks}(3)
-\task A runner completes 2.5 km, 1800 m, and 750 m. Find the total distance in kilometres.
-\task A map path is 12.4 cm long. If 1 cm represents 250 m, what is the real distance in kilometres?
-\task A wire is 3.6 m long. It is cut into pieces of 45 mm each. How many full pieces can be made?
-\task A truck travels 18 km, then 950 m, then 1.25 km. Give the total distance in metres.
-\task A classroom is 8.4 m long and 620 cm wide. What is the difference between the length and width in cm?
-\task A roll of tape contains 12 m of tape. If each use takes 18 cm, how many full uses are possible?
-\task A hiker walks 4.75 km each day for 6 days. Give the total distance in metres.
-\task A ribbon is 2.4 m long. One-third is cut off. Give the length removed in cm.
-\task A road sign says the town is 7.5 km away. A cyclist has already travelled 3200 m. How much farther is it in metres?
-\task Convert 0.0085 km to mm.
-\task A pipe is 1500 mm long. A second pipe is 1.35 m long. Find their combined length in cm.
-\task A race is 10 km long. Maia has completed 3650 m. What fraction of the race remains? Give the remaining distance in km as well.
-\task A carpenter has 5 planks, each 1.8 m long. She uses 275 cm in total. How many centimetres remain?
-\task Explain why converting from a smaller unit to a larger unit makes the number smaller, using one example.
-\task A courier route is 0.85 km, 920 m, 1350 m, and 2.4 km. Find the total route length in km.
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A runner completes 2.5 km, 1800 m, and 750 m. Find the total distance in kilometres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A map path is 12.4 cm long. If 1 cm represents 250 m, what is the real distance in kilometres?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A wire is 3.6 m long. It is cut into pieces of 45 mm each. How many full pieces can be made?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A truck travels 18 km, then 950 m, then 1.25 km. Give the total distance in metres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A classroom is 8.4 m long and 620 cm wide. What is the difference between the length and width in cm?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A roll of tape contains 12 m of tape. If each use takes 18 cm, how many full uses are possible?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A hiker walks 4.75 km each day for 6 days. Give the total distance in metres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A ribbon is 2.4 m long. One-third is cut off. Give the length removed in cm.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A road sign says the town is 7.5 km away. A cyclist has already travelled 3200 m. How much farther is it in metres?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Convert 0.0085 km to mm.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A pipe is 1500 mm long. A second pipe is 1.35 m long. Find their combined length in cm.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A race is 10 km long. Maia has completed 3650 m. What fraction of the race remains? Give the remaining distance in km as well.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A carpenter has 5 planks, each 1.8 m long. She uses 275 cm in total. How many centimetres remain?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Explain why converting from a smaller unit to a larger unit makes the number smaller, using one example.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A courier route is 0.85 km, 920 m, 1350 m, and 2.4 km. Find the total route length in km.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

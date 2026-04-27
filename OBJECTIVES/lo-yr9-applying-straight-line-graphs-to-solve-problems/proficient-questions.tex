@@ -1,55 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-{\LARGE \textbf{Applying straight line graphs to solve problems — Proficient}}\\[0.2em]
-Use straight-line rules to interpret, predict, and solve context problems.
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\begin{tasks}(3)
-\task A bike-hire graph has rule \mbox{$C=4t+8$}. Find the cost for \mbox{$6$} hours, then state the fixed charge.
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\task A phone battery graph has rule \mbox{$B=92-8t$}. Find the battery percentage after \mbox{$7$} hours.
-
-\task A plant growth graph has rule \mbox{$h=3w+10$}. In which week will the plant reach \mbox{$25$} cm?
-
-\task A tank drains according to \mbox{$V=30-3t$}. Find when the tank will be empty.
-
-\task Courier A has graph \mbox{$C=5p+4$}, where \mbox{$p$} is the number of parcels. Find the cost for \mbox{$6$} parcels.
-
-\task Courier B has graph \mbox{$C=3p+12$}. Find the cost for \mbox{$6$} parcels.
-
-\task Using Courier A and Courier B, which company is cheaper for \mbox{$2$} parcels? Show the two costs.
-
-\task Using Courier A and Courier B, which company is cheaper for \mbox{$8$} parcels? Show the two costs.
-
-\task A temperature graph is \mbox{$T=5m+10$}, where \mbox{$m$} is minutes. Find the temperature after \mbox{$9$} minutes.
-
-\task A snow-depth graph is \mbox{$d=4h+6$}. Find the depth after \mbox{$5$} hours, then explain what the \mbox{$+6$} means.
-
-\task A school van trip costs \mbox{$C=6k+12$}, where \mbox{$k$} is distance in km. Find the total cost for \mbox{$9$} km.
-
-\task A different van trip costs \mbox{$C=8k+4$}. Compare the two van costs for \mbox{$4$} km and decide which is cheaper.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A bike-hire graph has rule \mbox{$C=4t+8$}. Find the cost for \mbox{$6$} hours, then state the fixed charge.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A phone battery graph has rule \mbox{$B=92-8t$}. Find the battery percentage after \mbox{$7$} hours.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A plant growth graph has rule \mbox{$h=3w+10$}. In which week will the plant reach \mbox{$25$} cm?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A tank drains according to \mbox{$V=30-3t$}. Find when the tank will be empty.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Courier A has graph \mbox{$C=5p+4$}, where \mbox{$p$} is the number of parcels. Find the cost for \mbox{$6$} parcels.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Courier B has graph \mbox{$C=3p+12$}. Find the cost for \mbox{$6$} parcels.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Using Courier A and Courier B, which company is cheaper for \mbox{$2$} parcels? Show the two costs.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Using Courier A and Courier B, which company is cheaper for \mbox{$8$} parcels? Show the two costs.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A temperature graph is \mbox{$T=5m+10$}, where \mbox{$m$} is minutes. Find the temperature after \mbox{$9$} minutes.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A snow-depth graph is \mbox{$d=4h+6$}. Find the depth after \mbox{$5$} hours, then explain what the \mbox{$+6$} means.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A school van trip costs \mbox{$C=6k+12$}, where \mbox{$k$} is distance in km. Find the total cost for \mbox{$9$} km.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A different van trip costs \mbox{$C=8k+4$}. Compare the two van costs for \mbox{$4$} km and decide which is cheaper.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

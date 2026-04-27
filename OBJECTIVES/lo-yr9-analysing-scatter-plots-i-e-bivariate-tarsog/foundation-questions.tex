@@ -1,35 +1,58 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-{\LARGE \textbf{Analysing scatter plots (i.e. bivariate) - TARSOG — Foundation}}
-\begin{tasks}(3)
-\task {Describe the scatter plot using TARSOG.\\[0.4em]
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Describe the scatter plot using TARSOG.\\[0.4em]
 \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
   \draw[->] (0,0) -- (6,0) node[right] {$x$};
   \draw[->] (0,0) -- (0,12) node[above] {$y$};
@@ -40,8 +63,8 @@
   \fill[blue] (3,6) circle (0.15);
   \fill[blue] (4,8) circle (0.15);
   \fill[blue] (5,10) circle (0.15);
-\end{tikzpicture}}
-\task {Describe the scatter plot using TARSOG.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Describe the scatter plot using TARSOG.\\[0.4em]
 \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
   \draw[->] (0,0) -- (6,0) node[right] {$x$};
   \draw[->] (0,0) -- (0,12) node[above] {$y$};
@@ -52,8 +75,8 @@
   \fill[blue] (3,6) circle (0.15);
   \fill[blue] (4,4) circle (0.15);
   \fill[blue] (5,2) circle (0.15);
-\end{tikzpicture}}
-\task {Describe the scatter plot using TARSOG.\\[0.4em]
+\end{tikzpicture}}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Describe the scatter plot using TARSOG.\\[0.4em]
 \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
   \draw[->] (0,0) -- (6,0) node[right] {$x$};
   \draw[->] (0,0) -- (0,30) node[above] {$y$};
@@ -64,18 +87,40 @@
   \fill[blue] (3,9) circle (0.15);
   \fill[blue] (4,16) circle (0.15);
   \fill[blue] (5,25) circle (0.15);
-\end{tikzpicture}}
-\task {Identify the trend (linear or non-linear) for each plot above.}
-\task {Identify the association (positive or negative) for each plot above.}
-\task {Identify the relationship strength (weak, moderate, strong) for each plot above.}
-\task {Identify the scatter (constant or non-constant) for each plot above.}
-\task {Identify any outliers in the plots above.}
-\task {Identify any groupings in the plots above.}
-\task {What does TARSOG stand for?}
-\task {Match each letter of TARSOG with its meaning.}
-\task {Given a scatter plot with a positive linear trend and strong relationship, describe what that means.}
-\task {Given a scatter plot with a negative linear trend and moderate relationship, describe what that means.}
-\task {Given a scatter plot with a non-linear trend and weak relationship, describe what that means.}
-\end{tasks}
-
+\end{tikzpicture}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Identify the trend (linear or non-linear) for each plot above.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Identify the association (positive or negative) for each plot above.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Identify the relationship strength (weak, moderate, strong) for each plot above.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Identify the scatter (constant or non-constant) for each plot above.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Identify any outliers in the plots above.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Identify any groupings in the plots above.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{What does TARSOG stand for?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Match each letter of TARSOG with its meaning.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Given a scatter plot with a positive linear trend and strong relationship, describe what that means.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Given a scatter plot with a negative linear trend and moderate relationship, describe what that means.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Given a scatter plot with a non-linear trend and weak relationship, describe what that means.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

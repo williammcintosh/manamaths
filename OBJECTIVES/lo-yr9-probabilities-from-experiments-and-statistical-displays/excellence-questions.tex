@@ -1,46 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task A student says \mbox{$41$} heads in \mbox{$80$} tosses proves a coin is unfair. Are they correct? Explain.
-\task A spinner has four equal sectors, so the theoretical probability of red is \mbox{$\frac{1}{4}$}. In \mbox{$12$} spins red appears \mbox{$6$} times. Compare the experimental and theoretical probabilities.
-\task A bar chart shows bus arrivals over \mbox{$50$} days: early \mbox{$8$}, on time \mbox{$29$}, late \mbox{$13$}. Estimate the probability that tomorrow\'s bus is late.
-\task A survey of \mbox{$120$} students shows \mbox{$54$} bring lunch, \mbox{$42$} buy lunch, and \mbox{$24$} go home. Estimate the probability a randomly chosen student buys lunch.
-\task A basketball player scores \mbox{$63$} shots from \mbox{$90$} attempts. Estimate the probability of scoring, as a fraction in simplest form and as a percentage.
-\task In a science test, \mbox{$18$} of \mbox{$30$} seedlings survive in one tray and \mbox{$52$} of \mbox{$80$} survive in another. Which tray has the higher survival probability?
-\task A machine makes faulty items with theoretical probability \mbox{$0.08$}. In a sample of \mbox{$150$} items, \mbox{$18$} are faulty. Is the experimental probability above or below the theoretical probability?
-\task A coin is tossed \mbox{$200$} times and lands heads \mbox{$94$} times. Is this result closer to \mbox{$0.45$}, \mbox{$0.47$}, or \mbox{$0.50$}? Explain.
-\task Which is greater: \mbox{$17$} wins from \mbox{$40$} games or \mbox{$31$} wins from \mbox{$70$} games? Show enough working to justify.
-\task A hospital record shows \mbox{$126$} of \mbox{$300$} patients waited under \mbox{$15$} minutes. Estimate the probability that the next patient waits under \mbox{$15$} minutes.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A student says \mbox{$41$} heads in \mbox{$80$} tosses proves a coin is unfair. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A spinner has four equal sectors, so the theoretical probability of red is \mbox{$\frac{1}{4}$}. In \mbox{$12$} spins red appears \mbox{$6$} times. Compare the experimental and theoretical probabilities.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A bar chart shows bus arrivals over \mbox{$50$} days: early \mbox{$8$}, on time \mbox{$29$}, late \mbox{$13$}. Estimate the probability that tomorrow\'s bus is late.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A survey of \mbox{$120$} students shows \mbox{$54$} bring lunch, \mbox{$42$} buy lunch, and \mbox{$24$} go home. Estimate the probability a randomly chosen student buys lunch.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A basketball player scores \mbox{$63$} shots from \mbox{$90$} attempts. Estimate the probability of scoring, as a fraction in simplest form and as a percentage.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{In a science test, \mbox{$18$} of \mbox{$30$} seedlings survive in one tray and \mbox{$52$} of \mbox{$80$} survive in another. Which tray has the higher survival probability?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A machine makes faulty items with theoretical probability \mbox{$0.08$}. In a sample of \mbox{$150$} items, \mbox{$18$} are faulty. Is the experimental probability above or below the theoretical probability?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A coin is tossed \mbox{$200$} times and lands heads \mbox{$94$} times. Is this result closer to \mbox{$0.45$}, \mbox{$0.47$}, or \mbox{$0.50$}? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Which is greater: \mbox{$17$} wins from \mbox{$40$} games or \mbox{$31$} wins from \mbox{$70$} games? Show enough working to justify.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A hospital record shows \mbox{$126$} of \mbox{$300$} patients waited under \mbox{$15$} minutes. Estimate the probability that the next patient waits under \mbox{$15$} minutes.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

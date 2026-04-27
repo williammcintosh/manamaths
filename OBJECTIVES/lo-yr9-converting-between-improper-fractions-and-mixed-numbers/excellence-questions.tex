@@ -1,51 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\vspace*{0.4em}
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task A student says \mbox{$\frac{18}{5}=3\frac{5}{5}$}. Are they correct? Explain.
-\task A student says \mbox{$4\frac{2}{3}=\frac{14}{3}$}. Are they correct? Explain.
-\task Fill in both blanks: \mbox{$\frac{\square}{6}=4\frac{\square}{6}$}.
-\task Fill in both blanks: \mbox{$7\frac{\square}{8}=\frac{61}{8}$}.
-\task Which is greater: \mbox{$\frac{23}{6}$} or \mbox{$3\frac{4}{5}$}? Show enough working to justify.
-\task Write \mbox{$\frac{35}{4}$} as a mixed number, then place it between two whole numbers.
-\task Write \mbox{$5\frac{7}{9}$} as an improper fraction, then say whether it is closer to \mbox{$5$} or \mbox{$6$}.
-\task Complete: \mbox{$\frac{\square}{7}=2\frac{5}{7}=\frac{26}{\square}$}.
-\task Is \mbox{$\frac{41}{6}=6\frac{5}{6}$} correct? Explain what went wrong or why it works.
-\task A ribbon is \mbox{$\frac{17}{3}$} m long. Write this as a mixed number.
-\task A tank holds \mbox{$2\frac{3}{4}$} L. Write this as an improper fraction of litres.
-\task Which does not belong: \mbox{$\frac{10}{3}$}, \mbox{$3\frac{1}{3}$}, \mbox{$\frac{13}{4}$}, or \mbox{$\frac{20}{6}$}?
-\task A baker uses \mbox{$3\frac{5}{6}$} cups of flour each batch. Write this as an improper fraction.
-\task A runner completes \mbox{$\frac{25}{8}$} km. Write this as a mixed number.
-\task Explain why \mbox{$\frac{n}{4}=2\frac{1}{4}$} gives \mbox{$n=9$}.
-\task Complete: if \mbox{$\frac{m}{5}=6\frac{2}{5}$}, then \mbox{$m=\rule{1.6cm}{0.15mm}$}.
-\task Convert \mbox{$12\frac{7}{12}$} to an improper fraction.
-\task Convert \mbox{$\frac{58}{9}$} to a mixed number.
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A student says \mbox{$\frac{18}{5}=3\frac{5}{5}$}. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A student says \mbox{$4\frac{2}{3}=\frac{14}{3}$}. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Fill in both blanks: \mbox{$\frac{\square}{6}=4\frac{\square}{6}$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Fill in both blanks: \mbox{$7\frac{\square}{8}=\frac{61}{8}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Which is greater: \mbox{$\frac{23}{6}$} or \mbox{$3\frac{4}{5}$}? Show enough working to justify.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Write \mbox{$\frac{35}{4}$} as a mixed number, then place it between two whole numbers.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Write \mbox{$5\frac{7}{9}$} as an improper fraction, then say whether it is closer to \mbox{$5$} or \mbox{$6$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Complete: \mbox{$\frac{\square}{7}=2\frac{5}{7}=\frac{26}{\square}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Is \mbox{$\frac{41}{6}=6\frac{5}{6}$} correct? Explain what went wrong or why it works.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A ribbon is \mbox{$\frac{17}{3}$} m long. Write this as a mixed number.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A tank holds \mbox{$2\frac{3}{4}$} L. Write this as an improper fraction of litres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Which does not belong: \mbox{$\frac{10}{3}$}, \mbox{$3\frac{1}{3}$}, \mbox{$\frac{13}{4}$}, or \mbox{$\frac{20}{6}$}?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A baker uses \mbox{$3\frac{5}{6}$} cups of flour each batch. Write this as an improper fraction.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A runner completes \mbox{$\frac{25}{8}$} km. Write this as a mixed number.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Explain why \mbox{$\frac{n}{4}=2\frac{1}{4}$} gives \mbox{$n=9$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Complete: if \mbox{$\frac{m}{5}=6\frac{2}{5}$}, then \mbox{$m=\rule{1.6cm}{0.15mm}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Convert \mbox{$12\frac{7}{12}$} to an improper fraction.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Convert \mbox{$\frac{58}{9}$} to a mixed number.}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

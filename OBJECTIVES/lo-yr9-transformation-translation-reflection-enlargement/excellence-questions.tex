@@ -1,60 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
-{\LARGE \textbf{Transformation (Translation, reflection, enlargement) — Excellence}}\\[0.15em]
-{\large Work carefully. Give complete reasons using coordinates, equal distances, vectors, and scale factors.}
-\begin{tasks}(3)
-\task $A$ is translated by $\begin{pmatrix}3\\2\end{pmatrix}$. Write the coordinates of the image of each vertex: $(-2,-1),(-1,-1),(-1,1),(-2,0)$. 
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\task A triangle with vertices \mbox{$(-2,-1),(0,-1),(-1,1)$} is reflected in the line \mbox{$x=1$}. Write the image coordinates.
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\task A shape is enlarged from centre \mbox{$(0,0)$} by scale factor \mbox{$2$}. Find the image of the points \mbox{$(-1,-1),(1,-1),(0,2)$}.
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\task A shape is enlarged from centre \mbox{$(0,0)$} by scale factor \mbox{$\tfrac12$}. Find the image of the points \mbox{$(-2,-2),(2,-2),(0,4)$}.
-
-\task Explain why a translation always keeps side lengths and angles the same.
-
-\task Explain why a reflection changes orientation but keeps side lengths the same.
-
-\task A rectangle has vertices \mbox{$(-3,-1),(-1,-1),(-1,1),(-3,1)$}. Describe a single translation that maps it to the rectangle with vertices \mbox{$(1,2),(3,2),(3,4),(1,4)$}.
-
-\task A triangle has vertices \mbox{$(-2,1),(-1,3),(0,1)$}. It is reflected in the line \mbox{$y=0$}. Write the image coordinates and state what stays the same.
-
-\task A shape and its image are similar. One side changes from \mbox{$3\text{ cm}$} to \mbox{$7.5\text{ cm}$}. Find the enlargement scale factor.
-
-\task A shape is enlarged by scale factor \mbox{$3$} from centre \mbox{$(0,0)$}. The point \mbox{$(2,-1)$} is on the shape. Find its image.
-
-\task A shape is enlarged by scale factor \mbox{$\tfrac12$} from centre \mbox{$(0,0)$}. The point \mbox{$(-4,6)$} is on the shape. Find its image.
-
-\task A point moves by the vector $\begin{pmatrix}-5\\3\end{pmatrix}$. If it started at $(4,-2)$, where does it finish?
-
-\task The point \mbox{$P(2,3)$} is reflected in the \mbox{$y$}-axis. Write the new coordinates and explain the change.
-
-\task The point \mbox{$Q(-4,1)$} is reflected in the \mbox{$x$}-axis. Write the new coordinates and explain the change.
-
-\task Which single transformation is impossible to describe fully without extra information: translation, reflection, or enlargement? Explain why.
-
-\task Compare translation, reflection, and enlargement. Which preserve congruence, and which only preserve similarity?
-\end{tasks}
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{$A$ is translated by $\begin{pmatrix}3\\2\end{pmatrix}$. Write the coordinates of the image of each vertex: $(-2,-1),(-1,-1),(-1,1),(-2,0)$.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A triangle with vertices \mbox{$(-2,-1),(0,-1),(-1,1)$} is reflected in the line \mbox{$x=1$}. Write the image coordinates.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A shape is enlarged from centre \mbox{$(0,0)$} by scale factor \mbox{$2$}. Find the image of the points \mbox{$(-1,-1),(1,-1),(0,2)$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A shape is enlarged from centre \mbox{$(0,0)$} by scale factor \mbox{$\tfrac12$}. Find the image of the points \mbox{$(-2,-2),(2,-2),(0,4)$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Explain why a translation always keeps side lengths and angles the same.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Explain why a reflection changes orientation but keeps side lengths the same.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A rectangle has vertices \mbox{$(-3,-1),(-1,-1),(-1,1),(-3,1)$}. Describe a single translation that maps it to the rectangle with vertices \mbox{$(1,2),(3,2),(3,4),(1,4)$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A triangle has vertices \mbox{$(-2,1),(-1,3),(0,1)$}. It is reflected in the line \mbox{$y=0$}. Write the image coordinates and state what stays the same.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A shape and its image are similar. One side changes from \mbox{$3\text{ cm}$} to \mbox{$7.5\text{ cm}$}. Find the enlargement scale factor.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A shape is enlarged by scale factor \mbox{$3$} from centre \mbox{$(0,0)$}. The point \mbox{$(2,-1)$} is on the shape. Find its image.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A shape is enlarged by scale factor \mbox{$\tfrac12$} from centre \mbox{$(0,0)$}. The point \mbox{$(-4,6)$} is on the shape. Find its image.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A point moves by the vector $\begin{pmatrix}-5\\3\end{pmatrix}$. If it started at $(4,-2)$, where does it finish?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{The point \mbox{$P(2,3)$} is reflected in the \mbox{$y$}-axis. Write the new coordinates and explain the change.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{The point \mbox{$Q(-4,1)$} is reflected in the \mbox{$x$}-axis. Write the new coordinates and explain the change.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Which single transformation is impossible to describe fully without extra information: translation, reflection, or enlargement? Explain why.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Compare translation, reflection, and enlargement. Which preserve congruence, and which only preserve similarity?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

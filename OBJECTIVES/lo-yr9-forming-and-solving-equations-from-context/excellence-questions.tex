@@ -1,48 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Forming and solving equations from context — Excellence}}
-\begin{tasks}(3)
-\task A train leaves Station A at 60 km/h. Another leaves Station B, 200 km away, at 80 km/h toward Station A. Form an equation to find when they meet, and solve it.
-\task A chemist mixes two acid solutions: one is 30\% acid, the other is 50\% acid. She wants 10 L of 42\% acid. Form an equation and find how much of each she should use.
-\task A rectangular garden is surrounded by a path 1 m wide. The garden itself is 5 m longer than it is wide. The total area (garden + path) is 120 m\textsuperscript{2}. Form an equation and find the garden's dimensions.
-\task The sum of the digits of a two-digit number is 11. Reversing the digits gives a number 27 less than the original. Form equations and find the original number.
-\task A boat travels 24 km upstream in 3 hours and the same distance downstream in 2 hours. Form equations to find the boat's speed in still water and the current's speed.
-\task A piece of wire 40 cm long is cut into two pieces. One piece is bent into a square, the other into an equilateral triangle. The total area enclosed is 31 cm\textsuperscript{2}. Form equations and find the length of each piece.
-\task A company's profit \mbox{$P$} (in \textdollar) is given by \mbox{$P = -2x^2 + 120x - 1000$}, where \mbox{$x$} is units sold. Form an equation to find how many units must be sold to break even (\mbox{$P=0$}), and solve it.
-\task A cyclist and a runner start at the same point. The cyclist travels north at 20 km/h, the runner east at 12 km/h. After \mbox{$t$} hours, they are 52 km apart. Form an equation and find \mbox{$t$}.
-\task A tank can be filled by Pipe A in 4 hours and by Pipe B in 6 hours. If both pipes are open, how long to fill the tank? Form an equation and solve.
-\task The sum of three consecutive even integers is 102. Form an equation and find the integers. Then show that the product of the first and third is 16 less than the square of the middle one.
-\task A right triangle has hypotenuse 13 cm. One leg is 7 cm shorter than the other. Form an equation and find the lengths of the legs.
-\task A shop offers two payment plans for a \textdollar 1200 computer: Plan A: 20\% deposit then 12 monthly payments of \textdollar 90. Plan B: No deposit, 24 monthly payments of \textdollar 60. Form equations to find after how many months the total paid is the same, and solve.
-\task A number is such that when it is added to 5 and the sum is multiplied by 3, the result is the same as when the number is multiplied by 4 and then 7 is subtracted. Form an equation and find the number, then verify.
-\task The perimeter of an isosceles triangle is 32 cm. Each equal side is 5 cm longer than the base. Form an equation and find the length of each side. Then find its area if the height to the base is 8 cm.
-\task A mixture of nuts worth \textdollar 6/kg is made by mixing \textdollar 4/kg nuts with \textdollar 8/kg nuts. If 10 kg of mixture is needed, form an equation and find how much of each type is required.
-\task A car's fuel efficiency is 12 km/L in the city and 16 km/L on the highway. On a trip of 240 km using 18 L of fuel, how many km were city driving? Form equations and solve.
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A train leaves Station A at 60 km/h. Another leaves Station B, 200 km away, at 80 km/h toward Station A. Form an equation to find when they meet, and solve it.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A chemist mixes two acid solutions: one is 30\% acid, the other is 50\% acid. She wants 10 L of 42\% acid. Form an equation and find how much of each she should use.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A rectangular garden is surrounded by a path 1 m wide. The garden itself is 5 m longer than it is wide. The total area (garden + path) is 120 m\textsuperscript{2}. Form an equation and find the garden's dimensions.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{The sum of the digits of a two-digit number is 11. Reversing the digits gives a number 27 less than the original. Form equations and find the original number.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A boat travels 24 km upstream in 3 hours and the same distance downstream in 2 hours. Form equations to find the boat's speed in still water and the current's speed.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A piece of wire 40 cm long is cut into two pieces. One piece is bent into a square, the other into an equilateral triangle. The total area enclosed is 31 cm\textsuperscript{2}. Form equations and find the length of each piece.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A company's profit \mbox{$P$} (in \textdollar) is given by \mbox{$P = -2x^2 + 120x - 1000$}, where \mbox{$x$} is units sold. Form an equation to find how many units must be sold to break even (\mbox{$P=0$}), and solve it.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A cyclist and a runner start at the same point. The cyclist travels north at 20 km/h, the runner east at 12 km/h. After \mbox{$t$} hours, they are 52 km apart. Form an equation and find \mbox{$t$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A tank can be filled by Pipe A in 4 hours and by Pipe B in 6 hours. If both pipes are open, how long to fill the tank? Form an equation and solve.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{The sum of three consecutive even integers is 102. Form an equation and find the integers. Then show that the product of the first and third is 16 less than the square of the middle one.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A right triangle has hypotenuse 13 cm. One leg is 7 cm shorter than the other. Form an equation and find the lengths of the legs.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A shop offers two payment plans for a \textdollar 1200 computer: Plan A: 20\% deposit then 12 monthly payments of \textdollar 90. Plan B: No deposit, 24 monthly payments of \textdollar 60. Form equations to find after how many months the total paid is the same, and solve.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A number is such that when it is added to 5 and the sum is multiplied by 3, the result is the same as when the number is multiplied by 4 and then 7 is subtracted. Form an equation and find the number, then verify.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{The perimeter of an isosceles triangle is 32 cm. Each equal side is 5 cm longer than the base. Form an equation and find the length of each side. Then find its area if the height to the base is 8 cm.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A mixture of nuts worth \textdollar 6/kg is made by mixing \textdollar 4/kg nuts with \textdollar 8/kg nuts. If 10 kg of mixture is needed, form an equation and find how much of each type is required.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A car's fuel efficiency is 12 km/L in the city and 16 km/L on the highway. On a trip of 240 km using 18 L of fuel, how many km were city driving? Form equations and solve.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

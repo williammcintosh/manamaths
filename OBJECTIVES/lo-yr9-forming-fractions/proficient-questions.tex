@@ -1,105 +1,114 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=9.8em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\boldmath
-
-\vspace*{0.4em}
-{\LARGE \textbf{Proficient}}
-\begin{tasks}(4)
-\task 5 of 12 shaded.
-\task 9 of 36 away.
-\task 7 of 20 spins.
-\task 17 of 48 faulty.
-\task 18 of 25 full.
-\task 13 of 32 prefer cats.
-\task 19 of 27 covered.
-\task 16 of 45 bikes.
-\task 7 of 18 used.
-\task 23 of 50 coloured.
-\task 11 of 29 shoes.
-\task 21 of 34 taken.
-\task 14 of 40 planted.
-\task 15 of 22 packed.
-\task 27 of 60 completed.
-\task 8 of 21 missing.
-\task 31 of 80 saved.
-\task 9 of 14 chosen.
-\task 6 of 17 packed.
-\task 22 of 55 stacked.
-\task 14 of 33 painted.
-\task 5 of 16 cracked.
-\task 18 of 44 sent.
-\task 7 of 24 peeled.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{5 of 12 shaded.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{9 of 36 away.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{7 of 20 spins.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{17 of 48 faulty.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{18 of 25 full.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{13 of 32 prefer cats.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{19 of 27 covered.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{16 of 45 bikes.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{7 of 18 used.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{23 of 50 coloured.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{11 of 29 shoes.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{21 of 34 taken.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{14 of 40 planted.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{15 of 22 packed.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{27 of 60 completed.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{8 of 21 missing.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{31 of 80 saved.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{9 of 14 chosen.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{6 of 17 packed.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{22 of 55 stacked.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{14 of 33 painted.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{5 of 16 cracked.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{18 of 44 sent.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{7 of 24 peeled.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

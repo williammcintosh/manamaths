@@ -1,52 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-{\LARGE \textbf{Foundation}}
-\begin{tasks}(3)
-\task A coin is tossed \mbox{$20$} times and lands heads \mbox{$11$} times. Estimate the probability of heads.
-\task A die is rolled \mbox{$30$} times and a \mbox{$6$} appears \mbox{$4$} times. Estimate the probability of rolling a \mbox{$6$}.
-\task A spinner lands on red \mbox{$9$} times in \mbox{$15$} spins. Estimate the probability of red.
-\task In \mbox{$25$} draws from a bag, a blue counter is picked \mbox{$10$} times. Estimate the probability of blue.
-\task A survey chart shows \mbox{$18$} of \mbox{$30$} students walk to school. Estimate the probability that a randomly chosen student walks to school.
-\task A weather record shows rain on \mbox{$6$} of the last \mbox{$10$} days. Estimate the probability of rain tomorrow using this data.
-\task A coin lands tails \mbox{$14$} times in \mbox{$20$} tosses. Write the experimental probability of tails.
-\task A spinner lands on green \mbox{$7$} times in \mbox{$28$} spins. Write the experimental probability of green.
-\task Out of \mbox{$40$} penalty shots, \mbox{$26$} are scored. Estimate the probability of scoring.
-\task Out of \mbox{$50$} seeds planted, \mbox{$35$} sprout. Estimate the probability that a seed sprouts.
-\task Which is greater: an experimental probability of \mbox{$\frac{9}{20}$} or \mbox{$\frac{1}{2}$}?
-\task Which is smaller: \mbox{$30\%$} success or \mbox{$\frac{2}{5}$} success?
-\task Fill in the blank: \mbox{$12$} wins from \mbox{$20$} games gives an experimental probability of \mbox{$\frac{\square}{20}$}.
-\task Fill in the blank: \mbox{$15$} successes from \mbox{$25$} trials gives an experimental probability of \mbox{$\square\%$}.
-\task A student says \mbox{$3$} reds in \mbox{$12$} draws means the probability of red is \mbox{$\frac{1}{3}$}. Are they correct?
-\task Explain in one short sentence what experimental probability means.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A coin is tossed \mbox{$20$} times and lands heads \mbox{$11$} times. Estimate the probability of heads.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A die is rolled \mbox{$30$} times and a \mbox{$6$} appears \mbox{$4$} times. Estimate the probability of rolling a \mbox{$6$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A spinner lands on red \mbox{$9$} times in \mbox{$15$} spins. Estimate the probability of red.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{In \mbox{$25$} draws from a bag, a blue counter is picked \mbox{$10$} times. Estimate the probability of blue.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A survey chart shows \mbox{$18$} of \mbox{$30$} students walk to school. Estimate the probability that a randomly chosen student walks to school.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A weather record shows rain on \mbox{$6$} of the last \mbox{$10$} days. Estimate the probability of rain tomorrow using this data.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A coin lands tails \mbox{$14$} times in \mbox{$20$} tosses. Write the experimental probability of tails.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A spinner lands on green \mbox{$7$} times in \mbox{$28$} spins. Write the experimental probability of green.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Out of \mbox{$40$} penalty shots, \mbox{$26$} are scored. Estimate the probability of scoring.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Out of \mbox{$50$} seeds planted, \mbox{$35$} sprout. Estimate the probability that a seed sprouts.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Which is greater: an experimental probability of \mbox{$\frac{9}{20}$} or \mbox{$\frac{1}{2}$}?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Which is smaller: \mbox{$30\%$} success or \mbox{$\frac{2}{5}$} success?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Fill in the blank: \mbox{$12$} wins from \mbox{$20$} games gives an experimental probability of \mbox{$\frac{\square}{20}$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Fill in the blank: \mbox{$15$} successes from \mbox{$25$} trials gives an experimental probability of \mbox{$\square\%$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A student says \mbox{$3$} reds in \mbox{$12$} draws means the probability of red is \mbox{$\frac{1}{3}$}. Are they correct?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Explain in one short sentence what experimental probability means.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

@@ -1,50 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-\boldmath
-
-{\LARGE \textbf{Area of L-shapes and composite shapes -- Foundation}}
-\begin{tasks}(3)
-\task {Draw a dotted line to split the L-shape into two rectangles.}
-\task {Find the area of an L-shape formed by a 6 m × 4 m rectangle joined to a 3 m × 2 m rectangle.}
-\task {Calculate the area of a room shaped like an L: outer dimensions 10 m by 7 m, missing a 4 m by 3 m corner.}
-\task {A garden has an L-shape: 8 m long, 5 m wide, with a 3 m by 2 m cut-out. Find the area.}
-\task {Draw a dotted line to split the shape into two rectangles (different orientation).}
-\task {Find the area of an L-shape where the longer arm is 9 m × 3 m and the shorter arm is 2 m × 4 m.}
-\task {Calculate the area of a pathway forming an L around a building: 12 m long, 6 m wide, with a 5 m by 4 m corner missing.}
-\task {A swimming pool has an L-shape: 15 m by 10 m, with a 6 m by 4 m cut-out. Find its area.}
-\task {Draw a dotted line to split the L-shape into two rectangles (one vertical, one horizontal).}
-\task {Find the area of an L-shape formed by a 7 m × 5 m rectangle and a 4 m × 3 m rectangle.}
-\task {Calculate the area of an L-shaped patio: outer rectangle 11 m by 8 m, missing a 5 m by 3 m square.}
-\task {A flower bed is L-shaped: 9 m long, 6 m wide, with a 4 m by 2 m cut-out. Find the area.}
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Draw a dotted line to split the L-shape into two rectangles.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Find the area of an L-shape formed by a 6 m × 4 m rectangle joined to a 3 m × 2 m rectangle.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Calculate the area of a room shaped like an L: outer dimensions 10 m by 7 m, missing a 4 m by 3 m corner.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A garden has an L-shape: 8 m long, 5 m wide, with a 3 m by 2 m cut-out. Find the area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Draw a dotted line to split the shape into two rectangles (different orientation).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Find the area of an L-shape where the longer arm is 9 m × 3 m and the shorter arm is 2 m × 4 m.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Calculate the area of a pathway forming an L around a building: 12 m long, 6 m wide, with a 5 m by 4 m corner missing.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A swimming pool has an L-shape: 15 m by 10 m, with a 6 m by 4 m cut-out. Find its area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Draw a dotted line to split the L-shape into two rectangles (one vertical, one horizontal).}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Find the area of an L-shape formed by a 7 m × 5 m rectangle and a 4 m × 3 m rectangle.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Calculate the area of an L-shaped patio: outer rectangle 11 m by 8 m, missing a 5 m by 3 m square.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A flower bed is L-shaped: 9 m long, 6 m wide, with a 4 m by 2 m cut-out. Find the area.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

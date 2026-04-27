@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Forming and solving equations from context — Proficient}}
-\begin{tasks}(3)
-\task A shop sells pens for \textdollar 1.50 and pencils for \textdollar 0.80. Amy buys \mbox{$p$} pens and \mbox{$c$} pencils, spending \textdollar 9.40 in total. If she bought twice as many pencils as pens, form an equation and find how many pens she bought.
-\task The area of a rectangle is 54 cm\textsuperscript{2}. Its length is 3 cm more than twice its width \mbox{$w$}. Form an equation and find the dimensions.
-\task A car rental company charges \textdollar 40 per day plus \textdollar 0.15 per km. A customer's bill is \textdollar 85 for one day. Form an equation and find how many km were driven.
-\task The sum of two numbers is 45. Their difference is 15. Form two equations and find the numbers.
-\task A fraction has numerator \mbox{$n$} and denominator \mbox{$n+4$}. The fraction equals \mbox{$\frac{2}{3}$}. Form an equation and find the fraction.
-\task A right-angled triangle has legs of length \mbox{$x$} and \mbox{$x+2$}. The hypotenuse is 10 cm. Form an equation and find \mbox{$x$}.
-\task A concert ticket costs \textdollar 5 more for adults than for students. If 3 adult tickets and 5 student tickets cost \textdollar 155, form an equation and find the student ticket price.
-\task A pool is being filled at 200 L/h. After \mbox{$t$} hours, there are 1200 L in the pool. Form an equation and find how long it has been filling.
-\task The sum of the ages of a father and son is 50. In 10 years, the father will be twice as old as the son. Form equations and find their current ages.
-\task A number is multiplied by 5, then 12 is subtracted. The result is the same as adding 8 to twice the number. Form an equation and find the number.
-\task A rectangle's length is 7 cm longer than its width. If the perimeter is 46 cm, form an equation and find the area.
-\task A mixture contains \mbox{$x$} L of 20\% juice and 5 L of 50\% juice. The final mixture is 35\% juice. Form an equation and find \mbox{$x$}.
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A shop sells pens for \textdollar 1.50 and pencils for \textdollar 0.80. Amy buys \mbox{$p$} pens and \mbox{$c$} pencils, spending \textdollar 9.40 in total. If she bought twice as many pencils as pens, form an equation and find how many pens she bought.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{The area of a rectangle is 54 cm\textsuperscript{2}. Its length is 3 cm more than twice its width \mbox{$w$}. Form an equation and find the dimensions.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A car rental company charges \textdollar 40 per day plus \textdollar 0.15 per km. A customer's bill is \textdollar 85 for one day. Form an equation and find how many km were driven.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{The sum of two numbers is 45. Their difference is 15. Form two equations and find the numbers.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A fraction has numerator \mbox{$n$} and denominator \mbox{$n+4$}. The fraction equals \mbox{$\frac{2}{3}$}. Form an equation and find the fraction.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A right-angled triangle has legs of length \mbox{$x$} and \mbox{$x+2$}. The hypotenuse is 10 cm. Form an equation and find \mbox{$x$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A concert ticket costs \textdollar 5 more for adults than for students. If 3 adult tickets and 5 student tickets cost \textdollar 155, form an equation and find the student ticket price.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A pool is being filled at 200 L/h. After \mbox{$t$} hours, there are 1200 L in the pool. Form an equation and find how long it has been filling.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{The sum of the ages of a father and son is 50. In 10 years, the father will be twice as old as the son. Form equations and find their current ages.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A number is multiplied by 5, then 12 is subtracted. The result is the same as adding 8 to twice the number. Form an equation and find the number.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A rectangle's length is 7 cm longer than its width. If the perimeter is 46 cm, form an equation and find the area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A mixture contains \mbox{$x$} L of 20\% juice and 5 L of 50\% juice. The final mixture is 35\% juice. Form an equation and find \mbox{$x$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

@@ -1,61 +1,114 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-{\LARGE \textbf{Volume of cubes and cuboids — Excellence}}
-\begin{tasks}(3)
-\task A cube has side length \mbox{$x$} cm. Write an expression for its volume.
-\task A cuboid has length \mbox{$l$} cm, width \mbox{$w$} cm, and height \mbox{$h$} cm. Write an expression for its volume.
-\task If a cube's side length doubles, what happens to its volume? Explain.
-\task If all dimensions of a cuboid triple, what happens to its volume? Explain.
-\task A cube has volume 216 cm\mbox{$^3$}. Find its side length.
-\task A cuboid has volume 360 cm\mbox{$^3$}. Its length is 12 cm and width is 5 cm. Find its height.
-\task Convert 3.75 m\mbox{$^3$} to cm\mbox{$^3$}.
-\task Convert 8,500,000 mm\mbox{$^3$} to m\mbox{$^3$}.
-\task A swimming pool is 25 m long, 10 m wide, and has an average depth of 1.5 m. What is its volume in cubic metres? In litres? (1 m\mbox{$^3$} = 1000 L)
-\task A cube and a cuboid have equal volume. The cube has side 10 cm. The cuboid has length 20 cm and width 5 cm. Find the cuboid's height.
-\task Which has greater volume and by how much: a 15 cm cube or a cuboid 18 cm × 12 cm × 8 cm?
-\task A room is 6 m long, 4.5 m wide, and 2.8 m high. What is its volume? If paint covers 12 m\mbox{$^2$} per litre, how many litres are needed for the walls (excluding floor and ceiling)?
-\task A box measures 1.2 m × 0.8 m × 0.6 m. How many cubes of side 20 cm can fit inside?
-\task A storage container has volume 48 m\mbox{$^3$}. If its length is 6 m and height is 2 m, find its width.
-\task A cube's volume is 64 times larger than another cube. How many times longer is its side?
-\task Explain why volume is measured in cubic units, not square units.
-\task A cuboid's length is twice its width, and its height is three times its width. If its volume is 150 cm\mbox{$^3$}, find its dimensions.
-\task A cube of side 4 cm is cut into smaller cubes of side 1 cm. How many small cubes are produced?
-\task Water flows into a tank at 2 litres per second. The tank is a cuboid 1 m × 0.8 m × 0.5 m. How long will it take to fill?
-\task A rectangular prism has volume \mbox{$V$}, length \mbox{$l$}, width \mbox{$w$}, and height \mbox{$h$}. Rearrange \mbox{$V = lwh$} to make \mbox{$h$} the subject.
-\task A company makes boxes in two sizes: small (10 cm × 8 cm × 6 cm) and large (15 cm × 12 cm × 10 cm). What is the ratio of their volumes?
-\task A cube has surface area 150 cm\mbox{$^2$}. Can you find its volume? Explain your reasoning.
-\task A cuboid has a square base of side 5 cm. Its volume is 200 cm\mbox{$^3$}. Find its height.
-\task If you double the length and halve the width of a cuboid while keeping height constant, what happens to the volume?
-\task A room's length, width, and height are in the ratio 3:2:1. If its volume is 192 m\mbox{$^3$}, find its dimensions.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A cube has side length \mbox{$x$} cm. Write an expression for its volume.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A cuboid has length \mbox{$l$} cm, width \mbox{$w$} cm, and height \mbox{$h$} cm. Write an expression for its volume.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{If a cube's side length doubles, what happens to its volume? Explain.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{If all dimensions of a cuboid triple, what happens to its volume? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A cube has volume 216 cm\mbox{$^3$}. Find its side length.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A cuboid has volume 360 cm\mbox{$^3$}. Its length is 12 cm and width is 5 cm. Find its height.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Convert 3.75 m\mbox{$^3$} to cm\mbox{$^3$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Convert 8,500,000 mm\mbox{$^3$} to m\mbox{$^3$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A swimming pool is 25 m long, 10 m wide, and has an average depth of 1.5 m. What is its volume in cubic metres? In litres? (1 m\mbox{$^3$} = 1000 L)}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A cube and a cuboid have equal volume. The cube has side 10 cm. The cuboid has length 20 cm and width 5 cm. Find the cuboid's height.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Which has greater volume and by how much: a 15 cm cube or a cuboid 18 cm × 12 cm × 8 cm?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A room is 6 m long, 4.5 m wide, and 2.8 m high. What is its volume? If paint covers 12 m\mbox{$^2$} per litre, how many litres are needed for the walls (excluding floor and ceiling)?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A box measures 1.2 m × 0.8 m × 0.6 m. How many cubes of side 20 cm can fit inside?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A storage container has volume 48 m\mbox{$^3$}. If its length is 6 m and height is 2 m, find its width.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A cube's volume is 64 times larger than another cube. How many times longer is its side?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Explain why volume is measured in cubic units, not square units.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A cuboid's length is twice its width, and its height is three times its width. If its volume is 150 cm\mbox{$^3$}, find its dimensions.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A cube of side 4 cm is cut into smaller cubes of side 1 cm. How many small cubes are produced?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Water flows into a tank at 2 litres per second. The tank is a cuboid 1 m × 0.8 m × 0.5 m. How long will it take to fill?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A rectangular prism has volume \mbox{$V$}, length \mbox{$l$}, width \mbox{$w$}, and height \mbox{$h$}. Rearrange \mbox{$V = lwh$} to make \mbox{$h$} the subject.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A company makes boxes in two sizes: small (10 cm × 8 cm × 6 cm) and large (15 cm × 12 cm × 10 cm). What is the ratio of their volumes?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A cube has surface area 150 cm\mbox{$^2$}. Can you find its volume? Explain your reasoning.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A cuboid has a square base of side 5 cm. Its volume is 200 cm\mbox{$^3$}. Find its height.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{If you double the length and halve the width of a cuboid while keeping height constant, what happens to the volume?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A room's length, width, and height are in the ratio 3:2:1. If its volume is 192 m\mbox{$^3$}, find its dimensions.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

@@ -1,48 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Planning and collecting multivariate data — Excellence}}
-\begin{tasks}(3)
-\task Design a study to investigate the relationship between two variables (e.g., study time and test scores). Include a statistical question, population, and sampling method.
-\task For your study, identify at least one categorical and one numerical variable.
-\task Explain how you would ensure your sample is representative of the population.
-\task Describe a stratified sampling plan that accounts for a relevant categorical variable.
-\task What is sampling variation and how does sample size affect it?
-\task Explain the concept of 'bias' in the context of your study.
-\task How could non‑response bias affect your results?
-\task What is the difference between random sampling and random allocation?
-\task Discuss ethical considerations when collecting data from people.
-\task How would you pilot your data‑collection instrument?
-\task What is the purpose of a control group in an experiment?
-\task Explain the difference between observational study and experiment.
-\task How might confounding variables affect your study?
-\task Describe how you would use a random number generator to select a simple random sample.
-\task What is the 'margin of error' and how is it related to sample size?
-\task Why is it important to clearly define variables before collecting data?
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Design a study to investigate the relationship between two variables (e.g., study time and test scores). Include a statistical question, population, and sampling method.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{For your study, identify at least one categorical and one numerical variable.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Explain how you would ensure your sample is representative of the population.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Describe a stratified sampling plan that accounts for a relevant categorical variable.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{What is sampling variation and how does sample size affect it?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Explain the concept of 'bias' in the context of your study.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{How could non‑response bias affect your results?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{What is the difference between random sampling and random allocation?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Discuss ethical considerations when collecting data from people.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{How would you pilot your data‑collection instrument?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{What is the purpose of a control group in an experiment?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Explain the difference between observational study and experiment.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{How might confounding variables affect your study?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Describe how you would use a random number generator to select a simple random sample.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{What is the 'margin of error' and how is it related to sample size?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Why is it important to clearly define variables before collecting data?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

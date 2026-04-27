@@ -1,54 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-\boldmath
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
-\boldmath
-
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task A student says increasing \mbox{$80$} by \mbox{$25\%$} gives \mbox{$85$}. Are they correct? Explain.
-\task A student says decreasing \mbox{$120$} by \mbox{$15\%$} gives \mbox{$102$}. Are they correct? Explain.
-\task Increase \mbox{$250$} by \mbox{$18\%$}.
-\task Increase \mbox{$64$} by \mbox{$12.5\%$}.
-\task Increase \mbox{$180$} by \mbox{$37.5\%$}.
-\task Decrease \mbox{$240$} by \mbox{$17.5\%$}.
-\task Decrease \mbox{$160$} by \mbox{$12.5\%$}.
-\task Decrease \mbox{$320$} by \mbox{$37.5\%$}.
-\task A jacket costs 120 dollars and is marked up by \mbox{$15\%$}. What is the new price?
-\task A tablet costs 400 dollars and is discounted by \mbox{$22\%$}. What is the sale price?
-\task A car value of 18,000 dollars falls by \mbox{$12\%$}. What is the new value?
-\task A café increases a 6.40 dollar smoothie by \mbox{$25\%$}. What is the new price?
-\task Fill in the blank: increasing \mbox{$96$} by \mbox{$12.5\%$} gives \mbox{$\square$}.
-\task Fill in the blank: decreasing \mbox{$500$} by \mbox{$18\%$} gives \mbox{$\square$}.
-\task Which is greater: increasing \mbox{$160$} by \mbox{$12.5\%$} or decreasing \mbox{$240$} by \mbox{$25\%$}? Show enough working to justify.
-\task Which is smaller: increasing \mbox{$80$} by \mbox{$35\%$} or decreasing \mbox{$130$} by \mbox{$10\%$}? Explain.
-\task A price is increased by \mbox{$10\%$} and then decreased by \mbox{$10\%$}. Does it return to the start? Use \mbox{$100$} as an example.
-\task Explain why decreasing by \mbox{$25\%$} is not the same as multiplying by \mbox{$0.25$}.
-\end{tasks}
-
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A student says increasing \mbox{$80$} by \mbox{$25\%$} gives \mbox{$85$}. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A student says decreasing \mbox{$120$} by \mbox{$15\%$} gives \mbox{$102$}. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Increase \mbox{$250$} by \mbox{$18\%$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Increase \mbox{$64$} by \mbox{$12.5\%$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Increase \mbox{$180$} by \mbox{$37.5\%$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Decrease \mbox{$240$} by \mbox{$17.5\%$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Decrease \mbox{$160$} by \mbox{$12.5\%$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Decrease \mbox{$320$} by \mbox{$37.5\%$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A jacket costs 120 dollars and is marked up by \mbox{$15\%$}. What is the new price?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A tablet costs 400 dollars and is discounted by \mbox{$22\%$}. What is the sale price?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A car value of 18,000 dollars falls by \mbox{$12\%$}. What is the new value?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A café increases a 6.40 dollar smoothie by \mbox{$25\%$}. What is the new price?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Fill in the blank: increasing \mbox{$96$} by \mbox{$12.5\%$} gives \mbox{$\square$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Fill in the blank: decreasing \mbox{$500$} by \mbox{$18\%$} gives \mbox{$\square$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Which is greater: increasing \mbox{$160$} by \mbox{$12.5\%$} or decreasing \mbox{$240$} by \mbox{$25\%$}? Show enough working to justify.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Which is smaller: increasing \mbox{$80$} by \mbox{$35\%$} or decreasing \mbox{$130$} by \mbox{$10\%$}? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A price is increased by \mbox{$10\%$} and then decreased by \mbox{$10\%$}. Does it return to the start? Use \mbox{$100$} as an example.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Explain why decreasing by \mbox{$25\%$} is not the same as multiplying by \mbox{$0.25$}.}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

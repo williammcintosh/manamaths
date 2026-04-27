@@ -1,44 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Forming measurement expressions --- Excellence}}
-\begin{tasks}(3)
-\task A rectangle has length \mbox{$x+2$} and width \mbox{$x-1$}. Write a simplified perimeter.
-\task A rectangle has length \mbox{$3y$} and width \mbox{$y+4$}. Write a simplified perimeter.
-\task A square has side \mbox{$2a+1$}. Write a simplified perimeter.
-\task An equilateral triangle has side \mbox{$t+5$}. Write a simplified perimeter.
-\task A cuboid has length \mbox{$x$}, width \mbox{$x+1$}, height \mbox{$4$}. Write its volume.
-\task A tank starts with \mbox{$25$} L and fills at \mbox{$3n$} L/min for \mbox{$m$} minutes. Write the amount after \mbox{$m$} minutes.
-\task A return trip is twice the one-way distance \mbox{$d+7$}. Write a simplified total distance.
-\task Two rows use \mbox{$k$} and \mbox{$k+3$} tiles. Each tile is \mbox{$0.5$} m long. Write the total row length.
-\task A student writes a rectangle perimeter as \mbox{$2l+w$}. What is missing? Write the correct expression.
-\task A square and an equilateral triangle both have side \mbox{$p$}. Write the difference between their perimeters.
-\task A cube has edge \mbox{$n+2$}. Write the total length of all \mbox{$12$} edges.
-\task A roll is cut into \mbox{$x$} pieces of \mbox{$2.5$} m and \mbox{$3$} extra pieces of \mbox{$1$} m. Write the total length used.
-\task A runner travels at \mbox{$8$} km/h for \mbox{$h$} hours, then \mbox{$2$} more hours. Write a simplified distance.
-\task A rectangle has width \mbox{$w$} and length \mbox{$w+6$}. Write one perimeter expression and one equivalent simplified form.
-\task The area of a rectangle is \mbox{$x(x+4)$}. What could the side lengths be?
-\task A prism has cross-sectional area \mbox{$A$} and length \mbox{$l$}. Write its volume and say what each variable means.
-\end{tasks}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A rectangle has length \mbox{$x+2$} and width \mbox{$x-1$}. Write a simplified perimeter.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A rectangle has length \mbox{$3y$} and width \mbox{$y+4$}. Write a simplified perimeter.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A square has side \mbox{$2a+1$}. Write a simplified perimeter.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{An equilateral triangle has side \mbox{$t+5$}. Write a simplified perimeter.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A cuboid has length \mbox{$x$}, width \mbox{$x+1$}, height \mbox{$4$}. Write its volume.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A tank starts with \mbox{$25$} L and fills at \mbox{$3n$} L/min for \mbox{$m$} minutes. Write the amount after \mbox{$m$} minutes.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A return trip is twice the one-way distance \mbox{$d+7$}. Write a simplified total distance.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Two rows use \mbox{$k$} and \mbox{$k+3$} tiles. Each tile is \mbox{$0.5$} m long. Write the total row length.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A student writes a rectangle perimeter as \mbox{$2l+w$}. What is missing? Write the correct expression.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A square and an equilateral triangle both have side \mbox{$p$}. Write the difference between their perimeters.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A cube has edge \mbox{$n+2$}. Write the total length of all \mbox{$12$} edges.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A roll is cut into \mbox{$x$} pieces of \mbox{$2.5$} m and \mbox{$3$} extra pieces of \mbox{$1$} m. Write the total length used.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A runner travels at \mbox{$8$} km/h for \mbox{$h$} hours, then \mbox{$2$} more hours. Write a simplified distance.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A rectangle has width \mbox{$w$} and length \mbox{$w+6$}. Write one perimeter expression and one equivalent simplified form.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{The area of a rectangle is \mbox{$x(x+4)$}. What could the side lengths be?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A prism has cross-sectional area \mbox{$A$} and length \mbox{$l$}. Write its volume and say what each variable means.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

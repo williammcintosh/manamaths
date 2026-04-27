@@ -1,46 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-{\LARGE \textbf{Forming equations of horizontal and vertical lines — Excellence}}\\[0.2em]
-Use the fixed coordinate and the gradient property.
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\begin{tasks}(3)
-\task {Horizontal line through \mbox{$(-9,11)$}. State its gradient.}
-\task {Vertical line through \mbox{$(4,-8)$}. State its gradient property.}
-\task {Which has gradient \mbox{$0$}: \mbox{$x=-3$} or \mbox{$y=-3$}?}
-\task {Which has undefined gradient: \mbox{$x=6$} or \mbox{$y=6$}?}
-\task {Through \mbox{$(2,5)$} with gradient \mbox{$0$}. Equation?}
-\task {Through \mbox{$(-7,1)$} and vertical. Equation?}
-\task {Through \mbox{$(3,-4)$}, parallel to \mbox{$y=10$}. Equation?}
-\task {Through \mbox{$(8,2)$}, parallel to \mbox{$x=-1$}. Equation?}
-\task {Points \mbox{$A(6,-3)$}, \mbox{$B(-2,-3)$}. Equation and gradient?}
-\task {Points \mbox{$C(5,7)$}, \mbox{$D(5,-4)$}. Equation and gradient?}
-\task {Rectangle \mbox{$(1,2),(7,2),(7,-3),(1,-3)$}. Equations of all sides?}
-\task {Moves horizontally through \mbox{$(-4,9)$}. Fixed coordinate and equation?}
-\task {Moves vertically through \mbox{$(12,-5)$}. Fixed coordinate and equation?}
-\task {Do \mbox{$x=4$} and \mbox{$y=4$} have the same gradient?}
-\task {How do all horizontal-line equations differ from vertical-line equations?}
-\task {Compare the positions of \mbox{$y=-6$} and \mbox{$x=-6$}.}
-\end{tasks}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Horizontal line through \mbox{$(-9,11)$}. State its gradient.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Vertical line through \mbox{$(4,-8)$}. State its gradient property.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Which has gradient \mbox{$0$}: \mbox{$x=-3$} or \mbox{$y=-3$}?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Which has undefined gradient: \mbox{$x=6$} or \mbox{$y=6$}?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Through \mbox{$(2,5)$} with gradient \mbox{$0$}. Equation?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Through \mbox{$(-7,1)$} and vertical. Equation?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Through \mbox{$(3,-4)$}, parallel to \mbox{$y=10$}. Equation?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Through \mbox{$(8,2)$}, parallel to \mbox{$x=-1$}. Equation?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Points \mbox{$A(6,-3)$}, \mbox{$B(-2,-3)$}. Equation and gradient?}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{Points \mbox{$C(5,7)$}, \mbox{$D(5,-4)$}. Equation and gradient?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Rectangle \mbox{$(1,2),(7,2),(7,-3),(1,-3)$}. Equations of all sides?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Moves horizontally through \mbox{$(-4,9)$}. Fixed coordinate and equation?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Moves vertically through \mbox{$(12,-5)$}. Fixed coordinate and equation?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Do \mbox{$x=4$} and \mbox{$y=4$} have the same gradient?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{How do all horizontal-line equations differ from vertical-line equations?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Compare the positions of \mbox{$y=-6$} and \mbox{$x=-6$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

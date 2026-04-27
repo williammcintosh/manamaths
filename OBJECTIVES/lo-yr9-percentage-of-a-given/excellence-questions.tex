@@ -1,50 +1,93 @@
-\documentclass[17pt,a4paper,landscape]{extarticle}
-\usepackage[margin=2.35cm,top=0.12cm,left=1.05cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{tasks}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-\settasks{label=\textbf{\arabic*.}, label-width=2.2em, item-indent=2.95em, column-sep=2.1cm, after-item-skip=4.7em}
-\renewcommand{\arraystretch}{1.15}
 \everymath{\displaystyle}
 
-\begin{document}
-\sffamily
-\boldmath
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
 
-\boldmath
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
 
-\boldmath
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
-\boldmath
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.245\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
 
-\boldmath
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
 
-{\LARGE \textbf{Excellence}}
-\begin{tasks}(3)
-\task A student says 15\% of \mbox{$80$} is \mbox{$6$}. Are they correct? Explain.
-\task A student says 125\% of \mbox{$40$} must be less than \mbox{$40$}. Are they correct? Explain.
-\task Find 17\% of \mbox{$300$}.
-\task Find 32\% of \mbox{$125$}.
-\task Find 7.5\% of \mbox{$80$}.
-\task Find 2.5\% of \mbox{$360$}.
-\task Find 110\% of \mbox{$45$}.
-\task Find 62.5\% of \mbox{$48$}.
-\task A phone costs \$240. Find 12.5\% of the price.
-\task A tank holds \mbox{$320$} L. Find 7.5\% of its capacity.
-\task A test has \mbox{$80$} marks. Mere gets 65\% of the marks. How many marks is that?
-\task A crowd of \mbox{$240$} people attend a game. If 35\% wear black, how many people is that?
-\task Fill in the blank: 12\% of \mbox{$250$} is \mbox{$\square$}.
-\task Fill in the blank: 62.5\% of \mbox{$16$} is \mbox{$\square$}.
-\task Which is greater: 35\% of \mbox{$120$} or 42\% of \mbox{$100$}? Show enough working to justify.
-\task Which is smaller: 12.5\% of \mbox{$64$} or 20\% of \mbox{$40$}? Explain.
-\task A \$150 bike helmet is discounted by 20\%. How many dollars is 20\%?
-\task Explain why 150\% of a quantity is greater than the whole quantity.
-\end{tasks}
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
 
+\begin{document}\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A student says 15\% of \mbox{$80$} is \mbox{$6$}. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A student says 125\% of \mbox{$40$} must be less than \mbox{$40$}. Are they correct? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Find 17\% of \mbox{$300$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Find 32\% of \mbox{$125$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Find 7.5\% of \mbox{$80$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Find 2.5\% of \mbox{$360$}.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Find 110\% of \mbox{$45$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Find 62.5\% of \mbox{$48$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A phone costs \$240. Find 12.5\% of the price.}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A tank holds \mbox{$320$} L. Find 7.5\% of its capacity.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A test has \mbox{$80$} marks. Mere gets 65\% of the marks. How many marks is that?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A crowd of \mbox{$240$} people attend a game. If 35\% wear black, how many people is that?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{Fill in the blank: 12\% of \mbox{$250$} is \mbox{$\square$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Fill in the blank: 62.5\% of \mbox{$16$} is \mbox{$\square$}.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Which is greater: 35\% of \mbox{$120$} or 42\% of \mbox{$100$}? Show enough working to justify.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{Which is smaller: 12.5\% of \mbox{$64$} or 20\% of \mbox{$40$}? Explain.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A \$150 bike helmet is discounted by 20\%. How many dollars is 20\%?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Explain why 150\% of a quantity is greater than the whole quantity.}\end{column}
+\end{columns}
+\end{frame}
 \end{document}
