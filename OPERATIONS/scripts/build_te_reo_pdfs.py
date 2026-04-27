@@ -87,17 +87,17 @@ def build_tex(terms: list[dict]) -> str:
 
     # Arrange 2 per row using a tabular for clean, wide columns
     cols_per_row = 2
-    tabular_rows = []
+    rows = []
     for i in range(0, len(cards), cols_per_row):
         chunk = cards[i:i+cols_per_row]
         cells = " & ".join(chunk)
-        # Pad with empty cells if odd
         if len(chunk) < cols_per_row:
             cells += " & \\hfill"
-        tabular_rows.append(f"{cells} \\\\[2.0em]")
+        rows.append(cells)
     
     all_cards_text = "\\begin{tabular}{c@{\\hskip 1.5em}c}\n"
-    all_cards_text += "\n".join(tabular_rows)
+    all_cards_text += " \\\\[2.5em]\n".join(rows)
+    all_cards_text += " \\\\"
     all_cards_text += "\n\\end{tabular}"
     latex = template.replace("TERM_CARDS", all_cards_text.strip())
     return latex
