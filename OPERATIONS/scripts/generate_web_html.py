@@ -358,18 +358,7 @@ def render_te_reo_panel(terms: list[dict], slug: str) -> str:
         for t in terms
     )
 
-    # Previews for notes PDF
-    previews = load_cached_previews(slug)
-    notes_pages = previews.get("notes", [])
-
-    preview_strip = ""
-    if notes_pages:
-        pages_li = "".join(
-            f'<li><img class="pdf-preview-thumb" src="{url}" alt="" loading="lazy" /></li>'
-            for url in notes_pages
-        )
-        preview_strip = f'<ul class="pdf-preview-strip">{pages_li}</ul>'
-
+    # Just the term grid — preview lives in the notes panel below
     return f'''
       <section class="lo-panel te-reo-panel">
         <div class="lo-panel-head">
@@ -393,12 +382,8 @@ def render_notes_panel(notes: dict | None, slug: str) -> str:
     notes_pages = previews.get("notes", [])
 
     preview_html = ""
-    if notes_pages:
-        pages_li = "".join(
-            f'<li><img class="pdf-preview-thumb" src="{url}" alt="" loading="lazy" /></li>'
-            for url in notes_pages
-        )
-        preview_html = f'<ul class="pdf-preview-strip">{pages_li}</ul>'
+    if notes_pages and len(notes_pages) > 0:
+        preview_html = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{notes_pages[0]}" alt="" loading="lazy" /></div>'
 
     pdf_button = f'<a class="button" href="{pdf_url}" target="_blank" rel="noopener">Open notes PDF</a>' if pdf_url else ""
     return f'''
@@ -433,25 +418,12 @@ def render_module_card(level: dict, slug: str) -> str:
     solutions_pdf = f"../solutions-pdfs/{slug}/{key}-answers.pdf"
     solutions_exists = (SOLUTIONS_OUTPUT_DIR / slug / f"{key}-answers.pdf").exists()
 
-    # Previews
+    # Preview — just the first page of the tasks PDF
     previews = load_cached_previews(slug)
-    tasks_previews = previews.get(f"{key}-tasks", [])
-    solutions_previews = previews.get(f"{key}-solutions", [])
-
-    # Build preview strip — show up to 3 page thumbnails
-    all_previews = tasks_previews + solutions_previews
+    tasks_pages = previews.get(f"{key}-tasks", [])
     preview_thumbnails = ""
-    if tasks_previews:
-        thumbs = "".join(
-            f'<li><img class="pdf-preview-thumb" src="{url}" alt="" loading="lazy" /></li>'
-            for url in tasks_previews[:3]
-        )
-        if solutions_previews:
-            thumbs += "".join(
-                f'<li><img class="pdf-preview-thumb" src="{url}" alt="" loading="lazy" /></li>'
-                for url in solutions_previews[:3]
-            )
-        preview_thumbnails = f'<ul class="pdf-preview-strip">{thumbs}</ul>'
+    if tasks_pages and len(tasks_pages) > 0:
+        preview_thumbnails = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{tasks_pages[0]}" alt="" loading="lazy" /></div>'
 
     tasks_button = (
         f'<a class="button" href="{tasks_pdf}" target="_blank" rel="noopener">Open tasks PDF</a>'
