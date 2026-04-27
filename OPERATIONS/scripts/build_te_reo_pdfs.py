@@ -85,20 +85,21 @@ def build_tex(terms: list[dict]) -> str:
         url = escape(t.get("te_aka_word_url", ""))
         cards.append(f"\\TermCard{{{maori}}}{{{english}}}{{{url}}}")
 
-    # Arrange 2 per row using a tabular for clean, wide columns
+    # Arrange 2 per row with explicit \vspace between rows
     cols_per_row = 2
     rows = []
     for i in range(0, len(cards), cols_per_row):
         chunk = cards[i:i+cols_per_row]
         cells = " & ".join(chunk)
-        if len(chunk) < cols_per_row:
-            cells += " & \\hfill"
         rows.append(cells)
     
-    all_cards_text = "\\begin{tabular}{c@{\\hskip 1.5em}c}\n"
-    all_cards_text += " \\\\[2.5em]\n".join(rows)
-    all_cards_text += " \\\\"
-    all_cards_text += "\n\\end{tabular}"
+    all_cards_text = "\\vspace*{\\fill}\n"
+    all_cards_text += "\\begin{tabular}{c@{\\hskip 1.5em}c}\n"
+    all_cards_text += f"  {rows[0]} \\\\\n"
+    all_cards_text += "  \\TabRowGap\n"
+    all_cards_text += f"  {rows[1]}\n" if len(rows) > 1 else ""
+    all_cards_text += "\\end{tabular}\n"
+    all_cards_text += "\\vspace*{\\fill}"
     latex = template.replace("TERM_CARDS", all_cards_text.strip())
     return latex
 
