@@ -425,7 +425,7 @@ def render_module_card(level: dict, slug: str) -> str:
 
     return f'''
       <section class="module-card" style="--card-accent: {accent};">
-        <div class="scaffold-koru-group">{icon_html}</div>
+        {icon_html}
         {preview_thumbnails}
         <div class="module-card-actions">
           {tasks_button}
