@@ -26,6 +26,7 @@ SITE_DIR = REPO_ROOT / "SITE"
 OBJECTIVES_DIR = REPO_ROOT / "OBJECTIVES"
 SOLUTIONS_DIR = SITE_DIR / "solutions-pdfs"
 NOTES_DIR = SITE_DIR / "notes-pdfs"
+TE_REO_DIR = SITE_DIR / "te-reo-pdfs"
 PREVIEWS_DIR = SITE_DIR / "previews"
 
 LO_TRACKER_JSON = OPERATIONS_DIR / "data" / "lo-tracker.json"
@@ -67,6 +68,11 @@ def generate_lo_previews(slug: str) -> int:
     notes_pdf = NOTES_DIR / f"{slug}.pdf"
     if notes_pdf.exists():
         sources.append(("notes", notes_pdf, False))
+
+    # Te reo PDF
+    te_reo_pdf = TE_REO_DIR / f"{slug}.pdf"
+    if te_reo_pdf.exists():
+        sources.append(("te-reo", te_reo_pdf, False))
 
     if not sources:
         return 0

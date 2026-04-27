@@ -343,7 +343,7 @@ def load_objectives() -> list[dict]:
 
 
 def render_te_reo_panel(terms: list[dict], slug: str) -> str:
-    """Render te reo Māori terms as a compact panel pointing to the notes PDF (which includes those terms)."""
+    """Render te reo Māori terms as compact cards with a PDF preview."""
     if not terms:
         return ""
 
@@ -358,16 +358,25 @@ def render_te_reo_panel(terms: list[dict], slug: str) -> str:
         for t in terms
     )
 
-    # Just the term grid — preview lives in the notes panel below
+    # Show the te reo PDF preview
+    previews = load_cached_previews(slug)
+    te_reo_preview = previews.get("te-reo", [])
+    preview_html = ""
+    if te_reo_preview and len(te_reo_preview) > 0:
+        preview_html = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{te_reo_preview[0]}" alt="" loading="lazy" /></div>'
+    elif previews.get("notes") and len(previews["notes"]) > 0:
+        preview_html = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{previews["notes"][0]}" alt="" loading="lazy" /></div>'
+
     return f'''
       <section class="lo-panel te-reo-panel">
         <div class="lo-panel-head">
           <h3>Te reo Māori terms</h3>
-          <a class="button button-secondary" href="../notes-pdfs/{slug}.pdf" target="_blank" rel="noopener">Open notes PDF</a>
+          <a class="button button-secondary" href="../te-reo-pdfs/{slug}.pdf" target="_blank" rel="noopener">Open terms PDF</a>
         </div>
         <div class="te-reo-grid">
           {items_html}
         </div>
+        {preview_html}
       </section>
     '''
 

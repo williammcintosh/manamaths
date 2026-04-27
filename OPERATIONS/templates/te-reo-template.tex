@@ -1,0 +1,40 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{termcard}{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=10pt,left=10pt,right=10pt,top=8pt,bottom=8pt,width=0.3\textwidth,valign=top}
+
+\begin{document}
+{\small
+\begin{frame}[t]
+\vspace{0.8em}
+{\colorbox{mmtanSoft}{\parbox{\textwidth}{\centering\bfseries\LARGE\color{mmgreenDeep} Te reo Māori terms}}}
+\vspace{1em}
+
+\centering
+TERM_CARDS
+
+\vfill
+{\color{mmgreenLeaf}\small Terms sourced from NZQA Mathematics and Statistics vocabulary list.
+\normalsize}
+\end{frame}
+}
+\end{document}
