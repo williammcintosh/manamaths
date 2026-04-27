@@ -107,9 +107,10 @@ def build_tex(terms: list[dict]) -> str:
 
 
 def build_te_reo_pdf(slug: str, terms: list[dict]) -> int:
-    """Generate the te reo PDF for this LO. Returns 0 on success."""
+    """Generate the te reo PDF for this LO. Outputs both .tex and .pdf to te-reo-pdfs/. Returns 0 on success."""
     TE_REO_PDF_DIR.mkdir(parents=True, exist_ok=True)
     out_path = TE_REO_PDF_DIR / f"{slug}.pdf"
+    tex_out_path = TE_REO_PDF_DIR / f"{slug}.tex"
     preview_dir = PREVIEWS_DIR / slug
     preview_dir.mkdir(parents=True, exist_ok=True)
 
@@ -126,8 +127,10 @@ def build_te_reo_pdf(slug: str, terms: list[dict]) -> int:
         if logo_src.exists():
             import shutil
             shutil.copy2(logo_src, logo_dst)
-        # Debug: save the tex content
-        (build_dir / "debug.tex").write_text(tex_content)
+
+        # Save the .tex to the repo alongside the PDF
+        tex_out_path.write_text(tex_content)
+        print(f"  tex: {tex_out_path}")
 
         result = subprocess.run(
             [TECTONIC, "-p", "te-reo.tex"],
@@ -141,7 +144,6 @@ def build_te_reo_pdf(slug: str, terms: list[dict]) -> int:
         # tectonic outputs to build_dir/te-reo.pdf
         built_pdf = build_dir / "te-reo.pdf"
         if built_pdf.exists():
-            import shutil
             shutil.copy2(built_pdf, out_path)
             # Generate preview
             PYTHON = "/tmp/pdfenv/bin/python3"
@@ -165,8 +167,6 @@ doc.close()
             return 1
     finally:
         import shutil
-        # Keep build artifacts for debugging:
-        print(f"  Build dir: {build_dir}", file=sys.stderr)
         # shutil.rmtree(build_dir, ignore_errors=True)
 
 

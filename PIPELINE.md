@@ -59,7 +59,7 @@ A full LO also includes **solutions** (answer PDFs via `mm-solutions` skill in `
 - **Tasks** (worksheets): `mm-tasks` skill  
 - **Solutions** (answer PDFs): `mm-solutions` skill  
 - **Notes** (teaching notes): `mm-notes` skill  
-- **Te reo** (Māori terms): `mm-te-reo` skill  
+- **Te reo** (Māori terms): `mm-te-reo` skill. Generated via `build_te_reo_pdfs.py` — reads `OPERATIONS/data/te-reo-progress.json`, writes both `.tex` and `.pdf` to `SITE/te-reo-pdfs/`. The `.tex` is committed to the repo alongside the PDF so it can be hand-edited and recompiled directly. Template at `OPERATIONS/templates/te-reo-template.tex`.
 - **Resources**: `mm-resources` skill
 
 ## Preferred commands
