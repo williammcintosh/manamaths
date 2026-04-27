@@ -1,0 +1,76 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\hypersetup{colorlinks=true,urlcolor=mmgreenLeaf}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{header-logo.png}}}
+
+\newcommand{\TermTitle}[1]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.00em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon\hspace{0.45em}}}}
+  \par\vspace{0.00em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.3em}}
+}
+
+% Full-page black rounded border matching worksheet PDFs
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\newtcolorbox{termcard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=6pt,right=6pt,top=5pt,bottom=5pt,width=\linewidth,height=2.8cm,valign=center,before skip=0pt,after skip=0pt,#1}
+
+\newcommand{\TermCard}[3]{%
+  \begin{minipage}{0.49\textwidth}
+    \centering
+    \begin{termcard}
+      \centering
+      {\bfseries\LARGE #1\par}
+      \vspace{0.1em}
+      \small #2\par
+      \vspace{0.2em}
+      \href{#3}{\footnotesize\color{mmgreenLeaf} Open in Te Aka}
+    \end{termcard}%
+  \end{minipage}%
+}
+
+\begin{document}
+\begin{frame}[t]
+\TermTitle{Te reo Māori terms}
+
+\vspace*{\fill}
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cc}
+ \TermCard{taurangi}{variable}{https://maoridictionary.co.nz/word/51632} & \TermCard{kīanga}{expression}{https://maoridictionary.co.nz/word/2607} \\
+ \multicolumn{2}{c}{\rule{0pt}{0.45cm}} \\[-0.1cm]
+ \TermCard{whakakapi}{substitute / replace}{https://maoridictionary.co.nz/word/9501} & \TermCard{aromatawai}{evaluate / assess}{https://maoridictionary.co.nz/word/49666} \\
+\end{tabular*}
+\end{center}
+\vspace*{\fill}
+
+\end{frame}
+\end{document}

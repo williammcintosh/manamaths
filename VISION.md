@@ -29,7 +29,7 @@ The website should show teachers what is inside each learning objective in a cle
 - prerequisite knowledge
 - teaching notes
 - module cards
-- Foundation / Proficient / Excellence sections
+- Start / Build / Push module cards
 - links or buttons to export/download PDFs
 - eventually options for Google Slides, Google Classroom, and OneNote
 
@@ -85,7 +85,7 @@ Bot modifies the module selection or difficulty mix.
 Teacher exports the final version as PDF, Slides, or OneNote-friendly content.
 
 Example future commands:
-- remove Foundation questions
+- remove Start Tasks (foundation) questions
 - add more entry-level decimal place value questions
 - make this shorter
 - make this a 20-minute starter

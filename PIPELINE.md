@@ -28,7 +28,7 @@ An LO is done only when all of these are true:
 - `proficient-questions.tex` exists
 - `excellence-questions.tex` exists
 - each scaffold targets 27 problems by default (3 sets of 9) unless the task explicitly calls for a different count
-- worksheet print headers use the LO title only plus scaffold label; do not show internal codes like `Topic 1 LO1` and do not show `Set 1/2/3`
+- worksheet print headers show the module name only (Start Tasks / Build Tasks / Push Tasks) with hoe icons — no LO title in header; the LO title belongs on a combined title page
 - worksheet print headers use the compact beamer spacing defaults so the first 3x3 page does not clip at the bottom
 - all three PDFs build cleanly
 - `SITE/objectives/lo-yr9-<slug>.html` exists
@@ -42,9 +42,9 @@ An LO is done only when all of these are true:
 
 1. choose the next LO from canonical + tracker + filesystem
 2. confirm the slug
-3. write Foundation questions
-4. write Proficient questions
-5. write Excellence questions
+3. write Start Tasks (foundation) questions
+4. write Build Tasks (proficient) questions
+5. write Push Tasks (excellence) questions
 6. make each scaffold 27 questions by default (3 sets of 9) unless told otherwise
 7. save them in `OBJECTIVES/lo-yr9-<slug>/`
 8. run the single-LO build
