@@ -364,55 +364,8 @@ h3 {
   color: var(--muted);
 }
 
-.te-reo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
-}
-
-.te-reo-card {
-  padding: 11px 12px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.92);
-}
-
-.te-reo-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 4px 10px;
-}
-
-.te-reo-card h3 {
-  margin: 0;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--muted);
-  line-height: 1.2;
-}
-
-.te-reo-word {
-  margin-bottom: 4px;
-  font-size: 0.98rem;
-  font-weight: 800;
-  color: var(--accent-deep);
-  line-height: 1.15;
-}
-
-.te-reo-card-note {
-  margin-bottom: 12px;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.te-reo-link {
-  font-weight: 700;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  line-height: 1.2;
-}
+/* Removed: .te-reo-grid, .te-reo-card, .te-reo-meta, .te-reo-word, .te-reo-link
+   — te reo terms now display as PDF preview only */
 
 .eyebrow {
   margin: 0 0 8px;

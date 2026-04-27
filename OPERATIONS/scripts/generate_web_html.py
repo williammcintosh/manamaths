@@ -343,38 +343,21 @@ def load_objectives() -> list[dict]:
 
 
 def render_te_reo_panel(terms: list[dict], slug: str) -> str:
-    """Render te reo Māori terms as compact cards with a PDF preview."""
+    """Render te reo Māori terms — shows PDF preview only, no HTML cards."""
     if not terms:
         return ""
 
-    items_html = "".join(
-        f'''<article class="te-reo-card">
-        <p class="te-reo-word">{html.escape(str(t.get("te_reo_maori_term") or ""))}</p>
-        <div class="te-reo-meta">
-          <h3>{html.escape(str(t.get("english_term") or ""))}</h3>
-          <a class="te-reo-link" href="{html.escape(str(t.get("te_aka_word_url") or "#"))}" target="_blank" rel="noopener noreferrer">Open in Te Aka</a>
-        </div>
-      </article>'''
-        for t in terms
-    )
-
-    # Show the te reo PDF preview
     previews = load_cached_previews(slug)
     te_reo_preview = previews.get("te-reo", [])
     preview_html = ""
     if te_reo_preview and len(te_reo_preview) > 0:
         preview_html = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{te_reo_preview[0]}" alt="" loading="lazy" /></div>'
-    elif previews.get("notes") and len(previews["notes"]) > 0:
-        preview_html = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{previews["notes"][0]}" alt="" loading="lazy" /></div>'
 
     return f'''
       <section class="lo-panel te-reo-panel">
         <div class="lo-panel-head">
           <h3>Te reo Māori terms</h3>
           <a class="button button-secondary" href="../te-reo-pdfs/{slug}.pdf" target="_blank" rel="noopener">Open terms PDF</a>
-        </div>
-        <div class="te-reo-grid">
-          {items_html}
         </div>
         {preview_html}
       </section>
