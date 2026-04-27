@@ -85,20 +85,29 @@ def build_tex(terms: list[dict]) -> str:
         url = escape(t.get("te_aka_word_url", ""))
         cards.append(f"\\TermCard{{{maori}}}{{{english}}}{{{url}}}")
 
-    # Arrange 3 per row using \hfill
+    # Arrange 2 per row using columns for even height
+    cols_per_row = 2
     rows = []
-    for i in range(0, len(cards), 3):
-        chunk = cards[i:i+3]
-        n = len(chunk)
-        if n == 1:
-            # Single card — center it
-            row = "\\hspace*{\\fill}\n" + chunk[0] + "\n\\hspace*{\\fill}"
-        elif n == 2:
-            # Two cards — spread evenly
-            row = "\\hspace*{\\fill}\n" + "\\hfill\n".join(chunk) + "\n\\hspace*{\\fill}"
-        else:
-            row = "\\hfill\n".join(chunk)
-        rows.append(row)
+    for i in range(0, len(cards), cols_per_row):
+        chunk = cards[i:i+cols_per_row]
+        columns = ""
+        for idx, card in enumerate(chunk):
+            columns += (
+                "\\begin{column}{0.47\\textwidth}\n"
+                "  \\centering\n"
+                f"  {card}\n"
+                "\\end{column}\n"
+            )
+        for _ in range(cols_per_row - len(chunk)):
+            columns += "\\begin{column}{0.47\\textwidth}\\end{column}\n"
+        rows.append(
+            "\\begin{columns}[t,onlytextwidth]\n"
+            f"{columns}"
+            "\\end{columns}"
+        )
+
+    all_cards_text = "\\vspace*{\\fill}\n".join(rows)
+    all_cards_text += "\n\\vspace*{\\fill}"
 
     all_cards_text = "\n\n\\vspace{0.3em}\n\n".join(rows)
     latex = template.replace("TERM_CARDS", all_cards_text.strip())
