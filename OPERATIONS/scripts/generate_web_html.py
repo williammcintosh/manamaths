@@ -398,8 +398,7 @@ def render_module_card(level: dict, slug: str) -> str:
 
     icon_count = {"foundation": 1, "proficient": 2, "excellence": 3}.get(key, 1)
     icon_html = "".join(
-        '<img src="../hoe.png" alt="" aria-hidden="true" />'
-        for _ in range(icon_count)
+        "" for _ in range(icon_count)
     )
 
     solutions_pdf = f"../solutions-pdfs/{slug}/{key}-answers.pdf"
