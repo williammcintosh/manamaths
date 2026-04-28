@@ -351,7 +351,7 @@ def render_te_reo_panel(terms: list[dict], slug: str) -> str:
     te_reo_preview = previews.get("te-reo", [])
     preview_html = ""
     if te_reo_preview and len(te_reo_preview) > 0:
-        preview_html = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{te_reo_preview[0]}" alt="" loading="lazy" /></div>'
+        preview_html = f'<div class="preview-figure"><a href="../te-reo-pdfs/{slug}.pdf" target="_blank" rel="noopener"><img class="pdf-preview-thumb" src="{te_reo_preview[0]}" alt="" loading="lazy" /></a></div>'
 
     return f'''
       <section class="module-card" style="--card-accent: #85b24a;">
@@ -374,7 +374,7 @@ def render_notes_panel(notes: dict | None, slug: str) -> str:
 
     preview_html = ""
     if notes_pages and len(notes_pages) > 0:
-        preview_html = f'<div class="preview-figure"><img class="pdf-preview-thumb" src="{notes_pages[0]}" alt="" loading="lazy" /></div>'
+        preview_html = f'<div class="preview-figure"><a href="{pdf_url}" target="_blank" rel="noopener"><img class="pdf-preview-thumb" src="{notes_pages[0]}" alt="" loading="lazy" /></a></div>'
 
     pdf_button = f'<a class="button" href="{pdf_url}" target="_blank" rel="noopener">Open notes PDF</a>' if pdf_url else ""
     return f'''
