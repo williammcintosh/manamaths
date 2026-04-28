@@ -1,0 +1,1032 @@
+{
+  "schema": "manamaths/meets-expectations.v1",
+  "generatedAt": "2026-04-28",
+  "summary": {
+    "total": 127,
+    "meetsExpectation": 3,
+    "needsNotes": 0,
+    "needsSolutions": 3,
+    "needsNotesAndSolutions": 121,
+    "needsEverything": 0,
+    "needsTeReo": 0,
+    "needsTasks": 0
+  },
+  "learningObjectives": [
+    {
+      "objectiveId": "YR9_T1_EX01",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles",
+      "displayTitle": "Perimeter and area of composite shapes involving circles",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_EX02",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-drawing-nets-of-basic-shapes",
+      "displayTitle": "Drawing nets of basic shapes",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_EX03",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-surface-area",
+      "displayTitle": "Surface area",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_EX04",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-volume-of-other-3d-shapes-cylinders-cones-pyramids-spheres-etc",
+      "displayTitle": "Volume of other 3D shapes (cylinders, cones, pyramids, spheres, etc)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_EX05",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-forming-measurement-expressions",
+      "displayTitle": "Forming measurement expressions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_EX06",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-solving-measurement-equations",
+      "displayTitle": "Solving measurement equations",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_EX07",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-advanced-power-rules",
+      "displayTitle": "Advanced Power Rules",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO1",
+      "canonicalTopicId": "T1",
+      "status": "meets_expectation",
+      "slug": "lo-yr9-place-values-and-decimals",
+      "displayTitle": "Place Values and Decimals",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO10",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-time",
+      "displayTitle": "Time",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO11",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-reading-scales",
+      "displayTitle": "Reading scales",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO12",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-weight",
+      "displayTitle": "Weight",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO13",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-capacity",
+      "displayTitle": "Capacity",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO14",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-converting-between-length-units",
+      "displayTitle": "Converting between length units",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO15",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-estimating-lengths-from-scale-drawings-and-photos",
+      "displayTitle": "Estimating lengths from scale drawings and photos",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO16",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-perimeter-shapes-with-straight-edges-only",
+      "displayTitle": "Perimeter (shapes with straight edges only)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO17",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite",
+      "displayTitle": "Area of basic shapes only (squares, rectangles, triangles, parallelograms, kite)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO18",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-area-of-l-shapes-and-composite-shapes",
+      "displayTitle": "Area of L-shapes and composite shapes",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO19",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-area-of-trapezium",
+      "displayTitle": "Area of trapezium",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO2",
+      "canonicalTopicId": "T1",
+      "status": "meets_expectation",
+      "slug": "lo-yr9-rounding-to-decimal-points",
+      "displayTitle": "Rounding to Decimal Points",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO20",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-circumference-and-area-of-circles",
+      "displayTitle": "Circumference and area of circles",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO21",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-volume-of-cubes-and-cuboids",
+      "displayTitle": "Volume of cubes and cuboids",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO22",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-volume-of-prism",
+      "displayTitle": "Volume of prism",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO23",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-liquid-volume",
+      "displayTitle": "Liquid volume",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO3",
+      "canonicalTopicId": "T1",
+      "status": "meets_expectation",
+      "slug": "lo-yr9-multiplying-dividing-by-10-100-1000",
+      "displayTitle": "Multiplying and dividing by 10,100,1000",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO4",
+      "canonicalTopicId": "T1",
+      "status": "needs_solutions",
+      "slug": "lo-yr9-scientific-notation",
+      "displayTitle": "Scientific notation",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO5",
+      "canonicalTopicId": "T1",
+      "status": "needs_solutions",
+      "slug": "lo-yr9-integers",
+      "displayTitle": "Integers",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO6",
+      "canonicalTopicId": "T1",
+      "status": "needs_solutions",
+      "slug": "lo-yr9-powers-and-roots",
+      "displayTitle": "Powers & Roots",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO7",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-gema-bedmas",
+      "displayTitle": "GEMA (formerly BEDMAS)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO8",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-substitution",
+      "displayTitle": "Substitution",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T1_LO9",
+      "canonicalTopicId": "T1",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-measurement-prefixes",
+      "displayTitle": "Measurement prefixes",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_EX01",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-mixed-numbers",
+      "displayTitle": "Mixed Numbers",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_EX02",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-prime-factors",
+      "displayTitle": "Prime Factors",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_EX03",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-basic-power-rules",
+      "displayTitle": "Basic Power Rules",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_EX04",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-expanding-double-brackets",
+      "displayTitle": "Expanding double brackets",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_EX05",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-factorising-double-brackets-with-a-co-efficient-equal-to-1",
+      "displayTitle": "Factorising double brackets (with a co-efficient equal to 1)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_EX06",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares",
+      "displayTitle": "Factorising special double brackets (perfect squares, difference between squares)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_EX07",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-solving-equations-with-fractions",
+      "displayTitle": "Solving equations with fractions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_EX08",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-solving-quadratics",
+      "displayTitle": "Solving quadratics",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_EX09",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-simplifying-algebraic-fractions",
+      "displayTitle": "Simplifying algebraic fractions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO1",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-forming-fractions",
+      "displayTitle": "Forming Fractions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO10",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-multiples-and-lowest-common-multiples",
+      "displayTitle": "Multiples & Lowest Common Multiples",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO11",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-factors-highest-common-factors-and-primes",
+      "displayTitle": "Factors, Highest Common Factors & Primes",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO12",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-irrational-numbers",
+      "displayTitle": "Irrational numbers",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO13",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-forming-expressions",
+      "displayTitle": "Forming expressions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO14",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-multiplying-expressions-no-powers",
+      "displayTitle": "Multiplying Expressions (no powers)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO15",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-adding-and-subtracting-expressions-like-terms",
+      "displayTitle": "Adding and Subtracting Expressions (Like Terms)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO16",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-multiplying-expressions-with-powers",
+      "displayTitle": "Multiplying Expressions (with powers)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO17",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-dividing-expressions",
+      "displayTitle": "Dividing Expressions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO18",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-simplifying-expressions-with-gema-bedmas",
+      "displayTitle": "Simplifying Expressions with GEMA / BEDMAS",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO19",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-expanding-single-brackets",
+      "displayTitle": "Expanding single brackets",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO2",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-equivalent-fractions",
+      "displayTitle": "Equivalent Fractions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO20",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-factorising-single-brackets",
+      "displayTitle": "Factorising single brackets",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO22",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-defining-variables-and-forming-equations",
+      "displayTitle": "Defining Variables & Forming Equations",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO23",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-solving-1-step-equations",
+      "displayTitle": "Solving 1-step equations",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO24",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-solving-2-step-equations",
+      "displayTitle": "Solving 2-step equations",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO25",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-solving-equations-with-variables-on-both-sides",
+      "displayTitle": "Solving equations with variables on both sides",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO26",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-forming-and-solving-equations-from-context",
+      "displayTitle": "Forming and solving equations from context",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO27",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-solving-inequalities",
+      "displayTitle": "Solving inequalities",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO28",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-re-arranging-formula",
+      "displayTitle": "Re-arranging formula",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO3",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-simplifying-fractions",
+      "displayTitle": "Simplifying Fractions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO4",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-converting-between-improper-fractions-and-mixed-numbers",
+      "displayTitle": "Converting between improper fractions and mixed numbers",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO5",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-adding-and-subtracting-fractions",
+      "displayTitle": "Adding and subtracting fractions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO6",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-multiplying-fractions",
+      "displayTitle": "Multiplying fractions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO7",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-reciprocals",
+      "displayTitle": "Reciprocals",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO8",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-dividing-fractions",
+      "displayTitle": "Dividing fractions",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T2_LO9",
+      "canonicalTopicId": "T2",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-finding-fractions-of-a-quantity",
+      "displayTitle": "Finding fractions of quantity",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_EX01",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-reverse-percentage",
+      "displayTitle": "Reverse percentage",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_EX02",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-linear-model-for-scatter-plots",
+      "displayTitle": "Linear model for scatter plots",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_EX03",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-sampling-variation",
+      "displayTitle": "Sampling variation",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_EX04",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-sampling-methodology",
+      "displayTitle": "Sampling methodology",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO1",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-relationship-between-percentages-fractions-and-decimals",
+      "displayTitle": "Relationship between percentages, fractions, and decimals",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO10",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-expected-number",
+      "displayTitle": "Expected Number",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO11",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-investigation-types",
+      "displayTitle": "Investigation types",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO12",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-types-of-data",
+      "displayTitle": "Types of data",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO13",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-calculating-averages-and-range",
+      "displayTitle": "Calculating averages and range",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO14",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-quartiles",
+      "displayTitle": "Quartiles",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO15",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-selecting-appropriate-displays",
+      "displayTitle": "Selecting appropriate displays",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO16",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-interpreting-pie-charts-pictograms",
+      "displayTitle": "Interpreting pie charts & pictograms",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO17",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-interpreting-bar-graphs-histograms",
+      "displayTitle": "Interpreting bar graphs & histograms",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO18",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-writing-a-statistical-paragraph",
+      "displayTitle": "Writing a statistical paragraph",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO19",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-analysing-time-series-graphs-tsn",
+      "displayTitle": "Analysing time series graphs - TSN",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO2",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-forming-percentages",
+      "displayTitle": "Forming percentages",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO20",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog",
+      "displayTitle": "Analysing scatter plots (i.e. bivariate) - TARSOG",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO21",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-comparing-box-and-whisker-graphs-cssi",
+      "displayTitle": "Comparing box-and-whisker graphs - CSSI",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO22",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-misleading-graphs",
+      "displayTitle": "Misleading graphs",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO23",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-planning-and-collecting-multivariate-data",
+      "displayTitle": "Planning and collecting multivariate data",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO3",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-percentage-of-a-given",
+      "displayTitle": "Percentage of a given quantity",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO4",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-increasing-and-decreasing-by-a-given-percentage",
+      "displayTitle": "Increasing and decreasing by a given percentage",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO5",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-tools-of-chance",
+      "displayTitle": "Tools of chance",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO6",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-f-t",
+      "displayTitle": "F/T",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO7",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-probabilities-from-experiments-and-statistical-displays",
+      "displayTitle": "Probabilities from experiments and statistical displays",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO8",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-trees-combined-events",
+      "displayTitle": "Trees/Combined Events",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T3_LO9",
+      "canonicalTopicId": "T3",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-two-way-tables",
+      "displayTitle": "Two-way tables",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_EX01",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-using-algebra-to-find-the-point-of-intersection-of-two-lines",
+      "displayTitle": "Using algebra to find the point of intersection of two lines",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_EX02",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-forming-equation-of-parabolas",
+      "displayTitle": "Forming equation of parabolas",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_EX03",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-using-features-of-a-parabola-to-solve-problems",
+      "displayTitle": "Using features of a parabola to solve problems",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_EX04",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-drawing-exponential-graphs",
+      "displayTitle": "Drawing exponential graphs",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO1",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
+      "displayTitle": "Extrapolating linear, quadratic, and exponential patterns",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO10",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-forming-equations-of-horizontal-and-vertical-lines",
+      "displayTitle": "Forming equations of horizontal and vertical lines",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO11",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-finding-point-of-intersection-of-two-lines",
+      "displayTitle": "Finding point of intersection of two lines",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO12",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-drawing-parabola-from-given-equation",
+      "displayTitle": "Drawing parabola from given equation",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO13",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-using-tables-to-explore-patterns-and-graphs",
+      "displayTitle": "Using tables to explore patterns and graphs",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO14",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-applying-straight-line-graphs-to-solve-problems",
+      "displayTitle": "Applying straight line graphs to solve problems",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO2",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
+      "displayTitle": "Identifying linear, quadratic, and exponential patterns",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO3",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern",
+      "displayTitle": "Spatial patterns (including drawing next pattern and converting to pattern)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO4",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern",
+      "displayTitle": "Determining nth term of pattern or spatial pattern",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO5",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-understanding-cartesian-plane-and-co-ordinates",
+      "displayTitle": "Understanding Cartesian plane and co-ordinates",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO6",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-drawing-straight-line-from-given-equation",
+      "displayTitle": "Drawing straight-line from given equation",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO7",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-gradient",
+      "displayTitle": "Gradient",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO8",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-finding-x-and-y-intercepts",
+      "displayTitle": "Finding x- and y-intercepts",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T4_LO9",
+      "canonicalTopicId": "T4",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-forming-equations-of-given-straight-line-graph-using-y-mx-c",
+      "displayTitle": "Forming equations of given straight line graph (using y=mx+c)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_EX01",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
+      "displayTitle": "Using trig functions to calculate lengths of a right-angled triangle",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_EX02",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle",
+      "displayTitle": "Using trig functions to calculate angles of a right-angled triangle",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_EX03",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-applying-pythagoras-theory-to-3d-representations",
+      "displayTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_EX04",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-introduction-to-circle-geometry",
+      "displayTitle": "Introduction to Circle Geometry",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO1",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-naming-angles",
+      "displayTitle": "Naming angles",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO10",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-pythagorean-triples",
+      "displayTitle": "Pythagorean triples",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO11",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-transformation-translation-reflection-enlargement",
+      "displayTitle": "Transformation (Translation, reflection, enlargement)",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO12",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-representing-and-constructing-3d-shapes",
+      "displayTitle": "Representing and constructing 3D shapes",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO2",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-angles-around-a-point",
+      "displayTitle": "Angles around a point",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO3",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-angles-on-a-straight-line",
+      "displayTitle": "Angles on a straight line",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO4",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-vertically-opposite-angles",
+      "displayTitle": "Vertically opposite angles",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO5",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-interior-angles-of-a-triangle",
+      "displayTitle": "Interior angles of a triangle",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO6",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-parallel-line-rules",
+      "displayTitle": "Parallel line rules",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO7",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-regular-irregular-polygon",
+      "displayTitle": "Regular/irregular polygon",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO8",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-pythagoras-theory-finding-short-and-long-sides",
+      "displayTitle": "Pythagoras theory finding short and long sides",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "objectiveId": "YR9_T5_LO9",
+      "canonicalTopicId": "T5",
+      "status": "needs_notes_and_solutions",
+      "slug": "lo-yr9-applying-pythagoras-theory",
+      "displayTitle": "Applying Pythagoras\u2019 theory",
+      "lastUpdated": "2026-04-28"
+    }
+  ]
+}
