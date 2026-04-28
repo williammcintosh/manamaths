@@ -839,6 +839,11 @@ html[data-debug="1"] .objective-debug-code {
   max-width: 400px;
 }
 
+.preview-figure a {
+  display: block;
+  cursor: pointer;
+}
+
 .te-reo-panel .preview-figure {
   max-width: 400px;
 }
