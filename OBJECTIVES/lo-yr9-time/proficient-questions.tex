@@ -1,35 +1,118 @@
-% pages: [visual, visual]
-\documentclass[20pt,a4paper,landscape]{extarticle}
-\usepackage[margin=1.45cm,top=0.45cm,left=0.9cm,right=0.9cm,bottom=0.9cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
 \usepackage{graphicx}
-\usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
 \everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
 \begin{document}
-\sffamily
-\boldmath
-{\LARGE \textbf{Time — Build Tasks}}\par\vspace{0.35em}
-\begin{center}
-\includegraphics[width=0.94\linewidth,height=0.49\textheight,keepaspectratio]{web-diagrams/proficient-time-composite.png}
-\end{center}
-\vspace{0.35em}
-% Questions referencing the image above
-\noindent\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{1.} Read clock A. Write the time in words and in digital 24-hour format.\end{minipage}\hspace{0.05\linewidth}\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{2.} Read clock B. What is the time 35 minutes later? Write your answer in analogue terms and digital format.\end{minipage}\hspace{0.05\linewidth}\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{3.} Read clock C. A train departs at the time shown and takes 2 hours 15 minutes. What time does it arrive?\end{minipage}\par
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A train leaves 8:45 am and arrives 11:20 am. Journey time?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Convert 15:30 to 12-hour time.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Convert 7:15 pm to 24-hour time.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{How many minutes from 9:50 am to 11:15 am?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A movie starts 14:30 and lasts 1 h 55 min. End time?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{School starts 8:50 am and lunch is 12:15 pm. Time until lunch?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A bus trip takes 2 h 35 min. It leaves 10:45 am. Arrival?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Convert \mbox{$3.75\text{ h}$} to h and min.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Convert \mbox{$150\text{ min}$} to h and min.}\end{column}
+\end{columns}
+\end{frame}
 
-\vspace{1.0em}
-\begin{center}
-\includegraphics[width=0.94\linewidth,height=0.49\textheight,keepaspectratio]{web-diagrams/proficient-time-page2-diff.png}
-\end{center}
-\vspace{0.35em}
-% Page 2 visual questions (time differences)
-\noindent\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{4.} Read clock G and clock H. What is the time difference between G and H in hours and minutes?\end{minipage}\hspace{0.05\linewidth}\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{5.} If an event starts at clock G's time and runs for the difference you calculated in Q4, what time will it finish (24-hour)?\end{minipage}\hspace{0.05\linewidth}\begin{minipage}[t]{0.30\linewidth}\vspace{0pt}\textbf{6.} The digital panel shows 11:20. Convert that to analogue, and explain whether it matches clock H.\end{minipage}\par
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{10}{Cooking takes 45 min. Start 5:20 pm. Finish time?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{A game starts 6:40 pm and ends 8:05 pm. Duration?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{How many minutes from 13:25 to 15:00?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{13}{Convert 00:15 to 12-hour time.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{Convert 12:00 noon to 24-hour time.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{A lesson lasts 55 min. It starts 11:10 am. Finish time?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{16}{What time was it 1 h 20 min before 4:35 pm?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{Convert \mbox{$225\text{ min}$} to h and min.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{Convert \mbox{$2\text{ h }45\text{ min}$} to minutes.}\end{column}
+\end{columns}
+\end{frame}
 
-\vspace{1.0em}
-\noindent\textbf{7.} A digital clock shows 23:45. What is this in 12-hour time?\hfill
-\textbf{8.} A flight leaves at 06:50 and arrives at 09:15. How long is the flight?
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{How many seconds are in \mbox{$12\text{ min}$}?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{A ferry leaves 07:25 and arrives 09:05. Trip time?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{From 10:58 am to 12:03 pm is how many minutes?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{A meeting starts 3:15 pm and lasts 2 h 10 min. End time?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{Convert \mbox{$1.6\text{ h}$} to minutes.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{Convert \mbox{$95\text{ min}$} to h and min.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{A worker starts 8:05 am and works 7 h 30 min. Finish time?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{Convert 21:50 to 12-hour time.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{Convert 11:55 pm to 24-hour time.}\end{column}
+\end{columns}
+\end{frame}
 \end{document}
