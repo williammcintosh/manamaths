@@ -1,31 +1,112 @@
-\documentclass[20pt,a4paper,landscape]{extarticle}
-\usepackage[margin=1.45cm,top=0.45cm,left=0.9cm,right=0.9cm,bottom=0.9cm]{geometry}
+\documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
 \usepackage{graphicx}
-\usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
 \everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
 \begin{document}
-\sffamily
-\boldmath
-{\LARGE \textbf{Estimating lengths from scale drawings and photos --- Push Tasks}}\par\vspace{0.45em}
-\begin{center}
-\includegraphics[width=0.94\linewidth,height=0.49\textheight,keepaspectratio]{web-diagrams/excellence-composite.png}
-\end{center}
-\vspace{0.35em}
-\noindent\begin{minipage}[t]{0.275\linewidth}\vspace{0pt}\textbf{1.} Use the sign drawing to estimate the real dimensions in cm. Then say whether doubling both drawing lengths would double the real size.\end{minipage}\hspace{0.08\linewidth}\begin{minipage}[t]{0.275\linewidth}\vspace{0pt}\textbf{2.} Use the cabinet measurements to estimate the real cabinet height. Then decide whether $14$ m is clearly wrong.\end{minipage}\hspace{0.08\linewidth}\begin{minipage}[t]{0.275\linewidth}\vspace{0pt}\textbf{3.} Use the map to estimate the real distance between the two marked points. Then decide whether $9$ km is a fair estimate.\end{minipage}\par
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{1}{A map has scale 1:326. Distance on map is 6 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A map has scale 1:120. Distance on map is 2 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A map has scale 1:168. Distance on map is 3 cm. Real distance in km?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{4}{A map has scale 1:405. Distance on map is 7 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A map has scale 1:411. Distance on map is 3 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A map has scale 1:82. Distance on map is 4 cm. Real distance in km?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{7}{A map has scale 1:258. Distance on map is 7 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A map has scale 1:327. Distance on map is 6 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A map has scale 1:262. Distance on map is 8 cm. Real distance in km?}\end{column}
+\end{columns}
+\end{frame}
 
-\vspace{1.0em}
-\begin{center}
-\includegraphics[width=0.94\linewidth,height=0.49\textheight,keepaspectratio]{web-diagrams/excellence-composite-2.png}
-\end{center}
-\vspace{0.35em}
-\noindent\begin{minipage}[t]{0.275\linewidth}\vspace{0pt}\textbf{4.} Use the river map to estimate the real river length and explain whether $12$ km is reasonable.\end{minipage}\hspace{0.08\linewidth}\begin{minipage}[t]{0.275\linewidth}\vspace{0pt}\textbf{5.} Use the patio drawing to estimate the real dimensions in metres.\end{minipage}\hspace{0.08\linewidth}\begin{minipage}[t]{0.275\linewidth}\vspace{0pt}\textbf{6.} Use the tower measurements to estimate the real tower height and round to the nearest cm.\end{minipage}\par
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{10}{A map has scale 1:155. Distance on map is 1 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{A map has scale 1:265. Distance on map is 14 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{A map has scale 1:444. Distance on map is 7 cm. Real distance in km?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{13}{A map has scale 1:406. Distance on map is 10 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{A map has scale 1:488. Distance on map is 1 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{A map has scale 1:441. Distance on map is 15 cm. Real distance in km?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{16}{A map has scale 1:244. Distance on map is 10 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{A map has scale 1:53. Distance on map is 8 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{A map has scale 1:202. Distance on map is 6 cm. Real distance in km?}\end{column}
+\end{columns}
+\end{frame}
 
-\vspace{1.0em}
-\noindent\begin{minipage}[t]{0.46\linewidth}\vspace{0pt}\textbf{7.} A student says a gate drawn as $1.6$ cm on a $1:200$ scale must be $1.6$ m wide. Explain the mistake and give a better estimate.\end{minipage}\hfill\begin{minipage}[t]{0.46\linewidth}\vspace{0pt}\textbf{8.} A photo scale is $1$ cm : $30$ cm. An object is $6.1$ cm tall in the photo. Estimate the real height and state it in metres.\end{minipage}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{A map has scale 1:249. Distance on map is 13 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{A map has scale 1:477. Distance on map is 14 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{A map has scale 1:325. Distance on map is 7 cm. Real distance in km?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{A map has scale 1:426. Distance on map is 12 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{A map has scale 1:459. Distance on map is 9 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{A map has scale 1:162. Distance on map is 10 cm. Real distance in km?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{A map has scale 1:162. Distance on map is 8 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{A map has scale 1:273. Distance on map is 5 cm. Real distance in km?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{A map has scale 1:64. Distance on map is 8 cm. Real distance in km?}\end{column}
+\end{columns}
+\end{frame}
 \end{document}

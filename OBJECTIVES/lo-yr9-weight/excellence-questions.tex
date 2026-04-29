@@ -26,7 +26,7 @@
 \newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
 \newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
-\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
 \newcommand{\WorksheetTitle}[2]{%
   {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
     \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
@@ -43,31 +43,70 @@
  \end{tikzpicture}
 }
 
-% Default worksheet generation rules:
-% use notes-style beamer pages
-% use bordered cards for individual problems
-% target 9 problems per frame in a 3x3 grid
-% target 3 frames per scaffold by default where content allows
-
-\begin{document}\begin{frame}[t]
-\WorksheetTitle{Push Tasks}
+\begin{document}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}{3}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{1}{A truck carries 2.5 t of cargo. If each pallet weighs 375 kg, how many full pallets fit without exceeding the cargo mass?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{A recipe uses 3.5 kg flour split equally into 7 containers. What mass does each container hold (in grams)?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{A cargo limit is 12000 kg. A shipment has boxes: 8 x 950 kg, 5 x 1.2 t, and 12 x 45 kg. Is the shipment within the limit? Show calculations.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{1}{A box of items weighs 8187 g. Each item is 473 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A box of items weighs 7651 g. Each item is 202 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A box of items weighs 7840 g. Each item is 259 g. How many items? How much left over?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{4}{A cylindrical drum holds 200 L of oil; density = 0.88 kg/L. Find mass of oil in kg and t.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{5}{A boat displaces 0.75 t of water per cubic metre. If boat volume below waterline is 2.4 cubic metres, what is displaced mass in kg?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{6}{A machine part weighs 0.0035 t. Convert into kg and express as a fraction of 1 t.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{4}{A box of items weighs 5268 g. Each item is 443 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A box of items weighs 7323 g. Each item is 291 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A box of items weighs 5588 g. Each item is 364 g. How many items? How much left over?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{7}{An athlete lifts a total of 18.6 kg across 3 lifts, where two lifts are equal and the third is 2.4 kg heavier. Find the weights of each lift.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{Explain why using tonnes may be better than kilograms for heavy machinery and provide one real-world example.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{7}{A box of items weighs 5698 g. Each item is 161 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A box of items weighs 4030 g. Each item is 215 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A box of items weighs 2524 g. Each item is 273 g. How many items? How much left over?}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{10}{A box of items weighs 2172 g. Each item is 401 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{A box of items weighs 6537 g. Each item is 217 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{A box of items weighs 6820 g. Each item is 212 g. How many items? How much left over?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{13}{A box of items weighs 2058 g. Each item is 136 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{A box of items weighs 7798 g. Each item is 423 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{A box of items weighs 2482 g. Each item is 217 g. How many items? How much left over?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{16}{A box of items weighs 2552 g. Each item is 116 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{A box of items weighs 9042 g. Each item is 269 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{A box of items weighs 2580 g. Each item is 363 g. How many items? How much left over?}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{A box of items weighs 3949 g. Each item is 242 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{A box of items weighs 7480 g. Each item is 348 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{A box of items weighs 3755 g. Each item is 376 g. How many items? How much left over?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{A box of items weighs 3083 g. Each item is 470 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{A box of items weighs 9663 g. Each item is 392 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{A box of items weighs 6720 g. Each item is 342 g. How many items? How much left over?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{A box of items weighs 3990 g. Each item is 342 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{A box of items weighs 8615 g. Each item is 308 g. How many items? How much left over?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{A box of items weighs 3559 g. Each item is 148 g. How many items? How much left over?}\end{column}
 \end{columns}
 \end{frame}
 \end{document}

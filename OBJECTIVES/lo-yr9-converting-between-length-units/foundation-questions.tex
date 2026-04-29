@@ -26,7 +26,7 @@
 \newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
 \newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
-\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
 \newcommand{\WorksheetTitle}[2]{%
   {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
     \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
@@ -43,52 +43,70 @@
  \end{tikzpicture}
 }
 
-% Default worksheet generation rules:
-% use notes-style beamer pages
-% use bordered cards for individual problems
-% target 9 problems per frame in a 3x3 grid
-% target 3 frames per scaffold by default where content allows
-
-\begin{document}\begin{frame}[t]
-\WorksheetTitle{Start Tasks}
+\begin{document}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{1}{Convert 2 m to cm.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{Convert 30 mm to cm.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{Convert 4 km to m.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{1}{Convert 72 m to centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Convert 2 cm to millimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Convert 15 m to millimetres.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{4}{Convert 250 cm to m.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{5}{Convert 9000 mm to m.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{6}{Convert 7 m to mm.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{4}{Convert 10 cm to metres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Convert 89 mm to centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Convert 20 km to metres.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{7}{Convert 3.5 km to m.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{Convert 120 cm to mm.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{A ribbon is 80 cm long. Write the length in mm.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{7}{Convert 70 m to centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Convert 5 cm to millimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{Convert 48 m to millimetres.}\end{column}
 \end{columns}
 \end{frame}
+
 \begin{frame}[t]
-\WorksheetTitle{Start Tasks}
+\WorksheetTitle{Start Tasks}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{1}{A desk is 1.2 m long. Write the length in cm.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{A road is 6 km long. Write the length in m.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{A pencil is 150 mm long. Write the length in cm.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{10}{Convert 75 cm to metres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{Convert 71 mm to centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{Convert 19 km to metres.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{4}{Which is longer: 950 m or 1 km?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{5}{Explain why 1 m = 100 cm.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{13}{Convert 56 m to centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{Convert 17 cm to millimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{Convert 6 m to millimetres.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{16}{Convert 40 cm to metres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{Convert 47 mm to centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{Convert 6 km to metres.}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}{1}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{Convert 46 m to centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{Convert 27 cm to millimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{Convert 88 m to millimetres.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{Convert 32 cm to metres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{Convert 86 mm to centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{Convert 14 km to metres.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{Convert 46 m to centimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{Convert 100 cm to millimetres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{Convert 72 m to millimetres.}\end{column}
 \end{columns}
 \end{frame}
 \end{document}

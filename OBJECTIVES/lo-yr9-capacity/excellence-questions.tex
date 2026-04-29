@@ -26,7 +26,7 @@
 \newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
 \newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
-\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
 \newcommand{\WorksheetTitle}[2]{%
   {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
     \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
@@ -43,31 +43,70 @@
  \end{tikzpicture}
 }
 
-% Default worksheet generation rules:
-% use notes-style beamer pages
-% use bordered cards for individual problems
-% target 9 problems per frame in a 3x3 grid
-% target 3 frames per scaffold by default where content allows
-
-\begin{document}\begin{frame}[t]
-\WorksheetTitle{Push Tasks}
+\begin{document}
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}{3}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{1}{A cafe makes \mbox{$18$} smoothies. Each smoothie uses \mbox{$375\text{ mL}$} of milk. What volume of milk is needed in litres?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{A fish tank holds \mbox{$24\text{ L}$} when full. It is \mbox{$62.5\%$} full. How many millilitres of water are in the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{A drum contains \mbox{$3.6\text{ L}$} of cleaner. It is poured equally into \mbox{$8$} spray bottles. What volume goes into each bottle in millilitres?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{1}{A tank holds 80 L. Water costs \$9 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{A tank holds 423 L. Water costs \$20 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{A tank holds 262 L. Water costs \$3 per kL. How much to fill the tank?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{4}{A recipe needs \mbox{$2.4\text{ L}$} of soup. You have one \mbox{$1\text{ L}$} carton and three \mbox{$450\text{ mL}$} cartons. Do you have enough? Show the total in litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{5}{A water cooler starts with \mbox{$15\text{ L}$}. During the day, \mbox{$3.25\text{ L}$} is used and then \mbox{$1800\text{ mL}$} is added. How much water is in the cooler now?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{6}{A laboratory mixes \mbox{$0.85\text{ L}$} of solution A with \mbox{$650\text{ mL}$} of solution B and \mbox{$1.2\text{ L}$} of water. Find the total volume in litres and millilitres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{4}{A tank holds 644 L. Water costs \$20 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{A tank holds 588 L. Water costs \$10 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{A tank holds 219 L. Water costs \$12 per kL. How much to fill the tank?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{7}{Which is greater, \mbox{$0.6\text{ L}$} or \mbox{$580\text{ mL}$}? Show a conversion to justify your answer.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{A container is labelled \mbox{$2500\text{ cm}^3$}. Using \mbox{$1\text{ cm}^3=1\text{ mL}$}, state its capacity in millilitres and litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{7}{A tank holds 254 L. Water costs \$6 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{A tank holds 697 L. Water costs \$16 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A tank holds 333 L. Water costs \$4 per kL. How much to fill the tank?}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{10}{A tank holds 19 L. Water costs \$20 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{A tank holds 112 L. Water costs \$8 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{A tank holds 528 L. Water costs \$13 per kL. How much to fill the tank?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{13}{A tank holds 912 L. Water costs \$9 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{A tank holds 388 L. Water costs \$16 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{A tank holds 863 L. Water costs \$11 per kL. How much to fill the tank?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{16}{A tank holds 636 L. Water costs \$18 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{A tank holds 18 L. Water costs \$19 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{A tank holds 316 L. Water costs \$5 per kL. How much to fill the tank?}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{A tank holds 971 L. Water costs \$10 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{A tank holds 128 L. Water costs \$19 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{A tank holds 169 L. Water costs \$8 per kL. How much to fill the tank?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{A tank holds 744 L. Water costs \$10 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{A tank holds 527 L. Water costs \$3 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{A tank holds 104 L. Water costs \$10 per kL. How much to fill the tank?}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{A tank holds 55 L. Water costs \$6 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{A tank holds 662 L. Water costs \$7 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{A tank holds 769 L. Water costs \$15 per kL. How much to fill the tank?}\end{column}
 \end{columns}
 \end{frame}
 \end{document}

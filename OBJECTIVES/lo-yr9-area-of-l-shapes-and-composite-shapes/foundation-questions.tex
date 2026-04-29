@@ -26,7 +26,7 @@
 \newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
 \newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
-\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
 \newcommand{\WorksheetTitle}[2]{%
   {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
     \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
@@ -43,52 +43,70 @@
  \end{tikzpicture}
 }
 
-% Default worksheet generation rules:
-% use notes-style beamer pages
-% use bordered cards for individual problems
-% target 9 problems per frame in a 3x3 grid
-% target 3 frames per scaffold by default where content allows
-
-\begin{document}\begin{frame}[t]
-\WorksheetTitle{Start Tasks}
+\begin{document}
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{1}{Draw a dotted line to split the L-shape into two rectangles.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{Find the area of an L-shape formed by a 6 m × 4 m rectangle joined to a 3 m × 2 m rectangle.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{Calculate the area of a room shaped like an L: outer dimensions 10 m by 7 m, missing a 4 m by 3 m corner.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{1}{An L-shape has rectangles 2x3 and 6x3. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{An L-shape has rectangles 6x5 and 5x2. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{An L-shape has rectangles 3x4 and 6x2. Find total area.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{4}{A garden has an L-shape: 8 m long, 5 m wide, with a 3 m by 2 m cut-out. Find the area.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{5}{Draw a dotted line to split the shape into two rectangles (different orientation).}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{6}{Find the area of an L-shape where the longer arm is 9 m × 3 m and the shorter arm is 2 m × 4 m.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{4}{An L-shape has rectangles 4x5 and 5x2. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{An L-shape has rectangles 2x6 and 3x4. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{An L-shape has rectangles 3x4 and 6x2. Find total area.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{7}{Calculate the area of a pathway forming an L around a building: 12 m long, 6 m wide, with a 5 m by 4 m corner missing.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{A swimming pool has an L-shape: 15 m by 10 m, with a 6 m by 4 m cut-out. Find its area.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{Draw a dotted line to split the L-shape into two rectangles (one vertical, one horizontal).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{7}{An L-shape has rectangles 6x5 and 2x2. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{An L-shape has rectangles 8x2 and 5x2. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{An L-shape has rectangles 7x3 and 5x4. Find total area.}\end{column}
 \end{columns}
 \end{frame}
+
 \begin{frame}[t]
-\WorksheetTitle{Start Tasks}
+\WorksheetTitle{Start Tasks}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{1}{Find the area of an L-shape formed by a 7 m × 5 m rectangle and a 4 m × 3 m rectangle.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{Calculate the area of an L-shaped patio: outer rectangle 11 m by 8 m, missing a 5 m by 3 m square.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{A flower bed is L-shaped: 9 m long, 6 m wide, with a 4 m by 2 m cut-out. Find the area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{10}{An L-shape has rectangles 4x6 and 4x3. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{An L-shape has rectangles 8x5 and 5x2. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{An L-shape has rectangles 5x6 and 3x3. Find total area.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{4}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{5}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{6}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{13}{An L-shape has rectangles 3x6 and 6x4. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{An L-shape has rectangles 3x2 and 4x3. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{An L-shape has rectangles 4x6 and 4x2. Find total area.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{7}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{16}{An L-shape has rectangles 4x4 and 6x4. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{An L-shape has rectangles 7x5 and 3x3. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{An L-shape has rectangles 6x5 and 4x3. Find total area.}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks}{1}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{19}{An L-shape has rectangles 6x6 and 5x3. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{An L-shape has rectangles 4x3 and 3x4. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{An L-shape has rectangles 5x3 and 5x2. Find total area.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{22}{An L-shape has rectangles 4x5 and 5x3. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{An L-shape has rectangles 7x3 and 5x2. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{An L-shape has rectangles 3x6 and 6x3. Find total area.}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMProblem{25}{An L-shape has rectangles 8x2 and 5x2. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{An L-shape has rectangles 6x5 and 2x4. Find total area.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{An L-shape has rectangles 3x5 and 3x2. Find total area.}\end{column}
 \end{columns}
 \end{frame}
 \end{document}
