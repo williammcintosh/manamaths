@@ -24,6 +24,7 @@
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
 \newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newtcolorbox{MMCardSmall}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=4pt,left=2pt,right=2pt,top=1pt,bottom=1pt,before skip=0pt,after skip=0pt,height=0.16\textheight,valign=top,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
 \newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
 \newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
@@ -33,6 +34,7 @@
   \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
 }
 \newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+\newcommand{\MMProblemSmall}[2]{\begin{MMCardSmall}\raggedright\tiny\textbf{#1.} #2\par\end{MMCardSmall}}
 
 \setbeamertemplate{background}{
  \begin{tikzpicture}[remember picture,overlay]
@@ -44,33 +46,25 @@
 }
 
 \begin{document}
-\begin{frame}[t]
+\begin{frame}[t,shrink=15]
 \WorksheetTitle{Start Tasks}{1}
-\vspace{-0.18em}
+\vspace{-0.10em}
 \begin{center}
-\includegraphics[width=0.95\textwidth,height=0.25\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-p1.png}
+\includegraphics[width=0.88\textwidth,height=0.20\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-foundation-p1.png}
 \end{center}
-\vspace{0.05em}
+\vspace{0.02em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{1}{Read the thermometer. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{2}{Read the ruler. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{3}{Read the jug. What value does it show?}\end{column}
 \end{columns}
-\vspace{0.45em}
-\begin{center}
-\includegraphics[width=0.95\textwidth,height=0.25\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-p1.png}
-\end{center}
-\vspace{0.05em}
+\vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{4}{Read the dial scale. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{5}{Read the speedometer. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{6}{Read the protractor. What value does it show?}\end{column}
 \end{columns}
-\vspace{0.45em}
-\begin{center}
-\includegraphics[width=0.95\textwidth,height=0.25\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-p1.png}
-\end{center}
-\vspace{0.05em}
+\vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{7}{Read the pressure gauge. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{8}{Read the kitchen scale. What value does it show?}\end{column}
@@ -78,33 +72,25 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[t]
+\begin{frame}[t,shrink=15]
 \WorksheetTitle{Start Tasks}{1}
-\vspace{-0.18em}
+\vspace{-0.10em}
 \begin{center}
-\includegraphics[width=0.95\textwidth,height=0.25\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-p2.png}
+\includegraphics[width=0.88\textwidth,height=0.20\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-foundation-p2.png}
 \end{center}
-\vspace{0.05em}
+\vspace{0.02em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{10}{Read the ruler. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{11}{Read the jug. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{12}{Read the dial scale. What value does it show?}\end{column}
 \end{columns}
-\vspace{0.45em}
-\begin{center}
-\includegraphics[width=0.95\textwidth,height=0.25\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-p2.png}
-\end{center}
-\vspace{0.05em}
+\vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{13}{Read the speedometer. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{14}{Read the protractor. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{15}{Read the pressure gauge. What value does it show?}\end{column}
 \end{columns}
-\vspace{0.45em}
-\begin{center}
-\includegraphics[width=0.95\textwidth,height=0.25\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-p2.png}
-\end{center}
-\vspace{0.05em}
+\vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{16}{Read the kitchen scale. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{17}{Read the thermometer. What value does it show?}\end{column}
@@ -112,33 +98,25 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[t]
+\begin{frame}[t,shrink=15]
 \WorksheetTitle{Start Tasks}{1}
-\vspace{-0.18em}
+\vspace{-0.10em}
 \begin{center}
-\includegraphics[width=0.95\textwidth,height=0.25\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-p3.png}
+\includegraphics[width=0.88\textwidth,height=0.20\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-foundation-p3.png}
 \end{center}
-\vspace{0.05em}
+\vspace{0.02em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{19}{Read the jug. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{20}{Read the dial scale. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{21}{Read the speedometer. What value does it show?}\end{column}
 \end{columns}
-\vspace{0.45em}
-\begin{center}
-\includegraphics[width=0.95\textwidth,height=0.25\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-p3.png}
-\end{center}
-\vspace{0.05em}
+\vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{22}{Read the protractor. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{23}{Read the pressure gauge. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{24}{Read the kitchen scale. What value does it show?}\end{column}
 \end{columns}
-\vspace{0.45em}
-\begin{center}
-\includegraphics[width=0.95\textwidth,height=0.25\textheight,keepaspectratio]{visuals/lo-yr9-reading-scales-p3.png}
-\end{center}
-\vspace{0.05em}
+\vspace{0.2em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.32\textwidth}\MMProblem{25}{Read the thermometer. What value does it show?}\end{column}
 \begin{column}{0.32\textwidth}\MMProblem{26}{Read the ruler. What value does it show?}\end{column}

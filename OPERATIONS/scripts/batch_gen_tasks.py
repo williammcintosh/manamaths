@@ -47,6 +47,7 @@ PREAMBLE = r'''\documentclass[aspectratio=169,12pt]{beamer}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
 \newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newtcolorbox{MMCardSmall}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=4pt,left=2pt,right=2pt,top=1pt,bottom=1pt,before skip=0pt,after skip=0pt,height=0.16\textheight,valign=top,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
 \newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
 \newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
@@ -56,6 +57,7 @@ PREAMBLE = r'''\documentclass[aspectratio=169,12pt]{beamer}
   \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
 }
 \newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
+\newcommand{\MMProblemSmall}[2]{\begin{MMCardSmall}\raggedright\tiny\textbf{#1.} #2\par\end{MMCardSmall}}
 
 \setbeamertemplate{background}{
  \begin{tikzpicture}[remember picture,overlay]
@@ -75,7 +77,7 @@ def make_frame(title, icon, start_num, qs):
         lines.append('\\begin{columns}[T,onlytextwidth]')
         for c in range(3):
             q = qs[r*3+c] if (r*3+c) < len(qs) else ' '
-            lines.append(f'\\begin{{column}}{{0.32\\textwidth}}\\MMProblem{{{n}}}{{{q}}}\\end{{column}}')
+            lines.append(f'\\begin{{column}}{{0.32\\textwidth}}\\MMProblemSmall{{{n}}}{{{q}}}\\end{{column}}')
             n += 1
         lines.append('\\end{columns}')
         if r < 2:
@@ -83,18 +85,16 @@ def make_frame(title, icon, start_num, qs):
     lines.append('\\end{frame}')
     return '\n'.join(lines)
 
-def gen_document(title, icon, questions, visual_slug=None, page=1):
-    """Generate a document. If visual_slug is set, includes image references.
-       visual_slug: the LO slug whose visuals/ folder has the tiled PNGs.
-       page: which frame/page number this is (for visual file naming)."""
+def gen_document(title, icon, questions, visual_slug=None, level='foundation'):
+    """Generate a document. If visual_slug is set, includes image references."""
     body = ''
     if visual_slug:
         body += '\\begin{document}\n'
-        body += make_visual_frame(title, icon, 1, questions[:9], visual_slug, page)
+        body += make_visual_frame(title, icon, 1, questions[:9], visual_slug, 1, level)
         body += '\n\n'
-        body += make_visual_frame(title, icon, 10, questions[9:18], visual_slug, page + 1)
+        body += make_visual_frame(title, icon, 10, questions[9:18], visual_slug, 2, level)
         body += '\n\n'
-        body += make_visual_frame(title, icon, 19, questions[18:], visual_slug, page + 2)
+        body += make_visual_frame(title, icon, 19, questions[18:], visual_slug, 3, level)
         body += '\n\\end{document}\n'
         return PREAMBLE + body
     
@@ -105,18 +105,17 @@ def gen_document(title, icon, questions, visual_slug=None, page=1):
     ]) + '\n\\end{document}\n'
 
 
-def make_visual_frame(title, icon, start_num, qs, visual_slug, page_num):
-    """A frame with 3 tiled images + 3 rows of 3 cards referencing them.
-       Each row: one shared image then three cards that reference that particular diagram."""
-    lines = [f'\\begin{{frame}}[t]', f'\\WorksheetTitle{{{title}}}{{{icon}}}', '\\vspace{-0.18em}']
+def make_visual_frame(title, icon, start_num, qs, visual_slug, page_num, level):
+    """A frame with ONE tiled image at top + 3 rows of 3 cards below it.
+       The single image shows all 3 diagrams (A, B, C) for the entire page."""
+    img_path = f'visuals/{visual_slug}-{level}-p{page_num}.png'
+    lines = [f'\\begin{{frame}}[t,shrink=15]', f'\\WorksheetTitle{{{title}}}{{{icon}}}', '\\vspace{-0.10em}',
+             '\\begin{center}',
+             f'\\includegraphics[width=0.88\\textwidth,height=0.20\\textheight,keepaspectratio]{{{img_path}}}',
+             '\\end{center}',
+             '\\vspace{0.02em}']
     n = start_num
     for r in range(3):
-        # Shared image for this row — the tiled PNG has diagrams A, B, C
-        img_path = f'visuals/{visual_slug}-p{page_num}.png'
-        lines.append('\\begin{center}')
-        lines.append(f'\\includegraphics[width=0.95\\textwidth,height=0.25\\textheight,keepaspectratio]{{{img_path}}}')
-        lines.append('\\end{center}')
-        lines.append('\\vspace{0.05em}')
         lines.append('\\begin{columns}[T,onlytextwidth]')
         for c in range(3):
             q = qs[r*3+c] if (r*3+c) < len(qs) else ' '
@@ -124,7 +123,7 @@ def make_visual_frame(title, icon, start_num, qs, visual_slug, page_num):
             n += 1
         lines.append('\\end{columns}')
         if r < 2:
-            lines.append('\\vspace{0.45em}')
+            lines.append('\\vspace{0.2em}')
     lines.append('\\end{frame}')
     return '\n'.join(lines)
 
@@ -397,7 +396,7 @@ for idx in range(start_idx, end_idx + 1):
         if needs_visuals:
             # Visual LO: create visuals/ folder, write with image references
             (folder / 'visuals').mkdir(exist_ok=True)
-            tex_path.write_text(gen_document(label, icon, questions, visual_slug=slug, page=1))
+            tex_path.write_text(gen_document(label, icon, questions, visual_slug=slug, level=level))
         else:
             tex_path.write_text(gen_document(label, icon, questions))
     

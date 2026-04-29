@@ -150,12 +150,14 @@ def generate_prompts(slug=None):
             print(f"No prompts defined for {s}")
             continue
         for level, page, prompt in VISUAL_PROMPTS[s]:
+            # Per-level page: foundation-p1, proficient-p1, excellence-p1 etc.
+            fname = f'visuals/{s}-{level}-p{page}.png'
             output.append({
                 'slug': s,
                 'level': level,
                 'page': page,
-                'filename': f'visuals/{s}-p{page}.png',
-                'full_path': f'OBJECTIVES/{s}/visuals/{s}-p{page}.png',
+                'filename': fname,
+                'full_path': f'OBJECTIVES/{s}/{fname}',
                 'prompt': prompt,
             })
             print(f"  {s} / {level} p{page}: {prompt[:60]}...")
