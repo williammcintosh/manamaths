@@ -145,7 +145,7 @@ The site page pulls in all 4 modules as section cards:
 5. Copy solutions + notes PDFs into main site
 6. Regenerate site page for the LO slug
 7. Regenerate index page
-8. Build all PNG preview images
+8. Build all PDF preview PNGs (skip if ImageMagick not installed)
 9. Update lo-tracker.json + notes-tracker.json
 10. Run `update-lo-status.py --sync-from-fs`
 11. Visually inspect all PDFs
