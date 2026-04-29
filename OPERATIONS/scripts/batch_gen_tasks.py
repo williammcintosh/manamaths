@@ -83,13 +83,50 @@ def make_frame(title, icon, start_num, qs):
     lines.append('\\end{frame}')
     return '\n'.join(lines)
 
-def gen_document(title, icon, questions):
-    assert len(questions) == 27, f"Need 27 questions, got {len(questions)}"
+def gen_document(title, icon, questions, visual_slug=None, page=1):
+    """Generate a document. If visual_slug is set, includes image references.
+       visual_slug: the LO slug whose visuals/ folder has the tiled PNGs.
+       page: which frame/page number this is (for visual file naming)."""
+    body = ''
+    if visual_slug:
+        body += '\\begin{document}\n'
+        body += make_visual_frame(title, icon, 1, questions[:9], visual_slug, page)
+        body += '\n\n'
+        body += make_visual_frame(title, icon, 10, questions[9:18], visual_slug, page + 1)
+        body += '\n\n'
+        body += make_visual_frame(title, icon, 19, questions[18:], visual_slug, page + 2)
+        body += '\n\\end{document}\n'
+        return PREAMBLE + body
+    
     return PREAMBLE + '\\begin{document}\n' + '\n\n'.join([
         make_frame(title, icon, 1, questions[:9]),
         make_frame(title, icon, 10, questions[9:18]),
         make_frame(title, icon, 19, questions[18:]),
     ]) + '\n\\end{document}\n'
+
+
+def make_visual_frame(title, icon, start_num, qs, visual_slug, page_num):
+    """A frame with 3 tiled images + 3 rows of 3 cards referencing them.
+       Each row: one shared image then three cards that reference that particular diagram."""
+    lines = [f'\\begin{{frame}}[t]', f'\\WorksheetTitle{{{title}}}{{{icon}}}', '\\vspace{-0.18em}']
+    n = start_num
+    for r in range(3):
+        # Shared image for this row — the tiled PNG has diagrams A, B, C
+        img_path = f'visuals/{visual_slug}-p{page_num}.png'
+        lines.append('\\begin{center}')
+        lines.append(f'\\includegraphics[width=0.95\\textwidth,height=0.25\\textheight,keepaspectratio]{{{img_path}}}')
+        lines.append('\\end{center}')
+        lines.append('\\vspace{0.05em}')
+        lines.append('\\begin{columns}[T,onlytextwidth]')
+        for c in range(3):
+            q = qs[r*3+c] if (r*3+c) < len(qs) else ' '
+            lines.append(f'\\begin{{column}}{{0.32\\textwidth}}\\MMProblem{{{n}}}{{{q}}}\\end{{column}}')
+            n += 1
+        lines.append('\\end{columns}')
+        if r < 2:
+            lines.append('\\vspace{0.45em}')
+    lines.append('\\end{frame}')
+    return '\n'.join(lines)
 
 # ── helper: random numbers ──
 def rint(a, b):
@@ -107,23 +144,23 @@ def rlist(a, b, n):
 # ── question generators by topic area ──
 
 def gen_reading_scales():
+    # Visual LO — needs tiled AI images (see MM_UPDATE_LO.md)
     f = []
     for i in range(27):
-        scale_max = [100, 50, 200, 100, 100, 30, 1000, 500, 60, 300][i % 10]
-        val = rint(10, scale_max - 10) if scale_max > 20 else rint(2, scale_max - 2)
-        f.append(f"Read the value on a scale from 0 to {scale_max}. The arrow points at {val}.")
+        scale_type = ['thermometer', 'ruler', 'jug', 'dial scale', 'speedometer', 'protractor', 'pressure gauge', 'kitchen scale'][i % 8]
+        val = [22, 6.3, 600, 350, 60, 45, 1013, 250][i % 8]
+        f.append(f"Read the {scale_type}. What value does it show?")
     p = []
     for i in range(27):
-        step = [5, 10, 20, 50, 25, 2, 4, 100, 200, 0.5][i % 10]
-        val = rint(2, 20) * step
-        scale_max = val * 3
-        p.append(f"A scale goes from 0 to {scale_max} with marks every {step}. Needle at {val}. Read.")
+        scale_type = ['thermometer', 'ruler', 'measuring cylinder', 'dial', 'barometer', 'speedometer', 'spring scale', 'flow meter'][i % 8]
+        val = [18, 67, 37, 175, 1005, 140, 3.5, 85][i % 8]
+        p.append(f"This {scale_type} shows {val}. Which mark is it closest to?")
     e = []
     for i in range(27):
-        scale_max = rint(50, 500)
-        step = scale_max // rint(5, 10)
-        val = rint(1, 8) * step
-        e.append(f"A scale from 0 to {scale_max} has marks every {step}. The needle is at {val}. Between which two marks is it?")
+        scale_type = ['thermometer', 'ruler with smear', 'measuring jug', 'dial scale', 'speedometer', 'protractor', 'barometer', 'spring scale'][i % 8]
+        est = [16, 4.3, 380, 220, 68, 73, 1008, 1.2][i % 8]
+        window = [2, 0.5, 20, 10, 4, 2, 5, 0.5][i % 8]
+        e.append(f"Read this {scale_type} to the nearest {window}. The reading is about {est}. Give a range.")
     return f, p, e
 
 def gen_weight():
@@ -301,15 +338,16 @@ def gen_area_composite():
 
 
 # ── map slug to generator ──
+# Second entry: boolean — True if it needs AI-generated visual images
 GENERATORS = {
-    'lo-yr9-reading-scales': gen_reading_scales,
-    'lo-yr9-weight': gen_weight,
-    'lo-yr9-capacity': gen_capacity,
-    'lo-yr9-converting-between-length-units': gen_convert_length,
-    'lo-yr9-estimating-lengths-from-scale-drawings-and-photos': gen_estimate_length,
-    'lo-yr9-perimeter-shapes-with-straight-edges-only': gen_perimeter,
-    'lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite': gen_area_basic,
-    'lo-yr9-area-of-l-shapes-and-composite-shapes': gen_area_composite,
+    'lo-yr9-reading-scales': (gen_reading_scales, True),
+    'lo-yr9-weight': (gen_weight, False),
+    'lo-yr9-capacity': (gen_capacity, False),
+    'lo-yr9-converting-between-length-units': (gen_convert_length, False),
+    'lo-yr9-estimating-lengths-from-scale-drawings-and-photos': (gen_estimate_length, True),
+    'lo-yr9-perimeter-shapes-with-straight-edges-only': (gen_perimeter, False),
+    'lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite': (gen_area_basic, False),
+    'lo-yr9-area-of-l-shapes-and-composite-shapes': (gen_area_composite, False),
 }
 
 TRACKER = json.load(open(ROOT / 'OPERATIONS/data/lo-tracker.json'))
@@ -347,7 +385,8 @@ for idx in range(start_idx, end_idx + 1):
         print(f"SKIP {slug} — no generator defined")
         continue
     
-    qf, qp, qe = gen()
+    gen_func, needs_visuals = gen
+    qf, qp, qe = gen_func()
     
     for level, questions, icon, label in [
         ('foundation', qf, 1, 'Start Tasks'),
@@ -355,7 +394,12 @@ for idx in range(start_idx, end_idx + 1):
         ('excellence', qe, 3, 'Push Tasks'),
     ]:
         tex_path = folder / f'{level}-questions.tex'
-        tex_path.write_text(gen_document(label, icon, questions))
+        if needs_visuals:
+            # Visual LO: create visuals/ folder, write with image references
+            (folder / 'visuals').mkdir(exist_ok=True)
+            tex_path.write_text(gen_document(label, icon, questions, visual_slug=slug, page=1))
+        else:
+            tex_path.write_text(gen_document(label, icon, questions))
     
     # Build
     import subprocess
