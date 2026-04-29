@@ -27,7 +27,8 @@ Future threads create new complete LOs by copying this pattern exactly.
 # 2. Build with tectonic from SITE/te-reo-pdfs/
 tectonic --outdir . SITE/te-reo-pdfs/<slug>.tex
 # 3. Convert PDF first page to PNG preview
-convert SITE/te-reo-pdfs/<slug>.pdf[0] SITE/previews/<slug>/te-reo-p001.png
+bash manamaths/OPERATIONS/scripts/generate-previews.sh <slug>
+# This creates SITE/previews/<slug>/<module>-p001.png for all existing PDFs
 ```
 
 **Terms source**: `manamaths/OPERATIONS/data/te-reo-progress.json`
@@ -145,7 +146,8 @@ The site page pulls in all 4 modules as section cards:
 5. Copy solutions + notes PDFs into main site
 6. Regenerate site page for the LO slug
 7. Regenerate index page
-8. Build all PDF preview PNGs (skip if ImageMagick not installed)
+8. Generate PDF preview PNGs:  
+   `bash manamaths/OPERATIONS/scripts/generate-previews.sh <slug>`
 9. Update lo-tracker.json + notes-tracker.json
 10. Run `update-lo-status.py --sync-from-fs`
 11. Visually inspect all PDFs

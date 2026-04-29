@@ -219,6 +219,41 @@ def print_summary(summary):
     print(f"  Needs te reo: {summary['needsTeReo']}")
     print(f"  Needs tasks: {summary['needsTasks']}")
 
+def next_batch(count=5, status_filter='needs_notes_and_solutions'):
+    """Print the next N LOs needing work in a format ready for a sub-agent task."""
+    data = load_tracker()
+    if not data:
+        data = build_from_lo_tracker()
+    
+    matches = [lo for lo in data['learningObjectives'] if lo['status'] == status_filter]
+    batch = matches[:count]
+    
+    if not batch:
+        print(f"No LOs with status '{status_filter}'")
+        return
+    
+    print(f"Next {len(batch)} LOs (status: {status_filter}):\n")
+    for lo in batch:
+        print(f"  {lo['objectiveId']}: {lo['displayTitle']} (slug: {lo['slug']})")
+    
+    print(f"\n--- Build task for these {len(batch)} LOs ---\n")
+    print("Create notes + solutions for the following LOs:")
+    for lo in batch:
+        print(f"- **{lo['objectiveId']}** — {lo['displayTitle']} — slug: `{lo['slug']}`")
+    
+    print("""
+For each LO:
+1. Create notes in `manamaths-notes/OBJECTIVES/<slug>/main.tex` (copy T1 LO1's pattern)
+2. Create solutions in `manamaths-solutions/OBJECTIVES/<slug>/` (copy from task questions)
+3. Build PDFs with `tectonic`
+4. Copy PDFs to `manamaths/SITE/notes-pdfs/` and `manamaths/SITE/solutions-pdfs/`
+5. Generate previews: `bash manamaths/OPERATIONS/scripts/generate-previews.sh <slug>`
+6. Regenerate site page: `python3 manamaths/OPERATIONS/scripts/generate_web_html.py --slug <slug>`
+7. Update trackers and push
+
+Reference: manamaths/REFERENCE_LO.md
+""")
+
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print(__doc__)
@@ -250,6 +285,10 @@ if __name__ == '__main__':
         data = build_from_lo_tracker()
         save_tracker(data)
         print_summary(data['summary'])
+    elif cmd == '--next-batch':
+        count = int(sys.argv[2]) if len(sys.argv) > 2 else 5
+        status_filter = sys.argv[3] if len(sys.argv) > 3 else 'needs_notes_and_solutions'
+        next_batch(count, status_filter)
     else:
         print(f"Unknown command: {cmd}")
         print(__doc__)
