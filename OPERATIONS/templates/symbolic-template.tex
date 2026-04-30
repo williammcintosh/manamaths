@@ -1,0 +1,83 @@
+% ── SYMBOLIC TEMPLATE ──
+% For pure math/symbolic LOs: 3×3 card grid, 27 questions per scaffold.
+% Each card is a standalone text problem.
+%
+% Usage:
+%   \begin{document}
+%   \symbolicFrame{Start Tasks}{1}{1}{Q1}{Q2}{Q3}{Q4}{Q5}{Q6}{Q7}{Q8}{Q9}
+%   \symbolicFrame{Start Tasks}{1}{10}{Q10}{Q11}{Q12}{Q13}{Q14}{Q15}{Q16}{Q17}{Q18}
+%   \symbolicFrame{Start Tasks}{1}{19}{Q19}{Q20}{Q21}{Q22}{Q23}{Q24}{Q25}{Q26}{Q27}
+%   \end{document}
+%
+% Args: {title}{icon}{startNum}{q1}...{q9}
+%   icon: 1=Start Tasks (1 hoe), 2=Build Tasks (2 hoes), 3=Push Tasks (3 hoes)
+
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMProblem}[2]{\begin{MMCard}\raggedright\small\textbf{#1.} #2\par\end{MMCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Frame builder: 3 rows × 3 cards
+\newcommand{\symbolicFrame}[9]{%
+  \begin{frame}[t]
+  \WorksheetTitle{#1}{#2}
+  \vspace{-0.18em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}\MMProblem{#3}{#4}\end{column}
+    \begin{column}{0.32\textwidth}\MMProblem{\numexpr#3+1\relax}{#5}\end{column}
+    \begin{column}{0.32\textwidth}\MMProblem{\numexpr#3+2\relax}{#6}\end{column}
+  \end{columns}
+  \vspace{0.45em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}\MMProblem{\numexpr#3+3\relax}{#7}\end{column}
+    \begin{column}{0.32\textwidth}\MMProblem{\numexpr#3+4\relax}{#8}\end{column}
+    \begin{column}{0.32\textwidth}\MMProblem{\numexpr#3+5\relax}{#9}\end{column}
+  \end{columns}
+  \vspace{0.45em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}\MMProblem{\numexpr#3+6\relax}{#10}\end{column}
+    \begin{column}{0.32\textwidth}\MMProblem{\numexpr#3+7\relax}{#11}\end{column}
+    \begin{column}{0.32\textwidth}\MMProblem{\numexpr#3+8\relax}{#12}\end{column}
+  \end{columns}
+  \end{frame}
+}
