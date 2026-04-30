@@ -85,10 +85,21 @@ def make_frame(title, icon, start_num, qs):
     lines.append('\\end{frame}')
     return '\n'.join(lines)
 
-def gen_document(title, icon, questions, visual_slug=None, level='foundation'):
-    """Generate a document. If visual_slug is set, includes image references."""
+def gen_document(title, icon, questions, visual_slug=None, level='foundation', use_tikz=False):
+    """Generate a document. If visual_slug is set, includes image references.
+       If use_tikz is True, uses TikZ diagram macros instead of AI images."""
     body = ''
-    if visual_slug:
+    if use_tikz:
+        body += '\\input{visuals/diagram-macros.tex}\n'
+        body += '\\begin{document}\n'
+        body += gen_tikz_scaffold(title, icon, 1, questions[:9])
+        body += '\n\n'
+        body += gen_tikz_scaffold(title, icon, 10, questions[9:18])
+        body += '\n\n'
+        body += gen_tikz_scaffold(title, icon, 19, questions[18:])
+        body += '\n\\end{document}\n'
+        return PREAMBLE + body
+    if visual_slug and not use_tikz:
         body += '\\begin{document}\n'
         body += make_visual_frame(title, icon, 1, questions[:9], visual_slug, 1, level)
         body += '\n\n'
@@ -127,6 +138,34 @@ def make_visual_frame(title, icon, start_num, qs, visual_slug, page_num, level):
     lines.append('\\end{frame}')
     return '\n'.join(lines)
 
+def make_tikz_frame(title, icon, start_num, qs, row_specs, section_title=''):
+    """Frame using TikZ diagrams instead of AI images.
+    row_specs: list of 3 tuples, each (tikz_code, q1, q2, q3)
+    tikz_code is the raw TikZ drawing command for that row's diagrams.
+    """
+    lines = [f'\\begin{{frame}}[t,shrink=10]', f'\\WorksheetTitle{{{title}}}{{{icon}}}', '\\vspace{-0.05em}']
+    if section_title:
+        lines.append(f'{{\\footnotesize\\textbf{{{section_title}}}}}\\\\')
+    n = start_num
+    for r, (tikz, q1, q2, q3) in enumerate(row_specs):
+        # TikZ diagrams for this row
+        lines.append('\\vspace{0.05em}')
+        lines.append('\\begin{center}')
+        lines.append('\\footnotesize')
+        lines.append(tikz)
+        lines.append('\\end{center}')
+        lines.append('\\vspace{0.02em}')
+        # Three cards
+        lines.append('\\begin{columns}[T,onlytextwidth]')
+        lines.append(f'\\begin{{column}}{{0.32\\textwidth}}\\MMProblemSmall{{{n}}}{{{q1}}}\\end{{column}}')
+        lines.append(f'\\begin{{column}}{{0.32\\textwidth}}\\MMProblemSmall{{{n+1}}}{{{q2}}}\\end{{column}}')
+        lines.append(f'\\begin{{column}}{{0.32\\textwidth}}\\MMProblemSmall{{{n+2}}}{{{q3}}}\\end{{column}}')
+        lines.append('\\end{columns}')
+        n += 3
+    lines.append('\\end{frame}')
+    return '\n'.join(lines)
+
+
 # ── helper: random numbers ──
 def rint(a, b):
     return random.randint(a, b)
@@ -143,23 +182,43 @@ def rlist(a, b, n):
 # ── question generators by topic area ──
 
 def gen_reading_scales():
-    # Visual LO — needs tiled AI images (see MM_UPDATE_LO.md)
+    # TikZ-based diagrams embedded directly in the beamer frame
+    # Returns (f,p,e) where each is a list of 27 questions
+    # row_specs for TikZ: each row has (tikz_code, q1, q2, q3)
+    
+    f_specs = [
+        # Row 1: Thermometer 22, Ruler 6.3, Jug 600
+        (r'\Thermometer{A}{22}\hspace{0.3cm}\Ruler{B}{6.3}\hspace{0.3cm}\MeasuringJug{C}{600}',
+         'Read thermometer A. What temperature does it show?',
+         'Read ruler B. What length does it show?',
+         'Read measuring jug C. What volume does it show?'),
+        # Row 2: Dial 250, Speedometer 60, Protractor 45
+        (r'\DialScale{A}{250}{500}{g}\hspace{0.3cm}\Speedometer{B}{60}\hspace{0.3cm}\Protractor{C}{45}',
+         'Read dial scale A. What mass in grams does it show?',
+         'Read speedometer B. What speed does it show?',
+         'Read protractor C. What angle does it show?'),
+        # Row 3: Dial 55, Barometer 1013, Tape 23
+        (r'\DialScale{A}{55}{100}{kg}\hspace{0.3cm}\~{ }',
+         'Read bathroom scale A. What mass does it show?',
+         'Estimate the barometer B reading to the nearest 5 hPa.',
+         'Read the measuring tape C. What length in cm?'),
+    ]
+    # For now, adapt: same 27 questions via generic frame
     f = []
     for i in range(27):
         scale_type = ['thermometer', 'ruler', 'jug', 'dial scale', 'speedometer', 'protractor', 'pressure gauge', 'kitchen scale'][i % 8]
-        val = [22, 6.3, 600, 350, 60, 45, 1013, 250][i % 8]
         f.append(f"Read the {scale_type}. What value does it show?")
     p = []
     for i in range(27):
         scale_type = ['thermometer', 'ruler', 'measuring cylinder', 'dial', 'barometer', 'speedometer', 'spring scale', 'flow meter'][i % 8]
         val = [18, 67, 37, 175, 1005, 140, 3.5, 85][i % 8]
-        p.append(f"This {scale_type} shows {val}. Which mark is it closest to?")
+        p.append(f"This {scale_type} shows about {val}. Which mark is it closest to?")
     e = []
     for i in range(27):
         scale_type = ['thermometer', 'ruler with smear', 'measuring jug', 'dial scale', 'speedometer', 'protractor', 'barometer', 'spring scale'][i % 8]
         est = [16, 4.3, 380, 220, 68, 73, 1008, 1.2][i % 8]
         window = [2, 0.5, 20, 10, 4, 2, 5, 0.5][i % 8]
-        e.append(f"Read this {scale_type} to the nearest {window}. The reading is about {est}. Give a range.")
+        e.append(f"Read this {scale_type} to the nearest {window}. About {est}. Give a possible range.")
     return f, p, e
 
 def gen_weight():
@@ -337,16 +396,16 @@ def gen_area_composite():
 
 
 # ── map slug to generator ──
-# Second entry: boolean — True if it needs AI-generated visual images
+# Tuple: (gen_func, needs_ai_images, use_tikz_macros)
 GENERATORS = {
-    'lo-yr9-reading-scales': (gen_reading_scales, True),
-    'lo-yr9-weight': (gen_weight, False),
-    'lo-yr9-capacity': (gen_capacity, False),
-    'lo-yr9-converting-between-length-units': (gen_convert_length, False),
-    'lo-yr9-estimating-lengths-from-scale-drawings-and-photos': (gen_estimate_length, True),
-    'lo-yr9-perimeter-shapes-with-straight-edges-only': (gen_perimeter, False),
-    'lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite': (gen_area_basic, False),
-    'lo-yr9-area-of-l-shapes-and-composite-shapes': (gen_area_composite, False),
+    'lo-yr9-reading-scales': (gen_reading_scales, False, True),
+    'lo-yr9-weight': (gen_weight, False, False),
+    'lo-yr9-capacity': (gen_capacity, False, False),
+    'lo-yr9-converting-between-length-units': (gen_convert_length, False, False),
+    'lo-yr9-estimating-lengths-from-scale-drawings-and-photos': (gen_estimate_length, True, False),
+    'lo-yr9-perimeter-shapes-with-straight-edges-only': (gen_perimeter, False, False),
+    'lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite': (gen_area_basic, False, False),
+    'lo-yr9-area-of-l-shapes-and-composite-shapes': (gen_area_composite, False, False),
 }
 
 TRACKER = json.load(open(ROOT / 'OPERATIONS/data/lo-tracker.json'))
@@ -384,7 +443,7 @@ for idx in range(start_idx, end_idx + 1):
         print(f"SKIP {slug} — no generator defined")
         continue
     
-    gen_func, needs_visuals = gen
+    gen_func, needs_visuals, use_tikz = gen
     qf, qp, qe = gen_func()
     
     for level, questions, icon, label in [
@@ -394,9 +453,11 @@ for idx in range(start_idx, end_idx + 1):
     ]:
         tex_path = folder / f'{level}-questions.tex'
         if needs_visuals:
-            # Visual LO: create visuals/ folder, write with image references
             (folder / 'visuals').mkdir(exist_ok=True)
             tex_path.write_text(gen_document(label, icon, questions, visual_slug=slug, level=level))
+        elif use_tikz:
+            (folder / 'visuals').mkdir(exist_ok=True)
+            tex_path.write_text(gen_document(label, icon, questions, visual_slug=slug, level=level, use_tikz=True))
         else:
             tex_path.write_text(gen_document(label, icon, questions))
     
