@@ -25,84 +25,84 @@
 \newcommand{\Ruler}[2]{\begin{tikzpicture}[scale=0.25,baseline=0]\node[above,font=\bfseries\tiny]at(7.5,0.7){#1};
 \draw[very thick](0,0)--(15,0);\foreach\x in{0,...,15}{\draw[thick](\x,0)--(\x,-0.1);\node[below,font=\tiny]at(\x,-0.12){\x};}
 \foreach\x in{0.1,0.2,...,14.9}{\draw[thin](\x,0)--(\x,-0.03);}
-\fill[red] (#2,0) circle (0.08);
+\draw[->,red,thick](#2,-0.22)--(#2,-0.1);\node[red,below,font=\tiny]at(#2,-0.24){#2 cm};
 \end{tikzpicture}}
 \newcommand{\MeasuringJug}[2]{\begin{tikzpicture}[scale=0.25,baseline=0]\node[above,font=\bfseries\tiny]at(2,5){#1};
 \draw[very thick](0.3,0)--(0.3,4.5)--(0.8,4.5)--(1.3,4.5)--(1.8,4.5)--(1.8,0)--cycle;
 \foreach\y/\l in{0/0,0.9/200,1.8/400,2.7/600,3.6/800,4.5/1000}{\draw[thick](1.8,\y)--(2.1,\y);\node[right,font=\tiny]at(2.2,\y){\l};}
 \fill[blue!40!white,opacity=0.6](0.31,0)rectangle(1.79,#2/222.2);\draw[blue,thick](0.31,#2/222.2)--(1.79,#2/222.2);
-\fill[blue] (2.0,#2/222.2) circle (0.08);
+\draw[->,blue,thick](2.4,#2/222.2)--(2.8,#2/222.2);\node[right,blue,font=\tiny]at(2.8,#2/222.2){#2};
 \end{tikzpicture}}
 \begin{document}
 \begin{frame}[t,shrink=30]
-\WorksheetTitle{Push Tasks}{3}
-\begin{center}\Thermometer{A}{16}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.1}\hspace{0.1em}Between marks\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.2}\hspace{0.1em}Uncertainty\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.3}\hspace{0.1em}Nearest 2\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\Ruler{B}{4.3}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.4}\hspace{0.1em}Worn zero-error\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.5}\hspace{0.1em}True length\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.6}\hspace{0.1em}Precision\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\MeasuringJug{C}{380}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.7}\hspace{0.1em}Meniscus +/- 10\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.8}\hspace{0.1em}Max/min\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.9}\hspace{0.1em}Accuracy\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\end{frame}
-\begin{frame}[t,shrink=30]
-\WorksheetTitle{Push Tasks}{3}
-\begin{center}\Thermometer{A}{22}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.10}\hspace{0.1em}Two therm diff\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.11}\hspace{0.1em}16 vs 22\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.12}\hspace{0.1em}Percent diff\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\Ruler{B}{6.3}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.13}\hspace{0.1em}mm precision\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.14}\hspace{0.1em}Range +/- 0.5\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.15}\hspace{0.1em}Sig figs\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\MeasuringJug{C}{600}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.16}\hspace{0.1em}Add 200 mL\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.17}\hspace{0.1em}New reading\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.18}\hspace{0.1em}Fraction\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\end{frame}
-\begin{frame}[t,shrink=30]
-\WorksheetTitle{Push Tasks}{3}
+\WorksheetTitle{Build Tasks}{2}
 \begin{center}\Thermometer{A}{18}\end{center}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.19}\hspace{0.1em}Rise from 16\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.20}\hspace{0.1em}Deg change\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.21}\hspace{0.1em}Rate per min\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.1}\hspace{0.1em}Nearest 5 deg\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.2}\hspace{0.1em}How many mm?\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.3}\hspace{0.1em}Precise reading\end{MMCard}\end{column}
 \end{columns}
 \vspace{0.07em}
 \begin{center}\Ruler{B}{67}\end{center}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.22}\hspace{0.1em}mm to cm error\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.23}\hspace{0.1em}Conversion\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.24}\hspace{0.1em}Scale factor\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.4}\hspace{0.1em}Convert to cm\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.5}\hspace{0.1em}Error margin\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.6}\hspace{0.1em}Which mark?\end{MMCard}\end{column}
 \end{columns}
 \vspace{0.07em}
 \begin{center}\MeasuringJug{C}{850}\end{center}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.25}\hspace{0.1em}mL to L error\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.26}\hspace{0.1em}0.85 L correct?\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.27}\hspace{0.1em}Check\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.7}\hspace{0.1em}Fraction of 1 L\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.8}\hspace{0.1em}mL to L\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.9}\hspace{0.1em}Precision\end{MMCard}\end{column}
+\end{columns}
+\vspace{0.07em}
+\end{frame}
+\begin{frame}[t,shrink=30]
+\WorksheetTitle{Build Tasks}{2}
+\begin{center}\Thermometer{A}{16}\end{center}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.10}\hspace{0.1em}Close to 15 or 20?\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.11}\hspace{0.1em}Range estimate\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.12}\hspace{0.1em}Percent error\end{MMCard}\end{column}
+\end{columns}
+\vspace{0.07em}
+\begin{center}\Ruler{B}{4.3}\end{center}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.13}\hspace{0.1em}Zero error\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.14}\hspace{0.1em}True length?\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.15}\hspace{0.1em}mm precision\end{MMCard}\end{column}
+\end{columns}
+\vspace{0.07em}
+\begin{center}\MeasuringJug{C}{380}\end{center}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.16}\hspace{0.1em}Meniscus error\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.17}\hspace{0.1em}Parallax\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.18}\hspace{0.1em}Between marks\end{MMCard}\end{column}
+\end{columns}
+\vspace{0.07em}
+\end{frame}
+\begin{frame}[t,shrink=30]
+\WorksheetTitle{Build Tasks}{2}
+\begin{center}\Thermometer{A}{22}\end{center}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.19}\hspace{0.1em}Rise from 16 to 22\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.20}\hspace{0.1em}Deg change\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.21}\hspace{0.1em}Convert to K\end{MMCard}\end{column}
+\end{columns}
+\vspace{0.07em}
+\begin{center}\Ruler{B}{6.3}\end{center}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.22}\hspace{0.1em}Move 3 to 7.5 cm\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.23}\hspace{0.1em}Distance\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.24}\hspace{0.1em}mm change\end{MMCard}\end{column}
+\end{columns}
+\vspace{0.07em}
+\begin{center}\MeasuringJug{C}{600}\end{center}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.25}\hspace{0.1em}Add 200 mL\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.26}\hspace{0.1em}New volume\end{MMCard}\end{column}
+\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.27}\hspace{0.1em}Fraction\end{MMCard}\end{column}
 \end{columns}
 \vspace{0.07em}
 \end{frame}
