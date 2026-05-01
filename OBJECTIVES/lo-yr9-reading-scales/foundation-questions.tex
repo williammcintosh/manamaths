@@ -21,6 +21,8 @@
   \draw[line width=3pt] (2.0,\y)--(2.6,\y);
   \node[anchor=west,font=\bfseries\fontsize{28}{28}\selectfont,inner sep=3pt] at (2.7,\y) {\l};
 }
+% Perpendicular horizontal line at reading level
+\draw[red,line width=4pt] (2.0,#2/10+1)--(2.7,#2/10+1);
 \end{tikzpicture}}
 
 \newcommand{\Ruler}[2]{%
@@ -34,7 +36,8 @@
 \foreach \x in {1,3,5,7,9,11,13,15}{
   \draw[line width=2pt] (\x,0)--(\x,-0.3);
 }
-\fill[red] (#2,0) circle (0.3);
+% Perpendicular vertical line at reading position
+\draw[red,line width=4pt] (#2,0.25)--(#2,-0.55);
 \end{tikzpicture}}
 
 \newcommand{\MeasuringJug}[2]{%
@@ -48,7 +51,8 @@
 }
 \fill[blue!90!black,opacity=0.9] (0.52,0) rectangle (2.58,#2/222.2);
 \draw[blue!90!black,line width=3pt] (0.52,#2/222.2)--(2.58,#2/222.2);
-\fill[blue!90!black] (2.4,#2/222.2) circle (0.3);
+% Perpendicular horizontal line at water level
+\draw[blue!90!black,line width=4pt] (0.35,#2/222.2)--(2.75,#2/222.2);
 \end{tikzpicture}}
 \begin{document}
 \loTitle{Start Tasks}{1}
@@ -63,6 +67,7 @@
 \vspace{0.05em}
 \noindent
 \quad{\bfseries\LARGE 4. A: temp?}\hfill{\bfseries\LARGE 5. B: length?}\hfill{\bfseries\LARGE 6. C: volume?}\quad\par
+\vspace{0.4em}
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
@@ -76,6 +81,7 @@
 \vspace{0.05em}
 \noindent
 \quad{\bfseries\LARGE 10. A: reading?}\hfill{\bfseries\LARGE 11. B: mark?}\hfill{\bfseries\LARGE 12. C: unit?}\quad\par
+\vspace{0.4em}
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
@@ -89,5 +95,6 @@
 \vspace{0.05em}
 \noindent
 \quad{\bfseries\LARGE 16. A: approx?}\hfill{\bfseries\LARGE 17. B: error?}\hfill{\bfseries\LARGE 18. C: between?}\quad\par
+\vspace{0.4em}
 \newpage
 \end{document}
