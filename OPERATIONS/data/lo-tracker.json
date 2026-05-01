@@ -50,7 +50,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO2",
@@ -85,7 +86,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO3",
@@ -120,7 +122,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO4",
@@ -155,7 +158,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO5",
@@ -190,7 +194,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO6",
@@ -225,7 +230,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO7",
@@ -260,7 +266,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO8",
@@ -295,7 +302,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO9",
@@ -330,7 +338,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO10",
@@ -365,7 +374,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_LO11",
@@ -400,7 +410,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO12",
@@ -435,7 +446,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO13",
@@ -470,7 +482,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO14",
@@ -505,7 +518,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO15",
@@ -540,7 +554,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO16",
@@ -575,7 +590,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO17",
@@ -610,7 +626,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO18",
@@ -645,7 +662,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO19",
@@ -680,7 +698,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO20",
@@ -715,7 +734,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO21",
@@ -750,7 +770,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO22",
@@ -785,7 +806,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_LO23",
@@ -820,7 +842,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_EX01",
@@ -855,7 +878,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_EX02",
@@ -890,7 +914,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_EX03",
@@ -925,7 +950,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_EX04",
@@ -960,7 +986,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T1_EX05",
@@ -995,7 +1022,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_EX06",
@@ -1030,7 +1058,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T1_EX07",
@@ -1065,7 +1094,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO1",
@@ -1100,7 +1130,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO2",
@@ -1135,7 +1166,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO3",
@@ -1170,7 +1202,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO4",
@@ -1205,7 +1238,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO5",
@@ -1240,7 +1274,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO6",
@@ -1275,7 +1310,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO7",
@@ -1310,7 +1346,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO8",
@@ -1345,7 +1382,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO9",
@@ -1380,7 +1418,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO10",
@@ -1415,7 +1454,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO11",
@@ -1450,7 +1490,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T2_LO12",
@@ -1485,7 +1526,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO13",
@@ -1520,7 +1562,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO14",
@@ -1555,7 +1598,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO15",
@@ -1590,7 +1634,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO16",
@@ -1625,7 +1670,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO17",
@@ -1660,7 +1706,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO18",
@@ -1695,7 +1742,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO19",
@@ -1730,7 +1778,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO20",
@@ -1765,7 +1814,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO22",
@@ -1800,7 +1850,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO23",
@@ -1835,7 +1886,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO24",
@@ -1870,7 +1922,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO25",
@@ -1905,7 +1958,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO26",
@@ -1940,7 +1994,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO27",
@@ -1975,7 +2030,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_LO28",
@@ -2010,7 +2066,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_EX01",
@@ -2045,7 +2102,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_EX02",
@@ -2080,7 +2138,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_EX03",
@@ -2115,7 +2174,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_EX04",
@@ -2150,7 +2210,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_EX05",
@@ -2185,7 +2246,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_EX06",
@@ -2220,7 +2282,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_EX07",
@@ -2255,7 +2318,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_EX08",
@@ -2290,7 +2354,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T2_EX09",
@@ -2325,7 +2390,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO1",
@@ -2360,7 +2426,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO2",
@@ -2395,7 +2462,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO3",
@@ -2430,7 +2498,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO4",
@@ -2465,7 +2534,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO5",
@@ -2500,7 +2570,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO6",
@@ -2535,7 +2606,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO7",
@@ -2570,7 +2642,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO8",
@@ -2605,7 +2678,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO9",
@@ -2640,7 +2714,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO10",
@@ -2675,7 +2750,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO11",
@@ -2710,7 +2786,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO12",
@@ -2745,7 +2822,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO13",
@@ -2780,7 +2858,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO14",
@@ -2815,7 +2894,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO15",
@@ -2850,7 +2930,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO16",
@@ -2885,7 +2966,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T3_LO17",
@@ -2920,7 +3002,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T3_LO18",
@@ -2955,7 +3038,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_LO19",
@@ -2990,7 +3074,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T3_LO20",
@@ -3025,7 +3110,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T3_LO21",
@@ -3060,7 +3146,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T3_LO22",
@@ -3095,7 +3182,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T3_LO23",
@@ -3130,7 +3218,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_EX01",
@@ -3165,7 +3254,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_EX02",
@@ -3200,7 +3290,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_EX03",
@@ -3235,7 +3326,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T3_EX04",
@@ -3270,7 +3362,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T4_LO1",
@@ -3305,7 +3398,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T4_LO2",
@@ -3340,7 +3434,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T4_LO3",
@@ -3375,7 +3470,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T4_LO4",
@@ -3410,7 +3506,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T4_LO5",
@@ -3445,7 +3542,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T4_LO6",
@@ -3480,7 +3578,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T4_LO7",
@@ -3515,7 +3614,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T4_LO8",
@@ -3550,7 +3650,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T4_LO9",
@@ -3585,7 +3686,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T4_LO10",
@@ -3620,7 +3722,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T4_LO11",
@@ -3655,7 +3758,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T4_LO12",
@@ -3690,7 +3794,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T4_LO13",
@@ -3725,7 +3830,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T4_LO14",
@@ -3760,7 +3866,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T4_EX01",
@@ -3795,7 +3902,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T4_EX02",
@@ -3830,7 +3938,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T4_EX03",
@@ -3865,7 +3974,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T4_EX04",
@@ -3900,7 +4010,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO1",
@@ -3935,7 +4046,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO2",
@@ -3970,7 +4082,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO3",
@@ -4005,7 +4118,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO4",
@@ -4040,7 +4154,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO5",
@@ -4075,7 +4190,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO6",
@@ -4110,7 +4226,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO7",
@@ -4145,7 +4262,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T5_LO8",
@@ -4180,7 +4298,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO9",
@@ -4215,7 +4334,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO10",
@@ -4250,7 +4370,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "symbolic"
     },
     {
       "objectiveId": "YR9_T5_LO11",
@@ -4285,7 +4406,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_LO12",
@@ -4320,7 +4442,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_EX01",
@@ -4355,7 +4478,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_EX02",
@@ -4390,7 +4514,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_EX03",
@@ -4425,7 +4550,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     },
     {
       "objectiveId": "YR9_T5_EX04",
@@ -4460,7 +4586,8 @@
         "allTex": true,
         "allPdfs": true,
         "website": true
-      }
+      },
+      "templateType": "visual"
     }
   ]
 }
