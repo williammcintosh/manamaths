@@ -6,12 +6,12 @@
 \definecolor{mmgreenDeep}{HTML}{244B2C}\definecolor{mmtanSoft}{HTML}{F7F5EF}\definecolor{mmgreenLeaf}{HTML}{5D8A56}
 \newcommand{\HoeIcon}{\raisebox{-0.15em}{\includegraphics[height=0.85em]{../../SITE/hoe.png}}}
 \newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\hspace{0.2em}\HoeIcon\fi}
-\newcommand{\loTitle}[2]{{\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par\vspace{0.1em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.2em}}
+\newcommand{\loTitle}[2]{{\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par\vspace{0.005em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.1em}}
 
 
 \newcommand{\Thermometer}[2]{%
 \begin{tikzpicture}[baseline=0]
-\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (0,6) {#1};
+\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (1,6) {#1};
 \draw[line width=5pt,rounded corners=3] (0.5,0) rectangle (2.0,5.5);
 \draw[line width=5pt,rounded corners=4] (0.35,-0.4) rectangle (2.15,0.4);
 \fill[red!90!black] (0.52,0.03) rectangle (1.98,#2/10+1);
@@ -53,61 +53,53 @@
 \draw[red,line width=4pt] (0,0)--(\na:1.6);
 \filldraw[black] (0,0) circle (0.15);
 \end{tikzpicture}}
-
-\newcommand{\MeasuringJug}[2]{%
-\begin{tikzpicture}[baseline=0]
-\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (2.5,5.8) {#1};
-\draw[line width=5pt,rounded corners=2] (0.5,0)--(0.5,5.3)--(1.2,5.3)--(1.9,5.3)--(2.6,5.3)--(2.6,0)--cycle;
-\draw[line width=5pt] (0.5,0)--(2.6,0);
-\foreach \y/\l in{0/0,1/200,2/400,3/600,4/800,5/1000}{
-  \draw[line width=3pt] (2.6,\y)--(3.2,\y);
-  \node[anchor=west,font=\bfseries\fontsize{28}{28}\selectfont,inner sep=3pt] at (3.3,\y) {\l};
-}
-\fill[blue!90!black,opacity=0.9] (0.52,0) rectangle (2.58,#2/222.2);
-\draw[blue!90!black,line width=3pt] (0.52,#2/222.2)--(2.58,#2/222.2);
-\draw[blue!90!black,line width=4pt] (0.35,#2/222.2)--(2.75,#2/222.2);
-\end{tikzpicture}}
 \begin{document}
 \loTitle{Build Tasks}{2}
 \begin{center}
-\Thermometer{A}{18}\hspace{0.8cm}\Ruler{B}{6.7}\hspace{0.8cm}\DialScale{C}{7}\end{center}
-\vspace{0.1em}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.5cm}\Ruler{B}{6.7}\hspace{0.5cm}\DialScale{C}{7}}
+\end{center}
+\vspace{0.005em}
 \noindent
-\quad{\bfseries\LARGE 1. A: nearest 5?}\hfill{\bfseries\LARGE 2. B: in mm?}\hfill{\bfseries\LARGE 3. C: nearest 5?}\quad\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 1. A: nearest 5?}\hfill{\bfseries\huge 2. B: in mm?}\hfill{\bfseries\huge 3. C: nearest 5?}\hspace*{\fill}\par
 \newpage
 \loTitle{Build Tasks}{2}
 \begin{center}
-\Thermometer{A}{16}\hspace{0.8cm}\Ruler{B}{4.3}\hspace{0.8cm}\DialScale{C}{22}\end{center}
-\vspace{0.1em}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.5cm}\Ruler{B}{4.3}\hspace{0.5cm}\DialScale{C}{22}}
+\end{center}
+\vspace{0.005em}
 \noindent
-\quad{\bfseries\LARGE 4. A: nearest big?}\hfill{\bfseries\LARGE 5. B: error?}\hfill{\bfseries\LARGE 6. C: estimate?}\quad\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 4. A: nearest big?}\hfill{\bfseries\huge 5. B: error?}\hfill{\bfseries\huge 6. C: estimate?}\hspace*{\fill}\par
 \newpage
 \loTitle{Build Tasks}{2}
 \begin{center}
-\Thermometer{A}{22}\hspace{0.8cm}\Ruler{B}{6.3}\hspace{0.8cm}\DialScale{C}{28}\end{center}
-\vspace{0.1em}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.5cm}\Ruler{B}{6.3}\hspace{0.5cm}\DialScale{C}{28}}
+\end{center}
+\vspace{0.005em}
 \noindent
-\quad{\bfseries\LARGE 7. A: rise 16-22?}\hfill{\bfseries\LARGE 8. B: dist?}\hfill{\bfseries\LARGE 9. C: 15 to 7?}\quad\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 7. A: rise 16-22?}\hfill{\bfseries\huge 8. B: dist?}\hfill{\bfseries\huge 9. C: 15 to 7?}\hspace*{\fill}\par
 \newpage
 \loTitle{Build Tasks}{2}
 \begin{center}
-\Thermometer{A}{18}\hspace{0.8cm}\Ruler{B}{6.7}\hspace{0.8cm}\DialScale{C}{3}\end{center}
-\vspace{0.1em}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.5cm}\Ruler{B}{6.7}\hspace{0.5cm}\DialScale{C}{3}}
+\end{center}
+\vspace{0.005em}
 \noindent
-\quad{\bfseries\LARGE 10. A: 16-18 rise?}\hfill{\bfseries\LARGE 11. B: 6.7 mm?}\hfill{\bfseries\LARGE 12. C: 7 to 22?}\quad\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 10. A: 16-18 rise?}\hfill{\bfseries\huge 11. B: 6.7 mm?}\hfill{\bfseries\huge 12. C: 7 to 22?}\hspace*{\fill}\par
 \newpage
 \loTitle{Build Tasks}{2}
 \begin{center}
-\Thermometer{A}{16}\hspace{0.8cm}\Ruler{B}{4.3}\hspace{0.8cm}\DialScale{C}{12}\end{center}
-\vspace{0.1em}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.5cm}\Ruler{B}{4.3}\hspace{0.5cm}\DialScale{C}{12}}
+\end{center}
+\vspace{0.005em}
 \noindent
-\quad{\bfseries\LARGE 13. Between marks?}\hfill{\bfseries\LARGE 14. Parallax?}\hfill{\bfseries\LARGE 15. C: scale?}\quad\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 13. Between marks?}\hfill{\bfseries\huge 14. Parallax?}\hfill{\bfseries\huge 15. C: scale?}\hspace*{\fill}\par
 \newpage
 \loTitle{Build Tasks}{2}
 \begin{center}
-\Thermometer{A}{22}\hspace{0.8cm}\Ruler{B}{6.3}\hspace{0.8cm}\DialScale{C}{15}\end{center}
-\vspace{0.1em}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.5cm}\Ruler{B}{6.3}\hspace{0.5cm}\DialScale{C}{15}}
+\end{center}
+\vspace{0.005em}
 \noindent
-\quad{\bfseries\LARGE 16. A: rise?}\hfill{\bfseries\LARGE 17. B: dist?}\hfill{\bfseries\LARGE 18. C: 28 to 3?}\quad\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 16. A: rise?}\hfill{\bfseries\huge 17. B: dist?}\hfill{\bfseries\huge 18. C: 28 to 3?}\hspace*{\fill}\par
 \newpage
 \end{document}
