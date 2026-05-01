@@ -433,6 +433,8 @@ for idx in range(start_idx, end_idx + 1):
     slug = SLUG_LIST[idx]
     title = SLUG_MAP[slug]
     folder = ROOT / 'OBJECTIVES' / slug
+    lo_data = TRACKER['learningObjectives'][idx]
+    template_type = lo_data.get('templateType', 'symbolic')
     
     if not folder.exists():
         print(f"SKIP {slug} — no OJECTIVES folder")
@@ -445,6 +447,11 @@ for idx in range(start_idx, end_idx + 1):
     
     gen_func, needs_visuals, use_tikz = gen
     qf, qp, qe = gen_func()
+    
+    # Determine template based on tracker templateType (overrides hardcoded gen tuple if needed)
+    if template_type == 'visual' and not needs_visuals and not use_tikz:
+        # Visual LO but generator doesn't specify — use visual template with AI images
+        needs_visuals = True
     
     for level, questions, icon, label in [
         ('foundation', qf, 1, 'Start Tasks'),
