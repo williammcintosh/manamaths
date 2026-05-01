@@ -21,7 +21,6 @@
   \draw[line width=3pt] (2.0,\y)--(2.6,\y);
   \node[anchor=west,font=\bfseries\fontsize{28}{28}\selectfont,inner sep=3pt] at (2.7,\y) {\l};
 }
-% Perpendicular horizontal line at reading level
 \draw[red,line width=4pt] (2.0,#2/10+1)--(2.7,#2/10+1);
 \end{tikzpicture}}
 
@@ -36,7 +35,6 @@
 \foreach \x in {1,3,5,7,9,11,13,15}{
   \draw[line width=2pt] (\x,0)--(\x,-0.3);
 }
-% Perpendicular vertical line at reading position
 \draw[red,line width=4pt] (#2,0.25)--(#2,-0.55);
 \end{tikzpicture}}
 
@@ -51,8 +49,23 @@
 }
 \fill[blue!90!black,opacity=0.9] (0.52,0) rectangle (2.58,#2/222.2);
 \draw[blue!90!black,line width=3pt] (0.52,#2/222.2)--(2.58,#2/222.2);
-% Perpendicular horizontal line at water level
 \draw[blue!90!black,line width=4pt] (0.35,#2/222.2)--(2.75,#2/222.2);
+\end{tikzpicture}}
+
+\newcommand{\DialScale}[2]{%
+\begin{tikzpicture}[baseline=0]
+\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (0,4.5) {#1};
+\draw[line width=5pt] (0,0) circle (3.7);
+\foreach \angle/\label in {90/0,0/10,-90/20,180/30}{
+  \draw[line width=3pt] (\angle:3.2)--(\angle:3.7);
+  \node[font=\bfseries\fontsize{28}{28}\selectfont,inner sep=3pt] at (\angle:4.5) {\label};
+}
+\foreach \angle in {45,135,-45,-135}{
+  \draw[line width=2pt] (\angle:3.35)--(\angle:3.7);
+}
+\pgfmathsetmacro{\needleAngle}{90 - (#2 * 12)}
+\draw[red,line width=4pt] (0,0)--(\needleAngle:2.5);
+\fill (0,0) circle (0.2);
 \end{tikzpicture}}
 \begin{document}
 \loTitle{Start Tasks}{1}
@@ -61,40 +74,40 @@
 \vspace{0.05em}
 \noindent
 \quad{\bfseries\LARGE 1. Temp at A?}\hfill{\bfseries\LARGE 2. Length at B?}\hfill{\bfseries\LARGE 3. Volume at C?}\quad\par
-\vspace{0.4em}
-\begin{center}
-\Thermometer{A}{18}\hspace{1cm}\Ruler{B}{6.7}\hspace{1cm}\MeasuringJug{C}{37}\end{center}
-\vspace{0.05em}
-\noindent
-\quad{\bfseries\LARGE 4. A: temp?}\hfill{\bfseries\LARGE 5. B: length?}\hfill{\bfseries\LARGE 6. C: volume?}\quad\par
-\vspace{0.4em}
-\newpage
-\loTitle{Start Tasks}{1}
-\begin{center}
-\Thermometer{A}{16}\hspace{1cm}\Ruler{B}{4.3}\hspace{1cm}\MeasuringJug{C}{380}\end{center}
-\vspace{0.05em}
-\noindent
-\quad{\bfseries\LARGE 7. A: approx?}\hfill{\bfseries\LARGE 8. B: length?}\hfill{\bfseries\LARGE 9. C: volume?}\quad\par
-\vspace{0.4em}
-\begin{center}
-\Thermometer{A}{22}\hspace{1cm}\Ruler{B}{6.3}\hspace{1cm}\MeasuringJug{C}{600}\end{center}
-\vspace{0.05em}
-\noindent
-\quad{\bfseries\LARGE 10. A: reading?}\hfill{\bfseries\LARGE 11. B: mark?}\hfill{\bfseries\LARGE 12. C: unit?}\quad\par
-\vspace{0.4em}
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
 \Thermometer{A}{18}\hspace{1cm}\Ruler{B}{6.7}\hspace{1cm}\MeasuringJug{C}{37}\end{center}
 \vspace{0.05em}
 \noindent
-\quad{\bfseries\LARGE 13. A: temp?}\hfill{\bfseries\LARGE 14. B: length?}\hfill{\bfseries\LARGE 15. C: volume?}\quad\par
-\vspace{0.4em}
+\quad{\bfseries\LARGE 4. Temp at A?}\hfill{\bfseries\LARGE 5. Length at B?}\hfill{\bfseries\LARGE 6. Volume at C?}\quad\par
+\newpage
+\loTitle{Start Tasks}{1}
 \begin{center}
 \Thermometer{A}{16}\hspace{1cm}\Ruler{B}{4.3}\hspace{1cm}\MeasuringJug{C}{380}\end{center}
 \vspace{0.05em}
 \noindent
-\quad{\bfseries\LARGE 16. A: approx?}\hfill{\bfseries\LARGE 17. B: error?}\hfill{\bfseries\LARGE 18. C: between?}\quad\par
-\vspace{0.4em}
+\quad{\bfseries\LARGE 7. Temp at A?}\hfill{\bfseries\LARGE 8. Length at B?}\hfill{\bfseries\LARGE 9. Volume at C?}\quad\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\Thermometer{A}{22}\hspace{1cm}\Ruler{B}{6.3}\hspace{1cm}\DialScale{C}{15}\end{center}
+\vspace{0.05em}
+\noindent
+\quad{\bfseries\LARGE 10. Temp?}\hfill{\bfseries\LARGE 11. Length?}\hfill{\bfseries\LARGE 12. Dial value?}\quad\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\Thermometer{A}{18}\hspace{1cm}\Ruler{B}{6.7}\hspace{1cm}\DialScale{C}{25}\end{center}
+\vspace{0.05em}
+\noindent
+\quad{\bfseries\LARGE 13. Temp?}\hfill{\bfseries\LARGE 14. Length?}\hfill{\bfseries\LARGE 15. Dial value?}\quad\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\Thermometer{A}{16}\hspace{1cm}\Ruler{B}{4.3}\hspace{1cm}\DialScale{C}{8}\end{center}
+\vspace{0.05em}
+\noindent
+\quad{\bfseries\LARGE 16. Temp?}\hfill{\bfseries\LARGE 17. Length?}\hfill{\bfseries\LARGE 18. Dial value?}\quad\par
 \newpage
 \end{document}
