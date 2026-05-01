@@ -1,109 +1,68 @@
-\documentclass[aspectratio=169,12pt]{beamer}
-\usepackage{amsmath,amssymb}\usepackage[most]{tcolorbox}\usepackage{tikz}
-\usetikzlibrary{arrows.meta}\usepackage{graphicx}
+\documentclass[20pt,a4paper,landscape]{extarticle}
+\usepackage[margin=0.6cm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,xcolor,tikz}\usetikzlibrary{arrows.meta}
 \usepackage[sfdefault,lf]{FiraSans}\renewcommand{\familydefault}{\sfdefault}
-\setlength{\parindent}{0pt}
-\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}{}\setbeamertemplate{headline}{}
-\definecolor{mmpageWhite}{HTML}{FCFBF7}\definecolor{mmtanSoft}{HTML}{F7F5EF}
-\definecolor{mmgreenDeep}{HTML}{244B2C}\definecolor{mmgreenLeaf}{HTML}{5D8A56}
-\definecolor{mmtext}{HTML}{163221}
-\setbeamercolor{background canvas}{bg=mmpageWhite}\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
-\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=4pt,left=2pt,right=2pt,top=1pt,bottom=1pt,before skip=0pt,after skip=0pt,height=0.12\textheight,valign=top,#1}
-\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
-\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
-\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
-\newcommand{\WorksheetTitle}[2]{{\colorbox{mmtanSoft}{\parbox[c][1.4em][c]{0.975\linewidth}{\hspace{0.25em}{\normalsize\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}}}
-\setbeamertemplate{background}{\begin{tikzpicture}[remember picture,overlay]\draw[black,line width=1.5pt,rounded corners=10pt]([xshift=0.4cm,yshift=-0.4cm]current page.north west)rectangle([xshift=-0.4cm,yshift=0.4cm]current page.south east);\end{tikzpicture}}
+\setlength{\parindent}{0pt}\pagestyle{empty}
+\definecolor{mmgreenDeep}{HTML}{244B2C}\definecolor{mmtanSoft}{HTML}{F7F5EF}\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\newcommand{\HoeIcon}{\raisebox{-0.15em}{\includegraphics[height=0.85em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\hspace{0.2em}\HoeIcon\fi}
+\newcommand{\loTitle}[2]{{\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par\vspace{0.1em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.2em}}
 
-% diagram macros — no arrows, no value labels, just red dots
-\newcommand{\Thermometer}[2]{\begin{tikzpicture}[scale=0.25,baseline=0]\node[above,font=\bfseries\tiny]at(0,5){#1};
-\draw[thick](0.1,-0.1)--(0.1,4.5);\foreach\y/\l in{0/-10,1/0,2/10,3/20,4/30,5/40}{\draw[thick](0,\y)--(0.4,\y);\node[left,font=\tiny]at(-0.02,\y){\l};}
-\draw[very thick,rounded corners=1](0.45,0)rectangle(0.85,4.5);\draw[very thick,rounded corners=2](0.35,-0.15)rectangle(0.95,0.15);
-\fill[red!80!black](0.45,0)rectangle(0.85,#2/10+1);\fill[red!80!black](0.36,-0.14)rectangle(0.94,0.14);
-\fill[red] (0.65,#2/10+1) circle (0.08);
-\end{tikzpicture}}
-\newcommand{\Ruler}[2]{\begin{tikzpicture}[scale=0.25,baseline=0]\node[above,font=\bfseries\tiny]at(7.5,0.7){#1};
-\draw[very thick](0,0)--(15,0);\foreach\x in{0,...,15}{\draw[thick](\x,0)--(\x,-0.1);\node[below,font=\tiny]at(\x,-0.12){\x};}
-\foreach\x in{0.1,0.2,...,14.9}{\draw[thin](\x,0)--(\x,-0.03);}
-\fill[red] (#2,0) circle (0.08);
-\end{tikzpicture}}
-\newcommand{\MeasuringJug}[2]{\begin{tikzpicture}[scale=0.25,baseline=0]\node[above,font=\bfseries\tiny]at(2,5){#1};
-\draw[very thick](0.3,0)--(0.3,4.5)--(0.8,4.5)--(1.3,4.5)--(1.8,4.5)--(1.8,0)--cycle;
-\foreach\y/\l in{0/0,0.9/200,1.8/400,2.7/600,3.6/800,4.5/1000}{\draw[thick](1.8,\y)--(2.1,\y);\node[right,font=\tiny]at(2.2,\y){\l};}
-\fill[blue!40!white,opacity=0.6](0.31,0)rectangle(1.79,#2/222.2);\draw[blue,thick](0.31,#2/222.2)--(1.79,#2/222.2);
-\fill[blue] (2.0,#2/222.2) circle (0.08);
-\end{tikzpicture}}
+\newcommand{\Thermometer}[2]{\begin{tikzpicture}[scale=0.6,baseline=0]\node[above,font=\bfseries]at(0,5){#1};
+\draw[thick](0.15,-0.1)--(0.15,4.5);\foreach\y/\l in{0/-10,1/0,2/10,3/20,4/30,5/40}{\draw[thick](0,\y)--(0.5,\y);\node[left]at(-0.06,\y){\l};}
+\draw[very thick,rounded corners=1](0.55,0)rectangle(1.1,4.5);\draw[very thick,rounded corners=2](0.45,-0.2)rectangle(1.25,0.2);
+\fill[red!80!black](0.55,0)rectangle(1.1,#2/10+1);\fill[red!80!black](0.46,-0.19)rectangle(1.24,0.19);
+\fill[red](0.825,#2/10+1)circle(0.12);\end{tikzpicture}}
+\newcommand{\Ruler}[2]{\begin{tikzpicture}[scale=0.6,baseline=0]\node[above,font=\bfseries]at(7.5,0.8){#1};
+\draw[very thick](0,0)--(15,0);\foreach\x in{0,...,15}{\draw[thick](\x,0)--(\x,-0.2);\node[below,font=\normalsize]at(\x,-0.25){\x};}
+\foreach\x in{0.1,0.2,...,14.9}{\draw[thin](\x,0)--(\x,-0.08);}
+\fill[red](#2,0)circle(0.12);\end{tikzpicture}}
+\newcommand{\MeasuringJug}[2]{\begin{tikzpicture}[scale=0.6,baseline=0]\node[above,font=\bfseries]at(2,5){#1};
+\draw[very thick](0.5,0)--(0.5,4.5)--(1.05,4.5)--(1.65,4.5)--(2.25,4.5)--(2.25,0)--cycle;
+\foreach\y/\l in{0/0,0.9/200,1.8/400,2.7/600,3.6/800,4.5/1000}{\draw[thick](2.25,\y)--(2.6,\y);\node[right,font=\normalsize]at(2.7,\y){\l};}
+\fill[blue!40!white,opacity=0.6](0.51,0)rectangle(2.24,#2/222.2);
+\draw[blue,thick](0.51,#2/222.2)--(2.24,#2/222.2);\fill[blue](2.0,#2/222.2)circle(0.12);\end{tikzpicture}}
 \begin{document}
-\begin{frame}[t,shrink=30]
-\WorksheetTitle{Start Tasks}{1}
-\begin{center}\Thermometer{A}{22}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.1}\hspace{0.1em}Read temp\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.2}\hspace{0.1em}Nearest 5 deg\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.3}\hspace{0.1em}Red line position\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\Ruler{B}{6.3}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.4}\hspace{0.1em}Length shown\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.5}\hspace{0.1em}In mm?\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.6}\hspace{0.1em}Arrow at mark?\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\MeasuringJug{C}{600}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.7}\hspace{0.1em}Volume shown\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.8}\hspace{0.1em}In L?\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.9}\hspace{0.1em}Water colour?\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\end{frame}
-\begin{frame}[t,shrink=30]
-\WorksheetTitle{Start Tasks}{1}
-\begin{center}\Thermometer{A}{18}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.10}\hspace{0.1em}Temp shown\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.11}\hspace{0.1em}Nearest 5?\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.12}\hspace{0.1em}Between marks\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\Ruler{B}{6.7}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.13}\hspace{0.1em}Length shown\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.14}\hspace{0.1em}In mm?\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.15}\hspace{0.1em}How many cm\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\MeasuringJug{C}{37}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.16}\hspace{0.1em}Volume shown\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.17}\hspace{0.1em}Unit?\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.18}\hspace{0.1em}Read precisely\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\end{frame}
-\begin{frame}[t,shrink=30]
-\WorksheetTitle{Start Tasks}{1}
-\begin{center}\Thermometer{A}{16}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.19}\hspace{0.1em}Approx temp\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.20}\hspace{0.1em}Between marks\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.21}\hspace{0.1em}Nearest 2 deg\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\Ruler{B}{4.3}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.22}\hspace{0.1em}Length shown\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.23}\hspace{0.1em}In mm?\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.24}\hspace{0.1em}Error margin?\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\begin{center}\MeasuringJug{C}{380}\end{center}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.25}\hspace{0.1em}Volume shown\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.26}\hspace{0.1em}Meniscus?\end{MMCard}\end{column}
-\begin{column}{0.32\textwidth}\begin{MMCard}\raggedright\tiny\textbf{.27}\hspace{0.1em}Nearest 10?\end{MMCard}\end{column}
-\end{columns}
-\vspace{0.07em}
-\end{frame}
+\loTitle{Start Tasks}{1}
+\begin{center}
+\Thermometer{A}{22}\hspace{0.8cm}\Ruler{B}{6.3}\hspace{0.8cm}\MeasuringJug{C}{600}\end{center}
+\vspace{0.05em}
+\noindent
+\quad\textbf{1. Temp at A?}\hfill\textbf{2. Length at B?}\hfill\textbf{3. Volume at C?}\quad\par
+\vspace{0.4em}
+\begin{center}
+\Thermometer{A}{18}\hspace{0.8cm}\Ruler{B}{6.7}\hspace{0.8cm}\MeasuringJug{C}{37}\end{center}
+\vspace{0.05em}
+\noindent
+\quad\textbf{4. A: temp shown?}\hfill\textbf{5. B: length shown?}\hfill\textbf{6. C: volume shown?}\quad\par
+\vspace{0.4em}
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\Thermometer{A}{16}\hspace{0.8cm}\Ruler{B}{4.3}\hspace{0.8cm}\MeasuringJug{C}{380}\end{center}
+\vspace{0.05em}
+\noindent
+\quad\textbf{7. A: temp approx?}\hfill\textbf{8. B: what length?}\hfill\textbf{9. C: volume?}\quad\par
+\vspace{0.4em}
+\begin{center}
+\Thermometer{A}{22}\hspace{0.8cm}\Ruler{B}{6.3}\hspace{0.8cm}\MeasuringJug{C}{600}\end{center}
+\vspace{0.05em}
+\noindent
+\quad\textbf{10. A: reading?}\hfill\textbf{11. B: which mark?}\hfill\textbf{12. C: unit?}\quad\par
+\vspace{0.4em}
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\Thermometer{A}{18}\hspace{0.8cm}\Ruler{B}{6.7}\hspace{0.8cm}\MeasuringJug{C}{37}\end{center}
+\vspace{0.05em}
+\noindent
+\quad\textbf{13. A: temp shown?}\hfill\textbf{14. B: length?}\hfill\textbf{15. C: volume?}\quad\par
+\vspace{0.4em}
+\begin{center}
+\Thermometer{A}{16}\hspace{0.8cm}\Ruler{B}{4.3}\hspace{0.8cm}\MeasuringJug{C}{380}\end{center}
+\vspace{0.05em}
+\noindent
+\quad\textbf{16. A: approx value?}\hfill\textbf{17. B: error margin?}\hfill\textbf{18. C: between marks?}\quad\par
+\vspace{0.4em}
+\newpage
 \end{document}

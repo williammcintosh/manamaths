@@ -1,0 +1,83 @@
+% ── VISUAL LANDSCAPE TEMPLATE ──
+% For diagram-based LOs. Uses extarticle landscape so each row is wide.
+% Layout: 2 rows per page, each row = 1 diagram (full width) + 3 question boxes below it.
+% 3 pages = 2 rows × 3 pages = 6 questions per scaffold.
+%
+% For LOs needing 27 questions: run 5 pages (10 questions) or adjust.
+% For most visual LOs: 6 questions is enough to cover 2-3 diagram types.
+%
+% Usage:
+%   \begin{document}
+%   \visualRow{visuals/foundation-p1.png}{Q1}{Q2}{Q3}
+%   \visualRow{visuals/foundation-p2.png}{Q4}{Q5}{Q6}
+%   \end{document}
+
+\documentclass[20pt,a4paper,landscape]{extarticle}
+\usepackage[margin=1.0cm,top=0.4cm,left=0.6cm,right=0.6cm,bottom=0.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+
+\newcommand{\HoeIcon}{\raisebox{-0.15em}{\includegraphics[height=0.85em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\hspace{0.2em}\HoeIcon\fi}
+
+% One row: image + 3 wide boxes
+\newcommand{\visualRow}[5]{%
+  \begin{minipage}[t]{\linewidth}
+  \begin{center}
+  \includegraphics[width=0.92\linewidth,height=0.40\textheight,keepaspectratio]{#1}
+  \end{center}
+  \vspace{0.15em}
+  \noindent
+  \begin{minipage}[t]{0.31\linewidth}\hspace{0.5em}\textbf{#2}\end{minipage}\hfill
+  \begin{minipage}[t]{0.31\linewidth}\hspace{0.5em}\textbf{#3}\end{minipage}\hfill
+  \begin{minipage}[t]{0.31\linewidth}\hspace{0.5em}\textbf{#4}\end{minipage}
+  \end{minipage}\par\vspace{0.5em}#5%
+}
+
+% TikZ variant: inline TikZ instead of image
+\newcommand{\tikzRow}[5]{%
+  \begin{minipage}[t]{\linewidth}
+  \begin{center}
+  \resizebox{0.75\linewidth}{!}{#1}
+  \end{center}
+  \vspace{0.15em}
+  \noindent
+  \begin{minipage}[t]{0.31\linewidth}\hspace{0.5em}\textbf{#2}\end{minipage}\hfill
+  \begin{minipage}[t]{0.31\linewidth}\hspace{0.5em}\textbf{#3}\end{minipage}\hfill
+  \begin{minipage}[t]{0.31\linewidth}\hspace{0.5em}\textbf{#4}\end{minipage}
+  \end{minipage}\par\vspace{0.5em}#5%
+}
+
+% Title block
+\newcommand{\loTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par
+  \vspace{0.15em}{\color{mmgreenLeaf}\rule{\linewidth}{3.0pt}}\par\vspace{0.3em}%
+}
+
+% Diagram macros (smaller scale for landscape)
+\newcommand{\Thermometer}[2]{\begin{tikzpicture}[scale=0.55,baseline=0]\node[above,font=\bfseries\small]at(0,5){#1};
+\draw[thick](0.12,-0.1)--(0.12,4.5);\foreach\y/\l in{0/-10,1/0,2/10,3/20,4/30,5/40}{\draw[thick](0,\y)--(0.4,\y);\node[left]at(-0.05,\y){\l};}
+\draw[very thick,rounded corners=1](0.5,0)rectangle(0.95,4.5);\draw[very thick,rounded corners=2](0.4,-0.2)rectangle(1.1,0.2);
+\fill[red!80!black](0.5,0)rectangle(0.95,#2/10+1);\fill[red!80!black](0.41,-0.19)rectangle(1.09,0.19);
+\fill[red](0.725,#2/10+1)circle(0.1);\end{tikzpicture}}
+\newcommand{\Ruler}[2]{\begin{tikzpicture}[scale=0.55,baseline=0]\node[above,font=\bfseries\small]at(7.5,0.8){#1};
+\draw[very thick](0,0)--(15,0);\foreach\x in{0,...,15}{\draw[thick](\x,0)--(\x,-0.15);\node[below,font=\small]at(\x,-0.18){\x};}
+\foreach\x in{0.1,0.2,...,14.9}{\draw[thin](\x,0)--(\x,-0.05);}
+\fill[red](#2,0)circle(0.1);\end{tikzpicture}}
+\newcommand{\MeasuringJug}[2]{\begin{tikzpicture}[scale=0.55,baseline=0]\node[above,font=\bfseries\small]at(2,5){#1};
+\draw[very thick](0.4,0)--(0.4,4.5)--(1.0,4.5)--(1.6,4.5)--(2.2,4.5)--(2.2,0)--cycle;
+\foreach\y/\l in{0/0,0.9/200,1.8/400,2.7/600,3.6/800,4.5/1000}{\draw[thick](2.2,\y)--(2.5,\y);\node[right]at(2.6,\y){\l};}
+\fill[blue!40!white,opacity=0.6](0.41,0)rectangle(2.19,#2/222.2);
+\draw[blue,thick](0.41,#2/222.2)--(2.19,#2/222.2);\fill[blue](2.0,#2/222.2)circle(0.1);\end{tikzpicture}}
