@@ -38,6 +38,22 @@
 \draw[red,line width=4pt] (#2,0.25)--(#2,-0.55);
 \end{tikzpicture}}
 
+\newcommand{\DialScale}[2]{%
+\begin{tikzpicture}[baseline=0]
+\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (0,3) {#1};
+\draw[line width=5pt] (0,0) circle (2.2);
+\foreach \angle/\label in {90/0,0/10,-90/20,180/30}{
+  \draw[line width=3pt] (\angle:1.8)--(\angle:2.2);
+  \node[font=\bfseries\fontsize{24}{24}\selectfont,inner sep=2pt] at (\angle:2.8) {\label};
+}
+\foreach \angle in {45,135,-45,-135}{
+  \draw[line width=2pt] (\angle:1.95)--(\angle:2.2);
+}
+\pgfmathsetmacro{\na}{90 - (#2 * 12)}
+\draw[red,line width=4pt] (0,0)--(\na:1.6);
+\filldraw[black] (0,0) circle (0.15);
+\end{tikzpicture}}
+
 \newcommand{\MeasuringJug}[2]{%
 \begin{tikzpicture}[baseline=0]
 \node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (2.5,5.8) {#1};
@@ -51,63 +67,47 @@
 \draw[blue!90!black,line width=3pt] (0.52,#2/222.2)--(2.58,#2/222.2);
 \draw[blue!90!black,line width=4pt] (0.35,#2/222.2)--(2.75,#2/222.2);
 \end{tikzpicture}}
-
-\newcommand{\DialScale}[2]{%
-\begin{tikzpicture}[baseline=0]
-\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (0,4.5) {#1};
-\draw[line width=5pt] (0,0) circle (3.7);
-\foreach \angle/\label in {90/0,0/10,-90/20,180/30}{
-  \draw[line width=3pt] (\angle:3.2)--(\angle:3.7);
-  \node[font=\bfseries\fontsize{28}{28}\selectfont,inner sep=3pt] at (\angle:4.5) {\label};
-}
-\foreach \angle in {45,135,-45,-135}{
-  \draw[line width=2pt] (\angle:3.35)--(\angle:3.7);
-}
-\pgfmathsetmacro{\needleAngle}{90 - (#2 * 12)}
-\draw[red,line width=4pt] (0,0)--(\needleAngle:2.5);
-\fill (0,0) circle (0.2);
-\end{tikzpicture}}
 \begin{document}
 \loTitle{Start Tasks}{1}
 \begin{center}
-\Thermometer{A}{22}\hspace{1cm}\Ruler{B}{6.3}\hspace{1cm}\MeasuringJug{C}{600}\end{center}
-\vspace{0.05em}
+\Thermometer{A}{22}\hspace{0.8cm}\Ruler{B}{6.3}\hspace{0.8cm}\DialScale{C}{15}\end{center}
+\vspace{0.1em}
 \noindent
-\quad{\bfseries\LARGE 1. Temp at A?}\hfill{\bfseries\LARGE 2. Length at B?}\hfill{\bfseries\LARGE 3. Volume at C?}\quad\par
+\quad{\bfseries\LARGE 1. Temp at A?}\hfill{\bfseries\LARGE 2. Length at B?}\hfill{\bfseries\LARGE 3. Dial reads?}\quad\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\Thermometer{A}{18}\hspace{1cm}\Ruler{B}{6.7}\hspace{1cm}\MeasuringJug{C}{37}\end{center}
-\vspace{0.05em}
+\Thermometer{A}{18}\hspace{0.8cm}\Ruler{B}{6.7}\hspace{0.8cm}\DialScale{C}{7}\end{center}
+\vspace{0.1em}
 \noindent
-\quad{\bfseries\LARGE 4. Temp at A?}\hfill{\bfseries\LARGE 5. Length at B?}\hfill{\bfseries\LARGE 6. Volume at C?}\quad\par
+\quad{\bfseries\LARGE 4. A: temp?}\hfill{\bfseries\LARGE 5. B: length?}\hfill{\bfseries\LARGE 6. C: dial?}\quad\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\Thermometer{A}{16}\hspace{1cm}\Ruler{B}{4.3}\hspace{1cm}\MeasuringJug{C}{380}\end{center}
-\vspace{0.05em}
+\Thermometer{A}{16}\hspace{0.8cm}\Ruler{B}{4.3}\hspace{0.8cm}\DialScale{C}{22}\end{center}
+\vspace{0.1em}
 \noindent
-\quad{\bfseries\LARGE 7. Temp at A?}\hfill{\bfseries\LARGE 8. Length at B?}\hfill{\bfseries\LARGE 9. Volume at C?}\quad\par
+\quad{\bfseries\LARGE 7. A: approx?}\hfill{\bfseries\LARGE 8. B: length?}\hfill{\bfseries\LARGE 9. C: dial?}\quad\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\Thermometer{A}{22}\hspace{1cm}\Ruler{B}{6.3}\hspace{1cm}\DialScale{C}{15}\end{center}
-\vspace{0.05em}
+\Thermometer{A}{22}\hspace{0.8cm}\Ruler{B}{6.3}\hspace{0.8cm}\DialScale{C}{28}\end{center}
+\vspace{0.1em}
 \noindent
-\quad{\bfseries\LARGE 10. Temp?}\hfill{\bfseries\LARGE 11. Length?}\hfill{\bfseries\LARGE 12. Dial value?}\quad\par
+\quad{\bfseries\LARGE 10. A: reading?}\hfill{\bfseries\LARGE 11. B: mark?}\hfill{\bfseries\LARGE 12. C: dial?}\quad\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\Thermometer{A}{18}\hspace{1cm}\Ruler{B}{6.7}\hspace{1cm}\DialScale{C}{25}\end{center}
-\vspace{0.05em}
+\Thermometer{A}{18}\hspace{0.8cm}\Ruler{B}{6.7}\hspace{0.8cm}\DialScale{C}{3}\end{center}
+\vspace{0.1em}
 \noindent
-\quad{\bfseries\LARGE 13. Temp?}\hfill{\bfseries\LARGE 14. Length?}\hfill{\bfseries\LARGE 15. Dial value?}\quad\par
+\quad{\bfseries\LARGE 13. A: temp?}\hfill{\bfseries\LARGE 14. B: length?}\hfill{\bfseries\LARGE 15. C: dial?}\quad\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\Thermometer{A}{16}\hspace{1cm}\Ruler{B}{4.3}\hspace{1cm}\DialScale{C}{8}\end{center}
-\vspace{0.05em}
+\Thermometer{A}{16}\hspace{0.8cm}\Ruler{B}{4.3}\hspace{0.8cm}\DialScale{C}{12}\end{center}
+\vspace{0.1em}
 \noindent
-\quad{\bfseries\LARGE 16. Temp?}\hfill{\bfseries\LARGE 17. Length?}\hfill{\bfseries\LARGE 18. Dial value?}\quad\par
+\quad{\bfseries\LARGE 16. A: approx?}\hfill{\bfseries\LARGE 17. B: error?}\hfill{\bfseries\LARGE 18. C: dial?}\quad\par
 \newpage
 \end{document}
