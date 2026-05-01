@@ -1,12 +1,12 @@
 \documentclass[20pt,a4paper,landscape]{extarticle}
-\usepackage[margin=0.6cm]{geometry}
+\usepackage[margin=0.3cm,bottom=0.6cm]{geometry}
 \usepackage{amsmath,amssymb,graphicx,xcolor,tikz}\usetikzlibrary{arrows.meta}
 \usepackage[sfdefault,lf]{FiraSans}\renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}\pagestyle{empty}
 \definecolor{mmgreenDeep}{HTML}{244B2C}\definecolor{mmtanSoft}{HTML}{F7F5EF}\definecolor{mmgreenLeaf}{HTML}{5D8A56}
 \newcommand{\HoeIcon}{\raisebox{-0.15em}{\includegraphics[height=0.85em]{../../SITE/hoe.png}}}
 \newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\hspace{0.2em}\HoeIcon\fi}
-\newcommand{\loTitle}[2]{{\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par\vspace{0.005em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.1em}}
+\newcommand{\loTitle}[2]{{\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par\vspace{0.04em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.1em}}
 
 
 \newcommand{\Thermometer}[2]{%
@@ -53,6 +53,35 @@
 \draw[red,line width=4pt] (0,0)--(\na:1.6);
 \filldraw[black] (0,0) circle (0.15);
 \end{tikzpicture}}
+
+\newcommand{\GasDial}[3]{%
+% #1=label, #2=value(0-9), #3=direction(1=CW,-1=CCW)
+\begin{tikzpicture}[baseline=0]
+\if\relax\detokenize{#1}\relax\else\node[above,font=\bfseries\fontsize{18}{18}\selectfont] at (0,1.8) {#1};\fi
+\draw[line width=3pt] (0,0) circle (1.4);
+\ifnum#3=1
+  % CW: digits 0-9 clockwise
+  \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
+    \pgfmathsetmacro{\ang}{90 - (\i-1)*36}
+    \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
+    \node[font=\bfseries\fontsize{16}{16}\selectfont,inner sep=1pt] at (\ang:1.7) {\digit};
+  }
+  \pgfmathsetmacro{\nang}{90 - (#2 * 36)}
+\else
+  % CCW: digits 0-9 counterclockwise (1 goes left, 2 at NW, etc.)
+  \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
+    \pgfmathsetmacro{\ang}{90 + (\i-1)*36}
+    \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
+    \node[font=\bfseries\fontsize{16}{16}\selectfont,inner sep=1pt] at (\ang:1.7) {\digit};
+  }
+  \pgfmathsetmacro{\nang}{90 + (#2 * 36)}
+\fi
+\draw[red,line width=3pt] (0,0)--(\nang:0.9);
+\filldraw[black] (0,0) circle (0.1);
+\end{tikzpicture}}
+
+\newcommand{\GasMeter}[5]{%
+\GasDial{#1}{#2}{1}\hspace{0.2cm}\GasDial{}{#3}{-1}\hspace{0.2cm}\GasDial{}{#4}{1}\hspace{0.2cm}\GasDial{}{#5}{-1}}
 \begin{document}
 \loTitle{Build Tasks}{2}
 \begin{center}

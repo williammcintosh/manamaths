@@ -1,12 +1,12 @@
 \documentclass[20pt,a4paper,landscape]{extarticle}
-\usepackage[margin=0.6cm]{geometry}
+\usepackage[margin=0.3cm,bottom=0.6cm]{geometry}
 \usepackage{amsmath,amssymb,graphicx,xcolor,tikz}\usetikzlibrary{arrows.meta}
 \usepackage[sfdefault,lf]{FiraSans}\renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}\pagestyle{empty}
 \definecolor{mmgreenDeep}{HTML}{244B2C}\definecolor{mmtanSoft}{HTML}{F7F5EF}\definecolor{mmgreenLeaf}{HTML}{5D8A56}
 \newcommand{\HoeIcon}{\raisebox{-0.15em}{\includegraphics[height=0.85em]{../../SITE/hoe.png}}}
 \newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\hspace{0.2em}\HoeIcon\fi}
-\newcommand{\loTitle}[2]{{\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par\vspace{0.005em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.1em}}
+\newcommand{\loTitle}[2]{{\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par\vspace{0.04em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.1em}}
 
 
 \newcommand{\Thermometer}[2]{%
@@ -53,37 +53,74 @@
 \draw[red,line width=4pt] (0,0)--(\na:1.6);
 \filldraw[black] (0,0) circle (0.15);
 \end{tikzpicture}}
+
+\newcommand{\GasDial}[3]{%
+% #1=label, #2=value(0-9), #3=direction(1=CW,-1=CCW)
+\begin{tikzpicture}[baseline=0]
+\if\relax\detokenize{#1}\relax\else\node[above,font=\bfseries\fontsize{18}{18}\selectfont] at (0,1.8) {#1};\fi
+\draw[line width=3pt] (0,0) circle (1.4);
+\ifnum#3=1
+  % CW: digits 0-9 clockwise
+  \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
+    \pgfmathsetmacro{\ang}{90 - (\i-1)*36}
+    \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
+    \node[font=\bfseries\fontsize{16}{16}\selectfont,inner sep=1pt] at (\ang:1.7) {\digit};
+  }
+  \pgfmathsetmacro{\nang}{90 - (#2 * 36)}
+\else
+  % CCW: digits 0-9 counterclockwise (1 goes left, 2 at NW, etc.)
+  \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
+    \pgfmathsetmacro{\ang}{90 + (\i-1)*36}
+    \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
+    \node[font=\bfseries\fontsize{16}{16}\selectfont,inner sep=1pt] at (\ang:1.7) {\digit};
+  }
+  \pgfmathsetmacro{\nang}{90 + (#2 * 36)}
+\fi
+\draw[red,line width=3pt] (0,0)--(\nang:0.9);
+\filldraw[black] (0,0) circle (0.1);
+\end{tikzpicture}}
+
+\newcommand{\GasMeter}[5]{%
+\GasDial{#1}{#2}{1}\hspace{0.2cm}\GasDial{}{#3}{-1}\hspace{0.2cm}\GasDial{}{#4}{1}\hspace{0.2cm}\GasDial{}{#5}{-1}}
 \begin{document}
 \loTitle{Push Tasks}{3}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.5cm}\Ruler{B}{4.3}\hspace{0.5cm}\DialScale{C}{22}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.3cm}\Ruler{B}{4.3}\hspace{0.3cm}\GasMeter{C}{3}{8}{2}{5}}
 \end{center}
 \vspace{0.005em}
 \noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 1. A: uncertainty?}\hfill{\normalfont\bfseries\normalsize 2. B: zero-error?}\hfill{\normalfont\bfseries\normalsize 3. C: needle prec?}\hspace*{\fill}\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 1. A: reading?}\hfill{\normalfont\bfseries\normalsize 2. B: length?}\hfill{\normalfont\bfseries\normalsize 3. C: gas reading?}\hspace*{\fill}\par
 \newpage
 \loTitle{Push Tasks}{3}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.5cm}\Ruler{B}{6.3}\hspace{0.5cm}\DialScale{C}{28}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.3cm}\Ruler{B}{6.3}\hspace{0.3cm}\GasMeter{C}{7}{1}{9}{4}}
 \end{center}
 \vspace{0.005em}
 \noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 4. Two readings?}\hfill{\normalfont\bfseries\normalsize 5. B: mm prec?}\hfill{\normalfont\bfseries\normalsize 6. C: dial span?}\hspace*{\fill}\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 4. A: reading?}\hfill{\normalfont\bfseries\normalsize 5. B: length?}\hfill{\normalfont\bfseries\normalsize 6. C: gas reading?}\hspace*{\fill}\par
 \newpage
 \loTitle{Push Tasks}{3}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.5cm}\Ruler{B}{6.7}\hspace{0.5cm}\DialScale{C}{3}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.3cm}\Ruler{B}{6.7}\hspace{0.3cm}\GasMeter{C}{1}{4}{6}{2}}
 \end{center}
 \vspace{0.005em}
 \noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 7. A: 16-18 rise?}\hfill{\normalfont\bfseries\normalsize 8. B: mm to cm?}\hfill{\normalfont\bfseries\normalsize 9. C: compare dials?}\hspace*{\fill}\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 7. A: reading?}\hfill{\normalfont\bfseries\normalsize 8. B: length?}\hfill{\normalfont\bfseries\normalsize 9. C: gas reading?}\hspace*{\fill}\par
 \newpage
 \loTitle{Push Tasks}{3}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.5cm}\Ruler{B}{4.3}\hspace{0.5cm}\DialScale{C}{12}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.3cm}\Ruler{B}{4.3}\hspace{0.3cm}\GasMeter{C}{5}{9}{1}{7}}
 \end{center}
 \vspace{0.005em}
 \noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 10. A: % error?}\hfill{\normalfont\bfseries\normalsize 11. B: factor?}\hfill{\normalfont\bfseries\normalsize 12. C: units?}\hspace*{\fill}\par
+\hspace*{\fill}{\normalfont\bfseries\normalsize 10. A: reading?}\hfill{\normalfont\bfseries\normalsize 11. B: length?}\hfill{\normalfont\bfseries\normalsize 12. C: gas reading?}\hspace*{\fill}\par
+\newpage
+\loTitle{Push Tasks}{3}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.3cm}\Ruler{B}{6.3}\hspace{0.3cm}\GasMeter{C}{2}{6}{8}{3}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}{\normalfont\bfseries\normalsize 13. A: reading?}\hfill{\normalfont\bfseries\normalsize 14. B: length?}\hfill{\normalfont\bfseries\normalsize 15. C: gas reading?}\hspace*{\fill}\par
 \newpage
 \end{document}

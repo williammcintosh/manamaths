@@ -53,12 +53,41 @@
 \draw[red,line width=4pt] (0,0)--(\na:1.6);
 \filldraw[black] (0,0) circle (0.15);
 \end{tikzpicture}}
+
+\newcommand{\GasDial}[3]{%
+% #1=label, #2=value(0-9), #3=direction(1=CW,-1=CCW)
+\begin{tikzpicture}[baseline=0]
+\if\relax\detokenize{#1}\relax\else\node[above,font=\bfseries\fontsize{18}{18}\selectfont] at (0,1.8) {#1};\fi
+\draw[line width=3pt] (0,0) circle (1.4);
+\ifnum#3=1
+  % CW: digits 0-9 clockwise
+  \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
+    \pgfmathsetmacro{\ang}{90 - (\i-1)*36}
+    \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
+    \node[font=\bfseries\fontsize{16}{16}\selectfont,inner sep=1pt] at (\ang:1.7) {\digit};
+  }
+  \pgfmathsetmacro{\nang}{90 - (#2 * 36)}
+\else
+  % CCW: digits 0-9 counterclockwise (1 goes left, 2 at NW, etc.)
+  \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
+    \pgfmathsetmacro{\ang}{90 + (\i-1)*36}
+    \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
+    \node[font=\bfseries\fontsize{16}{16}\selectfont,inner sep=1pt] at (\ang:1.7) {\digit};
+  }
+  \pgfmathsetmacro{\nang}{90 + (#2 * 36)}
+\fi
+\draw[red,line width=3pt] (0,0)--(\nang:0.9);
+\filldraw[black] (0,0) circle (0.1);
+\end{tikzpicture}}
+
+\newcommand{\GasMeter}[5]{%
+\GasDial{#1}{#2}{1}\hspace{0.2cm}\GasDial{}{#3}{-1}\hspace{0.2cm}\GasDial{}{#4}{1}\hspace{0.2cm}\GasDial{}{#5}{-1}}
 \begin{document}
 \loTitle{Start Tasks}{1}
 \begin{center}
 \resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.5cm}\Ruler{B}{6.3}\hspace{0.5cm}\DialScale{C}{15}}
 \end{center}
-\vspace{0.04em}
+\vspace{0.005em}
 \noindent
 \hspace*{\fill}{\normalfont\bfseries\normalsize 1. Temp at A?}\hfill{\normalfont\bfseries\normalsize 2. Length at B?}\hfill{\normalfont\bfseries\normalsize 3. Dial reads?}\hspace*{\fill}\par
 \newpage
@@ -66,7 +95,7 @@
 \begin{center}
 \resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.5cm}\Ruler{B}{6.7}\hspace{0.5cm}\DialScale{C}{7}}
 \end{center}
-\vspace{0.04em}
+\vspace{0.005em}
 \noindent
 \hspace*{\fill}{\normalfont\bfseries\normalsize 4. A: temp?}\hfill{\normalfont\bfseries\normalsize 5. B: length?}\hfill{\normalfont\bfseries\normalsize 6. C: dial?}\hspace*{\fill}\par
 \newpage
@@ -74,7 +103,7 @@
 \begin{center}
 \resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.5cm}\Ruler{B}{4.3}\hspace{0.5cm}\DialScale{C}{22}}
 \end{center}
-\vspace{0.04em}
+\vspace{0.005em}
 \noindent
 \hspace*{\fill}{\normalfont\bfseries\normalsize 7. A: approx?}\hfill{\normalfont\bfseries\normalsize 8. B: length?}\hfill{\normalfont\bfseries\normalsize 9. C: dial?}\hspace*{\fill}\par
 \newpage
@@ -82,7 +111,7 @@
 \begin{center}
 \resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.5cm}\Ruler{B}{6.3}\hspace{0.5cm}\DialScale{C}{28}}
 \end{center}
-\vspace{0.04em}
+\vspace{0.005em}
 \noindent
 \hspace*{\fill}{\normalfont\bfseries\normalsize 10. A: reading?}\hfill{\normalfont\bfseries\normalsize 11. B: mark?}\hfill{\normalfont\bfseries\normalsize 12. C: dial?}\hspace*{\fill}\par
 \newpage
@@ -90,7 +119,7 @@
 \begin{center}
 \resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.5cm}\Ruler{B}{6.7}\hspace{0.5cm}\DialScale{C}{3}}
 \end{center}
-\vspace{0.04em}
+\vspace{0.005em}
 \noindent
 \hspace*{\fill}{\normalfont\bfseries\normalsize 13. A: temp?}\hfill{\normalfont\bfseries\normalsize 14. B: length?}\hfill{\normalfont\bfseries\normalsize 15. C: dial?}\hspace*{\fill}\par
 \newpage
@@ -98,7 +127,7 @@
 \begin{center}
 \resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.5cm}\Ruler{B}{4.3}\hspace{0.5cm}\DialScale{C}{12}}
 \end{center}
-\vspace{0.04em}
+\vspace{0.005em}
 \noindent
 \hspace*{\fill}{\normalfont\bfseries\normalsize 16. A: approx?}\hfill{\normalfont\bfseries\normalsize 17. B: error?}\hfill{\normalfont\bfseries\normalsize 18. C: dial?}\hspace*{\fill}\par
 \newpage
