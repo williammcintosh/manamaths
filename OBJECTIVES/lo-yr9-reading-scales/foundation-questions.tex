@@ -9,184 +9,245 @@
 \newcommand{\loTitle}[2]{{\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par\vspace{0.04em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.1em}}
 
 
+% -- THERMOMETER (-30 to 30, 1.5 wide x 3.5 tall) --
 \newcommand{\Thermometer}[2]{%
 \begin{tikzpicture}[baseline=0]
-\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (1,6) {#1};
-\draw[line width=5pt,rounded corners=3] (0.5,0) rectangle (2.0,5.5);
-\draw[line width=5pt,rounded corners=4] (0.35,-0.4) rectangle (2.15,0.4);
-\fill[red!90!black] (0.52,0.03) rectangle (1.98,#2/10+1);
-\fill[red!90!black] (0.37,-0.38) rectangle (2.13,0.38);
-\fill[red!90!black] (1.25,-0.02) circle (0.1);
-\foreach \y/\l in{0/-20,1/-10,2/0,3/10,4/20,5/30}{
-  \draw[line width=3pt] (2.0,\y)--(2.6,\y);
-  \node[anchor=west,font=\bfseries\fontsize{28}{28}\selectfont,inner sep=3pt] at (2.7,\y) {\l};
+\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (0.75,4.0) {#1};
+\draw[line width=4pt,rounded corners=2] (0.3,0) rectangle (1.2,3.2);
+\draw[line width=4pt,rounded corners=3] (0.15,-0.3) rectangle (1.35,0.3);
+\fill[red!90!black] (0.32,0.03) rectangle (1.18,#2/30*2.8+0.3);
+\fill[red!90!black] (0.17,-0.28) rectangle (1.33,0.28);
+\fill[red!90!black] (0.75,-0.02) circle (0.08);
+\foreach \y/\l in {0.28/-20,0.77/-10,1.26/0,1.75/10,2.24/20,2.73/30}{
+  \draw[line width=2pt] (1.2,\y)--(1.6,\y);
+  \node[anchor=west,font=\bfseries\fontsize{20}{20}\selectfont,inner sep=2pt] at (1.7,\y) {\l};
 }
-\draw[red,line width=4pt] (2.0,#2/10+1)--(2.7,#2/10+1);
+\draw[red,line width=3pt] (1.2,#2/30*2.8+0.3)--(1.7,#2/30*2.8+0.3);
 \end{tikzpicture}}
 
+% -- RULER (0-15, 7 wide x 1 tall) --
 \newcommand{\Ruler}[2]{%
 \begin{tikzpicture}[baseline=0]
-\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (7.5,1.2) {#1};
-\draw[line width=5pt] (0,0)--(15,0);
-\foreach \x in {0,2,4,6,8,10,12,14}{
-  \draw[line width=3pt] (\x,0)--(\x,-0.5);
-  \node[below,font=\bfseries\fontsize{32}{32}\selectfont,inner sep=3pt] at (\x,-0.6) {\x};
+\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3.5,1.0) {#1};
+\draw[line width=4pt] (0,0)--(7,0);
+\foreach \x/\l in {0/0,1/2,2/4,3/6,4/8,5/10,6/12,7/14}{
+  \draw[line width=2pt] (\x,0)--(\x,-0.4);
+  \node[below,font=\bfseries\fontsize{22}{22}\selectfont,inner sep=2pt] at (\x,-0.5) {\l};
 }
-\foreach \x in {1,3,5,7,9,11,13,15}{
-  \draw[line width=2pt] (\x,0)--(\x,-0.3);
+\foreach \x in {0.5,1.5,2.5,3.5,4.5,5.5,6.5}{
+  \draw[line width=1.5pt] (\x,0)--(\x,-0.2);
 }
-\draw[red,line width=4pt] (#2,0.25)--(#2,-0.55);
+\draw[red,line width=3pt] (#2/15*7,0.2)--(#2/15*7,-0.45);
 \end{tikzpicture}}
 
+% -- DIAL SCALE (0-30, 2.2 radius, 4.4 wide x 4.4 tall) --
 \newcommand{\DialScale}[2]{%
 \begin{tikzpicture}[baseline=0]
-\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (0,3) {#1};
-\draw[line width=5pt] (0,0) circle (2.2);
+\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (0,2.2) {#1};
+\draw[line width=4pt] (0,0) circle (1.6);
 \foreach \angle/\label in {90/0,0/10,-90/20,180/30}{
-  \draw[line width=3pt] (\angle:1.8)--(\angle:2.2);
-  \node[font=\bfseries\fontsize{24}{24}\selectfont,inner sep=2pt] at (\angle:2.8) {\label};
+  \draw[line width=2pt] (\angle:1.2)--(\angle:1.6);
+  \node[font=\bfseries\fontsize{18}{18}\selectfont,inner sep=2pt] at (\angle:2.0) {\label};
 }
 \foreach \angle in {45,135,-45,-135}{
-  \draw[line width=2pt] (\angle:1.95)--(\angle:2.2);
+  \draw[line width=1.5pt] (\angle:1.4)--(\angle:1.6);
 }
 \pgfmathsetmacro{\na}{90 - (#2 * 12)}
-\draw[red,line width=4pt] (0,0)--(\na:1.6);
-\filldraw[black] (0,0) circle (0.15);
+\draw[red,line width=3pt] (0,0)--(\na:1.1);
+\filldraw[black] (0,0) circle (0.12);
 \end{tikzpicture}}
 
+% -- DIAL SCALE 0-15 kg (weigh scale) --
+\newcommand{\WeighScale}[2]{%
+\begin{tikzpicture}[baseline=0]
+\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (0,2.2) {#1};
+\draw[line width=4pt] (0,0) circle (1.6);
+\foreach \angle/\label in {90/0,0/5,-90/10,180/15}{
+  \draw[line width=2pt] (\angle:1.2)--(\angle:1.6);
+  \node[font=\bfseries\fontsize{18}{18}\selectfont,inner sep=2pt] at (\angle:2.0) {\label};
+}
+\foreach \a in {45,135,-45,-135,30,60,120,150,210,240,300,330}{
+  \pgfmathsetmacro{\ang}{\a}
+  \draw[line width=1pt] (\ang:1.4)--(\ang:1.6);
+}
+\pgfmathsetmacro{\na}{90 - (#2 * 12)}
+\draw[red,line width=3pt] (0,0)--(\na:1.1);
+\filldraw[black] (0,0) circle (0.12);
+\node[below,font=\bfseries\fontsize{14}{14}\selectfont] at (0,-1.9) {kg};
+\end{tikzpicture}}
+
+% -- SPEEDOMETER (0-100, semi-circle 2 wide x 2.5 tall) --
 \newcommand{\Speedometer}[2]{%
 \begin{tikzpicture}[baseline=0]
-\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (0,3.5) {#1};
-\draw[line width=5pt] (180:2.8) arc (180:0:2.8);
+\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (0,2.8) {#1};
+\draw[line width=4pt] (180:2.2) arc (180:0:2.2);
 \foreach \angle/\label in {180/0,144/20,108/40,72/60,36/80,0/100}{
-  \draw[line width=3pt] (\angle:2.2)--(\angle:2.8);
-  \node[font=\bfseries\fontsize{24}{24}\selectfont,inner sep=2pt] at (\angle:3.3) {\label};
+  \draw[line width=2pt] (\angle:1.7)--(\angle:2.2);
+  \node[font=\bfseries\fontsize{18}{18}\selectfont,inner sep=2pt] at (\angle:2.6) {\label};
 }
 \foreach \angle in {162,126,90,54,18}{
-  \draw[line width=2pt] (\angle:2.4)--(\angle:2.8);
+  \draw[line width=1.5pt] (\angle:1.85)--(\angle:2.2);
 }
 \pgfmathsetmacro{\sang}{180 - (#2 * 1.8)}
-\draw[red,line width=4pt] (0,0)--(\sang:2.0);
-\filldraw[black] (0,0) circle (0.18);
-\node[below,font=\bfseries\fontsize{20}{20}\selectfont] at (0,-3.2) {km/h};
+\draw[red,line width=3pt] (0,0)--(\sang:1.5);
+\filldraw[black] (0,0) circle (0.15);
+\node[below,font=\bfseries\fontsize{14}{14}\selectfont] at (0,-2.6) {km/h};
 \end{tikzpicture}}
 
+% -- MEASURING JUG (0-500 mL, compact 2 wide x 3 tall) --
+\newcommand{\MeasuringJug}[2]{%
+\begin{tikzpicture}[baseline=0]
+\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (1.0,3.0) {#1};
+\draw[line width=4pt,rounded corners=2] (0.3,0) -- (1.7,0) -- (1.7,0.5) -- (1.4,0.5)
+  -- (1.4,2.2) arc (30:150:0.2) -- (0.6,2.2) -- (0.6,0.5) -- (0.3,0.5) -- cycle;
+\fill[cyan!50!blue,opacity=0.4] (0.6,0) rectangle (1.4,#2*0.0044);
+\foreach \y/\l in {0.44/100,0.88/200,1.32/300,1.76/400,2.2/500}{
+  \draw[line width=1.5pt] (1.4,\y)--(1.8,\y);
+  \node[anchor=west,font=\bfseries\fontsize{14}{14}\selectfont,inner sep=1pt] at (1.9,\y) {\l};
+}
+\foreach \y in {0.22,0.66,1.1,1.54,1.98}{
+  \draw[line width=1pt] (1.4,\y)--(1.65,\y);
+}
+\draw[red,line width=2.5pt] (0.3,#2*0.0044)--(1.7,#2*0.0044);
+\end{tikzpicture}}
+
+% -- GAS DIAL (0-9, 1.4 wide x 1.4 tall) --
 \newcommand{\GasDial}[3]{%
 \begin{tikzpicture}[baseline=0]
-\if\relax\detokenize{#1}\relax\else\node[above,font=\bfseries\fontsize{18}{18}\selectfont] at (0,1.8) {#1};\fi
-\draw[line width=3pt] (0,0) circle (1.4);
+\if\relax\detokenize{#1}\relax\else\node[above,font=\bfseries\fontsize{14}{14}\selectfont] at (0,1.3) {#1};\fi
+\draw[line width=2.5pt] (0,0) circle (1.0);
 \ifnum#3=1
   \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
     \pgfmathsetmacro{\ang}{90 - (\i-1)*36}
-    \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
-    \node[font=\bfseries\fontsize{16}{16}\selectfont,inner sep=1pt] at (\ang:1.7) {\digit};
+    \draw[line width=1pt] (\ang:0.75)--(\ang:1.0);
+    \node[font=\bfseries\fontsize{12}{12}\selectfont,inner sep=1pt] at (\ang:1.25) {\digit};
   }
   \pgfmathsetmacro{\nang}{90 - (#2 * 36)}
 \else
   \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
     \pgfmathsetmacro{\ang}{90 + (\i-1)*36}
-    \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
-    \node[font=\bfseries\fontsize{16}{16}\selectfont,inner sep=1pt] at (\ang:1.7) {\digit};
+    \draw[line width=1pt] (\ang:0.75)--(\ang:1.0);
+    \node[font=\bfseries\fontsize{12}{12}\selectfont,inner sep=1pt] at (\ang:1.25) {\digit};
   }
   \pgfmathsetmacro{\nang}{90 + (#2 * 36)}
 \fi
-\draw[red,line width=3pt] (0,0)--(\nang:0.9);
-\filldraw[black] (0,0) circle (0.1);
+\draw[red,line width=2pt] (0,0)--(\nang:0.65);
+\filldraw[black] (0,0) circle (0.08);
 \end{tikzpicture}}
 
 \newcommand{\GasMeter}[5]{%
-\GasDial{#1}{#2}{1}\hspace{0.2cm}\GasDial{}{#3}{-1}\hspace{0.2cm}\GasDial{}{#4}{1}\hspace{0.2cm}\GasDial{}{#5}{-1}}
+\GasDial{#1}{#2}{1}\hspace{0.15cm}\GasDial{}{#3}{-1}\hspace{0.15cm}\GasDial{}{#4}{1}\hspace{0.15cm}\GasDial{}{#5}{-1}}
 \begin{document}
 \loTitle{Start Tasks}{1}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.3cm}\Ruler{B}{6.3}\hspace{0.3cm}\DialScale{C}{15}\hspace{0.3cm}\Speedometer{D}{55}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.2cm}\Speedometer{D}{55}\hspace{0.2cm}\Ruler{B}{6.3}}
 \end{center}
 \vspace{0.005em}
 \noindent
 \hspace*{\fill}
 {\normalfont\bfseries\normalsize 1. Temp at A?}
 \hfill
-{\normalfont\bfseries\normalsize 2. Length at B?}
+{\normalfont\bfseries\normalsize 2. Speed at D?}
 \hfill
-{\normalfont\bfseries\normalsize 3. Dial at C?}
-\hfill
-{\normalfont\bfseries\normalsize 4. Speed at D?}
+{\normalfont\bfseries\normalsize 3. Length at B?}
 \hspace*{\fill}\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.3cm}\Ruler{B}{6.7}\hspace{0.3cm}\DialScale{C}{7}\hspace{0.3cm}\Speedometer{D}{30}}
+\resizebox{0.95\linewidth}{!}{\DialScale{C}{15}\hspace{0.2cm}\WeighScale{E}{8}\hspace{0.2cm}\MeasuringJug{F}{250}}
 \end{center}
 \vspace{0.005em}
 \noindent
 \hspace*{\fill}
-{\normalfont\bfseries\normalsize 5. A: temp?}
+{\normalfont\bfseries\normalsize 4. Dial at C?}
 \hfill
-{\normalfont\bfseries\normalsize 6. B: length?}
+{\normalfont\bfseries\normalsize 5. Weight at E?}
 \hfill
-{\normalfont\bfseries\normalsize 7. C: dial?}
-\hfill
-{\normalfont\bfseries\normalsize 8. D: speed?}
+{\normalfont\bfseries\normalsize 6. Volume at F?}
 \hspace*{\fill}\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.5cm}\Ruler{B}{4.3}\hspace{0.5cm}\DialScale{C}{22}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.2cm}\DialScale{C}{7}\hspace{0.2cm}\Ruler{B}{6.7}}
 \end{center}
 \vspace{0.005em}
 \noindent
 \hspace*{\fill}
-{\normalfont\bfseries\normalsize 9. A: approx?}
+{\normalfont\bfseries\normalsize 7. A: temp?}
 \hfill
-{\normalfont\bfseries\normalsize 10. B: length?}
+{\normalfont\bfseries\normalsize 8. C: dial?}
 \hfill
-{\normalfont\bfseries\normalsize 11. C: dial?}
+{\normalfont\bfseries\normalsize 9. B: length?}
 \hspace*{\fill}\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.3cm}\Ruler{B}{6.3}\hspace{0.3cm}\DialScale{C}{28}\hspace{0.3cm}\Speedometer{D}{15}}
+\resizebox{0.95\linewidth}{!}{\Speedometer{D}{30}\hspace{0.2cm}\WeighScale{E}{12}\hspace{0.2cm}\MeasuringJug{F}{450}}
 \end{center}
 \vspace{0.005em}
 \noindent
 \hspace*{\fill}
-{\normalfont\bfseries\normalsize 12. A: reading?}
+{\normalfont\bfseries\normalsize 10. D: speed?}
 \hfill
-{\normalfont\bfseries\normalsize 13. B: mark?}
+{\normalfont\bfseries\normalsize 11. E: weight?}
 \hfill
-{\normalfont\bfseries\normalsize 14. C: dial?}
-\hfill
-{\normalfont\bfseries\normalsize 15. D: speed?}
+{\normalfont\bfseries\normalsize 12. F: volume?}
 \hspace*{\fill}\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.5cm}\Ruler{B}{6.7}\hspace{0.5cm}\DialScale{C}{3}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.2cm}\Ruler{B}{4.3}\hspace{0.2cm}\WeighScale{E}{5}}
 \end{center}
 \vspace{0.005em}
 \noindent
 \hspace*{\fill}
-{\normalfont\bfseries\normalsize 16. A: temp?}
+{\normalfont\bfseries\normalsize 13. A: approx?}
 \hfill
-{\normalfont\bfseries\normalsize 17. B: length?}
+{\normalfont\bfseries\normalsize 14. B: length?}
 \hfill
-{\normalfont\bfseries\normalsize 18. C: dial?}
+{\normalfont\bfseries\normalsize 15. E: weight?}
 \hspace*{\fill}\par
 \newpage
 \loTitle{Start Tasks}{1}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.3cm}\Ruler{B}{4.3}\hspace{0.3cm}\DialScale{C}{12}\hspace{0.3cm}\Speedometer{D}{67}}
+\resizebox{0.95\linewidth}{!}{\DialScale{C}{22}\hspace{0.2cm}\MeasuringJug{F}{380}\hspace{0.2cm}\Speedometer{D}{80}}
 \end{center}
 \vspace{0.005em}
 \noindent
 \hspace*{\fill}
-{\normalfont\bfseries\normalsize 19. A: approx?}
+{\normalfont\bfseries\normalsize 16. C: dial?}
 \hfill
-{\normalfont\bfseries\normalsize 20. B: error?}
+{\normalfont\bfseries\normalsize 17. F: volume?}
+\hfill
+{\normalfont\bfseries\normalsize 18. D: speed?}
+\hspace*{\fill}\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\Ruler{B}{6.3}\hspace{0.2cm}\Thermometer{A}{22}\hspace{0.2cm}\DialScale{C}{28}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 19. B: mark?}
+\hfill
+{\normalfont\bfseries\normalsize 20. A: reading?}
 \hfill
 {\normalfont\bfseries\normalsize 21. C: dial?}
+\hspace*{\fill}\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\WeighScale{E}{3}\hspace{0.2cm}\Speedometer{D}{42}\hspace{0.2cm}\MeasuringJug{F}{120}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 22. E: weight?}
 \hfill
-{\normalfont\bfseries\normalsize 22. D: speed?}
+{\normalfont\bfseries\normalsize 23. D: speed?}
+\hfill
+{\normalfont\bfseries\normalsize 24. F: volume?}
 \hspace*{\fill}\par
 \newpage
 \end{document}

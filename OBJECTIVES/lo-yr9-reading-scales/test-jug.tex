@@ -1,0 +1,23 @@
+
+\documentclass[20pt,a4paper,landscape]{extarticle}
+\usepackage[margin=0.3cm,bottom=0.6cm]{geometry}
+\usepackage{tikz,xcolor}
+\setlength{\parindent}{0pt}\pagestyle{empty}
+\begin{document}
+\newcommand{\MeasuringJug}[2]{%
+\begin{tikzpicture}[baseline=0]
+\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (1.5,4.5) {#1};
+\draw[line width=5pt,rounded corners=2] (0.5,0) -- (2.5,0) -- (2.5,0.8) -- (2.0,0.8)
+  -- (2.0,3.5) arc (30:150:0.5) -- (1.0,3.5) -- (1.0,0.8) -- (0.5,0.8) -- cycle;
+\fill[cyan!50!blue,opacity=0.4] (1.0,0) rectangle (2.0,#2*0.038);
+\foreach \y/\l in {0.38/100,0.76/200,1.14/300,1.52/400,1.90/500,2.28/600,2.66/700,3.04/800,3.42/900,3.80/1000}{
+  \draw[line width=2pt] (2.0,\y)--(2.5,\y);
+  \node[anchor=west,font=\bfseries\fontsize{18}{18}\selectfont,inner sep=2pt] at (2.6,\y) {\l};
+}
+\draw[red,line width=3.5pt] (0.5,#2*0.038)--(2.5,#2*0.038);
+\end{tikzpicture}}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\MeasuringJug{A}{350}\hspace{0.3cm}\MeasuringJug{B}{620}\hspace{0.3cm}\MeasuringJug{C}{880}}
+\end{center}
+\noindent{\normalfont\bfseries\normalsize 1. Volume?}\hfill{\normalfont\bfseries\normalsize 2. Vol 2?}\hfill{\normalfont\bfseries\normalsize 3. Vol 3?}
+\end{document}
