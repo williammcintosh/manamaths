@@ -54,13 +54,28 @@
 \filldraw[black] (0,0) circle (0.15);
 \end{tikzpicture}}
 
+\newcommand{\Speedometer}[2]{%
+\begin{tikzpicture}[baseline=0]
+\node[above,font=\bfseries\fontsize{36}{36}\selectfont] at (0,3.5) {#1};
+\draw[line width=5pt] (180:2.8) arc (180:0:2.8);
+\foreach \angle/\label in {180/0,144/20,108/40,72/60,36/80,0/100}{
+  \draw[line width=3pt] (\angle:2.2)--(\angle:2.8);
+  \node[font=\bfseries\fontsize{24}{24}\selectfont,inner sep=2pt] at (\angle:3.3) {\label};
+}
+\foreach \angle in {162,126,90,54,18}{
+  \draw[line width=2pt] (\angle:2.4)--(\angle:2.8);
+}
+\pgfmathsetmacro{\sang}{180 - (#2 * 1.8)}
+\draw[red,line width=4pt] (0,0)--(\sang:2.0);
+\filldraw[black] (0,0) circle (0.18);
+\node[below,font=\bfseries\fontsize{20}{20}\selectfont] at (0,-3.2) {km/h};
+\end{tikzpicture}}
+
 \newcommand{\GasDial}[3]{%
-% #1=label, #2=value(0-9), #3=direction(1=CW,-1=CCW)
 \begin{tikzpicture}[baseline=0]
 \if\relax\detokenize{#1}\relax\else\node[above,font=\bfseries\fontsize{18}{18}\selectfont] at (0,1.8) {#1};\fi
 \draw[line width=3pt] (0,0) circle (1.4);
 \ifnum#3=1
-  % CW: digits 0-9 clockwise
   \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
     \pgfmathsetmacro{\ang}{90 - (\i-1)*36}
     \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
@@ -68,7 +83,6 @@
   }
   \pgfmathsetmacro{\nang}{90 - (#2 * 36)}
 \else
-  % CCW: digits 0-9 counterclockwise (1 goes left, 2 at NW, etc.)
   \foreach \digit [count=\i] in {0,1,2,3,4,5,6,7,8,9}{
     \pgfmathsetmacro{\ang}{90 + (\i-1)*36}
     \draw[line width=1.5pt] (\ang:1.1)--(\ang:1.4);
@@ -85,19 +99,35 @@
 \begin{document}
 \loTitle{Build Tasks}{2}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.5cm}\Ruler{B}{6.7}\hspace{0.5cm}\DialScale{C}{7}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{18}\hspace{0.3cm}\Ruler{B}{6.7}\hspace{0.3cm}\DialScale{C}{7}\hspace{0.3cm}\Speedometer{D}{42}}
 \end{center}
 \vspace{0.005em}
 \noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 1. A: nearest 5?}\hfill{\normalfont\bfseries\normalsize 2. B: in mm?}\hfill{\normalfont\bfseries\normalsize 3. C: nearest 5?}\hspace*{\fill}\par
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 1. A: nearest 5?}
+\hfill
+{\normalfont\bfseries\normalsize 2. B: in mm?}
+\hfill
+{\normalfont\bfseries\normalsize 3. C: nearest 5?}
+\hfill
+{\normalfont\bfseries\normalsize 4. D: nearest 10?}
+\hspace*{\fill}\par
 \newpage
 \loTitle{Build Tasks}{2}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.5cm}\Ruler{B}{4.3}\hspace{0.5cm}\DialScale{C}{22}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.3cm}\Ruler{B}{4.3}\hspace{0.3cm}\DialScale{C}{22}\hspace{0.3cm}\Speedometer{D}{68}}
 \end{center}
 \vspace{0.005em}
 \noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 4. A: nearest big?}\hfill{\normalfont\bfseries\normalsize 5. B: error?}\hfill{\normalfont\bfseries\normalsize 6. C: estimate?}\hspace*{\fill}\par
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 5. A: nearest big?}
+\hfill
+{\normalfont\bfseries\normalsize 6. B: error?}
+\hfill
+{\normalfont\bfseries\normalsize 7. C: estimate?}
+\hfill
+{\normalfont\bfseries\normalsize 8. D: between?}
+\hspace*{\fill}\par
 \newpage
 \loTitle{Build Tasks}{2}
 \begin{center}
@@ -105,7 +135,13 @@
 \end{center}
 \vspace{0.005em}
 \noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 7. A: rise 16-22?}\hfill{\normalfont\bfseries\normalsize 8. B: dist?}\hfill{\normalfont\bfseries\normalsize 9. C: 15 to 7?}\hspace*{\fill}\par
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 9. A: rise 16-22?}
+\hfill
+{\normalfont\bfseries\normalsize 10. B: dist?}
+\hfill
+{\normalfont\bfseries\normalsize 11. C: 15 to 7?}
+\hspace*{\fill}\par
 \newpage
 \loTitle{Build Tasks}{2}
 \begin{center}
@@ -113,22 +149,28 @@
 \end{center}
 \vspace{0.005em}
 \noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 10. A: 16-18 rise?}\hfill{\normalfont\bfseries\normalsize 11. B: 6.7 mm?}\hfill{\normalfont\bfseries\normalsize 12. C: 7 to 22?}\hspace*{\fill}\par
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 12. A: 16-18 rise?}
+\hfill
+{\normalfont\bfseries\normalsize 13. B: 6.7 mm?}
+\hfill
+{\normalfont\bfseries\normalsize 14. C: 7 to 22?}
+\hspace*{\fill}\par
 \newpage
 \loTitle{Build Tasks}{2}
 \begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.5cm}\Ruler{B}{4.3}\hspace{0.5cm}\DialScale{C}{12}}
+\resizebox{0.95\linewidth}{!}{\Thermometer{A}{16}\hspace{0.3cm}\Ruler{B}{4.3}\hspace{0.3cm}\DialScale{C}{12}\hspace{0.3cm}\Speedometer{D}{55}}
 \end{center}
 \vspace{0.005em}
 \noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 13. Between marks?}\hfill{\normalfont\bfseries\normalsize 14. Parallax?}\hfill{\normalfont\bfseries\normalsize 15. C: scale?}\hspace*{\fill}\par
-\newpage
-\loTitle{Build Tasks}{2}
-\begin{center}
-\resizebox{0.95\linewidth}{!}{\Thermometer{A}{22}\hspace{0.5cm}\Ruler{B}{6.3}\hspace{0.5cm}\DialScale{C}{15}}
-\end{center}
-\vspace{0.005em}
-\noindent
-\hspace*{\fill}{\normalfont\bfseries\normalsize 16. A: rise?}\hfill{\normalfont\bfseries\normalsize 17. B: dist?}\hfill{\normalfont\bfseries\normalsize 18. C: 28 to 3?}\hspace*{\fill}\par
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 15. Between marks?}
+\hfill
+{\normalfont\bfseries\normalsize 16. Parallax?}
+\hfill
+{\normalfont\bfseries\normalsize 17. C: roughly?}
+\hfill
+{\normalfont\bfseries\normalsize 18. D: 42 to 68?}
+\hspace*{\fill}\par
 \newpage
 \end{document}
