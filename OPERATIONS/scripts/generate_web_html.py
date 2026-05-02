@@ -472,10 +472,10 @@ def render_objective_page(obj: dict) -> str:
     cards = "".join(render_module_card(level, obj["slug"]) for level in obj["levels"])
     # Wrap te reo and notes in a module-card grid for side-by-side layout
     extras_panels = []
-    if te_reo:
-        extras_panels.append(te_reo)
     if notes:
         extras_panels.append(notes)
+    if te_reo:
+        extras_panels.append(te_reo)
     extras_grid = ""
     if extras_panels:
         extras_grid = '<div class="module-card-grid module-card-grid-extra">\n' + "\n".join(extras_panels) + '\n      </div>'
