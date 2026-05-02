@@ -66,13 +66,11 @@
   \draw[line width=2pt] (\angle:1.2)--(\angle:1.6);
   \node[font=\bfseries\fontsize{18}{18}\selectfont,inner sep=2pt] at (\angle:2.0) {\label};
 }
-\foreach \a in {45,135,-45,-135,30,60,120,150,210,240,300,330}{
-  \pgfmathsetmacro{\ang}{\a}
-  \draw[line width=1pt] (\ang:1.4)--(\ang:1.6);
+\foreach \a in {22.5,45,67.5,112.5,135,157.5,202.5,225,247.5,292.5,315,337.5}{
+  \draw[line width=1.5pt] (\a:1.4)--(\a:1.6);
 }
-% kg label in center
 \node[font=\bfseries\fontsize{14}{14}\selectfont] at (0,0.4) {kg};
-\pgfmathsetmacro{\na}{90 - (#2 * 12)}
+\pgfmathsetmacro{\na}{90 - (#2 * 18)}
 \draw[red,line width=3pt] (0,0)--(\na:1.1);
 \filldraw[black] (0,0) circle (0.12);
 \end{tikzpicture}}
