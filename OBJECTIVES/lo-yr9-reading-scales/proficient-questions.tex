@@ -73,7 +73,7 @@
 \pgfmathsetmacro{\na}{90 - (#2 * 12)}
 \draw[red,line width=3pt] (0,0)--(\na:1.1);
 \filldraw[black] (0,0) circle (0.12);
-\node[below,font=\bfseries\fontsize{14}{14}\selectfont] at (0,-1.9) {kg};
+\node[below,font=\bfseries\fontsize{13}{13}\selectfont,yshift=-0.2cm] at (0,-1.6) {\strut kg};
 \end{tikzpicture}}
 
 % -- SPEEDOMETER (0-100, semi-circle 2 wide x 2.5 tall) --
@@ -91,7 +91,7 @@
 \pgfmathsetmacro{\sang}{180 - (#2 * 1.8)}
 \draw[red,line width=3pt] (0,0)--(\sang:1.5);
 \filldraw[black] (0,0) circle (0.15);
-\node[below,font=\bfseries\fontsize{14}{14}\selectfont] at (0,-2.6) {km/h};
+\node[font=\bfseries\fontsize{13}{13}\selectfont,yshift=-0.1cm] at (0,-2.1) {\strut km/h};
 \end{tikzpicture}}
 
 % -- MEASURING JUG (0-500 mL, compact 2 wide x 3 tall) --
