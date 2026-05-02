@@ -70,10 +70,11 @@
   \pgfmathsetmacro{\ang}{\a}
   \draw[line width=1pt] (\ang:1.4)--(\ang:1.6);
 }
+% kg label in center
+\node[font=\bfseries\fontsize{14}{14}\selectfont] at (0,0.4) {kg};
 \pgfmathsetmacro{\na}{90 - (#2 * 12)}
 \draw[red,line width=3pt] (0,0)--(\na:1.1);
 \filldraw[black] (0,0) circle (0.12);
-\node[below,font=\bfseries\fontsize{13}{13}\selectfont,yshift=-0.2cm] at (0,-1.6) {\strut kg};
 \end{tikzpicture}}
 
 % -- SPEEDOMETER (0-100, semi-circle 2 wide x 2.5 tall) --
