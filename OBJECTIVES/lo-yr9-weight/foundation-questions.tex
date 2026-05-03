@@ -1,112 +1,123 @@
-\documentclass[aspectratio=169,12pt]{beamer}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage[most]{tcolorbox}
-\usepackage{tikz}
-\usepackage{graphicx}
-\usepackage[sfdefault,lf]{FiraSans}
-\renewcommand{\familydefault}{\sfdefault}
-\setlength{\parindent}{0pt}
-\everymath{\displaystyle}
-
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}{}
-\setbeamertemplate{headline}{}
-
-\definecolor{mmpageWhite}{HTML}{FCFBF7}
-\definecolor{mmtanSoft}{HTML}{F7F5EF}
-\definecolor{mmgreenDeep}{HTML}{244B2C}
-\definecolor{mmgreenLeaf}{HTML}{5D8A56}
-\definecolor{mmgreenSoft}{HTML}{E4EFD9}
-\definecolor{mmtext}{HTML}{163221}
-
-\setbeamercolor{background canvas}{bg=mmpageWhite}
-\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
-
-\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
-\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
-\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
-\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
-\newcommand{\WorksheetTitle}[2]{%
-  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
-    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
-  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
-}
-\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
-
-\setbeamertemplate{background}{
- \begin{tikzpicture}[remember picture,overlay]
- \draw[black,line width=1.5pt,rounded corners=10pt]
- ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
- rectangle
- ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
- \end{tikzpicture}
-}
-
+\documentclass[20pt,a4paper,landscape]{extarticle}
+\usepackage[margin=0.3cm,bottom=0.6cm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,xcolor,tikz}
+\usepackage[sfdefault,lf]{FiraSans}\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}\pagestyle{empty}
+\definecolor{mmgreenDeep}{HTML}{244B2C}\definecolor{mmtanSoft}{HTML}{F7F5EF}\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\newcommand{\HoeIcon}{\raisebox{-0.15em}{\includegraphics[height=0.85em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\or \HoeIcon\hspace{0.2em}\HoeIcon\hspace{0.2em}\HoeIcon\fi}
+\newcommand{\loTitle}[2]{{\colorbox{mmtanSoft}{\parbox{\linewidth}{\Huge\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}\par\vspace{0.04em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.1em}}
 \begin{document}
-\begin{frame}[t]
-\WorksheetTitle{Start Tasks}{1}
-\vspace{-0.18em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{1}{Convert 2 kg to grams.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{Convert 1000 g to kilograms.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{Which is heavier: 5 kg or 4500 g?}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{4}{Convert 4 kg to grams.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{5}{Convert 4000 g to kilograms.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{6}{Which is heavier: 3 kg or 2500 g?}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{7}{Convert 2 kg to grams.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{Convert 9000 g to kilograms.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{Which is heavier: 2 kg or 1500 g?}\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}[t]
-\WorksheetTitle{Start Tasks}{1}
-\vspace{-0.18em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{10}{Convert 10 kg to grams.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{11}{Convert 7000 g to kilograms.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{12}{Which is heavier: 1 kg or 500 g?}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{13}{Convert 1 kg to grams.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{14}{Convert 2000 g to kilograms.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{15}{Which is heavier: 4 kg or 3500 g?}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{16}{Convert 4 kg to grams.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{17}{Convert 9000 g to kilograms.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{18}{Which is heavier: 10 kg or 9500 g?}\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}[t]
-\WorksheetTitle{Start Tasks}{1}
-\vspace{-0.18em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{19}{Convert 1 kg to grams.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{20}{Convert 9000 g to kilograms.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{21}{Which is heavier: 4 kg or 3500 g?}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{22}{Convert 9 kg to grams.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{23}{Convert 7000 g to kilograms.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{24}{Which is heavier: 4 kg or 3500 g?}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{25}{Convert 8 kg to grams.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{26}{Convert 10000 g to kilograms.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{27}{Which is heavier: 5 kg or 4500 g?}\end{column}
-\end{columns}
-\end{frame}
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {A};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{An apple}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {20 g$\quad$20 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {B};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A car}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {1.5 kg$\quad$1500 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {C};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A feather}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {2 g$\quad$2 kg};\end{tikzpicture}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 1. A: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 2. B: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 3. C: weight?}
+\hspace*{\fill}\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {A};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A paperback book}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {300 g$\quad$30 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {B};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A cat}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {4 g$\quad$4 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {C};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A 50c coin}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {10 g$\quad$1 kg};\end{tikzpicture}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 4. A: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 5. B: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 6. C: weight?}
+\hspace*{\fill}\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {A};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A fridge}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {80 g$\quad$80 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {B};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A shoe}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {300 g$\quad$30 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {C};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A grain of rice}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {0.02 g$\quad$2 g};\end{tikzpicture}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 7. A: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 8. B: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 9. C: weight?}
+\hspace*{\fill}\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {A};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A bicycle}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {12 g$\quad$12 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {B};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{An egg}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {50 g$\quad$5 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {C};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A pen}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {10 g$\quad$1 kg};\end{tikzpicture}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 10. A: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 11. B: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 12. C: weight?}
+\hspace*{\fill}\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {A};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A bag of sugar}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {1 kg$\quad$100 g};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {B};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A sofa}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {50 kg$\quad$500 g};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {C};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A letter}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {20 g$\quad$2 kg};\end{tikzpicture}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 13. A: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 14. B: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 15. C: weight?}
+\hspace*{\fill}\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {A};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A watermelon}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {400 g$\quad$40 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {B};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A kg of flour}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {1 kg$\quad$1000 g};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {C};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A tennis ball}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {60 g$\quad$6 kg};\end{tikzpicture}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 16. A: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 17. B: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 18. C: weight?}
+\hspace*{\fill}\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {A};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A laptop}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {2 g$\quad$2 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {B};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A banana}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {120 g$\quad$12 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {C};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A pair of jeans}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {500 g$\quad$50 kg};\end{tikzpicture}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 19. A: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 20. B: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 21. C: weight?}
+\hspace*{\fill}\par
+\newpage
+\loTitle{Start Tasks}{1}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {A};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A bowling ball}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {7 g$\quad$7 kg};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {B};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A teaspoon of butter}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {5 g$\quad$500 g};\end{tikzpicture}\hspace{0.2cm}\begin{tikzpicture}[baseline=0]\node[above,font=\bfseries\fontsize{28}{28}\selectfont] at (3,3.5) {C};\draw[line width=4pt,rounded corners=5] (0,0) rectangle (6,3.0);\node[font=\bfseries\fontsize{20}{20}\selectfont,align=center] at (3,2.0) {\textbf{A dinner plate}};\node[font=\bfseries\fontsize{18}{18}\selectfont,align=center] at (3,0.8) {3 g$\quad$300 g};\end{tikzpicture}}
+\end{center}
+\vspace{0.005em}
+\noindent
+\hspace*{\fill}
+{\normalfont\bfseries\normalsize 22. A: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 23. B: weight?}
+\hfill
+{\normalfont\bfseries\normalsize 24. C: weight?}
+\hspace*{\fill}\par
+\newpage
 \end{document}
