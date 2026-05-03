@@ -8,22 +8,18 @@
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \everymath{\displaystyle}
-
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
-
 \definecolor{mmpageWhite}{HTML}{FCFBF7}
 \definecolor{mmtanSoft}{HTML}{F7F5EF}
 \definecolor{mmgreenDeep}{HTML}{244B2C}
 \definecolor{mmgreenLeaf}{HTML}{5D8A56}
 \definecolor{mmgreenSoft}{HTML}{E4EFD9}
 \definecolor{mmtext}{HTML}{163221}
-
 \setbeamercolor{background canvas}{bg=mmpageWhite}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
-
-\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
 \newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
 \newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
@@ -32,8 +28,7 @@
     \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
   \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
 }
-\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
-
+\newcommand{\MMProblem}[2]{\begin{MMCard}\raggedright\small\textbf{#1.} #2\par\end{MMCard}}
 \setbeamertemplate{background}{
  \begin{tikzpicture}[remember picture,overlay]
  \draw[black,line width=1.5pt,rounded corners=10pt]
@@ -42,27 +37,27 @@
  ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
  \end{tikzpicture}
 }
-
 \begin{document}
+
 \begin{frame}[t]
 \WorksheetTitle{Start Tasks}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{1}{Convert 7 L to millilitres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{Convert 3958 mL to litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{How many mL in 0.9 L?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{1}{Convert 3 L to mL.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{Convert 2000 mL to L.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Convert 2.5 L to mL.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{4}{A bottle holds 535 mL. Write in litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{5}{Convert 4 L to millilitres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{6}{Convert 4798 mL to litres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{4}{Convert 750 mL to L.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Which is more: 3 L or 2900 mL?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{Which is less: 1500 mL or 1.2 L?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{7}{How many mL in 2.8 L?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{A bottle holds 1447 mL. Write in litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{Convert 7 L to millilitres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{7}{Convert 1.75 L to mL.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Convert 420 mL to L (2 d.p.).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{A bottle holds 2.3 L. Convert to mL.}\end{column}
 \end{columns}
 \end{frame}
 
@@ -70,21 +65,21 @@
 \WorksheetTitle{Start Tasks}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{10}{Convert 4980 mL to litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{11}{How many mL in 2.1 L?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{12}{A bottle holds 699 mL. Write in litres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{10}{Convert 4 L to mL.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{Convert 850 mL to L.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{Convert 0.6 L to mL.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{13}{Convert 3 L to millilitres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{14}{Convert 4374 mL to litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{15}{How many mL in 2.6 L?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{13}{Convert 1250 mL to L.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{Which is more: 2.5 L or 2600 mL?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{Which is less: 1800 mL or 1.9 L?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{16}{A bottle holds 346 mL. Write in litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{17}{Convert 2 L to millilitres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{18}{Convert 1452 mL to litres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{16}{Convert 3.4 L to mL.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{Convert 920 mL to L (2 d.p.).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{A jug holds 1.8 L. Write in mL.}\end{column}
 \end{columns}
 \end{frame}
 
@@ -92,21 +87,21 @@
 \WorksheetTitle{Start Tasks}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{19}{How many mL in 3.2 L?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{20}{A bottle holds 1114 mL. Write in litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{21}{Convert 10 L to millilitres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{19}{Convert 5.2 L to mL.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{Convert 330 mL to L (3 d.p.).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{Convert 0.25 L to mL.}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{22}{Convert 720 mL to litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{23}{How many mL in 2.0 L?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{24}{A bottle holds 1470 mL. Write in litres.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{22}{Sort: 1200 mL, 0.8 L, 1.5 L (least).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{Sort: 2.3 L, 1900 mL, 3 L (most).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{How many mL in 0.75 L?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{25}{Convert 8 L to millilitres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{26}{Convert 4534 mL to litres.}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{27}{How many mL in 1.4 L?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{25}{Convert 1.05 L to mL.}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{Convert 60 mL to L (3 d.p.).}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{A glass holds 0.4 L. Convert to mL.}\end{column}
 \end{columns}
 \end{frame}
 \end{document}

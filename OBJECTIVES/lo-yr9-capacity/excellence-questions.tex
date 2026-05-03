@@ -8,22 +8,18 @@
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \everymath{\displaystyle}
-
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
-
 \definecolor{mmpageWhite}{HTML}{FCFBF7}
 \definecolor{mmtanSoft}{HTML}{F7F5EF}
 \definecolor{mmgreenDeep}{HTML}{244B2C}
 \definecolor{mmgreenLeaf}{HTML}{5D8A56}
 \definecolor{mmgreenSoft}{HTML}{E4EFD9}
 \definecolor{mmtext}{HTML}{163221}
-
 \setbeamercolor{background canvas}{bg=mmpageWhite}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
-
-\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
 \newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
 \newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
@@ -32,8 +28,7 @@
     \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
   \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
 }
-\newcommand{\MMProblem}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} #2\par\end{MMProblemCard}}
-
+\newcommand{\MMProblem}[2]{\begin{MMCard}\raggedright\small\textbf{#1.} #2\par\end{MMCard}}
 \setbeamertemplate{background}{
  \begin{tikzpicture}[remember picture,overlay]
  \draw[black,line width=1.5pt,rounded corners=10pt]
@@ -42,27 +37,27 @@
  ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
  \end{tikzpicture}
 }
-
 \begin{document}
+
 \begin{frame}[t]
 \WorksheetTitle{Push Tasks}{3}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{1}{A tank holds 255 L. Water costs \$20 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{2}{A tank holds 979 L. Water costs \$17 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{3}{A tank holds 845 L. Water costs \$19 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{1}{25 drums each 28.4 L. Total in L?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{2}{1200 bottles at 385 mL each. Total in L?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{3}{Tank 8.5 kL. Pool 1: 1.8 kL, Pool 2: 2.4 kL. Pool 3?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{4}{A tank holds 794 L. Water costs \$17 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{5}{A tank holds 979 L. Water costs \$10 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{6}{A tank holds 550 L. Water costs \$15 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{4}{Factory uses 55 L syrup/day. 7 days in L?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{5}{Pump 2.4 kL/h. In a 40-hour week in kL?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{6}{150 people each bring 23 L gear. Total in L?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{7}{A tank holds 997 L. Water costs \$19 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{8}{A tank holds 783 L. Water costs \$8 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{9}{A tank holds 740 L. Water costs \$13 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{7}{Tank A: 18.5 kL, B: 22.3 kL. Add to reach 50 kL?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{8}{Reservoir 12.5 ML releases 350 L/min. Time to empty?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{9}{20 tankers each 12.4 kL. Total in kL?}\end{column}
 \end{columns}
 \end{frame}
 
@@ -70,21 +65,21 @@
 \WorksheetTitle{Push Tasks}{3}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{10}{A tank holds 458 L. Water costs \$16 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{11}{A tank holds 133 L. Water costs \$4 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{12}{A tank holds 356 L. Water costs \$19 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{10}{360 drums at 15.5 L each. Total in L?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{11}{Tank A = 16.2 kL. Remove 385 L. Remaining in kL?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{12}{Factory fills 500 mL bottles from 1.2 kL vat. How many?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{13}{A tank holds 245 L. Water costs \$2 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{14}{A tank holds 82 L. Water costs \$3 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{15}{A tank holds 244 L. Water costs \$3 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{13}{12 tanks each 850 kL. Total < 10 ML?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{14}{Gold vat 12.4 L. How many 250 mL samples?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{15}{Ship holds 25 kL. Each drum 365 L. Can it hold 68?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{16}{A tank holds 890 L. Water costs \$18 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{17}{A tank holds 253 L. Water costs \$17 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{18}{A tank holds 229 L. Water costs \$20 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{16}{3 containers: 3.2 kL, 4.8 kL, 2.9 kL. Total < 12 kL?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{17}{Vat 2.5 kL fills 50 L barrels. How many barrels?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{18}{Truck 18 kL + trailer 12 kL. 24 drums 950 L: overload?}\end{column}
 \end{columns}
 \end{frame}
 
@@ -92,21 +87,21 @@
 \WorksheetTitle{Push Tasks}{3}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{19}{A tank holds 600 L. Water costs \$17 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{20}{A tank holds 836 L. Water costs \$5 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{21}{A tank holds 109 L. Water costs \$13 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{19}{48 bottles each 375 mL. Total in L?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{20}{Recipe 2.8 L: 1.2 L water, 850 mL syrup. Rest juice in mL?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{21}{5 layers: each 6 drums at 24.5 L. Total in kL?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{22}{A tank holds 443 L. Water costs \$3 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{23}{A tank holds 699 L. Water costs \$5 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{24}{A tank holds 72 L. Water costs \$12 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{22}{Pipeline limit 80 kL/h. 12 pumps 6.3 kL/h: over or under?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{23}{Tap 450 mL/s fills 1.35 kL tank. Time in seconds?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{24}{Hose 1.8 kL/h fills 14.4 kL pool. Hours?}\end{column}
 \end{columns}
 \vspace{0.45em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMProblem{25}{A tank holds 829 L. Water costs \$9 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{26}{A tank holds 206 L. Water costs \$16 per kL. How much to fill the tank?}\end{column}
-\begin{column}{0.32\textwidth}\MMProblem{27}{A tank holds 153 L. Water costs \$10 per kL. How much to fill the tank?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{25}{40 drums each 36.5 L. Total in kL?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{26}{Ship unloads 250 kL at 3.5 kL/cycle. Cycles needed?}\end{column}
+\begin{column}{0.32\textwidth}\MMProblem{27}{Store 85 kL. Dispenses 320 L/day. Days until empty?}\end{column}
 \end{columns}
 \end{frame}
 \end{document}
